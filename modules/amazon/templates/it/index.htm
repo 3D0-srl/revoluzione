@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" href="css/product.css">
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+   <script src="js/script.js?v=88"></script>
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+
+
+
+
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+		{output(#loader.htm#)}
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+        		<!--- TITLE ---->
+				<div class="m-b-20 clearfix">
+					{output(#top_amazon.htm#)}
+
+			
+					<div class="row box-container" flexy:if="!no_amazon">
+						<div class="col-md-12 well white">
+						
+								
+										{if:!no_amazon}
+										<!--<div class="">
+											<div class="panel button_action" onclick="asin_check(); return false;">
+												<div class="panel-body">
+														<i class="fa fa-search"></i> Verifica esistenza prodotti su Amazon
+												</div>
+									
+											</div>
+										</div>-->
+
+										<div class="">
+											{if:!one_account}
+											<div class="panel button_action" data-toggle="modal" data-target="#accounts_modal">
+												<div class="panel-body">
+														<i class="fa fa-upload"></i> Invia catalogo su Amazon 
+												</div>
+									
+											</div>
+											{else:}
+											<div class="panel button_action" onclick="check_upload({one_account.id});">
+												<div class="panel-body">
+														<i class="fa fa-upload"></i> Invia catalogo su Amazon 
+												</div>
+									
+											</div>
+
+											{end:}
+										</div>
+
+										<div class="">
+											<div class="panel button_action" onclick="confirm_update_inventory(); return false;">
+												<div class="panel-body">
+														<i class="fa fa-refresh"></i> Aggiorna giacenze 
+												</div>
+									
+											</div>
+										</div>
+
+										<div class="">
+											<div class="panel button_action" onclick="get_orders(); return false;">
+												<div class="panel-body">
+														<i class="fa fa-download"></i> Scarica ordini da Amazon 
+												</div>
+									
+											</div>
+										</div>
+
+										<div class="">
+											<div class="panel button_action" onclick="new_products(); return false;">
+												<div class="panel-body">
+														<i class="fa fa-magic"></i> Crea nuovi prodotti su amazon
+												</div>
+									
+											</div>
+										</div>
+
+										
+										{else:}
+										<p>Nessun account amazon presente in archivio</p>
+										{end:}
+						</div>
+					</div>
+
+					<div class="row box-container" id="box_result" style="display:none">
+						<div class="col-md-12 well" id="result_data">
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+					
+        </div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+
+
+	
+
+	{output(#javascript_end.htm#)}
+	{output_module(#amazon#,#popup_process.htm#)}
+	
+	
+
+	<div class="modal fade" id="accounts_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Seleziona account da sincronizzare</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			{foreach:list,v}
+			<button class="btn" onclick="check_upload({v.id}); return false;">{v.name}</button>
+			{end:}
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal" id="dismiss_modal_account">ANNULLA</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+</body>
+
+</html>

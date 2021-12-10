@@ -1,0 +1,141 @@
+<style>
+.panel {
+    margin-top: 20px;
+	position: relative;
+}
+
+.panel-body.p-t-10 {
+	border: 1px solid#DFE1E6;
+}
+
+.panel-heading i {
+	position: absolute;
+	right: 16px;
+	font-size: 20px;
+}
+</style>
+
+<form method="index.php" method="POST">
+<input type='hidden' name='formID'>
+<input type='hidden' name='action' value="{{action}}">
+<input type='hidden' name='ctrl' value="{{ctrl}}">
+<input type='hidden' name='tabIndex' value="{{tabIndex}}">
+{{messages|raw}}
+{% import "macro/form.htm" as form %}
+<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Generale
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</div>
+				<div class="panel-body p-t-10" style="display:none">
+					{{form.buildCol(dataform.mail,'col-md-12')}}	
+				</div>
+		 </div>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Gestione magazzino
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</div>
+			<div class="panel-body p-t-10" style="display:none">
+				<div class="col-md-12">
+					{{form.buildCol(dataform.closeCart,'col-md-12')}}
+					{{form.buildCol(dataform.automaticStock,'col-md-12')}}
+					{{form.buildCol(dataform.automaticStockType,'col-md-12')}}
+					{{form.buildCol(dataform.checkQuantityCatalog,'col-md-12')}}
+					{{form.buildCol(dataform.checkQuantityEshop,'col-md-12')}}
+					{{form.buildCol(dataform.alertRunOut,'col-md-12')}}				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Dati azienda
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</div>
+			<div class="panel-body p-t-10" style="display:none">
+				<div class="col-md-12">
+					{{form.buildCol(dataform.nome_azienda,'col-md-12')}}
+					{{form.buildCol(dataform.ragione_sociale,'col-md-12')}}
+					{{form.buildCol(dataform.partita_iva,'col-md-12')}}
+					{{form.buildCol(dataform.capitale_sociale,'col-md-12')}}
+					{{form.buildCol(dataform.indirizzo_azienda,'col-md-12')}}
+					{{form.buildCol(dataform.banca_appoggio,'col-md-12')}}
+					{{form.buildCol(dataform.telefono,'col-md-12')}}
+					{{form.buildCol(dataform.fax,'col-md-12')}}
+					{{form.buildCol(dataform.mail_contatti,'col-md-12')}}	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Gestione Fatturazione
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</div>
+			<div class="panel-body p-t-10" style="display:none">
+				<div class="col-md-12">
+					{{form.buildCol(dataform.enableInvoice,'col-md-12')}}
+					{{form.buildCol(dataform.automaticInvoice,'col-md-12')}}
+					{{form.buildCol(dataform.nameInvoice,'col-md-12')}}
+					{{form.buildUploadImage(dataform.logoInvoice,'col-md-12')}}	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+			<div class="pull-right">
+				 <button  class="btn btn-success m-t-10"><i class="fa fa-save  p-r-10"></i> {{tr('save')}}</button>
+			</div>
+	</div>
+</div>
+<input type='hidden' name='action' value="{{action}}">
+<input type='hidden' name='ctrl' value="{{ctrl}}">
+<input type='hidden' name='tabIndex' value="{{tabIndex}}">
+<input type='hidden' name='mod' value="{{module}}">
+<input type='hidden' name='pageID' value="{{pageID}}">		
+</form>
+<script>
+	$(document).ready(function(){
+		$('.panel-heading').css('cursor',"pointer");
+		$('.panel-heading').click(function(){
+			$(this).closest('.panel').find('.panel-body').toggle();	
+		})
+		if( typeof js_campo != 'undefined' && js_campo != null ){
+			
+			$('#'+js_campo).closest('.panel-primary').find('.panel-heading').trigger('click');
+			
+			if( $('#'+js_campo).is('input') ){
+				$('#'+js_campo).css('border',"1px solid red");
+			}
+			if( typeof js_code_curency != 'undefined' && js_code_curency != null ){
+				
+				$('#valuecurrency_'+js_code_curency).css('border',"1px solid red");
+			}
+		}
+
+		/*if( $('#img_logoInvoice').length > 0 ){
+			$('#img_logoInvoice').cironapo({
+				id_field_img:'logoInvoice',
+				id_wrapper: 'wrapper-upload_logoInvoice', 
+				resize:"thumbnail,small,medium,large",
+				type_url_image: "th-nw",
+			});
+		}*/
+	});
+</script>

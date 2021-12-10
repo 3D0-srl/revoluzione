@@ -1,0 +1,13 @@
+{% extends "layouts/tab/base_form.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+{{form.buildCol(dataform.enable_buy_without_registration,'col-md-6')}}
+{{form.buildCol(dataform.reload_cart_after_change_qnt,'col-md-6')}}
+{{form.buildCol(dataform.show_preview_orders,'col-md-6')}}
+{{form.buildCol(dataform.show_taxes,'col-md-6')}}
+{{form.buildCol(dataform.time_last_update,'col-md-6')}}
+{{form.buildCol(dataform.virtual_cart,'col-md-6')}}
+
+{% endblock %}

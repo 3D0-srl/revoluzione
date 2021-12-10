@@ -1,0 +1,67 @@
+{% if step < 4 %}
+	<div class="col100">
+		<div class="">
+		<span class="txt">{{num_progress_courier}}. {{tr('Metodo di spedizione','cart_onepage')}}</span></div>
+	</div>
+{% endif %}
+
+{% if step == 4 %}
+	<div class="pallaselezionata current">
+		<span class="txt">{{num_progress_courier}}. {{tr('Metodo di spedizione','cart_onepage')}}</span>
+	</div>
+	<div class="txt">
+		{% if couriers == false %}
+			{{tr('Nessun metodo di spedizione per la nazione di spedizione specificata','cart_onepage')}}: <b>{{country.get('name')}}</b>.
+
+		{% else %}
+				Seleziona la modalità di spedizione
+		{% endif %}
+	</div>
+	<form id="shippingMethod_form">
+		{% if couriers %}
+			
+			{% for c in couriers %}
+				<div class="box_shipment">
+					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-shipment">
+						<input type="radio" id="shipment{c.id}" class="shipping_method" name="formdata[shippingMethod]" value="{{c.id}}" {% if c.id == shipping_method_selected %}checked{% endif %} price="{{c.price}}">
+						<label for="shipment{c.id}"></label>
+					</div>
+					<div class="col-xs-11 col-sm-3 col-md-3 col-lg-3 col-shipment">
+						<span class="name_shipment">{{c.get('name')}}</span>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-shipment">
+						<span><strong>{{formattanumero(c.price)}} {{currencyLabel|raw}} <!--{{tr('Iva incl.','cart_onepage')}}--></strong></span>
+					</div>
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-shipment">
+						<span>{{c.get('description')|raw}}</span>
+					</div>
+				</div>
+			{% endfor %}
+		
+		{% endif %}
+		<div class="space50"></div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<button type="button" class="btn-next" onclick="step4()">{{tr('Conferma corriere','cart_onepage')}}</button>
+			</div>
+		</div>
+	</form>
+
+	<div class="space30"></div>
+
+{% endif %}
+
+{% if step > 4 %}
+	<div class="pallaselezionata">
+		<a href="index.php?ctrl=Cart&mod=cart_onepage&action=cart_shipment" class="btn-modifica">{{tr('Modifica','cart_onepage')}}</a>
+		<span class="txt">
+			<div class="row">
+				<span class="col-xs-12 col-md-5">{{num_progress_courier}}. {{tr('Metodo di spedizione','cart_onepage')}}</span>
+				<span class="col-xs-12 col-md-7 dati-inseriti">
+					<strong>{{courier.get('name')}}</strong><br><br>
+					{{courier.get('description')|raw}}
+				</span>
+			</div>
+		</span>
+	</div>
+{% endif %}

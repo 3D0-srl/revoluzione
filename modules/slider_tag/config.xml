@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>533</id>
+		<author>Ciro Napolitano</author>
+		<name>Slider Home Tag</name>
+		<permission>superadmin</permission>
+		<tag>slider_tag</tag>
+		<kind>superadmin</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette di creare slider con immagini con tag]]></description> 
+   </info>
+    <menu> 
+		<scope>admin</scope>
+		<header>
+			<parent>page</parent>
+		</header>
+	
+		<items> 
+			<locale> 
+				<name>	
+					<it>Slider Tag</it>
+					<en>Slider Tag</en>
+				</name>
+			</locale>
+			<tag>slider_tag</tag>
+			<permission>cms</permission> 
+			<priority>102</priority> 
+			<url>index.php?action=gallery</url>
+		</items>
+		
+	</menu>
+
+	<linkSetting>
+		index.php?action=setting_module 	
+   </linkSetting>
+</module>

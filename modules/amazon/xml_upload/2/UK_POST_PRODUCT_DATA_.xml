@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+			<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd"> 
+			<Header> 
+				<DocumentVersion>1.01</DocumentVersion>
+				<MerchantIdentifier>A1VZO1IYX3SMHG</MerchantIdentifier> 
+			</Header> 
+			<MessageType>Product</MessageType>
+			<PurgeAndReplace>false</PurgeAndReplace><Message> 
+									<MessageID>1</MessageID>
+									<OperationType>PartialUpdate</OperationType> 
+									<Product> 
+										<SKU>CC0248UE85</SKU> 
+										<StandardProductID> 
+											<Type>EAN</Type> 
+											<Value>8433840000000</Value> 
+										</StandardProductID> 
+										<ProductTaxCode>A_GEN_TAX</ProductTaxCode> 
+										<LaunchDate>2020-11-06T23:18:53</LaunchDate> 
+										<Condition> 
+											<ConditionType>New</ConditionType> 
+										</Condition> 
+										<DescriptionData> 
+											<Title>ADAH Sedia metallo nero PU tortora</Title>
+											<Description>
+												ADAH Sedia metallo nero PU tortora
+											</Description>
+											</DescriptionData></Product>
+								</Message><Message> 
+									<MessageID>2</MessageID>
+									<OperationType>PartialUpdate</OperationType> 
+									<Product> 
+										<SKU>CC0934PN81</SKU> 
+										<StandardProductID> 
+											<Type>EAN</Type> 
+											<Value>8433840597294</Value> 
+										</StandardProductID> 
+										<ProductTaxCode>A_GEN_TAX</ProductTaxCode> 
+										<LaunchDate>2020-11-06T23:18:53</LaunchDate> 
+										<Condition> 
+											<ConditionType>New</ConditionType> 
+										</Condition> 
+										<DescriptionData> 
+											<Title>KONNA</Title>
+											<Description>
+												KONNA
+											</Description>
+											</DescriptionData></Product>
+								</Message></AmazonEnvelope>

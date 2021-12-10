@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Giuseppe Capone</author>
+		<name>Widget Box News</name>
+		<permission>superadmin</permission>
+		<tag>widget_box_news</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Widget per la visualizzazione delle news]]></description> 
+   </info>
+   <widgets>
+		<widget> 
+			<name>Widget Box News</name>
+			<function>WidgetBoxNewsComponent</function>
+			<url_conf>index.php?ctrl=Conf&amp;mod=widget_box_news</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+   </widgets>
+	<dependencies>
+		<dependence>news</dependence>
+	</dependencies>
+</module>

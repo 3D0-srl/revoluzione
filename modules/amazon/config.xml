@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Amazon</name>
+		<permission>superadmin</permission>
+		<tag>amazon</tag>
+		<kind>ecommerce</kind>
+		<version>3</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra amazon nell'ecommerce]]></description> 
+   </info>
+  <admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Amazon</it>
+						<en>Amazon</en>
+						<es>Amazon</es>
+						<de>Amazon</de>
+						<fr>Amazon</fr>
+						<pt>Amazon</pt>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>amazon_store</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=Store&amp;mod=amazon&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+</module>

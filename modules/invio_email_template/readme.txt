@@ -1,0 +1,1 @@
+Una volta installato il modulo si devono dare i permessi 777 alla cartella in public_html/modules/invio_email_template/templates/it/mail

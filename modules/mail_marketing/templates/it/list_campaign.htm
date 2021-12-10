@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
+
+<head>
+     <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	<link rel="stylesheet" href="css/style-marketing.css">
+
+    {output(#javascript_form.htm#)}
+    {output(#javascript.htm#)}
+	<flexy:toJavascript flexy:prefix="js_"
+		is_demo="is_demo"
+    >
+	<script src="/modules/mail_marketing/js/count.js"></script>
+	<style>
+		.countdown{
+			border: 1px solid black;
+			min-width:50px;
+			display:inline;
+			margin-left: 5px;
+			padding:3px;
+			color: #FFFFFF;
+			background: #000000;
+			font-size:30px;
+		}
+		.well-lg{
+			border: 1px solid #FFFFFF;
+			border-radius:0;
+			background-color:#fff;
+		}
+	</style>
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+	<script>
+		function elimina_campaign(id){
+			MarionConfirm('Conferma Operazione',"Sicuro di volere eliminare questa campagna?",function(){
+				document.location.href="controller.php?action=delete_campaign&id="+id;
+			});
+		}
+
+
+		function start_campaign(el,id){
+			if( typeof js_is_demo != 'undefined' && js_is_demo == 1 ){
+				MarionAlert('Attenzione!',"Questa è una demo del software<br>. Non puoi effetturare questa operazione!");
+			}else{
+				MarionConfirm('Conferma Operazione',"Sicuro di volere avviare questa campagna?",function(){
+						
+						
+
+						$.ajax({
+						  
+						  url: "controller.php",
+						  type: 'GET',
+						  data: { 'action':'start_campaign', id:id},
+						  dataType: "json",
+						  success: function(data){
+								if( data.result == 'ok' ){
+									el.remove();
+									MarionAlert('Operazione Completata!',"La campagna è stata avviata!");
+								}else{
+									MarionAlert('Attenzione!',"Errore inatteso!");
+								}	
+						  }
+						 
+					});
+				
+				});
+			}
+		}
+		
+		$(document).ready(function(){
+			$('.counter').each(function(){
+				var el = $(this);
+				var date = el.attr('date');
+				var countDownDate = new Date(date).getTime();
+
+				// Update the count down every 1 second
+				var x = setInterval(function() {
+
+				  // Get todays date and time
+				  var now = new Date().getTime();
+
+				  // Find the distance between now an the count down date
+				  var distance = countDownDate - now;
+
+				  // Time calculations for days, hours, minutes and seconds
+				  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				  var seconds_perc = parseInt(100*(60-seconds)/60);
+				  var minutes_perc = parseInt(100*(60-minutes)/60);
+				  var hours_perc = parseInt(100*(24-hours)/24);
+				  var days_perc = parseInt(100*(365-days)/365);
+				  var indice = parseInt(el.find('#seconds_perc').attr('indice'));
+				 
+				  charts[indice].update(seconds_perc);
+
+				  var indice = parseInt(el.find('#minutes_perc').attr('indice'));
+				  charts[indice].update(minutes_perc);
+
+				  var indice = parseInt(el.find('#hours_perc').attr('indice'));
+				  charts[indice].update(hours_perc);
+
+				  var indice = parseInt(el.find('#days_perc').attr('indice'));
+				  charts[indice].update(days_perc);
+				  //t.attr('data-percent',seconds_perc);
+				  //var chart = new EasyPieChart(t, options_counter);
+				 // t.data('easyPieChart').update(seconds_perc);
+				  el.find('#days').html(days);
+				  el.find('#hours').html(hours);
+				  el.find('#minutes').html(minutes);
+				  el.find('#seconds').html(seconds);
+				
+				  
+				  // If the count down is finished, write some text
+				  if (distance < 0) {
+					clearInterval(x);
+					//el.html( "EXPIRED");
+				  }
+				}, 1000);
+			});
+		});
+
+	</script>
+        
+	<script>
+		$(document).ready(function(){
+			$(".open-pulsanti").click(function(){
+				$(this).toggleClass("show");
+				if($(this).hasClass('show')){
+					$(this).parent().find(".box-pulsanti").addClass("active");
+				} else {
+					$(this).parent().find(".box-pulsanti").removeClass("active");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body data-page="dashboard">
+      <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+        <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+            <div class="m-b-20 clearfix">
+                <div class="page-title pull-left">
+					
+                    <h3 class="pull-left"><strong>Campagne {if:!old}attive{else:}inviate{end:}</strong></h3>
+					
+
+                </div>
+                 <div class="pull-right" >
+					{if:!old}
+					<a  href="controller.php?action=campaigns&old=1" class="btn btn-success m-t-10 old"><i class="fa fa-signal" style="margin-right:5px;" aria-hidden="true"></i> Campagne inviate</a>
+					{else:}
+						<a  href="controller.php?action=campaigns" class="btn btn-success m-t-10 old"><i class="fa fa-signal" style="margin-right:5px;" aria-hidden="true"></i> Campagne attive</a>
+					{end:}
+					<a  href="controller.php?action=add_campaign" class="btn btn-success m-t-10"><i class="fa fa-plus p-r-10"></i> Aggiungi campagna</a>
+                </div>
+            </div>
+            
+			<div class="row">
+				<div class="col-md-12 box-riga">
+					<!--<div class="row well well-lg riga-campagna" flexy:foreach="list,v">-->
+					<div class="riga-campagna" flexy:if="!list">
+						<p>Nessuna campagna in archivio</p>
+					</div>	
+					<div class="riga-campagna" flexy:foreach="list,v">
+							<div class="count">
+								<!--
+								{if:!v.sent}
+								{if:v.cron}
+									<span date="{v.dateStart} {v.hourStart}" class="campaign_counter"> tempo restante..</span>
+								{end:}
+								{end:}
+								-->
+								{if:v.cron}
+								<ul date="{v.dateStart} {v.hourStart}" class="counter">
+								  <li class="chart" id="days_perc" data-percent="75"><span id="days">26</span>Giorni</li>
+								  <li class="chart" id="hours_perc" data-percent="15"><span id="hours">15</span>Ore</li>
+								  <li class="chart" id="minutes_perc" data-percent="83"><span id="minutes">50</span>Minuti</li>
+								  <li class="chart" id="seconds_perc" data-percent="60"><span id="seconds">30</span>Secondi</li>
+								</ul>
+								{else:}
+
+								<!--<ul>
+								  <li class="chart2" id="days_perc" data-percent="100"><span id="days">0</span>Giorni</li>
+								  <li class="chart2" id="hours_perc" data-percent="100"><span id="hours">0</span>Ore</li>
+								  <li class="chart2" id="minutes_perc" data-percent="100"><span id="minutes">0</span>Minuti</li>
+								  <li class="chart2" id="seconds_perc" data-percent="100"><span id="seconds">0</span>Secondi</li>
+								</ul>-->
+								{if:v.sent}
+								<div class="box-calendar">
+									<div class="ico-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+									<div class="data">
+										<span class="giorno">{v.inviata[day]}</span>
+										<span><strong>{v.inviata[giorno]}</strong><br/>{v.inviata[month]} {v.inviata[year]}</span>
+									</div>
+								</div>
+								{else:}
+								<ul>
+								  <li class="chart2" id="days_perc" data-percent="100"><span id="days">0</span>Giorni</li>
+								  <li class="chart2" id="hours_perc" data-percent="100"><span id="hours">0</span>Ore</li>
+								  <li class="chart2" id="minutes_perc" data-percent="100"><span id="minutes">0</span>Minuti</li>
+								  <li class="chart2" id="seconds_perc" data-percent="100"><span id="seconds">0</span>Secondi</li>
+								</ul>
+
+								{end:}
+
+								{end:}
+							</div>
+							<div class="dati">
+								Nome campagna: <b>{v.name}</b><br>
+								Lista di distribuzione: <b>{v.listname}</b><br>
+								{if:!v.sent}
+								Numero di iscritti: <b>{v.tot_users}</b><br>
+								{else:}
+								Inviato a: <b>{v.tot_users}</b> recipiente/i<br>
+								{end:}
+								Email newsletter: <b>{v.email}</b><br>
+							</div>
+							
+
+							<div class="box-start">
+								{if:!v.sent}
+									{if:!v.cron}
+									<a href="#" onclick="start_campaign($(this),{v.id}); return false;" class="btn btn-success btn-lg start"><i class="fa fa-send"></i> AVVIA</a>	
+									{end:}
+								{else:}
+								<a href="controller.php?action=report&id={v.id}" class="btn btn-info btn-lg btn-full report"><i class="fa fa-signal"></i> REPORTS</a>
+								{end:}
+								
+							</div>
+
+							<div class="pulsanti">
+								{if:!v.sent}
+										<div class="box-preview">
+											<a href="controller.php?action=view_mail_campaign&id={v.id}" target="_blank" class="pulsante"><i class="fa fa-eye" aria-hidden="true"></i></a>
+										</div>
+										<div>
+											<div class="open-pulsanti"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+											<div class="box-pulsanti">
+												<a href="controller.php?action=mod_campaign&id={v.id}" class="btn btn-warning btn-lg"><i class="fa fa-pencil"></i></a>
+												<a href="controller.php?action=dup_campaign&id={v.id}" class="btn btn-primary btn-lg"><i class="fa fa-copy"></i></a>
+												<a href="#"  onclick="elimina_campaign({v.id});return false;" class="btn btn-danger btn-lg"><i class="fa fa-trash-o"></i></a>
+											</div>	
+										</div>
+									  <!--<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+											<span class="caret"></span>
+									  </button>-->									 
+								{else:}
+								<div class="btn-group media-group">
+									  <a href="controller.php?action=view_mail_campaign&id={v.id}" target="_blank" class="pulsante"><i class="fa fa-eye" aria-hidden="true"></i></a>
+								</div>
+								{end:}
+						
+							</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END WRAPPER -->
+   
+  {output(#javascript_end.htm#)}
+
+  <script src="js/canvasjs.min.js"></script>
+  <script src="js/jquery.canvasjs.min.js"></script>
+  
+</body>
+</html>

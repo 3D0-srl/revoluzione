@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Ecommerce widgets</name>
+		<permission>superadmin</permission>
+		<tag>ecommerce_widgets</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra nel pagecomposer i widgets per l'eccomerce relativi alla dashboard]]></description> 
+   </info>
+   <widgets>
+		<widget> 
+			<name>Ordini da spedire</name>
+			<function>WidgetShipmentComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+		<widget> 
+			<name>Ultimi ordini admin</name>
+			<function>WidgetLastOrdersComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+
+		<widget> 
+			<name>Box incomes month</name>
+			<function>WidgetIncomesMonthComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+
+		<widget> 
+			<name>Box orders month</name>
+			<function>WidgetOrdersMonthComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+
+		<widget> 
+			<name>Box products online</name>
+			<function>WidgetProductsOnlineComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+
+		<widget> 
+			<name>Box customers</name>
+			<function>WidgetCustomersComponent</function>
+			<repeatable>1</repeatable>
+			<restrictions>dashboard</restrictions>
+		</widget>
+	</widgets>
+
+	<dependencies>
+		<dependence>ecommerce</dependence>
+    </dependencies>
+
+
+</module>

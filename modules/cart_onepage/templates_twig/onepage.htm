@@ -1,0 +1,27 @@
+{% extends 'layouts/cart_layout.htm' %}
+{% block javascript %}
+	{{parent()}}
+	<!-- GOOGLE TAG MANAGER --->
+	{{do_action('ganalitycs_display_script_checkout',step)}}
+	<!-- GOOGLE TAG MANAGER --->
+{% endblock %}
+{% block content %}
+<div class="container container-big">
+	<div class="fixfixed">
+		
+		{% include 'partials/cart_summary_mob.htm' %}
+	
+		
+		<div class="contcart">
+			<div class="topcart">
+				
+				{% include 'partials/progress.htm' %}
+				
+			</div>
+		</div>
+	</div>
+	{% include 'partials/fixedcart.htm' %}
+	<div class="space60"></div>
+</div>
+
+{% endblock %}

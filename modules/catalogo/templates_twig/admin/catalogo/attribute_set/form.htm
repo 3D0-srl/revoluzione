@@ -1,0 +1,88 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('attribute_set')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.label,'col-md-12')}}
+
+
+
+
+{% for k,v in attributi %}
+					
+<div class="panel panel-default col-xs-12">
+	<div class="panel-body">
+		
+		{% if v.id in composizione|keys %}
+		
+		
+		<div class="form-group col-md-3">
+			<div class="checkbox">
+			  <label><input type="checkbox" checked name="formdata[attributi][{{k}}][id]" value="{{v.id}}">{{v.get('label')}}</label>
+			</div>
+		</div>
+		<div class="form-group col-md-3">
+			<label>Ordine di visualizzazione:</label>
+			<div class="controls">
+				<input class="form-control" name="formdata[attributi][{{k}}][orderView]" value="{{composizione[v.id]['orderView']}}"type="text">
+			</div>
+		</div>
+		<div class="form-group col-md-3 form-inline">
+			<label>Tipologia visualizzazione:</label>
+			<div class="controls">
+					
+				{% if composizione[v.id]['type'] == 'select' %}
+				<input class="form-control" name="formdata[attributi][{{k}}][type]"  type="radio" value="select" checked> select
+				<input class="form-control" name="formdata[attributi][{{k}}][type]" type="radio" value="radio"> radio
+				{% else %}
+				<input class="form-control" name="formdata[attributi][{{k}}][type]"  type="radio" value="select"> select
+				<input class="form-control" name="formdata[attributi][{{k}}][type]" type="radio" value="radio" checked> radio
+				{% endif %}
+			</div>
+		</div>
+		<div class="form-group col-md-3 form-inline">
+			<label>Visualizza immagine allegata:</label>
+			<div class="controls">
+				
+				{% if composizione[v.id]['img'] == '1' %}
+				<input class="form-control" name="formdata[attributi][{{k}}][img]"  type="radio" value="1" checked> SI
+				<input class="form-control" name="formdata[attributi][{{k}}][img]" type="radio" value="0"> NO
+				{% else %}
+				<input class="form-control" name="formdata[attributi][{{k}}][img]"  type="radio" value="1"> SI
+				<input class="form-control" name="formdata[attributi][{{k}}][img]" type="radio" value="0" checked> NO
+				{% endif %}
+			</div>
+		</div>
+		{% else %}
+		<div class="form-group col-md-3">
+			<div class="checkbox">
+			  <label><input type="checkbox" name="formdata[attributi][{{k}}][id]" value="{{v.id}}">{{v.get('label')}}</label>
+			</div>
+		</div>
+		<div class="form-group col-md-3">
+			<label>Ordine di visualizzazione:</label>
+			<div class="controls">
+				<input class="form-control" name="formdata[attributi][{{k}}][ordine]" type="text">
+			</div>
+		</div>
+		<div class="form-group col-md-3 form-inline">
+			<label>Tipologia visualizzazione:</label>
+			<div class="controls">
+				<input class="form-control" name="formdata[attributi][{{k}}][type]"  type="radio" value="select" checked> select
+				<input class="form-control" name="formdata[attributi][{{k}}][type]" type="radio" value="radio"> radio
+			</div>
+		</div>
+			<div class="form-group col-md-3 form-inline">
+			<label>Visualizza immagine allegata:</label>
+			<div class="controls">
+				<input class="form-control" name="formdata[attributi][{{k}}][img]"  type="radio" value="1" checked> SI
+				<input class="form-control" name="formdata[attributi][{{k}}][img]" type="radio" value="0"> NO
+			</div>
+		</div>
+		{% endif %}
+	
+	</div>
+</div>
+{% endfor %}
+
+{% endblock %}

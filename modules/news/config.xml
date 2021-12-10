@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>News</name>
+		<permission>superadmin</permission>
+		<tag>news</tag>
+		<kind>cms</kind>
+		<autoload>1</autoload>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette la gestione delle news]]></description> 
+   </info>
+   <admin>
+	  <menu>
+		<items>
+			
+			<item>
+				<locale>
+					<name>
+						<it>News</it>
+						<en>News</en>
+					</name>
+				</locale>
+				<parent>cms</parent>
+				<tag>news_settings</tag> 
+				<permission>cms</permission> 
+				<url>index.php?ctrl=NewsAdmin&amp;mod=news&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <widgets>
+	 <widget> 
+		<name>Ultime News</name>
+		<function>WidgetUltimeNews</function>
+		<url_conf>index.php?ctrl=Conf&amp;mod=news</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+  </widgets>
+</module>

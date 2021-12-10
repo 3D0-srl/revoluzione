@@ -1,0 +1,752 @@
+[09:44:36]:: inizio lettura CSV
+[09:44:36]:: fine lettura CSV
+[09:44:36]:: inizio creazione immagini
+[09:45:12]:: Importate immagini di CLU5762-41-MARRONE
+[09:45:41]:: Importate immagini di CLU5762
+[09:46:23]:: Importate immagini di CLU5764-36-NERO
+[09:46:51]:: Importate immagini di CLU5764-37-NERO
+[09:47:22]:: Importate immagini di CLU5764-38-NERO
+[09:47:51]:: Importate immagini di CLU5764-39-NERO
+[09:48:19]:: Importate immagini di CLU5764-40-NERO
+[09:48:50]:: Importate immagini di CLU5764-41-NERO
+[09:49:18]:: Importate immagini di CLU5764
+[09:50:03]:: Importate immagini di CLU5794-35-BEIGE
+[09:50:35]:: Importate immagini di CLU5794-38-BEIGE
+[09:51:06]:: Importate immagini di CLU5794-40-BEIGE
+[09:51:39]:: Importate immagini di CLU5794
+[09:51:44]:: Importate immagini di CLU5801-36-MARRONE
+[09:51:48]:: Importate immagini di CLU5801-37-MARONE
+[09:51:52]:: Importate immagini di CLU5801-38-MARRONE
+[09:51:56]:: Importate immagini di CLU5801-39-MARRONE
+[09:52:01]:: Importate immagini di CLU5801-40-MARRONE
+[09:52:05]:: Importate immagini di CLU5801
+[09:52:38]:: Importate immagini di CLU5803-36-NERO
+[09:53:00]:: Importate immagini di CLU5803-37-NERO
+[09:53:22]:: Importate immagini di CLU5803-38-NERO
+[09:53:44]:: Importate immagini di CLU5803-39-NERO
+[09:54:07]:: Importate immagini di CLU5803-40-NERO
+[09:54:29]:: Importate immagini di CLU5803-41-NERO
+[09:54:51]:: Importate immagini di CLU5803
+[09:55:36]:: Importate immagini di CLU5804-36-NERO
+[09:56:07]:: Importate immagini di CLU5804-37-NERO
+[09:56:38]:: Importate immagini di CLU5804-38-NERO
+[09:57:11]:: Importate immagini di CLU5804-39-NERO
+[09:57:41]:: Importate immagini di CLU5804-40-NERO
+[09:58:12]:: Importate immagini di CLU5804-41-NERO
+[09:58:42]:: Importate immagini di CLU5804
+[09:59:29]:: Importate immagini di CLU5811-36-NERO
+[10:00:01]:: Importate immagini di CLU5811-37-NERO
+[10:00:41]:: Importate immagini di CLU5811-38-NERO
+[10:01:14]:: Importate immagini di CLU5811-39-NERO
+[10:01:47]:: Importate immagini di CLU5811-40-NERO
+[10:02:21]:: Importate immagini di CLU5811-41-NERO
+[10:02:51]:: Importate immagini di CLU5811
+[10:03:55]:: Importate immagini di CLU5813-36-NERO
+[10:04:41]:: Importate immagini di CLU5813-37-NERO
+[10:05:29]:: Importate immagini di CLU5813-38-NERO
+[10:06:14]:: Importate immagini di CLU5813-39-NERO
+[10:07:05]:: Importate immagini di CLU5813-40-NERO
+[10:07:54]:: Importate immagini di CLU5813-41-NERO
+[10:08:44]:: Importate immagini di CLU5813
+[10:08:45]:: Importate immagini di D621EC-37-NERO
+[10:08:45]:: Importate immagini di D621EC-38-NERO
+[10:08:46]:: Importate immagini di D621EC-39-NERO
+[10:08:47]:: Importate immagini di D621EC
+[10:08:47]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 09:44:36                                          |
+|END                                               | 10:08:47                                          |
+|DURATION                                          | 24.18 minuti                                      |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 120                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[10:08:47]:: inizio lettura CSV
+[10:08:47]:: fine lettura CSV
+[10:08:47]:: inizio creazione immagini
+[10:09:55]:: Importate immagini di D642SC -35-GRIGIO
+[10:10:41]:: Importate immagini di D642SC -36-GRIGIO
+[10:11:30]:: Importate immagini di D642SC -37-GRIGIO
+[10:12:18]:: Importate immagini di D642SC -38-GRIGIO
+[10:13:06]:: Importate immagini di D642SC -39-GRIGIO
+[10:13:54]:: Importate immagini di D642SC -40-GRIGIO
+[10:14:43]:: Importate immagini di D642SC 
+[10:14:49]:: Importate immagini di D643DCC9H6J-35-LEAD-CHESTNUT
+[10:14:57]:: Importate immagini di D643DCC9H6J-36-LEAD-CHESTNUT
+[10:15:05]:: Importate immagini di D643DCC9H6J-37-LEAD-CHESTNUT
+[10:15:10]:: Importate immagini di D643DCC9H6J-38-LEAD-CHESTNUT
+[10:15:17]:: Importate immagini di D643DCC9H6J-39-LEAD-CHESTNUT
+[10:15:25]:: Importate immagini di D643DCC9H6J-40-LEAD-CHESTNUT
+[10:15:31]:: Importate immagini di D643DCC9H6J-41-LEAD-CHESTNUT
+[10:15:38]:: Importate immagini di D643DCC9H6J
+[10:15:45]:: Importate immagini di D724GFC5K9H-35-CREAM-LEAD
+[10:15:52]:: Importate immagini di D724GFC5K9H-36-CREAM-LEAD
+[10:15:59]:: Importate immagini di D724GFC5K9H-37-CREAM-LEAD
+[10:16:04]:: Importate immagini di D724GFC5K9H-38-CREAM-LEAD
+[10:16:10]:: Importate immagini di D724GFC5K9H-39-CREAM-LEAD
+[10:16:16]:: Importate immagini di D724GFC5K9H
+[10:16:24]:: Importate immagini di D922CAC9999-35-BLACK
+[10:16:33]:: Importate immagini di D922CAC9999-36-BLACK
+[10:16:40]:: Importate immagini di D922CAC9999-37-BLACK
+[10:16:47]:: Importate immagini di D922CAC9999-38-BLACK
+[10:16:55]:: Importate immagini di D922CAC9999-39-BLACK
+[10:17:03]:: Importate immagini di D922CAC9999-40-BLACK
+[10:17:12]:: Importate immagini di D922CAC9999-41-BLACK
+[10:17:19]:: Importate immagini di D922CAC9999
+[10:17:26]:: Importate immagini di D922CDC1236-35-WHITE-LT. GREY
+[10:17:32]:: Importate immagini di D922CDC1236-36-WHITE-LT. GREY
+[10:17:38]:: Importate immagini di D922CDC1236-37-WHITE-LT. GREY
+[10:17:42]:: Importate immagini di D922CDC1236-38-WHITE-LT. GREY
+[10:17:48]:: Importate immagini di D922CDC1236-39-WHITE-LT. GREY
+[10:17:54]:: Importate immagini di D922CDC1236-40-WHITE-LT. GREY
+[10:17:58]:: Importate immagini di D922CDC1236-41-WHITE-LT. GREY
+[10:18:05]:: Importate immagini di D922CDC1236
+[10:18:11]:: Importate immagini di D922QAC5379-37-BEIGE-LT. GOLD
+[10:18:19]:: Importate immagini di D922QAC5379-38-BEIGE-LT. GOLD
+[10:18:26]:: Importate immagini di D922QAC5379-39-BEIGE-LT. GOLD
+[10:18:33]:: Importate immagini di D922QAC5379-40-BEIGE-LT. GOLD
+[10:18:40]:: Importate immagini di D922QAC5379-41-BEIGE-LT. GOLD
+[10:18:45]:: Importate immagini di D922QAC5379
+[10:18:53]:: Importate immagini di D926CAC9999-37-BLACK
+[10:18:58]:: Importate immagini di D926CAC9999-38-BLACK
+[10:19:04]:: Importate immagini di D926CAC9999-39-BLACK
+[10:19:10]:: Importate immagini di D926CAC9999-40-BLACK
+[10:19:16]:: Importate immagini di D926CAC9999-41-BLACK
+[10:19:23]:: Importate immagini di D926CAC9999
+[10:19:31]:: Importate immagini di D926DAC5AH6-36-BEIGE-LT. TAUPE
+[10:19:37]:: Importate immagini di D926DAC5AH6-37-BEIGE-LT. TAUPE
+[10:19:37]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 10:08:47                                          |
+|END                                               | 10:19:37                                          |
+|DURATION                                          | 10.83 minuti                                      |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 177                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[10:20:07]:: inizio lettura CSV
+[10:20:07]:: fine lettura CSV
+[10:20:07]:: inizio creazione immagini
+[10:20:13]:: Importate immagini di D926DAC5AH6-38-BEIGE-LT. TAUPE
+[10:20:20]:: Importate immagini di D926DAC5AH6-39-BEIGE-LT. TAUPE
+[10:20:27]:: Importate immagini di D926DAC5AH6-40-BEIGE-LT. TAUPE
+[10:20:32]:: Importate immagini di D926DAC5AH6-41-BEIGE-LT. TAUPE
+[10:20:39]:: Importate immagini di D926DAC5AH6
+[10:20:46]:: Importate immagini di D926HDC1002-35-OFF WHTE
+[10:20:50]:: Importate immagini di D926HDC1002-36-OFF WHTE
+[10:20:56]:: Importate immagini di D926HDC1002-37-OFF WHTE
+[10:21:00]:: Importate immagini di D926HDC1002-38-OFF WHTE
+[10:21:07]:: Importate immagini di D926HDC1002-39-OFF WHTE
+[10:21:13]:: Importate immagini di D926HDC1002-40-OFF WHTE
+[10:21:17]:: Importate immagini di D926HDC1002-41-OFF WHTE
+[10:21:23]:: Importate immagini di D926HDC1002
+[10:21:27]:: Importate immagini di D926HDC6738-36-LT.TAUPE
+[10:21:32]:: Importate immagini di D926HDC6738-37-LT.TAUPE
+[10:21:36]:: Importate immagini di D926HDC6738-38-LT.TAUPE
+[10:21:42]:: Importate immagini di D926HDC6738-39-LT.TAUPE
+[10:21:48]:: Importate immagini di D926HDC6738-40-LT.TAUPE
+[10:21:52]:: Importate immagini di D926HDC6738-41-LT.TAUPE
+[10:21:58]:: Importate immagini di D926HDC6738
+[10:22:07]:: Importate immagini di D927LACH65K-36-LT. TAUPE-CREAM
+[10:22:17]:: Importate immagini di D927LACH65K-37-LT. TAUPE-CREAM
+[10:22:24]:: Importate immagini di D927LACH65K-38-LT. TAUPE-CREAM
+[10:22:34]:: Importate immagini di D927LACH65K-39-LT. TAUPE-CREAM
+[10:22:42]:: Importate immagini di D927LACH65K-40-LT. TAUPE-CREAM
+[10:22:51]:: Importate immagini di D927LACH65K-41-LT. TAUPE-CREAM
+[10:22:59]:: Importate immagini di D927LACH65K
+[10:23:07]:: Importate immagini di D929GBC4002-35-NAVY
+[10:23:13]:: Importate immagini di D929GBC4002-36-NAVY
+[10:23:20]:: Importate immagini di D929GBC4002-37-NAVY
+[10:23:29]:: Importate immagini di D929GBC4002-38-NAVY
+[10:23:38]:: Importate immagini di D929GBC4002-39-NAVY
+[10:23:46]:: Importate immagini di D929GBC4002-40-NAVY
+[10:23:51]:: Importate immagini di D929GBC4002-41-NAVY
+[10:24:00]:: Importate immagini di D929GBC4002
+[10:24:08]:: Importate immagini di D92DLAC5000-35-BEIGE
+[10:24:16]:: Importate immagini di D92DLAC5000-36-BEIGE
+[10:24:21]:: Importate immagini di D92DLAC5000-37-BEIGE
+[10:24:28]:: Importate immagini di D92DLAC5000-38-BEIGE
+[10:24:33]:: Importate immagini di D92DLAC5000-39-BEIGE
+[10:24:42]:: Importate immagini di D92DLAC5000-40-BEIGE
+[10:24:47]:: Importate immagini di D92DLAC5000-41-BEIGE
+[10:24:56]:: Importate immagini di D92DLAC5000
+[10:25:05]:: Importate immagini di D92DLAC9999-35-BLACK
+[10:25:14]:: Importate immagini di D92DLAC9999-36-BLACK
+[10:25:21]:: Importate immagini di D92DLAC9999-37-BLACK
+[10:25:28]:: Importate immagini di D92DLAC9999-38-BLACK
+[10:25:36]:: Importate immagini di D92DLAC9999-39-BLACK
+[10:25:45]:: Importate immagini di D92DLAC9999-40-BLACK
+[10:25:52]:: Importate immagini di D92DLAC9999-41-BLACK
+[10:26:00]:: Importate immagini di D92DLAC9999
+[10:26:00]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 10:20:07                                          |
+|END                                               | 10:26:00                                          |
+|DURATION                                          | 5.88 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 189                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[10:26:29]:: inizio lettura CSV
+[10:26:29]:: fine lettura CSV
+[10:26:29]:: inizio creazione immagini
+[10:26:34]:: Importate immagini di D92DLCC1R1Q-35-OPTIC WHIT- OFF WHITE
+[10:26:43]:: Importate immagini di D92DLCC1R1Q-36-OPTIC WHIT- OFF WHITE
+[10:26:48]:: Importate immagini di D92DLCC1R1Q-37-OPTIC WHIT- OFF WHITE
+[10:26:56]:: Importate immagini di D92DLCC1R1Q-38-OPTIC WHIT- OFF WHITE
+[10:27:03]:: Importate immagini di D92DLCC1R1Q-39-OPTIC WHIT- OFF WHITE
+[10:27:09]:: Importate immagini di D92DLCC1R1Q-40-OPTIC WHIT- OFF WHITE
+[10:27:17]:: Importate immagini di D92DLCC1R1Q-41-OPTIC WHIT- OFF WHITE
+[10:27:22]:: Importate immagini di D92DLCC1R1Q
+[10:27:31]:: Importate immagini di D92DLCC9999-35-BLACK
+[10:27:39]:: Importate immagini di D92DLCC9999-36-BLACK
+[10:27:44]:: Importate immagini di D92DLCC9999-37-BLACK
+[10:27:51]:: Importate immagini di D92DLCC9999-38-BLACK
+[10:27:59]:: Importate immagini di D92DLCC9999-39-BLACK
+[10:28:05]:: Importate immagini di D92DLCC9999-40-BLACK
+[10:28:12]:: Importate immagini di D92DLCC9999-41-BLACK
+[10:28:19]:: Importate immagini di D92DLCC9999
+[10:28:29]:: Importate immagini di D92DLEC1002-35-OFF WHITE
+[10:28:34]:: Importate immagini di D92DLEC1002-36-OFF WHITE
+[10:28:42]:: Importate immagini di D92DLEC1002-37-OFF WHITE
+[10:28:50]:: Importate immagini di D92DLEC1002-38-OFF WHITE
+[10:28:57]:: Importate immagini di D92DLEC1002-39-OFF WHITE
+[10:29:04]:: Importate immagini di D92DLEC1002-40-OFF WHITE
+[10:29:11]:: Importate immagini di D92DLEC1002-41-OFF WHITE
+[10:29:19]:: Importate immagini di D92DLEC1002
+[10:29:27]:: Importate immagini di D92DLEC6738-35-LT. TAUPE
+[10:29:33]:: Importate immagini di D92DLEC6738-36-LT. TAUPE
+[10:29:41]:: Importate immagini di D92DLEC6738-37-LT. TAUPE
+[10:29:48]:: Importate immagini di D92DLEC6738-38-LT. TAUPE
+[10:29:55]:: Importate immagini di D92DLEC6738-39-LT. TAUPE
+[10:30:02]:: Importate immagini di D92DLEC6738-40-LT. TAUPE
+[10:30:11]:: Importate immagini di D92DLEC6738-41-LT. TAUPE
+[10:30:18]:: Importate immagini di D92DLEC6738
+[10:30:24]:: Importate immagini di D92DLEC7000-35-RED
+[10:30:32]:: Importate immagini di D92DLEC7000-36-RED
+[10:30:38]:: Importate immagini di D92DLEC7000-37-RED
+[10:30:44]:: Importate immagini di D92DLEC7000-38-RED
+[10:30:51]:: Importate immagini di D92DLEC7000-39-RED
+[10:30:59]:: Importate immagini di D92DLEC7000-40-RED
+[10:31:05]:: Importate immagini di D92DLEC7000-41-RED
+[10:31:13]:: Importate immagini di D92DLEC7000
+[10:31:21]:: Importate immagini di D92DLEC9999-35-BLACK
+[10:31:27]:: Importate immagini di D92DLEC9999-36-BLACK
+[10:31:35]:: Importate immagini di D92DLEC9999-37-BLACK
+[10:31:42]:: Importate immagini di D92DLEC9999-38-BLACK
+[10:31:47]:: Importate immagini di D92DLEC9999-39-BLACK
+[10:31:53]:: Importate immagini di D92DLEC9999-40-BLACK
+[10:32:01]:: Importate immagini di D92DLEC9999-41-BLACK
+[10:32:08]:: Importate immagini di D92DLEC9999
+[10:32:16]:: Importate immagini di D92P3BC9999-35-BLACK
+[10:32:26]:: Importate immagini di D92P3BC9999-36-BLACK
+[10:32:35]:: Importate immagini di D92P3BC9999-37-BLACK
+[10:32:35]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 10:26:29                                          |
+|END                                               | 10:32:35                                          |
+|DURATION                                          | 6.1 minuti                                        |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 204                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[10:39:36]:: inizio lettura CSV
+[10:39:36]:: fine lettura CSV
+[10:39:36]:: inizio creazione immagini
+[10:39:42]:: Importate immagini di D92P3BC9999-38-BLACK
+[10:39:51]:: Importate immagini di D92P3BC9999-39-BLACK
+[10:40:01]:: Importate immagini di D92P3BC9999-40-BLACK
+[10:40:09]:: Importate immagini di D92P3BC9999-41-BLACK
+[10:40:18]:: Importate immagini di D92P3BC9999
+[10:40:26]:: Importate immagini di D92R6AC1N1Q-35-LT.SILVER-OFF WHITE
+[10:40:34]:: Importate immagini di D92R6AC1N1Q-36-LT.SILVER-OFF WHITE
+[10:40:39]:: Importate immagini di D92R6AC1N1Q-37-LT.SILVER-OFF WHITE
+[10:40:45]:: Importate immagini di D92R6AC1N1Q-38-LT.SILVER-OFF WHITE
+[10:40:53]:: Importate immagini di D92R6AC1N1Q-39-LT.SILVER-OFF WHITE
+[10:41:00]:: Importate immagini di D92R6AC1N1Q-40-LT.SILVER-OFF WHITE
+[10:41:05]:: Importate immagini di D92R6AC1N1Q-41-LT.SILVER-OFF WHITE
+[10:41:13]:: Importate immagini di D92R6AC1N1Q
+[10:41:21]:: Importate immagini di D92R6AC9999-35-BLACK
+[10:41:28]:: Importate immagini di D92R6AC9999-36-BLACK
+[10:41:35]:: Importate immagini di D92R6AC9999-37-BLACK
+[10:41:43]:: Importate immagini di D92R6AC9999-38-BLACK
+[10:41:51]:: Importate immagini di D92R6AC9999-39-BLACK
+[10:41:56]:: Importate immagini di D92R6AC9999-40-BLACK
+[10:42:05]:: Importate immagini di D92R6AC9999-41-BLACK
+[10:42:11]:: Importate immagini di D92R6AC9999
+[10:42:19]:: Importate immagini di D92R6BC005-35-BLACK-DK. GREY
+[10:42:27]:: Importate immagini di D92R6BC005-36-BLACK-DK. GREY
+[10:42:34]:: Importate immagini di D92R6BC005-37-BLACK-DK. GREY
+[10:42:39]:: Importate immagini di D92R6BC005-38-BLACK-DK. GREY
+[10:42:47]:: Importate immagini di D92R6BC005-39-BLACK-DK. GREY
+[10:42:55]:: Importate immagini di D92R6BC005-40-BLACK-DK. GREY
+[10:43:01]:: Importate immagini di D92R6BC005-41-BLACK-DK. GREY
+[10:43:09]:: Importate immagini di D92R6BC005
+[10:43:15]:: Importate immagini di D92R6BC1151-35-OPTIC WHITE-SILVER
+[10:43:22]:: Importate immagini di D92R6BC1151-36-OPTIC WHITE-SILVER
+[10:43:30]:: Importate immagini di D92R6BC1151-37-OPTIC WHITE-SILVER
+[10:43:35]:: Importate immagini di D92R6BC1151-38-OPTIC WHITE-SILVER
+[10:43:43]:: Importate immagini di D92R6BC1151-39-OPTIC WHITE-SILVER
+[10:43:50]:: Importate immagini di D92R6BC1151-40-OPTIC WHITE-SILVER
+[10:43:56]:: Importate immagini di D92R6BC1151-41-OPTIC WHITE-SILVER
+[10:44:03]:: Importate immagini di D92R6BC1151
+[10:44:12]:: Importate immagini di D92R6BC5379-35-BEIGE-LT.GOLD
+[10:44:20]:: Importate immagini di D92R6BC5379-36-BEIGE-LT.GOLD
+[10:44:28]:: Importate immagini di D92R6BC5379-37-BEIGE-LT.GOLD
+[10:44:36]:: Importate immagini di D92R6BC5379-38-BEIGE-LT.GOLD
+[10:44:43]:: Importate immagini di D92R6BC5379-39-BEIGE-LT.GOLD
+[10:44:51]:: Importate immagini di D92R6BC5379-40-BEIGE-LT.GOLD
+[10:44:59]:: Importate immagini di D92R6BC5379-41-BEIGE-LT.GOLD
+[10:45:07]:: Importate immagini di D92R6BC5379
+[10:45:15]:: Importate immagini di D92R6CC1002-35-OFF WHITE
+[10:45:21]:: Importate immagini di D92R6CC1002-36-OFF WHITE
+[10:45:27]:: Importate immagini di D92R6CC1002-37-OFF WHITE
+[10:45:35]:: Importate immagini di D92R6CC1002-38-OFF WHITE
+[10:45:42]:: Importate immagini di D92R6CC1002-39-OFF WHITE
+[10:45:48]:: Importate immagini di D92R6CC1002-40-OFF WHITE
+[10:45:48]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 10:39:36                                          |
+|END                                               | 10:45:48                                          |
+|DURATION                                          | 6.2 minuti                                        |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 204                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[10:55:37]:: inizio lettura CSV
+[10:55:37]:: fine lettura CSV
+[10:55:37]:: inizio creazione immagini
+[10:55:43]:: Importate immagini di D92R6CC1002-41-OFF WHITE
+[10:55:53]:: Importate immagini di D92R6CC1002
+[10:55:59]:: Importate immagini di D92R6CC9999-35-BLACK
+[10:56:04]:: Importate immagini di D92R6CC9999-36-BLACK
+[10:56:09]:: Importate immagini di D92R6CC9999-37-BLACK
+[10:56:13]:: Importate immagini di D92R6CC9999-38-BLACK
+[10:56:20]:: Importate immagini di D92R6CC9999-39-BLACK
+[10:56:24]:: Importate immagini di D92R6CC9999-40-BLACK
+[10:56:31]:: Importate immagini di D92R6CC9999-41-BLACK
+[10:56:37]:: Importate immagini di D92R6CC9999
+[10:57:01]:: Importate immagini di ECLYPSE-35-NERO
+[10:57:25]:: Importate immagini di ECLYPSE-35-NOCCIOLA
+[10:57:41]:: Importate immagini di ECLYPSE-36-NERO
+[10:57:59]:: Importate immagini di ECLYPSE-36-NOCCIOLA
+[10:58:17]:: Importate immagini di ECLYPSE-37-NOCCIOLA
+[10:58:38]:: Importate immagini di ECLYPSE-37NERO
+[10:58:57]:: Importate immagini di ECLYPSE-38-NERO
+[10:59:15]:: Importate immagini di ECLYPSE-38-NOCCIOLA
+[10:59:33]:: Importate immagini di ECLYPSE-39-NERO
+[10:59:50]:: Importate immagini di ECLYPSE-39-NOCCIOLA
+[11:00:12]:: Importate immagini di ECLYPSE-40-NERO
+[11:00:32]:: Importate immagini di ECLYPSE-40-NOCCIOLA
+[11:00:51]:: Importate immagini di ECLYPSE-41-NERO
+[11:01:08]:: Importate immagini di ECLYPSE-41-NOCCIOLA
+[11:01:23]:: Importate immagini di ECLYPSE
+[11:02:14]:: Importate immagini di HAMPTON-35-BORDEAUX
+[11:02:16]:: Importate immagini di HAMPTON-35-TESTA DI MORO
+[11:02:50]:: Importate immagini di HAMPTON-36-BORDEAUX
+[11:02:51]:: Importate immagini di HAMPTON-36-TESTA DI MORO
+[11:03:27]:: Importate immagini di HAMPTON-37-BORDEAUX
+[11:03:28]:: Importate immagini di HAMPTON-37-TESTA DI MORO
+[11:04:04]:: Importate immagini di HAMPTON-38-BORDEAUX
+[11:04:07]:: Importate immagini di HAMPTON-38-TESTA DI MORO
+[11:04:42]:: Importate immagini di HAMPTON-39-BORDEAUX
+[11:04:44]:: Importate immagini di HAMPTON-39-TESTA DI MORO
+[11:05:21]:: Importate immagini di HAMPTON-40-BORDEAUX
+[11:05:23]:: Importate immagini di HAMPTON-40-TESTA DI MORO
+[11:05:54]:: Importate immagini di HAMPTON-41-BORDEAUX
+[11:05:57]:: Importate immagini di HAMPTON-41-TESTA DI MORO
+[11:05:58]:: Importate immagini di HAMPTON
+[11:06:04]:: Importate immagini di IDE3382-38-BLU
+[11:06:06]:: Importate immagini di IDE3382-38-GRIGIO
+[11:06:13]:: Importate immagini di IDE3382-38-MARRONE
+[11:06:17]:: Importate immagini di IDE3382-39-BLU
+[11:06:22]:: Importate immagini di IDE3382
+[11:06:25]:: Importate immagini di IDE3382NUVE
+[11:06:28]:: Importate immagini di IDE3382NUVE
+[11:06:44]:: Importate immagini di MSV1431-36-NERO
+[11:06:59]:: Importate immagini di MSV1431-37-NERO
+[11:07:14]:: Importate immagini di MSV1431-40-NERO
+[11:07:26]:: Importate immagini di MSV1431
+[11:07:26]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 10:55:37                                          |
+|END                                               | 11:07:26                                          |
+|DURATION                                          | 11.82 minuti                                      |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 151                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[11:17:49]:: inizio lettura CSV
+[11:17:49]:: fine lettura CSV
+[11:17:49]:: inizio creazione immagini
+[11:18:25]:: Importate immagini di MSV1490-36-NERO
+[11:19:05]:: Importate immagini di MSV1490-37-BORDEAUX
+[11:19:28]:: Importate immagini di MSV1490-39-BORDEAUX
+[11:19:53]:: Importate immagini di MSV1490-41-NERO
+[11:20:19]:: Importate immagini di MSV1490-37-NERO
+[11:20:44]:: Importate immagini di MSV1490-41-NERO
+[11:21:10]:: Importate immagini di MSV1490
+[11:21:51]:: Importate immagini di MSV1493-36-GRIGIO
+[11:22:18]:: Importate immagini di MSV1493-37-GRIGIO
+[11:22:48]:: Importate immagini di MSV1493-38-GRIGIO
+[11:23:17]:: Importate immagini di MSV1493-39-GRIGIO
+[11:23:47]:: Importate immagini di MSV1493-40-GRIGIO
+[11:24:14]:: Importate immagini di MSV1493
+[11:24:52]:: Importate immagini di MSV1966-37-BEIGE
+[11:25:16]:: Importate immagini di MSV1966
+[11:25:45]:: Importate immagini di MSV5269-40-NERO
+[11:26:08]:: Importate immagini di MSV5269-41-NERO
+[11:26:31]:: Importate immagini di MSV5269
+[11:26:45]:: Importate immagini di OBC1920-36-GRIGIO
+[11:26:55]:: Importate immagini di OBC1920-37-GRIGIO
+[11:27:05]:: Importate immagini di OBC1920-38-GRIGIO
+[11:27:16]:: Importate immagini di OBC1920-39-GRIGIO
+[11:27:28]:: Importate immagini di OBC1920-40-GRIGIO
+[11:27:39]:: Importate immagini di OBC1920-41-GRIGIO
+[11:27:50]:: Importate immagini di OBC1920
+[11:28:30]:: Importate immagini di PRF1094-37-NERO
+[11:28:54]:: Importate immagini di PRF1094
+[11:29:16]:: Importate immagini di PRF5405-37-NERO
+[11:29:30]:: Importate immagini di PRF5405
+[11:30:06]:: Importate immagini di PRF5406-37-NERO
+[11:30:30]:: Importate immagini di PRF5406
+[11:30:38]:: Importate immagini di PRF7253-35-NERO
+[11:30:49]:: Importate immagini di PRF7253-38-BLU
+[11:30:56]:: Importate immagini di PRF7253
+[11:31:04]:: Importate immagini di PRF7254-35-NERO
+[11:31:11]:: Importate immagini di PRF7254-37-NERO
+[11:31:18]:: Importate immagini di PRF7254
+[11:31:24]:: Importate immagini di PRF7290-35-NERO
+[11:31:30]:: Importate immagini di PRF7290-36-NERO
+[11:31:37]:: Importate immagini di PRF7290-37-NERO
+[11:31:45]:: Importate immagini di PRF7290-38-NERO
+[11:31:51]:: Importate immagini di PRF7290
+[11:31:57]:: Importate immagini di PRF7302-35-NERO
+[11:32:06]:: Importate immagini di PRF7302-38-ARGENTO
+[11:32:13]:: Importate immagini di PRF7302
+[11:32:34]:: Importate immagini di PRF8044-42-NERO
+[11:32:46]:: Importate immagini di PRF8044
+[11:32:48]:: Importate immagini di SGI6522-37-BLU
+[11:32:50]:: Importate immagini di SGI6522-38-BLU
+[11:32:54]:: Importate immagini di SGI6522-39-BLU
+[11:32:54]:: Importate immagini di SGI6522-39-CAMMELLO
+[11:32:54]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 11:17:49                                          |
+|END                                               | 11:32:54                                          |
+|DURATION                                          | 15.08 minuti                                      |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 107                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[11:34:03]:: inizio lettura CSV
+[11:34:03]:: fine lettura CSV
+[11:34:03]:: inizio creazione immagini
+[11:34:03]:: Importate immagini di SGI6522-41-CAMMELLO
+[11:34:04]:: Importate immagini di SGI6522
+[11:34:18]:: Importate immagini di SGI6524-36-ARGENTO
+[11:34:27]:: Importate immagini di SGI6524-39-ARGENTO
+[11:34:38]:: Importate immagini di SGI6524-40-ARGENTO
+[11:34:48]:: Importate immagini di SGI6524
+[11:34:49]:: Importate immagini di SGI6525-37-MARRONE
+[11:34:53]:: Importate immagini di SGI6525-40-BEIGE
+[11:34:53]:: Importate immagini di SGI6525-40-MARRONE
+[11:34:55]:: Importate immagini di SGI6525-41-BEIGE
+[11:34:57]:: Importate immagini di SGI6525
+[11:35:23]:: Importate immagini di SGI670-39-NUDE
+[11:35:39]:: Importate immagini di SGI670-40 NUDE
+[11:35:59]:: Importate immagini di SGI670-41-NUDE
+[11:36:18]:: Importate immagini di SGI670
+[11:36:34]:: Importate immagini di SGI671-37-BIANCO
+[11:36:57]:: Importate immagini di SGI671-37-NERO
+[11:37:13]:: Importate immagini di SGI671-38-NERO
+[11:37:32]:: Importate immagini di SGI671-39-NERO
+[11:37:45]:: Importate immagini di SGI671-41-BIANCO
+[11:37:57]:: Importate immagini di SGI671
+[11:38:21]:: Importate immagini di SGI8530-36-ARGENTO
+[11:38:37]:: Importate immagini di SGI8530-37-ARGENTO
+[11:38:55]:: Importate immagini di SGI8530-39-ARGENTO
+[11:39:16]:: Importate immagini di SGI8530-40-ARGENTO
+[11:39:34]:: Importate immagini di SGI8530
+[11:39:35]:: Importate immagini di SGI8950-37-NUDE
+[11:39:36]:: Importate immagini di SGI8950-39-NUDE
+[11:39:37]:: Importate immagini di SGI8950-40-NUDE
+[11:39:40]:: Importate immagini di SGI8950-38-NUDE
+[11:39:41]:: Importate immagini di SGI8950
+[11:39:43]:: Importate immagini di SGI8951-39-NUDE
+[11:39:44]:: Importate immagini di SGI8951-40-NUDE
+[11:39:45]:: Importate immagini di SGI8951-41-NUDE
+[11:39:48]:: Importate immagini di SGI8951-38-NUDE
+[11:39:49]:: Importate immagini di SGI8951
+[11:40:55]:: Importate immagini di TWIST-35-PIOMBO
+[11:41:42]:: Importate immagini di TWIST-36-PIOMBO
+[11:42:29]:: Importate immagini di TWIST-37-PIOMBO
+[11:43:16]:: Importate immagini di TWIST-38-PIOMBO
+[11:44:08]:: Importate immagini di TWIST-39-PIOMBO
+[11:44:52]:: Importate immagini di TWIST-40-PIOMBO
+[11:45:41]:: Importate immagini di TWIST-41-PIOMBO
+[11:46:29]:: Importate immagini di TWIST
+[11:46:36]:: Importate immagini di U52T5CC1303-41-WHITE-GRIGIO
+[11:46:44]:: Importate immagini di U52T5CC1303-42-WHITE-GRIGIO
+[11:46:51]:: Importate immagini di U52T5CC1303-43-WHITE-GRIGIO
+[11:46:57]:: Importate immagini di U52T5CC1303-44-WHITE-GRIGIO
+[11:47:03]:: Importate immagini di U52T5CC1303
+[11:47:12]:: Importate immagini di U620QBC1006-40-GRIGIO
+[11:47:21]:: Importate immagini di U620QBC1006-41-GRIGIO
+[11:47:21]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 11:34:03                                          |
+|END                                               | 11:47:21                                          |
+|DURATION                                          | 13.3 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 117                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[11:47:21]:: inizio lettura CSV
+[11:47:21]:: fine lettura CSV
+[11:47:21]:: inizio creazione immagini
+[11:47:30]:: Importate immagini di U620QBC1006-42-GRIGIO
+[11:47:37]:: Importate immagini di U620QBC1006-43-GRIGIO
+[11:47:45]:: Importate immagini di U620QBC1006-44-GRIGIO
+[11:47:53]:: Importate immagini di U620QBC1006-45-GRIGIO
+[11:48:03]:: Importate immagini di U620QBC1006-46-GRIGIO
+[11:48:12]:: Importate immagini di U620QBC1006
+[11:48:20]:: Importate immagini di U62D7FC0820-39-NAVY-ORANGE
+[11:48:27]:: Importate immagini di U62D7FC0820-41-NAVY-ORANGE
+[11:48:36]:: Importate immagini di U62D7FC0820-42-NAVY-ORANGE
+[11:48:41]:: Importate immagini di U62D7FC0820-43-NAVY-ORANGE
+[11:48:49]:: Importate immagini di U62D7FC0820-44-NAVY-ORANGE
+[11:48:56]:: Importate immagini di U62D7FC0820-45-NAVY-ORANGE
+[11:49:04]:: Importate immagini di U62D7FC0820
+[11:49:13]:: Importate immagini di U64W1FC7357-39-DK. BURGUNDY
+[11:49:22]:: Importate immagini di U64W1FC7357-40-DK. BURGUNDY
+[11:49:30]:: Importate immagini di U64W1FC7357-41-DK. BURGUNDY
+[11:49:37]:: Importate immagini di U64W1FC7357-42-DK. BURGUNDY
+[11:49:48]:: Importate immagini di U64W1FC7357-43-DK. BURGUNDY
+[11:49:56]:: Importate immagini di U64W1FC7357-44-DK. BURGUNDY
+[11:50:06]:: Importate immagini di U64W1FC7357-45-DK. BURGUNDY
+[11:50:14]:: Importate immagini di U64W1FC7357-46-DK. BURGUNDY
+[11:50:22]:: Importate immagini di U64W1FC7357
+[11:50:31]:: Importate immagini di U743RAC9002-39-DK. GREY
+[11:50:39]:: Importate immagini di U743RAC9002-40-DK. GREY
+[11:50:46]:: Importate immagini di U743RAC9002-41-DK. GREY
+[11:50:52]:: Importate immagini di U743RAC9002-42-DK. GREY
+[11:51:00]:: Importate immagini di U743RAC9002-43-DK. GREY
+[11:51:07]:: Importate immagini di U743RAC9002-44-DK. GREY
+[11:51:15]:: Importate immagini di U743RAC9002-45-DK. GREY
+[11:51:21]:: Importate immagini di U743RAC9002-46-DK. GREY
+[11:51:29]:: Importate immagini di U743RAC9002
+[11:51:40]:: Importate immagini di U823FDC4002-41-NAVY
+[11:51:49]:: Importate immagini di U823FDC4002-42-NAVY
+[11:51:56]:: Importate immagini di U823FDC4002-43-NAVY
+[11:52:06]:: Importate immagini di U823FDC4002-44-NAVY
+[11:52:14]:: Importate immagini di U823FDC4002-45-NAVY
+[11:52:24]:: Importate immagini di U823FDC4002-46-NAVY
+[11:52:32]:: Importate immagini di U823FDC4002
+[11:52:39]:: Importate immagini di U923FCC9004-39-ANTRACITE
+[11:52:48]:: Importate immagini di U923FCC9004-40-ANTRACITE
+[11:52:55]:: Importate immagini di U923FCC9004-41-ANTRACITE
+[11:53:04]:: Importate immagini di U923FCC9004-42-ANTRACITE
+[11:53:14]:: Importate immagini di U923FCC9004-44-ANTRACITE
+[11:53:22]:: Importate immagini di U923FCC9004-45-ANTRACITE
+[11:53:32]:: Importate immagini di U923FCC9004-46-ANTRACITE
+[11:53:40]:: Importate immagini di U923FCC9004
+[11:53:50]:: Importate immagini di U923GBC1003-39-ICE
+[11:53:58]:: Importate immagini di U923GBC1003-41-ICE
+[11:54:06]:: Importate immagini di U923GBC1003-42-ICE
+[11:54:14]:: Importate immagini di U923GBC1003-43-ICE
+[11:54:25]:: Importate immagini di U923GBC1003-44-ICE
+[11:54:25]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 11:47:21                                          |
+|END                                               | 11:54:25                                          |
+|DURATION                                          | 7.07 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 204                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[12:15:05]:: inizio lettura CSV
+[12:15:05]:: fine lettura CSV
+[12:15:05]:: inizio creazione immagini
+[12:15:13]:: Importate immagini di U923GBC1003-45-ICE
+[12:15:22]:: Importate immagini di U923GBC1003
+[12:16:02]:: Importate immagini di WILDE-35-NERO
+[12:16:45]:: Importate immagini di WILDE-35-TESTA DI MORO
+[12:17:16]:: Importate immagini di WILDE
+[12:17:16]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 12:15:05                                          |
+|END                                               | 12:17:16                                          |
+|DURATION                                          | 2.18 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 14                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[12:29:37]:: inizio lettura CSV
+[12:29:37]:: fine lettura CSV
+[12:29:37]:: inizio creazione immagini
+[12:29:37]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 12:29:37                                          |
+|END                                               | 12:29:37                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:15:02]:: inizio lettura CSV
+[13:15:03]:: fine lettura CSV
+[13:15:03]:: inizio creazione immagini
+[13:15:03]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 13:15:02                                          |
+|END                                               | 13:15:03                                          |
+|DURATION                                          | 0.02 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+

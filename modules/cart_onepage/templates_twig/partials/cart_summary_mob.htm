@@ -1,0 +1,27 @@
+<div class="only_mob">	
+	<div class="div_riepilogo">
+		<div class="titcart relative">{{tr('Riepilogo ordine','cart_onepage')}}</div>
+		<div class="clear"></div>
+		<div class="cont-prod-cart">
+			{% if (step > 1) and (step < 6) %}
+				{% if show_preview_orders %}
+					{% for riga in ordini %}
+					<div class="dx-sprod">
+						<div class="col-prod-cart">
+							<img class="prod-cart" src="{{riga.img}}">
+							<div class="pallino_quantity">{{riga.quantity}}</div>
+						</div>
+						<div class="col-prod-cart">
+							<p>{{riga.productname|raw}}</p>
+						</div>
+						<div class="col-prod-cart">
+							<span class="total_{riga.getId()}"> {{currencyLabel|raw}} {{riga.getTotalPriceFormatted()}}</span>
+						</div>
+					</div>
+					{% endfor %}
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+	<a href="index.php?mod=cart_onepage&ctrl=Cart&action=cart" class="modifica-ordine">{{tr('Modifica ordine','cart_onepage')}}</a>
+</div>

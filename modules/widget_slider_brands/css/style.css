@@ -1,0 +1,85 @@
+body{
+	margin-top:0;
+}
+
+.col100 {
+	width: 100%;
+}
+
+.col20 {
+	float: left;
+	width: 20%;
+	padding: 0 15px;
+}
+
+.col20:first-child {
+	padding-left: 0;
+}
+
+.col20:last-child {
+	padding-right:0;
+}
+
+.form-control {
+    display: inline-block;
+    width: 100% !important; 
+}
+
+.col100 .form-control {
+	width: auto !important;
+}
+
+#main-content {
+    padding: 20px;
+    background-color: #dfe5e9;
+    overflow-x: hidden;
+}
+
+.nav-tabs {
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.tab-content {
+    background-color: #FFF;
+    padding: 25px 25px 10px;
+	border: 1px solid #ddd;
+}
+
+.nav.nav-tabs > li > a {
+    background-color: #ced8de;
+    color: #534E4E;
+    border: 0;
+	border-radius: 0;
+    margin: 0;
+    font-weight: 400;
+    border-top: 3px solid transparent;
+}
+
+.nav.nav-tabs > li.active > a {
+    background-color: #fff;
+    color: #534E4E;
+    border: 0;
+    border-top: 3px solid #534E4E;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    font-weight: 700;
+}
+
+.bootstrap-select.btn-group:not(.input-group-btn) {
+    margin-bottom: 0;
+}
+
+button.btn.dropdown-toggle.selectpicker.btn-default {
+    background: transparent;
+	padding-left: 10px;
+}
+
+button.btn.btn-success {
+    float: right;
+    margin-right: 15px;
+}
+
+.bx-wrapper .bx-loading {
+	background: url('modules/widget_slider_brands/img/bx_loader.gif') center center no-repeat #fff;
+}

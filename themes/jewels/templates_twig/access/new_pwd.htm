@@ -1,0 +1,35 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+
+
+
+    <div class="space50"></div>
+    <div class="col48 left">
+			<div class="h1 tal">{{tr('Nuova password')}}</div>
+			 <span class="errore">{{messages|raw}}</span>
+			 <form class="form" action="/index.php" method="POST">
+				<label>{{tr('Inserisci  password')}}</label>
+                <input type="password" placeholder="" name="formdata[password]" value="{{dataform.password.value}}">
+                <div class="space20"></div>
+                <label>{{tr('Conferma  password')}}</label>
+				<input type="password" placeholder="" name="formdata[password_confirm]" value="{{dataform.password_confirm.value}}">
+				<div class="space20"></div>
+				<button type="submit"  class="btn-default">{{tr('Invia')}}</button>
+				
+				<input type="hidden" name="ctrl" value="Access">
+                <input type="hidden" name="action" value="resetpwd">
+                <textarea type="hidden" name="formdata[key]" style="display:none">{{dataform.key.value}}</textarea>
+			</form>
+		</div>
+		<div class="col48 right">
+		
+		</div>
+    
+
+<div class="space60"></div>
+
+
+
+
+{% endblock %}
+

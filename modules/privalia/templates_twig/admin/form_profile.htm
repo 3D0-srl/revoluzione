@@ -1,0 +1,209 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Profilo di vendita {% endblock %} 
+{% block javascript %}
+{{parent()}}
+<script>
+var conf = "{{conf|escape('js')}}";
+var attributi = "{{dati_attributi|escape('js')}}";
+var filtri = "{{dati_filtri|escape('js')}}";
+$(document).ready(function(){
+	if( conf ){
+		var old = jQuery.parseJSON( conf );
+		for( var k in old ){
+			var id_field = k.replace(/\s/g, '');
+			if( old[k]['fixed'] ){
+				$('#'+id_field).val(old[k]['fixed']);
+			}
+			if( old[k]['mapping'] ){
+				$('#'+id_field).val(old[k]['mapping']);
+			}
+			$('#'+id_field).trigger('change');
+			
+		}
+
+		setTimeout(function(){
+			for( var k in old ){
+				var id_field = k.replace(/\s/g, '');
+				if( old[k]['association'] ){
+					for(var k1 in old[k]['association']){
+						$('#'+id_field+"_"+k1).val(old[k]['association'][k1]);
+					}
+				}
+
+			}
+				
+		}, 1000);
+	}
+});	
+var valori_filtri = jQuery.parseJSON( filtri );
+var valori_attributi = jQuery.parseJSON( attributi );
+
+function mappingValues(el,key,key_senza_spazi){
+	var check = false;
+	var val = el.val(); 
+	var valori = null;
+	var matches = val.match(/attribute/);
+	if( matches != null ){
+		check = true;
+		var id = parseInt(val.replace(/([a-zA-Z_]+)/,''));
+		for( var k in valori_attributi ){
+			if( parseInt(valori_attributi[k]['id']) == id ){
+				valori = valori_attributi[k]['values'];
+			}
+		}
+	}
+	var matches = val.match(/feature/);
+	if( matches != null ){
+		check = true;
+		var id = parseInt(val.replace(/([a-zA-Z_]+)/,''));
+		
+		for( var k in valori_filtri ){
+			if( parseInt(valori_filtri[k]['id']) == id ){
+				valori = valori_filtri[k]['values'];
+			}
+		}
+	
+	}
+	if( valori ){
+		var select_options = el.closest('.box-mapping').find('#values').clone().html();
+		var html = '';
+		for( var k in valori ){
+			let name = "formdata["+key+"][association]["+k+"]";
+			let id_select = key_senza_spazi+"_"+k;
+			html = html +"<tr><td>"+valori[k]+"</td><td><select class='no-picker' name="+name+" id="+id_select+">"+select_options+"</select></td></tr>";			
+		}
+		
+		el.closest('.box-mapping').find('.associations').html(html);
+	}
+	if( check ){
+		el.closest('.box-mapping').find('#mapping').show();
+	}else{
+		el.closest('.box-mapping').find('#mapping').hide();
+	}
+}
+
+
+function save_profile(market){
+	var formdata = $('#form').serialize();
+	var id = $('#id').val();
+	var name = $('#name').val();
+	$.ajax({
+	  type: "POST",
+		  url: "index.php",
+		  data: { ctrl: "Profile",mod:'privalia',action:'save_profile',formdata:formdata,'ajax':1,id:id,language:market,name:name},
+		  dataType: "json",
+		  success: function(data){
+				if(data.result == 'ok'){
+					
+					$('#id').val(data.id);
+					alert('Profilo salvato con successo')
+			
+				}else{
+					
+				}
+		  },
+	 
+	});
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<form id="form">
+<div class="well" style="margin-bottom: 20px;">
+		<label>Nome profilo: </label>
+		<input type="text" name="name" id="name" value="{{name}}">
+		<br><br>
+		<b>N.B.</b>: I dati utilizzati per il mapping sono relativi alla lingua <b>{{market|upper}}</b>
+</div>
+{% if manage_route is null %}
+<h4>CATEGORIA PRIVALIA</h4>
+
+<div class="well" style="margin-bottom: 20px;">
+		<label>Categoria: </label>
+		<select class="no-picker" name="formdata[taxonomy]">
+			<option value="">--SELECT--</option>
+			{% for k,v in privalia_categories %}
+			<option  value="{{k}}" {% if k == taxonomy %}selected{% endif %}>{{v}}</option>
+			{% endfor %}
+		</select>
+</div>
+{% endif %}
+<h4>MAPPATURA TRACCIATO</h4>
+{% for k,v in privalia_fields %}
+	{% if v.ignore is null %}
+	
+	<div class="well" style="margin-bottom: 6px;">
+		<div style="margin-bottom: 10px;" class="box-mapping">
+			<b>{{v.name}}{% if v.required %} <span style="color:red">(obbligatorio)</span>{% endif %}</b> associa a 
+			{% if v.fixed is null %}
+			<select class="no-picker" name="formdata[{{k}}][mapping]" id="{{v.id}}" onchange="mappingValues($(this),'{{k}}','{{v.id}}'); return false;">
+				
+				<option value="">--SELECT--</option>
+				 <optgroup label="Campi prodotto">
+					{% for k1,v1 in product_fields %}
+					<option value="field_{{k1}}">{{v1}}</option>
+					{% endfor %}
+				 </optgroup>
+				 <optgroup label="Caratteristiche">
+					{% for f in filtri %}
+					<option value="feature_{{f.id}}">{{f.get('name')}}</option>
+					{% endfor %}
+				  </optgroup>
+				  <optgroup label="Attributi">
+					{% for f in attributi %}
+					<option value="attribute_{{f.id}}">{{f.get('name')}}</option>
+					{% endfor %}
+				  </optgroup>
+				
+			</select>
+			{% if v.values %}
+			<br><span style="color:red">* questo campo può assumere solo dei valori prestabiliti</span>
+			
+
+			<div id="mapping" style="display:none">
+				<h5>Puoi specificare una mappatura tra i valori dell'ecommerce e quelli di <b>Privalia</b>.<br><b>N.B.</b> Se la mappatura non risulta presente verrà preso il valore dell'ecommerce.</h5>
+				<table>
+				<tbody class="associations">
+
+				</tbody>
+				</table>
+			</div>
+			<select class="no-picker" style="display:none" id="values">
+				<option value="">--SELECT--</option>
+				{% for k1,v1 in v.values %}
+					<option value="{{k1}}">{{v1}}</option>
+				{% endfor %}
+			</select>
+			{% endif %}
+			{% else %}
+
+			<select class="no-picker" name="formdata[{{k}}][fixed]" id="{{v.id}}">
+				
+				<option value="">--SELECT--</option>
+				{% for k1,v1 in v.values %}
+					<option value="{{k1}}">{{v1}}</option>
+				{% endfor %}
+				
+			</select>
+
+			{% endif %}
+		</div>
+	</div>
+	<div>
+		
+	</div>
+	
+	{% endif %}
+
+
+
+	
+
+{% endfor %}
+<input type="hidden" name="id" id="id" value="{{id}}">
+<button type="button" onclick="save_profile('{{market}}'); return false;">SALVA</button>
+</form>
+
+
+{% endblock %}

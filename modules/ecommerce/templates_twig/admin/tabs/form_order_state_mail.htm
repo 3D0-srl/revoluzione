@@ -1,0 +1,49 @@
+{% extends "layouts/tab/base_form.htm" %}
+{% block edit_page_title %}{{tr('mail')}} <span class="label" style="background-color:{{status.color}};">{{status.get('name')}}</span> {% endblock %}
+{% block buttons_right %}	
+	<a href="{{url_list}}" class="btn btn-secondario m-t-10"><i class="fa fa-angle-left p-r-10" style="font-weight: 600;"></i> {{tr('back')}}</a>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<script>
+	
+	js_ctrl = "{{ctrl|escape('js')}}";
+	js_tabIndex = "{{tabIndex|escape('js')}}";
+
+</script>
+<div class="row">
+<p>{{tr('info_mail_order_status_editor')}}:</p>
+<div class="col-md-6">
+	<ul>
+		
+		<li><button type="button" onclick="executeCopy('%ORDER_NUMBER%')"><i class="fa fa-copy"></i></button> <b>%ORDER_NUMBER%</b>: {{tr('order_number')}}</li>
+		<li><button type="button" onclick="executeCopy('%ORDER_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_DATA%</b>: {{tr('order_evacuation_date')}}</li>
+		<li><button type="button" onclick="executeCopy('%ORDER_PAID_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_PAID_DATA%</b>: {{tr('order_payment_date')}}</li>
+		<li><button type="button" onclick="executeCopy('%ORDER_SHIPPED_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_SHIPPED_DATA%</b>: {{tr('order_shipment_date')}}</li>
+		<li><button type="button" onclick="executeCopy('%ORDER_STATUS%')"><i class="fa fa-copy"></i></button> <b>%ORDER_STATUS%</b>: {{tr('order_status')}}</li>
+		<li><button type="button" onclick="executeCopy('%ORDER_TRACKING%')"><i class="fa fa-copy"></i></button> <b>%ORDER_TRACKING%</b>: {{tr('tracking_code')}}</li>
+		
+	</ul>
+</div>
+<div class="col-md-6">
+	<ul>
+		<li><button type="button" onclick="executeCopy('%CUSTOMER_FULLNAME_OR_COMPANY%')"><i class="fa fa-copy"></i></button> <b>%CUSTOMER_FULLNAME_OR_COMPANY%</b>: {{tr('customer_fullname')}}</li>
+		<li><button type="button" onclick="executeCopy('%NOTE_STATUS%')"><i class="fa fa-copy"></i></button> <b>%NOTE_STATUS%</b>: {{tr('change_status_note')}}</li>
+		<li><button type="button" onclick="executeCopy('%LINK_COURIER%')"><i class="fa fa-copy"></i></button> <b>%LINK_COURIER%</b>: {{tr('courier_tracking_url')}}</li>
+
+	</ul>
+</div>
+</div>
+
+</div>
+
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id_status)}}
+{{form.buildCol(dataform.subject,'col-md-12')}}
+{{form.buildCol(dataform.message,'col-md-12')}}
+
+{% endblock %}
+   
+

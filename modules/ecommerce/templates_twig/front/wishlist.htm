@@ -1,0 +1,46 @@
+{% extends 'layouts/page_backend.htm' %}
+
+
+{% block backend_header %}
+	<img src="modules/ecommerce/images/ico-la-mia-wishlist-backend.png">{{tr('La mia wishlist','ecommerce')}}
+{% endblock %}
+
+{% block backend_content %}
+		<div class="share share-wishlist">
+			<span>{{tr('Condividi con','ecommerce')}}</span>
+			<a target="_blank" href="{{share_url_facebook}}">
+				<img src="themes/jewels/images/ico-fb-share-wishlist.png">
+			</a>
+			<a target="_blank" href="{{share_url_whatsapp}}">
+				<img src="themes/jewels/images/ico-whatsapp-share-wishlist.png">
+			</a>
+			<a id="share_url_mail">
+				<img src="themes/jewels/images/ico-mail-share-wishlist.png">
+			</a>
+			<div class="send-wishlist">
+				<form>
+					<input name="email" id="email_share" placeholder="Inserisci la mail" type="text">
+					<button class="cancel-email"><img src="modules/ecommerce/images/ico-cancella-email.png"></button>
+					<button class="btn-default" type="button" onclick="send_mail_wish();">{{tr('Invia','ecommerce')}}</button>
+				</form>
+				<p class="send-success" style="display: none;">Email inviata con successo!</p>
+			</div>
+		</div>
+
+		<div class="contprod">	
+			{% if prodotti %}
+				{% for riga in prodotti %}
+					{% include 'partials/product_list.htm' with {'product_row': riga,'img_type_product_list':type_img,'class_row_product':'atre'} %}
+				{% endfor %}
+			{% else %}
+				{{tr('Nessun prodotto presente in wishlist','ecommerce')}}
+			{% endif %}
+		</div>
+
+		{% if links %}
+			<div class="col-md-12" style="text-align:right;">
+				{links['all']|raw}
+			</div>
+		{% endif %}
+
+{% endblock %}

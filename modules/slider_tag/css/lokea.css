@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+.instafeed {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.instafeed_img {
+	background-image: url('/img/new/inst5.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 33.333333%;
+	padding-top: 33.333333%;
+	height: 0;
+	float: left;
+	position: relative;
+}
+
+.instafeed_img .instafeed_overlay {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.instafeed_img .instafeed_text img {
+	max-height: 35px;
+}
+
+.instafeed_img .instafeed_text h2 {
+	text-transform: uppercase;
+	font-size: 35px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 35px;
+	margin: 35px 0 0 0;
+}
+
+.instafeed_col {
+	float: left;
+	position: relative;
+	width: 33.333333%;
+}
+
+.instafeed_content {
+	background-color: transparent;
+	float: left;
+	position: relative;
+	width: 20%;
+	padding-top: 20%;
+}
+
+.instafeed_col .instafeed_content {
+	width: 50%;
+	padding-top: 50%;
+}
+
+.instafeed_content .instafeed_post {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 10px;
+}
+
+.instafeed_col .instafeed_content .instafeed_post {
+	margin: 0;
+}
+
+.instafeed_content .instafeed_overlay {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity .25s;
+	opacity: 0;
+}
+
+.instafeed_content .instafeed_overlay:hover {
+	opacity: 1;
+}
+
+.instafeed_content .instafeed_text img {
+	max-height: 25px;
+}
+
+.instafeed_content .instafeed_text .date {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 12px;
+	margin: 35px 0 0 0;
+}
+
+.pd {
+	padding: 10px;
+}
+
+.overlay-instagram {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	z-index: 1000;
+	background-color: rgba(116, 99, 99, 0.65);
+	-webkit-transition: 0.3s all ease-in;
+	-moz-transition: 0.3s all ease-in;
+	-ms-transition: 0.3s all ease-in;
+	-o-transition: 0.3s all ease-in;
+	transition: 0.3s all ease-in;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-instagram.actives {
+	opacity: 1;
+	visibility: visible;
+}
+
+.slider_instagram {
+	width: 935px;
+	height: 600px;
+	position: relative;
+}
+
+.slide_instagram {
+	background: #fff;
+	display: table;
+}
+
+.details_instagram {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 335px;
+	max-width: 335px;
+	padding: 0 10px;
+	height: 570px;
+	overflow-y: auto;
+	margin: 20px 0 10px;
+	float: left;
+	position: relative;
+	font-size: 16px;
+	line-height: 20px;
+	color: #110f0f;
+}
+
+.overlay-instagram .prev-arrow,
+.overlay-instagram .prev-arrow:hover,
+.overlay-instagram .prev-arrow:active,
+.overlay-instagram .prev-arrow:focus {
+	background: url("/img/new/arrow_left_instagram.png") no-repeat center center;
+	background-size: 18px 35px;
+	width: 18px;
+	height: 35px;
+	position: absolute;
+	left: -30px;
+	top: 50%;
+	margin-top: -17.5px;
+}
+
+.overlay-instagram .next-arrow,
+.overlay-instagram .next-arrow:hover,
+.overlay-instagram .next-arrow:active,
+.overlay-instagram .next-arrow:focus {
+	background: url("/img/new/arrow_right_instagram.png") no-repeat center center;
+	background-size: 18px 35px;
+	width: 18px;
+	height: 35px;
+	position: absolute;
+	right: -30px;
+	top: 50%;
+	margin-top: -17.5px;
+}
+
+.product_instagram {
+	float: left;
+	width: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 5px 0 5px;
+	margin: 0;
+}
+
+.product_instagram .img_product {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+}
+
+.product_instagram .img_product img {
+	max-height: 150px;
+}
+
+.product_instagram .details_product {
+	float: left;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #110f0f;
+	font-size: 12px;
+	font-weight: 300;
+	padding: 10px 0;
+	line-height: 14px;
+	min-height: 62px;
+	max-height: 62px;
+	overflow: hidden;
+}
+
+.product_instagram .add_product {
+	background: #293133;
+	padding: 8px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 12px;
+}
+
+.tag_instagram{
+	text-align:center;
+	position:absolute;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	display:none;
+	padding: 5px 20px 5px 5px;
+	color: #000000;
+	z-index: 10;
+	background-color:#FFFFFF;
+	pointer-events: none;
+	font-weight: 700;
+	//text-align: left;
+	margin: 0;
+	box-shadow: 3px 3px 2px rgba(0,0,0,0.5);
+	text-transform: capitalize;
+}
+
+.pallina_tag{
+	position: absolute;
+	width: 40px;
+	text-align: center;
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.pallina_tag:hover {
+	box-shadow: 0 5px 0px transparent;
+	transform: translateY(-5px);
+	-webkit-transform: translateY(-5px);
+	-moz-transform: translateY(-5px);
+}
+
+.active_pallina{
+	box-shadow: 0 5px 0px #222;
+	transform: translateY(-5px);
+	-webkit-transform: translateY(-5px);
+	-moz-transform: translateY(-5px);
+}
+
+.details_instagram .bx-viewport {
+	height: 240px !important;
+}
+
+.product_instagram {
+	width: 149px !important;
+}
+
+.details_instagram .bx-wrapper .bx-prev,
+.details_instagram .bx-wrapper .bx-prev:hover,
+.details_instagram .bx-wrapper .bx-prev:active,
+.details_instagram .bx-wrapper .bx-prev:focus {
+    background: url("/img/new/arrow_left_products_instagram.png") no-repeat;
+    left: -10px;
+    background-size: 13px 25px;
+	width: 13px;
+	height: 25px;
+	top: 50%;
+	margin-top: -12.5px;
+}
+
+.details_instagram .bx-wrapper .bx-next,
+.details_instagram .bx-wrapper .bx-next:hover,
+.details_instagram .bx-wrapper .bx-next:active,
+.details_instagram .bx-wrapper .bx-next:focus {
+    background: url("/img/new/arrow_right_products_instagram.png") no-repeat;
+    right: -10px;
+    background-size: 13px 25px;
+	width: 13px;
+	height: 25px;
+	top: 50%;
+	margin-top: -12.5px;
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+	.instafeed_content {
+		width: 50%;
+		padding-top: 50%;
+	}
+	.slider_instagram {
+		width: 635px;
+		height: auto;
+		position: relative;
+	}
+	.details_instagram {
+		min-width: 235px;
+		max-width: 235px;
+		height: 370px;
+	}
+}
+
+@media all and (min-width:320px) and (max-width:767px) {
+	.instafeed_col {
+		width: 100%;
+	}
+	.instafeed_img {
+		width: 100%;
+		padding-top: 100%;
+	}
+	.instafeed_content {
+		width: 100%;
+		padding-top: 100%;
+	}
+	.slider_instagram {
+		width: 250px;
+		height: auto;
+		position: relative;
+	}
+	.details_instagram {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 130px;
+		max-height: 230px;
+		margin: 10px 0;
+		height: auto;
+		overflow-y: auto;
+	}
+	.overlay-instagram .overlay-close {
+		width: 28px;
+		height: 28px;
+		top: 5px;
+		right: 5px;
+	}
+	.product_instagram {
+		width: 100%;
+		padding: 0;
+	}
+	.product_instagram .details_product {
+		min-height: 0;
+	}
+	.pallina_tag {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

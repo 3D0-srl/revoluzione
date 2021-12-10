@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    {metatags()}
+    <title>{setting[info][nomesito]} - Login</title>
+	{css()}
+	{javascript()}
+	<link href="/modules/login_b2b/css/animate.min.css" rel="stylesheet">
+	<link href="/modules/login_b2b/css/style.css" rel="stylesheet">
+	<script src="/plugins/bootstrap-loading/lada.min.js"></script>
+	<script src="/modules/login_b2b/js/script.js"></script>
+	<flexy:toJavascript flexy:prefix="js_"
+		return_url="return_url"
+    >
+</head>
+
+<body class="log">
+<div class="box-log">
+	<div class="logo">
+		<div class="relative">
+			<a href="{url_page_edit(#logo_top#,#1#)}" class="mod centrato" flexy:if="auth(#cms_page#)"><img src="/themes/jewels/images/ico_mod.jpg"></a>
+			<a href="/index.php">{output_page_content(#logo_top#)}</a>
+		</div>
+
+		<div class="relative marion">
+			<a href="{url_page_edit(#logo_marion#,#1#)}" class="mod centrato" flexy:if="auth(#cms_page#)"><img src="/themes/jewels/images/ico_mod.jpg"></a>
+			{output_page_content(#logo_marion#)}
+		</div>
+	</div>
+
+	<span class="errore">{errore}</span>
+	<form id="form_login">
+		<input type="text" placeholder="Username" name="formdata[username]" id="login_b2b_username">
+
+		<input type="password" placeholder="Password" name="formdata[password]" id="login_b2b_password">
+
+		<button type="button" class="pulsante-arancio-pieno" id="submit-login">accedi</button>
+
+		<input type="hidden" name="action" value="login">
+		{if:show_lost_pass}
+		<a class="lost-pwd" href="?action=lost_pwd">{tr(#forgot_password#,#login_b2b2#)}</a>
+		{end:}
+	</form>
+</div>

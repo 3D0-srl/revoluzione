@@ -1,0 +1,10 @@
+[20-Mar-2020 08:33:07 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar on line 23
+[20-Mar-2020 08:33:54 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/lib/classes_4.8.8/minify/composer.phar on line 23

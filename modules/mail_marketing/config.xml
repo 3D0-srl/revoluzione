@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>126</id>
+		<author>Ciro Napolitano</author>
+		<name>Mail Marketing</name>
+		<permission>superadmin</permission>
+		<tag>mail_marketing</tag>
+		<kind>newsletter</kind>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette la gestione delle mail marketing nel sito]]></description> 
+   </info>
+   <menu> 
+		<scope>admin</scope>
+		<header>	
+			<locale> 
+				<name>	
+					<it>Mail Marketing</it> 
+					<en>Mail Marketing</en>
+				</name>
+			</locale>
+			<tag>mail_marketing</tag>
+			<icon>fa fa-list-alt</icon>
+			<priority>100</priority> 
+			<permission>cms</permission> 
+		</header>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Campagne</it>
+					<en>Campaigns</en>
+				</name>
+			</locale>
+			<tag>campaigns</tag>
+			<permission>cms</permission> 
+			<priority>99</priority> 
+			<url>controller.php?action=campaigns</url>
+		</items>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Mail editor</it>
+					<en>Mail editor</en>
+				</name>
+			</locale>
+			<tag>mail_editor</tag>
+			<permission>cms</permission> 
+			<priority>100</priority> 
+			<url>controller.php?action=mail_editor</url>
+		</items>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Liste di distribuzione</it>
+					<en>Mail Lists</en>
+				</name>
+			</locale>
+			<tag>lists</tag>
+			<permission>cms</permission> 
+			<priority>100</priority> 
+			<url>controller.php?action=lists</url>
+		</items>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Widgets</it>
+					<en>Widgets</en>
+				</name>
+			</locale>
+			<tag>widgets</tag>
+			<permission>cms</permission> 
+			<priority>101</priority> 
+			<url>controller.php?action=widgets</url>
+		</items>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Configurazione</it>
+					<en>Setting</en>
+				</name>
+			</locale>
+			<tag>conf</tag>
+			<permission>cms</permission> 
+			<priority>102</priority> 
+			<url>controller.php?action=conf</url>
+		</items>
+		
+		
+		
+	</menu>
+	<!--<dependencies>
+		<dependence>56</dependence>
+		<dependence>5</dependence>
+	</dependencies>
+	<conflicts>
+		<conflict>56</conflict>
+		<conflict>57</conflict>
+	</conflicts>-->
+</module>

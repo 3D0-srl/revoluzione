@@ -1,0 +1,62 @@
+<div class="table-responsive">	
+	<table class="table table-cart">
+		<thead>
+			<th class="foto only_desk"></th>
+			<th class="prod-name"></th>
+			<th></th>
+			{% if show_taxes %}
+			<th align="center">{{tr('Prezzo i.e.','cart_onepage')}}</th>
+			<th align="center">{{tr('Iva','cart_onepage')}}</th>
+			<th align="center">{{tr('Tot. i.e.','cart_onepage')}}</th>
+			{% else %}
+			<th align="center">{{tr('Prezzo','cart_onepage')}}</th>
+			{% endif %}
+			<th align="center">{{tr('Totale','cart_onepage')}}</th>
+		</thead>
+		<tbody>
+
+
+
+			{% for riga in ordini %}
+				<tr id="cart-row-{{riga.id}}">
+					<td valign="middle" width="100" class="foto only_desk"><img class="prod-cart" src="{{riga.img}}"></td>
+					<td class="prod-name" valign="middle" width="250">
+						<a href="{{riga.link}}">{{riga.productname|raw}}</a>
+					</td>
+					<td valign="middle" align="center" width="100">
+						{% if step < 6 %}
+							<div class="input-group">
+							  <span class="input-group-addon" style="cursor:pointer;" onclick="minus_cart('{{riga.getId()}}'); return false;">-</span>
+							  <input type="text" class="form-control quantity" id="quantity_{{riga.getId()}}" name="formdata[{{riga.getId()}}]" value="{{riga.getQuantity()}}" price="{{riga.getPrice()}}" price_without_tax="{{riga.price_without_tax}}" taxPrice="{{riga.taxPrice}}" cod="{{riga.getId()}}">
+							  <span class="input-group-addon" style="cursor:pointer;"onclick="plus_cart('{{riga.getId()}}'); return false;">+</span>
+							</div>
+						{% else %}
+							<span>{{riga.getQuantity()}}</span>
+						{% endif %}
+					</td>
+
+					{% if show_taxes %}
+					<td valign="middle" align="center" width="100">{{currencyLabel|raw}} {{formattanumero(riga.price_without_tax)}}</td>
+					<td valign="middle" align="center" width="100">{{currencyLabel|raw}} {{formattanumero(riga.taxPrice)}}</td>
+					<td valign="middle" align="center" width="100">{{currencyLabel|raw}} {{riga.getPriceFormatted()}}</td>
+					{% else %}
+					<td valign="middle" align="center" width="100">{{currencyLabel|raw}} {{riga.getPriceFormatted()}}</td>
+					{% endif %}
+					<td valign="middle" align="center" width="100"><strong>{{currencyLabel|raw}} <span class="">{{riga.getTotalPriceFormatted()}}</span></strong></td>
+				</tr>
+				{% if step < 6 %}
+					<tr class="b-b" id="cart-row-delete-{{riga.id}}">
+						<td width="100" class="foto only_desk"></td>
+						<td colspan="6">	
+							<button class="btn-invisible"  onclick="confirmDeleteOrder({{riga.getId()}}); return false;">Elimina articolo</button>
+						</td>
+					</tr>
+				{% endif %}
+				<tr style="display:none" class="error-cart-row" id="error-cart-row-{{riga.id}}">
+					<td colspan="6" class="error-cart-text"></td>
+				</tr>
+			{% endfor %}
+			
+		</tbody>
+	</table>
+</div>

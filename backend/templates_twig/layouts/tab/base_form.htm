@@ -1,0 +1,39 @@
+{% extends "layouts/tab/base.htm" %}
+{% block page_title %} {% block edit_page_title %}  {% endblock %}<!--{% if (action == 'edit' or show_btn_edit==true)  %} <br><small>{{tr('edit')}}</small>{% elseif (action== 'add' or action == 'duplicate' or show_btn_add==true) %}<br><small>{{tr('add')}}</small> {% endif %}-->{% endblock %} 
+{% block buttons_right %}	
+	{%if action == 'edit' or action == 'add' %}<a href="{% block url_list %}{{url_list}}{% endblock %}" class="btn btn-secondario m-t-10"><i class="fa fa-angle-left p-r-10" style="font-weight: 600;"></i> {{tr('back')}}</a>{% endif %}
+{% endblock %}
+
+{% block content_container %}
+	<form role='form' action='index.php' method='POST'  enctype="multipart/form-data" id="form">
+	<div class="row">
+					
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% block btn_form_save %}
+	<div class="row row-pulsanti">			
+		 <div class="col-md-12 align-center">
+			<button type="submit"  class="btn btn-principale m-t-10"><i class="fa fa-check"></i> {% block btn_text_save_form %}{{tr('save')}}{% endblock %}</button>
+			{% if action == 'edit' %}
+			<a href="{{url_delete}}"  class="btn btn-danger m-t-10"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a>
+			{% endif %}
+		</div>
+	</div>
+	{% endblock %}
+	<input type='hidden' name='formID' value="{{formID}}">
+	<input type='hidden' name='action' value="{{action}}" id="action">
+	<input type='hidden' name='ctrl' value="{{ctrl}}">
+	<input type='hidden' name='mod' value="{{module}}">
+	<input type='hidden' name='tabIndex' value="{{tabIndex}}">
+	<input type='hidden' name='pageID' value="{{pageID}}">
+	{% block other_fields_form %}
+
+	{% endblock %}
+	</form>
+{% endblock %}

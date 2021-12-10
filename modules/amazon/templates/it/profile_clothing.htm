@@ -1,0 +1,390 @@
+<flexy:toJavascript flexy:prefix="js_"
+		variationTheme="dati[variationTheme]"
+		Size="dati[Size]"
+		Color="dati[Color]"
+		Department="dati[Department]"
+		OuterMaterial="dati[OuterMaterial]"
+		MaterialComposition="dati[MaterialComposition]"
+    >
+
+<div class="row">
+					
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					VARIAZIONI
+				</div>
+				<div class="panel-body" id="variazioni">
+						
+						
+						
+						<div class="form-group col-md-12" id="">
+							<label>Tema Variazioni:</label>
+							<div class="controls">
+								<select type="text" class="form-control " name="formdata[variationTheme]" onchange="cambia_tema($(this).val()); return false;">
+									
+								</select>
+							</div>
+						</div>
+
+					
+				</div>
+			</div>
+		</div>
+</div>
+
+
+<div class="row">
+					
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					MAPPATURA
+				</div>
+				<div class="panel-body" id="mappatura">
+						<div class="form-group col-md-12" id="">
+							<label>Tipologia Abbigliamento <span class="asterisk">*</span>:</label>
+							<div class="controls">
+								<select type="text" class="form-control " name="formdata[ClothingType]" >
+									
+	
+								
+								</select>
+							</div>
+						</div>
+
+						
+
+						<div class="form-group col-md-12" id="" style="padding-left:0px;padding-right:0px;">
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>Reparto <span class="asterisk">*</span> (<b>es: uomo</b>):</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[Department]" onchange="cambia_valore('department',$(this).val())">
+										<option value="">----</option>
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+										
+										<!--<option value="default">Valore di default</option>-->
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_department" style="padding-right:0px;" id="" style="display:none" id="department_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control" name="formdata[DepartmentAttribute]">
+										 <!--{foreach:attributes,v1}
+											<option value="{v.id}">{v1.get(#name#)}</option>
+										 {end:}-->
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_department" style="padding-right:0px;" id="" style="display:none" id="department_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[DepartmentFeature]">
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_department" style="padding-right:0px;" id="" style="display:none" id="department_value">
+								<label>Valore fisso:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[DepartmentValue]">
+										
+									
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_department" style="padding-right:0px;" id="" style="display:none" id="department_default">
+								<label>Valore di default:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[DepartmentDefault]">
+										<option value="Bambine e ragazze">Bambine e ragazze</option>
+										<option value="Bambini e ragazzi">Bambini e ragazzi</option>
+										<option value="Bimba">Bimba</option>
+										<option value="Bimbo">Bimbo</option>
+										<option value="Uomo">Uomo</option>
+										<option value="Donna">Donna</option>
+									</select>
+										
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group col-md-12" id="" style="padding-left:0px;padding-right:0px;">
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>Materiale esterno <span class="asterisk">*</span> (<b>es: cotone</b>):</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[OuterMaterial]" onchange="cambia_valore('outer_aterial',$(this).val())">
+										<option value="">----</option>
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+										<!--<option value="default">Valore di default</option>-->
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_outer_aterial" style="padding-right:0px;" id="" style="display:none" id="outer_aterial_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[OuterMaterialAttribute]">
+										<!--{foreach:attributes,v}
+											{if:uguale(data[OuterMaterialAttribute],v.id)}
+											<option value="{v.id}" selected>{v.get(#name#)}</option>
+											{else:}
+											<option value="{v.id}">{v.get(#name#)}</option>
+											{end:}
+										 {end:}-->
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_outer_aterial" style="padding-right:0px;" id="" style="display:none" id="outer_aterial_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[OuterMaterialFeature]">
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_outer_aterial" style="padding-right:0px;" id="" style="display:none" id="outer_aterial_value">
+								<label>Valore fisso:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[OuterMaterialValue]">
+										
+									
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_outer_aterial" style="padding-right:0px;" id="" style="display:none" id="outer_aterial_default">
+								<label>Valore di default:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[OuterMaterialDefault]"></select>
+										
+									
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="form-group col-md-12" id="" style="padding-left:0px;padding-right:0px;">
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>Composizione materiale <span class="asterisk">*</span> (<b>es: 80% cotone, 20% poliestere</b>):</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[MaterialComposition]" onchange="cambia_valore('material_composition',$(this).val())">
+										<option value="">----</option>
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_material_composition" style="padding-right:0px;" id="" style="display:none" id="material_composition_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[MaterialCompositionAttribute]">
+										<!--{foreach:attributes,v}
+											<option value="{v.id}">{v.get(#name#)}</option>
+										 {end:}-->
+										
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6 assegna_valore_material_composition" style="padding-right:0px;" id="" style="display:none" id="material_composition_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[MaterialCompositionFeature]">
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_material_composition" style="padding-right:0px;" id="" style="display:none" id="material_composition_value">
+								<label>Valore fisso:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[MaterialCompositionValue]">
+										
+									
+								</div>
+							</div>
+						</div>
+						
+						
+						<!--<div class="form-group col-md-12" id="">
+							<label>Tema Variazioni:</label>
+							<div class="controls">
+								<select type="text" class="form-control " name="formdata[variationTheme]" onchange="cambia_tema($(this).val()); return false;">
+									<option value="">----</option>
+									<option value="Size">Taglia</option>
+									<option value="Color">Colore</option>
+									<option value="SizeColor">Taglia e Colore</option>
+								
+								</select>
+							</div>
+						</div>-->
+
+						<div class="form-group col-md-12" style="padding-left:0px;padding-right:0px;" id="size_container">
+							<div class="form-group col-md-6" id="">
+								<label>Taglia <span class="asterisk" id="size_required" style="display:none">*</span>:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[Size]" onchange="cambia_valore('size',$(this).val())">
+									
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_size" style="padding-right:0px;" id="" style="display:none" id="size_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[SizeAttribute]">
+										<!--{foreach:attributes,v}
+											<option value="{v.id}">{v.get(#name#)}</option>
+										 {end:}-->
+										
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6 assegna_valore_size" style="padding-right:0px;" id="" style="display:none" id="size_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[SizeFeature]">
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_size" style="padding-right:0px;" id="" style="display:none" id="size_value">
+								<label>Assegna valore:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[SizeValue]">
+										
+									
+								</div>
+							</div>
+						</div>
+
+						
+						<div class="form-group col-md-12" style="padding-left:0px;padding-right:0px;" id="color_container">
+							<div class="form-group col-md-6" id="">
+								<label>Colore <span class="asterisk" id="color_required" style="display:none">*</span>:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[Color]" onchange="cambia_valore('color',$(this).val())">
+										
+									
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6 assegna_valore_color" style="padding-right:0px;" id="" style="display:none" id="color_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[ColorAttribute]">
+										
+										<!--{foreach:attributes,v}
+											<option value="{v.id}">{v.get(#name#)}</option>
+										 {end:}-->
+										
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6 assegna_valore_color" style="padding-right:0px;" id="" style="display:none" id="color_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="text" class="form-control " name="formdata[ColorFeature]">
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_color" style="padding-right:0px;" id="" style="display:none" id="color_value">
+								<label>Assegna valore:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[ColorValue]">
+										
+									
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+		</div>
+</div>
+
+<script>
+	function cambia_valore(tipo,val){
+		$('.assegna_valore_'+tipo).hide();
+		$('#'+tipo+'_'+val).show();
+		
+	}
+
+	function cambia_tema(tema){
+		switch(tema){
+			case 'SizeColor':
+				$('#color_required').show();
+				$('#size_required').show();
+				$('#size_container').detach().appendTo('#variazioni');
+				$('#color_container').detach().appendTo('#variazioni');
+			
+				break;
+			case 'Color':
+				$('#color_required').show();
+				$('#color_container').detach().appendTo('#variazioni');
+				$('#size_container').detach().appendTo('#mappatura');
+				break;
+			case 'Size':
+				$('#size_required').show();
+				$('#size_container').detach().appendTo('#variazioni');
+				$('#color_container').detach().appendTo('#mappatura');
+				break;
+			default:
+				$('#color_required').hide();
+				$('#size_required').hide();
+				$('#size_container').detach().appendTo('#mappatura');
+				$('#color_container').detach().appendTo('#mappatura');
+				break;
+		}
+	}
+
+	$(document).ready(function(){
+		
+		if( typeof js_variationTheme != 'undefined' && js_variationTheme != null ){
+		
+			cambia_tema(js_variationTheme);
+		}	
+
+		if( typeof js_Size != 'undefined' && js_Size != null ){
+			cambia_valore('size',js_Size);
+		}
+		if( typeof js_Color != 'undefined' && js_Color != null ){
+			cambia_valore('color',js_Color);
+		}
+
+		if( typeof js_Department != 'undefined' && js_Department != null ){
+			cambia_valore('department',js_Department);
+		}
+		if( typeof js_OuterMaterial != 'undefined' && js_OuterMaterial != null ){
+			cambia_valore('outer_aterial',js_OuterMaterial);
+		}
+		if( typeof js_MaterialComposition != 'undefined' && js_MaterialComposition != null ){
+			cambia_valore('material_composition',js_MaterialComposition);
+		}
+
+	});
+</script>

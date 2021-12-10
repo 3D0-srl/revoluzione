@@ -1,0 +1,35 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<img src="modules/ecommerce/images/ico-ultimi-ordini-backend.png">{{tr('Nuovo ticket','customers_care')}}
+{% endblock %}
+
+
+{% block backend_content %}
+	<form action="index.php" method="POST">
+	<div>
+		<label>Settore/Area</label>
+		<select class="form-control" name="formdata[type]" id="type">	
+			{% for k,v in ticket_types %}
+				<option value="{{k}}">{{v}}</option>
+			{% endfor %}
+		</select>
+	
+	</div>
+	<div class="space20"></div>
+	<div>
+		<label>Messaggio</label>
+		<input class="form-control" name="formdata[subjet]" id="subject">
+	</div>
+	<div class="space20"></div>
+	<div>
+		<label>Messaggio</label>
+		<textarea class="form-control" name="formdata[message]" id="message"></textarea>
+	</div>
+	<div class="space20"></div>
+	<button>Invia</button>
+	<input type="hidden" name="mod" value="customers_care">
+	<input type="hidden" name="action" value="new">
+	</form>
+
+{% endblock %}

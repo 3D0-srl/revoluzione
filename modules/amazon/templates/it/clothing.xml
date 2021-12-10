@@ -1,0 +1,117 @@
+<Message>
+	<MessageID>{data[MessageID]}</MessageID>
+	<OperationType>Update</OperationType>
+	<Product>
+		<SKU>{data[SKU]}</SKU>
+		<StandardProductID flexy:if="data[standard_product_id_value]">
+			<Type>{data[standard_product_id_type]}</Type>
+			<Value>{data[standard_product_id_value]}</Value>
+		</StandardProductID>
+		<ProductTaxCode>{data[ProductTaxCode]}</ProductTaxCode>
+		<LaunchDate>{data[LaunchDate]}</LaunchDate>
+		<DescriptionData>
+			<Title>{data[Title]}</Title>
+			<Brand>{data[Brand]}</Brand>
+			<Description>{data[Description]}</Description>
+		</DescriptionData>
+		<ProductData>
+			<Clothing>
+				{if:data[children]}
+				<VariationData>
+					<Parentage>parent</Parentage>
+					<Size flexy:if="data[Size]">{data[Size]}</Size>
+					<Color flexy:if="data[Color]">{data[Color]}</Color>
+					<VariationTheme>{data[VariationTheme]}</VariationTheme>
+				</VariationData>
+				{end:}
+				<ClassificationData>
+					<ClothingType>{data[ClothingType]}</ClothingType>
+					<Department>{data[Department]}</Department>
+					<StyleKeywords flexy:if="data[StyleKeywords]">{data[StyleKeywords]}</StyleKeywords>
+					<PlatinumKeywords flexy:if="data[PlatinumKeywords]">{data[PlatinumKeywords]}</PlatinumKeywords>
+					<ColorMap flexy:if="data[ColorMap]">{data[ColorMap]}</ColorMap>
+					<SpecialSizeType flexy:if="data[special_size_type]">{data[SpecialSizeType]}</SpecialSizeType>
+					<MaterialAndFabric flexy:if="data[MaterialAndFabric]">{data[MaterialAndFabric]}</MaterialAndFabric>
+					<MaterialComposition>{data[MaterialComposition]}</MaterialComposition>
+					<MaterialOpacity flexy:if="data[MaterialOpacity]"></MaterialOpacity>
+					<InnerMaterial flexy:if="data[InnerMaterial]"></InnerMaterial>
+					<OuterMaterial>{data[OuterMaterial]}</OuterMaterial>
+					<InnerMaterial flexy:if="data[InnerMaterial]"></InnerMaterial>
+					<SoleMaterial flexy:if="data[SoleMaterial]"></SoleMaterial>
+					<ShoeClosureType flexy:if="data[ShoeClosureType]"></ShoeClosureType>
+					<ApparelClosureType flexy:if="data[ApparelClosureType]"></ApparelClosureType>
+					<CareInstructions flexy:if="data[CareInstructions]"></CareInstructions>
+					<OccasionAndLifestyle flexy:if="data[OccasionAndLifestyle]"></OccasionAndLifestyle>
+					<EventKeywords flexy:if="data[EventKeywords]"></EventKeywords>
+					<Season flexy:if="data[Season]"></Season>
+					<SpecificUses flexy:if="data[SpecificUses]"></SpecificUses>
+					<ExternalTestingCertification flexy:if="data[ExternalTestingCertification]"></ExternalTestingCertification>
+					<PerformanceRating flexy:if="data[PerformanceRating]"></PerformanceRating>
+					
+					
+					
+					<SizeMap flexy:if="data[SizeMap]">{data[SizeMap]}</SizeMap>
+					
+				</ClassificationData>
+			</Clothing>
+		</ProductData>
+	</Product>
+</Message>
+{foreach:data[children],riga}
+<Message>
+	<MessageID>{riga[MessageID]}</MessageID>
+	<OperationType>Update</OperationType>
+	<Product>
+		<SKU>{riga[SKU]}</SKU>
+		<StandardProductID>
+			<Type>{riga[standard_product_id_type]}</Type>
+			<Value>{riga[standard_product_id_value]}</Value>
+		</StandardProductID>
+		<ProductTaxCode>{riga[ProductTaxCode]}</ProductTaxCode>
+		<LaunchDate>{riga[LaunchDate]}</LaunchDate>
+		<DescriptionData>
+			<Title>{riga[Title]}</Title>
+			<Brand>{riga[Brand]}</Brand>
+			<Description>{riga[Description]}</Description>
+		</DescriptionData>
+		<ProductData>
+			<Clothing>
+				<VariationData>
+					<Parentage>child</Parentage>
+					<Size flexy:if="riga[Size]">{riga[Size]}</Size>
+					<Color flexy:if="riga[Color]">{riga[Color]}</Color>
+					<VariationTheme>{data[VariationTheme]}</VariationTheme>
+				</VariationData>
+				<ClassificationData>
+					<ClothingType>{riga[ClothingType]}</ClothingType>
+					<Department>{riga[Department]}</Department>
+					<StyleKeywords flexy:if="riga[StyleKeywords]">{riga[StyleKeywords]}</StyleKeywords>
+					<PlatinumKeywords flexy:if="riga[PlatinumKeywords]">{riga[PlatinumKeywords]}</PlatinumKeywords>
+					<ColorMap flexy:if="riga[ColorMap]">{riga[ColorMap]}</ColorMap>
+					<SpecialSizeType flexy:if="riga[special_size_type]">{riga[SpecialSizeType]}</SpecialSizeType>
+					<MaterialAndFabric flexy:if="riga[MaterialAndFabric]">{riga[MaterialAndFabric]}</MaterialAndFabric>
+					<MaterialComposition>{riga[MaterialComposition]}</MaterialComposition>
+					<MaterialOpacity flexy:if="riga[MaterialOpacity]"></MaterialOpacity>
+					<InnerMaterial flexy:if="riga[InnerMaterial]"></InnerMaterial>
+					<OuterMaterial>{riga[OuterMaterial]}</OuterMaterial>
+					<InnerMaterial flexy:if="riga[InnerMaterial]"></InnerMaterial>
+					<SoleMaterial flexy:if="riga[SoleMaterial]"></SoleMaterial>
+					<ShoeClosureType flexy:if="riga[ShoeClosureType]"></ShoeClosureType>
+					<ApparelClosureType flexy:if="riga[ApparelClosureType]"></ApparelClosureType>
+					<CareInstructions flexy:if="riga[CareInstructions]"></CareInstructions>
+					<OccasionAndLifestyle flexy:if="riga[OccasionAndLifestyle]"></OccasionAndLifestyle>
+					<EventKeywords flexy:if="riga[EventKeywords]"></EventKeywords>
+					<Season flexy:if="riga[Season]"></Season>
+					<SpecificUses flexy:if="riga[SpecificUses]"></SpecificUses>
+					<ExternalTestingCertification flexy:if="riga[ExternalTestingCertification]"></ExternalTestingCertification>
+					<PerformanceRating flexy:if="riga[PerformanceRating]"></PerformanceRating>
+
+					<SizeMap flexy:if="riga[SizeMap]">{riga[SizeMap]}</SizeMap>
+				</ClassificationData>
+			</Clothing>
+		</ProductData>
+	</Product>
+</Message>
+
+{end:}
+

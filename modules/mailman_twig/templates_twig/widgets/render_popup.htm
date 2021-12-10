@@ -1,0 +1,15 @@
+<div class="popup-newsletter">
+    <h2>Unisciti a noi!</h2>
+    <h4>Iscriviti alla newsletter e ricevi il 10% di sconto!</h4>
+    <form action="/modules/mailman/controller.php?action=execute">
+        <input class="newsletterinput" name="formdata[email]" placeholder="Inserisci la tua email" type="text">
+        <input type="hidden" name="formdata[lists][]" value="1">
+        <input type="hidden" name="formdata[action]" value="subscribe">
+        <button class="btn-newsletter">Iscriviti</button>
+    </form>
+</div>
+
+<div class="popup-newsletter" id="success" style="display:none">
+    <h2>Grazie!</h2>
+    <h4>Ti abbiamo inviato una mail di conferma all'indirizzo specificato!</h4>
+</div>

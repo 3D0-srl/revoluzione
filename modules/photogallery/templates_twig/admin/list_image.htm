@@ -1,0 +1,18 @@
+{% extends "layouts/base.htm" %}
+
+{% block page_title %}
+Lista Immagini
+{% endblock %}
+
+
+{% block buttons_right %}{% endblock %}
+
+
+{% block content %}
+
+{% for image in images %}
+<a href="{{url_edit}}&id={{ image.id }}"><img src="{{ image.url }}" alt=""></a>
+{% endfor %}
+
+
+{% endblock %}

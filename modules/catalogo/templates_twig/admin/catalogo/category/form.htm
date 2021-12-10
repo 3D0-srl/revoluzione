@@ -1,0 +1,65 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('category')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs {class_widget}">
+		<li class="active"><a href="#general" data-toggle="tab">{{tr('general')|title}}</a></li>
+		
+		<li><a href="#images" data-toggle="tab">{{tr('images')|title}}</a></li>
+	
+		<li ><a href="#seo" data-toggle="tab">{{tr('seo')|title}}</a></li>
+		
+	</ul>
+	<div id="myTabContent" class="tab-content">
+			
+			<!-- GENERAL --->
+			<div class="tab-pane fade active in" id="general">
+				<div class="row">
+				
+					<div class="col-md-12">	
+						{{form.build(dataform.id)}}
+						{{form.buildCol(dataform.parent)}}
+						{{form.buildCol(dataform.name)}}
+						{{form.buildCol(dataform.description)}}
+
+						{{form.buildCol(dataform.orderView)}}
+						{{form.buildCol(dataform.visibility)}}
+						{{form.buildCol(dataform.relatedSections)}}
+					
+
+
+						
+					</div>
+				</div>
+			</div>
+
+			<!-- LAYOUT --->
+			<div class="tab-pane fade  in" id="images">
+				<div class="row">
+				
+					<div class="col-md-12">	
+						{{form.dropzone(dataform.images)}}
+
+						{{form.dropzone(dataform.attachments)}}
+					</div>
+				</div>
+			</div>
+
+			<!-- SEO --->
+			<div class="tab-pane fade  in" id="seo">
+				<div class="row">
+				
+					<div class="col-md-12">	
+						{{form.buildCol(dataform.prettyUrl)}}
+						{{form.buildCol(dataform.urlType)}}
+						{{form.buildCol(dataform.metaTitle)}}
+						{{form.buildCol(dataform.metaDescription)}}
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+{% endblock %}
+

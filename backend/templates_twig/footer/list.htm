@@ -1,0 +1,102 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('footers')|title}} {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.box-homepage {
+	border: 1px solid #C1C7D0;
+	background: #fff;
+	border-radius: 12px;
+	padding: 16px 32px 0;
+	margin: 0 0 16px;
+}
+
+.box-homepage .panel-body {
+	color: #172B4D;
+	font-size: 24px;
+	font-weight: 500;
+	float: left;
+	max-width: 300px;
+	margin-bottom: 16px;
+}
+
+.box-homepage .panel-footer {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	float: right;	
+}
+
+.box-homepage .panel-footer a.btn {
+	margin-right: 8px;
+	margin-bottom: 16px;
+}
+.ico-btn {
+    height: 18px;
+    width: auto;
+	margin-right: 2px;
+	margin-top: -2px;
+}
+.panel-home-selected{
+	border:3px solid #4C9AFF;
+	background: #DEEBFF;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% if list %}
+	{% for v in list %}
+	<div class="col-md-12">		
+			<div class="box-homepage panel {% if v.active == 1 %}panel-home-selected{% else %}panel-primary{% endif %} panel-home" id="home_{{v.id}}" {% if v.active == 1 %}style="border:3px solid #4C9AFF;background: #DEEBFF;""{% endif %}>
+				<div class="row">
+					<div class="panel-body">
+					{{v.name}}
+					</div>
+					<div class="panel-footer">
+						<a  href="{{url_edit}}&id={{v.id}}" class="btn btn-secondario"><i class="fa fa-cog" aria-hidden="true" style="margin-right:2px;"></i> Impostazioni</a>
+						<a  href="/backend/index.php?ctrl=PageComposerAdmin&mod=pagecomposer&id={{v.id_page}}" class="btn btn-principale"><img class="ico-btn" src="/modules/pagecomposer/img/ico-imp-b.png"/> Modifica</a>
+						<a target="_blank" href="/modules/pagecomposer/index.php?action=preview_page&id_page={{v.id_page}}" class="btn btn-primary"><img class="ico-btn" src="/modules/pagecomposer/img/ico-ant.png" style="margin-right:6px;"/>Anteprima</a>
+						<a  onclick="active_home({{v.id}}); return false;" class="btn btn-success"><img class="ico-btn" src="/modules/pagecomposer/img/ico-conf.png"/> Attiva</a>
+						<a  href="{{url_confirm_delete}}&id={{v.id}}" class="btn btn-danger"><img class="ico-btn" src="/modules/pagecomposer/img/ico-cestino-b.png"/> Elimina</a>		
+					</div>
+				</div>
+			</div>	
+		</div>
+	{% endfor %}
+{% else %}
+	{{tr('no_record')}}
+{% endif %}
+	
+<script>
+	
+
+	
+function active_home(id){
+	var js_ctrl = "{{ctrl|escape('js')}}";
+
+	$.ajax({
+	  type: "GET",
+		  url: "index.php",
+		  data: { action: "active",id:id,ajax:1,ctrl:js_ctrl},
+		  dataType: "json",
+		  success: function(data){
+				if(data.result == 'ok'){
+					$('.panel-home').removeClass('panel-primary').removeClass('panel-home-selected').addClass('panel-primary');
+					$('#home_'+id).removeClass('panel-primary').addClass('panel-home-selected');
+					//notify('Homepage attivata!','success');
+				}else{
+					//notify(data.errore,'error');
+				}
+		  },
+	 
+	});
+}
+
+
+</script>
+
+{% endblock %}
+
+

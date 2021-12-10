@@ -1,0 +1,14 @@
+<div class="box-news clearfix">
+	{% for v in list %}
+		<a href="{{v.getUrl()}}" class="news">
+			<div class="img_news" style="background: url('{{v.getUrlImage(0)}}') no-repeat center / cover;"></div>
+			<div class="cont-news clearfix">
+				<!--<div class="data_news">
+					<span>{{v.date | date("d M Y")}}</span>
+				</div>!-->
+				<h3 class="tit_news">{{v.get('title')}}</h3>	
+				<p>{{v.get('content')|raw}}</p>
+			</div>
+		</a>
+	{% endfor %}
+</div>

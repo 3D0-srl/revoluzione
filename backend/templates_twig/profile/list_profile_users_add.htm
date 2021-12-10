@@ -1,0 +1,89 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('users')|title}} {{profile.name}} <small>{{tr('add')}}</small> {% endblock %} 
+{% block buttons_right %}	
+	
+	<a href="{{script_url}}&action=users&id_profile={{profile.id}}" class="btn btn-success m-t-10"><i class="fa fa-arrow-left p-r-10"></i> {{tr('back')}}</a>
+	
+{% endblock %}
+{% block before_content %}
+<div class="row">
+				
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form action="{{script_url}}" method="GET">
+					<div class="input-group">
+						<input type="text" class="form-control " name="search" placeholder="username, nome o cognome dell'utente" value="{{search}}">
+						<span class="input-group-btn">
+							<button class="btn btn-success" type="submit" tabindex="-1"><i class="fa fa-search"></i> {{tr('search')}}</button>
+						  </span>
+					</div>
+					<input type="hidden" name="id" value="{{profile.id}}" >
+					<input type="hidden" name="action" value="add_user" >
+					<input type="hidden" name="ctrl" value="ProfileAdmin">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block content %}
+	
+
+	  <div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				
+				{% if list %}
+				<table id="sezioni-table" class="table table-tools table-striped">
+					<thead>
+						<tr>
+							
+							<th class="text-center" style="min-width:70px"><strong>ID</strong></th>
+
+
+							<th class="text-center"><strong>{{tr('name')}}</strong></th>
+							
+							<th class="text-center"><strong>{{tr('email')}}</strong></th>
+							
+							<th class="text-center"><strong>{{tr('actions')}}</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for v in list %}
+						<tr  id="user_{{v.id}}">
+							
+							<td class="text-center">{{v.id}}</td>
+							
+							<td class="text-center">{{v.name}} {{v.surname}}</td>
+							<td class="text-center">{{v.email}}</td>
+							
+							
+							 <td class="text-center"> 
+								
+								<div class="btn-group media-group">
+									  <a onclick="add_user({{v.id}},{{profile.id}}); return false;" id="button_add_{{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-plus"></i> {{tr('add')}}</a>
+									 
+								</div>
+							
+
+								
+							</td>
+						</tr>
+
+						{% endfor %}
+						
+					</tbody>
+				</table>
+				{% else %}
+				<p>Nessun utente presente in archivio</p>
+				{% endif %}
+			</div>
+			{% if links %}
+			<div class="m-t-30 align-center">
+				{{links['all']|raw}}
+			</div>
+			{% endif %}
+		</div>
+
+{% endblock %}

@@ -1,0 +1,2 @@
+msgid "description_order_unicredit"
+msgstr "Pagamento di %s € relativo all'ordine %s su %s"

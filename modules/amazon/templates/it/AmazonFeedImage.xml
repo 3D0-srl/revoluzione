@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header> 
+		<DocumentVersion>1.01</DocumentVersion>
+		<MerchantIdentifier>{merchantIdentifier}</MerchantIdentifier> 
+	</Header> 
+	<MessageType>ProductImage</MessageType>
+	{foreach:list,data}
+	<Message flexy:foreach="data[images],k,v"> 
+		<MessageID>{data[id]}{k}</MessageID> 
+		<OperationType>Update</OperationType> 
+		<ProductImage> 
+			<SKU>{prefix}{data[id]}</SKU> 
+			{if:uguale(k,#0#)}
+			<ImageType>Main</ImageType>
+			{else:}
+			<ImageType>PT{k}</ImageType>
+			{end:}
+			<ImageLocation>{baseurl}/img/{v}/or-nw/image.png</ImageLocation>
+		</ProductImage> 
+	</Message> 
+	{end:}
+</AmazonEnvelope>

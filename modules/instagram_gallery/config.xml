@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Instagram Gallery</name>
+		<permission>superadmin</permission>
+		<tag>instagram_gallery</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra nel sito la gallery di instagram]]></description> 
+   </info>
+	<admin>
+	  	<menu>
+			<items>
+				
+				<item>
+					<locale>
+						<name>
+							<it>Instagram Gallery</it>
+							<en>Instagram Gallery</en>
+							<es>Instagram Gallery</es>
+							<de>Instagram Gallery</de>
+							<fr>Instagram Gallery</fr>
+							<pt>Instagram Gallery</pt>
+						</name>
+					</locale>
+					<tag>instagram_gallery</tag> 
+					<parent>cms</parent>
+					<permission>cms</permission>  
+					<priority>99</priority> 
+					<url>index.php?ctrl=Gallery&amp;mod=instagram_gallery&amp;action=list</url> 
+				</item>
+			</items>
+		</menu>
+	</admin>
+
+
+	<linkSetting>
+		index.php?ctrl=Conf&amp;mod=instagram_gallery	
+   </linkSetting>
+   <widgets>
+		<widget> 
+			<name>Instagram Gallery</name>
+			<function>WidgetInstagramGallery</function>
+			<repeatable>1</repeatable>
+		</widget>
+	</widgets>
+</module>

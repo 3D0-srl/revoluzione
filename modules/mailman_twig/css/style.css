@@ -1,0 +1,228 @@
+/* STILE NEWSLETTER COME DUOMOTREKKING */
+/*.box-newsletter {
+	border-top: 2px solid #E8E8E8;
+	border-bottom: 2px solid #E8E8E8;
+	padding: 30px 0;
+}
+
+.box-newsletter h3 {
+    font-weight: 500;
+    margin: 0;
+    text-transform: inherit;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+.input-newsletter {
+    width: 70%;
+}
+
+.box-newsletter input {
+	background: #F5F5F5;
+	border-radius: 4px;
+	border: 0;
+	font-size: 16px;
+	color: #3D3D3D;
+	height: 56px;
+	line-height: 56px;
+	max-width: 477px;
+	width: 100%;
+	margin: 0 10px 0 0;
+	float: right;
+}
+
+.box-newsletter input::-webkit-input-placeholder {
+	color: #3D3D3D;
+	font-weight: 400;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.box-newsletter input:-moz-placeholder {
+	color: #3D3D3D;
+	font-weight: 400;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.box-newsletter input::-moz-placeholder {
+	color: #3D3D3D;
+	font-weight: 400;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.box-newsletter input:-ms-input-placeholder {  
+	color: #3D3D3D;
+	font-weight: 600;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.box-newsletter .pulsante-rosso-pieno {
+	float: right;
+	padding: 0 40px;
+	font-size: 18px;
+	font-weight: 700;
+}*/
+
+
+/* STILE NEWSLETTER JEWELS */
+.prefoo {
+	float: left;
+	position: relative;
+	width: 100%;
+	background: #231F20;
+	padding: 20px 0;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.prefoo span {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	float: left;
+	position: relative;
+	margin: 12px 15px 0 0;
+}
+
+.prefoo .social {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.prefoo .social a {
+	float: left;
+	position: relative;
+	margin: 0 0 0 15px;
+}
+
+.boxnewsletter {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 103px
+}
+
+.newsletterinput {
+	width: 260px;
+	height: 40px;
+	line-height: 40px;
+	padding: 10px;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0 15px 0 0;
+	float: left;
+	position: relative;
+	border-radius: 0;
+}
+
+.boxnewsletter input::-webkit-input-placeholder {
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.boxnewsletter input:-moz-placeholder {
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	opacity: 1;
+}
+
+.boxnewsletter input::-moz-placeholder {
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	opacity: 1;
+}
+
+.boxnewsletter input:-ms-input-placeholder {  
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.btn-newsletter {
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	color: #5D5C5C;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	position: relative;
+}
+
+.prefoo .social img {
+	width: 38px;
+}
+
+.prefoo .social span {
+	margin: 0;
+	line-height: 40px;
+}
+
+.prefoo .social i {
+	font-size: 40px;
+	color: #fff;
+}
+
+.col-newsletter {
+	padding: 0 70px;
+}
+
+@media only screen and (max-width: 1023px) {
+.prefoo .social {
+    margin: 24px 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.prefoo .social a {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.boxnewsletter {
+    margin-right: 0;
+}
+
+.newsletterinput {
+    width: 70%;
+    margin: 0 3% 0 0;
+}
+
+.btn-newsletter {
+    width: 27%;
+}
+
+.prefoo span {
+    margin: 0 0 16px;
+    width: 100%;
+    text-align: center;
+}
+}
+
+@media only screen and (max-width: 599px) {
+.newsletterinput {
+    width: 100%;
+    margin: 0 0 16px;
+}
+
+.btn-newsletter {
+    width: 100%;
+}
+}

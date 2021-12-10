@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+		cont_valori_attributo="cont_valori_attributo"
+    >
+
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+	                     <h3><strong>Configurazione di GestPay di Banca Sella</h3>
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<form role='form' action='index.php' name='manage_coupon_data' id='manage_coupon_data' method='POST'>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									
+									<div class="form-group form-inline" id="div_sanbox">
+										<label>Modalità sandbox :</label>
+										<div class="controls">
+													<input type="radio" class="form-control" name="formdata[sandbox]" id="sandbox_1" value="1"> SI				
+													<input type="radio" class="form-control" name="formdata[sandbox]" id="sandbox_0" value="0"> NO			
+										</div>
+									</div>
+
+									<div class="form-group" id="div_sanbox">
+										<label>Shop Login Production:</label>
+										<div class="controls">
+											<input type="text" class="form-control" name="formdata[shopLogin]">
+										</div>
+									</div>
+
+									<div class="form-group" id="div_sanbox">
+										<label>Shop Login Sandbox:</label>
+										<div class="controls">
+											<input type="text" class="form-control" name="formdata[shopLoginTest]">
+										</div>
+									</div>
+
+									<div class="form-group" id="div_api_username_sandbox">
+										<label>Stato ordine quando il pagamento è accettato :</label>
+										<div class="controls">
+											<select type="text" class="form-control " name="formdata[status_confirmed]"></select>
+										</div>
+									</div>
+									<input type="hidden" name="action">
+									
+								
+								</div>
+							</div>
+						
+						</div>
+				  </div>
+
+				  <div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-body">
+								
+								 <h5>IMPOSTAZIONI DASHBOARD GESTPAY</h5>
+								<p style="font-weight: normal;">
+								 <ol>
+								 <li>nella pagina <span style="font-style: italic;">Configurazione > Sicurezza</span> aggiungere l'indirizzo IP del server cioè <span style="color:green">{server_ip}</span><br>
+								 
+								 </li>
+								 <li>nella pagina <span style="font-style: italic;">Configurazione > Ambiente</span> impostare i seguenti valori:
+
+									<ul>
+										<li>URL per risposta positiva: <span style="color:green">{baseurl}/modules/gestpay/response.php</span></li>
+										<li>URL per risposta negativa: <span style="color:green">{baseurl}/modules/gestpay/response.php</span></li>
+									</ul>
+								 
+								 </li>
+								  </ol>	
+								</p>
+								</div>
+							</div>
+						
+						</div>
+				  </div>
+
+					<div class="row">
+						<div class="col-md-12 m-t-20 m-b-40 align-center">
+							<button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+						</div>
+				   </div>
+				</form>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+	
+</body>
+
+</html>

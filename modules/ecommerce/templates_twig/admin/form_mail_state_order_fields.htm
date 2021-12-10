@@ -1,0 +1,65 @@
+<div class="col-md-12 m-b-20" >
+	<div class="row">
+		<p>{{tr('info_mail_order_status_editor')}}:</p>
+		<div class="col-md-6">
+			<ul>
+				
+				<li><button type="button" onclick="executeCopy('%ORDER_NUMBER%')"><i class="fa fa-copy"></i></button> <b>%ORDER_NUMBER%</b>: {{tr('order_number')}}</li>
+				<li><button type="button" onclick="executeCopy('%ORDER_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_DATA%</b>: {{tr('order_evacuation_date')}}</li>
+				<li><button type="button" onclick="executeCopy('%ORDER_PAID_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_PAID_DATA%</b>: {{tr('order_payment_date')}}</li>
+				<li><button type="button" onclick="executeCopy('%ORDER_SHIPPED_DATA%')"><i class="fa fa-copy"></i></button> <b>%ORDER_SHIPPED_DATA%</b>: {{tr('order_shipment_date')}}</li>
+				<li><button type="button" onclick="executeCopy('%ORDER_STATUS%')"><i class="fa fa-copy"></i></button> <b>%ORDER_STATUS%</b>: {{tr('order_status')}}</li>
+				<li><button type="button" onclick="executeCopy('%ORDER_TRACKING%')"><i class="fa fa-copy"></i></button> <b>%ORDER_TRACKING%</b>: {{tr('tracking_code')}}</li>
+				
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<ul>
+				<li><button type="button" onclick="executeCopy('%CUSTOMER_FULLNAME_OR_COMPANY%')"><i class="fa fa-copy"></i></button> <b>%CUSTOMER_FULLNAME_OR_COMPANY%</b>: {{tr('customer_fullname')}}</li>
+				<li><button type="button" onclick="executeCopy('%NOTE_STATUS%')"><i class="fa fa-copy"></i></button> <b>%NOTE_STATUS%</b>: {{tr('change_status_note')}}</li>
+				<li><button type="button" onclick="executeCopy('%LINK_COURIER%')"><i class="fa fa-copy"></i></button> <b>%LINK_COURIER%</b>: {{tr('courier_tracking_url')}}</li>
+
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+{% import "macro/form.htm" as form %}
+
+{{form.buildCol(dataform.subject,'col-md-12')}}
+{{form.buildCol(dataform.message,'col-md-12')}}
+{{form.build(dataform.id_status}}
+
+
+ <div class="col-md-12 m-t-20 align-right">
+	<button type="button"  class="btn btn-success m-t-10" onclick="save_mail_status(); return false;"><i class="fa fa-save"></i> {{tr('save')}}</button>
+</div>
+
+<script>
+
+if ($('.cke-editor-advanced').length && $.fn.ckeditor) {
+	    $('.cke-editor-advanced').each(function () {
+			$(this).ckeditor({
+				imageUploadUrl : '/upload_file.php?plugin=cke&type=img&action=upload',
+				codeSnippetGeshi_url: '../lib/colorize.php',
+				extraPlugins : 'lineheight,dialogadvtab',
+				//imageBrowser_listUrl: '/upload_file.php?plugin=cke&type=img&action=view',
+				//filebrowserBrowseUrl: '/upload_file.php?plugin=cke&type=img&action=view',
+			   filebrowserBrowseUrl : '/plugins/kcfinder-3.12/browse.php?opener=ckeditor&type=files',
+			   filebrowserImageBrowseUrl : '/plugins/kcfinder-3.12/browse.php?opener=ckeditor&type=images',
+			   filebrowserFlashBrowseUrl : '/plugins/kcfinder-3.12/browse.php?opener=ckeditor&type=flash',
+			   filebrowserUploadUrl : '/plugins/kcfinder-3.12/upload.php?opener=ckeditor&type=files',
+			   filebrowserImageUploadUrl : '/plugins/kcfinder-3.12/upload.php?opener=ckeditor&type=images',
+			   filebrowserFlashUploadUrl : '/plugins/kcfinder-3.12/upload.php?opener=ckeditor&type=flash',
+				
+			});
+	       /*CKEDITOR.replace($(this).attr('id'), {
+				//toolbar:'Basic',
+				//extraPlugins : 'imagebrowser,youtube,cleanuploader',
+				//imageBrowser_listUrl : "/page/list_files.htm"
+			});*/
+	    });
+	}
+
+</script>

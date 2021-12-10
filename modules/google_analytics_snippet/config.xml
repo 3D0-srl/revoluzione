@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Google Analytics Snippet</name>
+		<permission>cms</permission>
+		<tag>google_analytics_snippet</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nel sito lo snipper js di Google Analytics]]></description> 
+	</info>
+	<linkSetting>
+		index.php?mod=google_analytics_snippet
+	</linkSetting>
+</module>

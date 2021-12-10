@@ -1,0 +1,42 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+    <div class="container-small container-login">
+		<h4 class="txtc">{{tr('Il mio account')}}</h4>
+		<div class="space30"></div>
+		<div class="cont-log-reg">
+			<div class="tab only_mob">
+				<div class="col50 active user">{{tr('Login')}}</div>
+				<div class="col50 guest">{{tr('Nuovo cliente')}}</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 logindata" id="logindata">
+				<h6 class="only_desk">{{tr('Sei un cliente registrato?')}}</h6>
+				<p>{{tr('Completa il tuo ordine più velocemente.')}}</p>
+				<span class="space10"></span>
+				<form class="form" action="index.php" method="POST">
+					<span class="errore">{{messages|raw}}</span>
+					<div class="controls">
+						<label>{{tr('Username')}}</label>
+						<input type="text" name="formdata[username]">
+					</div>
+					<div class="controls">
+						<label>{{tr('Password')}}</label>
+						<input type="password" name="formdata[password]">
+					</div>
+					<button type="submit" class="btn-default">{{tr('Accedi')}}</button>
+					<input type="hidden" name="ctrl" value="Access">
+					<input type="hidden" name="action" value="login">
+				</form>
+				<div class="space10"></div>
+				<a href="/account/lostpwd.htm" class="lostpwd">Hai dimenticato la password?</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 nologindata">
+				<h6 class="only_desk">{{tr('Sei un nuovo cliente?')}}</h6>
+				<p>{{tr('Se lo desideri, puoi registrarti adesso per effettuare più velocemente i prossimi acquisti.')}}</p>
+				<div class="space20"></div>
+				<a href="account/signup.htm" class="btn-default btn-registrati">{{tr('Registrati adesso')}}</a>
+				{{do_action('display_login')}}
+			</div>
+		</div>
+		<div class="space60"></div>
+	</div>
+{% endblock %}

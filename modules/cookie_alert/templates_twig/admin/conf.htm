@@ -1,0 +1,21 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('setting')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.popupTitle,'col-md-12')}}
+{{form.buildCol(dataform.popupText,'col-md-12')}}
+
+{{form.buildCol(dataform.buttonContinueTitle,'col-md-12')}}
+{{form.buildCol(dataform.buttonLearnmoreTitle,'col-md-12')}}
+{{form.buildCol(dataform.urlPolicy,'col-md-12')}}
+
+
+{{form.buildCol(dataform.agreementExpiresInDays,'col-md-12')}}
+{{form.buildCol(dataform.popupPosition,'col-md-12')}}
+{{form.buildCol(dataform.styleCompact,'col-md-4')}}
+{{form.buildCol(dataform.autoAcceptCookiePolicy,'col-md-4')}}
+{{form.buildCol(dataform.buttonLearnmoreOpenInNewWindow,'col-md-4')}}
+
+
+{% endblock %}

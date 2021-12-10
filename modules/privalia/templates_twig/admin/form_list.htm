@@ -1,0 +1,11 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %} Lista di vendita {% endblock %} 
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+	{{form.build(dataform.id)}}
+	{{form.buildCol(dataform.name,'col-md-12')}}
+	{{form.buildCol(dataform.id_profile,'col-md-12')}}
+	{{form.buildCol(dataform.id_channel,'col-md-12')}}
+	{{form.buildMultiselect(dataform.categories,'col-md-12')}}
+{% endblock %}

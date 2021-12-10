@@ -1,0 +1,99 @@
+{% extends 'layouts/page.htm' %}
+
+{% block content %}
+{% set months = [
+	'Gennaio',
+	'Febbraio',
+	'Marzo',
+	'Aprile',
+	'Maggio',
+	'Giugno',
+	'Luglio',
+	'Agosto',
+	'Settembre',
+	'Ottobre',
+	'Novembre',
+	'Dicembre'
+] %}
+
+
+<h2 class="tit-pag">{{tr('Blog','news')}}</h2>
+
+<div class="menu-cat-oriz menu-desk">
+	{% if active == -1 %}
+		<a href="/news" class="cat-active">{{tr('Tutti','news')}}</a>
+	{% else %}
+		<a href="/news">{{tr('Tutti','news')}}</a>
+	{% endif %}
+	{% for k, v in categories %}
+	{% if v.id == active %}
+		<a href="{{v.getUrl()}}" class="cat-active">{{ v }}</a>
+	{% else %}
+		<a href="{{v.getUrl()}}">{{ v.get('name') }}</a>
+	{% endif %}
+	{% endfor %}
+</div>
+
+<!-- menu mobile -->
+<div class="menu-mob menu-mob-active">
+	{% if active == -1 %}
+		<span class="cat-active">{{tr('Tutti','news')}}</span>
+	{% else %}
+	{% for k, v in categories %}
+	{% if v.id == active %}
+		<span class="cat-active">{{ v.get('name') }}</span>
+	{% endif %}
+	{% endfor %}
+	{% endif %}
+</div>
+
+<!-- toggler -->
+	<div class="box-toggle">
+	{% if active == -1 %}
+	<div class="menu-mob-item cat-active">
+		<a href="/news">{{tr('Tutti','news')}}</a>
+	</div>
+	{% else %}
+	<div class="menu-mob-item">
+		<a href="/news">{{tr('Tutti','news')}}</a>
+	</div>
+	{% endif %}
+	{% for k, v in categories %}
+	{% if v.id == active %}
+	<div class="menu-mob-item cat-active">
+		<a href="{{v.getUrl()}}">{{ v.get('name') }}</a>
+	</div>
+	{% else %}
+	<div class="menu-mob-item">
+		<a href="{{v.getUrl()}}">{{ v.get('name') }}</a>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>
+
+<div class="flex flex-wrap">
+	{% for news in news_list %}
+	{% set month = news.get('dateLastUpdate') | date('n') %}
+	<a href="{{ news.getUrl() }}" class="col33 col-news">
+		<div class="box-img-news" style="background:url('{{news.getUrlImage(0,'large')}}'); background-position:center center; background-repeat:no-repeat; background-size:cover; background-attachment:scroll;">
+			<!--<img src="{{news.getUrlImage(0,'large')}}" alt="">-->
+			<div class="info-news flex flex-center">
+				<div class="data-news">
+					<div class="mese-news">{{ news.get('dateLastUpdate') | date('d') }}</div>
+					<div class="giorno-news">{{ months[month - 1] }}</div>
+				</div>
+				<div class="tit-cat-news">
+					{% set category_id = news.type_news %}
+					<div class="cat-news">{{ categories[category_id] }}</div>
+					<div class="tit-news">{{ news.get('title') }}</div>
+				</div>
+			</div>
+			<div class="pulsante pulsante-pieno">{{tr('Scopri di più','news')}}</div>
+		</div>
+		<!--<h3>{{ news.get('title')}}</h3>
+			<div class="data">{{ news.get('dateLastUpdate')|date('d.m.Y')}}</div>-->
+	</a>
+	{% endfor %}
+</div>
+
+{% endblock %}

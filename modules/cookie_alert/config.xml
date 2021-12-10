@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Cookie Alert</name>
+		<permission>superadmin</permission>
+		<tag>cookie_alert</tag>
+		<kind>cms</kind>
+		<version>3</version>
+		<scope></scope> 
+		<autoload>1</autoload>
+		<description><![CDATA[Modulo che integra nel sito web l'alert dei cookie]]></description> 
+   </info>
+	<linkSetting>
+		index.php?ctrl=CookieAdmin&amp;mod=cookie_alert 	
+    </linkSetting>
+	<widgets>
+		<widget> 
+			<name>Cookie</name>
+			<function>WidgetCookieAlert</function>
+			<url_conf></url_conf>
+			<repeatable>0</repeatable>
+		</widget>
+	</widgets>
+</module>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+	<link rel="stylesheet" href="js/jstree/themes/default/style.min.css" />
+	<link rel="stylesheet" href="css/default.css">
+	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+    {output(#javascript.htm#)}
+
+	<script src="js/script.js?v=21"></script>
+    <flexy:toJavascript flexy:prefix="js_"
+		url_type="dati[url_type]"
+		id_url_page="dati[id_url_page]"
+		cont_map_corrieri="cont_map_corrieri"
+		cont_map_corrieri_exit="cont_map_corrieri_exit"
+		mapping_categories="mapping_categories"
+    >
+
+	<script>
+	$(document).ready(function(){
+		$('.bandiera').each(function(ind,l){
+			if( $(this).find('input').prop('checked') == true){
+				$(this).addClass('selected');
+			}
+		});
+		if( $('#id_url_page').length > 0 ){
+			
+			$('#id_url_page').find('option').each(function(index,value){
+				var type = $(this).html().replace(/(.*)\[([a-z]+)\]/,'$2');
+				var html = $(this).html().replace(/\s\[([a-z]+)\]/,"");
+				
+				
+				//$(this).attr('data-content','<span>'+html+"</span>");
+				$(this).attr('data-subtext',type)
+				$(this).html(html);
+				
+				//$(this).attr('style',"background: "+js_colori_stati[index]+"; color: #fff;");
+				//console.log($(this));
+			});
+			$('#id_url_page').selectpicker('refresh');
+		}
+
+
+
+		$('.bandiera').on('click',function(){
+			if(!$(this).hasClass('selected')){
+				$(this).addClass('selected');
+				$(this).find('input').prop('checked',true);
+			}else{
+				$(this).find('input').prop('checked',false);
+				$(this).removeClass('selected');
+			}
+		});
+
+
+		
+
+
+	});
+
+	$(window).load(function(){
+		setTimeout(function(){
+		$('.profile-select').on('change',function(e){
+			console.log('qua');
+			e.stopPropagation();
+			//console.log(event);
+		});
+
+
+
+		$('.profile-select').on('click',function(e){
+			 e.stopPropagation();
+		});
+		
+
+		if( typeof js_mapping_categories != 'undefined' && js_mapping_categories != null ){
+
+			for( var k in js_mapping_categories){
+				$('#'+k).find('select').val(js_mapping_categories[k]);
+			}
+		}
+
+
+		},2000);
+	});
+	</script>
+
+	<style>
+		.bandiera{
+			border: 1px solid #e3e0e0;
+			margin-right: 15px;
+			width: 220px;
+			background:#e3e0e0;
+			border-radius:0;
+			cursor:pointer;
+			font-size: 12px;
+		}
+		.bandiera .panel-body{
+			background:#e3e0e0;
+		}
+
+
+		.bandiera.selected{
+			border: 3px solid #76b12c !important;
+		}
+	</style>
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    <!-- BEGIN MAIN CONTENT -->
+		
+        <div id="main-content" class="dashboard">
+        
+			<div class="m-b-20 clearfix">
+                <div class="page-title pull-left">
+
+					<h3><strong>Amazon Store  <small flexy:if="!dati[id]">Aggiungi</small><small flexy:if="dati[id]">Modifica</small></strong></h3>
+	
+                </div>
+
+				<div class="pull-right">
+						<a href="index.php?action=setting" class="btn btn-success m-t-10"><i class="fa fa-arrow-left p-r-10"></i> Indietro</a>
+					</div>
+               
+            </div>
+
+			<form role='form' action='index.php' name='user' id='product' method='POST' enctype="multipart/form-data">
+			<div class="row">
+						<div class="col-md-12">
+							<div class="alert alert-danger" style="width:100%" flexy:if="errore">
+							  <strong>{errore}</strong>
+							</div>
+							
+							<!----- TAB WRAPPER ---->
+							<div class="tabcordion">
+
+									<ul id="myTab" class="nav nav-tabs">
+										<li class="active"><a href="#amazon_general" data-toggle="tab">Credenziali</a></li>
+										<li><a href="#amazon_marketplace" data-toggle="tab">Marketplaces</a></li>
+										<li><a href="#amazon_mappatura_categorie" data-toggle="tab">Categorie</a></li>
+										<li><a href="#amazon_mappatura_ordini" data-toggle="tab">Mappatura Ordini</a></li>
+										<li><a href="#amazon_mappatura_corrieri" data-toggle="tab">Mappatura Corrieri</a></li>
+									</ul>
+									<!----- TAB CONTENT ---->
+									<div id="myTabContent" class="tab-content">
+										<div class="tab-pane fade active in" id="amazon_general">
+												<div class="row">
+													<div class="col-md-12">
+
+													<input type='hidden' name='formdata[id]'>
+									
+													<div class="form-group col-md-12" id="">
+														<label>Nome:</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[name]">
+														</div>
+													</div>
+													
+													<div class="form-group col-md-12" id="">
+														<label>Merchant Id:</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[merchantId]">
+														</div>
+													</div>
+
+													<!--<div class="form-group col-md-12" id="">
+														<label>Key Id:</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[keyId]">
+														</div>
+													</div>
+
+													<div class="form-group col-md-12" id="div_username">
+														<label>Secret Key:</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[secretKey]">
+														</div>
+													</div>-->
+
+													<div class="form-group col-md-12" id="div_username">
+														<label>Token:</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[token]">
+														</div>
+													</div>
+													
+											
+
+													<input type='hidden' name='formID'>
+													<input type='hidden' name='action'>
+
+
+
+													</div>
+												</div>
+										</div>
+										<div class="tab-pane fade in" id="amazon_marketplace">
+												<div class="row">
+													<div class="col-md-12">
+
+														<div class="panel panel-default">
+															<div class="panel-body">
+																	<h5>EUROPA</h5>
+																	
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/it.png"> ITALIA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Italy">
+																		</div>
+
+																	</div>
+
+																	
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/gb.png"> REGNO UNITO
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="UK">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/es.png"> SPAGNA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Spain">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/fr.png"> FRANCIA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="France">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/de.png"> GERMANIA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Germany">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/nl.png"> Paesei Bassi
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Netherlands">
+																		</div>
+
+																	</div>
+
+
+
+																	
+															</div>
+														</div>
+														
+														<div class="panel panel-default">
+															<div class="panel-body">
+																	<h5>NORD AMERICA</h5>
+																	
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/us.png"> STATI UNITI
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="US">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/ca.png"> CANADA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Canada">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/mx.png"> MESSICO
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Mexico">
+																		</div>
+
+																	</div>
+
+
+
+																	
+															</div>
+														</div>
+
+
+
+														<div class="panel panel-default">
+															<div class="panel-body">
+																	<h5>ALTRI MARKETPLACE</h5>
+																	
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/jp.png"> GIAPPONE
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Japan">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/cn.png"> CINA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="China">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/in.png"> INDIA
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="India">
+																		</div>
+
+																	</div>
+
+																	<div class="panel col-md-3 bandiera">
+																		<div class="panel-body">
+																			<img src="images/br.png"> BRASILE
+																			<input type="checkbox" class="form-control" style="display:none" name="formdata[marketplace][]" value="Brazil">
+																		</div>
+
+																	</div>
+
+
+
+																	
+															</div>
+														</div>
+
+
+
+													</div>
+												</div>
+										</div>
+
+
+										<div class="tab-pane fade in" id="amazon_mappatura_categorie">
+												<div class="row">
+													<div class="col-md-12">
+
+														 <div id="jstree">
+															<!-- in this example the tree is populated from inline HTML -->
+															<ul>
+															  <li>Categorie
+																<ul>
+																  {foreach:sections,v}
+																  {if:v.children}
+																  <li id="{v.id}">{if:in_array(v.id,categorie_selezionate)}<a  class="jstree-clicked">{v.get(#name#)}</a>{else:}<a>{v.get(#name#)}</a>{end:}
+																	  
+																	  <ul>
+																	  {foreach:v.children,v1} 
+																	 
+																		{if:v1.children}
+																		  <li id="{v1.id}">{if:in_array(v1.id,categorie_selezionate)}<a  class="jstree-clicked">{v1.get(#name#)}</a>{else:}<a>{v1.get(#name#)}</a>{end:}
+																			  
+																			  <ul>
+																			  {foreach:v1.children,v2} 
+																			    {if:v2.children}
+																				<li id="{v2.id}">{if:in_array(v1.id,categorie_selezionate)}<a  class="jstree-clicked">{v1.get(#name#)}</a>{else:}{v2.get(#name#)}{end:}
+																				<ul>
+																					{foreach:v2.children,v3} 
+																						 <li id="{v3.id}">{if:in_array(v3.id,categorie_selezionate)}
+																						 <a  class="jstree-clicked">{v3.get(#name#)}{else:}<a>{v3.get(#name#)}{end:}
+																						 
+																						 <select class="profile-select no-picker" name="formdata[profile][{v3.id}]">
+																							<option value="0">Seleziona profilo...</option>
+																							{foreach:profili,l,p}
+																							<option value="{l}">{p}</option>
+																							{end:}
+																						 <select>
+																						 </a>
+																						 </li>
+																					{end:}
+																				
+																				</ul>
+																				</li>
+
+																				{else:}
+																			   <li id="{v2.id}">{if:in_array(v2.id,categorie_selezionate)}
+																				<a  class="jstree-clicked">{v2.get(#name#)}{else:}<a>{v2.get(#name#)}{end:}
+																				
+																						<select class="profile-select no-picker" name="formdata[profile][{v2.id}]">
+																							<option value="0">Seleziona profilo...</option>
+																							{foreach:profili,l,p}
+																							<option value="{l}">{p}</option>
+																							{end:}
+																						 <select>
+																						 </a>
+																				</li>
+																			   {end:}
+																			  {end:}
+																			  </ul>
+																		  </li>
+																		  {else:}
+																		  <li id="{v1.id}">
+																		  {if:in_array(v1.id,categorie_selezionate)}<a  class="jstree-clicked">{v1.get(#name#)}{else:}<a>{v1.get(#name#)}{end:}
+																		 
+																		  				<select class="profile-select no-picker" name="formdata[profile][{v1.id}]">
+																							<option value="0">Seleziona profilo...</option>
+																							{foreach:profili,l,p}
+																							<option value="{l}">{p}</option>
+																							{end:}
+																						<select>	
+																						</a>
+
+																		  </li>
+																		  {end:}
+
+
+
+																	  {end:}
+																	  </ul>
+																  </li>
+																  {else:}
+																  <li id="{v.id}">{if:in_array(v.id,categorie_selezionate)}<a  class="jstree-clicked">{v.get(#name#)}{else:}<a>{v.get(#name#)}{end:}
+																  
+																						<select class="profile-select no-picker" name="formdata[profile][{v.id}]">
+																							<option>Seleziona profilo...</option>
+																							{foreach:profili,l,p}
+																							<option value="{l}">{p}</option>
+																							{end:}
+																						<select>	
+																						</a>
+																  </li>
+																  {end:}
+																  {end:}
+																  <!--<li>Child node 2</li>-->
+																</ul>
+															  </li>
+															  <!--<li>Root node 2</li>-->
+															</ul>
+														  </div>
+														 
+
+													
+
+													<textarea type="textarea" style="display:none" class="form-control" id="categories" name="formdata[categories]"></textarea>
+													</div>
+												</div>
+										</div>
+
+
+										<div class="tab-pane fade in" id="amazon_mappatura_ordini">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group col-md-12" id="">
+															<label>Ordine pagato su amazon :</label>
+															<div class="controls">
+																<select type="select" class="form-control " name="formdata[statusPaid]"></select>
+															</div>
+														</div>
+
+														<div class="form-group col-md-12" id="">
+															<label>Ordine spedito su amazon :</label>
+															<div class="controls">
+																<select type="select" class="form-control " name="formdata[statusSent]"></select>
+															</div>
+														</div>
+
+													</div>
+												</div>
+										</div>
+
+										<div class="tab-pane fade in" id="amazon_mappatura_corrieri">
+												<div class="row">
+													<div class="col-md-12">
+														<h4>Mappatura stato ordine in entrata</h4>
+														<div class="panel panel-default">
+															<div class="panel-body">
+
+																<table class="table">
+																		<thead>
+																			<th>Corriere Amazon</th>
+																			<th>Corriere Shop</th>
+																			<th></th>
+																		</thead>
+																		<tbody id="cont_corrieri">
+																			<tr id="" flexy:foreach="map_corrieri,k,v">
+
+																				<td id="amazon">
+																				
+																				<select name="formdata[carrier][{k}][id_amazon]" class="form-control">
+																					{foreach:corrieri_amazon,v1}
+																					{if:uguale(v[id_amazon],v1)}
+																					<option value="{v1}" selected>{v1}</option>
+																					{else:}
+																					<option value="{v1}">{v1}</option>
+																					{end:}
+																					{end:}
+																				</select>
+																				
+																				
+																				</td>
+																				<td id="marion">
+																				<select name="formdata[carrier][{k}][id_marion]" class="form-control">
+																					
+																					{foreach:corrieri_marion,k1,v1}
+																					{if:uguale(v[id_marion],k1)}
+																					<option value="{k1}" selected>{v1}</option>
+																					{else:}
+																					<option value="{k1}">{v1}</option>
+																					{end:}
+																					{end:}
+																				</select>
+																				
+																				
+																				</td>
+																				<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+																			</tr>
+																		</tbody>
+
+																		<tfoot>
+																				<td colspan="3" class="text-right"><button class="btn btn-success btn-sm" type="button" onclick="add_corriere(); return false;"><i class="fa fa-plus"></i> aggiungi</button></td>
+																		</tfoot>
+																</table>
+															</div>
+														</div>
+
+
+														<!--QUI--->
+														<h4>Mappatura stato ordine in uscita</h4>
+														<div class="panel panel-default">
+															<div class="panel-body">
+
+																<table class="table">
+																		<thead>
+																			<th>Corriere Shop</th>
+																			<th>Corriere Amazon</th>
+																			<th>Marketplace</th>
+																			<th></th>
+																		</thead>
+																		<tbody id="cont_corrieri_exit">
+																			<tr id="" flexy:foreach="map_corrieri_exit,k,v">
+
+																				<td id="amazon">
+																				
+																				<select name="formdata[carrier_exit][{k}][id_marion]" class="form-control">
+																					{foreach:corrieri_marion,k1,v1}
+																					{if:uguale(v[id_marion],k1)}
+																					<option value="{k1}" selected>{v1}</option>
+																					{else:}
+																					<option value="{k1}">{v1}</option>
+																					{end:}
+																					{end:}
+																				</select>
+																				
+																				
+																				</td>
+																				<td id="marion">
+																				<select name="formdata[carrier_exit][{k}][id_amazon]" class="form-control">
+																					{foreach:corrieri_amazon_exit,k1,v1}
+																					{if:uguale(v[id_amazon],v1)}
+																					<option value="{v1}" selected>{v1}</option>
+																					{else:}
+																					<option value="{v1}">{v1}</option>
+																					{end:}
+																					{end:}
+																				</select>
+																				
+																				
+																				</td>
+																				<td id="market">
+																				<select name="formdata[carrier_exit][{k}][market]" class="form-control">
+																					<option value="0">TUTTI</option>
+																					{foreach:markets,k1,v1}
+																					{if:uguale(v[market],v1)}
+																					<option value="{k1}" selected>{v1}</option>
+																					{else:}
+																					<option value="{k1}">{v1}</option>
+																					{end:}
+																					{end:}
+																				</select>
+																				
+																				
+																				</td>
+																				<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+																			</tr>
+																		</tbody>
+
+																		<tfoot>
+																				<td colspan="4" class="text-right"><button class="btn btn-success btn-sm" type="button" onclick="add_corriere_exit(); return false;"><i class="fa fa-plus"></i> aggiungi</button></td>
+																		</tfoot>
+																</table>
+															</div>
+														</div>
+														
+
+													</div>
+												</div>
+										</div>
+
+
+
+									</div>
+
+
+
+
+							</div>
+						</div>
+			</div>
+
+            <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+                    <button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+                </div>
+            </div>
+			</form>
+        </div>
+		
+        <!-- END MAIN CONTENT -->
+
+    </div>
+
+
+
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	<div style="display:none">
+		<select flexy:ignore id="select_corrieri_amazon" class="form-control">
+			{foreach:corrieri_amazon,v}
+			<option value="{v}">{v}</option>
+
+			{end:}
+		</select>
+
+		<select flexy:ignore id="select_corrieri_amazon_exit" class="form-control">
+			{foreach:corrieri_amazon_exit,v}
+			<option value="{v}">{v}</option>
+
+			{end:}
+		</select>
+
+		<select flexy:ignore id="select_corrieri_marion" class="form-control">
+			{foreach:corrieri_marion,k,v}
+			<option value="{k}">{v}</option>
+
+			{end:}
+		</select>
+
+		<select flexy:ignore id="select_markets" class="form-control">
+			<option value="0">TUTTI</option>
+			{foreach:markets,v}
+			
+			<option value="{v}">{v}</option>
+
+			{end:}
+		</select>
+	</div>
+
+	<table class="table" style="display:none">
+		<tr id="modello_corriere">
+
+			<td id="amazon"></td>
+			<td id="marion"></td>
+			<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+		</tr>
+
+		
+	</table>
+	<table class="table" style="display:none">
+		<tr id="modello_corriere_exit">
+			
+			<td id="marion"></td>
+			<td id="amazon"></td>
+			<td id="market"></td>
+			<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+		</tr>
+
+	</table>
+
+	
+	  <!-- 5 include the minified jstree source -->
+	  <script src="js/jstree/jstree.min.js"></script>
+	  <script>
+	  $(function () {
+		// 6 create an instance when the DOM is ready
+		$.jstree.defaults.core.themes.variant = "large";
+		$('#jstree').jstree({
+			"plugins" : [ "wholerow", "checkbox" ]
+		});
+		// 7 bind to events triggered on the tree
+		$('#jstree').on("changed.jstree", function (e, data) {
+		  console.log(data.selected);
+		  var dati = JSON.stringify(data.selected);
+		  $('#categories').val(dati);
+		  console.log(dati);
+		});
+		// 8 interact with the tree - either way is OK
+		
+	  });
+	  </script>
+	
+</body>
+
+</html>

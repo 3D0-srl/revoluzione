@@ -1,0 +1,39 @@
+{% extends "layouts/tab/base_form.htm" %}
+{% block edit_page_title %}{{tr('order_state')|capitalize}} {% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<script>
+	
+	js_color = "{{dataform.color.value|escape('js')}}";
+
+</script>
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.label,'col-md-6')}}
+{{form.buildCol(dataform.name,'col-md-6')}}
+
+{{form.buildCol(dataform.description,'col-md-12')}}
+{{form.buildPalette(dataform.color,'col-md-3')}}
+{{form.buildCol(dataform.active,'col-md-3')}}
+{{form.buildCol(dataform.paid,'col-md-3')}}
+{{form.buildCol(dataform.sent,'col-md-3')}}
+				
+{{form.buildCol(dataform.send_mail,'col-md-3')}}
+{{form.buildCol(dataform.invoice,'col-md-3')}}
+{{form.buildCol(dataform.send_invoice,'col-md-3')}}
+<script>
+
+	$(document).ready(function(){
+		$("#color").spectrum({
+			preferredFormat: "hex",
+			color: js_color
+		});
+	});
+	
+</script>
+{% endblock %}
+   
+
+
+

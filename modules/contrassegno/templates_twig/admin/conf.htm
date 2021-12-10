@@ -1,0 +1,6 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Contrassegno {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.buildMultiselect(dataform.shippingMethods,'col-md-12')}}
+{% endblock %}

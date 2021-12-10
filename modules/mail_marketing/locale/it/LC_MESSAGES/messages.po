@@ -1,0 +1,51 @@
+msgid "email_not_valid"
+msgstr "Email non valida"
+
+
+msgid "email_not_in_archive"
+msgstr "Email non presente in archivio"
+
+msgid "email_in_archive"
+msgstr "Email già in archivio"
+
+
+
+msgid "confirm_operation"
+msgstr "Ti è stata inviata una mail di conferma all'indirizzo specificato"
+
+msgid "confirm_subscribe_newsletter"
+msgstr "Conferma iscrizione alla newsletter %s sul sito %s"
+
+msgid "confirm_unsubscribe_newsletter"
+msgstr "Conferma cancellazione dalla newsletter %s sul sito %s"
+
+
+msgid "subscribe_ok"
+msgstr "La tua iscrizione alla newsletter è avvenuta con successo"
+
+
+msgid "unsubscribe_ok"
+msgstr "La tua cancellazione dalla newsletter è avvenuta con successo"
+
+
+msgid "newsletter_field"
+msgstr "iscrizione newsletter"
+
+
+msgid "duplicate_list_default"
+msgstr "Lista principale già esistente."
+
+msgid "no_selected_newsletter"
+msgstr "Nessuna newsletter selezionata."
+
+msgid "domain_not_exist"
+msgstr "email non esistente"
+
+
+
+
+
+
+
+
+

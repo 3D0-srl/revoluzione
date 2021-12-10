@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Advanced Catalog</name>
+		<permission>superadmin</permission>
+		<tag>advanced_datalog</tag>
+		<kind>catalog</kind>
+		<scope></scope> 
+		<version>3</version>
+		<description><![CDATA[Modulo che consente di personalizzare la presentazione degli articoli nel sito]]></description> 
+   </info>
+</module>

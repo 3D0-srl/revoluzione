@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+	<link rel="stylesheet" href="css/bxslider.css" type="text/css" >
+	<link rel="stylesheet" href="css/lokea.css" type="text/css" >
+	
+	<style>
+		
+		img{
+			max-width:100%;
+		}
+		.slider-paestum {
+			margin: 0;
+		}
+	</style>
+		<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	{output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+   <script src="js/jquery.bxslider.js"></script>
+   <script src="js/lokea.js"></script>
+   <script>
+		$(document).ready(function(){
+			$('.slider-paestum').bxSlider({
+				minSlides: 1,
+				maxSlides: 1,
+				moveSlides: 1,
+				controls: true,
+				auto: true,
+				pager: false,
+				infiniteLoop: true,
+				autoControls: false,
+				autoHover: true
+			});
+		});
+   </script>
+</script> 
+</head>
+
+<body style="width:100% !important; margin: 0;">
+	<ul class="slider-paestum">	
+		<li>
+			<div style="width:100%;">
+				{html:h}
+			</div>
+		</li>
+		<li>
+			<div style="width:100%;">
+				{html:h}
+			</div>
+		</li>
+	</ul>
+	
+	
+	
+	
+
+</body>
+{output(#javascript_end.htm#)}
+</html>

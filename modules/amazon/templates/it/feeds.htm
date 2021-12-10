@@ -1,0 +1,35 @@
+{if:date_last_report}
+<div class="row alert alert-info" style="width:100%; margin-top:50px;">
+	<div class="col-md-12">
+		Ultimo report prodotti scaricato: <b>{date_last_report}</b>
+	</div>
+</div>
+{end:}
+<table class="table" flexy:if="list">
+	<thead>
+		<th class="center">FEED ID</th>
+		<th class="center">TYPE</th>
+		<th class="center">DATA</th>
+		<th class="center"></th>
+		<th class="center"></th>
+	</thead>
+	<tbody>
+		<tr flexy:foreach="list,v1">
+		
+			<td class="center">{v1[FeedSubmissionId]}</td>
+			<td class="center">{v1[FeedType]}</td>
+			<td class="center">{v1[timestamp]:h}</td>
+			<td class="center">{v1[FeedProcessingStatus]:h}</td>
+			<td class="center">
+			{if:v1[ok]}
+			<a class="btn btn-amazon btn-sm" href="index.php?action=get_feed&feedID={v1[FeedSubmissionId]}&id_store={account_id}&market={market}"><i class="fa fa-eye"></i> dettagli</a>
+			{end:}
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="row">
+<div class="col-md-12">
+<p flexy:if="!list">Nessun reports</p>
+</div>
+</div>

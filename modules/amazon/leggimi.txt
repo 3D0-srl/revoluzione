@@ -1,0 +1,16 @@
+La cartella del modulo deve essere scrivibile
+
+
+TABELLA CART
+postalCode stringa di lunghezza 50
+shippingPostalCode stringa di lunghezza 50
+shippingProvince stringa di lunghezza 3
+
+
+AGGIORNARE LA FUNZIONE loadPrices presente nella classe Catalog con quella delle librerie 4.6
+
+
+Account sviluppatore
+3d0 srl
+ID Sviluppatore: 917080112947
+CREDeNZIALI MWS: AKIAIE3EOJJQ2PP5374Q

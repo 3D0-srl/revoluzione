@@ -1,0 +1,66 @@
+
+<script>
+	var js_currency = "{{getHtmlCurrency()|escape('js')|raw}}";
+	var js_maxprice = "{{maxprice|escape('js')}}";
+	var js_price_min = "{{price_min|escape('js')}}";
+	var js_price_max = "{{price_max|escape('js')}}";
+	var js_step_price = "{{step_price|escape('js')}}";
+</script>
+
+<form method="GET" action="index.php" onchange="$(this).submit()" id="filtri_ricerca_form">
+
+{% for v in filtri %}
+	<div class="filtri_ricerca">
+	<h5>{{v.name}}</h5>
+	<button class="minus_filtro" type="button" onclick="$(this).closest('.filtri_ricerca').find('#cont_filtro').toggle();"><i class="fa fa-minus"></i></button>
+	<span id="cont_filtro">
+	{% if v.images is null %}
+		
+
+		{% for k1,v1 in v.values %}
+		<span>
+		
+		<input type="checkbox" {% if v1.selected == 1 %}checked{% endif %} value="{{v1.value}}" name="formdata[filtri][{{v.type}}][]"/> {{v1.text}}<br>
+		
+		{% endfor %}
+		</span>
+	{% else %}
+
+
+		{% for k1,v1 in v.values %}
+		
+		<label  for="{{v.type}}_{{v1.value}}" style="background:url('img/{{v1.img}}/{{v1.resize}}/img.png')" class="box_filtro_img box_filtro_img_checked">
+			<input type="checkbox" value="{{v1.value}}" style="display:none" name="formdata[filtri][{{v.type}}][]" id="{{v.type}}_{{v1.value}}" {% if v1.selected %}checked{% endif %}/>
+		</label>
+		
+
+		{% endfor %}
+
+
+
+	{% endif %}
+	</span>
+	</div>
+{% endfor %}
+
+<input type="hidden" name="action" value="{{action}}"/>
+{% if section %}
+<input type="hidden" name="section" value="{{section}}"/>
+{% endif %}
+<input type="hidden" name="ctrl" value="Catalogo"/>
+<input type="hidden" name="mod" value="catalogo"/>
+
+{% if tag %}
+<input type="hidden" name="tag" value="{{tag}}"/>
+{% endif %}
+
+<div class="clear"></div>
+<div class="titcolsx">
+ <label for="amount">{{tr('Fascia prezzo','filtri_ricerca')}}:</label><br>
+   <span>{{getHtmlCurrency()|raw}} <span id="price_min_html">{{price_min}}</span> - <span id="price_max_html">{{price_max}}</span> </span>
+ 
+  <input type="hidden" name="formdata[price_min]" id="price_min" value="{{price_min}}">
+  <input type="hidden" name="formdata[price_max]" id="price_max" value="{{price_max}}">
+</div>
+<div id="slider-range"></div>
+</form>

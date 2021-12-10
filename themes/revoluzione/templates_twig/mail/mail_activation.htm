@@ -1,0 +1,31 @@
+{% extends 'layouts/mail.htm' %}
+{% block content %}
+
+<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#022801" size="+2">
+	<strong>Gentile {{user.name}}&nbsp;{{user.surname}},</strong>
+</font>
+<br><br><br>
+<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#b3b3b3">
+	<p>abbiamo ricevuto la tua richiesta di iscrizione al sito. <br>Per confermare la tua registrazione clicca sul link sottostante.</p>
+
+	
+	<p style=" margin-top: 30px; ">
+		<a href="{{abslolute_baseurl}}/index.php?ctrl=Access&action=activation&key={{user.buildKeyActivation()}}">{{abslolute_baseurl}}/index.php?ctrl=Access&action=activation&key={{user.buildKeyActivation()}}</a>
+	</p>
+</font>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

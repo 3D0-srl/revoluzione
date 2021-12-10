@@ -1,0 +1,398 @@
+<style>
+	.errore{
+		border: 1px solid red;
+	}
+	.form-group {
+
+		margin-bottom: 0px !important;
+
+	}
+</style>
+<div class="row">
+	<div class="col-md-12">
+	<div class="panel panel-amazon">
+				<div class="panel-heading">
+					FILE CAMPI RICHIESTI
+				</div>
+				<div class="panel-body" id="">
+					<a href="{url_mapping}">{url_mapping}</a>
+				</div>
+	</div>
+	</div>
+</div>
+<div class="row">
+					
+		<div class="col-md-12">
+			<div class="panel panel-amazon">
+				<div class="panel-heading">
+					VARIAZIONI
+				</div>
+				<div class="panel-body" id="variazioni">
+						
+						
+						
+						<div class="form-group col-md-12" id="" flexy:ignore>
+							<label>Tema Variazioni:</label>
+							<div class="controls">
+								<select type="text" class="form-control" id="theme" name="formdata[variationTheme]" onchange="cambia_tema($(this).val()); return false;">
+									<option value="">---------</option>
+									{foreach:variations_theme,k,v}
+										{if:uguale(data[variationTheme],k)}
+										<option value="{k}" selected>{v}</option>
+										{else:}
+										<option value="{k}">{v}</option>
+										{end:}
+									{end:}
+								</select>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+</div>
+
+<div class="row">
+					
+		<div class="col-md-12">
+			<div class="panel panel-amazon">
+				<div class="panel-heading">
+					MAPPATURA
+				</div>
+				<div class="panel-body" id="mappatura">
+						
+						{foreach:other_fileds,k,v}
+						{if:uguale(v[type_html],#input#)}
+						<div class="form-group col-md-12" id="{k}_container" style="padding-left:0px;padding-right:0px;" >
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>{v[label]} {if:v[required]}<span class="asterisk">*</span>{else:}<span class="asterisk" style="display:none" id="required_{k}">*</span>{end:} {if:v[example]} (es:<b> {v[example]}</b>){end:}:</label>
+								<div class="controls">
+									<select type="select" class="form-control fields" name="formdata[{k}]" id="field_{k}" onchange="cambia_valore('{k}',$(this).val())">
+										<option value="">----</option>
+										{if:uguale(v[selected],#attribute#)}
+										<option value="attribute" selected>Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+
+										{if:uguale(v[selected],#feature#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature" selected>Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+										{if:uguale(v[selected],#value#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value" selected>Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+
+										{if:uguale(v[selected],#default#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											
+										<option value="default" selected>Valore di default</option>
+										
+										{end:}
+										{if:!v[selected]}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+										<!--<option value="default">Valore di default</option>-->
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[{k}Attribute]" flexy:ignore>
+									
+										{foreach:attributes,k1,v1}
+											{if:uguale(k1,v[selected_attribute])}
+											<option value="{k1}" selected>{v1}</option>
+											{else:}
+											<option value="{k1}">{v1}</option>
+											{end:}
+										{end:}
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[{k}Feature]" flexy:ignore>
+
+										{foreach:features,k1,v1}
+											{if:uguale(k1,v[selected_feature])}
+											<option value="{k1}" selected>{v1}</option>
+											{else:}
+											<option value="{k1}">{v1}</option>
+											{end:}
+										{end:}
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_value">
+								<label>Valore fisso:</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[{k}Value]" value="{v[selected_value]}">
+										
+									
+								</div>
+							</div>
+							{if:v[default_values]}
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_default">
+								<label>Valore di default:</label>
+								<div class="controls">
+									
+									<select type="select" class="form-control " name="formdata[{k}Default]" flexy:ignore>
+
+										{foreach:v[default_values],v1}
+											{if:uguale(v1,v[selected_default])}
+											<option value="{v1}" selected>{v1}</option>
+											{else:}
+											<option value="{v1}">{v1}</option>
+											{end:}
+										{end:}
+										
+										
+									</select>
+									
+										
+									
+								</div>
+							</div>
+
+							{end:}
+							
+						</div>
+						{end:}
+						{if:uguale(v[type_html],#select#)}
+
+						<div class="form-group col-md-12" id="{k}_container" style="padding-left:0px;padding-right:0px;" >
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>{v[label]} {if:v[required]}<span class="asterisk">*</span>{else:}<span class="asterisk" style="display:none" id="required_{k}">*</span>{end:} {if:v[example]} (es:<b> {v[example]}</b>){end:}:</label>
+								<div class="controls">
+									<select type="select" class="form-control" id="field_{k}" name="formdata[{k}]">
+										
+										<option value="">----</option>
+										{foreach:v[options],ok,ov}
+											{if:uguale(v[selected],ok)}
+											<option value="{ok}" selected>{ov}</option>
+											{else:}
+											<option value="{ok}">{ov}</option>
+											{end:}
+										{end:}
+										
+										
+									</select>
+								</div>
+							</div>
+							
+							
+						</div>
+
+						{end:}
+						{if:uguale(v[type_html],#textarea#)}
+						<div class="form-group col-md-12" id="{k}_container" style="padding-left:0px;padding-right:0px;" >
+							
+
+							<div class="form-group col-md-6" id="">
+								<label>{v[label]} {if:v[required]}<span class="asterisk">*</span>{else:}<span class="asterisk" style="display:none" id="required_{k}">*</span>{end:} {if:v[example]} (es:<b> {v[example]}</b>){end:}:</label>
+								<div class="controls">
+									<select type="select" class="form-control fields" name="formdata[{k}]" id="field_{k}" onchange="cambia_valore('{k}',$(this).val())">
+										<option value="">----</option>
+										{if:uguale(v[selected],#attribute#)}
+										<option value="attribute" selected>Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+
+										{if:uguale(v[selected],#feature#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature" selected>Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+										{if:uguale(v[selected],#value#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value" selected>Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+
+										{if:uguale(v[selected],#default#)}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											
+										<option value="default" selected>Valore di default</option>
+										
+										{end:}
+										{if:!v[selected]}
+										<option value="attribute">Associa ad attributo</option>
+										<option value="feature">Associa caratteristica</option>
+										<option value="value">Valore fisso</option>
+											{if:v[default_values]}
+											<option value="default">Valore di default</option>
+											{end:}
+										{end:}
+										<!--<option value="default">Valore di default</option>-->
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_attribute">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[{k}Attribute]" flexy:ignore>
+									
+										{foreach:attributes,k1,v1}
+											{if:uguale(k1,v[selected_attribute])}
+											<option value="{k1}" selected>{v1}</option>
+											{else:}
+											<option value="{k1}">{v1}</option>
+											{end:}
+										{end:}
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_feature">
+								<label>Assegna valore di:</label>
+								<div class="controls">
+									<select type="select" class="form-control " name="formdata[{k}Feature]" flexy:ignore>
+
+										{foreach:features,k1,v1}
+											{if:uguale(k1,v[selected_feature])}
+											<option value="{k1}" selected>{v1}</option>
+											{else:}
+											<option value="{k1}">{v1}</option>
+											{end:}
+										{end:}
+										
+										
+									</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_value">
+								<label>Valore fisso:</label>
+								<div class="controls">
+									<textarea type="text" class="form-control " name="formdata[{k}Value]" value="{v[selected_value]}">{v[selected_value]}</textarea>
+										
+									
+								</div>
+							</div>
+							{if:v[default_values]}
+							<div class="form-group col-md-6 assegna_valore_{k}" style="padding-right:0px;" id="" style="display:none" id="{k}_default">
+								<label>Valore di default:</label>
+								<div class="controls">
+									
+									<select type="select" class="form-control " name="formdata[{k}Default]" flexy:ignore>
+
+										{foreach:v[default_values],v1}
+											{if:uguale(v1,v[selected_default])}
+											<option value="{v1}" selected>{v1}</option>
+											{else:}
+											<option value="{v1}">{v1}</option>
+											{end:}
+										{end:}
+										
+										
+									</select>
+									
+										
+									
+								</div>
+							</div>
+
+							{end:}
+							
+						</div>
+						{end:}
+						{end:}
+
+
+
+					
+				</div>
+			</div>
+		</div>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('.fields').trigger('change');
+		if( $('#theme').val() ){
+			$('#theme').trigger('change');
+		}
+	});
+
+	function cambia_valore(tipo,val){
+		$('.assegna_valore_'+tipo).hide();
+		$('#'+tipo+'_'+val).show();
+		
+	}
+
+	function cambia_tema(tema){
+		
+			$('.variazione').each(function(){
+				$(this).find('.asterisk').hide();
+				$(this).detach().removeClass('variazione').appendTo('#mappatura');
+			});
+		if( tema ){
+			$.ajax({
+			  type: "GET",
+				  url: "ajax.php",
+				  dataType: "json",
+				  data: {action:'change_theme',category:$('#category').val(),theme:tema},
+				  success: function(data){
+						
+						if(data.result == 'ok'){
+							if( data.attributes ){
+								for( var k in data.attributes ){
+									$('#'+data.attributes[k]+"_container").detach().addClass('variazione').appendTo('#variazioni');
+									$('#required_'+data.attributes[k]).show();
+								}
+							}
+							//$('#result_data').html(data.data);
+							//$('#import_ok').show();
+								
+							
+						}else{
+							
+						}
+				  },
+				 
+			});
+		}
+	}
+
+	
+</script>

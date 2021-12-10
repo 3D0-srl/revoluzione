@@ -1,0 +1,33 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Slider Composition {% endblock %} 
+{% block url_add %}
+	{{url_add}}&id_slider={{id_slider}}
+{% endblock %}
+{% block content %}
+	
+		{% if list %}
+			{% for v in list %}
+			<div class="col-md-3 immagineslietot">
+				<div class="btn-group media-group pull-right">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu media-menu" role="menu">
+						<li><a href="{{url_edit}}&id={{v.id}}"><i class="fa fa-pencil"></i> Modifica</a>
+						</li>
+						<li><a href="{{url_confirm_delete}}&id={{v.id}};"><i class="fa fa-trash-o"></i> Elimina</a>
+						</li>
+					</ul>
+				</div>
+				<div class="imglside">
+				   <img src="{{v.getUtlImage()}}">
+				 </div>
+			</div>
+			{% endfor %}
+		{% else %}
+			{{tr('no_record')}}
+		{% endif %}
+			
+			
+
+{% endblock %}

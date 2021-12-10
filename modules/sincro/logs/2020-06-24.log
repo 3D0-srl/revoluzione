@@ -1,0 +1,277 @@
+[15:57:57]:: ERROR: ATTRIBUTE SET COMPOSITION WRONG
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              |                                                   |
+|STATUS                                            | ERROR                                             |
+|START                                             | 15:57:57                                          |
+|END                                               | 15:57:57                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:59:57]:: inizio lettura CSV
+[16:00:23]:: inizio lettura CSV
+[16:04:29]:: inizio lettura CSV
+[16:45:53]:: inizio lettura CSV
+[16:56:55]:: inizio lettura CSV
+[17:11:24]:: inizio lettura CSV
+[17:12:58]:: inizio lettura CSV
+[17:12:58]:: fine lettura CSV
+[17:12:58]:: inizio creazione magazzini
+[17:12:58]:: fine creazione magazzini
+[17:12:58]:: inizio creazione categorie
+[17:12:58]:: fine creazione categorie
+[17:12:58]:: inizio creazione produttori
+[17:12:58]:: fine creazione produttori
+[17:12:58]:: inizio creazione attributi
+[17:13:00]:: fine creazione attributi
+[17:14:15]:: inizio lettura CSV
+[17:14:15]:: fine lettura CSV
+[17:14:15]:: inizio creazione magazzini
+[17:14:15]:: fine creazione magazzini
+[17:14:15]:: inizio creazione categorie
+[17:14:15]:: fine creazione categorie
+[17:14:15]:: inizio creazione produttori
+[17:14:15]:: fine creazione produttori
+[17:14:15]:: inizio creazione attributi
+[17:14:15]:: fine creazione attributi
+[17:14:15]:: inizio creazione prodotti
+[17:20:37]:: fine creazione prodotti
+[17:20:37]:: inizio eliminazione prodotti
+[17:20:37]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:14:15                                          |
+|END                                               | 17:20:37                                          |
+|DURATION                                          | 6.37 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1370                                              |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:22:44]:: inizio lettura CSV
+[17:22:44]:: fine lettura CSV
+[17:22:44]:: inizio creazione immagini
+[17:22:45]:: Importate immagini di 14999-35-NAVY BLU
+[17:22:48]:: Importate immagini di 14999-35-NERO
+[17:22:49]:: Importate immagini di 14999-35-PATAGONIA FUMO
+[17:22:51]:: Importate immagini di 14999-35-ROSSO
+[17:22:52]:: Importate immagini di 14999-36-NAVY BLU
+[17:22:55]:: Importate immagini di 14999-36-NERO
+[17:22:56]:: Importate immagini di 14999-36-PATAGONIA FUMO
+[17:22:58]:: Importate immagini di 14999-36-ROSSO
+[17:22:59]:: Importate immagini di 14999-37-NAVY BLU
+[17:23:00]:: Importate immagini di 14999-37-NERO
+[17:23:03]:: Importate immagini di 14999-37-PATAGONIA FUMO
+[17:23:04]:: Importate immagini di 14999-37-ROSSO
+[17:23:06]:: Importate immagini di 14999-38-NAVY BLU
+[17:23:07]:: Importate immagini di 14999-38-NERO
+[17:23:10]:: Importate immagini di 14999-38-PATAGONIA FUMO
+[17:23:11]:: Importate immagini di 14999-38-ROSSO
+[17:23:12]:: Importate immagini di 14999-39-NAVY BLU
+[17:23:14]:: Importate immagini di 14999-39-NERO
+[17:23:17]:: Importate immagini di 14999-39-PATAGONIA FUMO
+[17:23:18]:: Importate immagini di 14999-39-ROSSO
+[17:23:20]:: Importate immagini di 14999-40-NAVY BLU
+[17:23:22]:: Importate immagini di 14999-40-NERO
+[17:23:24]:: Importate immagini di 14999-40-PATAGONIA FUMO
+[17:23:28]:: Importate immagini di 14999-40-ROSSO
+[17:23:29]:: Importate immagini di 14999-41-NAVY BLU
+[17:23:31]:: Importate immagini di 14999-41-NERO
+[17:23:32]:: Importate immagini di 14999-41-PATAGONIA FUMO
+[17:23:36]:: Importate immagini di 14999-41-ROSSO
+[17:23:38]:: Importate immagini di 14999
+[17:23:41]:: Importate immagini di 1750-35-SELLA
+[17:23:44]:: Importate immagini di 1750-36-SELLA
+[17:23:49]:: Importate immagini di 1750-37-SELLA
+[17:23:52]:: Importate immagini di 1750-38-SELLA
+[17:23:55]:: Importate immagini di 1750-39-SELLA
+[17:23:56]:: Importate immagini di 1750-40-SELLA
+[17:23:58]:: Importate immagini di 1750-41-SELLA
+[17:24:00]:: Importate immagini di 1750
+[17:24:06]:: Importate immagini di 1850-36-NERO
+[17:24:11]:: Importate immagini di 1850-37-BORDEAUX
+[17:24:19]:: Importate immagini di 1850-37-NERO
+[17:24:23]:: Importate immagini di 1850-38-BORDEAUX
+[17:24:28]:: Importate immagini di 1850-38-NERO
+[17:24:32]:: Importate immagini di 1850-39-BORDEAUX
+[17:24:38]:: Importate immagini di 1850-39-NERO
+[17:24:42]:: Importate immagini di 1850-40-BORDEAUX
+[17:24:47]:: Importate immagini di 1850-40-NERO
+[17:24:51]:: Importate immagini di 1850-41-BORDEAUX
+[17:24:57]:: Importate immagini di 1850-41-NERO
+[17:25:01]:: Importate immagini di 1850
+[17:25:22]:: Importate immagini di 1890-37-BORDEAUX
+[17:25:38]:: Importate immagini di 1890-39-BORDEAUX
+[17:25:38]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:22:44                                          |
+|END                                               | 17:25:38                                          |
+|DURATION                                          | 2.9 minuti                                        |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 77                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:26:10]:: inizio lettura CSV
+[17:26:10]:: fine lettura CSV
+[17:26:10]:: inizio creazione immagini
+[17:26:13]:: Importate immagini di 1890-39-NERO
+[17:26:28]:: Importate immagini di 1890-40-BORDEAUX
+[17:26:34]:: Importate immagini di 1890-40-NERO
+[17:26:37]:: Importate immagini di 1890-41-NERO
+[17:26:40]:: Importate immagini di 1890
+[17:26:42]:: Importate immagini di 1891-38-DORATO
+[17:26:48]:: Importate immagini di 1891-38-NERO
+[17:26:49]:: Importate immagini di 1891-39-DORATO
+[17:26:50]:: Importate immagini di 1891
+[17:27:11]:: Importate immagini di 1972-36-NERO
+[17:27:24]:: Importate immagini di 1972-37-NERO
+[17:27:39]:: Importate immagini di 1972-39-NERO
+[17:27:57]:: Importate immagini di 1972-40-BORDEAUX
+[17:28:10]:: Importate immagini di 1972-40-NERO
+[17:28:25]:: Importate immagini di 1972-41-NERO
+[17:28:38]:: Importate immagini di 1972-38-BORDEAUX
+[17:28:52]:: Importate immagini di 1972-40-BORDEAUX
+[17:29:08]:: Importate immagini di 1972
+[17:29:14]:: Importate immagini di 2311-36-BLU
+[17:29:17]:: Importate immagini di 2311-37-BLU
+[17:29:20]:: Importate immagini di 2311-37-BORDEAUX
+[17:29:27]:: Importate immagini di 2311-37-NERO
+[17:29:30]:: Importate immagini di 2311-38-BLU
+[17:29:32]:: Importate immagini di 2311-38-BORDEAUX
+[17:29:37]:: Importate immagini di 2311-39-BLU
+[17:29:41]:: Importate immagini di 2311-39-BORDEAUX
+[17:29:46]:: Importate immagini di 2311-39-NERO
+[17:29:50]:: Importate immagini di 2311-40-BLU
+[17:29:53]:: Importate immagini di 2311-40-BORRDEAUX
+[17:29:58]:: Importate immagini di 2311-40-NERO
+[17:30:04]:: Importate immagini di 2311-41-BLU
+[17:30:07]:: Importate immagini di 2311-41-BORDEAUX
+[17:30:12]:: Importate immagini di 2311-36-NERO
+[17:30:18]:: Importate immagini di 2311
+[17:30:22]:: Importate immagini di 7733--38-GRIGIO
+[17:30:29]:: Importate immagini di 7733-37-GRIGIO
+[17:30:33]:: Importate immagini di 7733-39-GRIGIO
+[17:30:39]:: Importate immagini di 7733-40-GRIGIO
+[17:30:42]:: Importate immagini di 7733-41-GRIGIO
+[17:30:48]:: Importate immagini di 7733
+[17:30:49]:: Importate immagini di 8333-35-NERO
+[17:30:51]:: Importate immagini di 8333-35-ROSSO
+[17:30:52]:: Importate immagini di 8333-35-VERDE
+[17:30:56]:: Importate immagini di 8333-36-NERO
+[17:30:58]:: Importate immagini di 8333-36-ROSSO
+[17:30:59]:: Importate immagini di 8333-36-VERDE
+[17:31:02]:: Importate immagini di 8333-37-NERO
+[17:31:03]:: Importate immagini di 8333-37-ROSSO
+[17:31:05]:: Importate immagini di 8333-37-VERDE
+[17:31:08]:: Importate immagini di 8333-38-NERO
+[17:31:10]:: Importate immagini di 8333-38-ROSSO
+[17:31:10]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:26:10                                          |
+|END                                               | 17:31:10                                          |
+|DURATION                                          | 5 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 96                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:32:27]:: inizio lettura CSV
+[17:32:27]:: fine lettura CSV
+[17:32:27]:: inizio creazione immagini
+[17:32:28]:: Importate immagini di 8333-38-VERDE
+[17:32:31]:: Importate immagini di 8333-39-NERO
+[17:32:33]:: Importate immagini di 8333-39-ROSSO
+[17:32:35]:: Importate immagini di 8333-39-VERDE
+[17:32:39]:: Importate immagini di 8333-40-NERO
+[17:32:41]:: Importate immagini di 8333-40-ROSSO
+[17:32:43]:: Importate immagini di 8333-40-VERDE
+[17:32:47]:: Importate immagini di 8333-41-NERO
+[17:32:50]:: Importate immagini di 8333-41-ROSSO
+[17:32:52]:: Importate immagini di 8333-41-VERDE
+[17:32:57]:: Importate immagini di 8333
+[17:33:12]:: Importate immagini di APR5370-38-NERO
+[17:33:22]:: Importate immagini di APR5370-39-NERO
+[17:33:32]:: Importate immagini di APR5370
+[17:34:28]:: Importate immagini di CLU5750-35-NERO
+[17:35:07]:: Importate immagini di CLU5750-36-NERO
+[17:35:48]:: Importate immagini di CLU5750-37-NERO
+[17:36:25]:: Importate immagini di CLU5750-39-NERO
+[17:37:01]:: Importate immagini di CLU5750-40-NERO
+[17:37:38]:: Importate immagini di CLU5750-41-NERO
+[17:38:10]:: Importate immagini di CLU5750
+[17:38:17]:: Importate immagini di CLU5753-35-MARRONE
+[17:38:24]:: Importate immagini di CLU5753-36-MARRONE
+[17:38:29]:: Importate immagini di CLU5753-37-MARRONE
+[17:43:14]:: inizio lettura CSV
+[17:43:14]:: fine lettura CSV
+[17:43:14]:: inizio creazione immagini
+[17:43:19]:: Importate immagini di CLU5753-38-MARRONE
+[17:43:28]:: Importate immagini di CLU5753-39-MARRONE
+[17:43:35]:: Importate immagini di CLU5753-40-MARRONE
+[17:43:43]:: Importate immagini di CLU5753-41-MARRONE
+[17:43:50]:: Importate immagini di CLU5753
+[17:43:52]:: Importate immagini di CLU5754-37-NERO
+[17:43:54]:: Importate immagini di CLU5754
+[17:44:02]:: Importate immagini di CLU5756-36-NERO
+[17:44:07]:: Importate immagini di CLU5756-37-NERO
+[17:44:14]:: Importate immagini di CLU5756-38-NERO
+[17:44:21]:: Importate immagini di CLU5756-39-NERO
+[17:44:27]:: Importate immagini di CLU5756-40-NERO
+[17:44:34]:: Importate immagini di CLU5756-41-NERO
+[17:44:41]:: Importate immagini di CLU5756
+[17:45:31]:: Importate immagini di CLU5761-36-MARRONE
+[17:46:06]:: Importate immagini di CLU5761-37-MARRONE
+[17:46:42]:: Importate immagini di CLU5761-38-MARRONE
+[17:47:18]:: Importate immagini di CLU5761-39-MARRONE
+[17:47:54]:: Importate immagini di CLU5761-40-MARRONE
+[17:48:33]:: Importate immagini di CLU5761
+[17:49:00]:: Importate immagini di CLU5762-35-MARRONE
+[17:49:19]:: Importate immagini di CLU5762-36-MARRONE
+[17:49:36]:: Importate immagini di CLU5762-37-MARRONE
+[17:49:57]:: Importate immagini di CLU5762-38-MARRONE
+[17:50:17]:: Importate immagini di CLU5762-39-MARRONE
+[17:50:37]:: Importate immagini di CLU5762-40-MARRONE

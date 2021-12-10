@@ -1,0 +1,22 @@
+{% extends "layouts/base_form.htm" %}
+
+{% block page_title %}
+Galleria Immagini
+{% endblock %}
+
+
+{% block content %}
+
+{% import "macro/form.htm" as form %}
+
+{{ form.build(dataform.id) }}
+{{ form.buildCol(dataform.name,'col-md-12') }}
+{{ form.buildCol(dataform.slug,'col-md-12') }}
+{{ form.buildCol(dataform.description_short,'col-md-12') }}
+{{ form.buildCol(dataform.description,'col-md-12') }}
+{{ form.buildCol(dataform.order_view,'col-md-6') }}
+{{ form.buildCol(dataform.visibility,'col-md-6') }}
+
+
+
+{% endblock %}

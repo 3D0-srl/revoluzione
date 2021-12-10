@@ -1,0 +1,14 @@
+{% extends "layouts/base_form.htm" %}
+
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{ form.build(dataform.id) }}
+{{ form.buildCol(dataform.name) }}
+{{ form.buildCol(dataform.description) }}
+{{ form.buildUploadImage(dataform.image) }}
+{{ form.build(dataform.photo_gallery_id) }}
+
+
+{% endblock %}

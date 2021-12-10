@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>5349</id>
+		<author>Luca Giaquinto</author>
+		<name>Widget Slider Products</name>
+		<permission>superadmin</permission>
+		<tag>widget_slider_products</tag>
+		<kind>catalog</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette di creare slider di prodotti per il pagecomposer]]></description> 
+   </info>
+   <widget> 
+		<name>Widget Slider Products</name>
+		<function>WidgetSliderProductsComponent</function>
+		<repeatable>1</repeatable>
+		<url_conf>index.php?ctrl=Conf&amp;mod=widget_slider_products</url_conf>
+	</widget>
+
+	 <!--<widget> 
+		<name>Slider Product Tag</name>
+		<function>widget_slider_tag</function>
+		<repeatable>1</repeatable>
+		<url_conf>index.php?action=edit</url_conf>
+	</widget>-->
+</module>

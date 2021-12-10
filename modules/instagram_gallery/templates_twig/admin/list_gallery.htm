@@ -1,0 +1,79 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Instagram Gallery {% endblock %} 
+
+{% block buttons_right %}	
+	<a href="{{script_url}}&action=update" class="btn btn-warning m-t-10"><i class="fa fa-refresh p-r-10"></i> {{tr('update')}}</a>
+	<a  href="{{script_url}}&action=setting" class="btn btn-primary m-t-10"><i class="fa fa-cog p-r-10"></i> {{tr('setting')}}</a>
+{% endblock %}
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+								<th style="min-width:70px"></th>
+								
+								
+								<th>Testo</th>
+								<th>Tags</th>
+								<th>Data</th>
+								<th>Link</th>
+								<th class="text-center"></th>
+								
+								<th class="text-center">
+									<strong>{{tr('actions')}}</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in list %}
+							<tr >
+								
+								<td><img class="imgprodlist" src="{{v.url_image}}" alt=""></td>
+								
+								
+								<td>{{v.text|raw}}</td>
+								<td>{% for t in v.tags %}<span>#{{t}} </span>{% endfor %}</td>
+								<td>{{v.created_time}}</td>
+								<td><a href="{{v.link}}" target="_blank" >{{v.link}}</a></td>
+								
+								
+								
+								<td class="text-center" id="status_{{v.id}}">
+								
+								{% if v.visibility == true %}
+									<span class="label label-success" style="cursor:pointer;" onclick="change_status_image_instagram({{v.id}},'product'); return false;">ONLINE</span>
+								{% else %}
+									<span class="label label-danger" style="cursor:pointer;" onclick="change_status_image_instagram({{v.id}},'product'); return false;">OFFLINE</span>
+								{% endif %}
+								</td>
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+										  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+										  </ul>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+{% endblock %}

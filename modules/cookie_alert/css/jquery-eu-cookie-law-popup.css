@@ -1,0 +1,141 @@
+.eupopup-container-block {
+	margin-top: -50px;
+	margin-left: -70px;
+	margin-right: -70px;
+	margin-bottom: 40px;
+	padding-top: 10px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.eupopup-container {
+	background-color: rgba(25, 25, 25, 0.9);
+	color: #efefef;
+	padding: 5px 20px;
+	font-size: 12px;
+	line-height: 1.2em;
+	text-align: center;
+	display: none;
+	z-index: 9999999;
+}
+
+.eupopup-container-top,
+.eupopup-container-fixedtop {
+	position: absolute;
+	top: 0; left: 0; right: 0;
+}
+
+.eupopup-container-fixedtop {
+	position: fixed;
+}
+/*
+.eupopup-container-bottom {
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
+}*/
+.eupopup-container-bottom {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 0;
+    padding: 30px 15px;
+    background: #fff;
+    border: 2px solid #E11F27;
+    width: 100%;
+    max-width: 230px;
+}
+
+.eupopup-container-bottomleft {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 300px;
+}
+
+.eupopup-container-bottomright {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 300px;
+}
+
+.eupopup-closebutton, .eupopup-closebutton:hover, .eupopup-closebutton:active, .eupopup-closebutton:focus {
+	font-size: 16px;
+    font-weight: 100;
+    line-height: 1;
+    color: #545253;
+    filter: alpha(opacity=20);
+    position: absolute;
+    font-family: helvetica, arial, verdana, sans-serif;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+	text-decoration: none;
+}
+
+/*
+.eupopup-head {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 7px;
+	color: #fff;
+}
+.eupopup-body {
+	color: #a2a2a2;
+}
+*/
+.eupopup-head {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 7px;
+    color: #333;
+    display: none;
+}
+
+.eupopup-body {
+    color: #545253;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.eupopup-body p {
+    margin: 0 !important;
+	line-height: 1.2em;
+}
+.eupopup-buttons {
+	padding: 0;
+	margin: 0 10px;
+}
+
+.eupopup-button_1, .eupopup-button_1:hover, .eupopup-button_1:focus, .eupopup-button_1:active {
+    color: #666;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.eupopup-button_2, .eupopup-button_2:active, .eupopup-button_2:focus, .eupopup-button_2:hover {
+	color: #666;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.eupopup-button {
+	margin: 0 10px;
+}
+
+.eupopup-button:hover,
+.eupopup-button:focus {
+	text-decoration: underline;
+}
+
+body .eupopup-color-inverse {
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+body .eupopup-color-inverse .eupopup-head {
+	color: #000;
+}

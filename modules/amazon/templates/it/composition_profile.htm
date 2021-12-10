@@ -1,0 +1,194 @@
+<style>
+	#composition_profile {
+		padding: 8px;
+		font-size:12px !important;
+	}
+	.composition_profile .composition_profile_control{
+		
+		padding: 2px 10px !important;
+		font-size: 12px !important;
+	}
+	.original_name_amazon{
+		font-size:10px;
+		color: #666666;
+	}
+	.form-group {
+		margin-bottom: 0px !important;
+	}
+	.required{
+		border: 1px solid red;
+	}
+</style>
+
+<flexy:toJavascript flexy:prefix="js_"
+	composition_themes="composition_themes"
+>
+
+<div flexy:ignore class="col-md-12">
+	<hr flexy:if="themes"></hr>
+	<div class="form-group" id="div_sandbox" flexy:if="themes">
+		<label><b>Combinazione variazioni</b></label>
+		<select class="form-control composition_profile_control" id="attribute_set_profile">
+			<option value="0">Seleziona...</option>
+			<option flexy:foreach="themes,k,v" value="{k}">{v}</option>
+		</select>
+	</div>
+
+	<span id="attributi_selezionati" class="clearfix">
+
+	</span>
+
+	
+	<hr flexy:if="type_attributes"></hr>
+	<h3 flexy:if="type_attributes" style="text-align:center;">Attributi di <b>{type_product}</b></h3>
+	<span id="attribute_type_product">
+	<div class="col-md-6 wrapp_attribute" style="padding:0px;" flexy:foreach="type_attributes,v" id="cont_{v[name]}" id_parent="attribute_type_product">
+
+		<div class="form-group col-md-6 composition_profile" id="div_{v[name]}" style="padding:0px;">
+			<label><b>{v[label]:h}</b> <span class="original_name_amazon">({v[name]})</span> <span flexy:if="uguale(v[required],#1#)" class="label label-danger">Richiesto</span> <span flexy:if="uguale(v[variation],#1#)" class="label label-default">Variazione</span> :</label>
+			<select class="form-control composition_profile_control select_attribute"  name="formdata[attribute_productType][{v[name]}]" onchange="change_value_attribute_profile($(this)); return false;">
+				<option flexy:foreach="aviableValues,k,v1" value="{k}" >{v1}</option>
+			</select>
+		</div>
+
+		<div class="form-group col-md-6 composition_profile composition_profile_default" id="div_{v[name]}_value" style="display:none">
+			<label>Valore di default:</label>
+			
+			{if:uguale(v[html_type],#input#)}
+				<input class="form-control composition_profile_control" name="formdata[attribute_custom][{v[name]}]" type="{v[type]}">
+			{else:}
+				<select class="form-control composition_profile_control" name="formdata[attribute_custom][{v[name]}]" flexy:ignore>
+					{foreach:v[values],k2,v2}
+					<option value="{k2}">
+						{v2}
+					</option>
+					{end:}
+				</select>
+
+
+			{end:}
+			
+		</div>
+		<div class="form-group col-md-6 composition_profile composition_profile_variation" id="div_{v[name]}_variation" style="display:none">
+			<label>Specifica variazione:</label>
+			<select class="form-control composition_profile_control" name="formdata[attribute_variation][{v[name]}]" flexy:ignore>
+				{foreach:select_attributi,k3,v3}
+				<option value="{k3}">
+					{v3}
+				</option>
+				{end:}
+			</select>
+
+		</div>
+		<div class="form-group col-md-6 composition_profile composition_profile_attribute" id="div_{v[name]}_attribute" style="display:none">
+			<label>Specifica attributo:</label>
+			<select class="form-control composition_profile_control" name="formdata[attribute_attribute][{v[name]}]" flexy:ignore>
+				{foreach:select_advanced_filters,k3,v3}
+				<option value="{k3}">
+					{v3}
+				</option>
+				{end:}
+			</select>
+
+		</div>
+
+	</div>
+	</span>
+	<div class="clearfix" flexy:if="type_attributes"></div>
+	<hr></hr>
+	<h3 style="text-align:center;">Attributi <b>Universo</b></h3>
+	<span id="attribute_universe">
+	<div class="col-md-6 wrapp_attribute" style="padding:0px;" flexy:foreach="general_attributes,v" id="cont_{v[name]}" id_parent="attribute_type_product">
+
+		<div class="form-group col-md-6 composition_profile" id="div_{v[name]}" style="padding:0px;">
+			<label><b>{v[label]:h}</b> <span class="original_name_amazon">({v[name]})</span> <span flexy:if="uguale(v[required],#1#)" class="label label-danger">Richiesto</span> <span flexy:if="uguale(v[variation],#1#)" class="label label-default">Variazione</span> :</label>
+			<select class="form-control composition_profile_control select_attribute" name="formdata[attribute_universe][{v[name]}]" onchange="change_value_attribute_profile($(this)); return false;">
+				<option flexy:foreach="aviableValues,k,v1" value="{k}" >{v1}</option>
+			</select>
+			
+			<!--<select class="form-control composition_profile_control" onchange="change_value_attribute_profile($(this)); return false;">
+				<option flexy:foreach="dati[aviableValues],k,v" value="{k}" >{v}</option>
+			</select>-->
+		</div>
+
+		<div class="form-group col-md-6 composition_profile composition_profile_default" id="div_{v[name]}_value" style="display:none">
+			<label>Valore di default:</label>
+			
+			{if:uguale(v[html_type],#input#)}
+				<input class="form-control composition_profile_control" name="formdata[attribute_custom][{v[name]}]" type="{v[type]}">
+			{else:}
+				<select class="form-control composition_profile_control" name="formdata[attribute_custom][{v[name]}]" flexy:ignore>
+					{foreach:v[values],k2,v2}
+					<option value="{k2}">
+						{v2}
+					</option>
+					{end:}
+				</select>
+
+			{end:}
+			
+		</div>
+		<div class="form-group col-md-6 composition_profile composition_profile_variation" id="div_{v[name]}_variation" style="display:none">
+			<label>Specifica variazione:</label>
+			<select class="form-control composition_profile_control" name="formdata[attribute_variation][{v[name]}]" flexy:ignore>
+				{foreach:select_attributi,k3,v3}
+				<option value="{k3}">
+					{v3}
+				</option>
+				{end:}
+			</select>
+
+		</div>
+
+		<div class="form-group col-md-6 composition_profile composition_profile_attribute" id="div_{v[name]}_attribute" style="display:none">
+			<label>Specifica attributo:</label>
+			<select class="form-control composition_profile_control" name="formdata[attribute_attribute][{v[name]}]" flexy:ignore>
+				{foreach:select_advanced_filters,k3,v3}
+				<option value="{k3}">
+					{v3}
+				</option>
+				{end:}
+			</select>
+
+		</div>
+
+
+	</div>
+	</span>
+
+</div>
+
+
+<script>
+	composition_themes = [];
+	if( typeof js_composition_themes != 'undefined' && js_composition_themes != null ){
+		//for( k in js_composition_themes ){
+			composition_themes = js_composition_themes;
+			$('#attribute_set_profile').on('change',function(){
+				
+				$('.select_attribute').each(function(){
+					$(this).removeClass('required');
+				});
+				$('#attributi_selezionati').find('.wrapp_attribute').each(function(){
+					var container = $(this).attr('id_parent');
+					$(this).appendTo('#'+container);
+
+				});
+
+				for( var t in composition_themes[$(this).val()]){
+						$('#cont_'+composition_themes[$(this).val()][t]).appendTo('#attributi_selezionati');
+						//alert(composition_themes[$(this).val()][t]);
+				}
+				$('#attributi_selezionati').find('.select_attribute').each(function(){
+					$(this).addClass('required');
+				});
+				
+
+				//alert($(this).val());
+				/*for( var t in composition_themes[$(this).val()] ){
+						alert(composition_themes[$(this).val());
+				}*/
+			});
+		//}
+	}
+</script>

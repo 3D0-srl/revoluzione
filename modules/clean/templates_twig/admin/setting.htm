@@ -1,0 +1,39 @@
+{% extends "layouts/setting_module.htm" %}
+{% block page_title %} Clean {% endblock %} 
+{% block content %}
+
+
+		{% for key,mod in modules %}
+		<form method="POST" action="index.php">
+		<div class="panel panel-primary">
+			
+			<div class="panel-heading">
+				{{mod.name}}
+			</div>
+			<div class="panel-body">
+				<div class="col-md-12 well">
+					{% for k,v in mod.entities %}
+					<input type="checkbox"  name="formdata[values][]" value="{{k}}"> {{v}}<br>
+					{% endfor %}
+
+				</div>
+
+			</div>
+			<div class="panel-footer pull-right">
+				<button class="btn btn-primary" type="button" onclick="confirm_clean($(this)); return false;">Esegui</button>
+			</div>
+		</div>
+		<input type="hidden" name="action" value="delete">
+		<input type="hidden" name="module" value="{{key}}">
+		<input type="hidden" name="mod" value="clean">
+		</form>
+		{% endfor %}
+
+
+
+	
+
+
+
+
+{% endblock %}

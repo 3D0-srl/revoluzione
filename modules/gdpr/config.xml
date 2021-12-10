@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>522</id>
+		<author>Ciro Napolitano</author>
+		<name>GDPR</name>
+		<permission>superadmin</permission>
+		<tag>gdpr</tag>
+		<kind>cms</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo rende il sito compatibile con la regolamentazione europea <b>GDPR</b>]]></description> 
+   </info>
+
+   <menu> 
+		<scope>admin</scope>
+		<header>	
+			<locale> 
+				<name>	
+					<it>Log</it> 
+					<en>Log</en>
+				</name>
+			</locale>
+			<tag>gdpr_log</tag>
+			<icon>fa fa-exclamation</icon>
+			<priority>101</priority> 
+			<permission>cms</permission> 
+			<url>index.php?mod=gdpr</url>
+		</header>
+	</menu>
+
+	 <menu> 
+		<scope>frontend</scope>
+		<header>	
+			<locale> 
+				<name>	
+					<it>GDPR</it> 
+					<en>GDPR</en>
+				</name>
+			</locale>
+			<tag>gdpr</tag>
+			<iconImg>modules/gdpr/images/ico-gdpr-menu-backend.png</iconImg> 
+			<priority>101</priority> 
+			<permission>base</permission> 
+			<url>index.php?mod=gdpr</url>
+		</header>
+	</menu>
+
+	 <linkSetting>
+		index.php?mod=gdpr&amp;ctrl=Conf	
+   </linkSetting>
+  
+</module>

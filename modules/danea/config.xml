@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>1569</id>
+		<author>Ciro Napolitano</author>
+		<name>Danea EasyFatt</name>
+		<permission>superadmin</permission>
+		<tag>danea</tag>
+		<kind>ecommerce</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Abilita la sincronizzazione con il gestionale Danea EasyFatt]]></description> 
+   </info>
+    <linkSetting>index.php?ctrl=Conf&amp;mod=danea</linkSetting>
+</module>

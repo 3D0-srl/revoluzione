@@ -1,0 +1,90 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Coupons {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.force-table-responsive {
+    border: 0;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    max-width: none !important;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+								<tr>
+									<th style="min-width:70px"><strong>ID</strong></th>
+									<th><strong>Coupon</strong></th>
+									<th><strong>Tipologia</strong></th>
+									<th><strong>Valore</strong></th>
+									<th><strong>Soglia minima</strong></th>
+									<th><strong>Data di scadenza</strong></th>
+									<th><strong>Riutilizzabile</strong></th>
+									<th><strong>Limite</strong></th>
+									<th><strong>Usato</strong></th>
+									
+									<th class="text-center" style="min-width:170px">
+										<strong>Azioni</strong>
+									</th>
+								</tr>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in list %}
+							<tr >
+								
+								<td>{{v.id}}</td>
+								<td>{{v.name}}</td>
+								<td>{{v.discount_type}}</td>
+								<td>{{v.discount_value}} </td>
+								<td>{{formattanumero(v.min_level)}}</td>
+								<td>{{v.expiry_date}}</td>
+								<td>{% if v.multiple_use %}SI{% else %}NO{% endif %}</td>
+								<td>{{v.limit|raw}}</td>
+								<td>
+								
+								{% if v.multiple_use %}
+									{% if v.used %}SI{% else %}NO{% endif %}
+								{% endif %}
+								</td>
+								
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+										  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i>{{tr('duplicate')}}</a></li>
+											<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+										  </ul>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+
+{% endblock %}

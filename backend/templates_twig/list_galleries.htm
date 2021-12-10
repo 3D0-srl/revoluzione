@@ -1,0 +1,184 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('galleries')|title}} {% endblock %} 
+{% block css %}
+{{parent()}}
+<style>
+.panel-body .thmb:nth-child(2)
+{
+	padding:20px;
+	position:static !important;
+	padding-bottom:0px !important;
+}
+.space10
+{
+	display:block;
+	clear:both;
+	height:10px;
+	width:100%;
+}
+.fixvisible
+{
+	position: absolute;
+	top: -2px !important;
+	right: 14px !important;
+}
+.panel-group .panel {
+	overflow: visible !important;
+}
+.fixvisible .dropdown-menu {
+	left: -109px !important;
+}
+
+.btn{height: 25px;}
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="panel-content">
+	<div class="row media-manager">
+                    
+		<div class="margin-bottom-30"></div>
+		<div class="col-sm-9">
+			<div class="gallery row" >
+				{% for v in imageGallery %}
+				<div class="mix gallery{{v.gallery}} gallery_general col-xs-6 col-sm-4 col-md-3" >
+					<div class="btn-group media-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu media-menu" role="menu">
+							<li><a href="#" onclick="mod_image_gallery({{v.id}}); return false;"><i class="fa fa-pencil"></i> Modifica</a>
+							</li>
+							<li><a href="#"><i class="fa fa-download"></i> Download</a>
+							</li>
+							<li><a href="#" onclick="elimina_immagine_gallery({{v.id}},$(this)); return false;"><i class="fa fa-trash-o"></i> Elimina</a>
+							</li>
+						</ul>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="thmb">
+								<div class="thmb-prev">
+									<img src="{{v.getUrlImage()}}" class="img-responsive" alt="">
+								</div>
+								<h5 class="media-title"><a href="">{{v.infoImage.filename_original}}</a></h5>
+								<small class="text-muted pull-right">{{v.infoImage.date_insert}}</small>
+							</div>
+							<div class="clearfix thmb" id="modifica_{{v.id}}" style="display:none; z-index:99999;  position:absolute; margin-left:0px; background:#fff; width:100%;">
+								<form method="/admin/content.php" id="form_{{v.id}}">
+									<div class="space10"></div>
+									<div class="form-group">
+										<div class="controls">
+											<input type="text" class="form-control " name="formdata[orderView]" placeholder="ordine visualizzazione" value="{{v.get('orderView')}}">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="controls">
+											<input type="text" class="form-control " name="formdata[name_it]" placeholder="Nome immagine" value="{{v.get('name')}}">
+										</div>
+									</div>
+									
+
+									<div class="form-group">
+										<div class="controls">
+											<textarea type="text" class="form-control " name="formdata[description]" placeholder="Descrizione" >{{v.get('description')}}</textarea>
+										</div>
+									</div>
+									
+									 <div class="col-md-12 m-t-20 m-b-40 align-center">
+										<button type="submit"  class="btn btn-danger btn-sm m-t-10" onclick="save_image_gallery({{v.id}}); return false;" onclick="mod_image_gallery({{v.id}}); return false;"><i class="fa  fa-times-circle"></i> Annulla</button>
+										<button type="submit"  class="btn btn-success btn-sm m-t-10" onclick="save_image_gallery({{v.id}}); return false;"><i class="fa fa-save"></i> Salva</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			   {% endfor %}
+			</div>
+			
+		</div>
+		<div class="col-sm-3 media-menu">
+			<div class="m-b-10">
+				<strong>Album</strong> 
+				<a href="/admin/content.php?action=add_fotogallery" class="pull-right c-gray w-600">+ Nuova Galleria </a>
+			</div>
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<span class="glyphicon glyphicon-camera">
+							</span>Gallerie
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<table class="table">
+								 {% for g in gallery %}
+								<tr>
+									<td>
+										<div style="position:relative;">
+											<a class="filter" data-filter=".gallery{{g.id}}" href="#">{{g.get('name')}}</a> 
+											<div class="btn-group media-group fixvisible" style="display:block !important;">
+												<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu media-menu" role="menu">
+													<li><a class="prevent" href="{{url_edit}}&id={{g.id}}"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+													</li>
+													<li><a class="prevent" href="#" onclick="uploadImageGallery({{g.id}}); return false;"><i class="fa fa-upload"></i> Upload</a>
+													</li>
+													<li><a class="prevent" href="{{url_confirm_delete}}&id={{g.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								{% endfor %}
+							   
+							</table>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$(".prevent").click(function(event){
+		event.stopPropagation();
+	});
+	if ($('.gallery').length && $.fn.mixItUp) {
+		$('.gallery').each(function () {
+
+			$(this).mixItUp({
+				animation: {
+					enable: false       
+				},
+				callbacks: {
+					onMixLoad: function(){
+						$('.mix').hide();
+						$(this).mixItUp('setOptions', {
+							animation: {
+								enable: true,
+								effects: "fade", 
+							},
+						});
+						$(window).bind("load", function() {
+						   $('.mix').fadeIn();
+						});
+					}
+				}
+			});
+
+
+		});
+	}
+});
+</script>
+{% endblock %}

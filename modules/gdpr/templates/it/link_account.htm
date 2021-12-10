@@ -1,0 +1,33 @@
+<style>
+.menu-utente a.miei-indirizzi,
+.menu-utente a.miei-indirizzi:hover,
+.menu-utente a.miei-indirizzi:focus,
+.menu-utente a.miei-indirizzi:active {
+	background: url('/modules/gdpr/images/ico_indirizzi.png') 15px center no-repeat;
+}
+
+.menu-utente a.miei-autorizzazioni,
+.menu-utente a.miei-autorizzazioni:hover,
+.menu-utente a.miei-autorizzazioni:focus,
+.menu-utente a.miei-autorizzazioni:active {
+	background: url('/modules/gdpr/images/ico_autorizzazioni.png') 15px center no-repeat;
+}
+
+.menu-utente a.rimuovi-account,
+.menu-utente a.rimuovi-account:hover,
+.menu-utente a.rimuovi-account:focus,
+.menu-utente a.rimuovi-account:active {
+	background: url('/modules/gdpr/images/ico_rimuovi_account.png') 15px center no-repeat;
+}
+
+.menu-utente a.gestisci-account, 
+.menu-utente a.gestisci-account:hover, 
+.menu-utente a.gestisci-account:focus, 
+.menu-utente a.gestisci-account:active {
+    background: url('/modules/gdpr/images/ico_gestisci_account.png') no-repeat 15px center / 40px auto;
+}
+</style>
+
+<li flexy:if="address"><a class="miei-indirizzi" href="/modules/gdpr/index.php?action=address">I miei Indirizzi</a></li>
+<li><a class="miei-autorizzazioni" href="/modules/gdpr/index.php?action=auth">Autorizzazioni</a></li>
+<li><a class="gestisci-account" href="/modules/gdpr/index.php?action=destroy">Gestisci account</a></li>

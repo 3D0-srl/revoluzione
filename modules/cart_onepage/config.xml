@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+	 <!--Informazioni del modulo-->
+	<info> 
+		<id>917</id>
+		<author>Ciro Napolitano</author>
+		<name>Carrello One Page</name>
+		<permission>superadmin</permission>
+		<version>2</version>
+		<tag>cart_onepage</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<description><![CDATA[Gestione del checkout in un unica pagina]]></description> 
+   </info>
+	<!--Creazione dei link nel menu laterale del backend-->
+</module>

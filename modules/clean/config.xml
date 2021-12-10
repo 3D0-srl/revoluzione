@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>219</id>
+		<author>Ciro</author>
+		<name>Clean</name>
+		<permission>superadmin</permission>
+		<version>2</version>
+		<tag>clean</tag>
+		<kind>cms</kind>
+		<scope>admin</scope> 
+		<description><![CDATA[Permette di resettare alcuni valori del CMS]]></description> 
+   </info>
+	<linkSetting>index.php?mod=clean</linkSetting>
+</module>

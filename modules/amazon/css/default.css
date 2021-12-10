@@ -1,0 +1,10 @@
+.profile-select{
+	position:absolute;
+	right:30px;
+	
+}
+
+.jstree-anchor{
+	position:relative !important;
+	width: 100% !important;
+}

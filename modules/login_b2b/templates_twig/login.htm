@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>{setting[info][nomesito]} - Login</title>
+	<link href="modules/login_b2b/css/animate.min.css" rel="stylesheet">
+	<link href="modules/login_b2b/css/style.css" rel="stylesheet">
+	<script src="plugins/bootstrap-loading/lada.min.js"></script>
+	<script src="modules/login_b2b/js/script.js"></script>
+	<script>
+		var js_return_url = "{{return_url|escape('js')}}";
+	</script>
+	
+	
+</head>
+
+<body class="log">
+<div class="box-log">
+	<div class="logo">
+		<div class="relative">
+			<a href="index.php"></a>
+		</div>
+
+		<div class="relative marion">
+			<!--{output_page_content(#logo_marion#)}-->
+		</div>
+	</div>
+
+	<span class="errore">{{errore}}</span>
+	<form id="form_login">
+		<input type="text" placeholder="Username" name="formdata[username]" id="login_b2b_username">
+
+		<input type="password" placeholder="Password" name="formdata[password]" id="login_b2b_password">
+
+		<button type="button" class="pulsante-arancio-pieno" id="submit-login">{{tr('accedi','login_b2b2')}}</button>
+
+		<input type="hidden" name="action" value="login">
+		{% if show_lost_pass %}
+		<a class="lost-pwd" href="?action=lost_pwd">{tr('forgot_password','login_b2b2')}</a>
+		{% endif %}
+	</form>
+</div>

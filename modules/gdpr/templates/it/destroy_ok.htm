@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     {metatags()}
+
+    <title>Area utente | {setting[info][nomesito]}</title>
+	   
+    {output(#css.htm#)}
+	<link rel="stylesheet" href="css/address.css">
+	{output(#javascript.htm#)}
+	<script src="js/script.js"></script>
+    <style>
+
+	
+
+	</style>
+
+</head>
+
+<body id="userarea">
+
+    <!-- Navigation -->
+     {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+           <!--<div class="col-md-3">
+				{output(#colonna_sinistra_utente.htm#)}
+			</div>!-->
+
+			<div class="space40"></div>
+			<div class="bread_crumbs_userarea">
+				<a href="/account/home.htm">Il mio account</a><i class="fa fa-angle-right"></i>
+				<a class="active" href="#">Account rimosso</a>
+				<div class="right">
+					<a href="javascript: window.history.go(-1)" class="indietro"><i class="fa fa-arrow-left"></i> Indietro</a>
+				</div>
+			</div>
+			<div class="space20"></div>
+
+            <div class="col-xs-12 col-md-12 col-lg-12">
+				<h1 class="tal">Account rimosso</h1>
+				
+				<p>I tuoi dati sono stati cancellati dalla piattaforma</p>
+					
+
+				
+
+					
+
+				
+				
+				<div cass="space20"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+	{output(#footer.htm#)}
+
+
+
+</body>
+
+</html>

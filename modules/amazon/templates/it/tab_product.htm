@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/modules/amazon/css/product.css?v=10"/>
+<div class="tab-pane fade in" id="product_amazon">
+		<div class="row">
+		        
+				<div class="col-md-12">
+				{foreach:tabs,k,v}
+				<div class="account_amazon" index="{k}">{v[name]}</div>
+				{end:}
+								  
+				</div>
+		</div>
+		{foreach:tabs,k,v}
+		<div class="row m-t-10 box_account_amazon" id="box_amazon_{k}" style="display:none">			
+			<div class="col-md-12">
+				{foreach:v[markets],m}
+				<div class="account_market_amazon" account="{v[id]}" market="{m[name]}">
+						
+						<img src="/modules/amazon/images/{m[img]}"/>
+				   </div>
+				{end:}
+				   				  
+				   				
+			</div>
+		</div>
+		{end:}
+		
+		{foreach:tabs,k,v}
+		{foreach:v[markets],m}
+		<div class="row m-t-10 box_market_amazon box_market_amazon_{v[id]}_{m[name]}" style="display:none">			
+				   
+				
+				
+						
+				<!--<div class="form-group form-inline col-md-3">
+						<label>Disabilita sincronizzazione :</label>
+						<div class="controls">
+							<div class="switch-toggle switch-off switch-animate switch-"><div><span class="switch-handle-on switch-success">SI</span><label>&nbsp;</label><span class="switch-handle-off switch-warning">NO</span><input name="formdata[modules][amazon][1][Italy][disable_sync]" value="1" class="switch" data-on-color="success" data-off-color="warning" data-on-text="SI" data-off-text="NO" type="checkbox"></div></div>			
+						</div>
+				</div>-->
+				<div class="form-group col-md-12" id="">
+						<label>Prezzo:</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{v[name]}][price]" type="text"/>
+						</div>
+				</div>
+		
+						
+				 
+		</div>
+		{end:}
+		{end:}
+				
+		
+</div>
+<script src="/modules/amazon/js/product.js?v=12"></script>
+   

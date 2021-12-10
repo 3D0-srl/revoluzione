@@ -1,0 +1,13 @@
+<!-- CSS and JS for our code -->
+<flexy:toJavascript flexy:prefix="js_"
+		module_cookie_alert="module_cookie_alert"
+    >
+
+<link rel="stylesheet" type="text/css" href="/modules/cookie_alert/css/jquery-eu-cookie-law-popup.css"/>
+<script src="/modules/cookie_alert/js/jquery-eu-cookie-law-popup.js"></script>
+
+{if:uguale(module_cookie_alert[styleCompact],#1#)}
+<div class="eupopup eupopup-top eupopup-style-compact"></div>
+{else:}
+<div class="eupopup eupopup-top eupopup-style-default"></div>
+{end:}

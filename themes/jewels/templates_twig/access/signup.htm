@@ -1,0 +1,137 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+
+
+	<div class="container-small">
+		<h4 class="txtc">{{tr('Registrazione')}}</h4>
+		<form class="form" method="POST" action="index.php">
+			<span class="errore">{{messages|raw}}</span>
+			<h6 class="m-t-0">{{tr('Informazioni Account')}}</h6>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[username]">{{tr('Username')}}</label>
+						<input type="text" placeholder="" required name="formdata[username]" value="{{dataform.username.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[password]">{{tr('Password')}}</label>
+						<input type="password" placeholder="" required name="formdata[password]" value="{{dataform.password.value}}"> 
+					</div>
+				</div>
+
+				<input type='hidden' name='formdata[id]'>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[password]">{{tr('Tipo di utente')}}</label>
+						<select type="select" class="form-control" name="formdata[typeBuyer]">
+							{% for k,v in dataform.typeBuyer.options %}
+								<option value="{{k}}" {% if dataform.typeBuyer.value==k %}selected="selected"{% endif %}>{{v}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">	
+					<div class="controls">
+						<label for="formdata[password]">{{tr('Email')}}</label>
+						<input type="text" placeholder="" name="formdata[email]" value="{{dataform.email.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[shippingName]">{{tr('Nome')}}</label>
+						<input type="text" placeholder="" name="formdata[name]" value="{{dataform.name.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[shippingSurname]">{{tr('Cognome')}}</label>
+						<input type="text" placeholder="" name="formdata[surname]" value="{{dataform.surname.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[fiscalCode]">{{tr('Codice fiscale')}}</label>
+						<input type="text" placeholder="" name="formdata[fiscalCode]" value="{{dataform.fiscalCode.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[cellular]">{{tr('Cellulare')}}</label>
+						<input type="text" placeholder="Cellulare" name="formdata[cellular]" value="{{dataform.cellular.value}}">
+					</div>
+				</div>
+			</div>
+			<h6>Indirizzo predefinito</h6>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[address]">{{tr('Indirizzo')}}</label>
+						<input type="text" placeholder="" name="formdata[address]" value="{{dataform.address.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[city]">{{tr('Città')}}</label>
+						<input type="text" placeholder="" name="formdata[city]" value="{{dataform.city.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('Provincia')}}</label>
+						<select type="select" name="formdata[province]">
+							{% for k,v in dataform.province.options %}
+								<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('Nazione')}}</label>
+						<select type="select" onchange="change_country($(this).val(),1);return false;" name="formdata[country]">
+							{% for k,v in dataform.country.options %}
+								<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+			</div>
+			<h6>Dati fatturazione</h6>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[company]">{{tr('Ragione sociale')}}</label>
+						<input type="text" placeholder="" name="formdata[company]" value="{{dataform.company.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[vatNumber]">{{tr('Partita IVA')}}</label>
+						<input type="text" placeholder="" name="formdata[vatNumber]" value="{{dataform.vatNumber.value}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[company]">{{tr('Codice univoco')}}</label>
+						<input type="text" name="formdata[cod_univoco]" Placeholder="" value="{{dataform.cod_univoco.value}}">							
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label for="formdata[city]">{{tr('PEC')}}</label>
+						<input type="text" placeholder="" name="formdata[pec]" value="{{dataform.pec.value}}">
+					</div>
+				</div>
+			</div>
+			<div class="space30"></div>
+			<span id="fields_form_anchor"></span>
+			<input type='hidden' name='formID'>
+			<input type='hidden' name='ctrl' value="Access">
+			<input type='hidden' name='action' value="signup">
+			<button class="btn-default">{{tr('Registrati')}}</button>
+			<div class="space60"></div>
+		</form>
+	</div>
+{% endblock %}

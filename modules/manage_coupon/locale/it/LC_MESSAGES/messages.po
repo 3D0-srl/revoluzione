@@ -1,0 +1,29 @@
+msgid "coupon_scaduto"
+msgstr "Il coupon inserito è scaduto"
+
+msgid "coupon_greater"
+msgstr "Coupon non applicabile!<br> Lo sconto è superiore dell'importo del carrello"
+
+msgid "coupon_used"
+msgstr "Il coupon inserito è già stato utilizzato"
+
+msgid "cart_less_than"
+msgstr "Coupon non applicabile!<br>Il carrello deve essere superiore a %s euro"
+
+msgid "coupon_user_invalid"
+msgstr "Coupon non applicabile per la tua tipologia di utenza"
+
+msgid "coupon_ok"
+msgstr "Coupon inserito correttamente"
+
+
+msgid "duplicate_name"
+msgstr "Nome del coupon già utilizzato"
+
+
+msgid "coupon_not_valid"
+msgstr "Il coupon inserito non è valido"
+
+msgid "coupon_deleted"
+msgstr "Il coupon è stato rimosso"
+

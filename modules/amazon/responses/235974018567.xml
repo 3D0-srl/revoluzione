@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A195ABCOXNOCM6</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>235974018567</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>93</MessagesProcessed>
+				<MessagesSuccessful>0</MessagesSuccessful>
+				<MessagesWithError>93</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>1</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1_126486</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1244</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1244_U620QBC1006</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1245</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1245_U620QBC1006-40-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1246_U620QBC1006-41-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1249</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1249_U620QBC1006-44-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1250</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1250_U620QBC1006-45-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1251</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1251_U620QBC1006-46-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1253</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1253_U62D7FC0820-39-NAVY-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1254</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1254_U62D7FC0820-41-NAVY-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1256</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1256_U62D7FC0820-43-NAVY-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1259</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1259_U64W1FC7357</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1261</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1261_U64W1FC7357-40-DK. BURGUNDY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1262</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1262_U64W1FC7357-41-DK. BURGUNDY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1266</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1266_U64W1FC7357-45-DK. BURGUNDY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1267</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1267_U64W1FC7357-46-DK. BURGUNDY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1268</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1268_U743RAC9002</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1269</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1269_U743RAC9002-39-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1270</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1270_U743RAC9002-40-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1271</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1271_U743RAC9002-41-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1274</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1274_U743RAC9002-44-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1275</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1275_U743RAC9002-45-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1276</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1276_U743RAC9002-46-DK. GREY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1277</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1277_U823FDC4002</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1278</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1278_U823FDC4002-41-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1279</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1279_U823FDC4002-42-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1280</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1280_U823FDC4002-43-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1281</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1281_U823FDC4002-44-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1282</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1282_U823FDC4002-45-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1283</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1283_U823FDC4002-46-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1299</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1299_UBIK71016</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1300</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1300_UBIK71016-L-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1301</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1301_UBIK71016-L-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1302</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1302_UBIK71016-M-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1303</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1303_UBIK71016-M-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1304</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1304_UBIK71016-XL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1305</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1305_UBIK71016-XL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1306</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1306_UBIK71016-XXL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1307</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1307_UBIK71016-XXL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1308</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1308_UBIK71022</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1309</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1309_UBIK71022-L-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1310</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1310_UBIK71022-L-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1311</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1311_UBIK71022-M-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1312</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1312_UBIK71022-M-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1313</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1313_UBIK71022-XL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1314</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1314_UBIK71022-XL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1315</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1315_UBIK71022-XXL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1316</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1316_UBIK71022-XXL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1317</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1317_UBK71016</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1318</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1318_UBK71016-L- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1319</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1319_UBK71016-L-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1320</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1320_UBK71016-L-NAVY-RED</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1321</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1321_UBK71016-M- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1322</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1322_UBK71016-M-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1323</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1323_UBK71016B</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1324</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1324_UBK71016B-L-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1325</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1325_UBK71016B-XXL-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1326</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1326_UBK71022</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1327</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1327_UBK71022-L-FEDERAL BLU</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1328</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1328_UBK71022-L-NAVY-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1329</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1329_UIB05026G3</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1330</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1330_UIB05026G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1331</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1331_UIB05029G3</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1332</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1332_UIB05029G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1333</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1333_UPJ10009S</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1334</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1334_UPJ10009S-L-FEDERAL BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1335</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1335_UPJ10011S</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1336</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1336_UPJ10011S-L-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1337</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1337_UPJ300013S</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1338</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1338_UPJ300013S-L-GREY MEL.-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1339</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1339_UPJ3008S</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1340</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1340_UPJ3008S-L-NAVY-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>17</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>17_126497</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>18</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>18_126497-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>19</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>19_126497-36-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>2_126486-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>20</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>20_126497-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>21</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>21_126497-37-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>22</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>22_126497-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>23</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>23_126497-38-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>24</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>24_126497-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>25</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>25_126497-39-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>26</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>26_126497-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>27</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>27_126497-40-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>28</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>28_126497-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>29</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>29_126497-41-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3_126486-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>30</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>30_126497-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>4_126486-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5_126486-38-AJR</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6_126486-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7_126486-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8_126486-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9_126486-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>

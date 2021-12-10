@@ -1,0 +1,625 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Danea EasyFatt {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+<div class="col-md-12">
+	<div class="tabcordion">
+		<ul id="myTab" class="nav nav-tabs">
+			<li class="active"><a href="#general" data-toggle="tab">Generale</a></li>
+			<li class=""><a href="#import" data-toggle="tab">Importazione</a></li>
+			
+			<li><a href="#export" data-toggle="tab">Esportazione</a></li>
+		
+			
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade active in" id="general">
+				<div class="row">
+				
+					{{form.buildCol(dataform.enable_credentials,'col-md-12')}}
+					{{form.buildCol(dataform.username,'col-md-6')}}
+					{{form.buildCol(dataform.password,'col-md-6')}}
+					{{form.buildCol(dataform.default_tax,'col-md-12')}}
+					<div class="col-md-12">
+						
+						
+						
+
+						<label>Associazione tasse</label>
+						<table class="table table-bordered">
+							<thead>
+								<th>Tassa</th>
+								<th>Codice Danea</th>
+								<th></th>
+							</thead>
+							<tbody id="box_taxes">
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_tax(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</diV>
+			
+			<div class="tab-pane fade in" id="import">
+				<div class="row">
+					 
+
+
+
+
+
+					<div class="panel panel-primary">
+						<div class="panel-heading">Generale</div>
+						<div class="panel-body">
+						{{form.buildCol(dataform.map_barcode_field,'col-md-12')}}
+						{{form.buildCol(dataform.create_categories_on_import,'col-md-12')}}
+						{{form.buildCol(dataform.create_manufacturers_on_import,'col-md-12')}}
+						{{form.buildCol(dataform.create_variations_on_import,'col-md-12')}}
+						
+						
+						
+						
+						
+						</div>
+					</div>
+					
+					<div class="panel panel-primary">
+						<div class="panel-heading">Variazioni</div>
+						<div class="panel-body">
+							{{form.buildCol(dataform.manage_variations_import,'col-md-12')}}
+							
+							<span class="manage_variations_import">
+							{{form.buildCol(dataform.sku_child_dinamic,'col-md-6')}}
+							{{form.buildCol(dataform.sku_child,'col-md-6')}}
+							<div class="clearfix"></div>
+							{{form.buildCol(dataform.manage_variations_import_advanced,'col-md-12')}}
+							<span id="standard_variations">
+							{{form.buildCol(dataform.mapping_size,'col-md-6')}}
+							{{form.buildCol(dataform.mapping_color,'col-md-6')}}
+							{{form.buildCol(dataform.mapping_size_color_set,'col-md-12')}}
+							{{form.buildCol(dataform.mapping_color_set,'col-md-12')}}
+							{{form.buildCol(dataform.mapping_size_set,'col-md-12')}}
+							</span>
+
+							<span id="advanced_variations">
+							
+								{{form.buildCol(dataform.field_attribute_set,'col-md-12')}}
+
+								<div class="col-md-12">
+
+								<label>Mappatura insieme attributi</label>
+								<table class="table  table-bordered" id="table_mapping_attribute_set">
+										<thead>
+											<th>Insieme Attributi</th>
+											<th>Associazione attributi</th>
+											<th></th>
+										</thead>
+										<tbody id="box_attribute_sets">
+										</tbody>
+										<tfoot>
+											<tr>
+												<td></td>
+												<td></td>
+												<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_attribute_set(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+
+							</span>
+							</span>
+
+							
+							
+							
+
+							
+						</div>
+
+					</div>
+					
+
+					
+					<div class="panel panel-primary">
+						<div class="panel-heading">Prezzi</div>
+						<div class="panel-body">
+							{# {{form.buildCol(dataform.prices_with_tax,'col-md-6')}} #}
+							{{form.buildCol(dataform.default_price_list,'col-md-12')}}
+
+							<div class="col-md-12">
+
+								<label>Associazione listini
+								<br>
+								<small>* Se per un prodotto è già presente un listino e il prezzo passato in fase di importazione per lo stesso è zero il listino verrà eliminato</small>
+								</label>
+								<table class="table table-bordered" id="table_mapping_prices">
+										<thead>
+											<th>Listino Danea</th>
+											<th>Listino Marion</th>
+											<th></th>
+										</thead>
+										<tbody id="box_prices">
+										</tbody>
+										<tfoot>
+											<tr>
+												<td></td>
+												<td></td>
+												<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_price(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+											</tr>
+										</tfoot>
+									</table>
+							</div>
+							
+						</div>
+
+					</div>
+			
+					
+					
+					
+					
+					
+					
+				</div>
+			</div>
+			<div class="tab-pane fade in" id="export">
+				<div class="row">
+				
+					{{form.buildCol(dataform.limit_days,'col-md-6')}}
+					{{form.buildCol(dataform.status_orders,'col-md-6')}}
+					{{form.buildCol(dataform.manage_variations,'col-md-12')}}
+					<div class="clearfix"></div>
+					{{form.buildCol(dataform.manage_discount_like_product,'col-md-3')}}
+					{{form.buildCol(dataform.discount_code,'col-md-3')}}
+					{{form.buildCol(dataform.discount_vat,'col-md-3')}}
+					<div class="clearfix"></div>
+					{{form.buildCol(dataform.manage_shipping_like_product,'col-md-3')}}
+					{{form.buildCol(dataform.shipping_code,'col-md-3')}}
+					{{form.buildCol(dataform.shipping_vat,'col-md-3')}}
+					<div class="clearfix"></div>
+					{{form.buildCol(dataform.manage_payment_like_product,'col-md-3')}}
+					{{form.buildCol(dataform.payment_code,'col-md-3')}}
+					{{form.buildCol(dataform.payment_vat,'col-md-3')}}
+
+
+
+					<div class="col-md-12">
+						<label>Mappatura Pagamenti</label>
+						<table class="table table-bordered">
+							<thead>
+								<th>Pagamento</th>
+								<th>Codice Danea</th>
+								<th></th>
+							</thead>
+							<tbody id="box_payments">
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_payment(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+								</tr>
+							</tfoot>
+						</table>
+						<!--<label>Mappatura tasse</label>
+						<table class="table">
+							<thead>
+								<th>Tassa</th>
+								<th>Codice Danea</th>
+								<th></th>
+							</thead>
+							<tbody id="box_taxes">
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_tax(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+								</tr>
+							</tfoot>
+						</table>-->
+						<label>Mappatura attributi</label>
+						<table class="table table-bordered" id="table_mapping_variations">
+							<thead>
+								<th>Attributo</th>
+								<th>Codice Danea</th>
+								<th></th>
+							</thead>
+							<tbody id="box_attributes">
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_attribute(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var payments_list = "{{payments_list|escape('js')}}";
+	var attributes_list = "{{attributes_list|escape('js')}}";
+	var taxes_list = "{{taxes_list|escape('js')}}";
+	var prices_list = "{{prices_list|escape('js')}}";
+	var attribute_sets_list = "{{attribute_sets_list|escape('js')}}";
+	
+	var data_payments = "{{payments|escape('js')}}";
+	var data_attributes = "{{attributes|escape('js')}}";
+	var data_taxes = "{{taxes|escape('js')}}";
+	var data_prices = "{{prices|escape('js')}}";
+	var data_attribute_sets = "{{attribute_sets|escape('js')}}";
+
+	var index_payment = 0;
+	var index_attribute = 0;
+	var index_tax = 0;
+	var index_price = 0;
+	var index_attribute_set = 0;
+	var payments = [];
+	var attributes = [];
+	var taxes = [];
+	var attribute_sets = [];
+	var attributes_danea = [];
+	attributes_danea['Size'] = 'Taglia';
+	attributes_danea['Color'] = 'Colore';
+
+	var prices_danea = [];
+	prices_danea['1'] = 'Listino 1';
+	prices_danea['2'] = 'Listino 2';
+	prices_danea['3'] = 'Listino 3';
+	prices_danea['4'] = 'Listino 4';
+	prices_danea['5'] = 'Listino 5';
+	prices_danea['6'] = 'Listino 6';
+	prices_danea['7'] = 'Listino 7';
+	prices_danea['8'] = 'Listino 8';
+	prices_danea['9'] = 'Listino 9';
+
+	function add_payment(marion=null,danea=''){
+		
+		$('#box_payments').append(
+			'<tr>'+
+			'<td>'+createSelectPayment(index_payment,marion)+'</td>'+
+			'<td><input type="text" name="formdata[mapping_payments]['+index_payment+'][danea]" value="'+danea+'"></td>'+
+			'<td class="pull-right"><button type="button" class="btn btn-danger btn-sm" onclick="$(this).closest(\'tr\').remove(); return false;"><i class="fa fa-trash-o"></i> Elimina</button></td>'+
+			'</tr>'
+		);
+		index_payment = index_payment+1;
+
+	}
+
+	function add_tax(marion=null,danea=''){
+		
+		$('#box_taxes').append(
+			'<tr>'+
+			'<td>'+createSelectTax(index_tax,marion)+'</td>'+
+			'<td><input type="text" name="formdata[mapping_taxes]['+index_tax+'][danea]" value="'+danea+'"></td>'+
+			'<td class="pull-right"><button type="button" class="btn btn-danger btn-sm" onclick="$(this).closest(\'tr\').remove(); return false;"><i class="fa fa-trash-o"></i> Elimina</button></td>'+
+			'</tr>'
+		);
+		index_tax = index_tax+1;
+
+	}
+
+	function add_attribute(marion=null,danea=''){
+		$('#box_attributes').append(
+			'<tr>'+
+			'<td>'+createSelectAttribute(index_attribute,marion)+'</td>'+
+			'<td>'+createSelectAttributeDanea(index_attribute,danea)+'</td>'+
+			'<td class="pull-right"><button type="button" class="btn btn-danger btn-sm" onclick="$(this).closest(\'tr\').remove(); return false;"><i class="fa fa-trash-o"></i> Elimina</button></td>'+
+			'</tr>'
+		);
+		index_attribute = index_attribute+1;
+
+	}
+
+	function add_price(marion=null,danea=''){
+		$('#box_prices').append(
+			'<tr>'+
+			'<td>'+createSelectPriceDanea(index_price,danea)+'</td>'+
+			'<td>'+createSelectPrice(index_price,marion)+'</td>'+
+			'<td class="pull-right"><button type="button" class="btn btn-danger btn-sm" onclick="$(this).closest(\'tr\').remove(); return false;"><i class="fa fa-trash-o"></i> Elimina</button></td>'+
+			'</tr>'
+		);
+		index_price = index_price+1;
+
+	}
+
+	function add_attribute_set(marion=null,mapping=''){
+		console.log(mapping);
+		$('#box_attribute_sets').append(
+			'<tr>'+
+			createSelectAttributeSet(index_attribute_set,marion,mapping)+
+			//'<td>'+createSelectAttributeDanea(index_attribute,danea)+'</td>'+
+			'<td class="pull-right"><button type="button" class="btn btn-danger btn-sm" onclick="$(this).closest(\'tr\').remove(); return false;"><i class="fa fa-trash-o"></i> Elimina</button></td>'+
+			'</tr>'
+		);
+		
+		index_attribute_set = index_attribute_set+1;
+
+	}
+
+	function get_composition(set,index,mapping=null){
+		
+		$.ajax({
+		  type: "GET",
+		  url: "index.php",
+		  data: { action: "get_attributes",ctrl:'Conf',mod:'danea',ajax:1,set:set},
+		  dataType: "json",
+		  success: function(data){
+			 
+			  
+			  var html = '<table class="table">'; 
+			  for( var k in data ){
+				   var options_select = "<option value='size' selected>taglia</option><option value='color'>colore</option>";
+				   if( mapping != null && mapping[k] && mapping[k] == 'color'){
+						
+						 options_select = "<option value='size'>taglia</option><option value='color' selected>colore</option>";
+				   }
+				   html = html+ "<tr><td>"+data[k]+"</td><td><select name='formdata[mapping_attribute_sets]["+index+"]["+k+"]'>"+options_select+"</select></td></tr>";
+			   }
+			   html = html+ "</table>";
+			  
+			   $('#attributes_list_'+index).html(
+					html	
+			   );
+		  },
+		 
+		});
+	}
+	
+	function initDanea(){
+
+		payments = jQuery.parseJSON(payments_list);
+		attributes = jQuery.parseJSON(attributes_list);
+		taxes = jQuery.parseJSON(taxes_list);
+		prices = jQuery.parseJSON(prices_list);
+		attribute_sets = jQuery.parseJSON(attribute_sets_list);
+
+		//console.log(data_payments);
+		data_payments = jQuery.parseJSON(data_payments);
+		for( var k in data_payments ){
+			add_payment(k,data_payments[k]);
+		}
+		data_attributes = jQuery.parseJSON(data_attributes);
+		for( var k in data_attributes ){
+			add_attribute(k,data_attributes[k]);
+		}
+
+		data_taxes = jQuery.parseJSON(data_taxes);
+		for( var k in data_taxes ){
+			add_tax(k,data_taxes[k]);
+		}
+
+		data_prices = jQuery.parseJSON(data_prices);
+		for( var k in data_prices ){
+			add_price(k,data_prices[k]);
+		}
+
+		data_attribute_sets = jQuery.parseJSON(data_attribute_sets);
+		for( var k in data_attribute_sets ){
+			
+			add_attribute_set(k,data_attribute_sets[k]);
+		}
+
+		
+		
+		
+		$('#manage_variations').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('#table_mapping_variations').show();
+			}else{
+				$('#table_mapping_variations').hide();
+			}
+		});
+		$('#enable_credentials').on('change',function(){
+		
+			if( $(this).prop('checked') == true ){
+				$('#div_username').show();
+				$('#div_password').show();
+			}else{
+				$('#div_username').hide();
+				$('#div_password').hide();
+			}
+		});
+		
+
+		$('#manage_variations_import').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('.manage_variations_import').show();
+			}else{
+				$('.manage_variations_import').hide();
+			}
+		});
+		$('#manage_variations_import_advanced').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('#advanced_variations').show();
+				$('#standard_variations').hide();
+			}else{
+				$('#advanced_variations').hide();
+				$('#standard_variations').show();
+			}
+		});
+		
+
+
+		$('#manage_discount_like_product').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('#div_discount_code').show();
+				$('#div_discount_vat').show();
+			}else{
+				$('#div_discount_code').hide();
+				$('#div_discount_vat').hide();
+			}
+		});
+		$('#manage_shipping_like_product').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('#div_shipping_code').show();
+				$('#div_shipping_vat').show();
+			}else{
+				$('#div_shipping_code').hide();
+				$('#div_shipping_vat').hide();
+			}
+		});
+		$('#manage_payment_like_product').on('change',function(){
+			if( $(this).prop('checked') == true ){
+				$('#div_payment_code').show();
+				$('#div_payment_vat').show();
+			}else{
+				$('#div_payment_code').hide();
+				$('#div_payment_vat').hide();
+			}
+		});
+
+		$('#enable_credentials').trigger('change');
+		$('#manage_variations_import').trigger('change');
+		$('#manage_variations_import_advanced').trigger('change');
+		$('#manage_variations').trigger('change');
+		$('#manage_discount_like_product').trigger('change');
+		$('#manage_shipping_like_product').trigger('change');
+		$('#manage_payment_like_product').trigger('change');
+		/*alert('qua');
+		$.ajax({
+		  type: "GET",
+		  url: "index.php",
+		  data: { action: "parameters",ctrl:'Conf',mod:'danea',ajax:1},
+		  dataType: "json",
+		  success: function(data){
+			    payments = data.payments;
+				attributes = data.attributes;
+				taxes = data.taxes;
+
+				//console.log(data_payments);
+				data_payments = jQuery.parseJSON(data_payments);
+				for( var k in data_payments ){
+					add_payment(k,data_payments[k]);
+				}
+				data_attributes = jQuery.parseJSON(data_attributes);
+				for( var k in data_attributes ){
+					add_attribute(k,data_attributes[k]);
+				}
+		  },
+		 
+		});*/
+	}
+
+	function createSelectTax(index,selected=null){
+		var select = "<select name='formdata[mapping_taxes]["+index+"][marion]'>";
+		for( var k in taxes ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+taxes[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+taxes[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+	}
+
+	function createSelectPayment(index,selected=null){
+		var select = "<select name='formdata[mapping_payments]["+index+"][marion]'>";
+		for( var k in payments ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+payments[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+payments[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+	}
+
+	function createSelectAttributeDanea(index,selected=null){
+		var select = "<select name='formdata[mapping_attributes]["+index+"][danea]'>";
+		for( var k in attributes_danea ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+attributes_danea[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+attributes_danea[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+
+	}
+
+	
+
+	function createSelectAttribute(index,selected=null){
+		var select = "<select name='formdata[mapping_attributes]["+index+"][marion]'>";
+		for( var k in attributes ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+attributes[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+attributes[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+	}
+	
+	function createSelectPriceDanea(index,selected=null){
+		var select = "<select name='formdata[mapping_prices]["+index+"][danea]'>";
+		for( var k in prices_danea ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+prices_danea[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+prices_danea[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+
+	}
+
+	function createSelectPrice(index,selected=null){
+		var select = "<select name='formdata[mapping_prices]["+index+"][marion]'>";
+		for( var k in prices ){
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+prices[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+prices[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+		return select;
+
+	}
+
+	function createSelectAttributeSet(index,selected=null,mapping){
+		var select = "<select name='formdata[mapping_attribute_sets]["+index+"][id]' onchange='get_composition($(this).val(),"+index+"); return false;'>";
+		for( var k in attribute_sets ){
+			if( !selected ) selected = k;
+			if( selected != null && k == selected ){
+				select = select + "<option selected value="+k+">"+attribute_sets[k]+"</option>";
+			}else{
+				select = select + "<option  value="+k+">"+attribute_sets[k]+"</option>";
+			}
+		}
+		select = select + "</select>";
+
+		var html = "<td>"+select+"</td><td id='attributes_list_"+index+"'></td>";
+		get_composition(selected,index,mapping);
+		return html;
+	}
+
+	initDanea();
+
+
+
+	
+	//loadData();
+</script>
+{% endblock %}

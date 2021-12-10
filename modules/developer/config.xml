@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>9999</id>
+		<author>Ciro Napolitano</author>
+		<name>Developer</name>
+		<permission>superadmin</permission>
+		<tag>developer</tag>
+		<kind>cms</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra permette di modificare il cms.]]></description> 
+   </info>
+    <menu> 
+		<scope>admin</scope>
+		<header>
+			<locale>
+				<name>
+					<it>Developer</it>
+					<en>Developer</en>
+				</name>
+			</locale>
+			<tag>developer</tag> 
+			<icon>fa fa-bug</icon> 
+			<permission>superadmin</permission> 
+			<priority>100</priority> 
+		</header>	
+		<items>
+			<locale>
+				<name>
+					<it>Permessi</it>
+					<en>Permissions</en>
+				</name>
+			</locale>
+			<tag>developer_permissions</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=Permission&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Forms</it>
+					<en>Forms</en>
+				</name>
+			</locale>
+			<tag>developer_forms</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=FormAdmin&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Temi</it>
+					<en>Temi</en>
+				</name>
+			</locale>
+			<tag>developer_themes</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=ThemeAdmin&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Menu Admin</it>
+					<en>Menu Admin</en>
+				</name>
+			</locale>
+			<tag>developer_menu</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=MenuAdmin&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+
+		<items>
+			<locale>
+				<name>
+					<it>Menu Backend</it>
+					<en>Menu Backend</en>
+				</name>
+			</locale>
+			<tag>developer_menu_backend</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=MenuBackend&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Buttons Backend</it>
+					<en>Buttons Backend</en>
+				</name>
+			</locale>
+			<tag>developer_button_backend</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=ButtonBackend&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Hooks</it>
+					<en>Hooks</en>
+				</name>
+			</locale>
+			<tag>developer_hooks</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=HookAdmin&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Traduzioni</it>
+					<en>Translates</en>
+				</name>
+			</locale>
+			<tag>developer_translates</tag> 
+			<permission>superadmin</permission> 
+			<url>index.php?ctrl=Translate&amp;mod=developer&amp;action=list</url>
+			<priority>3</priority> 
+		</items>
+	</menu>
+   
+</module>

@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Storia dell'ordine</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th style="min-width:70px"><strong>Data</strong></th>
+					<th><strong>Stato</strong></th>
+					<th><strong>Note</strong></th>
+					<th><strong>Email inviata</strong></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for v in history %}
+				<tr>
+					<td>{{v[date]| date("m/d/Y H:i")}}</td>
+					<td><span class="label" style="background:{{status_color[v.status]}}">{{status_name[v.status]}}</span></td>
+					<td>{{v[note]}}</td>
+					<td>{% if v.send %}SI{% else %}NO{% endif %}</td>
+				</tr>
+				{% endfor %}
+			   
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<widget>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Box Prodotti</name>
+		<permission>ecommerce</permission>
+		<logo>img/logo-prodotti.png</logo>
+		<url_add>index.php?action=add_widget_vetrina_prodotti</url_add>
+		<description><![CDATA[Modulo che permette la gestione delle mail marketing nel sito]]></description> 
+   </info>
+   <info> 
+		<author>Ciro Napolitano</author>
+		<name>Box News</name>
+		<permission>cms</permission>
+		<logo>img/logo-news.png</logo>
+		<url_add>index.php?action=add_widget_vetrina_news</url_add>
+		<description><![CDATA[Modulo che permette la gestione delle mail marketing nel sito]]></description> 
+   </info>
+
+   
+</widget>

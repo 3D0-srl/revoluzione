@@ -1,0 +1,65 @@
+<table>
+	<tr>
+		<td>Number</td>
+		<td>Name</td>
+		<td>Surname</td>
+		<td>Tax code</td>
+		<td>VAT number</td>
+		<td>Email</td>
+		<td>Phone</td>
+		<td>Cellular</td>
+		<td>Address</td>
+		<td>Post code</td>
+		<td>City</td>
+		<td>Province\State</td>
+		<td>Nation</td>
+		<td>Shipping Name</td>
+		<td>Shipping Surname</td>
+		<td>Shipping Email</td>
+		<td>Shipping Phone</td>
+		<td>Shipping Cellular</td>
+		<td>Shipping Address</td>
+		<td>Shipping Post code</td>
+		<td>Shipping City</td>
+		<td>Shipping Province\State</td>
+		<td>Shipping Nation</td>
+		<td>Order total</td>
+		<td>Date</td>
+		<td>Payment method</td>
+		<td>Product Code</td>
+		<td>Product Name</td>
+		<td>Quantity</td>
+	</tr>
+
+	<tr flexy:foreach="list,v">
+		<td>{v[number]}</td>
+		<td>{v[name]}</td>
+		<td>{v[surname]}</td>
+		<td>{v[fiscalCode]}</td>
+		<td>{v[vatNumber]}</td>
+		<td>{v[email]}</td>
+		<td>{v[phone]}</td>
+		<td>{v[cellular]}</td>
+		<td>{v[address]}</td>
+		<td>{v[postalCode]}</td>
+		<td>{v[city]}</td>
+		<td>{v[province]}</td>
+		<td>{v[country]}</td>
+		<td>{v[shippingName]}</td>
+		<td>{v[shippingSurname]}</td>
+		<td>{v[shippingEmail]}</td>
+		<td>{v[shippingPhone]}</td>
+		<td>{v[shippingCellular]}</td>
+		<td>{v[shippingAddress]}</td>
+		<td>{v[shippingPostalCode]}</td>
+		<td>{v[shippingCity]}</td>
+		<td>{v[shippingProvince]}</td>
+		<td>{v[shippingCountry]}</td>		
+		<td>{v[total_final]}</td>
+		<td>{v[evacuationDate]}</td>
+		<td>{v[paymentMethod]}</td>
+		<td>{v[sku]}</td>
+		<td>{v[name_product]}</td>
+		<td>{v[qnt]}</td>
+	</tr>
+</table>

@@ -1,0 +1,67 @@
+{% extends "layouts/tab/base.htm" %}
+{% block content %}
+
+				
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+		
+		{% if list %}
+		<table id="sezioni-table" class="table table-tools table-hover">
+			<thead>
+				<tr>
+				   
+					<th><strong>{{tr('tax')}}</strong></th>
+					<th><strong>{{tr('percentage')}}</strong></th>
+					<th  class="text-center"><strong></strong></th>
+					</th>
+				   
+					<th class="text-center">
+						<strong>{{tr('actions')}}</strong>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for v in list %}
+				<tr>
+					<td>{{v.get('name')}}</td>
+					<td>{{v.percentage}}%</td>
+					<td class="text-center">
+						
+						<span class="label label-{% if v.active %}success{% else %}danger{% endif %}">{% if v.active %}ATTIVA{% else %}DISABILITATA{% endif %}</span>
+						
+					</td>
+					
+					<td class="text-center"> 
+						<!--<a href="/admin/admin.php?action=mod_user&id={v.id}" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Modifica</a>
+						<a href="/admin/admin.php?action=dup_user&id={v.id}" class="edit btn btn-sm btn-default"><i class="fa fa-copy"></i> Duplica</a>
+						<a href="#" class="delete btn btn-sm btn-default" onclick="elimina_utente({v.id});return false;"><i class="fa fa-times-circle"></i> Elimina</a>-->
+						<div class="btn-group media-group">
+							  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+							  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+									<span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu media-menu text-left" role="menu">
+								
+								<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+							  </ul>
+						</div>
+					</td>
+				</tr>
+				{% endfor %}
+				
+			</tbody>
+		</table>
+		{% else %}
+			{{tr('no_record')}}
+		{% endif %}
+	</div>
+	{% if links %}
+	 <div class="m-t-30 align-center">
+		{{links['all']|raw}}
+	</div>
+	{% endif %}
+</div>
+
+{% endblock %}
+
+

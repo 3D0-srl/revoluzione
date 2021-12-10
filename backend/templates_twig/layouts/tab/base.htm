@@ -1,0 +1,38 @@
+{% block page_header %}
+<div class="row">
+	<div class="col-md-12">
+		<div class="pull-left">
+			<h4 class="titolo">{% block page_title %}{% endblock %}
+			{% if (action == 'edit' or show_btn_edit==true)  %} 
+				<small>{{tr('edit')}}</small>
+			{% elseif (action== 'add' or action == 'duplicate' or show_btn_add==true) %} 
+				<small>{{tr('add')}}</small> 
+			{% endif %}
+			</h4>
+		</div>
+
+		<div class="pull-right">					
+			 {% block buttons_right %}	
+				{% if show_btn_add == true or action == 'list' %}
+				<a href="{% block url_add %}{{url_add}}{% endblock %}" class="btn btn-principale m-t-10"><i class="fa fa-plus p-r-10"></i> {{tr('add')}}</a>
+				{% endif %}
+			{% endblock %}
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block messages %}{{messages|raw}}{% endblock %}
+{% block before_content %}
+{% endblock %}
+{% block content_container %}
+<div class="row">
+
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+<form id="ricarico_{{m.name}}_form">
+
+<table class="table table-bordered">
+    <thead>
+        <th>Da</th>
+        <th>A</th>
+        <th>Percentuale</th>
+        <th></th>
+    </thead>
+    <tbody id="ricarico_table_{{m.name}}">
+        {% for k,item in setting_market[m.name]['percentage'] %}
+        <tr>
+            <td>
+                <b>€</b> <input type="text" name="formdata[{{k}}][from]" value="{{item.from}}">
+            </td>
+            <td>
+                <b>€</b> <input type="text" name="formdata[{{k}}][to]" value="{{item.to}}">
+            </td>
+            <td>
+                <b>%</b> <input type="text" name="formdata[{{k}}][percentage]" value="{{item.percentage}}">
+            </td>
+            <td class="pull-right">
+                <button onclick="$(this).closest('tr').remove()"><i class="fa fa-trash-o"></i> elimina</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pull-right"><button type="button" onclick="add_ricarico('{{m.name}}')"><i class="fa fa-plus"></i>aggiungi</button></td>
+
+    </tfoot>
+</table>
+</form>
+
+<input type="hidden" id="cont_ricarico_{{m.name}}" value="{% if setting_market[m.name]['percentage'] %}{{setting_market[m.name]['percentage']|length}}{% else %}0{% endif %}">
+
+<button type="button" onclick="salva_ricarico($(this),{{id_store}},'{{m.name}}')">Salva</button>
+
+
+<script>
+
+
+//alert(cont_ricarico);
+function add_ricarico(market){
+    var cont_ricarico = parseInt($('#cont_ricarico_'+market).val());
+    $('#cont_ricarico_'+market).val(cont_ricarico+1);
+    $('#ricarico_table_'+market).append(
+        `<tr>
+            <td>
+                <b>€</b> <input type="text" name="formdata[`+cont_ricarico+`][from]">
+            </td>
+            <td>
+                <b>€</b> <input type="text" name="formdata[`+cont_ricarico+`][to]">
+            </td>
+            <td>
+                <b>%</b> <input type="text" name="formdata[`+cont_ricarico+`][percentage]">
+            </td>
+            <td class="pull-right">
+                <button onclick="$(this).closest('tr').remove()"><i class="fa fa-trash-o"></i> elimina</button>
+            </td>
+        </tr>`
+    );
+
+}
+
+
+
+</script>

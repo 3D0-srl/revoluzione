@@ -1,0 +1,102 @@
+{% extends "layouts/setting_module.htm" %}
+{% block page_title %}Sincronizzazione CSV{% endblock %}
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-12">
+			<a href="index.php?mod=sincro&ctrl=Syncro&action=import" class="btn btn-info">Importazione Completa</a>
+
+			<a href="index.php?mod=sincro&ctrl=Syncro&action=quantities_and_prices" class="btn btn-warning">Aggiorna quantità e prezzi</a>
+
+			<a href="index.php?mod=sincro&ctrl=Syncro&action=images" class="btn btn-primary"><i class="fa fa-image"></i> Importa immagini</a>
+		</div>
+	</div>
+	<div class="row m-t-20">
+		<div class="col-md-12">
+			<table class="table table-bordered table-striped">
+				
+					<thead>
+						<th>
+							Tipologia
+						</th>
+						<th>
+							Data
+						</th>
+						<th>
+							Inizio
+						</th>
+						<th>
+							Fine
+						</th>
+						<th>
+							Durata
+						</th>
+						<th>
+						
+						</th>
+					</thead>
+				
+					<tbody>
+						{% for item in reports %}
+						<tr>
+							<td>
+								{{item.type}}
+							</td>
+							<td>
+								{{item.date}}
+							</td>
+							<td>
+								{{item.start}}
+							</td>
+
+							<td>
+								{{item.end}}
+							</td>
+
+							<td>
+								{{item.duration}} min
+							</td>
+
+							<td>
+								<button type="button" onclick="$('#details_{{item.id}}').toggle()"><i class="fa fa-info"></i> Dettagli</button>
+							</td>
+
+						</tr>
+						<tr class="success" style="display:none;" id="details_{{item.id}}">
+							<td colspan="6">
+								<table class="table">
+									<thead>
+										{% for k,v in item.reports %}
+											<th>
+												{{k}}
+											</th>
+											
+
+											{% endfor %}
+									</thead>
+									<tbody>
+										<tr>
+											{% for k,v in item.reports %}
+											<td>
+												{{v}}
+											</td>
+											
+
+											{% endfor %}
+										</tr>
+									</tbody>
+								</table>
+							</td>
+
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				
+
+				
+			</table>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Profilo di vendita {% endblock %} 
+
+{% block content %}
+<form id="form" action="index.php">
+<div class="well" style="margin-bottom: 20px;">
+		<label>Nome profilo: </label>
+		<input type="text" name="formdata[name]" required id="name" value="{{name}}">
+		<br><br>
+		<label>Lingua: </label>
+		<select type="select" class="no-picker" required name="formdata[lang]" id="lang">
+			{% for v in langs %}
+			<option value="{{v}}">{{v}}</option>
+			{% endfor %}
+		</select>
+</div>
+<input type="hidden" name="action" value="add">
+<input type="hidden" name="mod" value="privalia">
+<input type="hidden" name="ctrl" value="Profile">
+
+<button type="submit">SALVA E CONFIGURA</button>
+</form>
+
+
+{% endblock %}

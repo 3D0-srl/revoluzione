@@ -1,0 +1,66 @@
+<table>
+	<tr>
+		<td>Numero</td>
+		<td>Nome</td>
+		<td>Cognome</td>
+		<td>Cod. Fiscale</td>
+		<td>P.IVA</td>
+		<td>Email</td>
+		<td>Telefono</td>
+		<td>Cellulare</td>
+		<td>Indirizzo</td>
+		<td>CAP</td>
+		<td>Città</td>
+		<td>Provincia\Stato</td>
+		<td>Nazione</td>
+		<td>Nome Spedizione</td>
+		<td>Cognome Spedizione</td>
+		<td>Email Spedizione</td>
+		<td>Telefono Spedizione</td>
+		<td>Cellulare Spedizione</td>
+		<td>Indirizzo Spedizione</td>
+		<td>CAP Spedizione</td>
+		<td>Città Spedizione</td>
+		<td>Provincia\Stato Spedizione</td>
+		<td>Nazione Spedizione</td>
+		<td>Totale ordine</td>
+		<td>Data</td>
+		<td>Metodo di pagamento</td>
+		<td>Codice Prodotto</td>
+		<td>Nome Prodotto</td>
+		<td>Quantità</td>
+	</tr>
+	{% for v in list %}
+	<tr>
+		<td>{{v[number]}}</td>
+		<td>{{v[name]}}</td>
+		<td>{{v[surname]}}</td>
+		<td>{{v[fiscalCode]}}</td>
+		<td>{{v[vatNumber]}}</td>
+		<td>{{v[email]}}</td>
+		<td>{{v[phone]}}</td>
+		<td>{{v[cellular]}}</td>
+		<td>{{v[address]}}</td>
+		<td>{{v[postalCode]}}</td>
+		<td>{{v[city]}}</td>
+		<td>{{v[province]}}</td>
+		<td>{{v[country]}}</td>
+		<td>{{v[shippingName]}}</td>
+		<td>{{v[shippingSurname]}}</td>
+		<td>{{v[shippingEmail]}}</td>
+		<td>{{v[shippingPhone]}}</td>
+		<td>{{v[shippingCellular]}}</td>
+		<td>{{v[shippingAddress]}}</td>
+		<td>{{v[shippingPostalCode]}}</td>
+		<td>{{v[shippingCity]}}</td>
+		<td>{{v[shippingProvince]}}</td>
+		<td>{{v[shippingCountry]}}</td>		
+		<td>{{v[total_final]}}</td>
+		<td>{{v[evacuationDate]}}</td>
+		<td>{{v[paymentMethod]}}</td>
+		<td>{{v[sku]}}</td>
+		<td>{{v[name_product]}}</td>
+		<td>{{v[qnt]}}</td>
+	</tr>
+	{% endfor %}
+</table>

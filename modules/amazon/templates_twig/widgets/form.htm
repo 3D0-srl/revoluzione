@@ -1,0 +1,353 @@
+<style>
+	.errore{
+		border: 1px solid red;
+	}
+	.form-group {
+
+		margin-bottom: 0px !important;
+
+	}
+</style>
+
+<span id="profile_{{market}}">
+<div class="col-md-12">
+
+    <div class="row" style="padding-bottom: 10px; padding-top:10px;">
+        <h4>
+            FILE CAMPI RICHIESTI
+        </h4>
+        <div class="col-md-12">
+        <a href="{{url_mapping}}">{{url_mapping}}</a>
+        </div>
+    </div>
+
+    <div class="row" id="variazioni_{{market}}" style="padding-bottom: 10px; padding-top:10px;">
+            <h4>
+            VARIAZIONI
+            </h4>			           
+            <div class="form-group col-md-12">
+                <label>Tema Variazioni:</label>
+                <div class="controls">
+                    <select type="text" class="form-control" id="theme" name="formdata[variationTheme]" onchange="cambia_tema('{{market}}','{{category}}',$(this).val()); return false;">
+                        <option value="">---------</option>
+                        {% for k,v in variations_theme %}
+                            <option value="{{k}}" {% if data[variationTheme] == k %}selected{% endif %}>{{v}}</option>
+                        
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        
+            
+    </div>
+
+    <div class="row" id="mappatura_{{market}}">
+            <h4>
+                MAPPATURA
+            </h4>			
+
+            {% for k,v in other_fields %}
+            {% if v.type_html == 'input' %}
+            
+            <div class="form-group col-md-12" id="{{k}}_container" style="padding-left:0px;padding-right:0px;" >
+                
+
+                <div class="form-group col-md-6" id="">
+                    <label>{{v.label}} <span class="asterisk" {% if v.required == false %} style="display:none"{% endif %} id="required_{{k}}">*</span> {% if v.example %} (es:<b> {{v.example}}</b>){% endif %}:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control fields" name="formdata[{{k}}]" id="field_{{k}}" onchange="cambia_valore('{{market}}','{{k}}',$(this).val())">
+                            <option value="">----</option>
+                            {% if v.selected == 'attribute' %}
+                            <option value="attribute" selected>Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if v.selected == 'feature' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature" selected>Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+                            {% if v.selected == 'value' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value" selected>Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if v.selected == 'default' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                
+                            <option value="default" selected>Valore di default</option>
+                            
+                            {% endif %}
+                            {% if v.selected is null %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+                            <!--<option value="default">Valore di default</option>-->
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;" style="display:none" id="{{k}}_attribute">
+                    <label>Assegna valore di:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control " name="formdata[{{k}}Attribute]">
+                        
+                            {% for k1,v1 in attributes %}
+                                <option value="{{k1}}" {% if k1 == v.selected_attribute %}selected{% endif %}>{{v1}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;" style="display:none" id="{{k}}_feature">
+                    <label>Assegna valore di:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control " name="formdata[{{k}}Feature]">
+                            {% for k1,v1 in features %}
+                            <option value="{{k1}}" {% if k1 == v.selected_feature %}selected{% endif %}>{{v1}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{{k}}_value">
+                    <label>Valore fisso:</label>
+                    <div class="controls">
+                        <input type="text" class="form-control " name="formdata[{{k}}Value]" value="{{v.selected_value}}">
+                            
+                        
+                    </div>
+                </div>
+                {% if v.default_values %}
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{{k}}_default">
+                    <label>Valore di default:</label>
+                    <div class="controls">
+                        
+                        <select type="select" class="form-control " name="formdata[{{k}}Default]" flexy:ignore>
+                                {% for v1 in v.default_values %}
+                                <option value="{{v1}}" {% if v1 == v.selected_default %}selected{% endif %}>{{v1}}</option>
+                                {% endfor %}
+                            
+                            
+                        </select>
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                {% endif %}
+                
+            </div>
+            {% endif %}
+            {% if v.type_html  == 'select' %}
+
+            <div class="form-group col-md-12" id="{{k}}_container" style="padding-left:0px;padding-right:0px;" >
+                
+
+                <div class="form-group col-md-6" id="">
+                    <label>{{v.label}} <span  id="required_{{k}}" {% if v.required %}style="display:none"{% endif %} class="asterisk">*</span> {% if v.example %} (es:<b> {{v.example}}</b>){% endif %}:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control" id="field_{{k}}" name="formdata[{{k}}]">
+                            
+                            <option value="">----</option>
+                            {% for ok,ov in v.options %}
+                                <option value="{{ok}}" {% if v.selected == ok %}selected{% endif %}>{{ov}}</option>
+                            {% endfor %}
+                            
+                            
+                        </select>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            {% endif %}
+            {% if v.type_html == 'textarea' %}
+            <div class="form-group col-md-12" id="{{k}}_container" style="padding-left:0px;padding-right:0px;" >
+                
+
+                <div class="form-group col-md-6" id="">
+                    <label>{{v.label}} <span  id="required_{{k}}" {% if v.required %}style="display:none"{% endif %} class="asterisk">*</span> {% if v.example %} (es:<b> {{v.example}}</b>){% endif %}:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control fields" name="formdata[{k}]" id="field_{{k}}" onchange="cambia_valore('{{market}}','{{k}}',$(this).val())">
+                            <option value="">----</option>
+                            {% if v.selected == 'attribute' %}
+                            <option value="attribute" selected>Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if v.selected == 'feature' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature" selected>Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+                            {% if v.selected == 'value' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value" selected>Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if v.selected == 'default' %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                
+                            <option value="default" selected>Valore di default</option>
+                            
+                            {% endif %}
+                            {% if v.selected is null %}
+                            <option value="attribute">Associa ad attributo</option>
+                            <option value="feature">Associa caratteristica</option>
+                            <option value="value">Valore fisso</option>
+                                {% if v.default_values %}
+                                <option value="default">Valore di default</option>
+                                {% endif %}
+                            {% endif %}
+                            <!--<option value="default">Valore di default</option>-->
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{{k}}_attribute">
+                    <label>Assegna valore di:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control " name="formdata[{{k}}Attribute]">
+                        
+                            {% for k1,v1 in attributes %}
+                                <option value="{{k1}}" {% if k1 == v.selected_attribute %}selected{% endif %}>{{v1}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{k}_feature">
+                    <label>Assegna valore di:</label>
+                    <div class="controls">
+                        <select type="select" class="form-control " name="formdata[{{k}}Feature]">
+
+                            {% for k1,v1 in features %}
+                            <option value="{{k1}}" {% if k1 == v.selected_feature %}selected{% endif %}>{{v1}}</option>
+                            {% endfor %}
+                            
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{{k}}_value">
+                    <label>Valore fisso:</label>
+                    <div class="controls">
+                        <textarea type="text" class="form-control " name="formdata[{{k}}Value]" value="{{v.selected_value}}">{{v.selected_value}}</textarea>
+                            
+                        
+                    </div>
+                </div>
+                {% if v.default_values %}
+                <div class="form-group col-md-6 assegna_valore_{{k}}" style="padding-right:0px;"  style="display:none" id="{{k}}_default">
+                    <label>Valore di default:</label>
+                    <div class="controls">
+                        
+                        <select type="select" class="form-control " name="formdata[{k}Default]" >
+
+                            {% for v1 in v.default_values %}
+                                <option value="{{v1}}" {% if v1 == v.selected_default %}selected{% endif %}>{{v1}}</option>
+                                {% endfor %}
+                            
+                            
+                        </select>
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                {% endif %}
+                
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+
+                        
+                
+    </div>
+    </span>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.fields').trigger('change');
+		if( $('#theme').val() ){
+			$('#theme').trigger('change');
+		}
+	});
+
+	function cambia_valore(market,tipo,val){
+		$('#profile_'+market).find('.assegna_valore_'+tipo).hide();
+		$('#profile_'+market).find('#'+tipo+'_'+val).show();
+		
+	}
+
+	function cambia_tema(market,category,tema){
+		
+        $('#variazioni_'+market).find('.variazione').each(function(){
+            $(this).find('.asterisk').hide();
+            $(this).detach().removeClass('variazione').appendTo('#mappatura_'+market);
+        });
+		if( tema ){
+			$.ajax({
+			  type: "GET",
+				  url: "index.php",
+				  dataType: "json",
+				  data: {ctrl:'Action',mod:'amazon',ajax:1,category:category,action:'change_theme',theme:tema},
+				  success: function(data){
+						
+						if(data.result == 'ok'){
+							if( data.attributes ){
+								for( var k in data.attributes ){
+                                    console.log( $('#profile_'+market).find('#'+data.attributes[k]+"_container").length);
+                                    $('#profile_'+market).find('#'+data.attributes[k]+"_container").detach().addClass('variazione').appendTo('#variazioni_'+market);
+									$('#required_'+data.attributes[k]).show();
+								}
+							}
+							//$('#result_data').html(data.data);
+							//$('#import_ok').show();
+								
+							
+						}else{
+							
+						}
+				  },
+				 
+			});
+		}
+	}
+
+	
+</script>

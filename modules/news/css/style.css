@@ -1,0 +1,410 @@
+/*VEDI NEWS*/
+.menu-mob {
+	display: none;
+}
+
+.box-toggle {
+	display: none;
+}
+
+.top-news {
+	position: relative;
+	margin-top: 88px;
+}
+
+.top-news .flex.flex-wrap {
+    align-items: stretch;
+	margin: 0;
+}
+
+.top-news .col-60 {
+	width: 57%;
+	height: 448px;
+}
+
+.top-news .col-40 {
+	width: 43%;
+	background: #F6F6F6; 
+	position: relative;
+}
+
+.top-news .back {
+	position: absolute;
+	right: 50%;
+	top: -24px;
+	transform: translateX(50%);
+	-webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	background: #557EBB;
+	padding: 10px 24px;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: .3px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.data-news {
+	width: 20%;
+}
+
+.tit-cat-news {
+	width: 80%;
+	padding-left: 48px;
+}
+
+.info-news {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	left: 24px;
+	padding: 14px;
+	width: calc(100% - 48px);
+}
+
+.tit-news {
+	font-size: 31px;
+	font-weight: 500;
+	line-height: 46px;
+}
+
+.mese-news {
+	font-size: 77px;
+	font-weight: 500;
+	line-height: 77px;
+	text-align: center;
+}
+
+.giorno-news {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: .6px;
+	line-height: 15px;
+	text-align: center;
+}
+
+.vedi-news {
+	margin: 72px auto 64px;
+}
+
+.vedi-news p {
+    max-width: 674px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*LIST NEWS*/
+.tit-pag {
+	margin: 80px 0;
+	text-transform: uppercase;
+}
+
+.flex.flex-wrap {
+    margin: 0 0 176px;
+}
+
+.menu-cat-oriz {
+	width: 100%;
+	text-align: center;
+}
+
+.menu-cat-oriz a {
+	display: inline-block;
+	margin: 0 15px 24px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.menu-cat-oriz a.cat-active {
+	color: #557EBB;
+	font-weight: 700;
+}
+
+.menu-cat-oriz a.active-label {
+	font-weight: 700;
+	color: #557EBB;
+}
+
+.col33 {
+	width: calc(33.3333% - 20px);
+    margin: 0 10px 24px;
+}
+
+.box-img-news {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 344px;
+}
+
+.box-img-news .info-news {
+	background: #fff;
+	top: 24px;
+	transform: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+}
+
+.box-img-news .data-news {
+	width: 20%;
+}
+
+.box-img-news .tit-cat-news {
+	width: 80%;
+	padding-left: 16px;
+}
+
+.box-img-news .mese-news {
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.box-img-news .giorno-news {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .3px;
+	line-height: 11px;
+}
+
+.cat-news {
+	font-size: 11px;
+	font-weight: 600;
+	color: #557EBB;
+	line-height: 24px;
+	letter-spacing: .6px;
+}
+
+.box-img-news .tit-news {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 27px;
+}
+
+.box-img-news .pulsante-pieno, .box-img-news .pulsante-pieno:active, .box-img-news .pulsante-pieno:hover, .box-img-news .pulsante-pieno:focus {
+	position: absolute; 
+	right: 24px;
+	bottom: 24px;
+}
+
+.col-news:hover .box-img-news .pulsante-pieno {
+    background: rgba(85,126,187,1);
+}
+
+/*gallery vedi news*/
+.gallery-vedi-news {
+	margin: 64px 0 0;
+}
+
+.box-img-gallery {
+	height: 302px;
+	position:relative;
+	margin: 0 8px;
+}
+
+.slick-dots {
+    bottom: auto;
+    position: relative;
+    padding: 0;
+    text-align: center;
+	margin: 32px 0 0;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button, .slick-dots li {
+    width: 34px;
+    height: 34px;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+	position: relative;
+}
+
+.slick-dots li.slick-active button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #557EBB;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    background: #557EBB;
+	content: '';
+    text-align: center;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
+	-webkit-transform: translate(50%,-50%);
+	-moz-transform: translate(50%,-50%);
+	-ms-transform: translate(50%,-50%);
+    width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+    width: 4px;
+	height: 4px;
+}
+
+@media only screen and (max-width: 1600px) {
+/*vedi news*/
+.flex.flex-wrap {
+    margin: 0 0 80px;
+}
+
+.top-news .col-60, .top-news .col-40 {
+    width: 50%;
+}
+
+.top-news .info-news {
+    padding: 0;
+}
+
+.top-news .mese-news {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.top-news .tit-cat-news {
+    padding-left: 16px;
+}
+
+.top-news .tit-news {
+    font-size: 26px;
+    line-height: 34px;
+}
+/*list news*/
+.box-img-news .mese-news {
+    font-size: 40px;
+    line-height: 40px;
+}
+}
+
+@media only screen and (max-width:1199px) {
+/*LIST NEWS*/
+.col33.col-news {
+	width: calc(50% - 20px);
+}
+}
+
+@media only screen and (max-width: 1023px) {
+/*list news*/
+.tit-pag {
+    margin: 80px 0 40px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+/*LIST NEWS*/
+.menu-desk {
+    display: none;
+}
+
+.menu-mob {
+    display: block;
+    background: #23406D;
+	padding: 16px;
+	color: #fff;
+    font-size: 16px;
+	position: relative
+}
+
+.menu-mob:after {
+	content: "\f107";
+	position: absolute;
+	font: normal normal normal 20px/1 FontAwesome;
+	right: 16px;
+	color: #fff;
+}
+
+.box-toggle {
+	background: #23406D;
+	padding: 16px;
+}
+
+.menu-mob-item {
+	margin: 0 0 16px;
+}
+
+.menu-mob-item a {
+	color: #fff;
+}
+
+.col-news h3 {
+    margin: 15px 0 10px;
+}
+
+.col33.col-news {
+	width: 100%;
+	margin: 32px 0 0;
+}
+
+/*VEDI NEWS*/
+.top-news .col-60, .top-news .col-40 {
+    width: 100%;
+}
+
+.top-news .col-60 {
+    height: 250px;
+}
+
+.top-news .info-news {
+    position: initial;
+    top: auto;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    left: auto;
+    padding: 32px 12px;
+	width: 100%;
+}
+
+.top-news .tit-news {
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.vedi-news {
+    margin: 40px 0;
+}
+}
+
+@media only screen and (max-width:599px) {
+/*list news*/
+.tit-pag {
+    margin: 32px 0;
+}
+
+/*vedi news*/
+.top-news {
+    margin-top: 56px;
+}
+}

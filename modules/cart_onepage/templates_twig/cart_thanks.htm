@@ -1,0 +1,116 @@
+{% extends 'layouts/cart_layout.htm' %}
+{% block javascript %}
+	{{parent()}}
+	<!-- GOOGLE TAG MANAGER --->
+	{{do_action('ganalitycs_display_script_cart_thanks',cart)}}
+	<!-- GOOGLE TAG MANAGER --->
+{% endblock %}
+{% block content %}
+	<div class="container container-big">
+		<div class="fixfixed">
+			{% if step == 6 %}
+				{{do_action('cart_thanks_top',cart,ordini)}}
+			{% endif %}
+			
+			<div class="titcart">{{tr('Riepilogo dell\'ordine n°','cart_onepage')}} {{cart.number}}</div>
+			<input type='hidden' name="formdata[recurrent_payment]" value="">
+			
+			{% include 'partials/table_orders.htm' %}
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="titcart">{{tr('Spedizione','cart_onepage')}}</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							{{cart.getNameShippingMethod()}}
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="titcart">{{tr('Pagamento','cart_onepage')}}</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							{{cart.getNamePaymentMethod()}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space20"></div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="titcart">{{tr('Dati ordine','cart_onepage')}}</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							{% if cart.company %}
+								{{cart.company}} <br>
+								{% if cart.vatNumber %}
+									{{tr('P.IVA','cart_onepage')}} {{cart.vatNumber|upper}} <br>
+								{% endif %}
+							{% else %}
+								{{cart.name}} {{cart.surname}}<br>
+								{% if cart.fiscalCode %}
+								{{cart.fiscalCode|upper}} <br>
+								{% endif %}
+
+							{% endif %}
+							{{cart.email}} <br>
+							{% if cart.phone %}
+								{{cart.phone}}
+								{% if cart.cellular %}
+								/ {{cart.cellular}}
+								{% endif %}
+							{% else %}
+								{% if cart.cellular %}
+								{{cart.cellular}}
+								{% endif %}
+							{% endif %}
+							<br>
+
+							
+							{{cart.address}}<br>
+							{{cart.postalCode}} {{cart.city}}<br>
+							{% if cart.province %}
+							{{cart.province}} - {{cart.country}}<br>
+							{% endif %}
+				
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="titcart">{{tr('Dati spedizione','cart_onepage')}}</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							{{cart.shippingName}} {{cart.shippingSurname}}<br>
+				
+							<span>{{cart.shippingAddress}}</span><br>
+							<span>{{cart.shippingPostalCode}} {{cart.shippingCity}}</span><br>
+							{% if cart.shippingProvince %}
+							<span>{{cart.shippingProvince}} - {{cart.shippingCountry}}</span><br>
+							{% else %}
+							{{cart.shippingCountry}}<br>
+							{% endif %}
+							{% if cart.shippingEmail %}
+							<span>{{cart.shippingEmail}}</span><br>
+							{% endif %}
+							<span>
+							{% if cart.shippingPhone %}
+								{{cart.shippingPhone}}
+								{% if cart.shippingCellular %}
+								/ {{cart.shippingCellular}}
+								{% endif %}
+							{% else %}
+								{% if cart.shippingCellular %}
+								{{cart.shippingCellular}}
+								{% endif %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		{% include 'partials/fixedcart.htm' %}
+		<div class="space60"></div>
+	</div>
+{% endblock %}

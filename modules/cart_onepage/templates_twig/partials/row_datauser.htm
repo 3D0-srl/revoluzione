@@ -1,0 +1,263 @@
+{% if step == 2 %}
+<div class="pallaselezionata">
+	<span class="txt">1. {{tr('Informazioni personali','cart_onepage')}}</span>
+</div>
+<form method="POST" class="float-label" action="" id="buy">
+	<input type='hidden' name="" value="">
+	<input type="radio" name="" id="registration_1" style="display: none;" value="1" onchange="">
+	<input type="radio" name="" id="registration_0" style="display: none;" value="0" onchange="">
+
+	<span id="regcon">
+		<span id="">
+			<!-- DIV ERRORE FORM -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 error_form_cart errore" id="error_cart_datauser"></div>
+			{% if logged == false %}
+				{% if enable_buy_without_registration %}
+					{% if registration == false %}
+						<div class="clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="controls scegli">
+								<input type="checkbox" name="formdata[registration]" value="1" id="registration">
+								<label for="registration"></label>
+								{{tr('Effettua la registrazione, potrai accedere a speciali promozioni e consultare lo storico dei tuoi ordini.','cart_onepage')}}
+							</div>
+						</div>
+						<div class="space20"></div>
+					{% else %}
+						<input type="hidden" name="formdata[registration]" value="1" id="registration">
+					{% endif %}
+				{% else %}
+					<input type="hidden" name="formdata[registration]" value="1" id="registration">
+				{% endif %}
+				
+			
+				<div class="registration_fields col-xs-12 col-sm-6 col-md-6 col-lg-6" style="display:{% if (enable_buy_without_registration == false) or registration %}block{% else %}none{% endif %}">
+					<div class="controls">
+						<label>{{tr('Username','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[username]" value="{{dataform.name.username}}" id="username">
+					</div>
+				</div>
+				<div class="registration_fields col-xs-12 col-sm-6 col-md-6 col-lg-6" style="display: {% if (enable_buy_without_registration == false) or registration %}block{% else %}none{% endif %}">
+					<div class="controls">
+						<label>{{tr('Password','cart_onepage')|capitalize}}*</label>
+						<input type="password" name="formdata[password]"  value="{{dataform.surname.password}}" id="password">
+					</div>
+				</div>
+			
+			{% endif %}
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('name','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[name]" value="{{dataform.name.value}}" id="name">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('surname','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[surname]" value="{{dataform.surname.value}}" id="surname">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('email','cart_onepage')|capitalize}}*</label>	
+					<input type="text" name="formdata[email]" value="{{dataform.email.value}}" id="email">
+				</div>
+			</div>
+			<!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('Tipo Utente','cart_onepage')}}</label>
+					<select type="select" name="formdata[typeBuyer]" id="typeBuyer">
+						{% for k,v in dataform.typeBuyer.options %}
+							<option value="{{k}}" {% if dataform.typeBuyer.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			<span class="company_data" style="display:{% if dataform.typeBuyer.value == 'company' %}block{% else %}none{% endif %}">-->
+			<!--<span class="company_data" style="display:{% if dataform.requestInvoice.value == 1 %}block{% else %}none{% endif %}">-->
+		
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('fiscalCode','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[fiscalCode]" value="{{dataform.fiscalCode.value}}" id="fiscalCode">
+				</div>
+			</div>							
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('phone','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[phone]" value="{{dataform.phone.value}}" id="phone">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('cellular','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[cellular]" value="{{dataform.cellular.value}}" id="cellular">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('address','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[address]" value="{{dataform.address.value}}" id="address">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('postalCode','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[postalCode]" value="{{dataform.postalCode.value}}" id="postalCode">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('city','cart_onepage')|capitalize}}*</label>
+					<input type="text" name="formdata[city]" value="{{dataform.city.value}}" id="city">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('country','cart_onepage')|capitalize}}*</label>
+					<select type="select" onchange="" name="formdata[country]" id="country">
+						{% for k,v in dataform.country.options %}
+							<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="div_province">
+				<div class="controls">
+					<label>{{tr('province','cart_onepage')|capitalize}}*</label>	
+					<select type="select" name="formdata[province]" id="province">
+						{% for k,v in dataform.province.options %}
+							<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('Desideri la fattura?','cart_onepage')}}</label>
+					<div class="clear"></div>
+					<label class="switch">
+					  <input type="checkbox" name="formdata[requestInvoice]" id="requestInvoice" value="1" {% if dataform.requestInvoice.value == 1 %}checked{% endif %}>
+					  <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!--<span class="company_data" style="display:{% if dataform.typeBuyer.value == 'company' %}block{% else %}none{% endif %}">-->
+			<span class="company_data" style="display:{% if dataform.requestInvoice.value == 1 %}block{% else %}none{% endif %}">
+				
+
+					
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('company','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[company]" value="{{dataform.company.value}}" id="company">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('vatNumber','cart_onepage')}}*</label>	
+						<input type="text" name="formdata[vatNumber]"  value="{{dataform.vatNumber.value}}" id="vatNumber">
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('pec','cart_onepage')|capitalize}}*</label>	
+						<input type="text" name="formdata[pec]" value="{{dataform.pce.value}}" id="pec">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('sdi','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[codice_univoco]" value="{{dataform.codice_univoco.value}}" id="codice_univoco">
+					</div>
+				</div>
+			
+			</span>
+			
+			
+			<input type='hidden' name='formID'>
+			<input type='hidden' name='action'>
+			{% if logged == false %}
+				<div class="clearfix col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls scegli">
+						<input type="checkbox" name="formdata[use_for_shipping]" value="1" id="use_for_shipping">
+						<label for="use_for_shipping"></label>
+						{{tr('Usa questi dati per la spedizione','cart_onepage')}}
+					</div>
+				</div>
+			{% else %}
+				<div class="clearfix col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls scegli">
+						<input type="checkbox" name="formdata[update_data]" value="1" id="update_data">
+						<label for="update_data"></label>
+						{{tr('Aggiorna i miei dati per i prossimo acquisti','cart_onepage')}}
+					</div>
+				</div>
+			{% endif %}
+		</span>
+	</span>
+	
+	
+	<div class="space10"></div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<button type="button" class="btn-next" onclick="step2();">{{tr('Conferma i tuoi dati','cart_onepage')}}</button>
+	</div>
+</form>
+<div class="space30"></div>
+{% endif %}
+{% if step > 2 %}
+<div class="pallaselezionata">
+	<a href="index.php?mod=cart_onepage&ctrl=Cart&action=cart_datauser" class="btn-modifica">{{tr('Modifica','cart_onepage')}}</a>
+	<span class="txt">
+		<div class="row">
+			<span class="col-xs-12 col-md-5">1. {{tr('Informazioni personali','cart_onepage')}}</span>
+			<span class="col-xs-12 col-md-5 dati-inseriti">
+				
+				
+				
+
+				
+				{% if cart_datauser.company %}
+					{{cart_datauser.company}} <br>
+					{% if cart_datauser.vatNumber %}
+						{{tr('P.IVA','cart_onepage')}} {{cart_datauser.vatNumber|upper}} <br>
+					{% endif %}
+				{% else %}
+					{{cart_datauser.name}} {{cart_datauser.surname}}<br>
+					{% if cart_datauser.fiscalCode %}
+					{{cart_datauser.fiscalCode|upper}} <br>
+					{% endif %}
+
+				{% endif %}
+				{{cart_datauser.email}} <br>
+				{% if cart_datauser.phone %}
+					{{cart_datauser.phone}}
+					{% if cart_datauser.cellular %}
+					/ {{cart_datauser.cellular}}
+					{% endif %}
+				{% else %}
+					{% if cart_datauser.cellular %}
+					{{cart_datauser.cellular}}
+					{% endif %}
+				{% endif %}
+				<br>
+
+				
+				{{cart_datauser.address}}<br>
+				{{cart_datauser.postalCode}} {{cart_datauser.city}}<br>
+				{% if cart_datauser.province %}
+				{{cart_datauser.province}} - {{cart_datauser.country}}<br>
+				{% endif %}
+				
+				
+				
+			
+			</span>
+		</div>
+	</span>
+	
+</div>
+{% endif %}

@@ -1,0 +1,90 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('shipping_method')|title}} {% endblock %} 
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#shipping_general" data-toggle="tab">{{tr('general')|title}}</a></li>
+		<li><a href="#shipping_weight" data-toggle="tab">{{tr('weights')|title}}</a></li>
+	</ul>
+	
+	<div id="myTabContent" class="tab-content">
+		<!----------------------------TAB GENERAL ----------------------------------->
+		<div class="tab-pane fade active in" id="shipping_general">
+			<div class="row">
+				
+				<div class="col-md-12">
+					{{form.build(dataform.id)}}
+					{{form.buildCol(dataform.name,'col-md-12')}}
+					{{form.buildCol(dataform.description,'col-md-12')}}
+					{{form.buildUploadImage(dataform.image,'col-md-12')}}
+					{{form.buildCol(dataform.tracking_url,'col-md-12')}}
+					
+					{{form.buildCol(dataform.taxCode,'col-md-4')}}
+					{{form.buildCol(dataform.orderView,'col-md-4')}}
+					{{form.buildCol(dataform.visibility,'col-md-4')}}
+					<div class="clearfix"></div>
+					
+					{{form.buildCol(dataform.freeShipping,'col-md-6')}}
+					{{form.buildCol(dataform.countriesFreeShipping,'col-md-6')}}
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade in" id="shipping_weight">
+			<div class="row">
+				
+			
+				<div class="col-md-12" style="text-align:center">
+						<table class="table center-table" >
+							<thead>
+								<th>{{tr('weight')}} ({{tr('grams')}})</th>
+								<th></th>
+							</thead>
+							<tbody id="cont_pesi">
+								{% if weight %}
+								{% for k,v in weight %}
+								<tr  id="peso_{{k}}">
+									<td style="padding: 14px 0;"><input name="formdata[pesi][{{k}}][weight]" value="{{v}}" class="form-control"></td>
+									<td style="padding: 14px 0;" class="text-right"><button class="btn btn-danger btn-sm" onclick="del_peso({{k}}); return false;"><i class="fa fa-times-circle"></i> {{tr('delete')}}</button></td>
+								</tr>
+								{% endfor %}
+
+								{% else %}
+								
+								
+								<tr id="nessun_peso" ><td colspan="2">{{tr('no_weights')}}</td></tr>
+								{% endif %}
+							</tbody>
+							<tfoot>
+								<td style="padding: 14px 0;" colspan="2" class="text-right"><button class="btn btn-sm btn-success" onclick="add_peso(); return false;"><i class="fa fa-plus"></i> {{tr('add_weight')}}</button></td>
+							</tfoot>
+					  </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var js_cont_pesi = "{{cont_pesi|escape('js')}}"
+</script>
+
+<table class="table center-table" style="max-width:500px; display:none;">
+	<tbody>
+		<tr id="modello_peso">
+			<td><input id="peso" class="form-control"></td>
+			<td class="text-right"><button id="elimina" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> {{tr('delete')}}</button></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+{% endblock %}
+

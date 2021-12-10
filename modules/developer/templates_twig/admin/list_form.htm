@@ -1,0 +1,82 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('forms')|title}} {% endblock %} 
+{% block before_content %}
+<div class="row">
+				
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form action="{{script_url}}" method="GET">
+					<div class="input-group">
+						<input type="text" class="form-control " name="search" placeholder="nome" value="{{search}}">
+						<span class="input-group-btn">
+							<button class="btn btn-success" type="submit" tabindex="-1"><i class="fa fa-search"></i> {{tr('search')}}</button>
+						  </span>
+					</div>
+					<input type="hidden" name="action" value="list" >
+					<input type="hidden" name="ctrl" value="FormAdmin">
+					<input type="hidden" name="mod" value="developer">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+								<th style="min-width:70px"><strong>{{tr('id')}}</strong></th>
+								<th><strong>{{tr('name')}}</strong></th>
+								<th>
+									<strong>{{tr('group')}}</strong>
+								</th>
+								<th class="text-center">
+									<strong>{{tr('actions')}}</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in list %}
+							<tr >
+								<td>{{v.codice}}</td>
+								<td>{{v.nome | upper}}</td>
+								<td>{{getGroupForm(v.gruppo) | upper}}</td>
+								
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+										  <a href="index.php?mod=developer&ctrl=FormFieldAdmin&action=list&id_form={{v.codice}}" class="btn btn-default btn-sm"><i class="fa fa-cong"></i> campi</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_edit}}&id={{v.codice}}"><i class="fa fa-pencil"></i> {{tr('edit')}}</a></li>
+											<li><a href="{{url_duplicate}}&id={{v.codice}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+											<li><a href="{{script_url}}&action=export&id={{v.codice}}" target="_blank"><i class="fa fa-download"></i> {{tr('export')}}</a></li>
+											<li><a href="{{url_confirm_delete}}&id={{v.codice}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+										  </ul>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+
+{% endblock %}

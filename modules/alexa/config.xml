@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>98</id>
+		<author>Ciro</author>
+		<name>Alexa</name>
+		<permission>superadmin</permission>
+		<version>2</version>
+		<tag>alexa</tag>
+		<kind>cms</kind>
+		<scope>admin</scope> 
+		<description><![CDATA[Rende l'ecommerce raggiungibile dalle skill di Alexa]]></description> 
+   </info>
+	<linkSetting>index.php?mod=alexa</linkSetting>
+</module>

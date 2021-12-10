@@ -1,0 +1,102 @@
+{% extends "layouts/setting_module.htm" %}
+{% block page_title %}GLS export setting{% endblock %} 
+
+{% block content %}
+
+<!--<form role='form' action='index.php' name='manage_coupon_data' id='manage_coupon_data' method='POST'>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					
+					
+
+					<div class="col-md-12 pull-right">
+						<button type="submit"  class="btn btn-success m-t-10 pull-right"><i class="fa fa-save"></i> Salva</button>
+					</div>
+
+					
+					<input type='hidden' name='type' value="couriers">
+					<input type='hidden' name='action' value="conf">
+					<input type='hidden' name='mod' value="gls">
+					</div>
+			 </div>
+		</div>
+	</div>
+</form>-->
+
+
+<form role='form' action='index.php' name='manage_coupon_data' id='manage_coupon_data' method='POST'>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="form-group col-md-12">
+						{% import "macro/form.htm" as form %}
+						{{form.buildCol(dataform.customer_code,'col-md-6')}}
+						{{form.buildCol(dataform.sede_code,'col-md-6')}}
+
+						{{form.buildCol(dataform.cod_payment,'col-md-6')}}
+						{{form.buildCol(dataform.status_sent,'col-md-6')}}
+						{{form.buildCol(dataform.status_ok,'col-md-6')}}
+
+						<input type='hidden' name='type' value="couriers">
+						<input type='hidden' name='action' value="conf">
+						<input type='hidden' name='mod' value="gls">
+
+						
+					</div>
+					<div class="form-group col-md-12">
+						<h4>Seleziona i metodi di spedizione per cui è abilitato il servizio GLS</h4>
+						<div class="controls">
+							<table class="table table-bordered">
+								<thead>
+									<th></th>
+									<th>Metodo di spedizione</th>
+									<th>Consegna su appuntamento</th>
+								</thead>
+								<tbody>
+									{% for v in metodi %}
+									<tr>
+										<td><input type="checkbox" class="form-control" name="formdata[courier][]" id="courier_{{v.id}}" value="{{v.id}}" {% if v.id in courier %}checked{% endif %}></td>
+										<td>
+											{% if v.visibility %}
+											<span class="label label-success">{{v.get('name')}}</span>
+											{% else %}
+											<span class="label label-danger">{{v.get('name')}}</span>
+											{% endif %}
+										</td>
+										<td>
+											
+
+											<label class="label-switch">
+											  <input type="checkbox" name="formdata[appuntamento][]" id="courier_{{v.id}}" value="{{v.id}}" {% if v.id in appuntamento %}checked{% endif %} class="" data-on-color="success" data-off-color="warning" data-on-text="SI" data-off-text="NO">
+											  <span class="slider"></span>
+											</label>
+										</td>
+									</tr>
+									{% endfor %}
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="col-md-12 pull-right">
+						<button type="submit"  class="btn btn-success m-t-10 pull-right"><i class="fa fa-save"></i> Salva</button>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+
+
+
+
+
+{% endblock %}

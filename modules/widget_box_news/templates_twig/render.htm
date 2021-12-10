@@ -1,0 +1,92 @@
+<div class="category-label check-globals" id="{{ box_id }}" first_news="{{ first_news }}" rows="{{ rows }}"
+	cols="{{ cols }}" cols_netbook="{{ cols_netbook }}" rows_netbook="{{ rows_netbook }}"
+	cols_tablet="{{ cols_tablet }}" rows_tablet="{{ rows_tablet }}" cols_smartphone="{{ cols_smartphone }}"
+	rows_smartphone="{{ rows_smartphone }}"></div>
+
+<!--	VERTICALE	-->
+{% if position == 'verticale' %}
+<div class="flex flex-center widget_box_news">
+	{% if hidemenu == 1 %}
+	<div class="col-menu-cat">
+		<div class="categories text-left menu-desk">
+			<h3>{{ title }}</h3>
+			{% if allCategories == true %}
+				<div box-id="{{ box_id }}" class="category-label flex space-bet cat-active menu-desk-element" id="-1">
+					<span class="label-cat">{{tr('Tutti','widget_box_news')}}</span>
+					<span class="conteggio">{{ allNews }}</span>
+				</div>
+			{% endif %}
+			{% for category in categories.info %}
+				<div box-id="{{ box_id }}" class="category-label flex space-bet menu-desk-element" id="{{ category.id }}">
+					<span class="label-cat">{{ category.get('name') }}</span>
+					<span class="conteggio">{{ category.news_count }}</span>
+				</div>
+			{% endfor %}
+		</div>
+
+		<!-- select mobile -->
+		<div class="categories text-left menu-mob">
+			<h3>{{ title }}</h3>
+			<!-- primo elemento -->
+			{% if allCategories == true %}
+				<div box-id="{{ box_id }}" class="select-cat flex space-bet cat-active menu-mob-active" id="-1">
+					<span class="label-cat">{{tr('Tutti','widget_box_news')}}</span>
+					<span class="conteggio">({{ allNews }})</span>
+				</div>
+			{% else %}
+				<div box-id="{{ box_id }}" class="category-label flex space-bet cat-active menu-mob-active" id="{{ categories[0].info.id }}">
+					<span class="label-cat">{{ categories[0].info.get('name') }}</span>
+					<span class="conteggio">({{ ccategories[0].info.news_count }})</span>
+				</div>
+			{% endif %}
+			<!---->
+
+			<div class="box-toggle">
+				{% if allCategories == true %}
+					<div box-id="{{ box_id }}" class="category-label flex space-bet menu-mob-item cat-active" id="-1">
+						<span class="label-cat">{{tr('Tutti','widget_box_news')}}</span>
+						<span class="conteggio">({{ allNews }})</span>
+					</div>
+				{% endif %}
+				{% for category in categories.info %}
+					<div box-id="{{ box_id }}" class="category-label flex space-bet menu-mob-item" id="{{ category.id }}">
+						<span class="label-cat">{{ category.get('name') }}</span>
+						<span class="conteggio">({{ category.news_count }})</span>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	<div class="col-cont-news">
+		<div id="loader-page"></div>
+		<div class="news-list-{{ box_id }} slick-track draggable">
+			<div class="slider slider-{{ box_id }}">
+			</div>
+		</div>
+	</div>
+</div>
+
+{% else %}
+
+<!--	ORIZZONTALE		-->
+{% if hidemenu == 1 %}
+<div class="col-sm-12 text-center">
+	<h1>{{ title }}</h1>
+	<div class="categories display-inline">
+		{% if allCategories == true %}
+		<h3 box-id="{{ box_id }}" class="category-label" id="-1">{{tr('Tutti','widget_box_news')}} {{ allNews }}</h3>
+		{% endif %}
+		{% for category in categories.info %}
+		<h3 box-id="{{ box_id }}" class="category-label" id="{{ category.id }}">{{ category.get('name') }} {{ category.news_count }}</h3>
+		{% endfor %}
+	</div>
+</div>
+{% endif %}
+<div class="col-sm-12">
+	<div class="news-list-{{ box_id }} slick-track draggable">
+		<div class="slider slider-{{ box_id }}">
+		</div>
+	</div>
+</div>
+{% endif %}

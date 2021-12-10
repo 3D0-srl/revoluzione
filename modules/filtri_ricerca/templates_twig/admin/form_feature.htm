@@ -1,0 +1,9 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Caratteristica prodotto {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+
+
+{% endblock %}

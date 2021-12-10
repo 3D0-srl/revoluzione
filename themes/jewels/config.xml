@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<theme>
+	<info> 
+		<tag>jewels</tag>
+		<author>Ciro Napolitano</author>
+		<graphic>Assia Acunzo</graphic>
+		<frontend>Luca Giaquinto</frontend>
+		<name>Jewels Shop</name>
+		<kind>Eshop</kind>
+		<description><![CDATA[Tema base di un eshop per oggetti di bijoutteria]]></description> 
+   </info>
+</theme>

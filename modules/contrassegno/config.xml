@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>136</id>
+		<author>Ciro Napolitano</author>
+		<name>Contrassegno</name>
+		<permission>ecommerce</permission>
+		<tag>cod</tag> 
+		<kind>payment</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il sistema di pagamento <b>Contrassegno</b>]]></description>
+   </info>
+  <linkSetting>
+		index.php?ctrl=Conf&amp;mod=contrassegno
+   </linkSetting>
+   <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+</module>

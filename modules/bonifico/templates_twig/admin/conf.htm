@@ -1,0 +1,11 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Bonifico {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{% for k,v in dati %}
+ <div class="form-group col-md-12" >
+	  <label for="type">{{v['descrizione']|raw}} </label>
+	  <input type="text" class="form-control" name="formdata[{{k}}]" value="{{v['valore']}}">
+	</div>
+{% endfor %}
+{% endblock %}

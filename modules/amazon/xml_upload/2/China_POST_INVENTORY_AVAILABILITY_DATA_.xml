@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+			<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd"> 
+			<Header> 
+				<DocumentVersion>1.01</DocumentVersion>
+				<MerchantIdentifier>A1VZO1IYX3SMHG</MerchantIdentifier> 
+			</Header> 
+			<MessageType>Inventory</MessageType><Message> 
+						<MessageID>1</MessageID>
+						<OperationType>Update</OperationType> 
+						<Inventory> 
+							<SKU>CC0248UE85</SKU> 
+							<Quantity>84</Quantity>
+						</Inventory>
+						</Message><Message> 
+						<MessageID>2</MessageID>
+						<OperationType>Update</OperationType> 
+						<Inventory> 
+							<SKU>CC0934PN81</SKU> 
+							<Quantity>1</Quantity>
+						</Inventory>
+						</Message></AmazonEnvelope>

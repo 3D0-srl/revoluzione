@@ -1,0 +1,16 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Quipago / CartaSI {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.buildCol(dataform.sandbox,'col-md-12')}}
+{{form.buildCol(dataform.mac_live,'col-md-12')}}
+{{form.buildCol(dataform.alias_live,'col-md-12')}}
+{{form.buildCol(dataform.url_live,'col-md-12')}}
+{{form.buildCol(dataform.mac_sandbox,'col-md-12')}}
+{{form.buildCol(dataform.alias_sandbox,'col-md-12')}}
+{{form.buildCol(dataform.url_sandbox,'col-md-12')}}
+{{form.buildCol(dataform.status_confirmed,'col-md-12')}}
+{% endblock %}
+
+
+

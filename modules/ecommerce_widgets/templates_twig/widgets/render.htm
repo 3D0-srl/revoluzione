@@ -1,0 +1,334 @@
+<!-- <style>
+.panel {
+    margin-top: 0;
+}
+div#widget_ecommerce_last_orders {
+    padding: 0;
+}
+.nome_panel{
+    position: absolute;
+    background: #428bca;
+    top: -14px;
+    left: 41px;
+    color: #FFFFFF;
+    font-size: 16px !important;
+    font-weight:900;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 100;
+}
+.mostra_tutti{
+    position: absolute;
+    background: #428bca;
+    bottom: 4px;
+    right: 29px;
+    color: #FFFFFF;
+    font-size: 16px !important;
+    font-weight: 900;
+    padding: 10px;
+    padding-right: 10px;
+    z-index: 100;
+}
+#widget_ecommerce_last_orders{
+    margin-top:15px;
+}
+.btn-principale {
+    float: right;
+}
+.btn-principale i {
+    font-size: 19px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.table {
+    margin: 20px 0;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+}
+ </style>
+ <div class="col-md-12 col-sm-12" id="widget_ecommerce_last_orders">
+	<div class="panel panel-primary">
+		<h1 class="titolo">Ultimi ordini</h1>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+					<th>ID</th>
+					<th>NUMERO</th>
+					<th>CLIENTE</th>
+					<th>PAGAMENTO</th>
+					<th>DATA</th>
+					<th>TOTALE</th>
+					<th>STATO</th>
+					<th></th>
+				</thead>
+				<tbody>
+					{% for v in last_orders %}
+					<tr>
+						<td>{{v.id}}</td>
+						<td>{{v.number}}</td>
+						<td>{{v.name}} {{v.surname}}</td>
+						<td>{{v.paymentMethod}}</td>
+						<td>{{v.evacuationDate}}</td>
+						<td>{{getHtmlCurrency(v.currency)|raw}} {{v.getTotalFinalFormatted()}}</td>
+						<td>
+							<span class="label" style="background: {{status_color[v.status]}}">{{status_name[v.status]}}</span>
+						</td>
+						<td>
+							<a class="btn btn-default btn-sm" href="index.php?ctrl=OrderAdmin&action=edit&amp;id={{v.id}}&mod=ecommerce"><i class="fa fa-search"></i> vedi</a>
+						</td>
+					</tr>
+					{% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+                <a href="index.php?ctrl=OrderAdmin&action=list&mod=ecommerce" class="btn btn-principale">
+                    Visualizza ordini <i class="fa fa-angle-right"></i>
+		</a>
+	</div>
+</div>-->
+
+
+<div class="tabcordion">
+                        <ul id="myTab" class="nav nav-tabs nav-dark">
+                            <li class="active"><a href="#products" data-toggle="tab">Top Selling</a></li>
+                            <li><a href="#orders" data-toggle="tab">Last Orders</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade active in" id="products">
+                               <div class="row p-20">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <table id="products-table" class="table table-tools table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="min-width:70px"><strong>ID</strong>
+                                                <th><strong>Product</strong>
+                                                </th>
+                                                <th><strong>Category</strong>
+                                                </th>
+                                                <th><strong>Price</strong>
+                                                </th>
+                                                <th><strong>Sales this Month</strong>
+                                                </th>
+                                                <th><strong>Sales Variation</strong>
+                                                </th>
+                                                
+                                                <th class="text-center"><strong>Status</strong>
+                                                </th>
+                                                <th class="text-center"><strong>Actions</strong>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Product 1</td>
+                                                <td>Women / Underwear</td>
+                                                <td><strong>$25.20</strong></td>
+                                                <td>123</td>
+                                                <td class="c-green"><strong>+26%</strong></td>
+                                           
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center "> 
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Product 2 <span class="label bg-red">Low Stock</span>
+                                                </td>
+                                                <td>Menu / Shoes</td>
+                                                <td><strong>$22.55</strong></td>
+                                                <td>112</td>
+                                                <td class="c-green"><strong>+11%</strong></td>
+                                                
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center ">
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Product 3</td>
+                                                <td>Women / Underwear</td>
+                                                <td><strong>$21.00</strong></td>
+                                                <td>97</td>
+                                                <td class="c-red"><strong>-8%</strong></td>
+                                                
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center ">
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Product 4</td>
+                                                <td>Women / Underwear</td>
+                                                <td><strong>$34.25</strong></td>
+                                                <td>85</td>
+                                                <td class="c-green"><strong>+38%</strong></td>
+                                                
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center "> 
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Product 5</td>
+                                                <td>Menu / Shoes</td>
+                                                <td><strong>$42.78</strong></td>
+                                                <td>72</td>
+                                                <td class="c-red"><strong>-6%</strong></td>
+                                                
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center ">
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Product 6</td>
+                                                <td>Women / Underwear</td>
+                                                <td><strong>$21.00</strong></td>
+                                                <td>62</td>
+                                                <td class="c-green"><strong>+47%</strong></td>
+                                                
+                                                <td class="text-center">
+                                                    <span class="label label-success w-300">Online</span>
+                                                </td>
+                                                <td class="text-center ">
+                                                    <a href="ecommerce_product_view.html" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <!--<a href="#" class="delete btn btn-sm btn-default"><i class="fa fa-times-circle"></i> Remove</a>-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="orders">
+                                <div class="row p-20">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                        <table class="table table-tools table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th style="min-width:70px"><strong>ID</strong>
+                                                    <th><strong>Purchase Date</strong>
+                                                    </th>
+                                                    <th><strong>Client</strong>
+                                                    </th>
+                                                    <th><strong>Amount</strong>
+                                                    </th>
+                                                    <th><strong>Items</strong>
+                                                    </th>
+                                                    <th><strong>Delivery date</strong>
+                                                    </th>
+                                                    <th><strong>Destination</strong>
+                                                    </th>
+                                                    <th class="text-center"><strong>Status</strong>
+                                                    </th>
+                                                    <th class="text-center"><strong>Actions</strong>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>03/11/2013</td>
+                                                    <td><a class="c-blue" href="profil_edit.html">John Addams</a></td>
+                                                    <td>$125.20</td>
+                                                    <td>5</td>
+                                                    <td>02/10/2013</td>
+                                                    <td>New York</td>
+                                                    <td class="text-center">
+                                                        <span class="label label-success w-300">Shipped</span>
+                                                    </td>
+                                                    <td class="text-center"> 
+                                                        <a href="ecommerce_order_view.html" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> View</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>02/11/2013</td>
+                                                    <td><a class="c-blue" href="profil_edit.html">Steve Jobs</a></td>
+                                                    <td>$352.55</td>
+                                                    <td>12</td>
+                                                    <td>01/10/2013</td>
+                                                    <td>Chicago</td>
+                                                    <td class="text-center">
+                                                        <span class="label label-success w-300">Payment received</span>
+                                                    </td>
+                                                    <td class="text-center"> 
+                                                        <a href="ecommerce_order_view.html" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> View</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>04/09/2013</td>
+                                                    <td><a class="c-blue" href="profil_edit.html">Mike Jefferson</a></td>
+                                                    <td>$121.00</td>
+                                                    <td>6</td>
+                                                    <td>28/09/2013</td>
+                                                    <td>Los Angeles</td>
+                                                    <td class="text-center">
+                                                        <span class="label label-primary w-300">Waiting paiment</span>
+                                                    </td>
+                                                    <td class="text-center"> 
+                                                        <a href="ecommerce_order_view.html" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> View</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>02/09/2013</td>
+                                                    <td><a class="c-blue" href="profil_edit.html">James Miller</a></td>
+                                                    <td>$85.55</td>
+                                                    <td>2</td>
+                                                    <td>14/09/2013</td>
+                                                    <td>Miami</td>
+                                                    <td class="text-center">
+                                                        <span class="label label-primary w-300">Waiting paiment</span>
+                                                    </td>
+                                                    <td class="text-center"> 
+                                                        <a href="ecommerce_order_view.html" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> View</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>01/09/2013</td>
+                                                    <td><a class="c-blue" href="profil_edit.html">Samantha Harris</a></td>
+                                                    <td>$125.20</td>
+                                                    <td>5</td>
+                                                    <td>No date</td>
+                                                    <td>Boston</td>
+                                                    <td class="text-center">
+                                                        <span class="label label-warning w-300">Fraud</span>
+                                                    </td>
+                                                    <td class="text-center"> 
+                                                        <a href="ecommerce_order_view.html" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> View</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>90</id>
+		<author>Addati Amedeo</author>
+		<name>Invio Email Con Template</name>
+		<permission>superadmin</permission>
+		<tag>invio_email_template</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette di inviare email formattate in html]]></description> 
+   </info>
+   <menu> 
+		<scope>admin</scope>
+		<header>	
+			<locale> 
+				<name>	
+					<it>Invio email con template</it> 
+					<en>Send mail with template</en>
+				</name>
+			</locale>
+			<icon>fa fa-envelope</icon>
+			<priority>100</priority> 
+			<permission>config</permission> 
+		</header>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Gestione Template</it>
+					<en>Manage Template</en>
+				</name>
+			</locale>
+			<tag>add_template_email</tag>
+			<permission>config</permission> 
+			<priority>100</priority> 
+			<url>controller.php?action=add_template</url>
+		</items>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Prepara Email</it>
+					<en>Prepara Email</en>
+				</name>
+			</locale>
+			<tag>prepara_email</tag>
+			<permission>config</permission> 
+			<priority>100</priority> 
+			<url>controller.php?action=prepara_email</url>
+		</items>
+		
+	</menu>
+</module>

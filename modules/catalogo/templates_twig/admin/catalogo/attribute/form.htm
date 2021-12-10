@@ -1,0 +1,136 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('attribute')|title}} {% endblock %} 
+{% block css %}
+{{parent()}}
+<style>
+tbody {
+    background: #fff;
+    border: 0;
+}
+
+tbody p {
+	font-size: 16px;
+	margin: 0;
+}
+
+.table > tbody > tr > td {
+	border-top: 0;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.label,'col-md-12')}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				
+				<th style="width: 500px;">Valore</th>
+				<th>Ordine visualizzazione</th>
+				<th>Immagine allegata</th>
+				<th></th>
+			</thead>
+			<tbody id="cont_valori">
+				{% for k,val in valori_attributo %}
+				<tr  id="valore_{{k}}">
+					
+					<td>
+						{{form.buildCol(val.valore)}}
+					</td>
+					<td>
+						<input class="form-control" type="text" name="formdata[valori][{{k}}][orderView]" value="{{val.orderView}}">
+						<input class="form-control" type="hidden" name="formdata[valori][{{k}}][id]" value="{{val.id}}">
+						<input class="form-control" type="hidden" name="formdata[valori][{{k}}][attribute]" value="{{val.attribute}}">
+					</td>
+					<td>
+						{% set data_img ={ 'id': k,'value':val.img?val.img:'',name:'formdata[valori]['~k~'][img]'} %}
+						{{form.buildUploadImage(data_img,'',true)}}
+					</td>
+					<td>
+						<a href="#" style="float:right;" id="elimina" onclick="del_valore_attributo({{k}});return false;" class="btn btn-sm btn-default" >
+							<i class="fa fa-times"></i>
+							ELIMINA
+						</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfoot>
+					<td colspan="{{num_col}}" style="text-align:right;">
+						<button class="btn btn-sm btn-success" type="button" onclick="add_valori_attributo(); return false;"><i class="fa fa-plus"></i> {{tr('add')}}</button>
+					</td>
+			</tfoot>
+		</table>
+	</div>
+</div>
+
+<table style="display:none">
+	<tbody>
+		<tr id="modello_valore">
+			{#{% for loc in locales %}
+			<td >
+				<input class="form-control" type="text" id="{{loc}}">
+			</td>
+			{% endfor %}#}
+			<td>
+				{{form.buildCol(valore_input)}}
+			</td>
+			<td><input class="form-control" type="text" id="ordine"></td>
+			<td>
+				<input type="file" id="img_file">
+				<input type="hidden" id="image"> <!--- CAMPO CHE CONTERRA' L'ID DELL' IMMAGINE --->
+				<div id="wrapper-upload"></div> <!--- CONTENITORE DEL BOX PER L'UPLOAD ---->
+
+			
+			</td>
+			<td>
+				<a href="#" style="float:right;" id="elimina" class="btn btn-sm btn-default" >
+					<i class="fa fa-times"></i>
+					ELIMINA
+				</a>
+			
+				
+			</td>
+		
+		</tr>
+	</tbody>
+
+</table>
+<script>	
+	var cont_valori_attributo = "{{cont_valori_attributo|escape('js')}}";
+	var valori_attributo = "{{valori_attributo|escape('js')}}";
+	
+	function add_valori_attributo(){
+		cont_valori_attributo++;
+		var t = $('#modello_valore').clone().appendTo('#cont_valori').attr('id','valore_'+cont_valori_attributo).show();
+		$('#valore_'+cont_valori_attributo+" input").each(function(i,value){
+			if($(this).attr('id') != 'ordine' && $(this).attr('id') != 'image' && $(this).attr('id') != 'img_file'){
+				$(this).attr('name',"formdata[valori]["+cont_valori_attributo+"][value]["+$(this).attr('locale')+"]");
+			}
+		});
+		
+		t.find('#image').attr('id',"image_"+cont_valori_attributo).attr('name',"formdata[valori]["+cont_valori_attributo+"][img]");
+		t.find('#wrapper-upload').attr('id',"wrapper-upload_"+cont_valori_attributo);
+		t.find('#img_file').attr('id',"img_"+cont_valori_attributo).cironapo({
+						id_field_img:"image_"+cont_valori_attributo,
+						id_wrapper: "wrapper-upload_"+cont_valori_attributo, 
+						box_small: true
+					});
+		t.find('#ordine').attr('name',"formdata[valori]["+cont_valori_attributo+"][orderView]");
+		t.find('#elimina').attr('onclick',"del_valore_attributo("+cont_valori_attributo+");return false;");
+		
+	}
+
+	function del_valore_attributo(codice){
+		$('#valore_'+codice).remove();	
+	}
+
+</script>
+{% endblock %}

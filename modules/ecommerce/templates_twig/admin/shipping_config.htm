@@ -1,0 +1,87 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('setting')|title}} {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.panel {
+    margin: 0;
+}
+
+.panel-primary>.panel-heading {
+    color: #333;
+    background-color: #DFE1E6;
+    border-color: #DFE1E6;
+    font-size: 24px;
+    margin: 0 0 16px;
+}
+
+.panel.panel-primary {
+	border: 1px solid #DFE1E6;
+	background: #fff;
+}
+
+.custom-header {
+    text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+.ms-container .ms-selectable, .ms-container .ms-selection {
+    border: 1px solid #DFE1E6;
+    border-radius: 8px;
+    padding: 16px;
+	background: #FAFBFC;
+}
+
+.ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection {
+    padding: 8px;
+}
+
+.ms-container .ms-list {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.ms-container .ms-list.ms-focus{
+  border-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.ms-container .ms-selectable li.ms-hover, .ms-container .ms-selection li.ms-hover {
+    background-color: rgba(0, 0, 0, 0.14);
+	color: inherit;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<div class="panel panel-primary">
+<div class="panel-heading">
+    Spedizione gratuita
+</div>
+<div class="panel-body">
+{{form.buildCol(dataform.enableFreeShipping,'col-md-6')}}
+{{form.buildCol(dataform.thresholdFreeShipping,'col-md-6')}}
+<div class="clearfix"></div>
+{{form.buildCol(dataform.startFreeShipping,'col-md-6')}}
+{{form.buildCol(dataform.endFreeShipping,'col-md-6')}}
+
+{{form.buildMultiselect(dataform.userCategoryFreeShipping,'col-md-12')}}
+{{form.buildMultiselect(dataform.shippingMethodFreeShipping,'col-md-12')}}
+{{form.buildMultiselect(dataform.shippingAreaFreeShipping,'col-md-12')}}
+</div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   {metatags()}
+
+    <title>Newsletter - Iscrizione alla newsletter</title>
+	{output(#css.htm#)}
+	{output(#javascript.htm#)}
+	<flexy:toJavascript flexy:prefix="js_"
+		section="prodotto.section"
+    >
+	<style>
+		.borderless td, .borderless th {
+			border: none;
+		}
+		.pad50{
+			padding-top:60px !important;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+
+   {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="row newsletter">
+        <div class="container">
+			<h1>newsletter</h1>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<span flexy:if="errore">{errore}</span>
+						<div class="row">
+							<form action="controller.php" method="POST">
+							
+							<div class="form-group col-xs-12 col-md-12 col-lg-12" id="div_lista">
+								<label>Email :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[email]">
+								</div>
+							</div>
+							<div class="form-group form-inline col-xs-12 col-md-12 col-lg-12" id="div_notifyuser">
+								<label>Azione :</label>
+								<div class="controls">	
+										<input type="radio" class="form-control" name="formdata[action]" id="action_subscribe" value="subscribe" > AGGIUNGI
+										<input type="radio" class="form-control" name="formdata[action]" id="action_unsubscribe" value="unsubscribe"> ELIMINA	
+								</div>
+							</div>
+							{if:selezionabile}
+							
+							<div class="form-group form-inline col-xs-12 col-md-12 col-lg-12" id="div_notifyuser">
+								<label>Newsletters :</label>
+								<div class="controls" flexy:ignore>
+										{foreach:lists,list}
+										<input type="checkbox" class="form-control" name="formdata[lists][]" value="{list.id}"> {list.get(#list_name_view#)}
+										{end:}	
+								</div>
+							</div>
+							{else:}
+								{foreach:lists,list}
+								<input type="hidden"  name="formdata[lists][]" value="{list.id}">
+								{end:}
+							{end:}
+							
+
+							<div class="col-md-12">
+								<input type="hidden"  name="action" value="execute">
+								<button type="submit"  class="btn-default"><i class="fa fa-check"></i> INVIA</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="space40"></div>
+    </div>
+   {output(#footer.htm#)}
+
+</body>
+
+</html>

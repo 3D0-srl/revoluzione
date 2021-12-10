@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+		cont_valori_attributo="cont_valori_attributo"
+    >
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+						
+	                     <h3><strong>Configurazione Alert Cookie</h3>
+	
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+
+				<form role='form' action='controller.php' name='attributo' id='attributo' method='POST'>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+							<div class="form-group" id="div_scegli_template">
+								<label>Scegli il template :</label>
+								<div class="controls">
+											<select type="select" class="form-control" name="formdata[scegli_template]"></select>
+										</div>
+							</div>
+									
+							<div class="form-group" id="div_nome_mittente">
+								<label>Nome del mittente :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[nome_mittente]">
+								</div>
+							</div>
+
+							<div class="form-group" id="div_email_mittante">
+								<label>Email del mittente :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[email_mittante]">
+								</div>
+							</div>
+
+							<div class="form-group" id="div_nome_destinatario">
+								<label>nome_destinatario :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[nome_destinatario]">
+								</div>
+							</div>
+
+							<div class="form-group" id="div_email_destinatario">
+								<label>Inserisci email destinatario :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[email_destinatario]">
+								</div>
+							</div>
+
+							<div class="form-group" id="div_oggetto">
+								<label>Oggetto :</label>
+								<div class="controls">
+									<input type="text" class="form-control " name="formdata[oggetto]">
+								</div>
+							</div>
+
+							<div class="form-group" id="div_messaggio">
+								<label>Testo del messaggio :</label>
+								<div class="controls">
+									<textarea type="text" class="form-control cke-editor-advanced" name="formdata[messaggio]"></textarea>
+								</div>
+							</div>
+
+							<input type='hidden' name='formID'>
+							<input type='hidden' name='action'>
+
+							
+									
+							</div>
+					 </div>
+				</div>
+	      </div>
+		  <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+                    <button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+                </div>
+           </div>
+
+		  </form>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+
+</body>
+
+</html>

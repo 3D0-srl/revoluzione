@@ -1,0 +1,26 @@
+{% extends 'layouts/cart_layout.htm' %}
+{% block javascript %}
+	{{parent()}}
+	<!-- GOOGLE TAG MANAGER --->
+	{{do_action('ganalitycs_display_script_checkout',step)}}
+	<!-- GOOGLE TAG MANAGER --->
+{% endblock %}
+{% block content %}
+	<div class="container container-big">
+		<div class="fixfixed">
+			<form method="POST" id="cart">
+				<div class="titcart">{{tr('Riepilogo del tuo carrello','cart_onepage')}}</div>
+				<input type='hidden' name="formdata[recurrent_payment]" value="">
+				{% if ordini %}
+				
+					{% include 'partials/table_orders.htm' %}
+
+				{% else %}
+					<span>{{tr('empty_cart_message','cart_onepage')|raw}}</span>
+				{% endif %}
+			</form>
+		</div>
+		{% include 'partials/fixedcart.htm' %}
+		<div class="space60"></div>
+	</div>
+{% endblock %}

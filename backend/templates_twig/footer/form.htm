@@ -1,0 +1,11 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('footer')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.id_page,'col-md-12')}}
+
+{% endblock %}
+

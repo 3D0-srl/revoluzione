@@ -1,0 +1,29 @@
+{% extends "layouts/page.htm" %}
+
+{% block content %}
+
+{% block javascript %}
+{{ parent() }}
+<script>
+    $(() => {
+        $('.slider').slick({
+            infinite: true,
+            dots: true,
+            arrows: true
+        });
+    });
+</script>
+{% endblock %}
+
+<h1>{{ photogallery.name }}</h1>
+<p>Desrizione: {{ photogallery.description }}</p>
+<p>Desrizione Breve: {{ photogallery.descriptionShort }}</p>
+<br>
+<div class="slider">
+    {% for image in photogallery.images %}
+    <div class="element-to-slide">
+        <img src="{{ image.url }}" alt="">
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

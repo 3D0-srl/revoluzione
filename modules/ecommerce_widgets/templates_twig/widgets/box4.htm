@@ -1,0 +1,45 @@
+<div class="panel no-bd bd-3 panel-stat">
+	<div class="panel-body bg-blue p-15">
+		<div class="row m-b-10">
+			<div class="col-xs-3">
+				<i class="glyph-icon flaticon-visitors"></i>
+			</div>
+			<div class="col-xs-9">
+				<div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="56">
+					<div>
+						<small class="stat-title">Clienti questo mese</small>
+						<h1 class="m-0 w-300">{{tot_new_users}}</h1>
+					</div>
+					<div>
+						<small class="stat-title">Totale clienti</small>
+						<h1 class="m-0 w-300">{{tot_users}}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<small class="stat-title">Ordine medio</small>
+				<div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="30">
+					<div>
+						<h3 class="m-0 w-300">&euro; {{ordine_medio_mese}}</h3>
+					</div>
+					<div>
+						<h3 class="m-0 w-300">&euro;{{ordine_medio_totale}}</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<small class="stat-title">Media prodotti</small>
+				<div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="30">
+					<div>
+						<h3 class="m-0 w-500">{{num_prod_mese}}</h3>
+					</div>
+					<div>
+						<h3 class="m-0 w-500">{{num_prod_totale}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

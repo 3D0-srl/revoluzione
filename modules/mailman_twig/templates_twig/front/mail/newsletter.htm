@@ -1,0 +1,22 @@
+{% extends 'layouts/mail.htm' %}
+{% block content %}
+
+<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#022801" size="+2">
+	<strong>Gentile cliente,</strong>
+</font>
+<br><br><br>
+<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#b3b3b3">
+	{{message|raw}}
+	
+	
+	<p style=" margin-top: 30px; ">
+		<a href="{{abslolute_baseurl}}index.php?mod=mailman_twig&ctrl=Front&action=subscribe&key=__key__">{{abslolute_baseurl}}index.php?mod=mailman_twig&ctrl=Front&action=subscribe&key=__key__</a>
+	</p>
+</font>
+
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,11 @@
+
+<script>
+	var js_module_cookie_alert = "{{module_cookie_alert_json| escape('js')|raw}}";
+	
+</script>
+
+{% if module_cookie_alert.styleCompact == 1 %}
+	<div class="eupopup eupopup-top eupopup-style-compact"></div>
+{% else %}
+	<div class="eupopup eupopup-top eupopup-style-default"></div>
+{% endif %}

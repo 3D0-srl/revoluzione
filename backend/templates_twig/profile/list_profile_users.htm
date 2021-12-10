@@ -1,0 +1,66 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('users')|title}} {{profile.name}} {% endblock %} 
+{% block buttons_right %}	
+	
+	<a href="{{url_list}}" class="btn btn-primary m-t-10"><i class="fa fa-list p-r-10"></i> {{tr('back_to_profiles')}}</a>
+	<a href="{{script_url}}&action=add_user&id={{profile.id}}" class="btn btn-success m-t-10"><i class="fa fa-plus p-r-10"></i> {{tr('add')}}</a>
+	
+{% endblock %}
+{% block content %}
+	
+
+	  <div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				
+				{% if list %}
+				<table id="sezioni-table" class="table table-tools table-striped">
+					<thead>
+						<tr>
+							
+							<th class="text-center" style="min-width:70px"><strong>ID</strong></th>
+
+
+							<th class="text-center"><strong>{{tr('name')}}</strong></th>
+							
+							<th class="text-center"><strong>{{tr('email')}}</strong></th>
+							
+							<th class="text-center"><strong>{{tr('actions')}}</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for v in list %}
+						<tr flexy:foreach="list,v">
+							
+							<td class="text-center">{{v.id}}</td>
+							
+							<td class="text-center">{{v.name}} {{v.surname}}</td>
+							<td class="text-center">{{v.email}}</td>
+							
+							
+							 <td class="text-center"> 
+								
+								<div class="btn-group media-group">
+									  <a href="{{url_confirm_delete_user}}{{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a>
+									 
+								</div>
+								
+								
+							</td>
+						</tr>
+
+						{% endfor %}
+						
+					</tbody>
+				</table>
+				{% else %}
+				<p>Nessun utente presente in archivio</p>
+				{% endif %}
+			</div>
+			{% if links %}
+			<div class="m-t-30 align-center">
+				{{links['all']|raw}}
+			</div>
+			{% endif %}
+		</div>
+
+{% endblock %}

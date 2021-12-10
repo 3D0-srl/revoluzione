@@ -1,0 +1,80 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('news')|title}} {% endblock %} 
+
+
+
+{% block buttons_right %}	
+	<a href="index.php?ctrl=NewsCategoryAdmin&mod=news&action=list" class="btn btn-info m-t-10"><i class="fa fa-list p-r-10"></i> {{tr('categories')}}</a>
+	{{parent()}}
+{% endblock %}
+
+
+{% block content %}
+
+	  <div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+				<table id="sezioni-table" class="table table-tools table-striped">
+					<thead>
+						<tr>
+							
+
+							<th class="text-center" style="min-width:70px"><strong>ID</strong></th>
+
+
+							<th class="text-center"><strong>{{tr('title')}}</strong></th>
+							<th class="text-center"><strong>{{tr('slug')}}</strong></th>
+							<th class="text-center"><strong></strong></th>
+							<th class="text-center"><strong>{{tr('actions')}}</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for v in list %}
+						<tr flexy:foreach="list,v">
+								
+							<td class="text-center">{{v.id}}</td>
+							
+							<td class="text-center">{{v.get('title')}}</td>
+							<td class="text-center">{{v.get('slug')}}</td>
+							
+							<td class="text-center">
+								{% if v.visibility %}
+									<span class="label label-success" id="status_{{v.id}}" style="cursor:pointer;" onclick="change_visibility({{v.id}}); return false;">ONLINE</span>
+								{% else %}
+									<span class="label label-danger" id="status_{{v.id}}" style="cursor:pointer;" onclick="change_visibility({{v.id}}); return false;">OFFLINE</span>
+								{% endif %}
+							</td>
+							
+							
+							 <td class="text-center"> 
+								<div class="btn-group media-group">
+									  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+									  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+											<span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu media-menu text-left" role="menu">
+										<li><a  href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+										<li><a href="{{url_confirm_delete}}&id={{v.id}}" ><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+									  </ul>
+								</div>
+
+								
+							</td>
+						</tr>
+
+						{% endfor %}
+						
+					</tbody>
+				</table>
+				{% else %}
+				<p>Nessuna news presente in archivio</p>
+				{% endif %}
+			</div>
+			{% if links %}
+			<div class="m-t-30 align-center">
+				{{links['all']|raw}}
+			</div>
+			{% endif %}
+		</div>
+
+{% endblock %}

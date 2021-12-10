@@ -1,0 +1,6 @@
+{
+    "require": {
+        "goetas/xsd2php": "^2.1"
+    }
+
+}

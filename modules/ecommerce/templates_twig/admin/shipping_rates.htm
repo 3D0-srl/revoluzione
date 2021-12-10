@@ -1,0 +1,89 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %} {{tr('rates')|title}} {{shipping.get('name')}} {% endblock %} 
+
+{% block content %}
+	
+
+ <div class="row">
+        <div class="col-md-12">
+		<h4>*Inserire -1 per esculdere la gestione di un peso</h4>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<input name="formdata[shipping]" value="{{shipping.id}}" type="hidden"/>
+					<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+						<table id="variazioni-table" class="table table-tools table-hover">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>{{tr('area')}}</strong>
+									</th>
+									{% for v in fascia %}
+									<th  class="text-center"> &gt; {{v['inizio']}} gr.<br> &le; {{v['fine']}} gr. </th>
+									{% endfor %}
+									<th class="text-center">
+										<strong>{{tr('actions')}}</strong>
+									</th>
+								</tr>
+							</thead>
+							<tbody id="cont_tariffe">
+								{% for index,data in config_shipping %}
+								<tr id="tariffa_{{index}}">
+									<td class="">
+										<select id="nazione" name="formdata[valori][{{index}}][country]" class="form-control country">
+											{% for k,v in select_aree %}
+												<option value="{{k}}" {% if k==data['country'] %}selected{% endif %}>{{v}}</option>
+												
+											{% endfor %}
+										<select>
+									</td>
+									{% for v in weight %}
+									<td >
+										<input class="form-control weight" type="text" name="formdata[valori][{{index}}][price][{{v}}]" value="{{config_shipping[index]['values'][v]}}">
+									</td>
+									{% endfor %}
+									<td class="text-center">
+									
+										<button id="elimina" class="btn btn-danger btn-sm" onclick="del_tariffa({{index}});return false;"><i class="fa fa-times-circle"></i> Elimina</button></td>
+									</tr>
+								{% endfor %}
+							</tbody>
+							<tfoot>
+								<td colspan="{{colspan}}"></td>
+								<td  class="text-center"><button class="btn btn-sm btn-success" onclick="add_tariffa(); return false;"><i class="fa fa-plus p-r-10"></i> Aggiungi</button></td>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var js_num_config_shipping = "{{num_config_shipping|escape('js')}}"
+</script>
+
+<table class="table center-table" style="max-width:500px; display:none;">
+		<tbody>
+			<tr id="modello_tariffa">
+				<td class="" id="nazione">
+					
+				</td>
+				{% for v in weight %}
+				<td>
+					<input class="form-control weightTmp" type="text" weight="{{v}}">
+				</td>
+				{% endfor %}
+				<td class="text-center"><button id="elimina" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> {{tr('delete')}}</button></td>
+			</tr>
+		</tbody>
+  </table>
+ 
+ <div style="display:none">
+	 <select id="nazione_select" class="form-control">			
+		{% for k,v in select_aree %}
+		<option value="{{k}}">{{v}}</option>
+		{% endfor %}
+	<select>
+</div>
+{% endblock %}

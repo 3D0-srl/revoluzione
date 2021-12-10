@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<module>
+	 <!--Informazioni del modulo-->
+	<info> 
+		<id>{NUMERO_IDENTIFICATIVO_UNIVOCO_DEL_MODULO}</id>
+		<author>{NOME E COGNOME AUTORE MODULO}</author>
+		<name>{NOME DEL MODULO}</name>
+		<permission>superadmin</permission>
+		<version>2</version>
+		<tag>{NOME DELLA CARTELLA DEL MODULO (ALFANUMERICO)}</tag>
+		<kind>{TIPOLOGIA MODULO. VALORI AMMESSI: catalogo,ecommerce,cms}</kind>
+		<scope></scope> 
+		<description><![CDATA[{DESCRIZIONE DEL MODULO}]]></description> 
+   </info>
+	<!--Creazione dei link nel menu laterale del backend-->
+    <menu> 
+		<scope>admin</scope>
+		
+		
+		<header>
+			<locale> <!--nome della voce di menu-->
+				<name>	
+					<it>Voce Padre</it>
+					<en>Voce Padre</en>
+					<es>Voce Padre</es>
+					<de>Voce Padre</de>
+					<fr>Voce Padre</fr>
+					<pt>Voce Padre</pt>
+				</name>
+			</locale>
+			<tag>tag_module_voce_padre</tag>  <!--tag identificativo della voce di menu-->
+			<permission>cms</permission>  <!--permessi-->
+			<icon>fa fa-heart</icon>  <!--icona voce menu (FONTAWESOME)-->
+			<iconImg>../modules/module_starter/img/cona.png</iconImg>  <!--immagine icona voce menu: percorso relativo alla directory del modulo-->
+			<priority>99</priority>  <!--ordine di visualizzazione-->
+			<relativeUrl>1</relativeUrl> <!-- url realtiva al backend -->
+			<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action</url> <!--url della voce (NON OBBLIGATORIA PER LA VOCE PADRE)-->
+		</header>
+		<!--
+		<header>
+			<parent>ecommerce</parent> //Nel caso le voci di menu devono essere associato ad una voce padre esistente
+		</header>
+		-->
+
+		<items>
+			<locale> <!--nome della voce di menu-->
+				<name>	
+					<it>Voce figlia 1</it>
+					<en>Voce figlia 1</en>
+					<es>Voce figlia 1</es>
+					<de>Voce figlia 1</de>
+					<fr>Voce figlia 1</fr>
+					<pt>Voce figlia 1</pt>
+				</name>
+			</locale>
+			<tag>tag_module_voce_1</tag> <!--tag identificativo della voce di menu-->
+			<permission>cms</permission> <!--permessi-->
+			<priority>101</priority> <!--ordine di visualizzazione-->
+			<relativeUrl>0</relativeUrl> <!-- url realtiva al backend -->
+			<url>/backend/index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action</url> <!--url della voce-->
+		</items>
+
+		<items>
+			<locale> <!--nome della voce di menu-->
+				<name>	
+					<it>Voce figlia 2</it>
+					<en>Voce figlia 2</en>
+					<es>Voce figlia 2</es>
+					<de>Voce figlia 2</de>
+					<fr>Voce figlia 2</fr>
+					<pt>Voce figlia 2</pt>
+				</name>
+			</locale>
+			<tag>tag_module_voce_2</tag> <!--tag identificativo della voce di menu-->
+			<permission>cms</permission> <!--permessi-->
+			<priority>101</priority> <!--ordine di visualizzazione-->
+			<relativeUrl>1</relativeUrl> <!-- url realtiva al backend -->
+			<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action</url> <!--url della voce-->
+		</items>
+	</menu>
+	<!--Url per la configurazione del modulo nella lista dei moduli-->
+	<linkSetting>
+		<relativeUrl>1</relativeUrl> <!-- url realtiva al backend -->
+        <url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=conf</url> <!--url della voce-->
+  	</linkSetting>
+
+
+  
+  <!--Lista dei widget che il modulo deve installare per il pagecomposer-->
+
+   <widget> 
+		<name>{NOME DEL WIDGET}</name>
+		<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+		<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+	 <widget> 
+		<name>{NOME DEL WIDGET 2}</name>
+		<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+		<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+	 <widget> 
+		<name>{NOME DEL WIDGET}</name>
+		<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+		<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+</module>

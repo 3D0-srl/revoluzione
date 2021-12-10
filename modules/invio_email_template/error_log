@@ -1,0 +1,11 @@
+[25-Sep-2019 16:04:59 Europe/Rome] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function SendMailTemplate::get_template(), 0 passed in /home2/nuovo2/public_html/modules/invio_email_template/controller.php on line 252 and exactly 1 expected in /home2/nuovo2/public_html/modules/invio_email_template/classes/SendMailTemplate.class.php:20
+Stack trace:
+#0 /home2/nuovo2/public_html/modules/invio_email_template/controller.php(252): SendMailTemplate::get_template()
+#1 /home/librerie/public_html/classes_4.8.3/Form.class.php(1109): array_invio_mail_template()
+#2 /home/librerie/public_html/classes_4.8.3/Setting.class.php(378): Form->getElements()
+#3 /home2/nuovo2/public_html/modules/invio_email_template/controller.php(20): get_form(NULL, 'module_prepara_...', 'prepara_email_o...', NULL)
+#4 {main}
+  thrown in /home2/nuovo2/public_html/modules/invio_email_template/classes/SendMailTemplate.class.php on line 20
+[28-Nov-2019 18:24:41 Europe/Rome] PHP Warning:  Declaration of WidgetUltimeNews::build() should be compatible with PageComposerComponent::build($data = Array) in /home2/nuovo2/public_html/modules/news/widget.php on line 69
+[28-Nov-2019 18:24:41 Europe/Rome] PHP Deprecated:  Non-static method Form::delete() should not be called statically in /home2/nuovo2/public_html/modules/invio_email_template/My_ModuleHelper.php on line 51
+[28-Nov-2019 18:24:41 Europe/Rome] PHP Deprecated:  Non-static method Form::delete() should not be called statically in /home2/nuovo2/public_html/modules/invio_email_template/My_ModuleHelper.php on line 52

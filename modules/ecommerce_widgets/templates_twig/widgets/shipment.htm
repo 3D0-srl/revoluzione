@@ -1,0 +1,109 @@
+
+
+<div class="row ecommerce_widgets_shipment">
+        <!--<div class="label">Ordini da spedire ({{list|length}})</div>-->
+    
+        <div class="ecommerce_widgets_shipment_img">
+         
+            <!--<img src="../modules/ecommerce_widgets/images/delivery-truck.png">-->
+            <img class="img_courier" src="../modules/ecommerce_widgets/images/courier-man.svg">
+            <div class="widget-title">Ordini da spedire ({{list|length}})</div>
+            <div class="arrows">
+                <a id="ecommerce_widgets_shipment_button_next"><img class="arrow-img" src="../modules/ecommerce_widgets/images/left-arrow.svg"></a>
+                <a id="ecommerce_widgets_shipment_button_prev"><img class="arrow-img" src="../modules/ecommerce_widgets/images/right-arrow.svg"></a>
+                
+            </div>
+        </div>
+        <div class="ecommerce_widgets_shipment_order">
+                {% for item in list %}
+                <div class="ecommerce_widgets_shipment_order_item">
+                    <div class="order-number">Ordine n° {{item.number}}</div>
+                    <div class="clearfix"></div>
+
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/customer.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Cliente</span>
+                            <span class="detail">{{item.name}} {{item.surname}}</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/calendar.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Data</span>
+                            <span class="detail">{{item.evacuationDate}}</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/credit-card.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Pagamento</span>
+                            <span class="detail">{{item.paymentMethod}}</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/approved.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Stato</span>
+                            <span class="detail">{{item.status}}</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/dollar.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Totale</span>
+                            <span class="detail">€ {{item.total}}</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/delivery-man.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Corriere</span>
+                            <span class="detail">-</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/delivery.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Destinatario</span>
+                            <span class="detail">-</span>
+                        </div>
+                    
+                    </div>
+                    <div class="panel-order">
+                        <img src="../modules/ecommerce_widgets/images/address.png">
+                        
+                        <div class="panel-order-info">
+                            <span class="detail-label">Indirizzo destinatario</span>
+                            <span class="detail">{{item.shippingCity}} ({{item.shippingProvince}})</span>
+                            <span class="detail">{{item.shippingAddress}} {{item.postalCode}}</span>
+                        </div>
+                    
+                    </div>
+                    <span class="buttons">
+                        <a href="index.php?mod=ecommerce&ctrl=OrderAdmin&action=edit&id={{item.id}}" class="view"> Vedi</a>
+                        <a href="index.php?mod=ecommerce&ctrl=OrderAdmin&action=print&id={{item.id}}" class="print"> Stampa</a>
+                    </span>
+                </div>
+                {% endfor %}
+
+              
+
+        </div>
+    
+
+</div>
+

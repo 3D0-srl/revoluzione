@@ -1,0 +1,11 @@
+{% extends "layouts/tab/base_form.htm" %}
+{% block edit_page_title %}{{tr('Tax')|capitalize}} {% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.percentage,'col-md-12')}}
+{{form.buildCol(dataform.active,'col-md-12')}}
+{{form.build(dataform.id)}}
+
+{% endblock %}
+   

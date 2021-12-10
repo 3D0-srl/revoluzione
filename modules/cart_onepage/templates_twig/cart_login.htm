@@ -1,0 +1,63 @@
+{% extends 'layouts/cart_layout.htm' %}
+{% block content %}
+	<div class="container-small container-login">
+		<div class="fixfixed fullwidth">
+			<div class="contcart cont-log-reg">
+				<div class="tab only_mob">
+					<div class="col50 active user">{{tr('Login','cart_onepage')}}</div>
+					<div class="col50 guest">{{tr('Nuovo cliente','cart_onepage')}}</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 logindata" id="logindata">
+					<div class="titcart only_desk">{{tr('Sei un cliente registrato?','cart_onepage')}}</div>
+					<p>{{tr('Completa il tuo ordine più velocemente.','cart_onepage')}}</p>
+					<div class="space20"></div>
+					<form class="float-label"  id="cart_login">
+						<span id="error_login" class="errore"></span>
+						<div class="controls">	
+							<label>Username</label>
+							<input type="text" name="formdata[username]" id="username" class="camp_obb_tmp">
+						</div>
+						<div class="controls">
+							<label>Password</label>
+							<input type="password" name="formdata[password]" id="password" class="camp_obb_tmp">
+						</div>
+						{% if enable_buy_without_registration %}
+							<div class="space50"></div>
+						{% endif %}
+						<button class="btn-accedi" type="button" onclick="login_cart(); return false;">{{tr('Effettua il login','cart_onepage')}}</button>
+						
+					</form>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 nologindata">
+					<div class="titcart only_desk">{{tr('Sei un nuovo cliente?','cart_onepage')}}</div>
+					{% if enable_buy_without_registration %}
+						<p>{{tr("Inserisci la tua e-mail per procedere con l'ordine.",'cart_onepage')}}</p>
+						<div class="space20"></div>
+						<form class="float-label"  id="no_registration">
+							<span id="error_no_registration" class="errore"></span>
+							<div class="controls">
+								<label>Email</label>
+								<input type="text" name="formdata[email]" class="m-b-10" id="email" value="{{email}}">
+							</div>
+							<button class="btn-accedi" onclick="no_registration_cart(); return false;" type="button">{{tr("Procedi con l'ordine",'cart_onepage')}}</button>
+							<div class="space10"></div>
+							<div class="col100 scegli m-b-0">
+								<input type="checkbox" {% if email %}checked{% endif %} value="1" name="formdata[privacy]" id="privacy">
+								<label for="privacy"></label>
+								<a href="p/privacy.htm">{{tr('Acconsento al trattamento della Privacy Policy.','cart_onepage')}}</a>
+							</div>
+						</form>
+						<div class="space30"></div>
+					{% endif %}
+					
+					
+					<p>{{tr("Se lo desideri, puoi registrarti adesso per effettuare più velocemente i prossimi acquisti.",'cart_onepage')}}</p>
+					<a href="index.php?ctrl=Cart&&mod=cart_onepage&action=cart_datauser&registration=1" class="btn-accedi btn-registrati">{{tr('Registrati adesso','cart_onepage')}}</a>
+					
+				</div>
+			</div>
+			<div class="space60"></div>	
+		</div>
+	</div>
+{% endblock %}
+

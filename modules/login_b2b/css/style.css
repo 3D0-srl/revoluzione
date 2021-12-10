@@ -1,0 +1,90 @@
+/*login*/
+body.log {
+	/*background: url("/themes/givova/images/bg-log.jpg") no-repeat scroll center center / cover;*/
+	background:#333333;
+	height: 100vh;
+}
+
+.box-log {
+	position: fixed;
+	right: 50%;
+	top: 50%;
+	-webkit-transform: translateX(50%)translateY(-50%);
+	-moz-transform: translateX(50%)translateY(-50%);
+	transform: translateX(50%)translateY(-50%);
+	background: rgba(255,255,255,0.86);
+	border-radius: 6px;
+	padding: 71px 40px;
+	text-align: center;
+	width: 490px;
+}
+
+.box-log .logo {
+	margin: 0 0 53px;
+	width: 100%;
+}
+
+.box-log .logo img {
+	max-height: 65px;
+}
+
+.box-log .logo .marion img {
+    max-height: 18px;
+}
+
+.box-log input[type="text"]:not(.newsletterinput):not(#searchfld):not(#quantity), .box-log input[type="mail"], .box-log input[type="email"], .box-log input[type="password"] {
+    margin: 0 0 10px;
+}
+
+.box-log .pulsante-arancio-pieno {
+	border: 0;
+	margin-top: 6px;
+}
+
+a.lost-pwd {
+	color: #122561;
+	text-decoration: underline;
+	font-size: 16px;
+	line-height: 20px;
+	display: block;
+	margin-top: 25px;
+}
+
+/*recupera password*/
+.log h1 {
+	text-align: center;
+	font-size: 32px;
+	margin: 0 0 24px;
+	text-transform: uppercase;
+	line-height: 36px;
+}
+
+input[type="text"]:not(.newsletterinput):not(#searchfld):not(#quantity), input[type="mail"], input[type="email"], input[type="password"], select {
+	float: left;
+    display: block;
+    height: 56px;
+    border:0;
+	background: #C8CAD4;
+	border-radius: 4px;
+    color: #4D4D4D;
+    font-size: 16px;
+    line-height: 56px;
+    padding: 0 16px;
+	width: 100%;
+    margin: 0 0 24px;
+}
+
+
+.pulsante-arancio-pieno, a.pulsante-arancio-pieno:hover, a.pulsante-arancio-pieno:active, a.pulsante-arancio-pieno:focus {
+	color: #fff;
+	background: #E9771A;
+	font-size: 16px;
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 4px;
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 0;
+}

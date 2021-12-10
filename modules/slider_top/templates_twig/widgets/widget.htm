@@ -1,0 +1,10 @@
+<div class="sovra-top loading">
+	{% for item in items %}
+			
+			<div style="background-color:{{item.background_color}};{% if item.url %}cursor:pointer;{% endif %}" {% if item.url %}onclick="document.location.href='{{item.url}}'"{% endif %}>
+				<p style="color:{{item.color}}">{{item.text|raw}}</p>
+				
+			</div>
+	{% endfor %}
+	
+</div>

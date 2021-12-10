@@ -1,0 +1,16 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('user_category')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+<span style="display:none">
+{{form.buildCol(dataform.label,'col-md-12')}}
+</span>
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.note,'col-md-12')}}
+{{form.build(dataform.locked)}}
+{% endblock %}
+
+
+

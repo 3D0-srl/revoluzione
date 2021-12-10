@@ -1,0 +1,8 @@
+{% extends "layouts/base_form_widget.htm" %}
+{% block css %}
+	{{parent()}}
+{% endblock %}
+{% block content %}
+	{% import "macro/form.htm" as form %}
+	{{form.buildCol(dataform.messaggio,'col-md-12')}}
+{% endblock %}

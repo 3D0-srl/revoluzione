@@ -1,0 +1,71 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} GESTPAY di Banca Sella {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+
+{{form.buildCol(dataform.sandbox,'col-md-6')}}
+{{form.buildCol(dataform.review_order,'col-md-6')}}
+{{form.buildCol(dataform.currency_code,'col-md-6')}}
+{{form.buildCol(dataform.status_confirmed,'col-md-6')}}
+<div class="row">
+	<div class="tabcordion col-md-12">
+		   <ul id="myTab" class="nav nav-tabs">
+				  <li class="active"><a href="#live" data-toggle="tab">Live</a></li>
+				  <li class=""><a href="#sandbox_box" data-toggle="tab">Sandbox</a></li>
+		   </ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active in" id="live">
+					<div class="row">
+					{{form.buildCol(dataform.shopLogin,'col-md-12')}}
+					
+					</div>
+				</div>
+
+				<div class="tab-pane fade in" id="sandbox_box">
+					<div class="row">
+					{{form.buildCol(dataform.shopLoginTest,'col-md-12')}}
+					
+					</div>
+
+				</div>
+		</div>
+	</div>
+</div>
+
+
+ <div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+			
+			
+			 <h5>IMPOSTAZIONI DASHBOARD GESTPAY</h5>
+			<p style="font-weight: normal;">
+			 <ol>
+			 <li>nella pagina <span style="font-style: italic;">Configurazione > Sicurezza</span> aggiungere l'indirizzo IP del server cioè <span style="color:green">{{server_ip}}</span><br>
+			 
+			 </li>
+			 <li>nella pagina <span style="font-style: italic;">Configurazione > Ambiente</span> impostare i seguenti valori:
+
+				<ul>
+					<li>URL per risposta positiva: <span style="color:green">{{baseurl}}/modules/gestpay/response.php</span></li>
+					<li>URL per risposta negativa: <span style="color:green">{{baseurl}}/modules/gestpay/response.php</span></li>
+				</ul>
+			 
+			 </li>
+			  </ol>	
+			</p>
+			<h5>CARTE DI TEST</h5>
+			<p><a href="https://docs.bancasella.shinesoftware.it/testing-mode" target="_blank">https://docs.bancasella.shinesoftware.it/testing-mode</a></p>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+
+
+
+{% endblock %}

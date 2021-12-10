@@ -1,0 +1,165 @@
+<h4>Mappatura stato ordine in entrata</h4>
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<table class="table">
+				<thead>
+					<th>Corriere Amazon</th>
+					<th>Corriere Shop</th>
+					<th></th>
+				</thead>
+				<tbody id="cont_corrieri">
+					{% for k,v in map_corrieri %}
+					<tr id="">
+
+						<td id="amazon">
+						
+						<select name="formdata[carrier][{{k}}][id_amazon]" class="form-control">
+							{% for v1 in corrieri_amazon %}
+							<option value="{{v1}}" {% if v.id_amazon == v1 %}selected{% endif %}>{{v1}}</option>
+							{% endfor %}
+						</select>
+						
+						
+						</td>
+						<td id="marion">
+						<select name="formdata[carrier][{{k}}][id_marion]" class="form-control">
+							{% for k1,v1 in corrieri_marion %}
+							<option value="{{k1}}" {% if v.id_marion == k1 %}selected{% endif %}>{{v1}}</option>
+							{% endfor %}
+						</select>
+						
+						
+						</td>
+						<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+					</tr>
+					{% endfor %}
+				</tbody>
+
+				<tfoot>
+						<td colspan="3" class="text-right"><button class="btn btn-success btn-sm" type="button" onclick="add_corriere(); return false;"><i class="fa fa-plus"></i> aggiungi</button></td>
+				</tfoot>
+		</table>
+	</div>
+</div>
+
+
+<!--QUI--->
+<h4>Mappatura stato ordine in uscita</h4>
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<table class="table">
+				<thead>
+					<th>Corriere Shop</th>
+					<th>Corriere Amazon</th>
+					<th>Marketplace</th>
+					<th></th>
+				</thead>
+				<tbody id="cont_corrieri_exit">
+					{% for k,v in map_corrieri_exit %}
+					<tr id="">
+
+						<td id="amazon">
+						
+						<select name="formdata[carrier_exit][{{k}}][id_marion]" class="form-control">
+							
+							{% for k1,v1 in corrieri_marion %}
+							<option value="{{k1}}" {% if v.id_marion == k1 %}selected{% endif %}>{{v1}}</option>
+							{% endfor %}
+						</select>
+						
+						
+						</td>
+						<td id="marion">
+						<select name="formdata[carrier_exit][{{k}}][id_amazon]" class="form-control">
+
+							{% for v1 in corrieri_amazon_exit %}
+							<option value="{{v1}}" {% if v.id_amazon == v1 %}selected{% endif %}>{{v1}}</option>
+							{% endfor %}
+							
+						</select>
+						
+						
+						</td>
+						<td id="market">
+						<select name="formdata[carrier_exit][{{k}}][market]" class="form-control">
+							<option value="0">TUTTI</option>
+							{% for v1 in markets %}
+
+							<option value="{{v1}}" {% if v.market == v1 %}selected{% endif %}>{{v1}}</option>
+							{% endfor %}
+						</select>
+						
+						
+						</td>
+						<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+					</tr>
+					{% endfor %}
+				</tbody>
+
+				<tfoot>
+						<td colspan="4" class="text-right"><button class="btn btn-success btn-sm" type="button" onclick="add_corriere_exit(); return false;"><i class="fa fa-plus"></i> aggiungi</button></td>
+				</tfoot>
+		</table>
+	</div>
+</div>
+
+
+
+<!--- MODELLI --->
+
+<div style="display:none">
+	<select id="select_corrieri_amazon" class="form-control">
+		{% for v in corrieri_amazon %}
+		<option value="{{v}}">{{v}}</option>
+		{% endfor %}
+	</select>
+
+	<select  id="select_corrieri_amazon_exit" class="form-control">
+		{% for v in corrieri_amazon_exit %}
+		<option value="{{v}}">{{v}}</option>
+		{% endfor %}
+		
+	</select>
+
+	<select  id="select_corrieri_marion" class="form-control">
+		{% for k,v in corrieri_marion %}
+		<option value="{{k}}">{{v}}</option>
+		{% endfor %}
+	</select>
+
+	<select  id="select_markets" class="form-control">
+		<option value="0">TUTTI</option>
+		{% for v in markets %}
+		
+		<option value="{{v}}">{{v}}</option>
+
+		{% endfor %}
+	</select>
+</div>
+
+<table class="table" style="display:none">
+	<tr id="modello_corriere">
+
+		<td id="amazon"></td>
+		<td id="marion"></td>
+		<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+	</tr>
+
+	
+</table>
+<table class="table" style="display:none">
+	<tr id="modello_corriere_exit">
+		
+		<td id="marion"></td>
+		<td id="amazon"></td>
+		<td id="market"></td>
+		<td><button class="btn btn-danger btn-sm" type="button" onclick="$(this).closest('tr').remove(); return false;"><i class="fa fa-trash-o"></i> elimina</button></td>
+
+	</tr>
+
+</table>

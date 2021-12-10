@@ -1,0 +1,70 @@
+<div class="fixedcart" id="carrello_fisso" step="{step_cart}">
+	<div class="box-spedizione-gratuita">
+		<img src="/themes/jewels/images/ico-spedizione-gratuita.png">
+		Ti ringraziamo per aver effettuato l'ordine!
+	</div>
+	<div class="space15"></div>
+	<div class="box-costi">
+		<div class="col50">Subtotale</div>
+
+		<div class="col50 text-right bb">
+			<input type="hidden" id="cart_total_products_value" value="{{cart_total_products}}">
+			{% if show_taxes %}
+				{{currencyLabel|raw}} <span id="cart_total_products_without_tax">{{formattanumero(cart_total_products_without_tax)}}</span>
+			{% else %}
+				{{currencyLabel|raw}} <span id="cart_total_products">{{formattanumero(cart_total_products)}}</span>
+			{% endif %}
+		</div>
+
+
+		{% if show_taxes %}
+			<div class="space10"></div>
+			<div class="col50">Tasse</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="cart_taxes">{{formattanumero(cart_total_tax)}}</span></td>
+			</div>
+	
+		{% endif %}
+		{% if step > 3 %}
+			
+			{% if class_nosped %}
+				<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+			{% else %}
+				<div class="space10"></div>
+				<div class="col50">Costi spedizione</div>
+				<div class="col50 text-right bb">
+					{{currencyLabel|raw}} <span id="priceShippingFormatted">{{formattanumero(cart_shipping_price)}}</span></td>
+					<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+				</div>
+			{% endif %}
+
+		{% endif %}
+
+		{% if step == 5 %}
+			<div class="space10"></div>
+			<div class="col50">Costi pagamento</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="pricePaymentFormatted">0,00</span></td>
+				<input type="hidden" value="0" id="pricePayment">
+			</div>
+		{% endif %}
+		
+		<span id="menu_cart_left"></span>
+	</div>
+	<div class="dividerfixed"></div>
+	<span class="box-costi totale">
+		<div class="col50">Totale</div>
+		<div class="col50 text-right bb">
+			{{currencyLabel|raw}} <span id="cart_total">{{formattanumero(cart_total)}}</span>
+		</div>
+	</span>
+	<div class="space30"></div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<a href="index.php" class="cancel_new_address">Torna al sito</a>	
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<a href="javascript:window.print()" class="btn-next">Stampa ordine</a>
+		</div>
+	</div>
+</div>

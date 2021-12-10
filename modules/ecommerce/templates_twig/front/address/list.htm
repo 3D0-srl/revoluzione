@@ -1,0 +1,69 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<img src="modules/ecommerce/images/ico-i-miei-indirizzi-backend.png">{{tr('I miei indirizzi','ecommerce')}}
+{% endblock %}
+
+
+{% block backend_content %}
+
+	
+
+
+<span id="other_address">
+	{% for add in list %}
+	<div class="box_address active" id="address_{{add.id}}">
+		<div class="cont_address">
+			<div class="info_address">
+				{% if add.id == default_address %}
+				<h6 class="address_selected"><img src="modules/ecommerce/images/ico-indirizzo-predefinito.png">Indirizzo predefinito</h6>
+				{% endif %}
+				<span>{{add.name}} {{add.surname}}</span><br>
+				<span>{{add.address}}</span><br>
+				<span>{{add.postalCode}} {{add.city}}</span><br>
+				{% if add.province %}
+				<span>{{add.getNameProvince()}} - {{add.getNameCountry()}}</span><br>
+				{% endif %}
+				{% if add.email %}
+				<span>{{add.email}}</span><br>
+				{% endif %}
+				<span>
+				{% if add.phone %}
+					{{add.phone}}
+					{% if add.cellular %}
+					/ {{add.cellular}}
+					{% endif %}
+				{% else %}
+					{% if add.cellular %}
+					{{add.cellular}}
+					{% endif %}
+				{% endif %}
+				</span>
+			</div>
+		</div>
+		<div class="box_btn">
+			<span class="address_actions">
+				<div class="btn_address" onclick="new_address({{add.id}}); return false;">
+					{{tr('Modifica','ecommerce')}}
+				</div>
+				<div class="btn_address" onclick="confirmDeleteAddress($(this)); return false;">
+					{{tr('Elimina','ecommerce')}}
+				</div>
+			</span>
+			<span class="confirm_delete_address" style="display:none">
+				<p class="errore">{{add.cofirm_delete_message|raw}}</p>
+				<div class="btn_address" onclick="cancelDeleteAddress($(this)); return false;">{{tr('Annulla','ecommerce')}}</div>
+				<div class="btn_address"  onclick="deleteAddress({{add.id}}); return false;">{{tr('Elimina','ecommerce')}}</div>
+			</span>
+		</div>
+
+	</div>
+	{% endfor %}
+</span>
+<div class="clear"></div>
+<div class="btn-addform" onclick="new_address(0);">
+	<img src="modules/ecommerce/images/ico_cart_new_address.png">{{tr('Aggiungi nuovo indirizzo','ecommerce')}}
+</div>
+
+
+{% endblock %}

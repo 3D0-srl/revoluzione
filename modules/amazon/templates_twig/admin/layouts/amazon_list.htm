@@ -1,0 +1,17 @@
+{% extends "common/list.htm" %}
+{% block page_header %}
+{% include "layouts/header.htm" %}
+<div class="pull-right">   
+    {% block buttons_right %}	
+        {% for b in tool_buttons %}
+            <a href="{{b.url}}" class="{{b.class}} m-t-10">
+            {% if b.iconType == 'icon' %}
+                <i class="{{b.icon}}"></i> 
+            {% else %}
+                <img src="{{b.img}}"> 
+            {% endif %} {{b.text}}</a>
+        {% endfor %}
+        
+    {% endblock %}
+</div>
+{% endblock %}

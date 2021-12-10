@@ -1,0 +1,98 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<img src="modules/ecommerce/images/ico-i-miei-indirizzi-backend.png">{{tr('I miei indirizzi','ecommerce')}}
+{% endblock %}
+
+
+{% block backend_content %}
+<span id="nuovo_indirizzo">
+<span id="error" class="errore"></span>
+<form method="POST" class="float-label" id="new_address_form">
+	<span>
+		<div class="controls">
+			<label for="formdata[label]">{{tr('Etichetta','ecommerce')}}*</label>
+			<input type="text" name="formdata[label]" id="label" value="{{dataform.label.value}}" >
+		</div>
+	</span>
+	<div class="clearfix"></div>
+	<div class="controls">
+		<label for="formdata[name]">{{tr('Nome','ecommerce')}}*</label>
+		<input type="text" name="formdata[name]" id="name" value="{{dataform.name.value}}">
+	</div>
+	<div class="controls odd">
+		<label for="formdata[surname]">{{tr('Cognome','ecommerce')}}*</label>
+		<input type="text" name="formdata[surname]" id="surname" value="{{dataform.surname.value}}">
+	</div>
+	<div class="controls">
+		<label for="formdata[email]">{{tr('Email','ecommerce')}}*</label>
+		<input type="text" name="formdata[email]" id="email" value="{{dataform.email.value}}">
+	</div>
+	
+	<div class="controls odd">
+		<label for="formdata[phone]">{{tr('Telefono','ecommerce')}}*</label>
+		<input type="text" name="formdata[phone]" id="phone" value="{{dataform.phone.value}}">
+	</div>
+	<div class="controls">
+		<label for="formdata[cellular]">{{tr('Cellulare','ecommerce')}}*</label>
+		<input type="text" name="formdata[cellular]" id="cellular" value="{{dataform.cellular.value}}">
+	</div>
+	<div class="controls odd">
+		<label for="formdata[address]">{{tr('Indirizzo','ecommerce')}}*</label>
+		<input type="text" name="formdata[address]" id="address" value="{{dataform.address.value}}">
+	</div>
+	<div class="controls">
+		<label for="formdata[postalCode]">{{tr('CAP','ecommerce')}}*</label>
+		<input type="text" name="formdata[postalCode]" id="postalCode" value="{{dataform.postalCode.value}}">					 
+	</div>
+	<div class="controls odd">
+		<label for="formdata[city]">{{tr('Città','ecommerce')}}*</label>
+		<input type="text" name="formdata[city]" id="city"  value="{{dataform.city.value}}">
+	</div>
+			
+	<div class="controls ">
+		<label>{{tr('Nazione','ecommerce')}}*</label>
+		<select type="select" name="formdata[country]" id="country">
+			{% for k,v in dataform.country.options %}
+					<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>	
+			{% endfor %}
+		</select>
+	</div>
+	<div class="controls odd" id="div_province">
+		<label>{{tr('Provincia','ecommerce')}}*</label>
+		<select type="select" name="formdata[province]" id="province">
+			{% for k,v in dataform.province.options %}
+				<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
+			
+			{% endfor %}
+		</select>
+	</div>
+	<div class="clear"></div>
+	<div class="controls" id="">
+		<label>{{tr('Informazioni aggiuntive','ecommerce')}}</label>
+		<textarea type="textarea" name="formdata[note]">{{dataform.note.value}}</textarea>
+	</div>
+	
+	<div class="clear"></div>
+	<span>*{{tr("I campi con l'asterisco sono obbligatori","ecommerce")}}</span>
+	<input type='hidden' name='formID'>
+	<input type='hidden' name='action'>
+	<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
+	<div class="clearfix"></div>
+	<button class="cancel_new_address" onclick="cancel_address(); return false;">
+		{{tr('Annulla','ecommerce')}}
+	</button>
+	{% if dataform.id.value %}
+	<button class="save_address" onclick="new_address_ok(); return false;">
+		{{tr('Salva','ecommerce')}}
+	</button>
+	{% else %}
+	<button class="save_address" onclick="new_address_ok(); return false;">
+		{{tr('Aggiungi','ecommerce')}}
+	</button>
+
+	{% endif %}
+	
+</form>
+</span>
+{% endblock %}

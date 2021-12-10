@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "*.htm": "php"
+    },
+    "emmet.includeLanguages": {
+        "twig": "htm"
+    },
+}
+

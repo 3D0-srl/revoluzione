@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header> 
+		<DocumentVersion>1.01</DocumentVersion>
+		<MerchantIdentifier>{merchantIdentifier}</MerchantIdentifier> 
+	</Header> 
+	<MessageType>Relationship</MessageType>
+	<Message flexy:foreach="list,data"> 
+		<MessageID>{data[product]}</MessageID> 
+		<OperationType>Update</OperationType> 
+		<Relationship> 
+			<ParentSKU>{prefix}{data[product]}</ParentSKU>
+			<Relation  flexy:foreach="data[children],id">
+				<SKU>{prefix}{id}</SKU> 
+				<Type>Variation</Type>
+			</Relation>
+			
+			<!--<FulfillmentLatency>1</FulfillmentLatency>-->
+		</Relationship> 
+	</Message> 
+</AmazonEnvelope>

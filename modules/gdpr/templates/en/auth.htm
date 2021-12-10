@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     {metatags()}
+
+    <title>User Area | {setting[info][nomesito]}</title>
+	   
+    {output(#css.htm#)}
+	<link rel="stylesheet" href="css/address.css">
+	{output(#javascript.htm#)}
+	<script src="js/script.js"></script>
+    <style>
+
+	
+
+	</style>
+
+</head>
+
+<body id="userarea">
+
+    <!-- Navigation -->
+     {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+           <!--<div class="col-md-3">
+				{output(#colonna_sinistra_utente.htm#)}
+			</div>!-->
+
+			<div class="space40"></div>
+			<div class="bread_crumbs_userarea">
+				<a href="/account/home.htm">My account</a><i class="fa fa-angle-right"></i>
+				<a class="active" href="#">My authorizations</a>
+				<div class="right">
+					<a href="javascript: window.history.go(-1)" class="indietro"><i class="fa fa-arrow-left"></i> Back</a>
+				</div>
+			</div>
+			<div class="space20"></div>
+
+            <div class="col-xs-12 col-md-12 col-lg-12">
+				<h1 class="tal">My authorizations</h1>
+				
+
+				<div class="col-md-12 panel panel-default consenso">
+					
+					<div class="panel-body">
+						<p flexy:if="!list">No authorizations</p>
+						<div class="well" flexy:foreach="list,v">
+						<p>Agreement to <b>cookie</b> to improve user experience</p>
+						<button class="btn btn-sm btn-default pull-right" onclick="del_auth('{v[module]}','{v[options]}'); return false;"><i class="fa fa-trash-o"></i> remove</button>
+						</div>
+					</div>
+				</div>
+						
+
+					</div>
+
+
+				<div class="space20"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+	{output(#footer.htm#)}
+
+
+
+</body>
+
+</html>

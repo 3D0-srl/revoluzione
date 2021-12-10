@@ -1,0 +1,39 @@
+{% extends 'layouts/page.htm' %}
+{% block metatags %}
+	{{parent()}}
+	<meta property="og:title" content="{{title_share}}">
+	<meta property="og:description" content="{{title_share}}">
+	<meta property="og:image" content="{{image_share}}">
+	<meta property="og:url" content="{{link}}">
+	<meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+{% block content %}
+	<h4 class="txtc">Wishlist di {{name}}</h4>
+	<div class="clear"></div>
+
+	<div class="coldx fullwidth">
+		<div class="contprod">
+			{% if prodotti == false %}
+				<span>{{tr('Nessun articolo presente','catalogo')}}</span>
+			{% else %}
+				{% for riga in prodotti %}
+					{% include 'partials/product_list.htm' with {'product_row': riga,'img_type_product_list':type_img,'class_row_product':class_row} %}
+				{% endfor %}
+			{% endif %}
+		</div>
+		{% if other_products_pager %}
+		<div class="btn-showmore" id="btn-showmore" onclick="show_other_products($(this),'{{return_location}}','{{number_view}}')" style="display:{% if load_on_scroll %}none{% else %}block{% endif %}">
+			{{tr('mostra altri')}}
+		</div>
+		{% if load_on_scroll %}
+			<div class="space20"></div>
+			<div id="loader-ajax">caricamento in corso</div>
+		{% endif %}
+		{% endif %}
+		<div class="space120"></div>
+		<div class="pull-right">
+			{{links['all']|raw}}
+		</div>
+		<div class="space40"></div>
+	</div>
+{% endblock %}

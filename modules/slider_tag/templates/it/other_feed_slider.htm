@@ -1,0 +1,19 @@
+<div class="slide_instagram" flexy:foreach="list,v" id="popup_instagram_{v.ordine}">
+	{v.getDivWithTags():h}
+	<div class="details_instagram">			
+		<div class="product_instagram" flexy:foreach="v.products,v2">
+			<div class="img_product" prodotto="{v2[id]}">
+				<img src="{v2[image]}">
+			</div>
+			<div class="details_product">
+				{currencyLabel:h} {v2[price]} <br>
+				{v2[name]}
+			</div>
+			<a href="{v2[url]}" target="_blank" class="add_product">
+				Vai alla scheda
+			</a>
+		</div>
+		<div class="space20"></div>
+		{v.text:h}			
+	</div>
+</div>

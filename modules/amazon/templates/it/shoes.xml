@@ -1,0 +1,81 @@
+
+<Message>
+	<MessageID>{data[MessageID]}</MessageID>
+	<OperationType>Update</OperationType>
+	<Product>
+		<SKU>{data[SKU]}</SKU>
+		<StandardProductID flexy:if="data[standard_product_id_value]">
+			<Type>{data[standard_product_id_type]}</Type>
+			<Value>{data[standard_product_id_value]}</Value>
+		</StandardProductID>
+		<ProductTaxCode>{data[ProductTaxCode]}</ProductTaxCode>
+		<LaunchDate>{data[LaunchDate]}</LaunchDate>
+		<DescriptionData>
+			<Title>{data[Title]}</Title>
+			<Brand>{data[Brand]}</Brand>
+			<Description>{data[Description]}</Description>
+		</DescriptionData>
+		<ProductData>
+			<Shoes>
+				<ClothingType>{data[clothing_type]}</ClothingType>
+				{if:data[children]}
+				<VariationData>
+					<Parentage>parent</Parentage>
+					<Size flexy:if="data[Size]">{data[Size]}</Size>
+					<Color flexy:if="data[Color]">{data[Color]}</Color>
+					<VariationTheme>{data[VariationTheme]}</VariationTheme>
+				</VariationData>
+				{end:}
+				<ClassificationData>
+					<CountryOfOrigin flexy:if="data[CountryOfOrigin]">{data[CountryOfOrigin]}</CountryOfOrigin>
+					<ColorMap flexy:if="data[ColorMap]">{data[ColorMap]}</ColorMap>
+					<SizeMap flexy:if="data[SizeMap]">{data[SizeMap]}</SizeMap>
+					<ArchType flexy:if="data[ArchType]">{data[ArchType]}</ArchType>
+					<Department>{data[Department]}</Department>
+					<OuterMaterialType>{data[OuterMaterialType]}</OuterMaterialType>
+				</ClassificationData>
+			</Shoes>
+		</ProductData>
+	</Product>
+</Message>
+{foreach:data[children],riga}
+<Message>
+	<MessageID>{riga[MessageID]}</MessageID>
+	<OperationType>Update</OperationType>
+	<Product>
+		<SKU>{riga[SKU]}</SKU>
+		<StandardProductID>
+			<Type>{riga[standard_product_id_type]}</Type>
+			<Value>{riga[standard_product_id_value]}</Value>
+		</StandardProductID>
+		<ProductTaxCode>{riga[product_tax_code]}</ProductTaxCode>
+		<LaunchDate>{riga[launch_date]}</LaunchDate>
+		<DescriptionData>
+			<Title>{riga[Title]}</Title>
+			<Brand>{riga[Brand]}</Brand>
+			<Description>{riga[Description]}</Description>
+		</DescriptionData>
+		<ProductData>
+			<Shoes>
+				<ClothingType>{riga[clothing_type]}</ClothingType>
+				<VariationData>
+					<Parentage>child</Parentage>
+					<Size flexy:if="riga[Size]">{riga[Size]}</Size>
+					<Color flexy:if="riga[Color]">{riga[Color]}</Color>
+					<VariationTheme>{data[VariationTheme]}</VariationTheme>
+				</VariationData>
+				<ClassificationData>
+					<CountryOfOrigin flexy:if="riga[CountryOfOrigin]">{riga[CountryOfOrigin]}</CountryOfOrigin>
+					<ColorMap flexy:if="riga[ColorMap]">{riga[ColorMap]}</ColorMap>
+					<SizeMap flexy:if="riga[SizeMap]">{riga[SizeMap]}</SizeMap>
+					<ArchType flexy:if="riga[ArchType]">{riga[ArchType]}</ArchType>
+					<Department>{riga[Department]}</Department>
+					<OuterMaterialType>{riga[OuterMaterialType]}</OuterMaterialType>
+				</ClassificationData>
+			</Shoes>
+		</ProductData>
+	</Product>
+</Message>
+
+{end:}
+

@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="/modules/amazon/css/product.css?v=10"/>
+<div class="tab-pane fade in" id="product_amazon">
+		{if:!one_account}
+		<div class="row">
+		        
+				<div class="col-md-12">
+				{foreach:tabs,k,v}
+				<div class="account_amazon" index="{k}">{v[name]}</div>
+				{end:}
+								  
+				</div>
+		</div>
+		{end:}
+		{foreach:tabs,k,v}
+		{if:!one_account}
+		<div class="row m-t-10 box_account_amazon" id="box_amazon_{k}" style="display:none">			
+			<div class="col-md-12">
+				{foreach:v[markets],m}
+				<div class="account_market_amazon" account="{v[id]}" market="{m[name]}">
+						
+						<img src="/modules/amazon/images/{m[img]}"/>
+				   </div>
+				{end:}
+				   				  
+				   				
+			</div>
+		</div>
+		{else:}
+		<div class="row m-t-10 box_account_amazon" id="box_amazon_{k}" style="">			
+			<div class="col-md-12">
+				{foreach:v[markets],m}
+				<div class="account_market_amazon" account="{v[id]}" market="{m[name]}">
+						
+						<img src="/modules/amazon/images/{m[img]}"/>
+				   </div>
+				{end:}
+				   				  
+				   				
+			</div>
+		</div>
+
+		{end:}
+		{end:}
+		
+		{foreach:tabs,k,v}
+		{foreach:v[markets],m}
+		<div class="row m-t-10 box_market_amazon box_market_amazon_{v[id]}_{m[name]}" style="display:none">			
+				   
+				
+				
+						
+				<div class="form-group form-inline col-md-12">
+						
+						<div class="controls">
+							{if:uguale(m[disable_sync],#1#)}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][disable_sync]" checked="checked" value="1" flexy:xhtml /> Disabilita sincronizzazione {if:hasChildren}(<span style="color:red;">L'azione verrà applicata anche alle variazioni di questo prodotto </span>){end:}
+							{else:}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][disable_sync]" value="1" flexy:xhtml/> Disabilita sincronizzazione {if:hasChildren}(<span style="color:red;">L'azione verrà applicata anche alle variazioni di questo prodotto </span>){end:}
+							{end:}
+						</div>
+						{if:!is_children}
+						<div class="controls">
+							{if:uguale(m[new_product],#1#)}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][new_product]" checked="checked" value="1" flexy:xhtml /> Creazione prodotto
+							{else:}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][new_product]" value="1" flexy:xhtml/> Creazione prodotto
+							{end:}
+						</div>
+						{end:}
+						{if:hasChildren}
+
+						<div class="controls">
+							{if:uguale(m[parent_description],#1#)}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][parent_description]" checked="checked" class="parent_amazon_description" value="1" flexy:xhtml /> Utilizza i dati del prodotto padre per le variazioni
+							{else:}
+							<input type="checkbox" name="formdata[modules][amazon][{v[id]}][{m[name]}][parent_description]" class="parent_amazon_description" value="1" flexy:xhtml/> Utilizza i dati del prodotto padre per le variazioni
+							{end:}
+						</div>
+
+						{end:}
+				</div>
+				<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][check]" type="hidden" value="1"/>
+				{if:hasChildren}
+
+
+				<span id="parent_data_amazon" style="display:none">
+				<div class="form-group col-md-12" id="">
+						<label>Prezzo:</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][price]" type="text" value="{m[price]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (1)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_1]" type="text" value="{m[bullet_1]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (2)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_2]" type="text" value="{m[bullet_2]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (3)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_3]" type="text" value="{m[bullet_3]}"/>
+						</div>
+				</div>
+
+				</span>
+
+
+
+				{else:}
+				
+				
+				<div class="form-group col-md-12" id="">
+						<label>Prezzo:</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][price]" type="text" value="{m[price]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (1)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_1]" type="text" value="{m[bullet_1]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (2)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_2]" type="text" value="{m[bullet_2]}"/>
+						</div>
+				</div>
+				<div class="form-group col-md-12" id="">
+						<label>Bullet (3)</label>
+						<div class="controls">
+							<input class="form-control" name="formdata[modules][amazon][{v[id]}][{m[name]}][bullet_3]" type="text" value="{m[bullet_3]}"/>
+						</div>
+				</div>
+
+
+				
+				{end:}
+
+
+
+		
+						
+				 
+		</div>
+		{end:}
+		{end:}
+				
+		
+</div>
+<script src="/modules/amazon/js/product.js?v=16"></script>
+   

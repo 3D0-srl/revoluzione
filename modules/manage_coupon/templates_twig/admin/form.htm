@@ -1,0 +1,35 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Coupon {% endblock %} 
+{% block javascript %}
+{{parent()}}
+<script>
+
+var js_limit = "{{dataform.use_limit.value|escape('js')}}";
+var js_multiple_use = "{{dataform.multiple_use.value|escape('js')}}";
+
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+
+{{form.buildCol(dataform.discount_type,'col-md-12')}}
+{{form.buildCol(dataform.discount_value,'col-md-6')}}
+{{form.buildCol(dataform.expiry_date,'col-md-6')}}
+{{form.buildCol(dataform.min_level,'col-md-12')}}
+{{form.buildCol(dataform.multiple_use,'col-md-12')}}
+{{form.buildCol(dataform.num_repeat,'col-md-12')}}
+
+{{form.buildCol(dataform.use_limit,'col-md-12')}}
+{{form.buildCol(dataform.user_category,'col-md-12')}}
+{{form.buildCol(dataform.users,'col-md-12')}}
+
+
+{% endblock %}

@@ -1,0 +1,229 @@
+.table.table-orders > tbody > tr > td.status-order span {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	padding: 3px 12px;
+	border-radius: 16px;
+	text-transform: lowercase;
+	display: inline-block;
+	color: #fff;
+}
+
+.table.table-orders > tbody > tr > td.status-order span::first-letter {
+	text-transform: uppercase;
+}
+
+.table.table-orders > tbody > tr > td {
+	vertical-align: middle;
+}
+
+.table.table-orders > thead > tr > th {
+	font-size: 16px;
+	font-weight: 600;
+	border-bottom: 0;
+}
+
+.table.table-orders > tbody > tr > td,
+.table.table-orders > tbody > tr > td > a {
+	font-size: 16px;
+	font-weight: 400;
+	color: #5D5D5D;
+	border-top: 0;
+}
+
+.table-responsive:not(.table-responsive-order) .table.table-orders > tbody > tr {
+	border-top: 1px solid #DBDCE0;
+	position: relative;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.table.table-orders > tbody > tr > td.link-order > a {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+.table.table-orders > tbody > tr > td.link-order > a > img {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	max-height: 16px;
+	margin-top: -8px;
+}
+
+.col-dati-order {
+	float: left;
+	width: 20%;
+	padding: 0 15px;
+}
+
+.row-total-order {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+.row-total-order p {
+	margin-bottom: 0;
+}
+
+.table-responsive.table-responsive-order {
+	padding-top: 4px;
+}
+
+.titl-backend .titl-order {
+	margin-left: -61px;
+	margin-bottom: 0;
+	/*margin-top: -18px;*/
+}
+
+.titl-backend .titl-order span {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.breadcrumb-order,
+.breadcrumb-order a {
+	font-size: 12px;
+	font-weight: 600;
+	color: #5D5D5D;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.breadcrumb-order span {
+	color: #414141;
+}
+
+.divider-order {
+	width: 100%;
+	clear: both;
+	display: block;
+	height: 1px;
+	background: #DBDCE0;
+}
+
+.share.share-wishlist {
+	float: right;
+	clear: both;
+	width: auto;
+	margin-top: -77.5px;
+	position: relative;
+}
+
+.send-wishlist {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 272px;
+	height: 32px;
+	opacity: 0;
+	visibility: hidden;
+	margin-top: -16px;
+	background: #fff;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.send-wishlist.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.container-small .send-wishlist input[type="text"],
+.container-small .send-wishlist input[type="text"]:not(.newsletterinput):not(#searchfld):not(#quantity):not(.qnt_add_cart) {
+	width: 200px;
+	height: 32px;
+	margin-right: 8px;
+	padding: 0 38px 0 16px;
+	font-size: 14px;
+	color: #5D5D5D;
+}
+
+.send-wishlist .cancel-email {
+	position: absolute;
+	top: 50%;
+	right: 85px;
+	width: 9px;
+	height: 9px;
+	line-height: 9px;
+	margin-top: -4.5px;
+	border: 0;
+	background: transparent;
+	padding: 0;
+}
+
+.send-wishlist .cancel-email img {
+	max-height: 9px;
+	vertical-align: 0;
+}
+
+.send-wishlist .btn-default {
+	width: 64px;
+	height: 32px;
+	padding: 0;
+	line-height: 32px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.send-wishlist .send-success {
+	margin: 0;
+	width: 100%;
+	text-align: right;
+	color: #06793F;
+	font-size: 16px;
+	font-weight: 700;
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 32px;
+	background: #fff;
+}
+
+@media all and (min-width: 992px) and (max-width: 1599px) {
+	body.backend .container .container-small {
+		max-width: 100%;
+		padding-left: 372px;
+		margin-left: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	.container-small .s-prod.atre {
+		width: calc(50% - 9px);
+	}
+	.container-small .s-prod.atre:nth-child(3n+3) {
+		margin-right: 18px;
+	}
+	.container-small .s-prod.atre:nth-child(2n+2) {
+		margin-right: 0;
+	}
+	.container-small .s-prod.atre:nth-child(3n+4) {
+		clear: none;
+	}
+	.container-small .s-prod.atre:nth-child(2n+3) {
+		clear: both;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.col-dati-order {
+		width: 100%;
+	}
+	.last-orders {
+		padding: 15px 20px;
+		width: 100%;
+	}
+	.share.share-wishlist {
+		margin-top: 0;
+	}
+}

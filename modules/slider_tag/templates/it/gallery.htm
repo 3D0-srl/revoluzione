@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    {metatags()}
+    <title>{setting[info][nomesito]} - Instagram</title>
+	{output(#css.htm#)}
+	{output(#javascript.htm#)}
+	<script src="/modules/instagram_gallery/js/lokea.js?v=17"></script>
+	<link rel="stylesheet" href="/modules/instagram_gallery/css/lokea.css?v=12"/>
+	<flexy:toJavascript flexy:prefix="js_"
+		section="prodotto.section"
+    >
+
+	
+</head>
+
+<body>
+{output(#top.htm#)}
+
+
+<div class="instafeed pd">
+	<div class="instafeed_content" flexy:foreach="list,k,v" >
+		<div class="instafeed_post" style="background-image:url('{v.url_image}');" ordine="{k}">
+			<div class="instafeed_overlay">
+				<div class="instafeed_text">
+					<img src="/img/new/ico_instafeed.png">
+					<div class="date">{strftime(#%d %B %Y#,v.created_time)}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="btn-showmore" onclick="show_more_instagram(); return false;" style="opacity:0;">
+	mostra altri
+</div>
+<div class="space20"></div>
+<div class="overlay-instagram">
+	<div class="overlay-close"></div>
+	<div class="slider_instagram" id="slider_instagram">
+		<div class="slide_instagram" flexy:foreach="list,k,v" style="display:none" id="popup_instagram_{k}">
+			{v.getDivWithTags():h}
+			<div class="details_instagram">
+				{if:v.products}
+				<div class="products_instagram">
+					<div class="product_instagram" flexy:foreach="v.products,v2">
+						<div class="img_product" prodotto="{v2[id]}">
+							<img src="{v2[image]}">
+						</div>
+						<div class="details_product">
+							{currencyLabel:h} {v2[price]} <br>
+							{v2[name]}
+						</div>
+						<a href="{v2[url]}" target="_blank" class="add_product">
+							Vai alla scheda
+						</a>
+					</div>
+				</div>
+				<div class="space20"></div>
+				{end:}
+				{v.text:h}			
+			</div>
+		</div>
+		<div class="slider-arrow">
+			<a class="prev-arrow" href="#" onclick="prev_slide(); return false;"></a>
+			<a class="next-arrow" href="#" onclick="next_slide(); return false;"></a>
+		</div>
+	</div>
+</div>
+{output(#footer.htm#)}
+</body>
+</html>

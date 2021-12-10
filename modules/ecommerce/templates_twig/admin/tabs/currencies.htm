@@ -1,0 +1,43 @@
+{% extends "layouts/tab/base_form.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+{{form.buildCol(dataform.defaultCurrency,'col-md-12')}}
+
+<div class="form-group col-md-12" id="div_automaticStock">
+<label>Valute disponibili con tasso di conversione :</label>
+<table class="table table-bordered">
+	<thead>
+		<th class="text-center">{{tr('currency')}}</th>
+		<th class="text-center">{{tr('conversion_rate')}}</th>
+		<th class="text-center">{{tr('active')}}</th>
+	</thead>
+	<tbody>
+		{% for k,cur in currencies%}
+		<tr class="currencies">
+			<td class="text-center">{{k}}</td>
+			<td class="text-center">
+					<input id="valuecurrency_{{k}}" class="form-control solodouble" name="formdata[currencies][{{k}}][exchangeRate]" value="{{cur['exchangeRate']}}">
+			</td>
+			<td class="text-center">
+				<div class="controls">
+					<label class="label-switch">
+						<input type="checkbox" id="activedcurrency" name="formdata[currencies][{{k}}][active]" value="1" {% if cur['active'] == 1 %}checked="checked"{% endif %} data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">
+						<span class="slider"></span>
+					</label>
+					<!--<input type="checkbox" id="activedcurrency" name="formdata[currencies][{{k}}][active]" value="1" {% if cur['active'] == 1 %}checked="checked"{% endif %} class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">-->
+				</div>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</div>
+			
+
+
+{% endblock %}
+		
+			
+	  

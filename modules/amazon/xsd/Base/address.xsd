@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!--
+    $Date: 2007/10/31 $
+
+    AMAZON.COM CONFIDENTIAL.  This document and the information contained in it are
+    confidential and proprietary information of Amazon.com and may not be reproduced, 
+    distributed or used, in whole or in part, for any purpose other than as necessary 
+    to list products for sale on the www.amazon.com web site pursuant to an agreement 
+    with Amazon.com.
+    -->
+	<!--
+    ##################################################
+    # Address element
+    ##################################################
+    -->
+	<xsd:element name="Address" type="AddressType"/>
+	<xsd:complexType name="AddressType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="String"/>
+			<xsd:element name="AddressFieldOne" type="AddressLine"/>
+			<xsd:element name="AddressFieldTwo" type="AddressLine" minOccurs="0"/>
+			<xsd:element name="AddressFieldThree" type="AddressLine" minOccurs="0"/>
+			<xsd:element name="City" type="String" minOccurs="0"/>
+			<xsd:element name="County" type="String" minOccurs="0"/>
+			<xsd:element name="StateOrRegion" type="String" minOccurs="0"/>
+			<xsd:element name="PostalCode" type="String" minOccurs="0"/>
+			<xsd:element name="CountryCode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="2"/>
+						<xsd:maxLength value="2"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="PhoneNumber" type="PhoneNumberType" minOccurs="0" maxOccurs="3"/>
+			<xsd:element name="isDefaultShipping" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Only one default shipping address can exist at any given time.  If more than one address has this set to "true," then the last one will become the default.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isDefaultBilling" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Only one default billing address can exist at any given time.  If more than one address has this set to "true," then the last one will become the default.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isDefaultOneClick" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Only one default OneClick address can exist at any given time.  If more than one address has this set to "true," then the last one will become the default.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

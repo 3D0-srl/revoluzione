@@ -1,0 +1,15 @@
+{% if coupon_in_uso == false %}
+	<div id="div_coupon">	
+		<h2>{{tr('Hai un codice sconto?','manage_coupon')}}</h2>
+		<div class="form-element_xl pull-left relative fullwidth">
+			<input type="text" name="manage_coupon[name]" value="" id="coupon_name" placeholder="{{tr('Inserisci il codice sconto','manage_coupon')}}"/>
+			<button type="button" id="submit_coupon">{{tr('Applica','manage_coupon')}}</button>
+		</div>
+	</div>
+{% else %}
+	<div id="div_coupon" class="coupon-active">
+		<h2>{{tr('Sconto attivo','manage_coupon')}}</h2>
+		<p>{{dati_coupon['name']}}</p>
+		<button type="button" id="remove_coupon"><img src="themes/jewels/images/ico_close_filtri.png"></button>
+	</div>
+{% endif %}

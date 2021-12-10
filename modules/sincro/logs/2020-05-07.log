@@ -1,0 +1,129 @@
+[20:09:57]:: inizio lettura CSV
+[20:09:57]:: fine lettura CSV
+[20:13:30]:: inizio lettura CSV
+[20:17:37]:: inizio lettura CSV
+[20:17:50]:: inizio lettura CSV
+[20:19:26]:: inizio lettura CSV
+[20:19:59]:: inizio lettura CSV
+[20:20:11]:: inizio lettura CSV
+[20:20:11]:: fine lettura CSV
+[20:20:35]:: inizio lettura CSV
+[20:20:35]:: fine lettura CSV
+[20:20:35]:: inizio creazione magazzini
+[20:20:35]:: fine creazione magazzini
+[20:20:35]:: inizio creazione categorie
+[20:20:36]:: fine creazione categorie
+[20:20:36]:: inizio creazione produttori
+[20:20:36]:: fine creazione produttori
+[20:20:36]:: inizio creazione attributi
+[20:20:37]:: fine creazione attributi
+[20:20:37]:: inizio creazione prodotti
+[20:20:38]:: fine creazione prodotti
+[20:20:38]:: inizio eliminazione prodotti
+[20:20:38]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 20:20:35                                          |
+|END                                               | 20:20:38                                          |
+|DURATION                                          | 0.05 minuti                                       |
+|MANUFACTURERS CREATED                             | 5                                                 |
+|CATEGORIES CREATED                                | 51                                                |
+|ATTRIBUTE VALUES CREATED                          | 41                                                |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[20:22:56]:: inizio lettura CSV
+[20:22:56]:: fine lettura CSV
+[20:22:56]:: inizio creazione magazzini
+[20:22:56]:: fine creazione magazzini
+[20:22:56]:: inizio creazione categorie
+[20:22:57]:: fine creazione categorie
+[20:22:57]:: inizio creazione produttori
+[20:22:57]:: fine creazione produttori
+[20:22:57]:: inizio creazione attributi
+[20:22:57]:: fine creazione attributi
+[20:24:36]:: inizio lettura CSV
+[20:24:36]:: fine lettura CSV
+[20:24:36]:: inizio creazione magazzini
+[20:24:36]:: fine creazione magazzini
+[20:24:36]:: inizio creazione categorie
+[20:24:36]:: fine creazione categorie
+[20:24:36]:: inizio creazione produttori
+[20:24:36]:: fine creazione produttori
+[20:24:36]:: inizio creazione attributi
+[20:24:36]:: fine creazione attributi
+[20:24:57]:: inizio lettura CSV
+[20:24:57]:: fine lettura CSV
+[20:24:57]:: inizio creazione magazzini
+[20:24:57]:: fine creazione magazzini
+[20:24:57]:: inizio creazione categorie
+[20:24:57]:: fine creazione categorie
+[20:24:57]:: inizio creazione produttori
+[20:24:57]:: fine creazione produttori
+[20:24:57]:: inizio creazione attributi
+[20:24:57]:: fine creazione attributi
+[20:25:09]:: inizio lettura CSV
+[20:25:09]:: fine lettura CSV
+[20:25:09]:: inizio creazione magazzini
+[20:25:09]:: fine creazione magazzini
+[20:25:09]:: inizio creazione categorie
+[20:25:09]:: fine creazione categorie
+[20:25:09]:: inizio creazione produttori
+[20:25:09]:: fine creazione produttori
+[20:25:09]:: inizio creazione attributi
+[20:25:09]:: fine creazione attributi
+[20:26:07]:: inizio lettura CSV
+[20:26:07]:: fine lettura CSV
+[20:26:07]:: inizio creazione magazzini
+[20:26:07]:: fine creazione magazzini
+[20:26:07]:: inizio creazione categorie
+[20:26:08]:: fine creazione categorie
+[20:26:08]:: inizio creazione produttori
+[20:26:08]:: fine creazione produttori
+[20:26:08]:: inizio creazione attributi
+[20:26:08]:: fine creazione attributi
+[20:26:08]:: inizio creazione prodotti
+[20:28:56]:: inizio lettura CSV
+[20:29:30]:: inizio lettura CSV
+[20:29:30]:: fine lettura CSV
+[20:29:30]:: inizio creazione magazzini
+[20:29:30]:: fine creazione magazzini
+[20:29:30]:: inizio creazione categorie
+[20:29:31]:: fine creazione categorie
+[20:29:31]:: inizio creazione produttori
+[20:29:31]:: fine creazione produttori
+[20:29:31]:: inizio creazione attributi
+[20:29:31]:: fine creazione attributi
+[20:29:31]:: inizio creazione prodotti
+[20:29:34]:: fine creazione prodotti
+[20:29:34]:: inizio eliminazione prodotti
+[20:29:34]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 20:29:30                                          |
+|END                                               | 20:29:34                                          |
+|DURATION                                          | 0.07 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+

@@ -1,0 +1,156 @@
+{% extends 'layouts/mail.htm' %}
+{% block content %}
+
+<div class="table-responsive">	
+	<table width="700" class="table table-cart">
+		<tbody>
+			<tr>
+				<td>
+					<font face="Arial, Helvetica Neue, Helvetica, sans-serif" color="#111111" size="+2">
+						<strong>{{message_mail|raw}}</strong>
+					</font>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br><br>
+<font face="Arial, Helvetica Neue, Helvetica, sans-serif" color="#111111">
+	{{do_action('mail_info_top',cart,ordini)}}
+	{% include 'partials/table_orders.htm' %}
+	<br><br>
+	<div class="table-responsive">	
+		<table width="700" class="table table-cart">
+			<tbody>
+				<tr>
+					<td>{{tr('SubTotale','cart_onepage')}}</td>
+					<td align="right"><strong>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.total)}}</strong></td>
+				</tr>
+				{% if cart.virtual_cart is null %}
+					<tr>
+						<td>{{tr('Costi spedizione','cart_onepage')}}</td>
+						<td align="right">{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.shippingPrice)}}</td>
+					</tr>
+				{% endif %}
+				<tr>
+					<td>{{tr('Costi pagamento','cart_onepage')}}</td>
+					<td align="right">{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.paymentPrice)}}</td>
+				</tr>
+				{% if cart.discount %}
+					<tr>
+						<td>{{tr('Sconto','cart_onepage')}}</td>
+						<td align="right">{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.discount)}}</td>
+					</tr>
+				{% endif %}
+				<tr>
+					<td>
+						<font size="+2"><strong>{{tr('Totale','cart_onepage')}}</strong></font>
+					</td>
+					<td align="right">
+						<font size="+2"><strong>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalFinalFormatted()}}</strong></font>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br><br>
+	<div class="table-responsive">	
+		<table width="700" class="table table-cart">
+			<thead>
+				<th align="left" width="350">
+					<font size="+2">{{tr('Spedizione','cart_onepage')}}</font>
+				</th>
+				<th align="left" width="350">
+					<font size="+2">{{tr('Pagamento','cart_onepage')}}</font>
+				</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{cart.getNameShippingMethod()}}</td>
+					<td>{{cart.getNamePaymentMethod()}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br><br>
+	<div class="table-responsive">	
+		<table width="700" class="table table-cart">
+			<thead>
+				<th align="left" width="350">
+					<font size="+2">{{tr('Dati ordine','cart_onepage')}}</font>
+				</th>
+				<th align="left" width="350">
+					<font size="+2">{{tr('Dati spedizione','cart_onepage')}}</font>
+				</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td valign="top">
+						{% if cart.company %}
+							{{cart.company}} <br>
+							{% if cart.vatNumber %}
+								{{tr('P.IVA','cart_onepage')}} {{cart.vatNumber|upper}} <br>
+							{% endif %}
+						{% else %}
+							{{cart.name}} {{cart.surname}}<br>
+							{% if cart.fiscalCode %}
+								{{cart.fiscalCode|upper}} <br>
+							{% endif %}
+						{% endif %}
+						{{cart.email}} <br>
+						{% if cart.phone %}
+							{{cart.phone}}
+							{% if cart.cellular %}
+							/ {{cart.cellular}}
+							{% endif %}
+						{% else %}
+							{% if cart.cellular %}
+							{{cart.cellular}}
+							{% endif %}
+						{% endif %}
+						<br>
+						{{cart.address}}<br>
+						{{cart.postalCode}} {{cart.city}}<br>
+						{% if cart.province %}
+						{{cart.province}} - {{cart.country}}<br>
+						{% endif %}
+					</td>
+					<td valign="top">
+						{{cart.shippingName}} {{cart.shippingSurname}}<br>
+						<span>{{cart.shippingAddress}}</span><br>
+						<span>{{cart.shippingPostalCode}} {{cart.shippingCity}}</span><br>
+						{% if cart.shippingProvince %}
+						<span>{{cart.shippingProvince}} - {{cart.shippingCountry}}</span><br>
+						{% else %}
+						{{cart.shippingCountry}}<br>
+						{% endif %}
+						{% if cart.shippingEmail %}
+						<span>{{cart.shippingEmail}}</span><br>
+						{% endif %}
+						<span>
+						{% if cart.shippingPhone %}
+							{{cart.shippingPhone}}
+							{% if cart.shippingCellular %}
+							/ {{cart.shippingCellular}}
+							{% endif %}
+						{% else %}
+							{% if cart.shippingCellular %}
+							{{cart.shippingCellular}}
+							{% endif %}
+						{% endif %}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</font>
+
+
+
+{% endblock %}
+
+
+
+
+
+

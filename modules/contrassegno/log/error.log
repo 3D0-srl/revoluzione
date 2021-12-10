@@ -1,0 +1,259 @@
+[23-Nov-2018 08:44:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:44:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:44:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:44:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:44:34 Europe/Rome] dentro-----
+[23-Nov-2018 08:44:34 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:44:34 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:45:14 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:45:14 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:45:14 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:45:14 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:45:14 Europe/Rome] dentro-----
+[23-Nov-2018 08:45:14 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:45:14 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:45:49 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:45:49 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:45:49 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:45:49 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:45:49 Europe/Rome] dentro-----
+[23-Nov-2018 08:45:49 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:45:49 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:45:58 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:45:58 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:45:58 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:45:58 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:45:59 Europe/Rome] dentro-----
+[23-Nov-2018 08:45:59 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:45:59 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:46:44 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:46:44 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:46:44 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:46:44 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:46:44 Europe/Rome] dentro-----
+[23-Nov-2018 08:46:44 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:46:44 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:46:52 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:46:52 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:46:52 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:46:52 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:46:52 Europe/Rome] dentro-----
+[23-Nov-2018 08:46:52 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => qJ7oo*Hf9JBALwgI4SNV*SZgqj71pRpge4dA1iiJxJU85Lvzus5MWEVOkjB3_gfO_Ns9DbFDnG8pz3bXugLTL4pcRnBTDMmoRGp*F9mNGIomqmiX*vzHq0xlJ2FnznJcyctsOZHPAYHlbfzFoj*FSB_TEmH*Vgv0wHWB_X2oWD6AKtCVHzfVzGe_4uHTUGtMRmSzQrD5WRlZ*kU5dnX_wphTEPl3bCsKG8gndGeluU5j7plJXUiW7cDaam_t_G6Y77m6PmzFLBFoNkUb_mGSQJCgFWPdsw4LNl7RA26T8lDdUOZnK_p5zpa49EShNZchYlOtgs1RbKyo_Zhf*R6JSEsA2wCbhmA*5xIgOzGB0l81oS19joTa9bC2712co5O_swgVDIUnFbm7qm5Ny4aIIv1F*B3wgJomdbCazkO2UjO*cWPBZfI94wk2aJwT7RrF7xf7pgg68lhnCA9H6bxtGyaGprAFx6qLulO9R*WiifO9SNpqcIjrWP1stpwmBPPFg*f6eXuhIhrRilp*DtuImZbzOF5DNMPHErZeuHHi_1Tw*w8CNHVLgNgCOVxN2Uq3lUsJ3bRZnMQHnUgxpm0kW3IUaYJOqe9VrUoeto8BLvmFPsE7EVBEXyWDsL7CWXS*nxMKVIg717dwslmW9w5stsF9qR0Bu5ypadWW437DYqcI6cGLDdCli9jxbmtvqqM6
+)
+
+[23-Nov-2018 08:46:52 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:53:04 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:53:04 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:53:04 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:53:04 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:53:04 Europe/Rome] PHP Warning:  Missing argument 1 for ModuleHelper::__construct(), called in /home/nuovo/public_html/modules/gestpay/uninstall.php on line 7 and defined in /home/librerie/public_html/classes_4.6/ModuleHelper.class.php on line 10
+[23-Nov-2018 08:53:11 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:53:11 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:53:11 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:53:11 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:53:12 Europe/Rome] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/librerie/public_html/classes_4.6/Base.class.php on line 389
+[23-Nov-2018 08:53:12 Europe/Rome] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/librerie/public_html/classes_4.6/Base.class.php on line 389
+[23-Nov-2018 08:53:12 Europe/Rome] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/librerie/public_html/classes_4.6/Base.class.php on line 389
+[23-Nov-2018 08:54:39 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:54:39 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:54:39 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:54:39 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:54:39 Europe/Rome] dentro-----
+[23-Nov-2018 08:54:39 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:54:39 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:55:10 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:55:10 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:55:10 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:55:10 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:55:10 Europe/Rome] dentro-----
+[23-Nov-2018 08:55:10 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:55:10 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:55:24 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:55:24 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:55:24 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:55:24 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:55:24 Europe/Rome] dentro-----
+[23-Nov-2018 08:55:24 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:55:24 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:55:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:55:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:55:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:55:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:55:29 Europe/Rome] dentro-----
+[23-Nov-2018 08:55:29 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:55:29 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:55:50 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:55:50 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:55:50 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:55:50 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:55:50 Europe/Rome] dentro-----
+[23-Nov-2018 08:55:50 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:55:50 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:56:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:56:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:56:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:56:29 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:56:29 Europe/Rome] dentro-----
+[23-Nov-2018 08:56:29 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:56:29 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 08:56:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/librerie/public_html/classes_4.6/SimpleImage/SimpleImage.php on line 13
+[23-Nov-2018 08:56:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'ArrayIterator' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 11
+[23-Nov-2018 08:56:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'Countable' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 12
+[23-Nov-2018 08:56:34 Europe/Rome] PHP Warning:  The use statement with non-compound name 'IteratorAggregate' has no effect in /home/librerie/public_html/classes_4.6/Collection.php on line 13
+[23-Nov-2018 08:56:34 Europe/Rome] dentro-----
+[23-Nov-2018 08:56:34 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => Vi2VxoXReveDL4ZiP7ETqNH_Wz5bXIJj4_ghG2zNPfiS8O0Q5XwvuMauoIge2g2_7HIghvYi3RPbkXGXNzAbi5wxDJSH4YQD8HWbmlVmc8r8gaf_B8tn*271Z4u91LA_aAESM2yQwQmOtPPbKKdDAQAz4n4iCDxbfLz64G4WIwWYvrzDoLPaL79hQg*83r__RyY8mLUiHCg9RpAsvA1T5f2hYgtcib0fBsiIGQRr_OzPzesIYSE7Fp2VPrSDRYcLsJ4OzfmBtTrs7D*xasyu3Myg_1GY9B4rkL4p6SRk0Okic5ylGT7g9pcyv7kzyURqZxZcxro4j35kvIziubdbbw_gJtoCXbFfvjt0U7VdY_ohNsJubYJM7X2*6NySfXmVo7wjh6dRNkJeRHpy4HWQw9c5nJbT1YvigfcD0NefKiH53XN*gKEPLtMqgFwhrx6zJuCfJq954E*ffEsJjzDf4*7r7MVTVuIwy1e4u6eFV_A2ZV5l5dXqE5sFW4h1CN2z1_AbRh4s8HBRSGTCt8FkE_SfbossBf9U1Hip3c04mJDIuHzalKSlbBop_ebK1pKBkN4mhP9Yr6b7VR4S3QP8wGRSKnYKjl89Qx9RRba7C7nrk3z7b1K67zt4q3wWGhHoG3igbDLfB0j7EBHA*yM7G8aQg6IO7wbYrZ*cc9FNXpo9G5Xf44NEo9rv4NEe9xc9
+)
+
+[23-Nov-2018 08:56:34 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript_form.htm.it.php on line 10
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 12
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 13
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 14
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 15
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 16
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 17
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 18
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 127
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::escapeString() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 194
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_c639fb5ab5c61f0da742cc83f44ada61/javascript.htm.it.php on line 19
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertNull() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 137
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertVar() should not be called statically, assuming $this from incompatible context in /home/nuovo/tmp/admin/it_96de2255d11fc68220337467335fc2fc/setting.htm.it.php on line 18
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method HTML_Javascript_Convert::convertNull() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Javascript/Convert.php on line 137
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Warning:  Missing argument 1 for Notification::getCount(), called in /home/nuovo/extension.class.php on line 861 and defined in /home/librerie/public_html/classes_4.6/cms/Notification.class.php on line 203
+[23-Nov-2018 16:57:53 Europe/Rome] PHP Deprecated:  Non-static method File_Gettext::factory() should not be called statically, assuming $this from incompatible context in /home/librerie/public_html/PEAR/HTML/Template/Flexy.php on line 954
+[23-Nov-2018 16:58:50 Europe/Rome] dentro-----
+[23-Nov-2018 16:58:50 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => 7uR3M*UiXefdBAooJ4Zqz2dQ_w08jhPb*BGHKf_oC08V_FVmizwAFh2MXKsTUU9_4*Dz643L240PuaBIhMBHmu*q9cbEbVA8jHzjsvbVj4QPgfu2PzJhnqQpaVB6Mr_o9klzQ2le7koJzq6qd53tta2jTRIsW*T7I_7tY1oN_RhGvxKz7yiirp2I5rQMpwJDPblXAM1ZNLUUmESak09Kq6a9z6zY34fZIDfhNx6KMmyFEBP_f3VfrG80gqCCHsb5Il3YeZbvs1BFWl2iG*qPDElvJRYk1NclYzWAV1hGxOxQom301jkalnivjCncr8hYC29eqK0U92R3f6Aj6gigwGasWhMiyPiG2cFlYsK5zQcGoi*aEy0IUh0zUl1EaXuqDch_BdrwWxc9K7LuG7pghfBdRiUjrtmC3WNaQaPf3DOZ4_MtKY9bfCCUlIexrYkMgRVe*tQzQ7MNb1mjDfe4fCsIYoVUkYfknoQhn_7geQT4qBI0JIKy7Gr3rtKRF2WpJ_75OjNLgDh4r9RVUBAvlka49NLP5Gr*GdldoWFHrQQnVIxbN9syfl6P2jb7DkqbcYiXAwZ06hTj322HlXraklwQZfmszwfzn00kf3M72WzyXqN*4QGB1OqHqWX0ajQ2xHr91LPUJVBRP0VU81qhOVi539iPdD_XJQ8bbuTvFggwxX3HlegOgyKrGKrjjTKx
+)
+
+[23-Nov-2018 16:58:50 Europe/Rome] Array
+(
+)
+
+[23-Nov-2018 16:58:51 Europe/Rome] dentro-----
+[23-Nov-2018 16:58:51 Europe/Rome] Array
+(
+    [a] => GESPAY71936
+    [b] => 7uR3M*UiXefdBAooJ4Zqz2dQ_w08jhPb*BGHKf_oC08V_FVmizwAFh2MXKsTUU9_4*Dz643L240PuaBIhMBHmu*q9cbEbVA8jHzjsvbVj4QPgfu2PzJhnqQpaVB6Mr_o9klzQ2le7koJzq6qd53tta2jTRIsW*T7I_7tY1oN_RhGvxKz7yiirp2I5rQMpwJDPblXAM1ZNLUUmESak09Kq6a9z6zY34fZIDfhNx6KMmyFEBP_f3VfrG80gqCCHsb5Il3YeZbvs1BFWl2iG*qPDElvJRYk1NclYzWAV1hGxOxQom301jkalnivjCncr8hYC29eqK0U92R3f6Aj6gigwGasWhMiyPiG2cFlYsK5zQcGoi*aEy0IUh0zUl1EaXuqDch_BdrwWxc9K7LuG7pghfBdRiUjrtmC3WNaQaPf3DOZ4_MtKY9bfCCUlIexrYkMgRVe*tQzQ7MNb1mjDfe4fCsIYoVUkYfknoQhn_7geQT4qBI0JIKy7Gr3rtKRF2WpJ_75OjNLgDh4r9RVUBAvlka49NLP5Gr*GdldoWFHrQQnVIxbN9syfl6P2jb7DkqbcYiXAwZ06hTj322HlXraklwQZfmszwfzn00kf3M72WzyXqN*4QGB1OqHqWX0ajQ2xHr91LPUJVBRP0VU81qhOVi539iPdD_XJQ8bbuTvFggwxX3HlegOgyKrGKrjjTKx
+)
+
+[23-Nov-2018 16:58:51 Europe/Rome] Array
+(
+)
+

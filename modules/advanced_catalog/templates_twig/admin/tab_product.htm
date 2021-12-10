@@ -1,0 +1,14 @@
+{% import "macro/form.htm" as form %}
+{% if has_parent %}
+<div class="alert alert-warning" style="width:100%">Il modulo permette di specificare lo split solo per il prodotto padre</div>
+{% endif %}
+
+{% if no_save %}
+<div class="alert alert-warning" style="width:100%">Ocorre salvare prima il prodotto</div>
+
+{% endif %}
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+{{form.buildCol(dataform.explode_product_catalog_attribute)}}
+{{form.buildCol(dataform.preview_product_catalog_attribute)}}
+</div

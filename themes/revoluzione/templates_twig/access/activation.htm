@@ -1,0 +1,34 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+
+
+
+    <div class="space50"></div>
+    <div class="col48 left">
+        <div class="h1 tal">{{tr('Attivazione')}}</div>
+        <span class="errore">{{messages|raw}}</span>
+        <form class="form" action="/index.php" method="POST">
+            <div class="controls">
+                <label>{{tr('Username')}}</label>
+                <input type="text" placeholder="" name="formdata[username]" value="{{dataform.username.value}}">
+            </div>
+            <div class="controls odd">
+                <label>{{tr('Password')}}</label>
+                <input type="password" placeholder="" name="formdata[password]" value="{{dataform.password.value}}">
+            </div>
+            <button type="submit" class="btn-default"> {{tr('login')}}</button>
+            <input type="hidden" name="ctrl" value="Access">
+			<input type="hidden" name="action" value="activation">
+			<input type="hidden" name="formdata[key]" value="{{dataform.key.value}}">
+           
+        </form>
+    </div>
+   
+    
+
+<div class="space60"></div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Google Analytics e-commerce</name>
+		<permission>superadmin</permission>
+		<tag>ganalytics</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<autoload>1</autoload> 
+		<description><![CDATA[Integrazione google analytics]]></description> 
+	</info>
+</module>

@@ -1,0 +1,24 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('homepage')|title}} {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.btn-default {
+	background-color: #FAFBFC;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.id_page,'col-md-12')}}
+{{form.buildCol(dataform.timer,'col-md-12')}}
+{{form.buildCol(dataform.startDate,'col-md-12')}}
+{{form.buildCol(dataform.endDate,'col-md-12')}}
+
+{% endblock %}
+

@@ -1,0 +1,47 @@
+[09:08:03]:: inizio lettura CSV
+[09:08:03]:: fine lettura CSV
+[09:08:03]:: inizio creazione immagini
+[09:08:09]:: Importate immagini di U743RAC9002
+[09:08:22]:: Importate immagini di U823FDC4002-41-NAVY
+[09:08:32]:: Importate immagini di U823FDC4002-42-NAVY
+[09:08:42]:: Importate immagini di U823FDC4002-43-NAVY
+[09:08:52]:: Importate immagini di U823FDC4002-44-NAVY
+[09:09:00]:: Importate immagini di U823FDC4002-45-NAVY
+[09:09:09]:: Importate immagini di U823FDC4002-46-NAVY
+[09:09:19]:: Importate immagini di U823FDC4002
+[09:09:29]:: Importate immagini di U923FCC9004-39-ANTRACITE
+[09:09:38]:: Importate immagini di U923FCC9004-40-ANTRACITE
+[09:09:45]:: Importate immagini di U923FCC9004-41-ANTRACITE
+[09:09:55]:: Importate immagini di U923FCC9004-42-ANTRACITE
+[09:10:03]:: Importate immagini di U923FCC9004-44-ANTRACITE
+[09:10:14]:: Importate immagini di U923FCC9004-45-ANTRACITE
+[09:10:22]:: Importate immagini di U923FCC9004-46-ANTRACITE
+[09:10:30]:: Importate immagini di U923FCC9004
+[09:10:42]:: Importate immagini di U923GBC1003-39-ICE
+[09:10:50]:: Importate immagini di U923GBC1003-41-ICE
+[09:10:58]:: Importate immagini di U923GBC1003-42-ICE
+[09:11:08]:: Importate immagini di U923GBC1003-43-ICE
+[09:11:16]:: Importate immagini di U923GBC1003-44-ICE
+[09:11:24]:: Importate immagini di U923GBC1003-45-ICE
+[09:11:32]:: Importate immagini di U923GBC1003
+[09:11:32]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 09:08:03                                          |
+|END                                               | 09:11:32                                          |
+|DURATION                                          | 3.48 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 92                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+

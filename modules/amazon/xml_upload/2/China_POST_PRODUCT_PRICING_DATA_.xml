@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+			<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd"> 
+			<Header> 
+				<DocumentVersion>1.01</DocumentVersion>
+				<MerchantIdentifier>A1VZO1IYX3SMHG</MerchantIdentifier> 
+			</Header> 
+			<MessageType>Price</MessageType><Message> 
+						<MessageID>1</MessageID>
+						<OperationType>Update</OperationType> 
+						<Price>
+							<SKU>CC0248UE85</SKU> 
+							<StandardPrice currency="RMB">210.45</StandardPrice>
+						</Price>
+						</Message><Message> 
+						<MessageID>2</MessageID>
+						<OperationType>Update</OperationType> 
+						<Price>
+							<SKU>CC0934PN81</SKU> 
+							<StandardPrice currency="RMB">210.45</StandardPrice>
+						</Price>
+						</Message></AmazonEnvelope>

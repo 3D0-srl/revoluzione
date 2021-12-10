@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/modules/slider_tag/css/bxslider.css" type="text/css" />
+<link rel="stylesheet" href="/modules/slider_tag/css/lokea.css" type="text/css" />
+ <script src="/modules/slider_tag/js/jquery.bxslider.js"></script>
+ <script src="/modules/slider_tag/js/lokea.js"></script>
+ <script>
+		$(document).ready(function(){
+			$('.slider-paestum').bxSlider({
+				minSlides: 1,
+				maxSlides: 1,
+				moveSlides: 1,
+				controls: true,
+				auto: true,
+				pager: true,
+				infiniteLoop: true,
+				autoControls: false,
+				autoHover: true
+			});
+		});
+   </script>
+
+
+<div>
+	<ul class="slider-paestum">	
+		<li flexy:foreach="images,image">
+			<div style="width:100%;">
+				{image:h}
+			</div>
+		</li>
+		
+	</ul>
+	
+	
+	
+	
+
+</div>

@@ -1,0 +1,123 @@
+{% extends "layouts/base.htm" %}
+
+{% block page_title %} {{tr('out_of_stock')|title}} {% endblock %} 
+
+
+{% block javascript %}
+{{parent()}}
+<script>
+	function seleziona_tutti(el){
+		if( el.prop('checked') ){
+			$('.checked').prop('checked',true);
+		}else{
+			$('.checked').prop('checked',false);
+		}
+	}
+	function update_stock_all(){
+		var xhr = new XMLHttpRequest();
+		var formdata = new FormData();
+		$('.stock').each(function(){
+			if( $(this).find('input:checkbox').prop('checked') ){
+				var input = $(this).find('input:text');
+				var qnt = input.val();
+				if( parseInt(qnt) > 0 ){
+					var product = input.attr('product');
+					formdata.append( 'formdata['+product+"]", qnt );
+				}
+			}
+		});
+		formdata.append( 'action', 'update_stock' );
+		formdata.append( 'ctrl', 'OutOfStock' );
+		formdata.append( 'ajax', 1 );
+
+
+
+
+		$.ajax({
+			type: "POST",
+			url: 'index.php',
+			data: formdata,
+			processData: false,
+			contentType: false,
+			dataType: "json",
+			success: function(data) {
+			   if(data.result == 'ok'){
+						if( typeof data.products_ok != 'undefined' && data.products_ok != null && data.products_ok.length > 0 ){
+							for( var i in data.products_ok){
+								id = data.products_ok[i];
+								
+								var val = $('#row_'+id).find('.qnt_stock').val();
+								$('#row_'+id).addClass('success').find('.qnt_stock').replaceWith('<span>'+val+'</span>');
+								$('#row_'+id).find('.checked').remove();
+								$('#row_'+id).find('.btn-success').remove();
+							}
+						}
+						
+					}
+			},
+		});
+
+		
+	}
+
+	function cambia_qnt_out_stock(qnt){
+		$('.stock').each(function(){
+			if( $(this).find('input:checkbox').prop('checked') ){
+				var input = $(this).find('input:text');
+				input.val(qnt);
+			}
+		});
+	}
+</script>
+{% endblock %}
+{% block content %}
+
+<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+			
+			{% if products %}
+				<table id="outstock-table" class="table table-striped table-hover" >
+					<thead>
+						<tr>
+							<th style="min-width:70px"><input type="checkbox" onchange="seleziona_tutti($(this)); return false;" class="form-control"></th>
+							<th ><strong>Cod. Articolo</strong></th>
+							<th><strong>Prodotto</strong></th>
+							
+							 <th><input type="text" class="solointeri form-control" onchange="cambia_qnt_out_stock($(this).val()); return false;" value="0"></th>
+							 <th class="text-center"><strong></strong></th>
+						   
+						</tr>
+					</thead>
+					<tbody>
+						<form id="stock_products">
+						{% for v in products %}
+						<tr flexy:foreach="products,v" id="row_{{v.id}}" class="stock">
+							<td style="min-width:70px"><input type="checkbox" class="form-control checked" value="1"></td>
+							<td>{{v.sku}}</td>
+							<td>{{v.getName()|raw}}</td>
+							<td><input type="text"  product="{{v.id}}" id="stock_{{v.id}}" class="solointeri form-control qnt_stock" value="0"></td>
+							<td class="text-right"><a class="btn btn-success" href="#" onclick="update_stock({{v.id}}); return false;"><i class="fa fa-refresh"></i> aggiorna</a></td>
+						</tr>
+						{% endfor %}
+						</form>
+						<tfoot>
+							<td colspan="6" class="text-right"><a class="btn btn-primary" href="#" onclick="update_stock_all(); return false;"><i class="fa fa-refresh"></i> aggiorna selezionati</a></td>
+						</tfoot>
+						
+					</tbody>
+				</table>
+			{% else %}
+				Nessun prodotto con quantità pari a zero
+			{% endif %}
+			
+			
+		</div>
+		{% if links %}
+		<div class="m-t-30 align-center">
+			{{links[all]|raw}}
+		</div>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

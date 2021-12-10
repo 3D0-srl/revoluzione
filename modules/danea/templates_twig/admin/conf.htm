@@ -1,0 +1,387 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Danea EasyFatt {% endblock %} 
+{% block css %}
+{{parent()}}
+<link rel="stylesheet" href="../modules/danea/css/style.css">
+{% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+<script>
+	var payments_list = "{{payments_list|escape('js')}}";
+	var attributes_list = "{{attributes_list|escape('js')}}";
+	var taxes_list = "{{taxes_list|escape('js')}}";
+	var prices_list = "{{prices_list|escape('js')}}";
+	var attribute_sets_list = "{{attribute_sets_list|escape('js')}}";
+	
+	var data_payments = "{{payments|escape('js')}}";
+	var data_attributes = "{{attributes|escape('js')}}";
+	var data_taxes = "{{taxes|escape('js')}}";
+	var data_prices = "{{prices|escape('js')}}";
+	var data_attribute_sets = "{{attribute_sets|escape('js')}}";
+</script>
+<div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-8 col-xs-9 bhoechie-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <i class="fa fa-wrench"></i><br/><span>Generale</span>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="fa fa-money"></i><br/><span>Tasse</span>
+                </a>
+                <a href="#" class="list-group-item text-center import_item">
+                  <i class="fa fa-upload"></i><br/><span>Importazione</span>
+                </a>
+                <a href="#" class="list-group-item text-center export_item">
+                  <i class="fa fa-download"></i><br/><span>Esportazione</span>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                   <i class="fa fa-link"></i><br/><span>Links</span>
+                </a>
+				<a href="#" class="list-group-item text-center">
+                   <i class="fa fa-exclamation"></i><br/><span>Logs</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    
+                      <div class="row">
+						{{form.buildCol(dataform.enable_import,'col-md-6')}}
+						{{form.buildCol(dataform.enable_export,'col-md-6')}}
+						{{form.buildCol(dataform.enable_credentials,'col-md-12')}}
+						{{form.buildCol(dataform.username,'col-md-6')}}
+						{{form.buildCol(dataform.password,'col-md-6')}}
+						
+					</div>
+                    
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                   <div class="row">
+				
+						{{form.buildCol(dataform.default_tax,'col-md-12')}}
+						<div class="col-md-12">
+							
+							
+							
+
+							<label>Associazione tasse</label>
+							<table class="table table-bordered">
+								<thead>
+									<th>Tassa</th>
+									<th>Codice Danea</th>
+									<th></th>
+								</thead>
+								<tbody id="box_taxes">
+								</tbody>
+								<tfoot>
+									<tr>
+										<td></td>
+										<td></td>
+										<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_tax(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tabcordion">
+								<ul id="myTab" class="nav nav-tabs">
+									<li class="active"><a href="#general_export" data-toggle="tab">Generale</a></li>
+									<li class=""><a href="#variations" data-toggle="tab">Variazioni (Combinazioni)</a></li>
+									
+									<li><a href="#prices" data-toggle="tab">Prezzi</a></li>
+									{% if filtri_ricerca_ok %}
+									<li><a href="#features" data-toggle="tab">Caratteristiche</a></li>
+									{% endif %}
+									<li><a href="#update" data-toggle="tab">Aggiornamenti</a></li>
+								
+									
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div class="tab-pane fade active in" id="general_export">
+
+										{{form.buildCol(dataform.map_ean_field,'col-md-6')}}
+										{{form.buildCol(dataform.map_upc_field,'col-md-6')}}
+										{{form.buildCol(dataform.map_description_short_field,'col-md-6')}}
+										{{form.buildCol(dataform.map_description_field,'col-md-6')}}
+										
+										{{form.buildCol(dataform.create_categories_on_import,'col-md-6')}}
+										{{form.buildCol(dataform.create_manufacturers_on_import,'col-md-6')}}
+										
+										{{form.buildCol(dataform.import_images,'col-md-6')}}
+										{{form.buildCol(dataform.action_on_delete_product,'col-md-6')}}
+										
+									</div>
+									<div class="tab-pane fade in" id="variations">
+										{{form.buildCol(dataform.manage_variations_import,'col-md-12')}}
+										
+										<span class="manage_variations_import">
+										{{form.buildCol(dataform.create_variations_on_import,'col-md-12')}}
+										{{form.buildCol(dataform.sku_child_dinamic,'col-md-6')}}
+										{{form.buildCol(dataform.sku_child,'col-md-6')}}
+										<div class="clearfix"></div>
+										{{form.buildCol(dataform.manage_variations_import_advanced,'col-md-12')}}
+										<span id="standard_variations">
+										{{form.buildCol(dataform.mapping_size,'col-md-6')}}
+										{{form.buildCol(dataform.mapping_color,'col-md-6')}}
+										{{form.buildCol(dataform.mapping_size_color_set,'col-md-12')}}
+										{{form.buildCol(dataform.mapping_color_set,'col-md-12')}}
+										{{form.buildCol(dataform.mapping_size_set,'col-md-12')}}
+										</span>
+
+										<span id="advanced_variations">
+										
+											{{form.buildCol(dataform.field_attribute_set,'col-md-12')}}
+
+											<div class="col-md-12">
+
+											<label>Mappatura insieme attributi</label>
+											<table class="table  table-bordered" id="table_mapping_attribute_set">
+													<thead>
+														<th>Insieme Attributi</th>
+														<th>Mappatura attributi</th>
+														<th></th>
+													</thead>
+													<tbody id="box_attribute_sets">
+													</tbody>
+													<tfoot>
+														<tr>
+															<td></td>
+															<td></td>
+															<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_attribute_set(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+
+										</span>
+										</span>
+			
+
+
+									</div>
+									<div class="tab-pane fade in" id="prices">
+
+										<div class="col-md-12">
+										<p>
+										<small>Verranno importati da Danea i prezzi netti (senza IVA) a cui poi verranno applicata l'IVA secondo la mappatura fatta nella sezione dedicata alle Tasse</small>
+										</p>
+										</div>
+										{#{{form.buildCol(dataform.prices_with_tax,'col-md-6')}}#}
+										{{form.buildCol(dataform.default_price_list,'col-md-6')}}
+										
+										<div class="col-md-12">
+
+											<label>Associazione listini</label>
+											<table class="table table-bordered" id="table_mapping_prices">
+													<thead>
+														<th>Listino Danea</th>
+														<th>Listino Marion</th>
+														<th></th>
+													</thead>
+													<tbody id="box_prices">
+													</tbody>
+													<tfoot>
+														<tr>
+															<td></td>
+															<td></td>
+															<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_price(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+														</tr>
+													</tfoot>
+												</table>
+										</div>
+									</div>
+
+									<div class="tab-pane fade in" id="features">
+										
+
+										<div class="col-md-12">
+											{% if features %}
+											<label>Associazione Caratteristiche</label>
+											<table class="table table-bordered" id="table_mapping_prices">
+													<thead>
+													
+														<th>Caratteristica Marion</th>
+															<th>Campo Libero Danea</th>	
+													</thead>
+													<tbody id="box_prices">
+													
+														{% for j,f in features %}
+														<tr>
+															<td>{{f.value}}</td>
+															<td>
+																<select name="formdata[mapping_features][{{j}}]">
+																	<option>Nessuno</option>
+																	{% for i in 1..4 %}
+
+																		<option value="{{i}}" {% if i == f.selected %}selected{% endif %}>Libero {{i}}</option>
+																	{% endfor %}
+																	<option></option>
+																</select>
+															</td>
+															
+														</tr>
+														{% endfor %}
+														
+													</tbody>
+												</table>
+												{% else %}
+												<label>Nessuna caratterisitca presente su Marion</label>
+												{% endif %}
+										</div>
+									</div>
+
+									<div class="tab-pane fade in" id="update">
+										
+										  {{form.buildCol(dataform.disabled_fields_on_update,'col-md-12')}}
+											
+									
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+                </div>
+                <div class="bhoechie-tab-content">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tabcordion">
+								<ul id="myTab" class="nav nav-tabs">
+									<li class="active"><a href="#general" data-toggle="tab">Generale</a></li>
+									<li class=""><a href="#payments" data-toggle="tab">Pagamenti</a></li>
+									
+									<li><a href="#attributes" data-toggle="tab">Variazioni</a></li>
+									<li><a href="#other" data-toggle="tab">Avanzate</a></li>
+								
+									
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div class="tab-pane fade active in" id="general">
+										{{form.buildCol(dataform.limit_days,'col-md-6')}}
+										{{form.buildCol(dataform.status_orders,'col-md-6')}}
+										{#{{form.buildCol(dataform.manage_variations,'col-md-12')}}#}
+										
+									</div>
+
+									<div class="tab-pane fade in" id="payments">
+
+										<div class="col-md-12">
+											<label>Mappatura Pagamenti</label>
+											<table class="table table-bordered">
+												<thead>
+													<th>Pagamento</th>
+													<th>Codice Danea</th>
+													<th></th>
+												</thead>
+												<tbody id="box_payments">
+												</tbody>
+												<tfoot>
+													<tr>
+														<td></td>
+														<td></td>
+														<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_payment(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+									</div>
+									<div class="tab-pane fade in" id="attributes">
+
+										{{form.buildCol(dataform.use_import_setting,'col-md-12')}}
+										<div class="col-md-12" id="table_mapping_variations_export">
+											<label>Mappatura attributi</label>
+											<table class="table table-bordered" id="">
+												<thead>
+													<th>Attributo</th>
+													<th>Codice Danea</th>
+													<th></th>
+												</thead>
+												<tbody id="box_attributes">
+												</tbody>
+												<tfoot>
+													<tr>
+														<td></td>
+														<td></td>
+														<td colspan="3" class="pull-right"><button type="button" class="btn btn-primary btn-sm" onclick="add_attribute(); return false;"><i class="fa fa-plus"></i> Aggiungi</button></td>
+													</tr>
+												</tfoot>
+											</table>
+
+										</div>
+
+									</div>
+									<div class="tab-pane fade in" id="other">
+										{{form.buildCol(dataform.manage_discount_like_product,'col-md-3')}}
+										{{form.buildCol(dataform.discount_code,'col-md-3')}}
+										{{form.buildCol(dataform.discount_vat,'col-md-3')}}
+										<div class="clearfix"></div>
+										{{form.buildCol(dataform.manage_shipping_like_product,'col-md-3')}}
+										{{form.buildCol(dataform.shipping_code,'col-md-3')}}
+										{{form.buildCol(dataform.shipping_vat,'col-md-3')}}
+										<div class="clearfix"></div>
+										{{form.buildCol(dataform.manage_payment_like_product,'col-md-3')}}
+										{{form.buildCol(dataform.payment_code,'col-md-3')}}
+										{{form.buildCol(dataform.payment_vat,'col-md-3')}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+                </div>
+                <div class="bhoechie-tab-content">
+                   
+				   <table class="table table-bordered">
+						<thead>
+							<th>Azione</th>
+							<th>URL</th>
+
+						</thead>
+						<tbody>
+						<tr class="import_item">
+							<td>Importazione</td>
+							<td>
+								http://miosito.it/<b>index.php?mod=danea&ctrl=DaneaImport</b>
+							</td>
+						</tr>
+						<tr class="export_item">
+							<td>Esportazione</td>
+							<td>
+								http://miosito.it/<b>index.php?mod=danea&ctrl=DaneaExport</b>
+							</td>
+						</tr>
+
+					   
+
+				   </table>
+				   <p><b>N.B.</b> Le richieste devono essere fatte in protocollo HTTP</p>
+                </div>
+
+				 <div class="bhoechie-tab-content">
+
+						{{form.buildCol(dataform.log,'col-md-12')}}
+
+						<div class="col-md-12">
+							<textarea id="logs_area" class="form-control" rows="15"></textarea>
+						</div>		
+
+				  </div>
+
+            </div>
+        </div>
+  </div>
+
+  <input name="current_tab" id="current_tab" type="hidden" value="{{current_tab}}">
+{% endblock %}

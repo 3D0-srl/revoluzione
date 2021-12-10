@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Widget Video</name>
+		<permission>superadmin</permission>
+		<tag>widget_video</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette di caricare un video inserendo solo il link]]></description> 
+		<compatibility>
+			<from>4.8.8</from>
+		</compatibility>
+   </info>
+   <widgets>
+	  <widget> 
+			<name>Widget Video</name>
+			<function>WidgetVideoComponent</function>
+			<url_conf>index.php?ctrl=Conf&amp;mod=widget_video</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+	</widgets>
+</module>

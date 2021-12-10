@@ -1,0 +1,20 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %}
+Impostazioni utente
+{% endblock %}
+{% block url_list %}
+index.php?mod=mailman_twig&ctrl=MailmanUsersAdmin&action=list&list={{ id_list }}
+{% endblock %}
+{% block content %}
+	{% import "macro/form.htm" as form %}
+
+	{{form.buildCol(dataform.id_category_news,'col-md-12')}}
+
+	<div class="row">
+        {{ form.build(dataform.id) }}
+        {{ form.buildCol(dataform.email, 'col-md-3') }}
+		{{ form.build(dataform.id_list) }}
+	</div>
+
+
+{% endblock %}

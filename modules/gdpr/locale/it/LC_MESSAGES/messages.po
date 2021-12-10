@@ -1,0 +1,37 @@
+msgid "edit_object"
+msgstr "Modifica dell'oggetto <b>%s</b> con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "new_object"
+msgstr "Inserimento dell'oggetto <b>%s</b> con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "edit_product"
+msgstr "Modifica del prodotto con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+
+msgid "new_product"
+msgstr "Inserimento prodotto con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "edit_user"
+msgstr "Modifica dell'utente con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "new_user"
+msgstr "Inserimento utente con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "edit_section"
+msgstr "Modifica della categoria con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+msgid "new_section"
+msgstr "Inserimento categoria con id <b>%s</b> da parte dell'utente <b>%s</b>"
+
+
+
+
+
+
+
+
+
+
+
+
+

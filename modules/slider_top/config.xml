@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<module>
+  <info> 
+	<author>Ciro Napolitano</author>
+	<name>Slider Top</name>
+	<permission>superadmin</permission>
+	<tag>slider_top</tag>
+	<kind>cms</kind>
+	<scope></scope> 
+	<description><![CDATA[Questo modulo permette di mostrare uno slider sopra il top del tuo sito]]></description> 
+  </info>
+  <admin>
+		<menu>
+			<items>
+				<item>
+					<locale>
+						<name>
+							<it>Slider top</it>
+							<en>Slider top</en>
+						</name>
+					</locale>
+					<url>index.php?mod=slider_top&amp;action=list</url>
+					<parent>cms</parent>
+					<tag>slider_top</tag> 
+					<permission>cms</permission> 
+					<priority>100</priority> 
+				</item>
+			</items>
+
+		</menu>
+  </admin>
+</module>

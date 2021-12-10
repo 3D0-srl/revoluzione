@@ -1,0 +1,19 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('price_list')|title}} {% endblock %} 
+{% block content %}
+
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.label,'col-md-12')}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.description,'col-md-12')}}
+
+{#
+{{form.buildCol(dataform.priority,'col-md-12')}}
+#}
+{{form.buildCol(dataform.active,'col-md-12')}}
+{{form.buildUploadImage(dataform.image,'col-md-12')}}
+
+
+
+{% endblock %}

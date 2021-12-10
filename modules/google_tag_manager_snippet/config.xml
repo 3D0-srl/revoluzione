@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Google Tag Manager Snippet</name>
+		<permission>cms</permission>
+		<tag>google_tag_manager_snippet</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nel sito lo snipper js di Google Tag Manager]]></description> 
+	</info>
+	<linkSetting>
+		index.php?mod=google_tag_manager_snippet
+	</linkSetting>
+</module>

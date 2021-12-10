@@ -1,0 +1,296 @@
+.riga-campagna {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    background: #fff;
+    margin: 0 0 30px;
+}
+
+.well {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.col-md-3.dati {
+    font-weight: 400;
+}
+
+/*countdown*/
+.chart, .chart2{
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    margin: 0 10px;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 14px;
+    text-align: center;
+	font-weight: 400;
+}
+
+.chart:first-child, .chart2:first-child {
+	margin-left: 0;
+}
+
+.chart span, .chart2 span{
+	display: block;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.chart2 {
+    opacity: .15;
+}
+
+canvas{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*calendario*/
+.box-calendar {
+	width: 270px;
+	display: flex;
+    display: -webkit-flex;
+    align-items: center;
+	background: #f6f6f6;
+	border-radius: 4px;
+}
+
+.ico-calendar {
+	color: #fff;
+    background-color: #C75757;
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+    padding: 10px 20px;
+	width: 80px;
+	text-align: center;
+}
+
+.data {
+	display: flex;
+    display: -webkit-flex;
+	font-size: 15px;
+	line-height: 1.3em;
+	width: 190px;
+	padding: 10px 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.data span.giorno {
+	font-size: 45px;
+	font-weight: 700;
+	padding-right: 8px;
+}
+
+.data span strong {
+	font-size: 20px;
+	font-weight: 600;
+	padding-right: 10px;
+}
+
+/*pulsanti*/
+.box-start {
+	width: 170px;
+}
+
+.pulsanti {
+	display: flex;
+	display: -webkit-flex;
+    justify-content: flex-end;
+	position: relative;
+}
+
+.box-preview {
+}
+
+.open-pulsanti {
+	display: none;
+}
+
+.box-pulsanti {
+	display: flex;
+	display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.btn.btn-lg {
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+	margin: 0 5px;
+}
+
+a.btn.btn-warning.btn-lg, a.btn.btn-warning.btn-lg:hover, a.btn.btn-warning.btn-lg:focus, a.btn.btn-warning.btn-lg:active,
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
+	margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+	padding: 0;
+	border-radius: 4px !important;
+}
+
+a.btn.btn-warning.btn-lg, a.btn.btn-warning.btn-lg:hover, a.btn.btn-warning.btn-lg:focus, a.btn.btn-warning.btn-lg:active {
+	margin-left: 10px;
+}
+
+a.btn.btn-success.btn-lg.start, .btn.btn-lg.report {
+    padding: 0;
+    width: 100%;
+	text-align: center;
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
+	margin-right: 0;
+}
+
+.btn-warning {
+    background: #b1b1b1;
+    border-color: #b1b1b1;
+}
+
+.btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+    background: #989898;
+    border-color: #989898;
+}
+
+.btn-lg i.fa, .pulsante i.fa {
+    font-size: 20px;
+}
+
+a.pulsante, a.pulsante:hover, a.pulsante:focus, a.pulsante:active {
+    background: transparent;
+    border: 1px solid #b1b1b1;
+    border-radius: 4px;
+    /*padding: 11px 50px;
+    width: 100%;
+    float: left;
+    */
+    font-size: 15px;
+    color: #b1b1b1;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;    
+    text-align: center;
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    display: block;
+}
+
+.btn-success.old {
+    background: #b1b1b1;
+    border-color: #b1b1b1;
+	margin-right: 5px;
+}
+
+.btn-success.old:active, .btn-success.old:hover, .btn-success.old:focus {
+    background: #989898;
+    border-color: #989898;
+}
+
+@media only screen and (max-width: 1800px) {
+.chart, .chart2 {
+    width: 70px;
+    height: 70px;
+	font-size: 12px;
+}
+
+.chart span, .chart2 span {
+    font-size: 15px;
+}
+
+.box-start {
+    width: 120px;
+}
+}
+
+@media only screen and (max-width:1366px) {
+.chart, .chart2 {
+    margin: 0 5px;
+}
+
+.open-pulsanti {
+	display: block;
+	margin: 0 0 0 10px;;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    border-radius: 4px !important;
+	background: #b1b1b1;
+    border-color: #b1b1b1;
+	color: #fff;
+	text-align: center;
+        cursor:pointer;
+}
+
+.box-pulsanti {
+	display: none;
+}
+
+.box-pulsanti.active {
+    display: block;
+    position: absolute;
+    width: 200px;
+    top: 60px;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+}
+
+@media only screen and (max-width:1100px) {
+.riga-campagna {
+    flex-wrap: wrap;
+}
+
+/*.count, .dati {
+    width: 50%;
+}*/
+
+.dati {
+	width: 35%;
+}
+
+.box-start {
+	width: auto;
+}
+
+a.btn.btn-success.btn-lg.start, .btn.btn-lg.report {
+    padding: 0 30px;
+    width: auto;
+}
+
+.pulsanti {
+    justify-content: flex-start;
+	/*width: 80%;*/
+}
+
+/*.box-start, .pulsanti {
+	margin-top: 20px;
+}*/
+
+/*.box-calendar {
+    width: 80%;
+}*/
+}

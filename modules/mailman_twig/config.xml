@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<module>
+	<info>
+		<author>Napolitano Ciro</author>
+		<name>Newsletter Mailman</name>
+		<permission>cms</permission>
+		<tag>mailman_twig</tag>
+		<kind>newsletter</kind>
+		<scope></scope>
+		<autoload>1</autoload>
+		<description><![CDATA[Modulo che integra nel cms la gestione della newsletter attraverso il servzio Mailman di Cpanel]]></description>
+	</info>
+	<admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Newsletter</it>
+						<en>Newsletter</en>
+					</name>
+				</locale>
+				<parent>cms</parent>
+				<tag>mm_list</tag> 
+				<permission>cms</permission> 
+				<url>index.php?ctrl=MailmanAdmin&amp;mod=mailman_twig&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <linkSetting>
+		index.php?ctrl=MailmanConfig&amp;mod=mailman_twig
+   </linkSetting>
+
+
+</module>

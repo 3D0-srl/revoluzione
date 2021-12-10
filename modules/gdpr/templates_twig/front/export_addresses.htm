@@ -1,0 +1,30 @@
+<table>
+	<tr>
+		<td>Etichetta</td>
+		<td>Nome</td>
+		<td>Cognome</td>
+		<td>Email</td>
+		<td>Telefono</td>
+		<td>Cellulare</td>
+		<td>Indirizzo</td>
+		<td>CAP</td>
+		<td>Cttà</td>
+		<td>Provincia\Stato</td>
+		<td>Nazione</td>
+	</tr>
+	{% for v in list %}
+	<tr>
+		<td>{{v.label}}</td>
+		<td>{{v.name}}</td>
+		<td>{{v.surname}}</td>
+		<td>{{v.email}}</td>
+		<td>{{v.phone}}</td>
+		<td>{{v.cellular}}</td>
+		<td>{{v.address}}</td>
+		<td>{{v.postalCode}}</td>
+		<td>{{v.city}}</td>
+		<td>{{v.province}}</td>
+		<td>{{v.country}}</td>
+	</tr>
+	{% endfor %}
+</table>

@@ -1,0 +1,23 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('logo')|title}} {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.preview_box_filemanager {
+    border: 1px dashed #C1C7D0;
+    border-radius: 8px;
+	padding: 16px;
+}
+
+.btn_remove_image_filemanager {
+    right: 30px;
+    top: 6px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+	{{form.buildFileManager(dataform.image,'col-md-12')}}
+{% endblock %}

@@ -1,0 +1,614 @@
+{% extends "layouts/base_amazon.htm" %}
+{% block amazon_page_title %}
+    Marketplaces
+{% endblock %}
+
+{% block buttons_right %}
+<a href="index.php?mod=amazon&ctrl=Store&action=list" class="btn btn-secondario m-t-10"><i class="fa fa-arrow-left"></i> Indietro</a>
+{% endblock %}
+
+{% block javascript %}
+{{parent()}}
+<script>
+$(document).ready(function() {
+  
+
+      
+    var numItems = $('li.fancyTab').length;
+        
+    
+              if (numItems == 12){
+                    $("li.fancyTab").width('8.3%');
+                }
+              if (numItems == 11){
+                    $("li.fancyTab").width('9%');
+                }
+              if (numItems == 10){
+                    $("li.fancyTab").width('10%');
+                }
+              if (numItems == 9){
+                    $("li.fancyTab").width('11.1%');
+                }
+              if (numItems == 8){
+                    $("li.fancyTab").width('12.5%');
+                }
+              if (numItems == 7){
+                    $("li.fancyTab").width('14.2%');
+                }
+              if (numItems == 6){
+                    $("li.fancyTab").width('16.666666666666667%');
+                }
+              if (numItems == 5){
+                    $("li.fancyTab").width('20%');
+                }
+              if (numItems == 4){
+                    $("li.fancyTab").width('25%');
+                }
+              if (numItems == 3){
+                    $("li.fancyTab").width('33.3%');
+                }
+              if (numItems == 2){
+                    $("li.fancyTab").width('50%');
+                }
+          
+     
+
+    
+        });
+
+$(window).load(function() {
+
+  $('.fancyTabs').each(function() {
+
+    var highestBox = 0;
+    $('.fancyTab a', this).each(function() {
+
+      if ($(this).height() > highestBox)
+        highestBox = $(this).height();
+    });
+
+    $('.fancyTab a', this).height(highestBox);
+
+  });
+});
+</script>
+{% endblock %}
+{% block css %}
+{{parent()}}
+<style>
+
+
+
+
+.fancyTab {
+    text-align: center;
+  padding:15px 0;
+  background-color: #eee;
+    box-shadow: 0 0 0 1px #ddd;
+    top:15px;   
+  transition: top .2s;
+}
+
+.fancyTab.active {
+  top:0;
+  transition:top .2s;
+}
+
+.whiteBlock {
+  display:none;
+}
+
+.fancyTab.active .whiteBlock {
+  display:block;
+  height:2px;
+  bottom:-2px;
+  background-color:#fff;
+  width:99%;
+  position:absolute;
+  z-index:1;
+}
+
+.fancyTab a {
+    font-family: 'Source Sans Pro';
+    font-size:1.65em;
+    font-weight:300;
+  transition:.2s;
+  color:#333;
+}
+
+/*.fancyTab .hidden-xs {
+  white-space:nowrap;
+}*/
+
+.fancyTabs {
+    border-bottom:2px solid #ddd;
+  margin: 15px 0 0;
+}
+
+li.fancyTab a {
+  padding-top: 15px;
+  top:-15px;
+  padding-bottom:0;
+}
+
+li.fancyTab.active a {
+  padding-top: inherit;
+}
+
+.fancyTab .fa {
+  font-size: 40px;
+    width:100%;
+    padding: 15px 0 5px;
+  color:#666;
+}
+
+.fancyTab.active .fa {
+  color: #cfb87c;
+}
+
+.fancyTab a:focus {
+    outline:none;
+}
+
+.fancyTabContent {
+  border-color: transparent;
+  box-shadow: 0 -2px 0 -1px #fff, 0 0 0 1px #ddd;
+  padding: 30px 15px 15px;
+  position:relative;
+  background-color:#fff;
+}
+
+.nav-tabs > li.fancyTab.active > a, 
+.nav-tabs > li.fancyTab.active > a:focus,
+.nav-tabs > li.fancyTab.active > a:hover {
+    border-width:0;
+}
+
+.nav-tabs > li.fancyTab:hover {
+    background-color:#f9f9f9;
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+.nav-tabs > li.fancyTab.active:hover {
+  background-color:#fff;
+  box-shadow: 1px 1px 0 1px #fff, 0 0px 0 1px #ddd, -1px 1px 0 0px #ddd inset;
+}
+
+.nav-tabs > li.fancyTab:hover a {
+    border-color:transparent;
+}
+
+.nav.nav-tabs .fancyTab a[data-toggle="tab"] {
+  background-color:transparent;
+  border-bottom:0;
+}
+
+.nav-tabs > li.fancyTab:hover a {
+  border-right: 1px solid transparent;
+}
+
+.nav-tabs > li.fancyTab > a {
+    margin-right:0;
+    border-top:0;
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+}
+
+.hidden-xs > img {
+    width: 70px !important;
+}
+
+.nav-tabs > li.fancyTab {
+    margin-right:0;
+    margin-bottom:0;
+}
+
+.nav-tabs > li.fancyTab:last-child a {
+  border-right: 1px solid transparent;
+}
+
+.nav-tabs > li.fancyTab.active:last-child {
+  border-right: 0px solid #ddd;
+    box-shadow: 0px 2px 0 0px #fff, 0px 0px 0 1px #ddd;
+}
+
+.fancyTab:last-child {
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.tabs .nav-tabs li.fancyTab.active a {
+    box-shadow:none;
+  top:0;
+}
+
+
+.fancyTab.active {
+  background: #fff;
+    box-shadow: 1px 1px 0 1px #fff, 0 0px 0 1px #ddd, -1px 1px 0 0px #ddd inset;
+  padding-bottom:30px;
+}
+
+.arrow-down {
+    display:none;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 22px solid #ddd;
+  position: absolute;
+  top: -1px;
+  left: calc(50% - 20px);
+}
+
+.arrow-down-inner {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 12px solid #fff;
+  position: absolute;
+  top: -22px;
+  left: -18px;
+}
+
+.fancyTab.active .arrow-down {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  
+  .fancyTab .fa {
+    font-size: 36px;
+  }
+  
+  .fancyTab .hidden-xs {
+    font-size:22px;
+    }
+        
+}
+    
+    
+@media (max-width: 992px) {
+    
+  .fancyTab .fa {
+    font-size: 33px;
+  }
+    
+  .fancyTab .hidden-xs {
+    font-size:18px;
+    font-weight:normal;
+  }
+        
+}
+    
+    
+@media (max-width: 768px) {
+    
+  .fancyTab > a {
+    font-size:18px;
+  }
+    
+  .nav > li.fancyTab > a {
+    padding:15px 0;
+    margin-bottom:inherit;
+  }
+    
+  .fancyTab .fa {
+    font-size:30px;
+  }
+    
+  .nav-tabs > li.fancyTab > a {
+    border-right:1px solid transparent;
+    padding-bottom:0;
+  }
+    
+  .fancyTab.active .fa {
+    color: #333;
+  }
+
+        
+}
+
+
+
+.btn-feed{
+    padding: 20px;
+    margin-right: 20px;
+    border: none;
+    color: #000000;
+    width: 30%;
+    font-size: 20px;
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+.btn-feed:disabled {
+  background: #dddddd;
+}
+
+.btn-feed span{
+  display:block;
+  display:none;
+  font-size: 10px;
+}
+
+.btn-feed:disabled span{
+  display:block;
+}
+
+.btn-feed:hover{
+    
+    background: #FF9900;
+}
+.btn-blu{
+    background: #156EB4;
+}
+.btn-verde{
+    background: #50c878;
+}
+
+
+/*VERICAL TABS*/
+/*!
+ * bootstrap-vertical-tabs - v1.1.0
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-06-06
+ * Copyright (c) 2014 Ä°smail Demirbilek
+ * License: MIT
+ */
+.tabs-left, .tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+.tabs-right {
+  border-left: 1px solid #ddd;
+}
+.tabs-left>li, .tabs-right>li {
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-right>li {
+  margin-left: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  background: #FF9900 !important;
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-right>li.active>a,
+.tabs-right>li.active>a:hover,
+.tabs-right>li.active>a:focus {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
+}
+.tabs-left>li>a {
+  border-radius: 0;
+  margin-right: 0;
+  padding: 20px;
+  font-size:20px;
+ 
+  display:block;
+  border: 1px solid #FF9900 !important;
+  background: #FFFFFF !important;
+}
+.tabs-right>li>a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+.vertical-text {
+  margin-top:50px;
+  border: none;
+  position: relative;
+}
+.vertical-text>li {
+  height: 20px;
+  width: 120px;
+  margin-bottom: 100px;
+}
+.vertical-text>li>a {
+  border-bottom: 1px solid #ddd;
+  border-right-color: transparent;
+  text-align: center;
+  border-radius: 4px 4px 0px 0px;
+}
+.vertical-text>li.active>a,
+.vertical-text>li.active>a:hover,
+.vertical-text>li.active>a:focus {
+  border-bottom-color: transparent;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
+}
+.vertical-text.tabs-left {
+  left: -50px;
+}
+.vertical-text.tabs-right {
+  right: -50px;
+}
+.vertical-text.tabs-right>li {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.vertical-text.tabs-left>li {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.panel {
+	margin-top: 0px;
+}
+
+.icon{
+  width:40px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+<section id="fancyTabWidget" class="tabs t-tabs">
+        <ul class="nav nav-tabs fancyTabs" role="tablist">
+        
+                   
+                    {% for k,m in markets %}
+                    <li class="tab fancyTab {% if m.name == tab_market %}active{% endif %}">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                        <a id="tab1" href="#tabBody{{k}}" role="tab" aria-controls="tabBody1" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-firefox"></span><span class="hidden-xs"><image src="{{m.image}}"><br>{{m.name}}</span></a>
+                        <div class="whiteBlock"></div>
+                    </li>
+                    {% endfor %}
+                    
+                  
+        </ul>
+        <div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+                     {% for k,m in markets %}
+                     <div class="tab-pane  fade {% if m.name == tab_market %}active{% endif %} in" id="tabBody{{k}}" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+                        <div>
+                          
+                            <div class="row">
+                                
+
+                                <div  class="col-md-12">
+                                    
+                                    <div class="col-md-3"> <!-- required for floating -->
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs tabs-left">
+                                        <li class="{% if section_market == 'home' %}active{% endif %}"><a href="#home_{{m.name}}" data-toggle="tab"><img class="icon" src="../modules/amazon/images/dashboard.png"> Dashboard</a></li>
+                                        <li class="{% if section_market == 'cronjobs' %}active{% endif %}"><a href="#conjobs_{{m.name}}" data-toggle="tab"><img class="icon" src="../modules/amazon/images/clipboard.png"> Pianificazione</a></li>
+                                        <li class="{% if section_market == 'prices' %}active{% endif %}"><a href="#ricarico_{{m.name}}" data-toggle="tab"><img class="icon" src="../modules/amazon/images/price-tag.png"> Ricarico</a></li>
+                                        <li class="{% if section_market == 'profiles' %}active{% endif %}"><a href="#profili_{{m.name}}" data-toggle="tab"><img class="icon" src="../modules/amazon/images/profile.png"> Profili</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-9 ">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content ">
+                                            <div class="tab-pane {% if section_market == 'home' %}active{% endif %}" id="home_{{m.name}}">
+                                                <button class="btn-feed" onclick="submit_feed($(this),{{id_store}},'{{m.name}}','send_products')"><img src="../modules/amazon/images/transfer.png" ><br>
+                                                
+                                                    INVIA CATALOGO
+
+                                                    <span> caricamento in corso ....</span>
+                                                
+                                                </button>
+                                                <button class="btn-feed" onclick="submit_feed($(this),{{id_store}},'{{m.name}}','send_prices')"><img src="../modules/amazon/images/transfer_money.png"><br> 
+                                                  INVIA PREZZI
+                                                  <span> caricamento in corso ....</span>
+                                                </button>
+                                                <button class="btn-feed" onclick="submit_feed($(this),{{id_store}},'{{m.name}}','send_inventory')"><img src="../modules/amazon/images/transfer_stock.png"><br>
+                                                INVIA INVENTARIO
+                                                <span> caricamento in corso ....</span>
+                                                </button>
+
+
+                                                <div class="feed-info alert alert-info" style="width:100%; display:none">Puoi monitorare lo stato della tua richiesta <a target="_blank" href="index.php?mod=amazon&ctrl=Feed&action=list&id_store={{id_store}}">qui</a></div>
+
+                                                
+                                            </div>
+                                            <div class="tab-pane {% if section_market == 'home' %}cronjobs{% endif %}" id="conjobs_{{m.name}}">
+                                                <h4>Processi relativi al marketplace</h4>
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <th style="width:300px;">Funzione</th>
+                                                        <th>Url</th>
+                                                        <th style="width:50px;">Frequenza</th>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        {% for cron in cronjobs %}
+                                                        {% if cron.general is null %}
+                                                        <tr>
+                                                            <td>{{cron.descrizione}}</td>
+                                                            <td>{{urlbase}}{{cron.url}}{% if cron.general is null %}{{m.name}}{% endif %}</td>
+                                                            <td>{{cron.frequenza}}</td>
+                                                        </tr>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                                 <h4>Processi generali</h4>
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <th style="width:300px;">Funzione</th>
+                                                        <th>Url</th>
+                                                        <th style="width:50px;">Frequenza</th>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        {% for cron in cronjobs %}
+                                                         {% if cron.general %}
+                                                        <tr>
+                                                            <td>{{cron.descrizione}}</td>
+                                                            <td>{{urlbase}}{{cron.url}}{% if cron.general is null %}{{m.name}}{% endif %}</td>
+                                                            <td>{{cron.frequenza}}</td>
+                                                        </tr>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            
+                                            
+                                            </div>
+
+                                              <div class="tab-pane {% if section_market == 'prices' %}active{% endif %}" id="ricarico_{{m.name}}">
+
+                                                      {% include "actions/ricarico.htm" %}
+
+
+
+                                              </div>
+
+                                              <div class="tab-pane {% if section_market == 'profiles' %}active{% endif %}" id="profili_{{m.name}}">
+                                                 
+                                                      {% include "actions/profilo/list.htm" %}
+                                                      {% include "actions/profilo/form.htm" %}
+                                                      
+
+                                                       
+
+                                                      <div id="div_profile_{{m.name}}"></div>
+                                                      
+
+
+
+                                              </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                     {% endfor %}
+                    
+                
+        </div>
+
+    </section>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

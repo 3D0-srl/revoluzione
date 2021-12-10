@@ -1,0 +1,3237 @@
+msgid "BatteryAverageLife"
+msgstr "Batteria media vita"
+
+msgid "BatteryAverageLifeStandby"
+msgstr "Batteria media vita stand-by"
+
+msgid "BatteryChargeTime"
+msgstr "Batteria carica tempo"
+
+msgid "Color"
+msgstr "Colore"
+
+msgid "DisplayLength"
+msgstr "Visualizzazione lunghezza"
+
+msgid "DisplayVolume"
+msgstr "Visualizzazione volume"
+
+msgid "DisplayWeight"
+msgstr "Visualizzazione peso"
+
+msgid "MaxOrderQuantity"
+msgstr "Ordine quantità max"
+
+msgid "MfgWarrantyDescriptionLabor"
+msgstr "Descrizione lavoro garanzia mfg"
+
+msgid "MfgWarrantyDescriptionParts"
+msgstr "Descrizione Parti garanzia mfg"
+
+msgid "MfgWarrantyDescriptionType"
+msgstr "Descrizione tipo garanzia mfg"
+
+msgid "StyleName"
+msgstr "Stile nome"
+
+msgid "PowerSource"
+msgstr "Energia fonte"
+
+msgid "RegionOfOrigin"
+msgstr "Regione di origine"
+
+msgid "Size"
+msgstr "Dimensioni"
+
+msgid "SizeMap"
+msgstr "Dimensioni Mappa"
+
+msgid "Warnings"
+msgstr "Avvertenze"
+
+msgid "WarrantyType"
+msgstr "Garanzia tipo"
+
+msgid "AutoAccessory"
+msgstr "Automatico accessorio"
+
+msgid "Beauty"
+msgstr "Bellezza"
+
+msgid "Books"
+msgstr "Libri"
+
+msgid "CE"
+msgstr "Ce"
+
+msgid "CameraPhoto"
+msgstr "Fotocamera foto"
+
+msgid "ClothingAccessories"
+msgstr "Abbigliamento Accessori"
+
+msgid "Computers"
+msgstr "Computer"
+
+msgid "EntertainmentCollectibles"
+msgstr "Intrattenimento da collezione"
+
+msgid "FoodAndBeverages"
+msgstr "Cibo e bevande"
+
+msgid "FoodServiceAndJanSan"
+msgstr "E cibo servizio Jan san"
+
+msgid "GiftCards"
+msgstr "Regalo carte"
+
+msgid "Health"
+msgstr "Salute"
+
+msgid "Home"
+msgstr "Casa"
+
+msgid "HomeImprovement"
+msgstr "Casa miglioramento"
+
+msgid "Jewelry"
+msgstr "Gioielli"
+
+msgid "LabSupplies"
+msgstr "Laboratorio forniture"
+
+msgid "Lighting"
+msgstr "Illuminazione"
+
+msgid "MusicalInstruments"
+msgstr "Musicale strumenti"
+
+msgid "Office"
+msgstr "Ufficio"
+
+msgid "PetSupplies"
+msgstr "Animale domestico forniture"
+
+msgid "PowerTransmission"
+msgstr "Energia trasmissione"
+
+msgid "RawMaterials"
+msgstr "Crudo materiali"
+
+msgid "Shoes"
+msgstr "Scarpe"
+
+msgid "Sports"
+msgstr "Gli sport"
+
+msgid "TiresAndWheels"
+msgstr "Pneumatici e ruote"
+
+msgid "Tools"
+msgstr "Utensili"
+
+msgid "Toys"
+msgstr "Giocattoli"
+
+msgid "ToysBaby"
+msgstr "Giocattoli bambino"
+
+msgid "Wireless"
+msgstr "Senza fili"
+
+msgid "BuildingMaterials"
+msgstr "Costruzione materiali"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Electrical"
+msgstr "Elettrico"
+
+msgid "PlumbingFixtures"
+msgstr "Piombatura infissi"
+
+msgid "OrganizersAndStorage"
+msgstr "Organizzatori e conservazione"
+
+msgid "MajorHomeAppliances"
+msgstr "Principali Casa elettrodomestici"
+
+msgid "SecurityElectronics"
+msgstr "Sicurezza elettronica"
+
+msgid "BatteryTypeLithiumIon"
+msgstr "Batteria tipo litio ione"
+
+msgid "BatteryTypeLithiumMetal"
+msgstr "Batteria tipo litio metallo"
+
+msgid "CountryOfOrigin"
+msgstr "Paese di origine"
+
+msgid "ItemDisplayArea"
+msgstr "Elemento visualizzazione zona"
+
+msgid "LithiumBatteryEnergyContent"
+msgstr "Litio batteria energia contenuto"
+
+msgid "LithiumBatteryPackaging"
+msgstr "Litio batteria imballaggio"
+
+msgid "LithiumBatteryVoltage"
+msgstr "Litio batteria voltaggio"
+
+msgid "LithiumBatteryWeight"
+msgstr "Litio batteria peso"
+
+msgid "MfrWarrantyDescriptionLabor"
+msgstr "Descrizione lavoro garanzia Mfr"
+
+msgid "MfrWarrantyDescriptionParts"
+msgstr "Descrizione Parti garanzia Mfr"
+
+msgid "MfrWarrantyDescriptionType"
+msgstr "Descrizione tipo garanzia Mfr"
+
+msgid "NumberOfLithiumIonCells"
+msgstr "Numero di litio ione cellule"
+
+msgid "NumberOfLithiumMetalCells"
+msgstr "Numero di litio metallo cellule"
+
+msgid "CarryingCaseOrBag"
+msgstr "Che trasportano caso O Borsa"
+
+msgid "ComputerAddOn"
+msgstr "Aggiungere Il computer"
+
+msgid "ComputerComponent"
+msgstr "Componente computer"
+
+msgid "ComputerCoolingDevice"
+msgstr "Di raffreddamento dispositivo computer"
+
+msgid "ComputerDriveOrStorage"
+msgstr "In auto O conservazione computer"
+
+msgid "ComputerInputDevice"
+msgstr "Dispositivo ingresso computer"
+
+msgid "ComputerProcessor"
+msgstr "Processore computer"
+
+msgid "ComputerSpeaker"
+msgstr "Altoparlante computer"
+
+msgid "Computer"
+msgstr "Computer"
+
+msgid "FlashMemory"
+msgstr "Veloce memoria"
+
+msgid "InkOrToner"
+msgstr "Inchiostro O tonico"
+
+msgid "Keyboards"
+msgstr "Tastiere"
+
+msgid "MemoryReader"
+msgstr "Memoria lettore"
+
+msgid "Monitor"
+msgstr "Tenere sotto controllo"
+
+msgid "Motherboard"
+msgstr "Scheda madre"
+
+msgid "NetworkingDevice"
+msgstr "Dispositivo networking"
+
+msgid "NotebookComputer"
+msgstr "Portatile"
+
+msgid "PersonalComputer"
+msgstr "Personale computer"
+
+msgid "Printer"
+msgstr "Stampante"
+
+msgid "RamMemory"
+msgstr "Montone memoria"
+
+msgid "Scanner"
+msgstr "Scanner"
+
+msgid "SoundCard"
+msgstr "Suono carta"
+
+msgid "SystemCabinet"
+msgstr "Sistema armadietto"
+
+msgid "SystemPowerDevice"
+msgstr "Sistema energia dispositivo"
+
+msgid "TabletComputer"
+msgstr "Tavoletta computer"
+
+msgid "VideoCard"
+msgstr "Carta video"
+
+msgid "VideoProjector"
+msgstr "Proiettore video"
+
+msgid "Webcam"
+msgstr "Webcam"
+
+msgid "BandColor"
+msgstr "Banda Colore"
+
+msgid "BandMaterial"
+msgstr "Banda materiale"
+
+msgid "BandLength"
+msgstr "Banda lunghezza"
+
+msgid "BandWidth"
+msgstr "Banda Larghezza"
+
+msgid "NumberOfItems"
+msgstr "Numero di elementi"
+
+msgid "CollectionName"
+msgstr "Collezione nome"
+
+msgid "ClaspType"
+msgstr "Chiusura tipo"
+
+msgid "CaseMaterial"
+msgstr "Caso materiale"
+
+msgid "CaseSizeThickness"
+msgstr "Caso dimensioni spessore"
+
+msgid "CaseSizeDiameter"
+msgstr "Caso dimensioni diametro"
+
+msgid "LifeStyle"
+msgstr "Vita stile"
+
+msgid "SpecificUsesForProduct"
+msgstr "Specifica usi per prodotto"
+
+msgid "MetalStamp"
+msgstr "Metallo francobollo"
+
+msgid "SettingType"
+msgstr "Impostazione tipo"
+
+msgid "DialColor"
+msgstr "Quadrante Colore"
+
+msgid "DialColorMap"
+msgstr "Quadrante Colore Mappa"
+
+msgid "BezelMaterial"
+msgstr "Lunetta materiale"
+
+msgid "BezelFunction"
+msgstr "Lunetta funzione"
+
+msgid "GemType"
+msgstr "Gemma tipo"
+
+msgid "Crystal"
+msgstr "Cristallo"
+
+msgid "MovementType"
+msgstr "Movimento tipo"
+
+msgid "CalendarType"
+msgstr "Calendario tipo"
+
+msgid "WaterResistantDepth"
+msgstr "Acqua resistente profondità"
+
+msgid "ResaleType"
+msgstr "Rivendita tipo"
+
+msgid "IncludedItems"
+msgstr "Incluso elementi"
+
+msgid "SellerWarrantyDescription"
+msgstr "Venditore garanzia Descrizione"
+
+msgid "EstatePeriod"
+msgstr "Immobiliare periodo"
+
+msgid "ItemShape"
+msgstr "Elemento forma"
+
+msgid "SpecialFeatures"
+msgstr "Speciale caratteristiche"
+
+msgid "DisplayType"
+msgstr "Visualizzazione tipo"
+
+msgid "MaximumWaterPressure"
+msgstr "Massimo acqua pressione"
+
+msgid "ModelYear"
+msgstr "Modello anno"
+
+msgid "Season"
+msgstr "Stagione"
+
+msgid "IsAdultProduct"
+msgstr "È adulto prodotto"
+
+msgid "SportType"
+msgstr "Tipo Sport"
+
+msgid "TargetGender"
+msgstr "Destinazione genere"
+
+msgid "ManufacturerWarrantyType"
+msgstr "Produttore garanzia tipo"
+
+msgid "Battery"
+msgstr "Batteria"
+
+msgid "AccessoryConnectionType"
+msgstr "Accessorio connessione tipo"
+
+msgid "BatteryCapacity"
+msgstr "Batteria capacità"
+
+msgid "BladeEdge"
+msgstr "Lama Bordo"
+
+msgid "BladeLength"
+msgstr "Lama lunghezza"
+
+msgid "Brightness"
+msgstr "Luminosità"
+
+msgid "BulbType"
+msgstr "Lampadina tipo"
+
+msgid "CenterLength"
+msgstr "Centro lunghezza"
+
+msgid "CompatibleDevices"
+msgstr "Compatibile dispositivi"
+
+msgid "CompatibleFastenerRange"
+msgstr "Compatibile dispositivo di fissaggio gamma"
+
+msgid "CoolingMethod"
+msgstr "Di raffreddamento Metodo."
+
+msgid "CoolingWattage"
+msgstr "Di raffreddamento wattaggio"
+
+msgid "CornerRadius"
+msgstr "Angolo raggio"
+
+msgid "EnergyConsumption"
+msgstr "Energia consumo"
+
+msgid "EnergyEfficiencyRatioCooling"
+msgstr "Energia efficienza rapporto di raffreddamento"
+
+msgid "EnvironmentalDescription"
+msgstr "Ambientale Descrizione"
+
+msgid "EuEnergyEfficiencyClassHeating"
+msgstr "Dell'Unione europea energia efficienza classe Riscaldamento"
+
+msgid "EuEnergyLabelEfficiencyClass"
+msgstr "Dell'Unione europea energia etichetta efficienza classe"
+
+msgid "ExternalTestingCertification"
+msgstr "Esterno test certificazione"
+
+msgid "Coverage"
+msgstr "Copertura"
+
+msgid "CutType"
+msgstr "Taglio tipo"
+
+msgid "CuttingWidth"
+msgstr "Taglio Larghezza"
+
+msgid "DeviceType"
+msgstr "Dispositivo tipo"
+
+msgid "DisplayStyle"
+msgstr "Visualizzazione stile"
+
+msgid "FlushType"
+msgstr "A filo tipo"
+
+msgid "FoldedKnifeSize"
+msgstr "Piegato coltello dimensioni"
+
+msgid "GritRating"
+msgstr "Graniglia valutazione"
+
+msgid "HandleMaterial"
+msgstr "Maniglia materiale"
+
+msgid "HeadStyle"
+msgstr "Testa stile"
+
+msgid "HeaterWattage"
+msgstr "Riscaldatore wattaggio"
+
+msgid "InsideDiameter"
+msgstr "Interno diametro"
+
+msgid "LaserBeamColor"
+msgstr "Fascio Colore laser"
+
+msgid "MaximumPower"
+msgstr "Massimo energia"
+
+msgid "MeasurementAccuracy"
+msgstr "Misura precisione"
+
+msgid "MeasurementSystem"
+msgstr "Misura sistema"
+
+msgid "MinimumEfficiencyReportingValue"
+msgstr "Minimo efficienza segnalazione valore"
+
+msgid "NumberOfBasins"
+msgstr "Numero di bacini"
+
+msgid "NumberOfHoles"
+msgstr "Numero di fori"
+
+msgid "OutsideDiameter"
+msgstr "Di fuori diametro"
+
+msgid "PerformanceDescription"
+msgstr "Prestazione Descrizione"
+
+msgid "PlugFormat"
+msgstr "Spina formato"
+
+msgid "PlugProfile"
+msgstr "Spina profilo"
+
+msgid "RecycledContentPercentage"
+msgstr "Riciclato contenuto percentuale"
+
+msgid "RoughIn"
+msgstr "Ruvido in"
+
+msgid "Speed"
+msgstr "Velocità"
+
+msgid "SpoutHeight"
+msgstr "Becco altezza"
+
+msgid "SpoutReach"
+msgstr "Becco raggiungere"
+
+msgid "SwitchStyle"
+msgstr "Interruttore stile"
+
+msgid "SwitchType"
+msgstr "Interruttore tipo"
+
+msgid "ThreadSize"
+msgstr "Filo dimensioni"
+
+msgid "ToolTipDescription"
+msgstr "Strumento mancia Descrizione"
+
+msgid "Torque"
+msgstr "Momento torcente"
+
+msgid "UVProtection"
+msgstr "Protezione UV"
+
+msgid "ViewingArea"
+msgstr "Visualizzazione zona"
+
+msgid "ColorMap"
+msgstr "Colore Mappa"
+
+msgid "Material"
+msgstr "Materiale"
+
+msgid "ManufacturerWarrantyDescription"
+msgstr "Produttore garanzia Descrizione"
+
+msgid "RValue"
+msgstr "Valore r"
+
+msgid "Voltage"
+msgstr "Voltaggio"
+
+msgid "Wattage"
+msgstr "Wattaggio"
+
+msgid "CustomerPackageType"
+msgstr "Cliente pacchetto tipo"
+
+msgid "Watch"
+msgstr "Orologio"
+
+msgid "FashionNecklaceBraceletAnklet"
+msgstr "Moda collana Bracciale Cavigliera"
+
+msgid "FashionRing"
+msgstr "Moda anello"
+
+msgid "FashionEarring"
+msgstr "Moda orecchino"
+
+msgid "FashionOther"
+msgstr "Moda altri"
+
+msgid "FineNecklaceBraceletAnklet"
+msgstr "Bene collana Bracciale Cavigliera"
+
+msgid "FineRing"
+msgstr "Bene anello"
+
+msgid "FineEarring"
+msgstr "Bene orecchino"
+
+msgid "FineOther"
+msgstr "Bene altri"
+
+msgid "Certificate"
+msgstr "Certificato"
+
+msgid "TotalGemWeight"
+msgstr "Totale gemma peso"
+
+msgid "TotalMetalWeight"
+msgstr "Totale metallo peso"
+
+msgid "Diameter"
+msgstr "Diametro"
+
+msgid "Height"
+msgstr "Altezza"
+
+msgid "Width"
+msgstr "Larghezza"
+
+msgid "NumberOfStones"
+msgstr "Numero di pietre"
+
+msgid "Stone"
+msgstr "Pietra"
+
+msgid "NumberOfPearls"
+msgstr "Numero di perle"
+
+msgid "Hallmark"
+msgstr "Segno distintivo"
+
+msgid "StyleKeywords"
+msgstr "Stile Parole chiavi"
+
+msgid "OccasionLifestyle"
+msgstr "Occasione stile di vita"
+
+msgid "Length"
+msgstr "Lunghezza"
+
+msgid "ReSizable"
+msgstr "Ri considerevole"
+
+msgid "SizingLowerRange"
+msgstr "Dimensionamento inferiore gamma"
+
+msgid "SizingUpperRange"
+msgstr "Dimensionamento superiore gamma"
+
+msgid "AutoAccessoryMisc"
+msgstr "Automatico accessorio varie"
+
+msgid "AutoPart"
+msgstr "Automatico parte"
+
+msgid "PowersportsPart"
+msgstr "Parte powersports"
+
+msgid "PowersportsVehicle"
+msgstr "Veicolo powersports"
+
+msgid "ProtectiveGear"
+msgstr "Protettivo ingranaggio"
+
+msgid "Helmet"
+msgstr "Casco"
+
+msgid "RidingApparel"
+msgstr "Equitazione Abbigliamento"
+
+msgid "Tire"
+msgstr "Pneumatico"
+
+msgid "Rims"
+msgstr "Cerchioni"
+
+msgid "TireAndWheel"
+msgstr "Pneumatico e Ruota"
+
+msgid "Vehicle"
+msgstr "Veicolo"
+
+msgid "Motorcyclepart"
+msgstr "Motorcyclepart"
+
+msgid "Motorcycleaccessory"
+msgstr "Motorcycleaccessory"
+
+msgid "Ridinggloves"
+msgstr "Ridinggloves"
+
+msgid "Ridingboots"
+msgstr "Stivali da equitazione"
+
+msgid "BodyPartExteriorFinish"
+msgstr "Corpo parte esterno finitura"
+
+msgid "CAPACertified"
+msgstr "Certificato capa"
+
+msgid "ConstructionType"
+msgstr "Costruzione tipo"
+
+msgid "EuAcousticNoiseSymbol"
+msgstr "Dell'Unione europea acustica rumore simbolo"
+
+msgid "EuFuelEfficiencyClass"
+msgstr "Dell'Unione europea carburante efficienza classe"
+
+msgid "EuTireClass"
+msgstr "Dell'Unione europea pneumatico classe"
+
+msgid "EuWetGripClass"
+msgstr "Classe dell'Unione europea bagnato presa"
+
+msgid "ExternalRollingNoise"
+msgstr "Esterno rotolamento rumore"
+
+msgid "HollanderNumber"
+msgstr "Numero Olandese"
+
+msgid "LightBulbType"
+msgstr "Luce lampadina tipo"
+
+msgid "LoadIndex"
+msgstr "Carico indice"
+
+msgid "MirrorAdjustment"
+msgstr "Specchio regolazione"
+
+msgid "MirrorDimmingFeature"
+msgstr "Specchio regolazione della luminosità caratteristica"
+
+msgid "MirrorFolding"
+msgstr "Specchio pieghevole"
+
+msgid "MirrorHeated"
+msgstr "Specchio riscaldata"
+
+msgid "MirrorHousingIncluded"
+msgstr "Specchio alloggiamento incluso"
+
+msgid "MirrorLensCurvature"
+msgstr "Specchio lente curvatura"
+
+msgid "MirrorSpecialFeature"
+msgstr "Specchio speciale caratteristica"
+
+msgid "MirrorTurnSignalIndicator"
+msgstr "Specchio giro segnale indicatore"
+
+msgid "OEMPartNumber"
+msgstr "Numero parte oem"
+
+msgid "Offset"
+msgstr "Compensare"
+
+msgid "part_type_id"
+msgstr "Part_type_id"
+
+msgid "PARTSLINKNumber"
+msgstr "Numero PartsLink"
+
+msgid "PitchCircleDiameter"
+msgstr "Intonazione cerchio diametro"
+
+msgid "RimDiameter"
+msgstr "Cerchione diametro"
+
+msgid "RimWidth"
+msgstr "Cerchione Larghezza"
+
+msgid "SectionWidth"
+msgstr "Sezione Larghezza"
+
+msgid "SpecificationMet"
+msgstr "Specificazione ha incontrato"
+
+msgid "SpeedRating"
+msgstr "Velocità valutazione"
+
+msgid "TireAspectRatio"
+msgstr "Pneumatico aspetto rapporto"
+
+msgid "TireType"
+msgstr "Pneumatico tipo"
+
+msgid "WheelBoreDiameter"
+msgstr "Ruota Alesaggio diametro"
+
+msgid "WindowRegulatorLiftType"
+msgstr "Finestra regolatore sollevare tipo"
+
+msgid "Amperage"
+msgstr "Amperaggio"
+
+msgid "ItemPackageQuantity"
+msgstr "Elemento pacchetto quantità"
+
+msgid "Viscosity"
+msgstr "Viscosità"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "NumberOfGrooves"
+msgstr "Numero di scanalature"
+
+msgid "SoleMaterial"
+msgstr "Suola materiale"
+
+msgid "ShoeClosureType"
+msgstr "Scarpa chiusura tipo"
+
+msgid "ShoeWidth"
+msgstr "Scarpa Larghezza"
+
+msgid "OccasionAndLifestyle"
+msgstr "Occasione e stile di vita"
+
+msgid "OuterMaterial"
+msgstr "Esterno materiale"
+
+msgid "InnerMaterial"
+msgstr "Interno materiale"
+
+msgid "VolumeCapacityName"
+msgstr "Capacità nome volume"
+
+msgid "AccessLocation"
+msgstr "Accesso posizione"
+
+msgid "LoadCapacity"
+msgstr "Carico capacità"
+
+msgid "UniformTireQualityGradeRating"
+msgstr "Uniforme pneumatico qualità grado valutazione"
+
+msgid "TreadDepth"
+msgstr "Filo profondità"
+
+msgid "WheelBackspacing"
+msgstr "Ruota un backspace"
+
+msgid "CompatibleWithVehicleType"
+msgstr "Compatibile con veicolo tipo"
+
+msgid "AutoPartPosition"
+msgstr "Automatico parte posizione"
+
+msgid "DimmingControl"
+msgstr "Regolazione della luminosità controllo"
+
+msgid "ModelName"
+msgstr "Modello nome"
+
+msgid "ModelNumber"
+msgstr "Modello numero"
+
+msgid "WaterResistanceLevel"
+msgstr "Acqua resistenza livello"
+
+msgid "ShaftDiameter"
+msgstr "Albero diametro"
+
+msgid "ShellType"
+msgstr "Conchiglia tipo"
+
+msgid "MaximumCircumference"
+msgstr "Massimo circonferenza"
+
+msgid "MinimumCircumference"
+msgstr "Minimo circonferenza"
+
+msgid "LiningDescription"
+msgstr "Fodera Descrizione"
+
+msgid "WarrantyDescription"
+msgstr "Garanzia Descrizione"
+
+msgid "PackageTypeName"
+msgstr "Pacchetto tipo nome"
+
+msgid "BatteryCellComposition"
+msgstr "Batteria cella Composizione"
+
+msgid "BatteryDescription"
+msgstr "Batteria Descrizione"
+
+msgid "BatteryFormFactor"
+msgstr "Batteria modulo fattore di"
+
+msgid "Department"
+msgstr "Dipartimento"
+
+msgid "EventKeywords"
+msgstr "Evento Parole chiavi"
+
+msgid "SpecialSizeType"
+msgstr "Speciale dimensioni tipo"
+
+msgid "TargetAudience"
+msgstr "Destinazione pubblico"
+
+msgid "MaterialComposition"
+msgstr "Materiale Composizione"
+
+msgid "Position"
+msgstr "Posizione"
+
+msgid "Orientation"
+msgstr "Orientamento"
+
+msgid "Profile"
+msgstr "Profilo"
+
+msgid "PulleyType"
+msgstr "Puleggia tipo"
+
+msgid "AssemblyRequired"
+msgstr "Assemblea richiesto"
+
+msgid "HarmonizedCode"
+msgstr "Armonizzato codice"
+
+msgid "IncludedComponents"
+msgstr "Incluso componenti"
+
+msgid "IsPortable"
+msgstr "È portatile"
+
+msgid "RemoteIncluded"
+msgstr "A distanza incluso"
+
+msgid "HasGreyScale"
+msgstr "Ha grigio scala"
+
+msgid "LightSourceType"
+msgstr "Luce fonte tipo"
+
+msgid "MaxInputSheetCapacity"
+msgstr "Capacità ingresso foglio max"
+
+msgid "MaxPrintResolutionBlackWhite"
+msgstr "Nero stampare risoluzione bianco max"
+
+msgid "MaxPrintResolutionColor"
+msgstr "Colore stampare risoluzione max"
+
+msgid "MaxPrintSpeedBlackWhite"
+msgstr "Nero stampare velocità bianco max"
+
+msgid "MaxPrintSpeedColor"
+msgstr "Colore stampare velocità max"
+
+msgid "MaxScanningSize"
+msgstr "Lettura dimensioni max"
+
+msgid "MinScanningSize"
+msgstr "Lettura dimensioni min"
+
+msgid "PrinterMediaSizeMaximum"
+msgstr "Massimo stampante dimensioni media"
+
+msgid "PrinterOutputType"
+msgstr "Stampante uscita tipo"
+
+msgid "PrintingTechnology"
+msgstr "Stampa tecnologia"
+
+msgid "ScanRate"
+msgstr "Scansione tasso"
+
+msgid "ScannerResolution"
+msgstr "Risoluzione scanner"
+
+msgid "BedAndBath"
+msgstr "Letto e Vasca da bagno"
+
+msgid "FurnitureAndDecor"
+msgstr "Mobili e arredamento"
+
+msgid "Kitchen"
+msgstr "Cucina"
+
+msgid "OutdoorLiving"
+msgstr "All'aperto vivere"
+
+msgid "SeedsAndPlants"
+msgstr "Semi e piante"
+
+msgid "Art"
+msgstr "Arte"
+
+msgid "Parentage"
+msgstr "Origine"
+
+msgid "VariationData"
+msgstr "Variazione dati"
+
+msgid "CanShipInOriginalContainer"
+msgstr "Può contenitore Originale nave in"
+
+msgid "CountryAsLabeled"
+msgstr "Paese come con l'etichetta"
+
+msgid "CountryProducedIn"
+msgstr "Paese prodotta in"
+
+msgid "ImportDesignation"
+msgstr "Importazione designazione"
+
+msgid "FurDescription"
+msgstr "Pelliccia Descrizione"
+
+msgid "IdentityPackageType"
+msgstr "Identità pacchetto tipo"
+
+msgid "FabricType"
+msgstr "Tessuto tipo"
+
+msgid "PatternName"
+msgstr "Modello nome"
+
+msgid "SeatHeight"
+msgstr "Sede altezza"
+
+msgid "Occasion"
+msgstr "Occasione"
+
+msgid "MatteStyle"
+msgstr "Opaco stile"
+
+msgid "DisplayWidth"
+msgstr "Visualizzazione Larghezza"
+
+msgid "DisplayHeight"
+msgstr "Visualizzazione altezza"
+
+msgid "DisplayDepth"
+msgstr "Visualizzazione profondità"
+
+msgid "DisplayDiameter"
+msgstr "Visualizzazione diametro"
+
+msgid "VolumeCapacity"
+msgstr "Capacità volume"
+
+msgid "ThreadCount"
+msgstr "Filo conteggio"
+
+msgid "NumberOfPieces"
+msgstr "Numero di pezzi"
+
+msgid "SafetyWarning"
+msgstr "Sicurezza avviso"
+
+msgid "AwardsWon"
+msgstr "Premi ha vinto"
+
+msgid "NumberOfItemsInPackage"
+msgstr "Elementi numero di pacchetto in"
+
+msgid "PowerSourceType"
+msgstr "Energia fonte tipo"
+
+msgid "Depth"
+msgstr "Profondità"
+
+msgid "Weight"
+msgstr "Peso"
+
+msgid "Spread"
+msgstr "Diffusione"
+
+msgid "SunlightExposure"
+msgstr "Luce del sole esposizione"
+
+msgid "MoistureNeeds"
+msgstr "Umidità ha bisogno di"
+
+msgid "USDAHardinessZone"
+msgstr "Robustezza zona usda"
+
+msgid "SunsetClimateZone"
+msgstr "Tramonto clima zona"
+
+msgid "NumberOfSets"
+msgstr "Numero di imposta"
+
+msgid "Finish"
+msgstr "Finitura"
+
+msgid "IsStainResistant"
+msgstr "È macchia resistente"
+
+msgid "MaximumCoverageArea"
+msgstr "Massimo copertura zona"
+
+msgid "OutputCapacity"
+msgstr "Uscita capacità"
+
+msgid "PieceCount"
+msgstr "Pezzo conteggio"
+
+msgid "PaintType"
+msgstr "Vernice tipo"
+
+msgid "Shape"
+msgstr "Forma"
+
+msgid "TowelWeight"
+msgstr "Asciugamano peso"
+
+msgid "Rebate"
+msgstr "Sconto"
+
+msgid "ProductSubtype"
+msgstr "Prodotto sottotipo"
+
+msgid "AnalogVideoFormat"
+msgstr "Analogico formato video"
+
+msgid "AnnualEnergyConsumption"
+msgstr "Annuale energia consumo"
+
+msgid "AnsweringSystemType"
+msgstr "Rispondendo alle sistema tipo"
+
+msgid "AntennaLength"
+msgstr "Lunghezza antenna"
+
+msgid "AntennaType"
+msgstr "Tipo antenna"
+
+msgid "AspectRatio"
+msgstr "Aspetto rapporto"
+
+msgid "AudioFeaturesDescription"
+msgstr "Descrizione caratteristiche audio"
+
+msgid "AudioInput"
+msgstr "Ingresso audio"
+
+msgid "AudioOutputEffects"
+msgstr "Effetti uscita audio"
+
+msgid "AudioOutputMode"
+msgstr "Modalità uscita audio"
+
+msgid "AudioOutputResponseBandwidth"
+msgstr "Larghezza di banda uscita risposta audio"
+
+msgid "AudioOutputType"
+msgstr "Uscita tipo audio"
+
+msgid "AudioSensitivity"
+msgstr "Sensibilità audio"
+
+msgid "AutoRedial"
+msgstr "Automatico ricomposizione"
+
+msgid "BatteryAverageLifeTalkTime"
+msgstr "Batteria media vita parlare tempo"
+
+msgid "BufferSize"
+msgstr "Dimensioni buffer"
+
+msgid "BiometricSecurityFeatures"
+msgstr "Biometrici sicurezza caratteristiche"
+
+msgid "BuiltInDecoders"
+msgstr "Costruito decodificatori in"
+
+msgid "ButtonQuantity"
+msgstr "Pulsante quantità"
+
+msgid "CabinetMaterial"
+msgstr "Armadietto materiale"
+
+msgid "CableFeature"
+msgstr "Cavo caratteristica"
+
+msgid "CableTechnology"
+msgstr "Cavo tecnologia"
+
+msgid "CableType"
+msgstr "Cavo tipo"
+
+msgid "CacheMemoryInstalledSize"
+msgstr "Nascondiglio memoria installato dimensioni"
+
+msgid "CallAlerts"
+msgstr "Chiamata avvisi"
+
+msgid "CallerIdentification"
+msgstr "Chiamante identificazione"
+
+msgid "CarryingStrap"
+msgstr "Che trasportano cinghia"
+
+msgid "CassetteSystemType"
+msgstr "Cassetta sistema tipo"
+
+msgid "CDChangerType"
+msgstr "Tipo CD changer"
+
+msgid "CDDiskCapacity"
+msgstr "Capacità disco CD"
+
+msgid "CDLoadType"
+msgstr "Carico tipo CD"
+
+msgid "CDPlaybackMode"
+msgstr "Modalità la riproduzione CD"
+
+msgid "CDSystemType"
+msgstr "Sistema tipo CD"
+
+msgid "CellularEnhancementProtocol"
+msgstr "Cellulare valorizzazione protocollo"
+
+msgid "CoaxialDigitalInput"
+msgstr "Coassiale digitale ingresso"
+
+msgid "CoaxialDigitalOutput"
+msgstr "Coassiale digitale uscita"
+
+msgid "ColorDepth"
+msgstr "Colore profondità"
+
+msgid "ColorSupport"
+msgstr "Colore supporto"
+
+msgid "CompatibleCartridge"
+msgstr "Compatibile cartuccia"
+
+msgid "ComponentType"
+msgstr "Componente tipo"
+
+msgid "CompressedCapacity"
+msgstr "Compresso capacità"
+
+msgid "ComputerPeripheralConnector"
+msgstr "Connettore periferica computer"
+
+msgid "ConferenceCallCapability"
+msgstr "Conferenza chiamata capacità"
+
+msgid "ConnectivityProtocol"
+msgstr "Connettività protocollo"
+
+msgid "ConnectivityTechnology"
+msgstr "Connettività tecnologia"
+
+msgid "CopierType"
+msgstr "Copiatrice tipo"
+
+msgid "CopySizeMaximum"
+msgstr "Copia dimensioni massimo"
+
+msgid "CrossoverFrequency"
+msgstr "Frequenza crossover"
+
+msgid "DACDataWidth"
+msgstr "Dati Larghezza Dac"
+
+msgid "DataCompressionProtocol"
+msgstr "Dati compressione protocollo"
+
+msgid "DataLinkProtocol"
+msgstr "Dati collegamento protocollo"
+
+msgid "DataService"
+msgstr "Dati servizio"
+
+msgid "DataStorageCapability"
+msgstr "Dati conservazione capacità"
+
+msgid "DataTransferRate"
+msgstr "Dati trasferimento tasso"
+
+msgid "DGPS"
+msgstr "DGPS"
+
+msgid "DialerType"
+msgstr "Tipo dialer"
+
+msgid "DigitalPlayerType"
+msgstr "Digitale giocatore tipo"
+
+msgid "DigitalRecordingTime"
+msgstr "Digitale registrazione tempo"
+
+msgid "DigitalSignalingProtocol"
+msgstr "Digitale segnalazione protocollo"
+
+msgid "DigitalStorageCapacity"
+msgstr "Digitale conservazione capacità"
+
+msgid "DigitalZoom"
+msgstr "Digitale ingrandimento"
+
+msgid "DisplayColorSupport"
+msgstr "Visualizzazione Colore supporto"
+
+msgid "DisplayLanguageOptions"
+msgstr "Visualizzazione lingua Opzioni"
+
+msgid "DisplayLineQuantity"
+msgstr "Visualizzazione linea quantità"
+
+msgid "DisplayResolutionMaximum"
+msgstr "Visualizzazione risoluzione massimo"
+
+msgid "DisplayTechnology"
+msgstr "Visualizzazione tecnologia"
+
+msgid "DockingStationExternalInterface"
+msgstr "Docking station stazione esterno interfaccia"
+
+msgid "DriveUnits"
+msgstr "In auto unità"
+
+msgid "Duplex"
+msgstr "Fronte/retro"
+
+msgid "DVDDiskCapacity"
+msgstr "Capacità disco dvd"
+
+msgid "DVDDiskChangerType"
+msgstr "Disco tipo Dvd changer"
+
+msgid "DVDMediaLoadType"
+msgstr "Carico tipo Dvd media"
+
+msgid "DVDPictureZoomPower"
+msgstr "Foto energia ingrandimento dvd"
+
+msgid "DVDPlaybackMode"
+msgstr "Modalità la riproduzione dvd"
+
+msgid "DVDType"
+msgstr "Tipo dvd"
+
+msgid "DVRCompressionRate"
+msgstr "Compressione tasso DVR"
+
+msgid "DVRMaxRecordingTime"
+msgstr "Registrazione tempo Dvr max"
+
+msgid "DVRServiceDescription"
+msgstr "Descrizione servizio DVR"
+
+msgid "Enclosure"
+msgstr "Recinzione"
+
+msgid "Equalizer"
+msgstr "Equalizzatore"
+
+msgid "EqualizerBandChannels"
+msgstr "Equalizzatore banda canali"
+
+msgid "ErrorCorrectionProtocol"
+msgstr "Errore correzione protocollo"
+
+msgid "EyeRelief"
+msgstr "Occhio sollievo"
+
+msgid "FaceplateType"
+msgstr "Piastra frontale tipo"
+
+msgid "FaxMachineCompatibility"
+msgstr "Compatibilità macchina fax"
+
+msgid "FaxType"
+msgstr "Tipo fax"
+
+msgid "FlashMemoryInstalledSize"
+msgstr "Veloce memoria installato dimensioni"
+
+msgid "FloppyDiskDrive"
+msgstr "Disco floppy disco in auto"
+
+msgid "FormFactor"
+msgstr "Modulo fattore di"
+
+msgid "FreeAirResonantFrequency"
+msgstr "Gratis aria risonante frequenza"
+
+msgid "FrequencyRange"
+msgstr "Frequenza gamma"
+
+msgid "FrequencyRequired"
+msgstr "Frequenza richiesto"
+
+msgid "FrequencyResponseCurve"
+msgstr "Frequenza risposta curva"
+
+msgid "FrontAccessibleBaysQuantity"
+msgstr "Parte anteriore accessibile Baie quantità"
+
+msgid "FuseDescription"
+msgstr "Fusibile Descrizione"
+
+msgid "GPSNavigation"
+msgstr "Navigazione gps"
+
+msgid "GraphicsCoprocessor"
+msgstr "Grafica coprocessore"
+
+msgid "GraphicsCoprocessorQuantity"
+msgstr "Grafica coprocessore quantità"
+
+msgid "GraphicsRam"
+msgstr "Grafica Montone"
+
+msgid "GreyscaleDepth"
+msgstr "Profondità in scala di grigi"
+
+msgid "HandsetDepth"
+msgstr "Microtelefono profondità"
+
+msgid "HandsetHeight"
+msgstr "Microtelefono altezza"
+
+msgid "HandsetLocator"
+msgstr "Microtelefono locator"
+
+msgid "HandsetWeight"
+msgstr "Microtelefono peso"
+
+msgid "HandsetWidth"
+msgstr "Microtelefono Larghezza"
+
+msgid "HardDiskDescription"
+msgstr "Disco rigido disco Descrizione"
+
+msgid "HardDiskInstalledQuantity"
+msgstr "Disco rigido disco installato quantità"
+
+msgid "HardDiskRotationalSpeed"
+msgstr "Disco rigido disco rotazionale velocità"
+
+msgid "HardwareInterface"
+msgstr "Interfaccia hardware"
+
+msgid "HasCommercialSkip"
+msgstr "Ha commerciale Salta"
+
+msgid "HasDVDPictureZoom"
+msgstr "Foto ingrandimento hasdvd"
+
+msgid "HasParentalChannelLock"
+msgstr "Ha parentale canale serratura"
+
+msgid "HeadphonesFormFactor"
+msgstr "Cuffie modulo fattore di"
+
+msgid "HeadphonesJack"
+msgstr "Cuffie jack"
+
+msgid "HeadphonesTechnology"
+msgstr "Cuffie tecnologia"
+
+msgid "HorizontalResolution"
+msgstr "Orizzontale risoluzione"
+
+msgid "HotSwapBaysQuantity"
+msgstr "Caldo scambiare Baie quantità"
+
+msgid "HumanInterfaceInput"
+msgstr "Umano interfaccia ingresso"
+
+msgid "HumanInterfaceOutput"
+msgstr "Umano interfaccia uscita"
+
+msgid "ImageAspectRatio"
+msgstr "Immagine aspetto rapporto"
+
+msgid "ImageBrightness"
+msgstr "Immagine luminosità"
+
+msgid "ImageContrastRatio"
+msgstr "Immagine contrasto rapporto"
+
+msgid "Impedance"
+msgstr "Impedenza"
+
+msgid "IncludesMP3Player"
+msgstr "Giocatore includesmp3"
+
+msgid "IncludesRechargableBattery"
+msgstr "Batteria include ricaricabile"
+
+msgid "IncludesRemote"
+msgstr "Include a distanza"
+
+msgid "IncludesSpeakerphone"
+msgstr "Include altoparlante"
+
+msgid "InputAdapter"
+msgstr "Ingresso adattatore"
+
+msgid "InputChannelQuantity"
+msgstr "Ingresso canale quantità"
+
+msgid "InputConnection"
+msgstr "Ingresso connessione"
+
+msgid "InputConnectorType"
+msgstr "Ingresso connettore tipo"
+
+msgid "InputDevice"
+msgstr "Ingresso dispositivo"
+
+msgid "InputDeviceInterface"
+msgstr "Ingresso dispositivo interfaccia"
+
+msgid "Intercom"
+msgstr "Citofono"
+
+msgid "InternalBaysQuantity"
+msgstr "Interno Baie quantità"
+
+msgid "ISDNTerminalAdapterInterface"
+msgstr "Adattatore interfaccia terminale Isdn"
+
+msgid "IsHDTVCompatible"
+msgstr "Compatibile ishdtv"
+
+msgid "IsWaterproof"
+msgstr "È impermeabile"
+
+msgid "ItemDisplayDepth"
+msgstr "Elemento visualizzazione profondità"
+
+msgid "ItemDisplayHeight"
+msgstr "Elemento visualizzazione altezza"
+
+msgid "ItemDisplayLength"
+msgstr "Elemento visualizzazione lunghezza"
+
+msgid "ItemDisplayLengthMaximum"
+msgstr "Elemento visualizzazione lunghezza massimo"
+
+msgid "ItemDisplayWeight"
+msgstr "Elemento visualizzazione peso"
+
+msgid "ItemDisplayWidth"
+msgstr "Elemento visualizzazione Larghezza"
+
+msgid "KeyboardDescription"
+msgstr "Tastiera Descrizione"
+
+msgid "LampType"
+msgstr "Lampada tipo"
+
+msgid "LeftConnectorGender"
+msgstr "Sinistra connettore genere"
+
+msgid "LeftConnectorType"
+msgstr "Sinistra connettore tipo"
+
+msgid "MapType"
+msgstr "Mappa tipo"
+
+msgid "MaterialType"
+msgstr "Materiale tipo"
+
+msgid "MaxCopyResolutionBlackWhite"
+msgstr "Nero copia risoluzione bianco max"
+
+msgid "MaxCopyResolutionColor"
+msgstr "Colore copia risoluzione max"
+
+msgid "MaximumBridgedOutputPower"
+msgstr "Massimo a ponte uscita energia"
+
+msgid "MaximumExternalResolution"
+msgstr "Massimo esterno risoluzione"
+
+msgid "MaximumImageSize"
+msgstr "Massimo immagine dimensioni"
+
+msgid "MaximumLinearPeakExcursion"
+msgstr "Massimo lineare picco escursione"
+
+msgid "MaximumOutputPower"
+msgstr "Massimo uscita energia"
+
+msgid "MaximumRange"
+msgstr "Massimo gamma"
+
+msgid "MaximumRangeIndoors"
+msgstr "Massimo gamma al chiuso"
+
+msgid "MaximumSampleRate"
+msgstr "Massimo campione tasso"
+
+msgid "MaximumScreenDistance"
+msgstr "Massimo schermo distanza"
+
+msgid "MediaFormat"
+msgstr "Formato media"
+
+msgid "MediaLoadType"
+msgstr "Carico tipo media"
+
+msgid "MediaSizeMaximum"
+msgstr "Massimo dimensioni media"
+
+msgid "MediaType"
+msgstr "Tipo media"
+
+msgid "MemoryStorageCapacity"
+msgstr "Memoria conservazione capacità"
+
+msgid "MemoryTechnology"
+msgstr "Memoria tecnologia"
+
+msgid "MicrophoneFormFactor"
+msgstr "Microfono modulo fattore di"
+
+msgid "MicrophoneOperationMode"
+msgstr "Microfono funzionamento modalità"
+
+msgid "MicrophoneTechnology"
+msgstr "Microfono tecnologia"
+
+msgid "MiniDiscSystem"
+msgstr "Disco sistema mini"
+
+msgid "MinimumImageSize"
+msgstr "Minimo immagine dimensioni"
+
+msgid "MinimumScreenDistance"
+msgstr "Minimo schermo distanza"
+
+msgid "MinimumSystemRequirementDescription"
+msgstr "Minimo sistema requisito Descrizione"
+
+msgid "Model"
+msgstr "Modello"
+
+msgid "ModemDescription"
+msgstr "Descrizione modem"
+
+msgid "ModemInterface"
+msgstr "Interfaccia modem"
+
+msgid "ModemType"
+msgstr "Tipo modem"
+
+msgid "MonthlyDutyCycle"
+msgstr "Mensile dovere ciclo"
+
+msgid "MountingHoleDiameter"
+msgstr "Montaggio Foro diametro"
+
+msgid "MovementDetectionTechnology"
+msgstr "Movimento rilevazione tecnologia"
+
+msgid "MultilineOperation"
+msgstr "Funzionamento multilinea"
+
+msgid "MultimediaFunctionality"
+msgstr "Multimediale funzionalità"
+
+msgid "NavigationRoutes"
+msgstr "Navigazione itinerari"
+
+msgid "NetworkingFeature"
+msgstr "Caratteristica networking"
+
+msgid "NetworkInterfaceDescription"
+msgstr "Rete interfaccia Descrizione"
+
+msgid "NumberOfPorts"
+msgstr "Numero di porti"
+
+msgid "NumberOfSupportedZones"
+msgstr "Numero di supportato zone"
+
+msgid "ObjectiveLensDiameter"
+msgstr "Obiettivo lente diametro"
+
+msgid "OperatingHumidity"
+msgstr "Di funzionamento umidità"
+
+msgid "OpticalDigitalInput"
+msgstr "Ottica digitale ingresso"
+
+msgid "OpticalDigitalOutput"
+msgstr "Ottica digitale uscita"
+
+msgid "OpticalSensorInterpolatedResolution"
+msgstr "Ottica sensore interpolato risoluzione"
+
+msgid "OpticalSensorResolution"
+msgstr "Ottica sensore risoluzione"
+
+msgid "OpticalStorageDevice"
+msgstr "Ottica conservazione dispositivo"
+
+msgid "OpticalStorageInstalledQuantity"
+msgstr "Ottica conservazione installato quantità"
+
+msgid "OpticalStorageReadSpeed"
+msgstr "Ottica conservazione leggere velocità"
+
+msgid "OpticalStorageRewriteSpeed"
+msgstr "Ottica conservazione riscrivere velocità"
+
+msgid "OpticalStorageSecondaryReadSpeed"
+msgstr "Ottica conservazione secondario leggere velocità"
+
+msgid "OpticalStorageSecondaryRewriteSpeed"
+msgstr "Ottica conservazione secondario riscrivere velocità"
+
+msgid "OpticalStorageSecondaryType"
+msgstr "Ottica conservazione secondario tipo"
+
+msgid "OpticalStorageSecondaryWriteSpeed"
+msgstr "Ottica conservazione secondario Scrivi velocità"
+
+msgid "OpticalStorageWriteSpeed"
+msgstr "Ottica conservazione Scrivi velocità"
+
+msgid "OutputChannelQuantity"
+msgstr "Uscita canale quantità"
+
+msgid "OutputConnection"
+msgstr "Uscita connessione"
+
+msgid "OutputConnectorQuantity"
+msgstr "Uscita connettore quantità"
+
+msgid "OutputConnectorType"
+msgstr "Uscita connettore tipo"
+
+msgid "OutputPower"
+msgstr "Uscita energia"
+
+msgid "OutputWattage"
+msgstr "Uscita wattaggio"
+
+msgid "PackageContentType"
+msgstr "Pacchetto contenuto tipo"
+
+msgid "PCConnectionAvailable"
+msgstr "Disponibile connessione pc"
+
+msgid "PhoneBaseDepth"
+msgstr "Profondità telefono Base"
+
+msgid "PhoneBaseHeight"
+msgstr "Altezza telefono Base"
+
+msgid "PhoneBaseWeight"
+msgstr "Telefono peso Base"
+
+msgid "PhoneBaseWidth"
+msgstr "Telefono Larghezza Base"
+
+msgid "PortedBoxVolume"
+msgstr "Casella Porting volume"
+
+msgid "PowerAmplifierClass"
+msgstr "Energia amplificatore classe"
+
+msgid "PowerDevice"
+msgstr "Energia dispositivo"
+
+msgid "PowerGain"
+msgstr "Energia guadagno"
+
+msgid "PowerLoadRating"
+msgstr "Energia carico valutazione"
+
+msgid "PreampOutputChannels"
+msgstr "Preamplificatore uscita canali"
+
+msgid "PresetChannelQuantity"
+msgstr "Preimpostato canale quantità"
+
+msgid "PrinterInterface"
+msgstr "Stampante interfaccia"
+
+msgid "PrinterOutput"
+msgstr "Stampante uscita"
+
+msgid "PrinterResolutionBWHorizontalMax"
+msgstr "Orizzontale stampante Risoluzionebw max"
+
+msgid "PrinterResolutionBWVerticalMax"
+msgstr "Stampante verticale Risoluzionebw max"
+
+msgid "PrinterResolutionColorHorizontalMax"
+msgstr "Colore orizzontale stampante risoluzione max"
+
+msgid "PrinterResolutionColorVerticalMax"
+msgstr "Colore stampante risoluzione verticale max"
+
+msgid "PrinterTechnology"
+msgstr "Stampante tecnologia"
+
+msgid "ProcessorDescription"
+msgstr "Processore Descrizione"
+
+msgid "ProcessorMaximum"
+msgstr "Processore massimo"
+
+msgid "ProcessorModelNumber"
+msgstr "Processore modello numero"
+
+msgid "ProcessorUpgrade"
+msgstr "Processore aggiornamento"
+
+msgid "Programmability"
+msgstr "Programmabilità"
+
+msgid "QtsTotalQFactor"
+msgstr "Fattore di Qts totalq"
+
+msgid "RadioBandsSupported"
+msgstr "Bande supportato radio"
+
+msgid "RadioChannels"
+msgstr "Canali radio"
+
+msgid "RAIDLevel"
+msgstr "Incursione livello"
+
+msgid "RAMMemoryInstalledSize"
+msgstr "Montone memoria installato dimensioni"
+
+msgid "RAMMemoryMaximumSize"
+msgstr "Montone memoria massimo dimensioni"
+
+msgid "RAMMemoryTechnology"
+msgstr "Montone memoria tecnologia"
+
+msgid "RangefinderType"
+msgstr "Telemetro tipo"
+
+msgid "ReceiverDescription"
+msgstr "Ricevitore Descrizione"
+
+msgid "RecordingCapacity"
+msgstr "Registrazione capacità"
+
+msgid "RemoteControlAudioControls"
+msgstr "Controllo controlli a distanza audio"
+
+msgid "RemoteControlDescription"
+msgstr "A distanza controllo Descrizione"
+
+msgid "RemoteControlTechnology"
+msgstr "A distanza controllo tecnologia"
+
+msgid "RemoteManagementProtocol"
+msgstr "A distanza gestione protocollo"
+
+msgid "RemovableMediaCapacity"
+msgstr "Capacità removibile media"
+
+msgid "RemovableMemory"
+msgstr "Removibile memoria"
+
+msgid "RemovableStorage"
+msgstr "Removibile conservazione"
+
+msgid "RemovableStorageInterface"
+msgstr "Removibile conservazione interfaccia"
+
+msgid "RemovableStorageNativeCapacity"
+msgstr "Removibile conservazione nativo capacità"
+
+msgid "ResponseTime"
+msgstr "Risposta tempo"
+
+msgid "RightConnectorGender"
+msgstr "Diritto connettore genere"
+
+msgid "RightConnectorType"
+msgstr "Diritto connettore tipo"
+
+msgid "RoutingProtocol"
+msgstr "Instradamento protocollo"
+
+msgid "SatelliteServiceDescription"
+msgstr "Satellitare servizio Descrizione"
+
+msgid "SBAS"
+msgstr "SBAS"
+
+msgid "ScanElementType"
+msgstr "Scansione elemento tipo"
+
+msgid "ScannerInterface"
+msgstr "Interfaccia scanner"
+
+msgid "ScannerType"
+msgstr "Tipo scanner"
+
+msgid "SCSISignalingType"
+msgstr "Segnalazione tipo scsi"
+
+msgid "SealedBoxVolume"
+msgstr "Casella sigillato volume"
+
+msgid "SearchSpeed"
+msgstr "Ricerca velocità"
+
+msgid "SecondaryCache"
+msgstr "Secondario nascondiglio"
+
+msgid "SignalToNoiseRatio"
+msgstr "Segnale a rumore rapporto"
+
+msgid "SpeakerAmplificationType"
+msgstr "Altoparlante amplificazione tipo"
+
+msgid "SpeakerConnectivity"
+msgstr "Altoparlante connettività"
+
+msgid "SpeakerDriverMaterial"
+msgstr "Altoparlante autista materiale"
+
+msgid "SpeakersCrossoverChannelQuantity"
+msgstr "Canale quantità altoparlanti crossover"
+
+msgid "SpeakersIncludedDescription"
+msgstr "Altoparlanti incluso Descrizione"
+
+msgid "SpeakersMaximumOutputPower"
+msgstr "Altoparlanti massimo uscita energia"
+
+msgid "SpeakersNominalOutputPower"
+msgstr "Altoparlanti nominale uscita energia"
+
+msgid "SpeakersResponseBandwidth"
+msgstr "Altoparlanti risposta larghezza di banda"
+
+msgid "SpeakerSystemClass"
+msgstr "Altoparlante sistema classe"
+
+msgid "SpeakerType"
+msgstr "Altoparlante tipo"
+
+msgid "SpecificUses"
+msgstr "Specifica usi"
+
+msgid "SSDDriveArchitechture"
+msgstr "In auto Ssd architechture"
+
+msgid "StandardInputSheetCapacity"
+msgstr "Capacità ingresso foglio standard"
+
+msgid "StorageController"
+msgstr "Conservazione controller di"
+
+msgid "StorageControllerInterface"
+msgstr "Conservazione controller di interfaccia"
+
+msgid "StorageHumidity"
+msgstr "Conservazione umidità"
+
+msgid "StorageInterface"
+msgstr "Conservazione interfaccia"
+
+msgid "SupportedAudioFormat"
+msgstr "Formato supportato audio"
+
+msgid "SupportedDevices"
+msgstr "Supportato dispositivi"
+
+msgid "SupportedDevicesQuantity"
+msgstr "Supportato dispositivi quantità"
+
+msgid "SupportedImageFormat"
+msgstr "Supportato immagine formato"
+
+msgid "SupportedImageType"
+msgstr "Supportato immagine tipo"
+
+msgid "SupportedMediaSize"
+msgstr "Dimensioni supportato media"
+
+msgid "SupportedMotherboard"
+msgstr "Supportato scheda madre"
+
+msgid "SupportedStandards"
+msgstr "Supportato norme"
+
+msgid "SurgeSuppression"
+msgstr "Ondata repressione"
+
+msgid "SurroundSoundChannels"
+msgstr "Circondare suono canali"
+
+msgid "SurroundSoundEffects"
+msgstr "Circondare suono effetti"
+
+msgid "SwitchingProtocol"
+msgstr "Commutazione protocollo"
+
+msgid "SystemBusSpeed"
+msgstr "Sistema autobus velocità"
+
+msgid "TalkRangeMaximum"
+msgstr "Parlare gamma massimo"
+
+msgid "TapeLength"
+msgstr "Nastro lunghezza"
+
+msgid "TelevisionInterface"
+msgstr "Televisione interfaccia"
+
+msgid "TelevisionPCInterfaceType"
+msgstr "Interfaccia tipo televisionpc"
+
+msgid "TemperatureRating"
+msgstr "Temperatura valutazione"
+
+msgid "TotalHarmonicDistortion"
+msgstr "Totale armonica distorsione"
+
+msgid "TracklogPoints"
+msgstr "Punti tracklog"
+
+msgid "Tracks"
+msgstr "Brani"
+
+msgid "TransportProtocol"
+msgstr "Trasporto protocollo"
+
+msgid "Tuner"
+msgstr "Sintonizzatore"
+
+msgid "TunerTechnology"
+msgstr "Sintonizzatore tecnologia"
+
+msgid "TVTunerSecondaryAudioProgram"
+msgstr "Programma secondario sintonizzatore Tv audio"
+
+msgid "UPSTechnology"
+msgstr "Tecnologia UPS"
+
+msgid "VCRType"
+msgstr "Tipo videoregistratore"
+
+msgid "VerticalResolution"
+msgstr "Verticale risoluzione"
+
+msgid "VideoCaptureFormat"
+msgstr "Cattura formato video"
+
+msgid "VideoCaptureResolution"
+msgstr "Cattura risoluzione video"
+
+msgid "VideoHeadQuantity"
+msgstr "Testa quantità video"
+
+msgid "VideoInput"
+msgstr "Ingresso video"
+
+msgid "VideoInputDigitalStandard"
+msgstr "Digitale ingresso Video standard"
+
+msgid "VideoInputFormat"
+msgstr "Formato ingresso video"
+
+msgid "VideoOutputFormat"
+msgstr "Formato uscita video"
+
+msgid "VideoOutput"
+msgstr "Uscita video"
+
+msgid "VideoOutputInterface"
+msgstr "Interfaccia uscita video"
+
+msgid "VideoOutputMode"
+msgstr "Modalità uscita video"
+
+msgid "VideoPlaybackFormat"
+msgstr "Formato la riproduzione video"
+
+msgid "VideotapePlaybackSpeed"
+msgstr "Videocassetta la riproduzione velocità"
+
+msgid "VideotapeRecordingSpeed"
+msgstr "Videocassetta registrazione velocità"
+
+msgid "VoiceCommunicationSupport"
+msgstr "Voce comunicazione supporto"
+
+msgid "VoiceCoilDescription"
+msgstr "Voce bobina Descrizione"
+
+msgid "VoicemailCapability"
+msgstr "Capacità segreteria telefonica"
+
+msgid "VoiceOperatedTransmission"
+msgstr "Voce operati trasmissione"
+
+msgid "VOIPProtocols"
+msgstr "Protocolli voip"
+
+msgid "VolumeAcousticSuspension"
+msgstr "Acustica sospensione volume"
+
+msgid "WaterproofRating"
+msgstr "Impermeabile valutazione"
+
+msgid "Waypoints"
+msgstr "Waypoint"
+
+msgid "WaypointsPerRoute"
+msgstr "Itinerario Waypoint per"
+
+msgid "Weatherproof"
+msgstr "Resistente alle intemperie"
+
+msgid "WriteSpeed"
+msgstr "Scrivi velocità"
+
+msgid "InkColor"
+msgstr "Inchiostro Colore"
+
+msgid "InkOrTonerCompatibleDevices"
+msgstr "Inchiostro O tonico compatibile dispositivi"
+
+msgid "EngineType"
+msgstr "Motore tipo"
+
+msgid "HoseLength"
+msgstr "Tubo flessibile lunghezza"
+
+msgid "PoolType"
+msgstr "Piscina tipo"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "DriveMemoryStorageCapacity"
+msgstr "In auto memoria conservazione capacità"
+
+msgid "ComputerTunerTechnology"
+msgstr "Tecnologia sintonizzatore computer"
+
+msgid "GraphicsCoProcessor"
+msgstr "Grafica processore co"
+
+msgid "GraphicsRAMType"
+msgstr "Tipo graphicsram"
+
+msgid "HardDiskTechnology"
+msgstr "Disco rigido disco tecnologia"
+
+msgid "HardwarePlatform"
+msgstr "Piattaforma hardware"
+
+msgid "OpticalDeviceType"
+msgstr "Ottica dispositivo tipo"
+
+msgid "ProcessorBrand"
+msgstr "Processore marchio"
+
+msgid "ProcessorSocket"
+msgstr "Processore presa di corrente"
+
+msgid "ProcessorSpeed"
+msgstr "Processore velocità"
+
+msgid "RAMSize"
+msgstr "Montone dimensioni"
+
+msgid "U-RackSize"
+msgstr "Cremagliera dimensioni u"
+
+msgid "NotebookDisplayTechnology"
+msgstr "Visualizzazione tecnologia taccuino"
+
+msgid "MonitorTunerTechnology"
+msgstr "Tenere sotto controllo sintonizzatore tecnologia"
+
+msgid "BeautyMisc"
+msgstr "Bellezza varie"
+
+msgid "PlugType"
+msgstr "Spina tipo"
+
+msgid "SunProtection"
+msgstr "Sole protezione"
+
+msgid "Count"
+msgstr "Conteggio"
+
+msgid "BatteryPower"
+msgstr "Batteria energia"
+
+msgid "SkinType"
+msgstr "Pelle tipo"
+
+msgid "SkinTone"
+msgstr "Pelle tono"
+
+msgid "HairType"
+msgstr "Capelli tipo"
+
+msgid "Ingredients"
+msgstr "Ingredienti"
+
+msgid "Indications"
+msgstr "Indicazioni"
+
+msgid "Directions"
+msgstr "Indicazioni stradali"
+
+msgid "ItemForm"
+msgstr "Elemento modulo"
+
+msgid "Flavor"
+msgstr "Sapore"
+
+msgid "FinishType"
+msgstr "Finitura tipo"
+
+msgid "ItemSpecialty"
+msgstr "Elemento specialità"
+
+msgid "BrandRegionOfOrigin"
+msgstr "Marchio regione di origine"
+
+msgid "BladeType"
+msgstr "Lama tipo"
+
+msgid "BladeMaterial"
+msgstr "Lama materiale"
+
+msgid "OccasionType"
+msgstr "Occasione tipo"
+
+msgid "FabricWarmthDescription"
+msgstr "Tessuto calore Descrizione"
+
+msgid "ChainType"
+msgstr "Catena tipo"
+
+msgid "ChainDescription"
+msgstr "Catena Descrizione"
+
+msgid "AssemblyInstructions"
+msgstr "Assemblea istruzioni"
+
+msgid "AssemblyTime"
+msgstr "Assemblea tempo"
+
+msgid "Edition"
+msgstr "Edizione"
+
+msgid "IsAssemblyRequired"
+msgstr "È Assemblea richiesto"
+
+msgid "ManufacturerSafetyWarning"
+msgstr "Produttore sicurezza avviso"
+
+msgid "NumberOfPlayers"
+msgstr "Numero di giocatori"
+
+msgid "PartNumber"
+msgstr "Parte numero"
+
+msgid "SubjectCharacter"
+msgstr "Oggetto carattere"
+
+msgid "Food"
+msgstr "Cibo"
+
+msgid "HouseholdSupplies"
+msgstr "Per la casa forniture"
+
+msgid "Beverages"
+msgstr "Bevande"
+
+msgid "HardLiquor"
+msgstr "Disco rigido liquore"
+
+msgid "AlcoholicBeverages"
+msgstr "Bevande alcoliche bevande"
+
+msgid "Wine"
+msgstr "Vino"
+
+msgid "DeliveryScheduleGroupId"
+msgstr "Consegna programma gruppo Identificativo"
+
+msgid "Prefecture"
+msgstr "Prefettura"
+
+msgid "NutritionalFacts"
+msgstr "Nutrizionali Fatti"
+
+msgid "KosherCertification"
+msgstr "Certificazione kosher"
+
+msgid "OrganicCertification"
+msgstr "Organico certificazione"
+
+msgid "TokuhoCertification"
+msgstr "Certificazione TOKUHO"
+
+msgid "BodyDescription"
+msgstr "Corpo Descrizione"
+
+msgid "TasteDescription"
+msgstr "Gusto Descrizione"
+
+msgid "CaffeineContent"
+msgstr "Caffeina contenuto"
+
+msgid "IsPerishable"
+msgstr "È deperibile"
+
+msgid "StorageInstructions"
+msgstr "Conservazione istruzioni"
+
+msgid "RecommendedServingInstructions"
+msgstr "Consigliato servendo istruzioni"
+
+msgid "AgeRangeDescription"
+msgstr "Età gamma Descrizione"
+
+msgid "ContainerType"
+msgstr "Contenitore tipo"
+
+msgid "ContainerMaterialType"
+msgstr "Contenitore materiale tipo"
+
+msgid "ContainerVolume"
+msgstr "Contenitore volume"
+
+msgid "Cuisine"
+msgstr "Cucina"
+
+msgid "UseByRecommendation"
+msgstr "Utilizzare da raccomandazione"
+
+msgid "IsExpirationDatedProduct"
+msgstr "È scadenza datato prodotto"
+
+msgid "VarietalComposition"
+msgstr "Varietale Composizione"
+
+msgid "Vintage"
+msgstr "Annata"
+
+msgid "VarietalDesignation"
+msgstr "Varietale designazione"
+
+msgid "SportingGoods"
+msgstr "Sportivo Merci"
+
+msgid "GolfClubHybrid"
+msgstr "Ibrido club di golf"
+
+msgid "GolfClubIron"
+msgstr "Ferro da stiro club di golf"
+
+msgid "GolfClubPutter"
+msgstr "Putter da golf club"
+
+msgid "GolfClubWedge"
+msgstr "Cuneo club di golf"
+
+msgid "GolfClubWood"
+msgstr "Legna club di golf"
+
+msgid "GolfClubs"
+msgstr "Club golf"
+
+msgid "ProductType"
+msgstr "Prodotto tipo"
+
+msgid "Packaging"
+msgstr "Imballaggio"
+
+msgid "IsCustomizable"
+msgstr "È personalizzabile"
+
+msgid "CustomizableTemplateName"
+msgstr "Personalizzabile modello nome"
+
+msgid "Action"
+msgstr "Azione"
+
+msgid "ActiveIngredients"
+msgstr "Attivo ingredienti"
+
+msgid "Alarm"
+msgstr "Allarme"
+
+msgid "ApparentScaleSize"
+msgstr "Apparente scala dimensioni"
+
+msgid "AvailableCourses"
+msgstr "Disponibile Corsi"
+
+msgid "BackingLineCapacity"
+msgstr "Base musicale linea capacità"
+
+msgid "BatteryLife"
+msgstr "Batteria vita"
+
+msgid "BeamWidth"
+msgstr "Fascio Larghezza"
+
+msgid "BearingMaterialType"
+msgstr "Cuscinetto materiale tipo"
+
+msgid "BeltStyle"
+msgstr "Cintura stile"
+
+msgid "BikeWeight"
+msgstr "Bici peso"
+
+msgid "BladeGrind"
+msgstr "Lama macinare"
+
+msgid "BladeShape"
+msgstr "Lama forma"
+
+msgid "BMXBikeType"
+msgstr "Bici tipo bmx"
+
+msgid "BoatFenderDiameter"
+msgstr "Barca parafango diametro"
+
+msgid "BoilRateDescription"
+msgstr "Bollire tasso Descrizione"
+
+msgid "BoomLength"
+msgstr "Lunghezza boom"
+
+msgid "BottomStyle"
+msgstr "Fondo stile"
+
+msgid "BrakeType"
+msgstr "Freno tipo"
+
+msgid "BrakeWidth"
+msgstr "Freno Larghezza"
+
+msgid "BreakingStrength"
+msgstr "Rottura forza"
+
+msgid "BTUs"
+msgstr "Noi bt"
+
+msgid "Buildup"
+msgstr "Accumulo"
+
+msgid "BurnTime"
+msgstr "Masterizzare tempo"
+
+msgid "Capability"
+msgstr "Capacità"
+
+msgid "CapType"
+msgstr "Tappo tipo"
+
+msgid "CareInstructions"
+msgstr "Cura istruzioni"
+
+msgid "CenterlineLength"
+msgstr "Linea d'asse lunghezza"
+
+msgid "ClosureType"
+msgstr "Chiusura tipo"
+
+msgid "CollarType"
+msgstr "Collare tipo"
+
+msgid "CompatibleHoseDiameter"
+msgstr "Compatibile tubo flessibile diametro"
+
+msgid "CompatibleRopeDiameter"
+msgstr "Compatibile corda diametro"
+
+msgid "Construction"
+msgstr "Costruzione"
+
+msgid "ControlProgramName"
+msgstr "Controllo programma nome"
+
+msgid "CoreMaterialType"
+msgstr "Nucleo materiale tipo"
+
+msgid "CourseCapacity"
+msgstr "Corso capacità"
+
+msgid "CoverageArea"
+msgstr "Copertura zona"
+
+msgid "CrankLength"
+msgstr "Manovella lunghezza"
+
+msgid "CuffType"
+msgstr "Polsino tipo"
+
+msgid "CupSize"
+msgstr "Coppa dimensioni"
+
+msgid "Cycles"
+msgstr "Cicli"
+
+msgid "DeckLength"
+msgstr "Ponte lunghezza"
+
+msgid "DeckWidth"
+msgstr "Ponte Larghezza"
+
+msgid "DisplayFeatures"
+msgstr "Visualizzazione caratteristiche"
+
+msgid "DisplaySize"
+msgstr "Visualizzazione dimensioni"
+
+msgid "EffectiveEdgeLength"
+msgstr "Efficace Bordo lunghezza"
+
+msgid "EngineDisplacement"
+msgstr "Motore spostamento"
+
+msgid "EventName"
+msgstr "Evento nome"
+
+msgid "Eye"
+msgstr "Occhio"
+
+msgid "FabricWash"
+msgstr "Tessuto lavaggio"
+
+msgid "FillMaterialType"
+msgstr "Riempimento materiale tipo"
+
+msgid "FishingLineType"
+msgstr "Pesca linea tipo"
+
+msgid "FishType"
+msgstr "Pesce tipo"
+
+msgid "FittingType"
+msgstr "Raccordo tipo"
+
+msgid "FitType"
+msgstr "Vestibilità tipo"
+
+msgid "FloorArea"
+msgstr "Piano zona"
+
+msgid "FloorLength"
+msgstr "Piano lunghezza"
+
+msgid "FloorWidth"
+msgstr "Piano Larghezza"
+
+msgid "FlyLineNumber"
+msgstr "Volare linea numero"
+
+msgid "FoldedLength"
+msgstr "Piegato lunghezza"
+
+msgid "FrameHeight"
+msgstr "Telaio altezza"
+
+msgid "FrameMaterial"
+msgstr "Telaio materiale"
+
+msgid "FrameType"
+msgstr "Telaio tipo"
+
+msgid "FrequencyBand"
+msgstr "Frequenza banda"
+
+msgid "FrontPleatType"
+msgstr "Parte anteriore piega tipo"
+
+msgid "FuelCapacity"
+msgstr "Carburante capacità"
+
+msgid "FuelType"
+msgstr "Carburante tipo"
+
+msgid "Functions"
+msgstr "Funzioni"
+
+msgid "GearDirection"
+msgstr "Ingranaggio direzione"
+
+msgid "GeographicCoverage"
+msgstr "Geografica copertura"
+
+msgid "GloveType"
+msgstr "Guanto tipo"
+
+msgid "GripMaterialType"
+msgstr "Materiale tipo presa"
+
+msgid "GuardMaterialType"
+msgstr "Guardia materiale tipo"
+
+msgid "HandleType"
+msgstr "Maniglia tipo"
+
+msgid "HeatRating"
+msgstr "Calore valutazione"
+
+msgid "HP"
+msgstr "Cv"
+
+msgid "HullShape"
+msgstr "Scafo forma"
+
+msgid "ImpactForce"
+msgstr "Impatto forza"
+
+msgid "Inseam"
+msgstr "Lunghezza del cavallo"
+
+msgid "InsulationType"
+msgstr "Isolamento tipo"
+
+msgid "Intensity"
+msgstr "Intensità"
+
+msgid "IsSigned"
+msgstr "È firmato"
+
+msgid "JerseyType"
+msgstr "Maglia tipo"
+
+msgid "KnifeFunction"
+msgstr "Coltello funzione"
+
+msgid "LaptopCapacity"
+msgstr "Computer portatile capacità"
+
+msgid "LashLength"
+msgstr "Sferza lunghezza"
+
+msgid "LeagueName"
+msgstr "Lega nome"
+
+msgid "LegStyle"
+msgstr "Gamba stile"
+
+msgid "LensMaterial"
+msgstr "Lente materiale"
+
+msgid "LensShape"
+msgstr "Lente forma"
+
+msgid "LifeVestType"
+msgstr "Vita veste tipo"
+
+msgid "LightIntensity"
+msgstr "Luce intensità"
+
+msgid "LineWeight"
+msgstr "Linea peso"
+
+msgid "LiningMaterial"
+msgstr "Fodera materiale"
+
+msgid "LockType"
+msgstr "Serratura tipo"
+
+msgid "Loudness"
+msgstr "Rumorosità"
+
+msgid "LureWeight"
+msgstr "Peso richiamo"
+
+msgid "ManufacturerDefinedQualityDescription"
+msgstr "Produttore definito qualità Descrizione"
+
+msgid "MartialArtsType"
+msgstr "Arti marziali arti tipo"
+
+msgid "MaximumCompatibleBootSize"
+msgstr "Massimo compatibile avvio dimensioni"
+
+msgid "MaximumCompatibleRopeDiameter"
+msgstr "Massimo compatibile corda diametro"
+
+msgid "MaximumHeight"
+msgstr "Massimo altezza"
+
+msgid "MaximumInclinePercentage"
+msgstr "Massimo piano inclinato percentuale"
+
+msgid "MaximumLegSize"
+msgstr "Massimo gamba dimensioni"
+
+msgid "MaximumMagnification"
+msgstr "Massimo ingrandimento"
+
+msgid "MaximumPitchSpeed"
+msgstr "Massimo intonazione velocità"
+
+msgid "MaximumResistance"
+msgstr "Massimo resistenza"
+
+msgid "MaximumStrideLength"
+msgstr "Massimo passo lunghezza"
+
+msgid "MaximumTensionRating"
+msgstr "Massimo tensione valutazione"
+
+msgid "MaximumUserWeight"
+msgstr "Massimo utente peso"
+
+msgid "MaximumWeight"
+msgstr "Massimo peso"
+
+msgid "MaxWeightRecommendation"
+msgstr "Raccomandazione peso max"
+
+msgid "MechanicalStructure"
+msgstr "Meccanica struttura"
+
+msgid "Memory"
+msgstr "Memoria"
+
+msgid "MinimumCompatibleBootSize"
+msgstr "Minimo compatibile avvio dimensioni"
+
+msgid "MinimumCompatibleRopeDiameter"
+msgstr "Minimo compatibile corda diametro"
+
+msgid "MinimumLegSize"
+msgstr "Minimo gamba dimensioni"
+
+msgid "MinimumMagnification"
+msgstr "Minimo ingrandimento"
+
+msgid "MinimumTensionRating"
+msgstr "Minimo tensione valutazione"
+
+msgid "MinimumTorsoFit"
+msgstr "Vestibilità minimo torso"
+
+msgid "MinimumWeightRecommendation"
+msgstr "Minimo peso raccomandazione"
+
+msgid "MonitorFeatures"
+msgstr "Tenere sotto controllo caratteristiche"
+
+msgid "MotorSize"
+msgstr "Motore dimensioni"
+
+msgid "MountainBikeProportionalFrameSize"
+msgstr "Montagna bici proporzionale telaio dimensioni"
+
+msgid "MountainBikeType"
+msgstr "Montagna bici tipo"
+
+msgid "MountType"
+msgstr "Monte tipo"
+
+msgid "NeckStyle"
+msgstr "Collo stile"
+
+msgid "NumberOfBlades"
+msgstr "Numero di lame"
+
+msgid "NumberOfCarriagePositions"
+msgstr "Numero di carrello posizioni"
+
+msgid "NumberOfDoors"
+msgstr "Numero di porte"
+
+msgid "NumberOfExercises"
+msgstr "Numero di esercizi"
+
+msgid "NumberOfFootPositions"
+msgstr "Numero di piedi posizioni"
+
+msgid "NumberOfGearLoops"
+msgstr "Numero di ingranaggio loop"
+
+msgid "NumberOfHeadPositions"
+msgstr "Numero di testa posizioni"
+
+msgid "NumberOfHolds"
+msgstr "Numero di tiene"
+
+msgid "NumberOfHorses"
+msgstr "Numero di cavalli"
+
+msgid "NumberOfLevels"
+msgstr "Numero di livelli"
+
+msgid "NumberOfPages"
+msgstr "Numero di pagine"
+
+msgid "NumberOfPockets"
+msgstr "Numero di tasche"
+
+msgid "NumberOfPoles"
+msgstr "Numero di poli"
+
+msgid "NumberOfPrograms"
+msgstr "Numero di programmi"
+
+msgid "NumberOfResistanceLevels"
+msgstr "Numero di resistenza livelli"
+
+msgid "NumberOfSpeeds"
+msgstr "Numero di velocità"
+
+msgid "NumberOfSprings"
+msgstr "Numero di molle"
+
+msgid "ObjectiveLensSize"
+msgstr "Obiettivo lente dimensioni"
+
+msgid "OperationMode"
+msgstr "Funzionamento modalità"
+
+msgid "OuterMaterialType"
+msgstr "Esterno materiale tipo"
+
+msgid "PackedSize"
+msgstr "Confezionato dimensioni"
+
+msgid "PadType"
+msgstr "Tampone tipo"
+
+msgid "PatternStyle"
+msgstr "Modello stile"
+
+msgid "PeakHeight"
+msgstr "Picco altezza"
+
+msgid "Pixels"
+msgstr "Pixel"
+
+msgid "PlayerName"
+msgstr "Giocatore nome"
+
+msgid "PocketDescription"
+msgstr "Tasca Descrizione"
+
+msgid "PositionAccuracy"
+msgstr "Posizione precisione"
+
+msgid "PPUCount"
+msgstr "Conteggio PPU"
+
+msgid "PPUCountType"
+msgstr "Conteggio tipo PPU"
+
+msgid "ProportionalFrameSize"
+msgstr "Proporzionale telaio dimensioni"
+
+msgid "PullType"
+msgstr "Tirare tipo"
+
+msgid "Range"
+msgstr "Gamma"
+
+msgid "RearDerailleurCompatibleChainSize"
+msgstr "Parte posteriore deragliatore compatibile catena dimensioni"
+
+msgid "RecommendedWorkoutSpace"
+msgstr "Consigliato allenarsi spazio"
+
+msgid "ReelDiameter"
+msgstr "Bobina diametro"
+
+msgid "ReelModel"
+msgstr "Bobina modello"
+
+msgid "Region"
+msgstr "Regione"
+
+msgid "Resistance"
+msgstr "Resistenza"
+
+msgid "ResistanceMechanism"
+msgstr "Resistenza meccanismo di"
+
+msgid "Resolution"
+msgstr "Risoluzione"
+
+msgid "RiseStyle"
+msgstr "Salire stile"
+
+msgid "RoadBikeProportionalFrameSize"
+msgstr "Strada bici proporzionale telaio dimensioni"
+
+msgid "RoadBikeType"
+msgstr "Strada bici tipo"
+
+msgid "RodLength"
+msgstr "Asta lunghezza"
+
+msgid "RodWeight"
+msgstr "Asta peso"
+
+msgid "Routes"
+msgstr "Itinerari"
+
+msgid "R-Value"
+msgstr "Valore r"
+
+msgid "Scale"
+msgstr "Scala"
+
+msgid "ScreenColor"
+msgstr "Schermo Colore"
+
+msgid "ScreenSize"
+msgstr "Schermo dimensioni"
+
+msgid "SeatingCapacity"
+msgstr "Posti a sedere capacità"
+
+msgid "ShellMaterial"
+msgstr "Conchiglia materiale"
+
+msgid "ShirtType"
+msgstr "Camicia tipo"
+
+msgid "SkillLevel"
+msgstr "Abilità livello"
+
+msgid "SkiStyle"
+msgstr "Sciare stile"
+
+msgid "SleepingCapacity"
+msgstr "Addormentato capacità"
+
+msgid "SleeveLength"
+msgstr "Manica lunghezza"
+
+msgid "SleeveType"
+msgstr "Manica tipo"
+
+msgid "SnowboardStyle"
+msgstr "Stile snowboard"
+
+msgid "SockHeight"
+msgstr "Calzino altezza"
+
+msgid "SockStyle"
+msgstr "Calzino stile"
+
+msgid "SonarType"
+msgstr "Tipo sonar"
+
+msgid "SpecificUsageForProduct"
+msgstr "Specifica uso per prodotto"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "State"
+msgstr "Stato"
+
+msgid "StaticElongationPercentage"
+msgstr "Statici allungamento percentuale"
+
+msgid "StaticWeight"
+msgstr "Statici peso"
+
+msgid "StrapType"
+msgstr "Cinghia tipo"
+
+msgid "Strength"
+msgstr "Forza"
+
+msgid "SupportType"
+msgstr "Supporto tipo"
+
+msgid "SuspensionType"
+msgstr "Sospensione tipo"
+
+msgid "TargetZones"
+msgstr "Destinazione zone"
+
+msgid "TeamName"
+msgstr "Squadra nome"
+
+msgid "TensionSupported"
+msgstr "Tensione supportato"
+
+msgid "TopStyle"
+msgstr "Superiore stile"
+
+msgid "TopTubeLength"
+msgstr "Superiore tubo lunghezza"
+
+msgid "TrailerType"
+msgstr "Tipo trailer"
+
+msgid "TurnRadius"
+msgstr "Giro raggio"
+
+msgid "UIAAFallRating"
+msgstr "Caduta valutazione UIAA"
+
+msgid "UnderwireType"
+msgstr "Tipo ferretto"
+
+msgid "UniformNumber"
+msgstr "Uniforme numero"
+
+msgid "UsageCapacity"
+msgstr "Uso capacità"
+
+msgid "WaistSize"
+msgstr "Vita dimensioni"
+
+msgid "WaistWidth"
+msgstr "Vita Larghezza"
+
+msgid "WarmthRating"
+msgstr "Calore valutazione"
+
+msgid "Warranty"
+msgstr "Garanzia"
+
+msgid "WaterBottleCapType"
+msgstr "Acqua bottiglia tappo tipo"
+
+msgid "WaterResistanceRating"
+msgstr "Acqua resistenza valutazione"
+
+msgid "WaterType"
+msgstr "Acqua tipo"
+
+msgid "Watts"
+msgstr "Watt"
+
+msgid "WayPoints"
+msgstr "Modo punti"
+
+msgid "WeightCapacity"
+msgstr "Peso capacità"
+
+msgid "WhatsInTheBox"
+msgstr "Casella Il che cosa è in"
+
+msgid "WheelType"
+msgstr "Ruota tipo"
+
+msgid "ClassificationData"
+msgstr "Classificazione dati"
+
+msgid "CompatibleProcessorTypes"
+msgstr "Compatibile processore tipi"
+
+msgid "ComponentWirelessType"
+msgstr "Componente senza fili tipo"
+
+msgid "CommunicationInterface"
+msgstr "Comunicazione interfaccia"
+
+msgid "ConnectorType"
+msgstr "Connettore tipo"
+
+msgid "DigitalAudioCapacity"
+msgstr "Capacità digitale audio"
+
+msgid "HandOrientation"
+msgstr "Mano orientamento"
+
+msgid "InputType"
+msgstr "Ingresso tipo"
+
+msgid "IsAmplifierIntegrated"
+msgstr "È amplificatore integrato"
+
+msgid "MaxOperatingDistance"
+msgstr "Distanza di funzionamento max"
+
+msgid "SpeakersMaxOutputPower"
+msgstr "Uscita energia altoparlanti max"
+
+msgid "SpeakerOutputChannelQuantity"
+msgstr "Altoparlante uscita canale quantità"
+
+msgid "SpeakerSurroundSoundChannelConfiguration"
+msgstr "Altoparlante circondare suono canale configurazione"
+
+msgid "LightsAndFixtures"
+msgstr "Luci e infissi"
+
+msgid "LightingAccessories"
+msgstr "Illuminazione Accessori"
+
+msgid "LightBulbs"
+msgstr "Luce lampadine"
+
+msgid "WeeeTaxValue"
+msgstr "Imposta valore Weee"
+
+msgid "BaseDiameter"
+msgstr "Diametro Base"
+
+msgid "CircuitBreakerInstallationType"
+msgstr "Circuito interruttore installazione tipo"
+
+msgid "CircuitBreakerType"
+msgstr "Circuito interruttore tipo"
+
+msgid "IncludedComponent"
+msgstr "Incluso componente"
+
+msgid "ItemDiameter"
+msgstr "Elemento diametro"
+
+msgid "MaximumCurrent"
+msgstr "Massimo corrente"
+
+msgid "NumberOfStrands"
+msgstr "Numero di fili"
+
+msgid "PlugInstallationType"
+msgstr "Spina installazione tipo"
+
+msgid "StrandDiameter"
+msgstr "Filo diametro"
+
+msgid "BeamAngle"
+msgstr "Fascio angolo"
+
+msgid "BulbDiameter"
+msgstr "Lampadina diametro"
+
+msgid "BulbLength"
+msgstr "Lampadina lunghezza"
+
+msgid "BulbLifeSpan"
+msgstr "Lampadina vita estendersi"
+
+msgid "BulbPowerFactor"
+msgstr "Lampadina energia fattore di"
+
+msgid "BulbSpecialFeatures"
+msgstr "Lampadina speciale caratteristiche"
+
+msgid "BulbSwitchingCycles"
+msgstr "Lampadina commutazione cicli"
+
+msgid "BulbWattage"
+msgstr "Lampadina wattaggio"
+
+msgid "Certification"
+msgstr "Certificazione"
+
+msgid "ColorRenderingIndex"
+msgstr "Colore interpretazione indice"
+
+msgid "ColorTemperature"
+msgstr "Colore temperatura"
+
+msgid "EnergyEfficiencyRating"
+msgstr "Energia efficienza valutazione"
+
+msgid "IncandescentEquivalentWattage"
+msgstr "Lampade ad incandescenza equivalente wattaggio"
+
+msgid "LampStartupTime"
+msgstr "Lampada avviare tempo"
+
+msgid "LampWarmupTime"
+msgstr "Lampada Riscaldamento tempo"
+
+msgid "LightOutputLuminance"
+msgstr "Luce uscita luminanza"
+
+msgid "LumenMaintenanceFactor"
+msgstr "Fattore di manutenzione Lumen"
+
+msgid "LuminousIntensity"
+msgstr "Luminoso intensità"
+
+msgid "MercuryContent"
+msgstr "Mercurio contenuto"
+
+msgid "AirFlowCapacity"
+msgstr "Aria flusso capacità"
+
+msgid "Collection"
+msgstr "Collezione"
+
+msgid "FanBladeColor"
+msgstr "Ventilatore lama Colore"
+
+msgid "InternationalProtectionRating"
+msgstr "Internazionale protezione valutazione"
+
+msgid "LightingMethod"
+msgstr "Illuminazione Metodo."
+
+msgid "MaximumSupportedWattage"
+msgstr "Massimo supportato wattaggio"
+
+msgid "NumberOfBulbSockets"
+msgstr "Numero di lampadina prese"
+
+msgid "NumberOfLights"
+msgstr "Numero di luci"
+
+msgid "ShadeColor"
+msgstr "Ombra Colore"
+
+msgid "ShadeDiameter"
+msgstr "Ombra diametro"
+
+msgid "ShadeMaterial"
+msgstr "Ombra materiale"
+
+msgid "Horsepower"
+msgstr "Cavalli"
+

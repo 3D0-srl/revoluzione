@@ -1,0 +1,60 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %}
+Lista utenti
+
+{% endblock %}
+{% block url_add %}
+index.php?mod=mailman_twig&ctrl=MailmanUsersAdmin&action=add&list={{ id_list }}
+{% endblock %}
+
+{% block buttons_right %}
+{{parent()}}
+<a href="index.php?mod=mailman_twig&amp;ctrl=MailmanUsersAdmin&amp;action=mass&amp;list={{ id_list }}" class="btn btn-success m-t-10"><i class="fa fa-list"></i> azioni di massa</a>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+        {% if list %}
+        <table id="sezioni-table" class="table table-tools table-hover">
+            <thead>
+                <tr>
+                    <th style="min-width:70px">
+                        <strong>{{ tr('id') }}</strong>
+                    </th>
+                    <th>
+                        <strong>Email</strong>
+                    </th>
+                    <th class="text-center">
+                        <strong>{{ tr('actions') }}</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in list %}
+                <tr>
+                    <td>{{ v.id }}</td>
+                    <td>{{ v.email }}</td>
+                    <td class="text-center">
+                        <div class="btn-group media-group">
+                            <a href="{{ url_confirm_delete }}&id={{ v.id }}" class="btn btn-default btn-sm">
+                                <i class="fa fa-trash-o"></i>
+                                {{ tr('delete') }}</a>
+                           
+                           
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        {{ tr('no_record') }}
+        {% endif %}
+    </div>
+    {% if links %}
+    <div class="m-t-30 align-center">
+        {{ links.all | raw }}
+    </div>
+    {% endif %}
+</div>
+</div>{% endblock %}

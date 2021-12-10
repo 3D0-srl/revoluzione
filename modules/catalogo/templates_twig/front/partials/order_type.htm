@@ -1,0 +1,9 @@
+{% if select_ordina_per %}
+<select class="selordina" onchange="order_catalog('{{return_location}}',$(this).val()); return false;" flexy:ignore>
+	   {% for k,v in select_ordina_per %}
+				<option value="{{k}}" {% if selected_order == k %}selected{% endif %}>{{v}}</option>
+	  {% endfor %}
+</select>	
+{% endif %}
+
+

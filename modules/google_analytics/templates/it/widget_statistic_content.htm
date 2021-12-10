@@ -1,0 +1,50 @@
+ <flexy:toJavascript flexy:prefix="js_"
+	visitors_new="visitors_new"
+	visitors_returning="visitors_returning"
+	browser="browser"
+>
+ <div class="row ">
+	<div class="col-md-12">
+		<div class="panel">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-8">
+						<div id="graph-wrapper">
+							<div class="graph-info p-r-10">
+								<a href="javascript:void(0)" class="btn bg-green">Visitatori Nuovi</a>
+								<a href="javascript:void(0)" class="btn bg-blue">Visitatori Ritornati</a>
+								<button id="bars" class="btn" disabled><span></span>
+								</button>
+								<button id="lines" class="btn active" disabled><span></span>
+								</button>
+							</div>
+							<div class="h-300">
+								<div class="h-300" id="graph-lines" style="width:100%"></div>
+								<div class="h-300" id="graph-bars" style="width:100%"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<!--<div class="row">
+							<div class="col-lg-6 col-md-12">
+								<h4 class="text-center c-gray">Frequenza Rimbalzo</h4>
+								<div class="spark-chart-1"></div>
+							</div>
+							<div class="col-lg-6 col-md-12 hidden-md hidden-sm hidden-xs">
+								<h4 class="text-center c-gray">Visitatori Unici</h4>
+								<div class="spark-chart-2"></div>
+							</div>
+						</div>-->
+						<div class="row">
+							<div class="col-lg-6 col-lg-offset-3 col-md-12">
+								<h4 class="m-b-m50 m-t-30 text-center c-gray">Browser Utilizzati</h4>
+								<div id="donut-chart1" class="m-t-10 m-b-m30"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

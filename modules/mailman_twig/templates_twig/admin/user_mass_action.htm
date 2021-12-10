@@ -1,0 +1,16 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %}
+Azione di massa lista {{ id_list }}
+{% endblock %}
+
+{% block buttons_right %}
+{{parent()}}
+<a href="index.php?mod=mailman_twig&amp;ctrl=MailmanUsersAdmin&amp;action=list&amp;list={{ id_list }}" class="btn btn-success m-t-10"><i class="fa fa-arrow-left"></i> indietro</a>
+{% endblock %}
+{% block content %}
+
+{% import "macro/form.htm" as form %}
+{{form.buildCol(dataform.azione,'col-md-12')}}
+{{form.buildCol(dataform.emails,'col-md-12')}}
+{{form.build(dataform.id_list)}}
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'layouts/page.htm' %}
+
+{% block content %}
+	<div class="container container-big">	
+		<div class="fixfixed">	
+			<div class="contcart">
+				{% if update_payment %}
+					<div class="alert alert-warning">{{tr('message_update_payment','paypal')}}</div>
+				{% endif %}
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 alert alert-danger" id="error" style="display:{% if error %}block{% else %}none{% endif %}">
+					{{error|raw}}
+				</div>
+				<div class="cart-progress">
+					
+					{% if edit_address %}
+						<div class="pallaselezionata">
+							<span class="txt">{{tr('Indirizzo spedizione','paypal')}}</span>
+						</div>
+						
+						<form id="confirm_address" class="float-label">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Nome</label>
+									<input type="text" name="formdata[shippingName]" value="{{dataform.shippingName.value}}" id="shippingName">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Cognome</label>
+									<input type="text" name="formdata[shippingSurname]"  value="{{dataform.shippingSurname.value}}" id="shippingSurname">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Email</label>
+									<input type="text" name="formdata[shippingEmail]"  value="{{dataform.shippingEmail.value}}" id="shippingEmail">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Telefono</label>
+									<input type="text" name="formdata[shippingPhone]"  value="{{dataform.shippingPhone.value}}" id="shippingPhone">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Cellulare</label>
+									<input type="text" name="formdata[shippingCellular]"  value="{{dataform.shippingCellular.value}}" id="shippingCellular">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Indirizzo</label>
+									<input type="text" name="formdata[shippingAddress]" value="{{dataform.shippingAddress.value}}" id="shippingAddress">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>CAP</label>
+									<input type="text" name="formdata[shippingPostalCode]"  value="{{dataform.shippingPostalCode.value}}" id="shippingPostalCode">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Città</label>
+									<input type="text" name="formdata[shippingCity]"  value="{{dataform.shippingCity.value}}" id="shippingCity">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="controls">
+									<label>Nazione</label>
+									<select type="select"  name="formdata[shippingCountry]" id="shippingCountry" onchange="getPriceShipping($(this).val(),{{id_order}}); return false;">
+										{% for k,v in dataform.shippingCountry.options %}
+											<option value="{{k}}" {% if dataform.shippingCountry.value==k %}selected="selected"{% endif %}>{{v}}</option>
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="div_province">
+								<div class="controls">
+									<label>Provincia</label>	
+									<select type="select" name="formdata[shippingProvince]" id="shippingProvince">
+										{% for k,v in dataform.shippingProvince.options %}
+											<option value="{{k}}" {% if dataform.shippingProvince.value==k %}selected="selected"{% endif %}>{{v}}</option>
+										
+										{% endfor %}
+									
+									</select>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<button onclick="confirm_address('{{token}}','{{PayerID}}',{{id_order}});" type="button" class="btn-next">Conferma Indirizzo</button>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"></div>
+						</form>
+					{% else %}
+						<div class="pallaselezionata">
+							<a href="index.php?mod=paypal&action=saved_order&edit_address=1&token={{token}}&PayerID={{PayerID}}&id_order={{id_order}}" class="btn-modifica">{{tr('Modifica','cart_onepage')}}</a>
+							<span class="txt">
+								<div class="row">
+									<span class="col-xs-12 col-md-5">Indirizzo spedizione</span>
+									<span class="col-xs-12 col-md-7 dati-inseriti">
+										{{paypal_cart.shippingName}} {{paypal_cart.shippingSurname}}<br>
+										<span>{{paypal_cart.shippingAddress}}</span><br>
+										<span>{{paypal_cart.shippingPostalCode}} {{paypal_cart.shippingCity}}</span><br>
+										{% if paypal_cart.shippingProvince %}
+										<span>{{paypal_cart.shippingProvince}} - {{paypal_cart.shippingCountry}}</span><br>
+										{% else %}
+										{{paypal_cart.shippingCountry}}<br>
+										{% endif %}
+										{% if paypal_cart.shippingEmail %}
+										<span>{{paypal_cart.shippingEmail}}</span><br>
+										{% endif %}
+										<span>
+										{% if paypal_cart.shippingPhone %}
+											{{paypal_cart.shippingPhone}}
+											{% if paypal_cart.shippingCellular %}
+											/ {{paypal_cart.shippingCellular}}
+											{% endif %}
+										{% else %}
+											{% if paypal_cart.shippingCellular %}
+											{{paypal_cart.shippingCellular}}
+											{% endif %}
+										{% endif %}
+									</span>
+								</div>
+							</span>
+						</div>
+					{% endif %}
+				</div>
+				{% if (edit_address  == false) and (registration == true) %}
+					<div class="space40"></div>
+					<form id="paypal_register">
+						<div class="clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="controls scegli">
+								<input type="checkbox" name="formdata[registration]" value="1" id="registration">
+								<label for="registration"></label>
+								Effettua la registrazione, potrai accedere a speciali promozioni e consultare lo storico dei tuoi ordini.
+							</div>
+						</div>
+						<div class="registration_fields col-xs-12 col-sm-6 col-md-6 col-lg-6" style="display:{% if (enable_buy_without_registration == false) or registration %}block{% else %}none{% endif %}">
+							<div class="controls">
+								<label>Username</label>
+								<input type="text" name="formdata[username]" value="{{dataform2.name.username}}" id="username">
+							</div>
+						</div>
+						<div class="registration_fields col-xs-12 col-sm-6 col-md-6 col-lg-6" style="display: {% if (enable_buy_without_registration == false) or registration %}block{% else %}none{% endif %}">
+							<div class="controls">
+								<label>Password</label>
+								<input type="password" name="formdata[password]"  value="{{dataform2.surname.password}}" id="password">
+							</div>
+						</div>
+					</form>
+				{% endif %}
+			</div>
+		</div>
+		{% include 'partials/fixedcart.htm' %}
+	</div>
+{% endblock %}

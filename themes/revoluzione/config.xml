@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<theme>
+	<info> 
+		<tag>revoluzione</tag>
+		<author>Amedeo Addati</author>
+		<graphic>Assia Acunzo</graphic>
+		<frontend>Luca Giaquinto</frontend>
+		<name>R-evoluzione Personale</name>
+		<kind>Catalogo</kind>
+		<description><![CDATA[Tema base di un catalogo per corsi di formazione]]></description> 
+   </info>
+</theme>

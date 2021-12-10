@@ -1,0 +1,110 @@
+{% if one_account == false %}
+<div class="row">
+		        
+        <div class="col-md-12">
+        {% for k,v in tabs %}
+            <div class="account_amazon" index="{{k}}">{{v.name}}</div>
+        {% endfor %}
+                            
+        </div>
+</div>
+{% endif %}
+		
+{% for k,v in tabs %}
+<div class="row m-t-10 box_account_amazon" id="box_amazon_{{k}}" style="display:{% if one_account %}block{% else %}none{% endif %}">			
+	<div class="col-md-12">
+		
+		<section id="fancyTabWidget" class="tabs t-tabs">
+		<ul class="nav nav-tabs fancyTabs" role="tablist">
+		
+				
+					{% for m in v.markets %}
+					<li class="tab fancyTab" account="{{v.id}}" market="{{m.name}}">
+					<div class="arrow-down"><div class="arrow-down-inner"></div></div>
+						<a id="tab1" href="#tabBody_{{v.id}}_{{m.name}}" role="tab" aria-controls="tabBody1" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-firefox"></span><span class="hidden-xs"><image src="../modules/amazon/{{m.img}}"><br>{{m.name}}</span></a>
+						<div class="whiteBlock"></div>
+					</li>
+					{% endfor %}
+					
+				
+		</ul>	
+		<div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+			{% for m in v.markets %}
+				<div class="tab-pane  fade in" id="tabBody_{{v.id}}_{{m.name}}" role="tabpanel" aria-labelledby="tab{{v.id}}_{{m.name}}" aria-hidden="false" tabindex="0">
+					<div>
+					
+						<div class="row">
+						
+
+							<div  class="col-md-12">
+
+								<!-- CONTENUTO TAB -->
+								<div class="form-group col-md-12" id="">
+									<div class="controls">
+											<input type="checkbox" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][disable_sync]" {% if m.disable_sync == 1 %}checked="checked"{% endif %} value="1"/> Disabilita sincronizzazione {% if hasChildren == 1 %}(<span style="color:red;">L'azione verrà applicata anche alle variazioni di questo prodotto </span>){% endif %}
+				
+									</div>
+								</div>
+								{% if hasChildren == 1 %}
+								<div class="form-group col-md-12" id="">
+									<div class="controls">
+										<input type="checkbox" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][parent_description]" {% if m.parent_description == 1 %}checked="checked"{% endif %} class="parent_amazon_description" value="1" /> Utilizza i dati del prodotto padre per le variazioni
+									</div>
+								</div>
+								{% else %}
+								<div class="form-group col-md-12" id="">
+									<div class="controls">
+										<input type="checkbox" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][new_product]" {% if m.new_product == 1 %} value="1"{% endif %} /> Creazione prodotto
+										
+									</div>
+								</div>
+								{% endif %}
+
+								
+
+						
+								<input class="form-control" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][check]" type="hidden" value="1"/>
+						
+
+
+								<span id="parent_data_amazon" style="display:{% if hasChildren == 1 %}none{% else %}block{% endif %}">
+									<div class="form-group col-md-12" id="">
+											<label>Prezzo:</label>
+											<div class="controls">
+												<input class="form-control" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][price]" type="text" value="{{m.price}}"/>
+											</div>
+									</div>
+									<div class="form-group col-md-12" id="">
+											<label>Bullet (1)</label>
+											<div class="controls">
+												<input class="form-control" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][bullet_1]" type="text" value="{{m.bullet_1}}"/>
+											</div>
+									</div>
+									<div class="form-group col-md-12" id="">
+											<label>Bullet (2)</label>
+											<div class="controls">
+												<input class="form-control" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][bullet_2]" type="text" value="{{m.bullet_2}}"/>
+											</div>
+									</div>
+									<div class="form-group col-md-12" id="">
+											<label>Bullet (3)</label>
+											<div class="controls">
+												<input class="form-control" name="formdata[modules][amazon][{{v.id}}][{{m.name}}][bullet_3]" type="text" value="{{m.bullet_3}}"/>
+											</div>
+									</div>
+
+								</span>
+						<!-- FINE CONTENUOT TAB -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		</section>		  
+						
+	</div>
+</div>
+{% endfor %}
+

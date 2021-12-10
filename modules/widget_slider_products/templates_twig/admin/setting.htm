@@ -1,0 +1,91 @@
+{% extends "layouts/base_form_widget.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<!--------
+
+
+
+	CONTENTUTO FORM IMPOSTAZIONI
+
+
+----------->
+<div class="col-md-12">
+	<div class="tabcordion">
+		<ul id="tab_data" class="nav nav-tabs">
+			<li class="active"><a href="#general" data-toggle="tab">GENERALE</a></li>
+			<li class=""><a href="#slider" data-toggle="tab">SLIDER</a></li>
+			<li class=""><a href="#funzioni_ecommerce" data-toggle="tab">FUNZIONI ECOMMERCE</a></li>
+		</ul>
+		<div id="tab_data_content" class="tab-content" style="border:1px solid #D3D3D3;">
+			<div class="tab-pane fade active in" id="general">
+				{{form.buildCol(dataform.title)}}
+				{{form.buildCol(dataform.slider_type)}}
+
+				{{form.buildCol(dataform.tag)}}
+				{{form.buildCol(dataform.category)}}
+				{{form.buildCol(dataform.num_products)}}
+
+
+				
+			</div>
+			<div class="tab-pane fade in" id="slider">
+				<p>Questo modulo utilizza lo slider <b>swiper</b> la cui documenntazione puoi trovare <a href="https://swiperjs.com/api/" target="_blank">qui</a> </p>
+				{{form.buildCol(dataform.width)}}
+				{{form.buildCol(dataform.spaceBetween)}}
+				
+				{{form.buildCol(dataform.freeMode)}}
+				{{form.buildCol(dataform.navigation)}}
+				{{form.buildCol(dataform.scrollbar)}}
+			</div>
+			<div class="tab-pane fade in" id="funzioni_ecommerce">
+				{{form.buildCol(dataform.enable_add_cart_button)}}
+				{{form.buildCol(dataform.enable_wishlist)}}
+				{{form.buildCol(dataform.enable_quantity_add_cart)}}
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+	let type_slider = $('#slider_type').val();
+	
+	switch(type_slider){
+		case 'products_tag':
+			$('#div_tag').show();
+			$('#div_category').hide();
+			break;
+		case 'products_category':
+			$('#div_category').show();
+			$('#div_tag').hide();
+			break;
+		default:
+			$('#div_category').hide();
+			$('#div_tag').hide();
+			break;
+	}
+
+	$('#slider_type').on('change',function(){
+		switch($(this).val()){
+			case 'products_tag':
+				$('#div_tag').show();
+				$('#div_category').hide();
+				break;
+			case 'products_category':
+				$('#div_category').show();
+				$('#div_tag').hide();
+				break;
+			default:
+				$('#div_category').hide();
+				$('#div_tag').hide();
+				break;
+		}
+	});
+	
+
+</script>
+
+
+{% endblock %}

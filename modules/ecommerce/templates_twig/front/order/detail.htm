@@ -1,0 +1,147 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<p class="titl-order">{{tr('Numero dell\'ordine','ecommerce')}}<br> <span>{{cart.number}}</span></p>
+{% endblock %}
+
+
+{% block backend_content %}
+	<div class="clear"></div>
+	<div class="row">
+		<div class="col-dati-order">
+			<p>Effettuato in data</p>
+			<p><strong>{{dataOraIta(cart.evacuationDate)}}</strong></p>
+		</div>
+		<div class="col-dati-order">
+			<p>Modalità pagamento</p>
+			<p><strong>{{cart.getNamePaymentMethod()}}</strong></p>
+		</div>
+		{% if cart.virtual_cart is null %}
+			<div class="col-dati-order">
+				<p>Modalità spedizione</p>
+				<p><strong>{{cart.getNameShippingMethod()}}</strong></p>
+			</div>
+		{% endif %}
+		<div class="col-dati-order">
+			<p>Data stato ordine</p>
+			<p><strong>28/03/2020</strong></p>
+		</div>
+		<div class="col-dati-order">
+			<p>Stato dell'ordine</p>
+			<p><strong>{{cart.status|raw}}</strong></p>
+		</div>
+	</div>
+	<div class="space20"></div>
+	<div class="divider-order"></div>
+	<div class="table-responsive table-responsive-order">
+		<table class="table table-orders">
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for riga in ordini %}
+					<tr>
+						<td width="116"><img src="{{riga.img}}" width="116" height="116" style="min-width: 116px;"></td>
+						<td width="200"><a href="{{riga.link}}">{{riga.productname}}</a></td>
+						<td>Quantità: {{riga.getQuantity()}}</td>
+						<td class="text-right">{{getHtmlCurrency(cart.currency)|raw}} <span id="total_{{riga.getId()}}">{{riga.getTotalPriceFormatted()}}</span></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="divider-order"></div>
+	<div class="space30"></div>
+	<div class="row row-total-order">
+		<div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+			<h4 class="m-0">Totale</h4>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-7 col-lg-7">
+					<p>SubTotale</p>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 text-right">
+					<p><strong>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.total)}}</strong></p>
+				</div>
+				<div class="clear"></div>
+				{% if cart.virtual_cart is null %}
+					<div class="col-xs-6 col-sm-6 col-md-7 col-lg-7">
+						<p>Costi Spedizione</p>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 text-right">
+						<p>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.shippingPrice)}}</p>
+					</div>
+					<div class="clear"></div>
+				{% endif %}
+				<div class="col-xs-6 col-sm-6 col-md-7 col-lg-7">
+					<p>Costi Pagamento</p>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 text-right">
+					<p>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.paymentPrice)}}</p>
+				</div>
+				<div class="clear"></div>
+				{% if cart.discount %}
+				<div class="col-xs-6 col-sm-6 col-md-7 col-lg-7">
+					<p>Sconto</p>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 text-right">
+					<p>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.discount)}}</p>
+				</div>
+				<div class="clear"></div>
+				{% endif %}
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<h6>Totale</h6>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+					<h6>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalFinalFormatted()}}</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="divider-order"></div>
+	<div class="space10"></div>
+	<div class="row row-total-order">
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+			<h6>Note</h6>
+			<p>{{cart.note}}</p>
+			{% if cart.recurrentPayment %}
+				<h6>Abbonamento</h6>
+				<p>{{description_recurrent_payment}}</p>
+			{% endif %}
+		</div>
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<h6>Dati Fatturazione</h6>
+					<p>{{cart.name}} {{cart.surname}}</p>
+					<p>{{cart.city}} ({{cart.province}}) {{cart.address}} {{cart.postalCode}} ({{cart.country}})</p>
+					<p>Tel. {{cart.phone}}</p>
+					<p>Cel. {{cart.cellular}}</p>
+					<p>C.F. {{cart.fiscalCode}}</p>
+					{% if cart.vatNumber %}
+						<p>P.Iva: {{cart.vatNumber}}</p>
+					{% endif %}
+					{% if cart.hasInvoice %}
+						<p><a href="/index2.php?ctrl=Bacheca&action=invoice&id={{cart.id}}" target="_blank">Documento PDF</a></p>
+					{% endif %}
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					{% if cart.virtual_cart is null %}	
+						<h6>Dati Spedizione</h6>
+						<p>{{cart.shippingName}} {{cart.shippingSurname}}</p>
+						<p>{{cart.shippingCity}} ({{cart.shippingProvince}}) {{cart.shippingAddress}} {{cart.shippingPostalCode}} ({{cart.shippingCountry}})</p>
+						<p>Tel. {{cart.shippingPhone}}</p>
+						<p>Cel. {{cart.shippingCellular}}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="space120"></div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layouts/base_form_widget.htm" %}
+
+{% block css %}
+{{parent()}}
+<style>
+	.visible {
+		display: block!important;
+	}
+</style>
+{% endblock %}
+
+{% block javascript %}
+{{parent()}}
+<script>
+	$(() => {
+		$('#showmore').prop('checked', false);
+
+		$('#div_categories').css({ 'display': 'none' });
+		$('#div_position').css({ 'display': 'none' });
+		$('#div_first_news').css({ 'display': 'none' });
+		$('#div_hidemenu').css({ 'display': 'none' });
+		$('#div_cols_netbook').css({ 'display': 'none' });
+		$('#div_rows_netbook').css({ 'display': 'none' });
+		$('#div_cols_tablet').css({ 'display': 'none' });
+		$('#div_rows_tablet').css({ 'display': 'none' });
+		$('#div_cols_smartphone').css({ 'display': 'none' });
+		$('#div_rows_smartphone').css({ 'display': 'none' });
+
+		$('#showmore').click(() => {
+			$('#div_categories').toggleClass('visible');
+			$('#div_position').toggleClass('visible');
+			$('#div_first_news').toggleClass('visible');
+			$('#div_hidemenu').toggleClass('visible');
+			$('#div_cols_netbook').toggleClass('visible');
+			$('#div_rows_netbook').toggleClass('visible');
+			$('#div_cols_tablet').toggleClass('visible');
+			$('#div_rows_tablet').toggleClass('visible');
+			$('#div_cols_smartphone').toggleClass('visible');
+			$('#div_rows_smartphone').toggleClass('visible');
+		});
+
+	});
+</script>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<!--------
+
+
+
+	CONTENTUTO FORM IMPOSTAZIONI
+
+	{# This will be a
+
+		{{form.buildCol(dataform.namefield)}}
+
+		{{form.buildCol(dataform.nome,'col-md-12')}}
+		{{form.buildCol(dataform.cognome,'col-md-6')}}
+	#}
+	
+
+----------->
+
+{{form.buildCol(dataform.title,'col-md-12')}}
+{{form.buildCol(dataform.cols,'col-md-6')}}
+{{form.buildCol(dataform.rows,'col-md-6')}}
+{{form.buildCol(dataform.showmore,'col-md-12')}}
+{{form.buildMultiselect(dataform.categories,'col-md-12')}}
+{{form.buildCol(dataform.hidemenu,'col-md-12')}}
+{{form.buildCol(dataform.position,'col-md-6')}}
+{{form.buildCol(dataform.first_news,'col-md-6')}}
+{{form.buildCol(dataform.cols_netbook,'col-md-6')}}
+{{form.buildCol(dataform.rows_netbook,'col-md-6')}}
+{{form.buildCol(dataform.cols_tablet,'col-md-6')}}
+{{form.buildCol(dataform.rows_tablet,'col-md-6')}}
+{{form.buildCol(dataform.cols_smartphone,'col-md-6')}}
+{{form.buildCol(dataform.rows_smartphone,'col-md-6')}}
+{% endblock %}

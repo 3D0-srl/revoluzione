@@ -1,0 +1,50 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %} Instagram Gallery Setting {% endblock %} 
+{% block buttons_right %}	
+	<a href="{{url_list}}" class="btn btn-default m-t-10"><i class="fa fa-arrow-left p-r-10"></i> {{tr('back')}}</a>
+{% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#general" data-toggle="tab">Generale</a></li>
+		<li class=""><a href="#widget" data-toggle="tab">Widget</a></li>
+	</ul>
+	<div id="myTabContent" class="tab-content">
+			
+			<!-- GENERAL --->
+			<div class="tab-pane active in" id="general">
+				<div class="row">	
+
+				
+				{{form.buildCol(dataform.type,'col-md-12')}}
+				{{form.buildCol(dataform.tags,'col-md-12')}}
+				{{form.buildCol(dataform.lat,'col-md-12')}}
+				{{form.buildCol(dataform.long,'col-md-12')}}
+
+				{{form.buildCol(dataform.show_info_images,'col-md-6')}}
+				{{form.buildCol(dataform.show_slider,'col-md-6')}}
+				{{form.buildCol(dataform.date_format,'col-md-12')}}
+				
+				</div>
+			</div>
+
+			<!-- WIDGET --->
+			<div class="tab-pane in" id="widget">
+				<div class="row">	
+				{{form.buildCol(dataform.widget_layout,'col-md-12')}}
+				{{form.buildCol(dataform.widget_text,'col-md-12')}}
+				{{form.buildUploadImage(dataform.image,'col-md-12')}}
+
+				
+				</div>
+			</div>
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}

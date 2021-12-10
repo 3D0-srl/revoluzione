@@ -1,0 +1,138 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('pages')|title}} {% endblock %} 
+
+{% block css %}
+{{parent()}}
+<style>
+.ico-btn {
+    height: 18px;
+    width: auto;
+	margin-right: 2px;
+	margin-top: -2px;
+}
+</style>
+{% endblock %}
+
+{% block before_content %}
+<div class="row">
+				
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form action="{{script_url}}" method="GET">
+					<div class="input-group">
+						<input type="text" class="form-control " name="search" placeholder="titolo" value="{{search}}">
+						<span class="input-group-btn">
+							<button class="btn btn-success" type="submit" tabindex="-1"><i class="fa fa-search"></i> {{tr('search')}}</button>
+						  </span>
+					</div>
+					<input type="hidden" name="action" value="list" >
+					<input type="hidden" name="ctrl" value="PageAdmin">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if pagine %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+								<th style="min-width:70px"><strong>{{tr('id')}}</strong></th>
+								<th><strong>{{tr('url')}}</strong></th>
+								<th><strong>{{tr('title')}}</strong></th>
+								<th class="">
+									<strong>{{tr('type')}}</strong>
+								</th>
+								<th class="">
+									<strong>{{tr('visibility')}}</strong>
+								</th>
+								{% if auth('superadmin') %}
+								<th class="text"></th>
+								{% endif %}
+								<th></th>
+								<th class="text-center">
+									<strong>{{tr('actions')}}</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in pagine %}
+							<tr >
+								<td>{{v.id}}</td>
+								<td>{{v.get('url')}}</td>
+								<td>{{v.get('title')}}</td>
+								<td>
+									{% if v.widget %}
+										<span class="label label-warning">{{tr('widget')|upper}}</span>
+									{% else %}
+										{% if v.advanced %}
+										<span class="label label-info">{{tr('advanced_page')|upper}}</span>
+										{% else %}
+										<span class="label label-success">{{tr('standard_page')|upper}}</span>
+										{% endif %}
+									{% endif %}
+								
+								</td>
+								<td>
+									{% if v.visibility %}
+										<span class="label label-success">{{tr('online')|upper}}</span>
+									{% else %}
+										<span class="label label-danger">{{tr('offline')|upper}}</span>
+									{% endif %}
+								</td>
+								<td class="text-center">
+									<a href="/p/{{v.get('url')}}.htm" target="_blank" class="edit btn btn-sm btn-default"><i class="fa fa-link"></i></a> 
+								</td>
+								<td class="text-center">
+									
+								</td>
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+										{% if v.advanced %}
+										  <a href="index.php?ctrl=PageComposerAdmin&mod=pagecomposer&id={{v.id_adv_page}}" class="btn btn-default btn-sm"><img class="ico-btn" src="../modules/pagecomposer/img/ico-imp-n.png"/> {{tr('modifica')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_edit}}&id={{v.id}}"><i class="fa fa-cog"></i> {{tr('impostazioni')}}</a></li>
+											<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+											{% if v.locked == 0%}
+												<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+											{% endif %}
+										  </ul>
+										{% else %}
+										  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><img class="ico-btn" src="../modules/pagecomposer/img/ico-imp-n.png"/> {{tr('edit')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+											{% if v.locked == 0%}
+												<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+											{% endif %}
+										  </ul>
+										{% endif %}
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

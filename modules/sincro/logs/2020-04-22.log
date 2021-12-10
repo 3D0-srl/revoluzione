@@ -1,0 +1,1692 @@
+[07:56:39]:: ERROR: ATTRIBUTE_SET_MISSING
+[07:56:39]:: inizio lettura CSV
+[07:56:39]:: fine lettura CSV
+[07:56:39]:: inizio creazione categorie
+[07:56:39]:: fine creazione categorie
+[07:56:39]:: inizio creazione produttori
+[07:56:39]:: fine creazione produttori
+[07:56:39]:: inizio creazione attributi
+[07:56:39]:: fine creazione attributi
+[07:56:51]:: ERROR: ATTRIBUTE_SET_MISSING
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|START                                             | 07:56:51                                          |
+|END                                               | 07:56:51                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|START                                             | 08:53:34                                          |
+|END                                               | 08:53:34                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[08:54:14]:: ERROR: MIESSING MAPPING FOR ATTRIBUTE colors
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|START                                             | 08:54:14                                          |
+|END                                               | 08:54:14                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[08:56:59]:: inizio lettura CSV
+[08:56:59]:: fine lettura CSV
+[08:56:59]:: inizio creazione categorie
+[08:57:00]:: fine creazione categorie
+[08:57:00]:: inizio creazione produttori
+[08:57:00]:: fine creazione produttori
+[08:57:00]:: inizio creazione attributi
+[08:57:00]:: fine creazione attributi
+[08:57:11]:: ERROR: MISSING MAPPING FOR ATTRIBUTE colors
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | ERROR                                             |
+|START                                             | 08:57:11                                          |
+|END                                               | 08:57:11                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:46:54]:: ERROR: MISSING FETAURE materiale
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | ERROR                                             |
+|START                                             | 13:46:54                                          |
+|END                                               | 13:46:54                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:50:28]:: ERROR: MISSING MAPPING FOR FEATURE gender
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | ERROR                                             |
+|START                                             | 13:50:28                                          |
+|END                                               | 13:50:28                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:51:20]:: inizio lettura CSV
+[13:51:20]:: fine lettura CSV
+[13:51:20]:: inizio creazione categorie
+[13:51:20]:: fine creazione categorie
+[13:51:20]:: inizio creazione produttori
+[13:51:20]:: fine creazione produttori
+[13:51:20]:: inizio creazione attributi
+[13:51:20]:: fine creazione attributi
+[13:53:38]:: inizio lettura CSV
+[13:53:39]:: fine lettura CSV
+[13:53:39]:: inizio creazione categorie
+[13:53:39]:: fine creazione categorie
+[13:53:39]:: inizio creazione produttori
+[13:53:39]:: fine creazione produttori
+[13:53:39]:: inizio creazione attributi
+[13:53:39]:: fine creazione attributi
+[13:54:12]:: inizio lettura CSV
+[13:54:12]:: fine lettura CSV
+[13:54:12]:: inizio creazione categorie
+[13:54:13]:: fine creazione categorie
+[13:54:13]:: inizio creazione produttori
+[13:54:13]:: fine creazione produttori
+[13:54:13]:: inizio creazione attributi
+[13:54:13]:: fine creazione attributi
+[13:56:20]:: inizio lettura CSV
+[13:56:20]:: fine lettura CSV
+[13:56:20]:: inizio creazione categorie
+[13:56:20]:: fine creazione categorie
+[13:56:20]:: inizio creazione produttori
+[13:56:20]:: fine creazione produttori
+[13:56:20]:: inizio creazione attributi
+[13:56:20]:: fine creazione attributi
+[14:00:31]:: inizio lettura CSV
+[14:00:32]:: fine lettura CSV
+[14:00:32]:: inizio creazione categorie
+[14:00:32]:: fine creazione categorie
+[14:00:32]:: inizio creazione produttori
+[14:00:32]:: fine creazione produttori
+[14:00:32]:: inizio creazione attributi
+[14:00:32]:: fine creazione attributi
+[14:01:22]:: inizio lettura CSV
+[14:01:22]:: fine lettura CSV
+[14:01:22]:: inizio creazione categorie
+[14:01:23]:: fine creazione categorie
+[14:01:23]:: inizio creazione produttori
+[14:01:23]:: fine creazione produttori
+[14:01:23]:: inizio creazione attributi
+[14:01:23]:: fine creazione attributi
+[14:05:35]:: inizio lettura CSV
+[14:05:35]:: fine lettura CSV
+[14:05:35]:: inizio creazione categorie
+[14:05:36]:: fine creazione categorie
+[14:05:36]:: inizio creazione produttori
+[14:05:36]:: fine creazione produttori
+[14:05:36]:: inizio creazione attributi
+[14:05:36]:: fine creazione attributi
+[14:05:50]:: inizio lettura CSV
+[14:05:50]:: fine lettura CSV
+[14:05:50]:: inizio creazione categorie
+[14:05:50]:: fine creazione categorie
+[14:05:50]:: inizio creazione produttori
+[14:05:50]:: fine creazione produttori
+[14:05:50]:: inizio creazione attributi
+[14:05:50]:: fine creazione attributi
+[14:09:35]:: inizio lettura CSV
+[14:09:35]:: fine lettura CSV
+[14:09:35]:: inizio creazione categorie
+[14:09:35]:: fine creazione categorie
+[14:09:35]:: inizio creazione produttori
+[14:09:35]:: fine creazione produttori
+[14:09:35]:: inizio creazione attributi
+[14:09:35]:: fine creazione attributi
+[14:10:05]:: inizio lettura CSV
+[14:10:06]:: fine lettura CSV
+[14:10:06]:: inizio creazione categorie
+[14:10:06]:: fine creazione categorie
+[14:10:06]:: inizio creazione produttori
+[14:10:06]:: fine creazione produttori
+[14:10:06]:: inizio creazione attributi
+[14:10:06]:: fine creazione attributi
+[14:11:00]:: inizio lettura CSV
+[14:11:01]:: fine lettura CSV
+[14:11:01]:: inizio creazione categorie
+[14:11:01]:: fine creazione categorie
+[14:11:01]:: inizio creazione produttori
+[14:11:01]:: fine creazione produttori
+[14:11:01]:: inizio creazione attributi
+[14:11:01]:: fine creazione attributi
+[14:11:27]:: inizio lettura CSV
+[14:11:27]:: fine lettura CSV
+[14:11:27]:: inizio creazione categorie
+[14:11:27]:: fine creazione categorie
+[14:11:27]:: inizio creazione produttori
+[14:11:28]:: fine creazione produttori
+[14:11:28]:: inizio creazione attributi
+[14:11:28]:: fine creazione attributi
+[14:11:46]:: inizio lettura CSV
+[14:11:46]:: fine lettura CSV
+[14:11:46]:: inizio creazione categorie
+[14:11:46]:: fine creazione categorie
+[14:11:46]:: inizio creazione produttori
+[14:11:46]:: fine creazione produttori
+[14:11:46]:: inizio creazione attributi
+[14:11:47]:: fine creazione attributi
+[14:12:04]:: inizio lettura CSV
+[14:12:04]:: fine lettura CSV
+[14:12:04]:: inizio creazione categorie
+[14:12:05]:: fine creazione categorie
+[14:12:05]:: inizio creazione produttori
+[14:12:05]:: fine creazione produttori
+[14:12:05]:: inizio creazione attributi
+[14:12:05]:: fine creazione attributi
+[14:12:34]:: inizio lettura CSV
+[14:12:34]:: fine lettura CSV
+[14:12:34]:: inizio creazione categorie
+[14:12:34]:: fine creazione categorie
+[14:12:34]:: inizio creazione produttori
+[14:12:34]:: fine creazione produttori
+[14:12:34]:: inizio creazione attributi
+[14:12:34]:: fine creazione attributi
+[14:17:54]:: inizio lettura CSV
+[14:17:54]:: fine lettura CSV
+[14:17:54]:: inizio creazione categorie
+[14:17:54]:: fine creazione categorie
+[14:17:54]:: inizio creazione produttori
+[14:17:54]:: fine creazione produttori
+[14:17:54]:: inizio creazione attributi
+[14:17:54]:: fine creazione attributi
+[14:18:28]:: inizio lettura CSV
+[14:18:28]:: fine lettura CSV
+[14:18:28]:: inizio creazione categorie
+[14:18:28]:: fine creazione categorie
+[14:18:28]:: inizio creazione produttori
+[14:18:28]:: fine creazione produttori
+[14:18:28]:: inizio creazione attributi
+[14:18:28]:: fine creazione attributi
+[14:19:03]:: inizio lettura CSV
+[14:19:03]:: fine lettura CSV
+[14:19:03]:: inizio creazione categorie
+[14:19:03]:: fine creazione categorie
+[14:19:03]:: inizio creazione produttori
+[14:19:04]:: fine creazione produttori
+[14:19:04]:: inizio creazione attributi
+[14:19:04]:: fine creazione attributi
+[14:22:49]:: inizio lettura CSV
+[14:22:49]:: fine lettura CSV
+[14:22:49]:: inizio creazione categorie
+[14:22:50]:: fine creazione categorie
+[14:22:50]:: inizio creazione produttori
+[14:22:50]:: fine creazione produttori
+[14:22:50]:: inizio creazione attributi
+[14:22:50]:: fine creazione attributi
+[14:23:19]:: inizio lettura CSV
+[14:23:19]:: fine lettura CSV
+[14:23:19]:: inizio creazione categorie
+[14:23:19]:: fine creazione categorie
+[14:23:19]:: inizio creazione produttori
+[14:23:19]:: fine creazione produttori
+[14:23:19]:: inizio creazione attributi
+[14:23:19]:: fine creazione attributi
+[14:40:16]:: inizio lettura CSV
+[14:40:16]:: fine lettura CSV
+[14:40:16]:: inizio creazione categorie
+[14:40:16]:: fine creazione categorie
+[14:40:16]:: inizio creazione produttori
+[14:40:17]:: fine creazione produttori
+[14:40:17]:: inizio creazione attributi
+[14:40:17]:: fine creazione attributi
+[14:40:37]:: inizio lettura CSV
+[14:40:37]:: fine lettura CSV
+[14:40:37]:: inizio creazione categorie
+[14:40:38]:: fine creazione categorie
+[14:40:38]:: inizio creazione produttori
+[14:40:38]:: fine creazione produttori
+[14:40:38]:: inizio creazione attributi
+[14:40:38]:: fine creazione attributi
+[14:41:47]:: inizio lettura CSV
+[14:41:47]:: fine lettura CSV
+[14:41:47]:: inizio creazione categorie
+[14:41:47]:: fine creazione categorie
+[14:41:47]:: inizio creazione produttori
+[14:41:47]:: fine creazione produttori
+[14:41:47]:: inizio creazione attributi
+[14:41:47]:: fine creazione attributi
+[14:42:09]:: inizio lettura CSV
+[14:42:09]:: fine lettura CSV
+[14:42:09]:: inizio creazione categorie
+[14:42:10]:: fine creazione categorie
+[14:42:10]:: inizio creazione produttori
+[14:42:10]:: fine creazione produttori
+[14:42:10]:: inizio creazione attributi
+[14:42:10]:: fine creazione attributi
+[14:46:24]:: inizio lettura CSV
+[14:46:25]:: fine lettura CSV
+[14:46:25]:: inizio creazione categorie
+[14:46:25]:: fine creazione categorie
+[14:46:25]:: inizio creazione produttori
+[14:46:25]:: fine creazione produttori
+[14:46:25]:: inizio creazione attributi
+[14:46:25]:: fine creazione attributi
+[14:47:23]:: inizio lettura CSV
+[14:47:23]:: fine lettura CSV
+[14:47:23]:: inizio creazione categorie
+[14:47:24]:: fine creazione categorie
+[14:47:24]:: inizio creazione produttori
+[14:47:24]:: fine creazione produttori
+[14:47:24]:: inizio creazione attributi
+[14:47:24]:: fine creazione attributi
+[14:47:24]:: inizio creazione prodotti
+[14:48:36]:: inizio lettura CSV
+[14:48:37]:: fine lettura CSV
+[14:48:37]:: inizio creazione categorie
+[14:48:37]:: fine creazione categorie
+[14:48:37]:: inizio creazione produttori
+[14:48:37]:: fine creazione produttori
+[14:48:37]:: inizio creazione attributi
+[14:48:37]:: fine creazione attributi
+[14:48:37]:: inizio creazione prodotti
+[14:49:24]:: inizio lettura CSV
+[14:49:24]:: fine lettura CSV
+[14:49:24]:: inizio creazione categorie
+[14:49:24]:: fine creazione categorie
+[14:49:24]:: inizio creazione produttori
+[14:49:24]:: fine creazione produttori
+[14:49:24]:: inizio creazione attributi
+[14:49:24]:: fine creazione attributi
+[14:49:25]:: inizio creazione prodotti
+[14:49:52]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 14:49:24                                          |
+|END                                               | 14:49:52                                          |
+|DURATION                                          | 0.47 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 2                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:01:33]:: inizio lettura CSV
+[15:01:33]:: fine lettura CSV
+[15:01:33]:: inizio creazione categorie
+[15:01:34]:: fine creazione categorie
+[15:01:34]:: inizio creazione produttori
+[15:01:35]:: fine creazione produttori
+[15:01:35]:: inizio creazione attributi
+[15:01:35]:: fine creazione attributi
+[15:01:35]:: inizio creazione prodotti
+[15:01:35]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:01:33                                          |
+|END                                               | 15:01:35                                          |
+|DURATION                                          | 0.03 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 2                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:04:17]:: inizio lettura CSV
+[15:04:18]:: fine lettura CSV
+[15:04:18]:: inizio creazione categorie
+[15:04:18]:: fine creazione categorie
+[15:04:18]:: inizio creazione produttori
+[15:04:18]:: fine creazione produttori
+[15:04:18]:: inizio creazione attributi
+[15:04:18]:: fine creazione attributi
+[15:04:18]:: inizio creazione prodotti
+[15:04:33]:: inizio lettura CSV
+[15:04:33]:: fine lettura CSV
+[15:04:33]:: inizio creazione categorie
+[15:04:34]:: fine creazione categorie
+[15:04:34]:: inizio creazione produttori
+[15:04:34]:: fine creazione produttori
+[15:04:34]:: inizio creazione attributi
+[15:04:34]:: fine creazione attributi
+[15:04:34]:: inizio creazione prodotti
+[15:05:06]:: inizio lettura CSV
+[15:05:06]:: fine lettura CSV
+[15:05:06]:: inizio creazione categorie
+[15:05:06]:: fine creazione categorie
+[15:05:06]:: inizio creazione produttori
+[15:05:06]:: fine creazione produttori
+[15:05:06]:: inizio creazione attributi
+[15:05:06]:: fine creazione attributi
+[15:05:06]:: inizio creazione prodotti
+[15:05:06]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:05:06                                          |
+|END                                               | 15:05:06                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 2                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:09:19]:: inizio lettura CSV
+[15:09:19]:: fine lettura CSV
+[15:09:19]:: inizio creazione categorie
+[15:09:19]:: fine creazione categorie
+[15:09:19]:: inizio creazione produttori
+[15:09:19]:: fine creazione produttori
+[15:09:19]:: inizio creazione attributi
+[15:09:20]:: fine creazione attributi
+[15:09:20]:: inizio creazione prodotti
+[15:09:20]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:09:19                                          |
+|END                                               | 15:09:20                                          |
+|DURATION                                          | 0.02 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 2                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:17:32]:: inizio lettura CSV
+[15:17:32]:: fine lettura CSV
+[15:17:32]:: inizio creazione categorie
+[15:17:34]:: fine creazione categorie
+[15:17:34]:: inizio creazione produttori
+[15:17:34]:: fine creazione produttori
+[15:17:34]:: inizio creazione attributi
+[15:17:34]:: fine creazione attributi
+[15:17:34]:: inizio creazione prodotti
+[15:19:15]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:17:32                                          |
+|END                                               | 15:19:15                                          |
+|DURATION                                          | 1.72 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[15:35:17]:: inizio lettura CSV
+[15:35:17]:: fine lettura CSV
+[15:35:17]:: inizio creazione categorie
+[15:35:18]:: fine creazione categorie
+[15:35:18]:: inizio creazione produttori
+[15:35:18]:: fine creazione produttori
+[15:35:18]:: inizio creazione attributi
+[15:35:20]:: fine creazione attributi
+[15:35:20]:: inizio creazione prodotti
+[15:36:57]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:35:17                                          |
+|END                                               | 15:36:57                                          |
+|DURATION                                          | 1.67 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 50                                                |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:13:20]:: inizio lettura CSV
+[17:13:20]:: fine lettura CSV
+[17:13:20]:: inizio creazione categorie
+[17:13:22]:: fine creazione categorie
+[17:13:22]:: inizio creazione produttori
+[17:13:22]:: fine creazione produttori
+[17:13:22]:: inizio creazione attributi
+[17:13:24]:: fine creazione attributi
+[17:13:49]:: inizio lettura CSV
+[17:13:50]:: fine lettura CSV
+[17:13:50]:: inizio creazione categorie
+[17:13:50]:: fine creazione categorie
+[17:13:50]:: inizio creazione produttori
+[17:13:50]:: fine creazione produttori
+[17:13:50]:: inizio creazione attributi
+[17:13:50]:: fine creazione attributi
+[17:14:39]:: inizio lettura CSV
+[17:14:39]:: fine lettura CSV
+[17:14:39]:: inizio creazione categorie
+[17:14:39]:: fine creazione categorie
+[17:14:39]:: inizio creazione produttori
+[17:14:39]:: fine creazione produttori
+[17:14:39]:: inizio creazione attributi
+[17:14:39]:: fine creazione attributi
+[17:33:35]:: inizio lettura CSV
+[17:33:35]:: fine lettura CSV
+[17:33:35]:: inizio creazione categorie
+[17:33:36]:: fine creazione categorie
+[17:33:36]:: inizio creazione produttori
+[17:33:36]:: fine creazione produttori
+[17:33:36]:: inizio creazione attributi
+[17:33:36]:: fine creazione attributi
+[17:33:36]:: inizio creazione prodotti
+[17:35:48]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:33:35                                          |
+|END                                               | 17:35:48                                          |
+|DURATION                                          | 2.22 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:37:26]:: inizio lettura CSV
+[17:37:27]:: fine lettura CSV
+[17:37:27]:: inizio creazione categorie
+[17:37:27]:: fine creazione categorie
+[17:37:27]:: inizio creazione produttori
+[17:37:27]:: fine creazione produttori
+[17:37:27]:: inizio creazione attributi
+[17:37:27]:: fine creazione attributi
+[17:37:27]:: inizio creazione prodotti
+[17:37:35]:: inizio lettura CSV
+[17:37:35]:: fine lettura CSV
+[17:37:35]:: inizio creazione categorie
+[17:37:36]:: fine creazione categorie
+[17:37:36]:: inizio creazione produttori
+[17:37:36]:: fine creazione produttori
+[17:37:36]:: inizio creazione attributi
+[17:37:36]:: fine creazione attributi
+[17:37:36]:: inizio creazione prodotti
+[17:38:20]:: inizio lettura CSV
+[17:38:20]:: fine lettura CSV
+[17:38:20]:: inizio creazione categorie
+[17:38:20]:: fine creazione categorie
+[17:38:20]:: inizio creazione produttori
+[17:38:20]:: fine creazione produttori
+[17:38:20]:: inizio creazione attributi
+[17:38:21]:: fine creazione attributi
+[17:38:21]:: inizio creazione prodotti
+[17:38:38]:: inizio lettura CSV
+[17:38:38]:: fine lettura CSV
+[17:38:38]:: inizio creazione categorie
+[17:38:38]:: fine creazione categorie
+[17:38:38]:: inizio creazione produttori
+[17:38:38]:: fine creazione produttori
+[17:38:38]:: inizio creazione attributi
+[17:38:39]:: fine creazione attributi
+[17:38:39]:: inizio creazione prodotti
+[17:38:42]:: inizio lettura CSV
+[17:38:42]:: fine lettura CSV
+[17:38:42]:: inizio creazione categorie
+[17:38:42]:: fine creazione categorie
+[17:38:42]:: inizio creazione produttori
+[17:38:42]:: fine creazione produttori
+[17:38:42]:: inizio creazione attributi
+[17:38:42]:: fine creazione attributi
+[17:38:42]:: inizio creazione prodotti
+[17:39:06]:: inizio lettura CSV
+[17:39:06]:: fine lettura CSV
+[17:39:06]:: inizio creazione categorie
+[17:39:07]:: fine creazione categorie
+[17:39:07]:: inizio creazione produttori
+[17:39:07]:: fine creazione produttori
+[17:39:07]:: inizio creazione attributi
+[17:39:07]:: fine creazione attributi
+[17:39:07]:: inizio creazione prodotti
+[17:39:13]:: inizio lettura CSV
+[17:39:13]:: fine lettura CSV
+[17:39:13]:: inizio creazione categorie
+[17:39:13]:: fine creazione categorie
+[17:39:13]:: inizio creazione produttori
+[17:39:13]:: fine creazione produttori
+[17:39:13]:: inizio creazione attributi
+[17:39:14]:: fine creazione attributi
+[17:39:14]:: inizio creazione prodotti
+[17:39:24]:: inizio lettura CSV
+[17:39:24]:: fine lettura CSV
+[17:39:24]:: inizio creazione categorie
+[17:39:24]:: fine creazione categorie
+[17:39:24]:: inizio creazione produttori
+[17:39:25]:: fine creazione produttori
+[17:39:25]:: inizio creazione attributi
+[17:39:25]:: fine creazione attributi
+[17:39:25]:: inizio creazione prodotti
+[17:39:26]:: inizio lettura CSV
+[17:39:26]:: fine lettura CSV
+[17:39:26]:: inizio creazione categorie
+[17:39:27]:: fine creazione categorie
+[17:39:27]:: inizio creazione produttori
+[17:39:27]:: fine creazione produttori
+[17:39:27]:: inizio creazione attributi
+[17:39:27]:: fine creazione attributi
+[17:39:27]:: inizio creazione prodotti
+[17:39:28]:: inizio lettura CSV
+[17:39:28]:: fine lettura CSV
+[17:39:28]:: inizio creazione categorie
+[17:39:28]:: fine creazione categorie
+[17:39:28]:: inizio creazione produttori
+[17:39:29]:: fine creazione produttori
+[17:39:29]:: inizio creazione attributi
+[17:39:29]:: fine creazione attributi
+[17:39:29]:: inizio creazione prodotti
+[17:39:30]:: inizio lettura CSV
+[17:39:30]:: fine lettura CSV
+[17:39:30]:: inizio creazione categorie
+[17:39:30]:: fine creazione categorie
+[17:39:30]:: inizio creazione produttori
+[17:39:30]:: fine creazione produttori
+[17:39:30]:: inizio creazione attributi
+[17:39:30]:: fine creazione attributi
+[17:39:30]:: inizio creazione prodotti
+[17:39:31]:: inizio lettura CSV
+[17:39:32]:: fine lettura CSV
+[17:39:32]:: inizio creazione categorie
+[17:39:32]:: fine creazione categorie
+[17:39:32]:: inizio creazione produttori
+[17:39:32]:: fine creazione produttori
+[17:39:32]:: inizio creazione attributi
+[17:39:32]:: fine creazione attributi
+[17:39:32]:: inizio creazione prodotti
+[17:39:33]:: inizio lettura CSV
+[17:39:33]:: fine lettura CSV
+[17:39:33]:: inizio creazione categorie
+[17:39:33]:: fine creazione categorie
+[17:39:33]:: inizio creazione produttori
+[17:39:33]:: fine creazione produttori
+[17:39:33]:: inizio creazione attributi
+[17:39:33]:: fine creazione attributi
+[17:39:33]:: inizio creazione prodotti
+[17:39:51]:: inizio lettura CSV
+[17:39:51]:: fine lettura CSV
+[17:39:51]:: inizio creazione categorie
+[17:39:51]:: fine creazione categorie
+[17:39:51]:: inizio creazione produttori
+[17:39:51]:: fine creazione produttori
+[17:39:51]:: inizio creazione attributi
+[17:39:51]:: fine creazione attributi
+[17:39:51]:: inizio creazione prodotti
+[17:43:00]:: inizio lettura CSV
+[17:43:00]:: fine lettura CSV
+[17:43:00]:: inizio creazione categorie
+[17:43:02]:: fine creazione categorie
+[17:43:02]:: inizio creazione produttori
+[17:43:02]:: fine creazione produttori
+[17:43:02]:: inizio creazione attributi
+[17:43:02]:: fine creazione attributi
+[17:43:02]:: inizio creazione prodotti
+[17:43:11]:: inizio lettura CSV
+[17:43:11]:: fine lettura CSV
+[17:43:11]:: inizio creazione categorie
+[17:43:11]:: fine creazione categorie
+[17:43:11]:: inizio creazione produttori
+[17:43:11]:: fine creazione produttori
+[17:43:11]:: inizio creazione attributi
+[17:43:11]:: fine creazione attributi
+[17:43:11]:: inizio creazione prodotti
+[17:45:39]:: inizio lettura CSV
+[17:45:39]:: fine lettura CSV
+[17:45:39]:: inizio creazione categorie
+[17:45:39]:: fine creazione categorie
+[17:45:39]:: inizio creazione produttori
+[17:45:39]:: fine creazione produttori
+[17:45:39]:: inizio creazione attributi
+[17:45:39]:: fine creazione attributi
+[17:45:39]:: inizio creazione prodotti
+[17:45:53]:: inizio lettura CSV
+[17:45:53]:: fine lettura CSV
+[17:45:53]:: inizio creazione categorie
+[17:45:54]:: fine creazione categorie
+[17:45:54]:: inizio creazione produttori
+[17:45:54]:: fine creazione produttori
+[17:45:54]:: inizio creazione attributi
+[17:45:54]:: fine creazione attributi
+[17:45:54]:: inizio creazione prodotti
+[17:46:02]:: inizio lettura CSV
+[17:46:03]:: fine lettura CSV
+[17:46:03]:: inizio creazione categorie
+[17:46:03]:: fine creazione categorie
+[17:46:03]:: inizio creazione produttori
+[17:46:03]:: fine creazione produttori
+[17:46:03]:: inizio creazione attributi
+[17:46:03]:: fine creazione attributi
+[17:46:03]:: inizio creazione prodotti
+[17:46:15]:: inizio lettura CSV
+[17:46:16]:: fine lettura CSV
+[17:46:16]:: inizio creazione categorie
+[17:46:16]:: fine creazione categorie
+[17:46:16]:: inizio creazione produttori
+[17:46:16]:: fine creazione produttori
+[17:46:16]:: inizio creazione attributi
+[17:46:16]:: fine creazione attributi
+[17:46:16]:: inizio creazione prodotti
+[17:46:24]:: inizio lettura CSV
+[17:46:24]:: fine lettura CSV
+[17:46:24]:: inizio creazione categorie
+[17:46:24]:: fine creazione categorie
+[17:46:24]:: inizio creazione produttori
+[17:46:24]:: fine creazione produttori
+[17:46:24]:: inizio creazione attributi
+[17:46:24]:: fine creazione attributi
+[17:46:24]:: inizio creazione prodotti
+[17:46:55]:: inizio lettura CSV
+[17:46:55]:: fine lettura CSV
+[17:46:55]:: inizio creazione categorie
+[17:46:55]:: fine creazione categorie
+[17:46:55]:: inizio creazione produttori
+[17:46:55]:: fine creazione produttori
+[17:46:55]:: inizio creazione attributi
+[17:46:55]:: fine creazione attributi
+[17:46:55]:: inizio creazione prodotti
+[17:47:20]:: inizio lettura CSV
+[17:47:20]:: fine lettura CSV
+[17:47:20]:: inizio creazione categorie
+[17:47:20]:: fine creazione categorie
+[17:47:20]:: inizio creazione produttori
+[17:47:21]:: fine creazione produttori
+[17:47:21]:: inizio creazione attributi
+[17:47:21]:: fine creazione attributi
+[17:47:21]:: inizio creazione prodotti
+[17:47:54]:: inizio lettura CSV
+[17:47:54]:: fine lettura CSV
+[17:47:54]:: inizio creazione categorie
+[17:47:55]:: fine creazione categorie
+[17:47:55]:: inizio creazione produttori
+[17:47:55]:: fine creazione produttori
+[17:47:55]:: inizio creazione attributi
+[17:47:55]:: fine creazione attributi
+[17:47:55]:: inizio creazione prodotti
+[17:47:59]:: inizio lettura CSV
+[17:47:59]:: fine lettura CSV
+[17:47:59]:: inizio creazione categorie
+[17:47:59]:: fine creazione categorie
+[17:47:59]:: inizio creazione produttori
+[17:47:59]:: fine creazione produttori
+[17:47:59]:: inizio creazione attributi
+[17:47:59]:: fine creazione attributi
+[17:47:59]:: inizio creazione prodotti
+[17:48:01]:: inizio lettura CSV
+[17:48:01]:: fine lettura CSV
+[17:48:01]:: inizio creazione categorie
+[17:48:01]:: fine creazione categorie
+[17:48:01]:: inizio creazione produttori
+[17:48:01]:: fine creazione produttori
+[17:48:01]:: inizio creazione attributi
+[17:48:01]:: fine creazione attributi
+[17:48:01]:: inizio creazione prodotti
+[17:48:55]:: inizio lettura CSV
+[17:48:55]:: fine lettura CSV
+[17:48:55]:: inizio creazione categorie
+[17:48:55]:: fine creazione categorie
+[17:48:55]:: inizio creazione produttori
+[17:48:55]:: fine creazione produttori
+[17:48:55]:: inizio creazione attributi
+[17:48:55]:: fine creazione attributi
+[17:48:55]:: inizio creazione prodotti
+[17:51:15]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:48:55                                          |
+|END                                               | 17:51:15                                          |
+|DURATION                                          | 2.33 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1138                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:54:48]:: inizio lettura CSV
+[17:54:48]:: fine lettura CSV
+[17:54:48]:: inizio creazione categorie
+[17:54:48]:: fine creazione categorie
+[17:54:48]:: inizio creazione produttori
+[17:54:49]:: fine creazione produttori
+[17:54:49]:: inizio creazione attributi
+[17:54:49]:: fine creazione attributi
+[17:54:49]:: inizio creazione prodotti
+[17:55:07]:: inizio lettura CSV
+[17:55:07]:: fine lettura CSV
+[17:55:07]:: inizio creazione categorie
+[17:55:07]:: fine creazione categorie
+[17:55:07]:: inizio creazione produttori
+[17:55:07]:: fine creazione produttori
+[17:55:07]:: inizio creazione attributi
+[17:55:07]:: fine creazione attributi
+[17:55:07]:: inizio creazione prodotti
+[17:55:27]:: inizio lettura CSV
+[17:55:27]:: fine lettura CSV
+[17:55:27]:: inizio creazione categorie
+[17:55:27]:: fine creazione categorie
+[17:55:27]:: inizio creazione produttori
+[17:55:27]:: fine creazione produttori
+[17:55:27]:: inizio creazione attributi
+[17:55:27]:: fine creazione attributi
+[17:55:27]:: inizio creazione prodotti
+[17:55:36]:: inizio lettura CSV
+[17:55:36]:: fine lettura CSV
+[17:55:36]:: inizio creazione categorie
+[17:55:36]:: fine creazione categorie
+[17:55:36]:: inizio creazione produttori
+[17:55:36]:: fine creazione produttori
+[17:55:36]:: inizio creazione attributi
+[17:55:36]:: fine creazione attributi
+[17:55:36]:: inizio creazione prodotti
+[17:57:38]:: inizio lettura CSV
+[17:57:38]:: fine lettura CSV
+[17:57:38]:: inizio creazione categorie
+[17:57:38]:: fine creazione categorie
+[17:57:38]:: inizio creazione produttori
+[17:57:38]:: fine creazione produttori
+[17:57:38]:: inizio creazione attributi
+[17:57:38]:: fine creazione attributi
+[17:57:38]:: inizio creazione prodotti
+[17:57:49]:: inizio lettura CSV
+[17:57:49]:: fine lettura CSV
+[17:57:49]:: inizio creazione categorie
+[17:57:49]:: fine creazione categorie
+[17:57:49]:: inizio creazione produttori
+[17:57:49]:: fine creazione produttori
+[17:57:49]:: inizio creazione attributi
+[17:57:49]:: fine creazione attributi
+[17:57:49]:: inizio creazione prodotti
+[17:58:00]:: inizio lettura CSV
+[17:58:00]:: fine lettura CSV
+[17:58:00]:: inizio creazione categorie
+[17:58:00]:: fine creazione categorie
+[17:58:00]:: inizio creazione produttori
+[17:58:01]:: fine creazione produttori
+[17:58:01]:: inizio creazione attributi
+[17:58:01]:: fine creazione attributi
+[17:58:01]:: inizio creazione prodotti
+[17:58:04]:: inizio lettura CSV
+[17:58:04]:: fine lettura CSV
+[17:58:04]:: inizio creazione categorie
+[17:58:04]:: fine creazione categorie
+[17:58:04]:: inizio creazione produttori
+[17:58:04]:: fine creazione produttori
+[17:58:04]:: inizio creazione attributi
+[17:58:04]:: fine creazione attributi
+[17:58:04]:: inizio creazione prodotti
+[17:58:06]:: inizio lettura CSV
+[17:58:06]:: fine lettura CSV
+[17:58:06]:: inizio creazione categorie
+[17:58:06]:: fine creazione categorie
+[17:58:06]:: inizio creazione produttori
+[17:58:06]:: fine creazione produttori
+[17:58:06]:: inizio creazione attributi
+[17:58:06]:: fine creazione attributi
+[17:58:06]:: inizio creazione prodotti
+[17:58:16]:: inizio lettura CSV
+[17:58:16]:: fine lettura CSV
+[17:58:16]:: inizio creazione categorie
+[17:58:16]:: fine creazione categorie
+[17:58:16]:: inizio creazione produttori
+[17:58:16]:: fine creazione produttori
+[17:58:16]:: inizio creazione attributi
+[17:58:16]:: fine creazione attributi
+[17:58:16]:: inizio creazione prodotti
+[17:58:18]:: inizio lettura CSV
+[17:58:18]:: fine lettura CSV
+[17:58:18]:: inizio creazione categorie
+[17:58:18]:: fine creazione categorie
+[17:58:18]:: inizio creazione produttori
+[17:58:18]:: fine creazione produttori
+[17:58:18]:: inizio creazione attributi
+[17:58:18]:: fine creazione attributi
+[17:58:18]:: inizio creazione prodotti
+[17:58:57]:: inizio lettura CSV
+[17:58:57]:: fine lettura CSV
+[17:58:57]:: inizio creazione categorie
+[17:58:57]:: fine creazione categorie
+[17:58:57]:: inizio creazione produttori
+[17:58:57]:: fine creazione produttori
+[17:58:57]:: inizio creazione attributi
+[17:58:57]:: fine creazione attributi
+[17:58:57]:: inizio creazione prodotti
+[17:59:38]:: inizio lettura CSV
+[17:59:38]:: fine lettura CSV
+[17:59:38]:: inizio creazione categorie
+[17:59:38]:: fine creazione categorie
+[17:59:38]:: inizio creazione produttori
+[17:59:38]:: fine creazione produttori
+[17:59:38]:: inizio creazione attributi
+[17:59:38]:: fine creazione attributi
+[17:59:38]:: inizio creazione prodotti
+[17:59:41]:: inizio lettura CSV
+[17:59:41]:: fine lettura CSV
+[17:59:41]:: inizio creazione categorie
+[17:59:42]:: fine creazione categorie
+[17:59:42]:: inizio creazione produttori
+[17:59:42]:: fine creazione produttori
+[17:59:42]:: inizio creazione attributi
+[17:59:42]:: fine creazione attributi
+[17:59:42]:: inizio creazione prodotti
+[17:59:44]:: inizio lettura CSV
+[17:59:44]:: fine lettura CSV
+[17:59:44]:: inizio creazione categorie
+[17:59:44]:: fine creazione categorie
+[17:59:44]:: inizio creazione produttori
+[17:59:44]:: fine creazione produttori
+[17:59:44]:: inizio creazione attributi
+[17:59:44]:: fine creazione attributi
+[17:59:44]:: inizio creazione prodotti
+[17:59:46]:: inizio lettura CSV
+[17:59:46]:: fine lettura CSV
+[17:59:46]:: inizio creazione categorie
+[17:59:46]:: fine creazione categorie
+[17:59:46]:: inizio creazione produttori
+[17:59:46]:: fine creazione produttori
+[17:59:46]:: inizio creazione attributi
+[17:59:46]:: fine creazione attributi
+[17:59:46]:: inizio creazione prodotti
+[18:03:05]:: inizio lettura CSV
+[18:03:05]:: fine lettura CSV
+[18:03:05]:: inizio creazione categorie
+[18:03:07]:: fine creazione categorie
+[18:03:07]:: inizio creazione produttori
+[18:03:07]:: fine creazione produttori
+[18:03:07]:: inizio creazione attributi
+[18:03:07]:: fine creazione attributi
+[18:03:07]:: inizio creazione prodotti
+[18:04:33]:: inizio lettura CSV
+[18:04:33]:: fine lettura CSV
+[18:04:33]:: inizio creazione categorie
+[18:04:33]:: fine creazione categorie
+[18:04:33]:: inizio creazione produttori
+[18:04:33]:: fine creazione produttori
+[18:04:33]:: inizio creazione attributi
+[18:04:33]:: fine creazione attributi
+[18:04:33]:: inizio creazione prodotti
+[18:04:56]:: inizio lettura CSV
+[18:04:56]:: fine lettura CSV
+[18:04:56]:: inizio creazione categorie
+[18:04:56]:: fine creazione categorie
+[18:04:56]:: inizio creazione produttori
+[18:04:56]:: fine creazione produttori
+[18:04:56]:: inizio creazione attributi
+[18:04:56]:: fine creazione attributi
+[18:04:56]:: inizio creazione prodotti
+[18:07:45]:: inizio lettura CSV
+[18:07:45]:: fine lettura CSV
+[18:07:45]:: inizio creazione categorie
+[18:07:45]:: fine creazione categorie
+[18:07:45]:: inizio creazione produttori
+[18:07:45]:: fine creazione produttori
+[18:07:45]:: inizio creazione attributi
+[18:07:45]:: fine creazione attributi
+[18:07:45]:: inizio creazione prodotti
+[18:07:50]:: inizio lettura CSV
+[18:07:50]:: fine lettura CSV
+[18:07:50]:: inizio creazione categorie
+[18:07:51]:: fine creazione categorie
+[18:07:51]:: inizio creazione produttori
+[18:07:51]:: fine creazione produttori
+[18:07:51]:: inizio creazione attributi
+[18:07:51]:: fine creazione attributi
+[18:07:51]:: inizio creazione prodotti
+[18:09:58]:: inizio lettura CSV
+[18:09:58]:: fine lettura CSV
+[18:09:58]:: inizio creazione categorie
+[18:09:58]:: fine creazione categorie
+[18:09:58]:: inizio creazione produttori
+[18:09:58]:: fine creazione produttori
+[18:09:58]:: inizio creazione attributi
+[18:09:58]:: fine creazione attributi
+[18:09:58]:: inizio creazione prodotti
+[18:10:18]:: inizio lettura CSV
+[18:10:18]:: fine lettura CSV
+[18:10:18]:: inizio creazione categorie
+[18:10:19]:: fine creazione categorie
+[18:10:19]:: inizio creazione produttori
+[18:10:19]:: fine creazione produttori
+[18:10:19]:: inizio creazione attributi
+[18:10:19]:: fine creazione attributi
+[18:10:19]:: inizio creazione prodotti
+[18:10:25]:: inizio lettura CSV
+[18:10:25]:: fine lettura CSV
+[18:10:25]:: inizio creazione categorie
+[18:10:26]:: fine creazione categorie
+[18:10:26]:: inizio creazione produttori
+[18:10:26]:: fine creazione produttori
+[18:10:26]:: inizio creazione attributi
+[18:10:26]:: fine creazione attributi
+[18:10:26]:: inizio creazione prodotti
+[18:10:45]:: inizio lettura CSV
+[18:10:45]:: fine lettura CSV
+[18:10:45]:: inizio creazione categorie
+[18:10:45]:: fine creazione categorie
+[18:10:45]:: inizio creazione produttori
+[18:10:45]:: fine creazione produttori
+[18:10:45]:: inizio creazione attributi
+[18:10:45]:: fine creazione attributi
+[18:10:45]:: inizio creazione prodotti
+[18:10:48]:: inizio lettura CSV
+[18:10:48]:: fine lettura CSV
+[18:10:48]:: inizio creazione categorie
+[18:10:48]:: fine creazione categorie
+[18:10:48]:: inizio creazione produttori
+[18:10:48]:: fine creazione produttori
+[18:10:48]:: inizio creazione attributi
+[18:10:48]:: fine creazione attributi
+[18:10:48]:: inizio creazione prodotti
+[18:10:56]:: inizio lettura CSV
+[18:10:56]:: fine lettura CSV
+[18:10:56]:: inizio creazione categorie
+[18:10:56]:: fine creazione categorie
+[18:10:56]:: inizio creazione produttori
+[18:10:56]:: fine creazione produttori
+[18:10:56]:: inizio creazione attributi
+[18:10:56]:: fine creazione attributi
+[18:10:56]:: inizio creazione prodotti
+[18:10:57]:: inizio lettura CSV
+[18:10:57]:: fine lettura CSV
+[18:10:57]:: inizio creazione categorie
+[18:10:58]:: fine creazione categorie
+[18:10:58]:: inizio creazione produttori
+[18:10:58]:: fine creazione produttori
+[18:10:58]:: inizio creazione attributi
+[18:10:58]:: fine creazione attributi
+[18:10:58]:: inizio creazione prodotti
+[18:10:59]:: inizio lettura CSV
+[18:10:59]:: fine lettura CSV
+[18:10:59]:: inizio creazione categorie
+[18:11:00]:: fine creazione categorie
+[18:11:00]:: inizio creazione produttori
+[18:11:00]:: fine creazione produttori
+[18:11:00]:: inizio creazione attributi
+[18:11:00]:: fine creazione attributi
+[18:11:00]:: inizio creazione prodotti
+[18:11:01]:: inizio lettura CSV
+[18:11:01]:: fine lettura CSV
+[18:11:01]:: inizio creazione categorie
+[18:11:01]:: fine creazione categorie
+[18:11:01]:: inizio creazione produttori
+[18:11:01]:: fine creazione produttori
+[18:11:01]:: inizio creazione attributi
+[18:11:01]:: fine creazione attributi
+[18:11:01]:: inizio creazione prodotti
+[18:11:02]:: inizio lettura CSV
+[18:11:03]:: fine lettura CSV
+[18:11:03]:: inizio creazione categorie
+[18:11:03]:: fine creazione categorie
+[18:11:03]:: inizio creazione produttori
+[18:11:03]:: fine creazione produttori
+[18:11:03]:: inizio creazione attributi
+[18:11:03]:: fine creazione attributi
+[18:11:03]:: inizio creazione prodotti
+[18:11:33]:: inizio lettura CSV
+[18:11:33]:: fine lettura CSV
+[18:11:33]:: inizio creazione categorie
+[18:11:33]:: fine creazione categorie
+[18:11:33]:: inizio creazione produttori
+[18:11:33]:: fine creazione produttori
+[18:11:33]:: inizio creazione attributi
+[18:11:33]:: fine creazione attributi
+[18:11:33]:: inizio creazione prodotti
+[18:11:41]:: inizio lettura CSV
+[18:11:41]:: fine lettura CSV
+[18:11:41]:: inizio creazione categorie
+[18:11:42]:: fine creazione categorie
+[18:11:42]:: inizio creazione produttori
+[18:11:42]:: fine creazione produttori
+[18:11:42]:: inizio creazione attributi
+[18:11:42]:: fine creazione attributi
+[18:11:42]:: inizio creazione prodotti
+[18:11:46]:: inizio lettura CSV
+[18:11:46]:: fine lettura CSV
+[18:11:46]:: inizio creazione categorie
+[18:11:47]:: fine creazione categorie
+[18:11:47]:: inizio creazione produttori
+[18:11:47]:: fine creazione produttori
+[18:11:47]:: inizio creazione attributi
+[18:11:47]:: fine creazione attributi
+[18:11:47]:: inizio creazione prodotti
+[18:11:48]:: inizio lettura CSV
+[18:11:48]:: fine lettura CSV
+[18:11:48]:: inizio creazione categorie
+[18:11:48]:: fine creazione categorie
+[18:11:48]:: inizio creazione produttori
+[18:11:49]:: fine creazione produttori
+[18:11:49]:: inizio creazione attributi
+[18:11:49]:: fine creazione attributi
+[18:11:49]:: inizio creazione prodotti
+[18:11:50]:: inizio lettura CSV
+[18:11:50]:: fine lettura CSV
+[18:11:50]:: inizio creazione categorie
+[18:11:50]:: fine creazione categorie
+[18:11:50]:: inizio creazione produttori
+[18:11:50]:: fine creazione produttori
+[18:11:50]:: inizio creazione attributi
+[18:11:51]:: fine creazione attributi
+[18:11:51]:: inizio creazione prodotti
+[18:12:03]:: inizio lettura CSV
+[18:12:04]:: fine lettura CSV
+[18:12:04]:: inizio creazione categorie
+[18:12:04]:: fine creazione categorie
+[18:12:04]:: inizio creazione produttori
+[18:12:04]:: fine creazione produttori
+[18:12:04]:: inizio creazione attributi
+[18:12:04]:: fine creazione attributi
+[18:12:04]:: inizio creazione prodotti
+[18:12:06]:: inizio lettura CSV
+[18:12:06]:: fine lettura CSV
+[18:12:06]:: inizio creazione categorie
+[18:12:07]:: fine creazione categorie
+[18:12:07]:: inizio creazione produttori
+[18:12:07]:: fine creazione produttori
+[18:12:07]:: inizio creazione attributi
+[18:12:07]:: fine creazione attributi
+[18:12:07]:: inizio creazione prodotti
+[18:12:08]:: inizio lettura CSV
+[18:12:08]:: fine lettura CSV
+[18:12:08]:: inizio creazione categorie
+[18:12:08]:: fine creazione categorie
+[18:12:08]:: inizio creazione produttori
+[18:12:09]:: fine creazione produttori
+[18:12:09]:: inizio creazione attributi
+[18:12:09]:: fine creazione attributi
+[18:12:09]:: inizio creazione prodotti
+[18:12:10]:: inizio lettura CSV
+[18:12:10]:: fine lettura CSV
+[18:12:10]:: inizio creazione categorie
+[18:12:10]:: fine creazione categorie
+[18:12:10]:: inizio creazione produttori
+[18:12:11]:: fine creazione produttori
+[18:12:11]:: inizio creazione attributi
+[18:12:11]:: fine creazione attributi
+[18:12:11]:: inizio creazione prodotti
+[18:29:35]:: inizio lettura CSV
+[18:29:36]:: fine lettura CSV
+[18:29:36]:: inizio creazione categorie
+[18:29:36]:: fine creazione categorie
+[18:29:36]:: inizio creazione produttori
+[18:29:36]:: fine creazione produttori
+[18:29:36]:: inizio creazione attributi
+[18:29:36]:: fine creazione attributi
+[18:31:47]:: inizio lettura CSV
+[18:31:47]:: fine lettura CSV
+[18:31:47]:: inizio creazione categorie
+[18:31:47]:: fine creazione categorie
+[18:31:47]:: inizio creazione produttori
+[18:31:47]:: fine creazione produttori
+[18:31:47]:: inizio creazione attributi
+[18:31:47]:: fine creazione attributi
+[18:32:02]:: inizio lettura CSV
+[18:32:02]:: fine lettura CSV
+[18:32:02]:: inizio creazione categorie
+[18:32:02]:: fine creazione categorie
+[18:32:02]:: inizio creazione produttori
+[18:32:02]:: fine creazione produttori
+[18:32:02]:: inizio creazione attributi
+[18:32:02]:: fine creazione attributi
+[18:32:02]:: inizio creazione prodotti
+[18:32:43]:: inizio lettura CSV
+[18:32:43]:: fine lettura CSV
+[18:32:43]:: inizio creazione categorie
+[18:32:43]:: fine creazione categorie
+[18:32:43]:: inizio creazione produttori
+[18:32:43]:: fine creazione produttori
+[18:32:43]:: inizio creazione attributi
+[18:32:43]:: fine creazione attributi
+[18:32:43]:: inizio creazione prodotti
+[18:34:35]:: inizio lettura CSV
+[18:34:36]:: fine lettura CSV
+[18:34:36]:: inizio creazione categorie
+[18:34:37]:: fine creazione categorie
+[18:34:37]:: inizio creazione produttori
+[18:34:37]:: fine creazione produttori
+[18:34:37]:: inizio creazione attributi
+[18:34:37]:: fine creazione attributi
+[18:34:37]:: inizio creazione prodotti
+[18:35:26]:: inizio lettura CSV
+[18:35:26]:: fine lettura CSV
+[18:35:26]:: inizio creazione categorie
+[18:35:26]:: fine creazione categorie
+[18:35:26]:: inizio creazione produttori
+[18:35:26]:: fine creazione produttori
+[18:35:26]:: inizio creazione attributi
+[18:35:26]:: fine creazione attributi
+[18:35:26]:: inizio creazione prodotti
+[18:35:30]:: inizio lettura CSV
+[18:35:30]:: fine lettura CSV
+[18:35:30]:: inizio creazione categorie
+[18:35:30]:: fine creazione categorie
+[18:35:30]:: inizio creazione produttori
+[18:35:30]:: fine creazione produttori
+[18:35:30]:: inizio creazione attributi
+[18:35:30]:: fine creazione attributi
+[18:35:30]:: inizio creazione prodotti
+[18:35:40]:: inizio lettura CSV
+[18:35:40]:: fine lettura CSV
+[18:35:40]:: inizio creazione categorie
+[18:35:40]:: fine creazione categorie
+[18:35:40]:: inizio creazione produttori
+[18:35:40]:: fine creazione produttori
+[18:35:40]:: inizio creazione attributi
+[18:35:40]:: fine creazione attributi
+[18:35:40]:: inizio creazione prodotti
+[18:35:41]:: inizio lettura CSV
+[18:35:42]:: fine lettura CSV
+[18:35:42]:: inizio creazione categorie
+[18:35:42]:: fine creazione categorie
+[18:35:42]:: inizio creazione produttori
+[18:35:42]:: fine creazione produttori
+[18:35:42]:: inizio creazione attributi
+[18:35:42]:: fine creazione attributi
+[18:35:42]:: inizio creazione prodotti
+[18:36:18]:: inizio lettura CSV
+[18:36:18]:: fine lettura CSV
+[18:36:18]:: inizio creazione categorie
+[18:36:18]:: fine creazione categorie
+[18:36:18]:: inizio creazione produttori
+[18:36:18]:: fine creazione produttori
+[18:36:18]:: inizio creazione attributi
+[18:36:18]:: fine creazione attributi
+[18:36:18]:: inizio creazione prodotti
+[18:37:02]:: inizio lettura CSV
+[18:37:02]:: fine lettura CSV
+[18:37:02]:: inizio creazione categorie
+[18:37:02]:: fine creazione categorie
+[18:37:02]:: inizio creazione produttori
+[18:37:02]:: fine creazione produttori
+[18:37:02]:: inizio creazione attributi
+[18:37:02]:: fine creazione attributi
+[18:37:02]:: inizio creazione prodotti
+[18:37:07]:: inizio lettura CSV
+[18:37:07]:: fine lettura CSV
+[18:37:07]:: inizio creazione categorie
+[18:37:07]:: fine creazione categorie
+[18:37:07]:: inizio creazione produttori
+[18:37:07]:: fine creazione produttori
+[18:37:07]:: inizio creazione attributi
+[18:37:07]:: fine creazione attributi
+[18:37:07]:: inizio creazione prodotti
+[18:37:38]:: inizio lettura CSV
+[18:37:38]:: fine lettura CSV
+[18:37:38]:: inizio creazione categorie
+[18:37:38]:: fine creazione categorie
+[18:37:38]:: inizio creazione produttori
+[18:37:38]:: fine creazione produttori
+[18:37:38]:: inizio creazione attributi
+[18:37:38]:: fine creazione attributi
+[18:37:38]:: inizio creazione prodotti
+[18:38:08]:: inizio lettura CSV
+[18:38:08]:: fine lettura CSV
+[18:38:08]:: inizio creazione categorie
+[18:38:08]:: fine creazione categorie
+[18:38:08]:: inizio creazione produttori
+[18:38:08]:: fine creazione produttori
+[18:38:08]:: inizio creazione attributi
+[18:38:09]:: fine creazione attributi
+[18:38:53]:: inizio lettura CSV
+[18:38:53]:: fine lettura CSV
+[18:38:53]:: inizio creazione categorie
+[18:38:53]:: fine creazione categorie
+[18:38:53]:: inizio creazione produttori
+[18:38:54]:: fine creazione produttori
+[18:38:54]:: inizio creazione attributi
+[18:38:54]:: fine creazione attributi
+[18:38:54]:: inizio creazione prodotti
+[18:38:55]:: inizio lettura CSV
+[18:38:55]:: fine lettura CSV
+[18:38:55]:: inizio creazione categorie
+[18:38:55]:: fine creazione categorie
+[18:38:55]:: inizio creazione produttori
+[18:38:55]:: fine creazione produttori
+[18:38:55]:: inizio creazione attributi
+[18:38:55]:: fine creazione attributi
+[18:38:56]:: inizio creazione prodotti
+[18:38:57]:: inizio lettura CSV
+[18:38:57]:: fine lettura CSV
+[18:38:57]:: inizio creazione categorie
+[18:38:57]:: fine creazione categorie
+[18:38:57]:: inizio creazione produttori
+[18:38:57]:: fine creazione produttori
+[18:38:57]:: inizio creazione attributi
+[18:38:57]:: fine creazione attributi
+[18:38:57]:: inizio creazione prodotti
+[18:38:58]:: inizio lettura CSV
+[18:38:58]:: fine lettura CSV
+[18:38:58]:: inizio creazione categorie
+[18:38:58]:: fine creazione categorie
+[18:38:58]:: inizio creazione produttori
+[18:38:58]:: fine creazione produttori
+[18:38:58]:: inizio creazione attributi
+[18:38:59]:: fine creazione attributi
+[18:38:59]:: inizio creazione prodotti
+[18:39:00]:: inizio lettura CSV
+[18:39:00]:: fine lettura CSV
+[18:39:00]:: inizio creazione categorie
+[18:39:00]:: fine creazione categorie
+[18:39:00]:: inizio creazione produttori
+[18:39:00]:: fine creazione produttori
+[18:39:00]:: inizio creazione attributi
+[18:39:00]:: fine creazione attributi
+[18:39:00]:: inizio creazione prodotti
+[18:40:13]:: inizio lettura CSV
+[18:40:13]:: fine lettura CSV
+[18:40:13]:: inizio creazione categorie
+[18:40:13]:: fine creazione categorie
+[18:40:13]:: inizio creazione produttori
+[18:40:13]:: fine creazione produttori
+[18:40:13]:: inizio creazione attributi
+[18:40:13]:: fine creazione attributi
+[18:40:13]:: inizio creazione prodotti
+[18:40:59]:: inizio lettura CSV
+[18:41:00]:: fine lettura CSV
+[18:41:00]:: inizio creazione categorie
+[18:41:00]:: fine creazione categorie
+[18:41:00]:: inizio creazione produttori
+[18:41:00]:: fine creazione produttori
+[18:41:00]:: inizio creazione attributi
+[18:41:00]:: fine creazione attributi
+[18:41:00]:: inizio creazione prodotti
+[18:41:03]:: inizio lettura CSV
+[18:41:03]:: fine lettura CSV
+[18:41:03]:: inizio creazione categorie
+[18:41:04]:: fine creazione categorie
+[18:41:04]:: inizio creazione produttori
+[18:41:04]:: fine creazione produttori
+[18:41:04]:: inizio creazione attributi
+[18:41:04]:: fine creazione attributi
+[18:41:04]:: inizio creazione prodotti
+[18:41:06]:: inizio lettura CSV
+[18:41:06]:: fine lettura CSV
+[18:41:06]:: inizio creazione categorie
+[18:41:06]:: fine creazione categorie
+[18:41:06]:: inizio creazione produttori
+[18:41:06]:: fine creazione produttori
+[18:41:06]:: inizio creazione attributi
+[18:41:06]:: fine creazione attributi
+[18:41:06]:: inizio creazione prodotti
+[18:41:19]:: inizio lettura CSV
+[18:41:19]:: fine lettura CSV
+[18:41:19]:: inizio creazione categorie
+[18:41:20]:: fine creazione categorie
+[18:41:20]:: inizio creazione produttori
+[18:41:20]:: fine creazione produttori
+[18:41:20]:: inizio creazione attributi
+[18:41:20]:: fine creazione attributi
+[18:41:20]:: inizio creazione prodotti
+[18:41:21]:: inizio lettura CSV
+[18:41:21]:: fine lettura CSV
+[18:41:21]:: inizio creazione categorie
+[18:41:22]:: fine creazione categorie
+[18:41:22]:: inizio creazione produttori
+[18:41:22]:: fine creazione produttori
+[18:41:22]:: inizio creazione attributi
+[18:41:22]:: fine creazione attributi
+[18:41:22]:: inizio creazione prodotti
+[18:41:23]:: inizio lettura CSV
+[18:41:23]:: fine lettura CSV
+[18:41:23]:: inizio creazione categorie
+[18:41:23]:: fine creazione categorie
+[18:41:23]:: inizio creazione produttori
+[18:41:23]:: fine creazione produttori
+[18:41:23]:: inizio creazione attributi
+[18:41:23]:: fine creazione attributi
+[18:41:23]:: inizio creazione prodotti
+[18:41:56]:: inizio lettura CSV
+[18:41:56]:: fine lettura CSV
+[18:41:56]:: inizio creazione categorie
+[18:41:56]:: fine creazione categorie
+[18:41:56]:: inizio creazione produttori
+[18:41:56]:: fine creazione produttori
+[18:41:56]:: inizio creazione attributi
+[18:41:57]:: fine creazione attributi
+[18:41:57]:: inizio creazione prodotti
+[18:41:59]:: inizio lettura CSV
+[18:41:59]:: fine lettura CSV
+[18:41:59]:: inizio creazione categorie
+[18:41:59]:: fine creazione categorie
+[18:41:59]:: inizio creazione produttori
+[18:41:59]:: fine creazione produttori
+[18:41:59]:: inizio creazione attributi
+[18:41:59]:: fine creazione attributi
+[18:42:00]:: inizio creazione prodotti
+[18:42:03]:: inizio lettura CSV
+[18:42:03]:: fine lettura CSV
+[18:42:03]:: inizio creazione categorie
+[18:42:03]:: fine creazione categorie
+[18:42:03]:: inizio creazione produttori
+[18:42:03]:: fine creazione produttori
+[18:42:03]:: inizio creazione attributi
+[18:42:03]:: fine creazione attributi
+[18:42:03]:: inizio creazione prodotti
+[18:42:41]:: inizio lettura CSV
+[18:42:41]:: fine lettura CSV
+[18:42:41]:: inizio creazione categorie
+[18:42:42]:: fine creazione categorie
+[18:42:42]:: inizio creazione produttori
+[18:42:42]:: fine creazione produttori
+[18:42:42]:: inizio creazione attributi
+[18:42:42]:: fine creazione attributi
+[18:42:42]:: inizio creazione prodotti
+[18:44:33]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 18:42:41                                          |
+|END                                               | 18:44:33                                          |
+|DURATION                                          | 1.87 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1137                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:38:08]:: inizio lettura CSV
+[19:38:08]:: fine lettura CSV
+[19:38:08]:: inizio creazione categorie
+[19:38:10]:: fine creazione categorie
+[19:38:10]:: inizio creazione produttori
+[19:38:10]:: fine creazione produttori
+[19:38:10]:: inizio creazione attributi
+[19:38:10]:: fine creazione attributi
+[19:38:10]:: inizio creazione prodotti
+[19:47:47]:: inizio lettura CSV
+[19:47:48]:: fine lettura CSV
+[19:47:48]:: inizio creazione categorie
+[19:47:49]:: fine creazione categorie
+[19:47:49]:: inizio creazione produttori
+[19:47:49]:: fine creazione produttori
+[19:47:49]:: inizio creazione attributi
+[19:47:49]:: fine creazione attributi
+[19:47:49]:: inizio creazione prodotti
+[19:50:18]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:47:47                                          |
+|END                                               | 19:50:18                                          |
+|DURATION                                          | 2.52 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:51:18]:: inizio lettura CSV
+[19:51:19]:: fine lettura CSV
+[19:51:19]:: inizio creazione categorie
+[19:51:19]:: fine creazione categorie
+[19:51:19]:: inizio creazione produttori
+[19:51:19]:: fine creazione produttori
+[19:51:19]:: inizio creazione attributi
+[19:51:19]:: fine creazione attributi
+[19:51:19]:: inizio creazione prodotti
+[19:51:47]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:51:18                                          |
+|END                                               | 19:51:47                                          |
+|DURATION                                          | 0.48 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 11                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:51:53]:: inizio lettura CSV
+[19:51:53]:: fine lettura CSV
+[19:51:53]:: inizio creazione categorie
+[19:51:53]:: fine creazione categorie
+[19:51:53]:: inizio creazione produttori
+[19:51:53]:: fine creazione produttori
+[19:51:53]:: inizio creazione attributi
+[19:51:53]:: fine creazione attributi
+[19:51:53]:: inizio creazione prodotti
+[19:52:22]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:51:53                                          |
+|END                                               | 19:52:22                                          |
+|DURATION                                          | 0.48 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 11                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:53:01]:: inizio lettura CSV
+[19:53:01]:: fine lettura CSV
+[19:53:01]:: inizio creazione categorie
+[19:53:01]:: fine creazione categorie
+[19:53:01]:: inizio creazione produttori
+[19:53:01]:: fine creazione produttori
+[19:53:01]:: inizio creazione attributi
+[19:53:01]:: fine creazione attributi
+[19:53:01]:: inizio creazione prodotti
+[19:53:31]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:53:01                                          |
+|END                                               | 19:53:31                                          |
+|DURATION                                          | 0.5 minuti                                        |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 11                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:55:47]:: inizio lettura CSV
+[19:55:47]:: fine lettura CSV
+[19:55:47]:: inizio creazione categorie
+[19:55:48]:: fine creazione categorie
+[19:55:48]:: inizio creazione produttori
+[19:55:48]:: fine creazione produttori
+[19:55:48]:: inizio creazione attributi
+[19:55:48]:: fine creazione attributi
+[19:55:48]:: inizio creazione prodotti
+[19:58:05]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:55:47                                          |
+|END                                               | 19:58:05                                          |
+|DURATION                                          | 2.3 minuti                                        |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[20:13:52]:: inizio lettura CSV
+[20:13:52]:: fine lettura CSV
+[20:13:52]:: inizio creazione categorie
+[20:13:54]:: fine creazione categorie
+[20:13:54]:: inizio creazione produttori
+[20:13:54]:: fine creazione produttori
+[20:13:54]:: inizio creazione attributi
+[20:13:54]:: fine creazione attributi
+[20:13:54]:: inizio creazione prodotti
+[20:16:13]:: inizio lettura CSV
+[20:16:13]:: fine lettura CSV
+[20:16:13]:: inizio creazione categorie
+[20:16:14]:: fine creazione categorie
+[20:16:14]:: inizio creazione produttori
+[20:16:14]:: fine creazione produttori
+[20:16:14]:: inizio creazione attributi
+[20:16:14]:: fine creazione attributi
+[20:16:14]:: inizio creazione prodotti
+[20:17:49]:: inizio lettura CSV
+[20:17:49]:: fine lettura CSV
+[20:17:49]:: inizio creazione categorie
+[20:17:49]:: fine creazione categorie
+[20:17:49]:: inizio creazione produttori
+[20:17:49]:: fine creazione produttori
+[20:17:49]:: inizio creazione attributi
+[20:17:49]:: fine creazione attributi
+[20:17:49]:: inizio creazione prodotti
+[20:24:13]:: inizio lettura CSV
+[20:24:13]:: fine lettura CSV
+[20:24:13]:: inizio creazione categorie
+[20:24:13]:: fine creazione categorie
+[20:24:13]:: inizio creazione produttori
+[20:24:13]:: fine creazione produttori
+[20:24:13]:: inizio creazione attributi
+[20:24:13]:: fine creazione attributi
+[20:24:13]:: inizio creazione prodotti
+[20:24:25]:: inizio lettura CSV
+[20:24:26]:: fine lettura CSV
+[20:24:26]:: inizio creazione categorie
+[20:24:26]:: fine creazione categorie
+[20:24:26]:: inizio creazione produttori
+[20:24:26]:: fine creazione produttori
+[20:24:26]:: inizio creazione attributi
+[20:24:26]:: fine creazione attributi
+[20:24:26]:: inizio creazione prodotti
+[20:28:40]:: inizio lettura CSV
+[20:28:40]:: fine lettura CSV
+[20:28:40]:: inizio creazione categorie
+[20:28:41]:: fine creazione categorie
+[20:28:41]:: inizio creazione produttori
+[20:28:41]:: fine creazione produttori
+[20:28:41]:: inizio creazione attributi
+[20:28:41]:: fine creazione attributi
+[20:28:41]:: inizio creazione prodotti
+[20:30:48]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 20:28:40                                          |
+|END                                               | 20:30:48                                          |
+|DURATION                                          | 2.13 minuti                                       |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1139                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+

@@ -1,0 +1,2 @@
+msgid "description_order_paypal"
+msgstr "Pagamento di %s € relativo all'ordine %s su %s"

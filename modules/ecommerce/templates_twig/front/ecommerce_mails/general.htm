@@ -1,0 +1,23 @@
+{% extends 'layouts/mail.htm' %}
+{% block content %}
+
+<div class="table-responsive">	
+	<table width="700" class="table table-cart">
+		<tbody>
+			<tr>
+				<td>
+					<font face="Arial, Helvetica Neue, Helvetica, sans-serif" color="#111111" size="+2">
+						{{message_title|raw}}
+					</font>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br><br>
+<font face="Arial, Helvetica Neue, Helvetica, sans-serif" color="#111111">
+	{{message_text|raw}}
+</font>
+
+
+{% endblock %}

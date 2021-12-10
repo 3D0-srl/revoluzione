@@ -1,0 +1,29 @@
+[18-Mar-2020 18:34:55 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/modules/paypal/lib/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/modules/paypal/lib/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar on line 23
+[18-Mar-2020 18:37:15 UTC] PHP Warning:  copy(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in Command line code on line 1
+[18-Mar-2020 18:37:15 UTC] PHP Warning:  copy(https://getcomposer.org/installer): failed to open stream: no suitable wrapper could be found in Command line code on line 1
+[18-Mar-2020 18:37:48 UTC] PHP Warning:  copy(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in Command line code on line 1
+[18-Mar-2020 18:37:48 UTC] PHP Warning:  copy(https://getcomposer.org/installer): failed to open stream: no suitable wrapper could be found in Command line code on line 1
+[19-Mar-2020 17:51:56 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/modules/paypal/lib/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/modules/paypal/lib/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar on line 23
+[19-Mar-2020 17:52:08 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/modules/paypal/lib/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/modules/paypal/lib/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar on line 23
+[19-Mar-2020 17:52:23 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/modules/paypal/lib/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/modules/paypal/lib/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar on line 23
+[19-Mar-2020 19:16:20 UTC] PHP Fatal error:  Uncaught PharException: phar "/home2/outletbrand/public_html/modules/paypal/lib/composer.phar" SHA1 signature could not be verified: broken signature in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar:23
+Stack trace:
+#0 /home2/outletbrand/public_html/modules/paypal/lib/composer.phar(23): Phar::mapPhar('composer.phar')
+#1 {main}
+  thrown in /home2/outletbrand/public_html/modules/paypal/lib/composer.phar on line 23

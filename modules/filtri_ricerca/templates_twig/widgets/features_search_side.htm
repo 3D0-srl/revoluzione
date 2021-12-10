@@ -1,0 +1,118 @@
+<script>
+	var js_currency = "{{getHtmlCurrency()|escape('js')|raw}}";
+	var js_maxprice = "{{maxprice|escape('js')}}";
+	var js_price_min = "{{price_min|escape('js')}}";
+	var js_price_max = "{{price_max|escape('js')}}";
+	var js_step_price = "{{step_price|escape('js')}}";
+</script>
+
+<style>
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		border: 2px solid #414141;
+		background: #fff;
+		border-radius: 100%;
+		width: 20px;
+		height: 20px;
+		top: 50%;
+		margin-top: -10px;
+	}
+	.ui-widget.ui-widget-content {
+		height: 4px;
+		border-radius: 2px;
+		border: 0;
+		background: #ccc;
+	}
+	.ui-widget-header {
+		background: #414141;
+	}
+</style>
+
+<form method="GET" action="index.php" onchange="$(this).submit()" id="filtri_ricerca_form">
+
+{% for v in filtri %}
+	<div class="filtri_ricerca">
+		<div class="titcolsx">{{v.name}}</div>
+		
+		<ul class="cont_filtro">
+			{% if v.images is null %}
+				
+
+				{% for k1,v1 in v.values %}
+					{% if v.name == 'taglia' %}	
+						<li class="list_filtro_size">
+							<input type="checkbox" {% if v1.selected == 1 %}checked{% endif %} value="{{v1.value}}" name="formdata[filtri][{{v.type}}][]" id="{{v1.value}}" />
+							<label for="{{v1.value}}">{{v1.text}}</label>
+						</li>
+					{% else %}
+						<li>
+							<input type="checkbox" {% if v1.selected == 1 %}checked{% endif %} value="{{v1.value}}" name="formdata[filtri][{{v.type}}][]" id="{{v1.value}}" />
+							<label for="{{v1.value}}">{{v1.text}}</label>
+						</li>
+					{% endif %}
+				{% endfor %}
+				
+			{% else %}
+				{% for k1,v1 in v.values %}
+					<li class="list_filtro_img">	
+						<label  for="{{v.type}}_{{v1.value}}" style="background:url('/img/{{v1.img}}/{{v1.resize}}/img.png')" {% if v1.selected %}class="box_filtro_img box_filtro_img_checked"{% else %}class="box_filtro_img"{% endif %}>
+							<input type="checkbox" value="{{v1.value}}" style="display:none" name="formdata[filtri][{{v.type}}][]" id="{{v.type}}_{{v1.value}}" {% if v1.selected %}checked{% endif %}/>
+						</label>
+						<p {% if v1.selected %}class="box_filtro_img_checked"{% endif %}>{{v1.text}}</p>
+					</li>
+				{% endfor %}
+			{% endif %}
+		</ul>
+	</div>
+{% endfor %}
+
+<input type="hidden" name="action" value="{{action}}"/>
+{% if section %}
+<input type="hidden" name="section" value="{{section}}"/>
+{% endif %}
+
+<input type="hidden" name="ctrl" value="Catalogo"/>
+<input type="hidden" name="mod" value="catalogo"/>
+{% if tag %}
+<input type="hidden" name="tag" value="{{tag}}"/>
+{% endif %}
+
+<div class="clear"></div>
+<div class="filtri_ricerca">
+	<label class="titcolsx" for="amount">{{tr('Prezzo','filtri_ricerca')}}</label>
+	<span class="cont_filtro">
+		<div id="slider-range"></div>
+		<span class="price-range"><span id="price_min_html" class="left">{{getHtmlCurrency()|raw}} {{price_min}}</span> <span id="price_max_html" class="right">{{getHtmlCurrency()|raw}} {{price_max}}</span> </span>
+		<input type="hidden" name="formdata[price_min]" id="price_min" value="{{price_min}}">
+		<input type="hidden" name="formdata[price_max]" id="price_max" value="{{price_max}}">
+	</span>
+</div>
+</form>
+
+ <script>
+  $( function() {
+	 
+	
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: parseFloat(js_maxprice),
+	  step: parseFloat(js_step_price),
+      values: [ parseFloat(js_price_min), parseFloat(js_price_max) ],
+      slide: function( event, ui ) {
+		$('#price_min').val(ui.values[ 0 ]);
+		$('#price_max').val(ui.values[ 1]);
+
+		$('#price_min_html').html(ui.values[ 0 ]);
+		$('#price_max_html').html(ui.values[ 1]);
+
+		
+        $( "#amount" ).val( ui.values[ 0 ] + " - "+ ui.values[ 1 ] );
+      },
+	  change:function(event, ui ){
+		$('#filtri_ricerca_form').submit();
+	  }
+    });
+
+  });
+  
+</script>

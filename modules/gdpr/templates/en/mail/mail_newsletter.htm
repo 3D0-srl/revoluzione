@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>{getconfig(#generale#,#nome_shop#)}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<base href="http://{getconfig(#generale#,#baseurl#)}" />
+
+<style>
+body {
+	font-family: Helvetica,Arial,sans-serif;
+	background: #E0E0E0;
+}
+
+h3 {
+    font-size: 18px;
+    color: #0f2d50;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: left;
+    float: left;
+    margin: 0 5px 10px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #0f2d50;
+    line-height: 36px;
+    font-weight: 700;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4d4d4d;
+    margin: 0;
+}
+
+li {
+	color: #4d4d4d;
+}
+</style>
+
+</head>
+
+    <body>
+
+        <div style="width:740px; margin: 0 auto;">
+
+            <div style="width:740px; height: 105px; float:left; background-color: #333333; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11); position: relative;">
+                <img src="" style="margin: 0px 0px 0px 15px; float: left; width: 179px;">
+            </div>
+
+            <div style="width:710px; min-height: 300px; float:left; background-color: #ffffff; padding: 15px;">
+
+                    <h2>Dear Customer,</h2>
+
+                    <p flexy:if="dati[subscribe]">we have received your registration request to newsletter {dati[list_name_view]}. <br>To confirm this request we invite you to click button 'confirm'</p>
+					
+					<p flexy:if="dati[unsubscribe]">we have received your rmeoving request to newsletter {dati[list_name_view]}. <br>To confirm this request we invite you to click button 'accept'</p>
+
+					
+
+					<form method="GET" action="{baseurl}/modules/mailman/controller.php">
+						<input type="submit"  height="30" style="margin-left: 40px;" value="conferma">
+						<input type="hidden" name="action" value="confirm">
+						<input type="hidden" name="serialized" value="{dati[serialized]}">
+					</form>
+
+                    
+            </div>
+
+            <div style="width:710px; float:left; background-color: #333333; padding: 15px;">
+              <p style="color: #808080; margin: 0;">© 2018 <strong>{getconfig(#azienda#,#nome_azienda#):h}</strong> - VAT number {getconfig(#azienda#,#partita_iva#):h}  - all rights reserved</p>
+              <!--<a href="http://www.3d0.it" target="_blank" title="Web Agency">
+                    <img src="https://www.livenet.it/images/3d0.png" style="float:right; clear: both; height: 35px;">
+                </a>-->
+            </div>
+
+        </div>
+
+    </body>
+</html>

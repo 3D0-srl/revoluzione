@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>1369</id>
+		<author>Ciro Napolitano</author>
+		<name>Sincronizzazione OutletBrand</name>
+		<permission>superadmin</permission>
+		<tag>sincro</tag>
+		<kind>ecommerce</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Abilita la sincronizzazione per il sito OutletBrand]]></description> 
+   </info>
+    <menu> 
+		<scope>admin</scope>
+		<header>
+			<parent>ecommerce</parent>
+		</header>
+	
+		<items> 
+			<locale> 
+				<name>	
+					<it>Magazzini</it>
+					<en>Magazzini</en>
+				</name>
+			</locale>
+			<tag>sincro_magazzino</tag>
+			<permission>ecommerce</permission> 
+			<priority>101</priority> 
+			<url>index.php?ctrl=Magazzino&amp;mod=sincro&amp;action=list</url>
+		</items>
+		
+	</menu>
+    <linkSetting>index.php?ctrl=Syncro&amp;mod=sincro</linkSetting>
+</module>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>13000</id>
+		<author>Amedeo Addati</author>
+		<name>Pagamento con Unicredit</name>
+		<permission>ecommerce</permission>
+		<tag>unicredit</tag> 
+		<kind>payment</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il sistema di pagamento di <b>Unicredit</b> attraverso le api]]></description>
+   </info>
+  <linkSetting>
+		/backend/index.php?ctrl=Conf&amp;mod=unicredit
+   </linkSetting>
+</module>

@@ -1,0 +1,15 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('manufacturer')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.description,'col-md-12')}}
+{{form.buildUploadImage(dataform.image,'col-md-12')}}
+{{form.buildCol(dataform.visibility,'col-md-12')}}
+
+
+
+
+{% endblock %}

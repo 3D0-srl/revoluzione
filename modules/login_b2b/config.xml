@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>162</id>
+		<author>Ciro Napolitano</author>
+		<name>Login B2B</name>
+		<permission>cms</permission>
+		<tag>login_b2b</tag> 
+		<kind>cms</kind>
+		<scope></scope> 
+		<version>2</version>
+		<description><![CDATA[Integra nell'ecommerce l'accesso b2b]]></description>
+   </info>
+   <linkSetting>
+		index.php?ctrl=LoginB2BAdmin&amp;mod=login_b2b
+   </linkSetting>
+</module>

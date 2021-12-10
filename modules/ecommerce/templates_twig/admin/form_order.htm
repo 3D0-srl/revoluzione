@@ -1,0 +1,951 @@
+{% extends "layouts/base.htm" %}
+
+{% block head %}
+{{parent()}}
+{{include('partials/javascript_form.htm')}}
+<style>
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 12px;
+    line-height: 1.428571429;
+    font-size: 12px;
+}
+
+.btn {
+	height: auto;
+	line-height: 1.4;
+	padding: 2px 10px !important;
+    font-size: 13px;
+	border-radius: 4px;
+}
+
+.form-control {
+	border-radius: 4px;
+}
+
+.panel-default>.panel-heading {
+    padding: 15px 0;
+}
+
+.col100 {
+	width: 100%;
+}
+
+/*.btn-principale, .btn-secondario, .btn-danger, .btn-primary {
+	padding: 0 24px !important;
+	height: 40px;
+	line-height: 35px;
+    font-size: 16px;
+}*/
+
+.table > thead {
+    border: 1px solid #CECDD7;
+}
+
+tbody {
+	border: 1px solid #EBECF0;
+}
+
+.table > tbody > tr.tot > td {
+	border-top: 0;
+	font-weight: 700;
+	font-size: 16px;
+	background: #EBECF0;
+	padding: 6px 12px;
+}
+
+.table > tbody > tr.tot.first {
+	padding-top: 12px;
+}
+
+.table > tbody > tr.tot.last > td {
+	padding-bottom: 12px;
+}
+</style>
+<script>
+		var js_status_color={{status_color|json_encode|raw}};
+		var js_status_name={{status_name|json_encode|raw}};
+		
+</script>
+{% endblock %}
+
+
+{% block page_title %}<img class="m-r-20" src="../img/various/invoice.png" alt="invoice"> {{tr('order')|title}} {{cart.number}} {% endblock %} 
+
+
+{% block content_container %}
+{% import "macro/form.htm" as form %}
+<div class="row">
+                <div class="col-md-12">
+                    <div class="tabcordion">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="{{tabActive(tabActive,'order_resume')}}"><a href="#order_resume" data-toggle="tab">Anteprima</a></li>
+                            <li  class="{{tabActive(tabActive,'order_details')}}"><a href="#order_details" data-toggle="tab">Dettagli Ordine</a></li>
+                            <li  class="{{tabActive(tabActive,'customer_details')}}"><a href="#customer_details" data-toggle="tab">Dettagli Cliente</a></li>
+							{% if cart.user %}
+                            <li  class="{{tabActive(tabActive,'order_history')}}"><a href="#order_history" data-toggle="tab">Ordini conclusi 
+                                <span class="m-l-10 badge badge-primary">{{count_other}}</span></a>
+                            </li>
+							{% endif %}
+							<li class="{{tabActive(tabActive,'actions')}}"><a href="#actions" data-toggle="tab">Azioni</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade {{tabActive(tabActive,'order_resume')}}" id="order_resume">
+                                <div class="row p-20">
+                                    <div class="col-md-6">
+                                        <h4 class="m-t-0 m-b-20">Informazioni Globali</h4>
+                                       
+											<div class="row form-group">
+                                                <div class="col-sm-3">ID:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{cart.id}}</strong>
+                                                </div>
+											</div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Numero ordine:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{cart.number}}</strong>
+                                                </div>
+											</div>
+                                            <div class="row form-group">
+                                            
+                                                <div class="col-sm-3">Nome cliente
+                                                </div>
+                                                <div class="col-sm-7">
+													{% if cart.user %}
+                                                    <strong ><a  href="index.php?ctrl=UserAdmin&action=edit&id={{cart.user}}" target="_blank" data-rel="tooltip" title="Modifica cliente">{{cart.name}} {{cart.surname}}</a></strong>
+													{% else %}
+													<strong >{{cart.name}} {{cart.surname}}</strong>
+													{% endif %}
+                                                </div>
+											</div>
+                                            <div class="row form-group">
+                                            
+                                                <div class="col-sm-3">Data creazione:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{cart.creationDate | date("m/d/Y H:i")}}</strong>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Data pagamento:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong id="datePayment_cart">{{cart.paymentDate | date("m/d/Y H:i")}}</strong>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Totale Articoli Tasse escluse:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalWithoutVATFormatted()}}</strong>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Tasse <!--({{cart.vatCode}}%)-->:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getVATFormatted()}}</strong>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Numero Articoli:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{cart.getNumberProduct()}}</strong>
+                                                </div>
+                                            </div>
+                                            
+											{% if cart.virtual_cart == false %}
+											<div class="row form-group">
+                                                <div class="col-sm-3">Data spedizione:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong id="dateShipping_cart">{{cart.dateShipping}}</strong>
+                                                </div>
+											</div>
+											<div class="row form-group">
+                                                <div class="col-sm-3">Destinazione:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong>{{cart.shippingCity}} ({{cart.shippingCountry}})</strong>
+                                                </div>
+											</div>
+											{% endif %}
+                                            <div class="row form-group">
+                                                <div class="col-sm-3">Stato Attuale:
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <strong class="status_cart_text">
+													
+														{{cart.status_display|raw}}
+													</strong>
+                                                </div>
+											</div>
+                                            
+                                       
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4 class="m-t-0 m-b-20">Altre informazioni</h4>
+                                        
+											{% if cart.virtual_cart == false %}
+                                            <div class="row form-group" >
+                                                <div class="col-sm-4">
+                                                    Metodo spedizione:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{cart.getNameShippingMethod()}}</strong>
+                                                </div>
+                                            </div>
+											{% endif %}
+                                            <div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Metodo Pagamento:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{cart.getNamePaymentMethod()}}</strong>
+                                                </div>
+                                            </div>
+                                              
+											{% if cart.virtual_cart == false %}
+                                            <div class="row form-group" >
+                                                <div class="col-sm-4">
+                                                    Codice di Tracking:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{cart.trackingCode}}</strong>
+                                                </div>
+                                            </div>
+											{% endif %}
+                                            <div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Cliente:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{% if count_other > 0 %}{{count_other}}{% else %}0{% endif %} ordini effettuati con successo</strong>
+                                                </div>
+                                            </div>
+                                            <!--<div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Richiesta fattura:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{if:cart.requestInvoice}SI{else:}NO{end:}</strong>
+                                                </div>
+                                            </div>-->
+											{% if cart.recurrentPayment == true %}
+											<div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Servizio in abbonamento: 
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{description_recurrent_payment}}</strong>
+                                                </div>
+                                            </div>
+											{% if next_payment_recurrent_payment == true %}
+											<div class="row form-group" flexy:if="next_payment_recurrent_payment">
+                                                <div class="col-sm-4">
+                                                    Prossimo pagamento: 
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{next_payment_recurrent_payment}}</strong>
+                                                </div>
+                                            </div>
+											{% endif %}
+											{% endif %}
+											{% if enable_invoice %}
+											 <div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Codice fattura:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{cart.invoice_code}}</strong>
+                                                </div>
+                                            </div>
+											{% endif %}
+											<div class="row form-group">
+                                                <div class="col-sm-4">
+                                                    Note:
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <strong>{{cart.note}}</strong>
+                                                </div>
+                                            </div>
+											
+
+											 <div class="row form-group m-t-60">
+                                                <div class="col-sm-8 col-sm-offset-4 m-b-10">
+                                                    <a class="btn btn-block btn-info btn-sm" target="_blank" href="{{script_url}}&action=print_order&id={{cart.id}}"> <i class="fa fa-print"></i> Stampa ordine</a>
+													{% if enable_invoice %}
+													{% if cart.hasInvoice== true %}
+														<a class="btn btn-block btn-warning btn-sm" href="{{script_url}}&action=download_invoice&id={{cart.id}}" target="_blank"> <i class="fa fa-download"></i> Download Fattura</a>
+													{% else %}
+														 <a class="btn btn-block btn-primary btn-sm" target="_blank" href="{{script_url}}&action=create_invoice&id={{cart.id}}">Genera Fattura</a>
+													{% endif %}
+													{% endif %}
+													<a class="btn btn-block btn-danger btn-sm" target="_blank" href="{{url_confirm_delete}}&id={{cart.id}}"> <i class="fa fa-trash-o"></i> Elimina ordine</a>
+                                                </div>
+                                            </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade {{tabActive(tabActive,'order_details')}}" id="order_details">
+                                <div class="row p-20">
+                                    <div class="col-md-12">
+                                        <table id="products-table" class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="min-width:70px"><strong>Cod. Articolo</strong>
+                                                    <th><strong>Prodotto</strong>
+                                                    </th>
+                                                    <th><strong>Categoria</strong>
+                                                    </th>
+                                                    <th><strong>Prezzo</strong>
+                                                    </th>
+                                                    <th><strong>Quantità</strong>
+                                                    </th>
+                                                    <th><strong>Totale senza Tasse</strong>
+                                                    </th>
+                                                    <th><strong>Tasse</strong>
+                                                    </th>
+                                                    <th><strong>Totale</strong>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+												{% for v in ordini %}
+                                                <tr>
+                                                    <td>
+														{% if v.parent %}
+														<a  target="_blank" href="index.php?ctrl=ProductAdmin&action=edit&id={{v.parent}}" data-rel="tooltip" title="Modifica Prodotto">{{v.sku}}</a>
+														{% else %}
+														{{v.sku}}
+														{% endif %}
+													</td>
+                                                    <td>{{v.productname|raw}}</td>
+                                                    <td>{{v.category}}</td>
+                                                    <td>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(v.price)}}</td>
+                                                    <td>{{v.quantity}}</td>
+                                                    <td>{{getHtmlCurrency(cart.currency)|raw}} {{v.getTotalWithoutVATFormatted(cart.vatCode)}}</td>
+                                                    <td>{{getHtmlCurrency(cart.currency)|raw}} {{v.getVATFormatted(cart.vatCode)}}</td>
+                                                    <td>{{getHtmlCurrency(cart.currency)|raw}} {{v.getTotalPriceFormatted()}} </td>
+                                                </tr>
+												{% endfor %}
+                                                <tr class="tot first">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>Totale senza IVA:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalWithoutVATFormatted()}}</td>
+												</tr>
+												<tr class="tot">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>IVA:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getVATFormatted()}}</td>
+												</tr>
+												{% if cart.virtual_cart == false %}
+												<tr class="tot">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>Spedizione:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.shippingPrice)}}</td>
+												</tr>
+												{% endif %}
+												<tr class="tot">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>Pagamento:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.paymentPrice)}}</td>
+												</tr>
+												{% if cart.discount %}
+												<tr class="tot">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>Sconto:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.discount)}}</td>
+												</tr>
+												{% endif %}
+												<tr class="tot last">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>Totale Pagato:</td>
+													<td>{{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalFinalFormatted()}}</td>
+												</tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+								<!--
+                                <div class="row p-20">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6 col-md-offset-6">
+                                            <div class="well">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <i class="glyph-icon flaticon-shopping80 f-80"></i>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Totale senza IVA:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalWithoutVATFormatted()}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 IVA:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                               {{getHtmlCurrency(cart.currency)|raw}} {{cart.getVATFormatted()}}
+                                                            </div>
+                                                        </div>
+														{% if cart.virtual_cart == false %}
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Spedizione:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.shippingPrice)}}
+                                                            </div>
+                                                        </div>
+														{% endif %}
+														<div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Pagamento:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.paymentPrice)}}
+                                                            </div>
+                                                        </div>
+														{% if cart.discount %}
+														<div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Sconto:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)|raw}} {{formattanumero(cart.discount)}}
+                                                            </div>
+                                                        </div>
+														{% endif %}
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Totale Pagato:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)|raw}} {{cart.getTotalFinalFormatted()}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								-->
+                            </div>
+                            <div class="tab-pane fade {{tabActive(tabActive,'customer_details')}}" id="customer_details">
+                                <div class="row p-20">
+                                    <div class="col-md-12">
+                                        
+                                            <div class="col-md-6">
+                                                <h4 class="m-t-0 m-b-20">Informazioni Cliente</h4>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Nome:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        {% if cart.user %}
+														<strong ><a  href="index.php?ctrl=UserAdmin&action=edit&id={{cart.user}}" target="_blank" data-rel="tooltip" title="Modifica cliente">{{cart.name}} {{cart.surname}}</a></strong>
+														{% else %}
+														<strong >{{cart.name}} {{cart.surname}}</strong>
+														{% endif %}
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">Registrato:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{% if cart.user %}SI{% else %}NO{% endif %}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Indirizzo:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.address}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">CAP:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.postalCode}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Città:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.city}}</strong>
+                                                    </div>
+                                                </div>
+												 <div class="row form-group">
+                                                    <div class="col-sm-4">Provincia:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.province}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Nazione:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.country}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Telefono Fisso:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.phone}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">Cellulare:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.cellular}}</strong>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Email:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.email}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">Codice Fiscale:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.fiscalCode|upper}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">Partita IVA:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.vatNumber}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">PEC:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.pec}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">Codice univoco:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.codice_univoco}}</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+											{% if cart.virtual_cart == false %}
+                                            <div class="col-md-6" >
+                                                <h4 class="m-t-0 m-b-20">Informazione spedizione</h3>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Nome:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingName}} {{cart.shippingSurname}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Indirizzo:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingAddress}}</strong>
+                                                    </div>
+                                                </div>
+												<div class="row form-group">
+                                                    <div class="col-sm-4">CAP:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingPostalCode}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Città:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingCity}}</strong>
+                                                    </div>
+                                                </div>
+												 <div class="row form-group">
+                                                    <div class="col-sm-4">Provincia:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingProvince}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Nazione:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingCountry}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Telefono:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingPhone}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Cellulare:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingCellular}}</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-sm-4">Email:
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <strong>{{cart.shippingEmail}}</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+											{% endif %}
+                                        
+                                    </div>
+                                </div>
+                            </div>
+							{% if cart.user %}
+                            <div class="tab-pane fade {{tabActive(tabActive,'order_history')}}" id="order_history">
+                                <div class="row p-20">
+                                    <div class="col-md-12">
+                                        <table class="table table-tools table-hover">
+                                            <thead>
+                                                <tr>
+													<th style="min-width:70px"><strong>ID</strong>
+													<th><strong>Numero</strong>
+													</th>
+													<th><strong>Cliente</strong>
+													</th>
+													 <th><strong>Codice pagamento</strong>
+													</th>
+													 <th><strong>Data pagamento</strong>
+													</th>
+													<th><strong>Metodo spedizione</strong>
+													</th>
+													<th><strong>Data spedizione</strong>
+													 <th class="text-center"><strong>Numero articoli</strong>
+													</th>
+													</th>
+														 <th><strong>Totale</strong>
+													</th>
+													<th class="text-center"><strong>Stato</strong>
+													</th>
+													<th class="text-center"><strong>Azione</strong>
+													</th>
+												</tr>
+                                            </thead>
+                                            <tbody>
+												{% for v in other %}
+													 
+													
+													 <tr class="{% if v.id == cart.id %}success{% endif %}">
+													  <td>{{v.id}}</td>
+														<td>{{v.number}}</td>
+														<td>{{v.name}} {{v.surname}}</td>
+														<td>{{v.getNamePaymentMethod()}}</td>
+														<td>{{v.paymentDate | date("m/d/Y H:i")}}</td>
+														<td>{% if v.virtual_cart == false %}{{v.getNameShippingMethod()}}{% endif %}</td>
+														<td>{% if v.virtual_cart == false %}{% if v.dateShipping %}{{v.shippingDate}}{% endif %}{% endif %}</td>
+														
+														 <td  class="text-center">{{v.getNumberProduct()}}</td>
+														 <td>{{getHtmlCurrency(v.currency)|raw}} {{v.getTotalFinalFormatted()}}</td>
+														<td class="text-center">
+															{{v.status_display | raw}}
+														</td>
+														<td class="text-center"> 
+															<a href="index.php?ctrl=OrderAdmin&action=edit&id={{v.id}}" target="_blank" class="view btn btn-sm btn-default"><i class="fa fa-search"></i> {{tr('view')}}</a>
+														</td>
+													</tr>
+												 {% endfor %}
+                                                 
+													
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row p-20">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6 col-md-offset-6">
+                                            <div class="well">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <i class="glyph-icon flaticon-shopping102 f-80"></i>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Totale Ordini:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)| raw}} {{formattanumero(total_other_witout_VAT)}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 IVA:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)| raw}} {{formattanumero(total_other_VAT)}}
+                                                            </div>
+                                                        </div>
+														 <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Spedizione/Pagamento:
+                                                            </div>
+                                                            <div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)| raw}} {{formattanumero(total_shipping_other)}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-right m-b-10">
+                                                            <div class="col-md-8">
+                                                                 Totale Pagato:
+                                                            </div>
+                                                            <!--<div class="col-md-3 w-600">
+                                                                 {{getHtmlCurrency(cart.currency)| raw}} {sommaformattata(total_other,total_shipping_other)}
+                                                            </div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							{% endif %}
+
+							<div class="tab-pane fade {{tabActive(tabActive,'actions')}}" id="actions">
+                                <div class="row p-20">
+									<div class="col-md-12">
+										<div class="panel panel-default">
+												<div class="panel-heading">
+													<h3 class="panel-title">Tracciamento ordine </h3>
+												</div>
+												<div class="panel-body">
+													
+													<div class="row">
+														<form  id="tracking_code_form"  class="form-horizontal" >
+														<div class="form-group col-md-12" id="div_trackingCode">
+															<label class="col-100 control-label">Inserisci il codice di tracking: </label>
+															<div class="col-100">
+																<input name="formdata[trackingCode]" value="{{cart.trackingCode}}" class="form-control" placeholder="inserisci il codice di tracciamento"><ul id="parsley-id-6359" class="parsley-errors-list"></ul>
+															</div>
+														</div>
+														<div class="col-sm-9 col-sm-offset-3 message_status_cahnge">
+															<div class="pull-right">
+																<input type="hidden" name="formdata[cartId]" value="{{cart.id}}">
+																<button type="button" class="btn btn-primary m-b-10" onclick="updateTrackingCode(); return false;">Aggiorna</button>
+															</div>
+														</div>
+														</form>
+													
+													</div>
+												</div>
+											</div>
+
+									</div>
+                                    <div class="col-md-6">
+											
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h3 class="panel-title">Invia una <strong>mail</strong> al cliente</h3>
+												</div>
+												<div class="panel-body">
+													
+													<div class="row">
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<p>Compila tutti i campi sottostanti</p>
+															<br>
+															<form id="form_email_buyer" class="form-horizontal">
+															<div class="row m-b-10">
+																<label class="col-sm-3 control-label">Oggetto <span class="asterisk">*</span>
+																</label>
+																<div class="col-sm-9">
+																	<input name="formdata1[subject]" class="form-control" placeholder="Subject">
+																</div>
+															</div>
+															<div class="row m-b-10">
+																<label class="col-sm-3 control-label">Email <span class="asterisk">*</span>
+																</label>
+																<div class="col-sm-9">
+																	<input name="formdata1[email]" class="form-control" value="{{cart.email}}">
+																</div>
+															</div>
+															<div class="row m-b-10">
+																<label class="col-sm-3 control-label">Inserisci il messaggio: </label>
+																<div class="col-sm-9">
+																	<textarea name="formdata1[text]" class="form-control" rows="5"  placeholder="Scrivi una nota"></textarea>
+																</div>
+															</div>
+															<div class="col-sm-9 col-sm-offset-3">
+																<div class="pull-right">
+																	<input name="action1" type="hidden" value="send_mail_cart">
+																	<input name="formdata1[cartId]" type="hidden" value="{{cart.id}}">
+																	<button type="button" onclick="send_mail_buyer(); return false;" class="btn btn-primary m-b-10">Invia</button>
+																</div>
+															</div>
+															</form>
+															
+														</div>
+													</div>
+													
+												</div>
+											</div>
+                
+										
+									
+									</div>
+									
+									<div class="col-md-6">
+										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">Cambia lo stato dell'<strong>ordine</strong></h3>
+												<h5>Stato attuale dell'ordine 
+													<span class="status_cart_text">
+													<span style="color: {{status_color[cart.status]}}">{{status_name[cart.status]}}</span>
+												
+													</span>
+												</h5>
+											</div>
+											<div class="panel-body">
+												<form  id="change_status_order"  class="form-horizontal" >
+													<div class="form-group col-md-12" >
+														<label>Seleziona lo stato dell'ordine</label>
+														
+														{{form.build(dataform_change_status.status,"onchange=change_status($(this).val()); return false;")}}
+														<!--<select name="formdata[status]" onchange="change_status($(this).val()); return false;" class="form-control"></select>-->
+														
+													</div>
+													
+													<div class="form-group col-md-12 message_status_cahnge">
+														<label class="col-100 control-label">Inserisci una nota relativa al cambio di stato: </label>
+														<div class="col-100">
+															<textarea name="formdata[note]" class="form-control" rows="5"  placeholder="Scrivi una nota"></textarea><ul id="parsley-id-6359" class="parsley-errors-list"></ul>
+														</div>
+													</div>
+													
+													<div class="col-sm-9 col-sm-offset-3 message_status_cahnge">
+														<div class="pull-right">
+															<input type="hidden" name="formdata[cartId]" value="{{cart.id}}">
+															<input type="hidden" name="action" value="changeStatusOrder">
+															<button type="button" class="btn btn-primary m-b-10" onclick="changeStatusOrder(); return false;">Cambia stato</button>
+														</div>
+													</div>
+													<div class="col-sm-12" id="send_mail_message" style="display:none">
+														<b>N.B. Questo stato prevede l'invio di un'email di notifica al cliente.</b><br>
+														Puoi gestire l'invio di email al cambio di stato <a target="_blank" href="index.php?ctrl=EcommerceTabsAdmin&tabIndex=1">qui</a>
+													</div>
+												</form>
+											</div>
+										</div>
+                
+
+									</div>
+									<!--<div class="col-md-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">Altro:</h3>
+												<div class="panel-body">-->
+													<!--<button class="btn btn-info" onclick="open_cart({cart.id}); return false;">Riapri carrello</button>-->
+													<!--{% if cart.recurrentPayment == false %}
+													<button flexy:if="!mod_user_admin_active(cart.id)" class="btn btn-principale" id="manage_order_user" onclick="modify_cart_user({cart.id}); return false;">Abilita modalità utente</button>
+													<button flexy:if="mod_user_admin_active(cart.id)" class="btn btn-secondario" id="manage_order_user" onclick="modify_cart_user({cart.id}); return false;"><i class="fa fa-check"></i>Disabilita modalità utente</button>
+													{% endif %}-->
+													<!--<a class="btn btn-primary" href="{{script_url}}&action=print&id={{cart.id}}" target="_blank"><i class="fa fa-print"></i> {{tr('print')}}</a>
+													<a class="btn btn-danger"  href="{{url_confirm_delete}}&id={{cart.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a>
+												</div>
+											</div>
+										</div>
+									</div>-->
+									<div class="col-md-12" id="history">	
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">Storia dell'ordine</h3>
+											</div>
+											<div class="panel-body">
+												<table class="table">
+													<thead>
+														<tr>
+															<th style="min-width:70px"><strong>Data</strong></th>
+															<th><strong>Stato</strong></th>
+															<th><strong>Note</strong></th>
+															<th><strong>Email inviata</strong></th>
+														</tr>
+													</thead>
+													<tbody>
+														{% for v in history %}
+														<tr>
+															<td>{{v[date]| date("m/d/Y H:i")}}</td>
+															<td><span class="label" style="background:{{status_color[v.status]}}">{{status_name[v.status]}}</span></td>
+															<td>{{v.note}}</td>
+															<td>{% if v.send %}SI{% else %}NO{% endif %}</td>
+														</tr>
+														{% endfor %}
+													   
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+

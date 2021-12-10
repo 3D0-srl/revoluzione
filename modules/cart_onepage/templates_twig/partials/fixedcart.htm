@@ -1,0 +1,138 @@
+<div class="fixedcart" id="carrello_fisso" step="{step_cart}">
+	{% if step < 6 %}
+		{% if show_box_free_shipping %}
+			<div class="box-spedizione-gratuita">
+				<img src="/themes/jewels/images/ico-spedizione-gratuita.png">
+				{{message_free_shipping|raw}}
+			</div>
+		{% endif %}
+	{% else %}
+		<div class="box-spedizione-gratuita">
+			<img src="/themes/jewels/images/ico-spedizione-gratuita.png">
+			{{tr("Ti ringraziamo per aver effettuato l'ordine!",'cart_onepage')}}
+		</div>
+	{% endif %}
+	<div class="space15"></div>
+	<div class="box-costi">
+		<div class="col50">{{tr('Subtotale','cart_onepage')}}</div>
+
+		<div class="col50 text-right bb">
+			<input type="hidden" id="cart_total_products_value" value="{{cart_total_products}}">
+			{% if show_taxes %}
+				{{currencyLabel|raw}} <span id="cart_total_products_without_tax">{{formattanumero(cart_total_products_without_tax)}}</span>
+			{% else %}
+				{{currencyLabel|raw}} <span id="cart_total_products">{{formattanumero(cart_total_products)}}</span>
+			{% endif %}
+		</div>
+
+
+		{% if show_taxes %}
+			<div class="space10"></div>
+			<div class="col50">Tasse</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="cart_taxes">{{formattanumero(cart_total_tax)}}</span></td>
+			</div>
+	
+		{% endif %}
+		{% if step > 3 %}
+			
+			{% if class_nosped %}
+				<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+			{% else %}
+				<div class="space10"></div>
+				<div class="col50">{{tr('Costi spedizione','cart_onepage')}}</div>
+				<div class="col50 text-right bb">
+					{{currencyLabel|raw}} <span id="priceShippingFormatted">{{formattanumero(cart_shipping_price)}}</span></td>
+					<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+				</div>
+			{% endif %}
+
+		{% endif %}
+
+		{% if step >= 5 %}
+			<div class="space10"></div>
+			<div class="col50">{{tr('Costi pagamento','cart_onepage')}}</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="pricePaymentFormatted">0,00</span></td>
+				<input type="hidden" value="0" id="pricePayment">
+			</div>
+		{% endif %}
+
+		{% if cart_discount %}
+			<div class="space10"></div>
+			<div class="col50">{{tr('Sconto','cart_onepage')}}</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} - {{formattanumero(cart_discount)}}</td>
+				<input type="hidden" value="{{cart_discount}}" id="cart_discount">
+			</div>
+			
+		{% endif %}
+		
+		<span id="menu_cart_left"></span>
+	</div>
+	<div class="dividerfixed"></div>
+	<span class="box-costi totale">
+		<div class="col50">{{tr('Totale','cart_onepage')}}</div>
+		<div class="col50 text-right bb">
+			{{currencyLabel|raw}} <span id="cart_total">{{formattanumero(cart_total)}}</span>
+		</div>
+	</span>
+	<div class="space10"></div>
+	{% if (ordini|length > 0 ) and (step == 1) %}
+		
+		{% if reload_cart_after_change_qnt == false %}
+		<div class="update-quantity txtc" style="display:none">
+			<a href="index.php?mod=cart_onepage&ctrl=Cart&action=cart" class="cancel_new_address">{{tr('Annulla','cart_onepage')}}</a>	
+			<a onclick="confirm_cart_update(); return false;" class="btn-next">{{tr('Aggiorna quantità','cart_onepage')}}</a>
+		</div>
+		<div class="space10"></div>
+		{% endif %}
+		<span class="preview_cart_buttons">
+		<button type="button" class="btn-next" onclick="step{{step}}()">{{tr("Procedi con l'ordine",'cart_onepage')}}</button>
+
+		{{do_action('display_cart_buttons')}}
+		</span>
+		
+	{% endif %}
+	{% if step < 6 %}
+		{{do_action('display_cart_side')}}
+	{% else %}
+		<div class="txtc">
+			<a href="index.php" class="cancel_new_address">{{tr('Torna al sito','cart_onepage')}}</a>	
+			<a href="javascript:window.print()" class="btn-next">{{tr('Stampa ordine','cart_onepage')}}</a>
+		</div>
+	{% endif %}
+	{% if (step > 1) and (step < 6) %}
+		{% if show_preview_orders %}
+			<div class="div_riepilogo only_desk">
+				<div class="titcart relative">{{tr('Riepilogo ordine','cart_onepage')}}</div>
+				<div class="clear"></div>
+				<div class="cont-prod-cart">
+					{% for riga in ordini %}
+						<div class="dx-sprod">
+							<div class="col-prod-cart">
+								<img class="prod-cart" src="{{riga.img}}">
+								<div class="pallino_quantity">{{riga.quantity}}</div>
+							</div>
+							<div class="col-prod-cart">
+								<p>{{riga.productname|raw}}</p>
+							</div>
+							<div class="col-prod-cart">
+								<span class=""> {{currencyLabel|raw}} <label class="total_{{riga.getId()}}">{{riga.getTotalPriceFormatted()}}</label></span>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+	{% endif %}
+	{% if (step > 1) and (step < 6) %}
+		<a href="index.php?mod=cart_onepage&ctrl=Cart&action=cart" class="modifica-ordine only_desk">{{tr('Modifica ordine','cart_onepage')}}</a>
+	{% endif %}
+</div>
+
+<div class="overlay">
+	<div class="cart_loader">
+		<p id="message_loader">{{loading_message|raw}}</p>
+	</div>
+</div>

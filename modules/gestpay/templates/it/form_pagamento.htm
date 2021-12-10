@@ -1,0 +1,22 @@
+<html>
+<head>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			//document.getElementById("fpagam").submit(); 
+		});
+	</script>
+	
+</head>
+<body>
+
+<form
+    name="pagamento"
+    method="post"
+    id="fpagam"
+    action="{action_pagamento}">
+    <input name="a" type="hidden" value="{shopLogin}" />
+    <input name="b" type="hidden" value="{encString}" />
+    <input style="width:90px;height:70px" type="submit" name="Pay" Value="Pay Now!" />
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<table class="table table-bordered" id="{{m.name}}_profile_list">
+    <thead>
+        <th>Nome</th>
+        <th>Category</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody id="profili_table_{{m.name}}">
+        {% for k,item in profiles[m.name] %}
+        <tr>
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                {{item.category}}
+            </td>
+
+            <td>
+                <button onclick="profile_eidt({{item.id}});">configura</button>
+            </td>
+            
+            <td class="pull-right">
+                <button onclick="$(this).closest('tr').remove()"><i class="fa fa-trash-o"></i> elimina</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+
+        <td></td>
+        <td></td>
+       <td></td>
+       
+        <td class="pull-right"><button type="button" onclick="add_profilo('{{m.name}}')"><i class="fa fa-plus"></i>aggiungi</button></td>
+
+    </tfoot>
+</table>
+{% include "actions/profilo/form.htm" %}
+
+
+

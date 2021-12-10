@@ -1,0 +1,22 @@
+{% for k,v in list %}
+{%if show_slider == false %}
+<a href="{{v.link}}" target="_blank">
+{% endif %}
+<div class="instafeed_content instafeed_content_new" style="display:none">
+	<div class="instafeed_post instafeed_post_new" style="background-image:url('{{v.url_image}}');" ordine="{{v.ordine}}">
+		<div class="instafeed_overlay">
+			<div class="instafeed_text">
+				<img src="/img/new/ico_instafeed.png">
+				<div class="date">{{v.created_time}}</div>
+				{% if show_data %}
+				<div class="insta-likes">{{v.num_likes}} likes</div>
+				<div class="insta-comments">{{v.num_comments}} comments</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{%if show_slider == false %}
+</a>
+{% endif %}
+{% endfor %}

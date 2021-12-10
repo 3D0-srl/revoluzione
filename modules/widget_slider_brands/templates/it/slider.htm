@@ -1,0 +1,9 @@
+<div class="titl" flexy:if="titolo">{titolo}</div>
+<div class="widget-brands"  opzioni="{opzioni}" id_box="{id_box}">
+	{foreach:list_brands,brand}
+	<a href="{brand.getUrl()}">
+	<div><img src="{brand.getUrlImage(#original#,#0#)}"/></div>
+	</a>
+	{end:}
+	
+</div>

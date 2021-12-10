@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+		cont_valori_attributo="cont_valori_attributo"
+    >
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+						
+	                     <h3><strong>Configurazione Newsletter</h3>
+	
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<form role='form' action='controller.php' name='attributo' id='attributo' method='POST'>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+									<div class="form-group col-md-12" id="div_includedVAT">
+										<label>Email da cui vengono inviate la conferme di iscrizione e cancellazione da una lista:</label>
+										<div class="controls">
+													<input type="text" class="form-control" name="formdata[email]" >	
+										</div>
+									</div>
+
+									<div class="form-group form-inline col-md-6" id="div_includedVAT">
+										<label>Conferma iscrizione via mail :</label>
+										<div class="controls">
+													<input type="radio" class="form-control" name="formdata[confirm_subscribe]" id="confirm_subscribe_1" value="1"> SI				
+													<input type="radio" class="form-control" name="formdata[confirm_subscribe]" id="confirm_subscribe_0" value="0"> NO			
+										</div>
+									</div>
+									<div class="form-group form-inline col-md-6" id="div_includedVAT">
+										<label>Conferma cancellazione via mail:</label>
+										<div class="controls">
+													<input type="radio" class="form-control" name="formdata[confirm_unsubscribe]" id="confirm_unsubscribe_1" value="1"> SI				
+													<input type="radio" class="form-control" name="formdata[confirm_unsubscribe]" id="confirm_unsubscribe_0" value="0"> NO			
+										</div>
+									</div>
+									<div class="form-group form-inline col-md-6" id="div_automaticStock">
+										<label>Inserire opzione iscrizione alla newsletter nel form di registrazione utente? :</label>
+										<div class="controls">
+												<input type="radio" class="form-control" name="formdata[form_user]" id="form_user_1" value="1"> SI				
+												<input type="radio" class="form-control" name="formdata[form_user]" id="form_user_0" value="0"> NO			
+										</div>
+									</div>
+
+									<div class="form-group form-inline col-md-6" id="div_automaticStock">
+										<label>Opzione iscrizione da form registrazione utente? :</label>
+										<div class="controls">
+												<input type="radio" class="form-control" name="formdata[form_user_subscribe_type]" id="form_user_subscribe_type_1" value="1"> Newsletter principale				
+												<input type="radio" class="form-control" name="formdata[form_user_subscribe_type]" id="form_user_subscribe_type_2" value="2"> Tutte le newsletter online
+												<input type="radio" class="form-control" name="formdata[form_user_subscribe_type]" id="form_user_subscribe_type_3" value="3"> Consenti la scelta all'utente
+										</div>
+									</div>
+
+									
+								<input type='hidden' name='formID'>
+								<input type='hidden' name='action'>
+								
+
+									
+									
+							</div>
+					 </div>
+				</div>
+	      </div>
+		  <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+                    <button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+                </div>
+           </div>
+
+		  </form>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+
+</body>
+
+</html>

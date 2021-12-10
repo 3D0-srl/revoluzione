@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+	
+		<author>Ciro Napolitano</author>
+		<name>Paypal</name>
+		<permission>ecommerce</permission>
+		<tag>paypal</tag> 
+		<kind>payment</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il sistema di pagamento di <b>Paypal</b> attraverso le api]]></description>
+   </info>
+    <linkSetting>
+		index.php?ctrl=Conf&amp;mod=paypal 	
+   </linkSetting>
+    <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+</module>

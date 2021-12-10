@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+	<script src="js/script.js?v=10"></script>
+	<style>
+		.img_market{
+			margin-left: 5px;
+			width:50px;
+			float:left;
+		}
+	</style>
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+        		<!--- TITLE ---->
+				<div class="m-b-20 clearfix">
+				{output(#top_amazon.htm#)}
+				<!--- TITLE ---->
+
+				  
+				  <div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-amazon">
+							<div class="panel-heading">
+								PROFILI
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+										<p flexy:if="!profiles">Nessuno profilo impostato</p>
+										<table id="sezioni-table" class="table table-tools table-hover" flexy:if="profiles">
+											<thead>
+												<tr>
+													<th><strong>Nome</strong></th>
+													<th><strong>Store</strong></th>
+
+													<th><strong></strong></th>
+													
+													</th>
+													<th class="text-center">
+														<strong>Azioni</strong>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												{foreach:profiles,v}
+												
+												
+												<tr>
+													 <td>{v.name}</td>
+
+													  <td>
+													  
+													  {v.nome_store}
+													  
+													  </td>
+													  <td>
+													 
+															<a href="index.php?action=map&id={v.id}" class="btn btn-sm btn-amazon">Mappatura</a>
+													  
+													  
+													  </td>
+													
+													
+													<td class="text-center" style="width:150px;"> 
+														<div class="btn-group media-group">
+															  <a href="index.php?action=mod_profile&id={v.id}" class="btn btn-default btn-sm"><i class="fa fa-edit"></i> modifica</a>
+															  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+																	<span class="caret"></span>
+															  </button>
+															  <ul class="dropdown-menu media-menu text-left" role="menu">
+																<li><a href="#"  onclick="elimina_profilo({v.id});return false;"><i class="fa fa-trash-o"></i> elimina</a></li>
+															  </ul>
+														</div>
+
+														
+													</td>
+													
+													
+												</tr>
+												
+											   {end:}
+											</tbody>
+											
+										</table>
+
+										<div class="pull-right"> 
+												<a  href="index.php?action=new_profile" class="btn btn-sm btn-success btn-amazon m-t-10"><i class="fa fa-plus p-r-10"></i> Aggiungi Profilo</a> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                 </div>
+
+
+				  <!--<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-amazon">
+							<div class="panel-heading">
+								MAPPATURA
+							</div>
+							<div class="panel-body">
+
+							</div>
+						</div>
+					</div>
+				</div>-->
+
+
+				 
+		</div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+</body>
+
+</html>

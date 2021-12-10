@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Social Login</name>
+		<permission>superadmin</permission>
+		<tag>social_login</tag>
+		<kind>cms</kind>
+		<version>3</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra il login fa social nel sito]]></description> 
+   </info>
+    <linkSetting>
+		index.php?ctrl=Conf&amp;mod=social_login
+   </linkSetting>
+</module>

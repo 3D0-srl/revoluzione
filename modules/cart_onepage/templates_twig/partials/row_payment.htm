@@ -1,0 +1,50 @@
+{% if step == 5 %}
+<div class="pallaselezionata current">
+	<span class="txt">{{num_progress_payment}}. {{tr('Pagamento','cart_onepage')}}</span>
+	{{do_action('cart_payment_top',cart,ordini)}}
+	<span id="error_payment"></span>
+</div>
+<div class="btn-group" style="width: 100%;" data-toggle="buttons">
+	<form id="payment">
+		{% for riga in metodi_pagamento %}
+		
+			<div class="btn btn-default btntabs">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-l-25 p-r-25 col-payment">
+					<div class="type_payment">
+						<input type="radio" class="form-control paymentData" id="paymentMethod_{{riga.code}}" value="{{riga.code}}" name="formdata[paymentMethod]">
+						<label for="paymentMethod_{{riga.code}}"></label>
+						{% if riga.image %}
+						<img src="{{riga.getUrlImage('thumbnail')}}">
+						{{riga.get('name')}}
+						{% else %}
+							{{riga.get('name')}}
+						{% endif %}
+						
+						<input type="hidden" value="{{riga.getPrice()}}" id="price_{{riga.code}}">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-0 col-payment">
+					<div class="description_payment"><p>{{riga.get('description')|raw}}</p></div>
+				</div>
+			</div>
+		
+
+		{% endfor %}
+	</form>
+	
+</div>
+<div class="space10"></div>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+	<button type="button" class="btn-next" onclick="step5()">{{tr('Effettua il pagamento','cart_onepage')}}</button>
+</div>
+<div class="space40"></div>
+
+{% else %}
+
+<div class="">
+	<span class="txt">{{num_progress_payment}}. {{tr('Pagamento','cart_onepage')}}</span>
+</div>
+
+{% endif %}
+

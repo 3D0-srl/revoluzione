@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A1VZO1IYX3SMHG</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>53132018568</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>76</MessagesProcessed>
+				<MessagesSuccessful>21</MessagesSuccessful>
+				<MessagesWithError>55</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>1246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8058</ResultMessageCode>
+				<ResultDescription>The following attributes are missing for SKU: [1246_U620QBC1006-41-GRIGIO]: [brand].For more details, see http://sellercentral.amazon.it/gp/errorcode/8058</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1246_U620QBC1006-41-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1246_U620QBC1006-41-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1278</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8058</ResultMessageCode>
+				<ResultDescription>The following attributes are missing for SKU: [1278_U823FDC4002-41-NAVY]: [brand].For more details, see http://sellercentral.amazon.it/gp/errorcode/8058</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1278_U823FDC4002-41-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1278</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1278_U823FDC4002-41-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1281</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8058</ResultMessageCode>
+				<ResultDescription>The following attributes are missing for SKU: [1281_U823FDC4002-44-NAVY]: [brand].For more details, see http://sellercentral.amazon.it/gp/errorcode/8058</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1281_U823FDC4002-44-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1281</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1281_U823FDC4002-44-NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1300</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1300_UBIK71016-L-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1300</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1300_UBIK71016-L-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1301</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1301_UBIK71016-L-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1301</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1301_UBIK71016-L-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1302</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1302_UBIK71016-M-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1302</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1302_UBIK71016-M-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1303</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1303_UBIK71016-M-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1303</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1303_UBIK71016-M-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1304</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1304_UBIK71016-XL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1304</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1304_UBIK71016-XL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1305</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1305_UBIK71016-XL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1305</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1305_UBIK71016-XL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1306</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1306_UBIK71016-XXL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1306</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1306_UBIK71016-XXL-FEDERAL BLUE-ORANGE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1307</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1307_UBIK71016-XXL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1307</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1307_UBIK71016-XXL-NERO-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1309</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1309_UBIK71022-L-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1309</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1309_UBIK71022-L-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1310</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1310_UBIK71022-L-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1310</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1310_UBIK71022-L-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1311</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1311_UBIK71022-M-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1311</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1311_UBIK71022-M-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1312</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1312_UBIK71022-M-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1312</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1312_UBIK71022-M-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1313</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1313_UBIK71022-XL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1313</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1313_UBIK71022-XL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1314</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1314_UBIK71022-XL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1314</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1314_UBIK71022-XL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1315</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1315_UBIK71022-XXL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1315</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1315_UBIK71022-XXL-FEDERAL  BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1316</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1316_UBIK71022-XXL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1316</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1316_UBIK71022-XXL-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1318</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1318_UBK71016-L- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1318</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1318_UBK71016-L- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1319</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1319_UBK71016-L-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1319</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1319_UBK71016-L-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1320</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1320_UBK71016-L-NAVY-RED</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1320</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1320_UBK71016-L-NAVY-RED</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1321</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1321_UBK71016-M- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1321</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1321_UBK71016-M- MILITARY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1322</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1322_UBK71016-M-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1322</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1322_UBK71016-M-HORIZON BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1324</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1324_UBK71016B-L-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1324</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1324_UBK71016B-L-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1325</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1325_UBK71016B-XXL-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1325</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1325_UBK71016B-XXL-BLU NAVY</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1327</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1327_UBK71022-L-FEDERAL BLU</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1327</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1327_UBK71022-L-FEDERAL BLU</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1328</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8105</ResultMessageCode>
+				<ResultDescription>The data you provided for an attribute does not match the list of valid values.  Please select a valid value from the Data Definitions and resubmit.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1328_UBK71022-L-NAVY-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1328</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1328_UBK71022-L-NAVY-YELLOW</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1330</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1330_UIB05026G3-L-THREE PACK, Missing Attributes product_type. SKU 1330_UIB05026G3-L-THREE PACK doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1330_UIB05026G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1330</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1330_UIB05026G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1332</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1332_UIB05029G3-L-THREE PACK, Missing Attributes product_type. SKU 1332_UIB05029G3-L-THREE PACK doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1332_UIB05029G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1332</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1332_UIB05029G3-L-THREE PACK</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1334</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1334_UPJ10009S-L-FEDERAL BLUE, Missing Attributes product_type. SKU 1334_UPJ10009S-L-FEDERAL BLUE doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1334_UPJ10009S-L-FEDERAL BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1334</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1334_UPJ10009S-L-FEDERAL BLUE</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1336</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1336_UPJ10011S-L-GRIGIO, Missing Attributes product_type. SKU 1336_UPJ10011S-L-GRIGIO doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1336_UPJ10011S-L-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1336</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1336_UPJ10011S-L-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1338</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1338_UPJ300013S-L-GREY MEL.-NERO, Missing Attributes product_type. SKU 1338_UPJ300013S-L-GREY MEL.-NERO doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1338_UPJ300013S-L-GREY MEL.-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1338</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1338_UPJ300013S-L-GREY MEL.-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1340</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>8560</ResultMessageCode>
+				<ResultDescription>SKU 1340_UPJ3008S-L-NAVY-GRIGIO, Missing Attributes product_type. SKU 1340_UPJ3008S-L-NAVY-GRIGIO doesn&apos;t match any ASINs. Make sure that all standard product ids (such as UPC, ISBN, EAN, or JAN codes) are correct. To create a new ASIN, include the following attributes: product_type. Feed ID: 0. For more troubleshooting help, see http://sellercentral.amazon.it/gp/errorcode/200692370</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1340_UPJ3008S-L-NAVY-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1340</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>13013</ResultMessageCode>
+				<ResultDescription>This SKU is not in the Amazon catalog. If you are receiving this message after submitting a multi-marketplace inventory file and the designated marketplace for this error is different than the marketplace in which you submitted your file, this error is an indication that the Detail page for this item does not exist in the designated marketplace. Amazon is attempting to create the Detail Page for this item on your behalf. If successful, your listing will be created in the designated marketplace within 48 hours.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1340_UPJ3008S-L-NAVY-GRIGIO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>18</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 183, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>18_126497-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>18</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 183, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>18_126497-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>19</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 204, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>19_126497-36-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>19</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 204, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>19_126497-36-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 15, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>2_126486-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 15, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>2_126486-35-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>20</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 225, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>20_126497-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>20</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 225, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>20_126497-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>21</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 246, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>21_126497-37-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>21</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 246, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>21_126497-37-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>22</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 267, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>22_126497-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>22</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 267, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>22_126497-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>23</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 288, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>23_126497-38-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>23</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 288, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>23_126497-38-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>24</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 309, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>24_126497-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>24</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 309, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>24_126497-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>25</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 330, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>25_126497-39-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>25</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 330, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>25_126497-39-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>26</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 351, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>26_126497-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>26</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 351, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>26_126497-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>27</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 372, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>27_126497-40-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>27</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 372, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>27_126497-40-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>28</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 393, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>28_126497-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>28</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 393, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>28_126497-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>29</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 414, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>29_126497-41-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>29</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 414, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>29_126497-41-GIALLO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 36, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3_126486-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 36, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3_126486-36-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>30</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 435, Column 33: cvc-minLength-valid: Value &apos;126497&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>30_126497-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>30</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 435, Column 33: cvc-type.3.1.3: The value &apos;126497&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>30_126497-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 57, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>4_126486-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 57, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>4_126486-37-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 78, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5_126486-38-AJR</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 78, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5_126486-38-AJR</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 99, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6_126486-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 99, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6_126486-38-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 120, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7_126486-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 120, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7_126486-39-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 141, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8_126486-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 141, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8_126486-40-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 162, Column 33: cvc-minLength-valid: Value &apos;126486&apos; with length = &apos;6&apos; is not facet-valid with respect to minLength &apos;8&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9_126486-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 162, Column 33: cvc-type.3.1.3: The value &apos;126486&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9_126486-41-NERO</SKU>
+				</AdditionalInfo>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>

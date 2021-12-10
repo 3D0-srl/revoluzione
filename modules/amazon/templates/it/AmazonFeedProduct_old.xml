@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd"> 
+<Header> 
+	<DocumentVersion>1.01</DocumentVersion>
+	<MerchantIdentifier>A1VZO1IYX3SMHG</MerchantIdentifier> 
+</Header> 
+<MessageType>Product</MessageType>
+<PurgeAndReplace>false</PurgeAndReplace> 
+<Message> 
+	<MessageID>1</MessageID>
+	<OperationType>Update</OperationType> 
+	<Product> 
+		<SKU>220</SKU> 
+		<StandardProductID> 
+			<Type>UPC</Type> 
+			<Value>9780471117094</Value> 
+		</StandardProductID> 
+		<ProductTaxCode>A_GEN_TAX</ProductTaxCode> 
+		<LaunchDate>2017-02-02T11:00:00</LaunchDate> 
+		<Condition> 
+			<ConditionType>New</ConditionType> 
+		</Condition> 
+		<DescriptionData> 
+			<Title>Home Decor Company Hand woven Chobi Sumak 5-Feet 6-Inch by 8-Feet 6-Inch Wool Sumak, Aqua 2, Beige, Copper, Cream</Title>
+			<Brand>Home Decor Company</Brand> 
+			<Description>
+				These luxurious flat-woven rugs are handmade by Afghan master weavers. They are woven using locally handspun wool and the beautiful variety of colors and hues is achieved by using vegetable and mineral dyes. These stately rugs are perfect for traditional, classical and modern decors.
+			</Description>
+			<BulletPoint>
+				High-density polypropylene pile provides one of the plushest feelings available in a rug
+			</BulletPoint>
+			<BulletPoint>
+				Intricate yet understated design with a scrolling vine pattern provides depth and textural appeal
+			</BulletPoint> 
+			<BulletPoint>
+				Imported from India
+			</BulletPoint> 
+			<BulletPoint> 
+				Flat-weave and constructed from 100% Wool with 100% Cotton foundation
+			</BulletPoint> 
+			<BulletPoint>
+				5-Feet 6-Inch by 8-Feet 6-Inch (167cm x 259cm)
+			</BulletPoint>
+			<ItemDimensions> 
+				<Length unitOfMeasure="CM">259</Length> 
+				<Width unitOfMeasure="CM">167</Width> 
+				<Height unitOfMeasure="CM">0</Height> 
+				<Weight unitOfMeasure="LB">27.9</Weight> 
+			</ItemDimensions> 
+			<PackageDimensions> 
+				<Length unitOfMeasure="CM">259</Length> 
+				<Width unitOfMeasure="CM">167</Width> 
+				<Height unitOfMeasure="CM">0</Height> 
+			</PackageDimensions> 
+			<PackageWeight unitOfMeasure="LB">27.9</PackageWeight>
+			<ShippingWeight unitOfMeasure="LB">27.9</ShippingWeight> 
+			<MSRP currency="CAD">941.90</MSRP>
+			<Manufacturer>Home Decor Company</Manufacturer>
+			<MfrPartNumber>220</MfrPartNumber>
+			<SearchTerms>
+				arpet;bedrooms;carpet;carpets;carpt;cheap;crpet
+			</SearchTerms>
+			<SearchTerms>
+				decor;expensive;flat;flatweave;home;kids;kitchen
+			</SearchTerms>
+			<SearchTerms>
+				less;living;luxury;new;pakistan;pakistani;panel
+			</SearchTerms>
+			<SearchTerms>
+				quality;rectangle;rectangular;rgs;room;rug;rugs
+			</SearchTerms>
+			<SearchTerms>
+				sale;transitional;vintage;weave
+			</SearchTerms>
+			<UsedFor>bedroom</UsedFor> 
+			<UsedFor>living room</UsedFor>
+			<UsedFor>dining room</UsedFor> 
+			<UsedFor>floor</UsedFor>
+			<UsedFor>decor</UsedFor>
+			<ItemType>handmade-rugs</ItemType>
+			<OtherItemAttributes>Rectangular</OtherItemAttributes>
+			<OtherItemAttributes>Panel</OtherItemAttributes>
+			<OtherItemAttributes>Transitional</OtherItemAttributes>
+			<OtherItemAttributes>Artisan</OtherItemAttributes>
+			<OtherItemAttributes>Urban</OtherItemAttributes>
+			<TargetAudience>Adults</TargetAudience>
+			<TargetAudience>Children</TargetAudience>
+			<TargetAudience>Men</TargetAudience>
+			<TargetAudience>Women</TargetAudience>
+			<RecommendedBrowseNode>6647000011</RecommendedBrowseNode>
+			<RecommendedBrowseNode>6647007011</RecommendedBrowseNode>
+		</DescriptionData> 
+		<ProductData> 
+			<Home> 
+			<ProductType> 
+				<FurnitureAndDecor> 
+					<ColorMap>Green</ColorMap> 
+					<Material>Wool Wool Blend</Material> 
+					<Shape>Rectangular</Shape> 
+					<VariationData> 
+						<Size>6' x 9'</Size> 
+						<Color>Green</Color> 
+						<StyleName>Contemporary</StyleName> 
+					</VariationData> 
+					</FurnitureAndDecor> 
+					</ProductType> 
+					<CountryAsLabeled>PK</CountryAsLabeled>
+					<CountryOfOrigin>PK</CountryOfOrigin>
+					<CountryProducedIn>Pakistan</CountryProducedIn>
+					<ImportDesignation>Imported</ImportDesignation>
+					<FabricType>100% Wool</FabricType>
+					<PatternName>Geometric</PatternName>
+					<DisplayLength unitOfMeasure="CM">259</DisplayLength>
+					<DisplayWidth unitOfMeasure="CM">167</DisplayWidth> 
+					<DisplayWeight unitOfMeasure="LB">27.9</DisplayWeight>
+					<ManufacturerWarrantyDescription>30-day Money Back Guarantee </ManufacturerWarrantyDescription>
+				</Home> 
+			</ProductData>
+		</Product>
+	</Message> 
+</AmazonEnvelope>
+
+

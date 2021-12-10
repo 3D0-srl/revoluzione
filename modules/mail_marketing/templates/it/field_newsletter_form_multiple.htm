@@ -1,0 +1,8 @@
+<div class="form-group form-inline col-md-6">
+	<label>Iscrivimi alla Newsletter :</label>
+	<div class="controls">	
+				{foreach:lists,list}			
+				<input type="checkbox" class="form-control" name="formdata[newsletter][]"   value="{list.id}" flexy:xhtml/> {list.list_name_view}
+				{end:}
+	</div>
+</div>

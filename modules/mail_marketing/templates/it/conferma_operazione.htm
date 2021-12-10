@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   {metatags()}
+
+    <title>Newsletter - Conferma operazione</title>
+	{output(#css.htm#)}
+	{output(#javascript.htm#)}
+	<flexy:toJavascript flexy:prefix="js_"
+		section="prodotto.section"
+    >
+	<style>
+		.borderless td, .borderless th {
+			border: none;
+		}
+		.pad50{
+			padding-top:60px !important;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+
+   {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="row">
+		<div class="space40"></div>
+        <div class="container">
+			<div class="col-md-12">
+				<h3>Conferma operazione</h3>
+				<p>Ti è stata inviata una mail di conferma all'indirizzo specificato</p>
+			</div>
+		</div>
+		<div class="space120"></div>
+    </div>
+   {output(#footer.htm#)}
+
+</body>
+
+</html>

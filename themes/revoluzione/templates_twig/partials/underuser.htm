@@ -1,0 +1,30 @@
+<div class="user">
+	{% if authUser() %}
+		<a href="{{url_admin}}" class="logged">
+			<img src="themes/jewels/images/ico_admin.png">
+		</a>	
+	{% else %}
+		<a href="account/login.htm" class="notloggedin">
+			<img src="themes/jewels/images/ico_admin.png">
+		</a>
+	{% endif %}
+
+	<div class="underuser">
+		<div class="subtitle1">Ciao {{userdata.name}}, benvenuto</div>
+		<ul>
+			{% if isMultilocale() %}
+				<li><a class="dati-personali" href="{{activelocale}}/account/home.htm">Il mio profilo</a></li>
+				{% if isActivedModule('ecommerce') %}
+					<li><a class="miei-ordini" href="index.php?ctrl=Orders&mod=ecommerce&lang={{activelocale}}">I miei Ordini</a></li>
+				{% endif %}
+			{% else  %}
+				<li><a class="dati-personali" href="account/personal_data.htm">Il mio profilo</a></li>
+				{% if isActivedModule('ecommerce') %}
+					<li><a class="miei-ordini" href="index.php?ctrl=Orders&mod=ecommerce">I miei Ordini</a></li>
+				{% endif %}
+			{% endif %}
+			<li><a href="/p/contatti.htm">Contatti</a>
+			<li><a href="account/logout.htm">Esci</a></li>
+		</ul>
+	</div>
+</div>

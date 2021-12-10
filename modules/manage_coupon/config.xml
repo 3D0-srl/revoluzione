@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Coupon sconto</name>
+		<permission>superadmin</permission>
+		<tag>manage_coupon</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<description>Modulo per la gestione dei coupon</description> 
+   </info>
+   <admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Coupon sconto</it>
+						<en>Coupons</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>coupon_manage</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=CouponAdmin&amp;mod=manage_coupon&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+			
+		</items>
+	</menu>
+  </admin>
+  <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+
+
+	
+
+</module>

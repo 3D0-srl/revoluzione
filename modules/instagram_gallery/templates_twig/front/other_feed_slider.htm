@@ -1,0 +1,23 @@
+{% for k,v in list %}
+<div class="slide_instagram"  id="popup_instagram_{{v.ordine}}">
+	{{v.getDivWithTags()|raw}}
+	<div class="details_instagram">			
+		{% for v2 in v.products %}
+		<div class="product_instagram" >
+			<div class="img_product" prodotto="{{v2.id}}">
+				<img src="{{v2.image}}">
+			</div>
+			<div class="details_product">
+				{{currencyLabel|raw}} {{v2.price}} <br>
+				{{v2.name}}
+			</div>
+			<a href="{v2[url]}" target="_blank" class="add_product">
+				Vai alla scheda
+			</a>
+		</div>
+		{% endfor %}
+		<div class="space20"></div>
+		{{v.text|raw}}			
+	</div>
+</div>
+{% endfor %}

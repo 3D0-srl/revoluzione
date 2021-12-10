@@ -1,0 +1,71 @@
+ <div id="jstree">
+	<!-- in this example the tree is populated from inline HTML -->
+	<ul>
+	  <li>Categorie
+		<ul>
+		  {% for v in categories %}
+		  {% include 'store/categories_item.htm' with {'item': v} %}
+		  {% endfor %}
+		  <!--<li>Child node 2</li>-->
+		</ul>
+	  </li>
+	  <!--<li>Root node 2</li>-->
+	</ul>
+  </div>
+ 
+
+
+
+<textarea type="textarea" style="display:none" class="form-control" id="categories" name="formdata[categories]"></textarea>
+
+
+<script>
+ $(function () {
+	// 6 create an instance when the DOM is ready
+	$.jstree.defaults.core.themes.variant = "large";
+	$('#jstree').jstree({
+		"types" : {
+		  "default" : {
+			"icon" : "fa fa-check"
+		 },
+		},
+		"plugins" : [ "wholerow", "checkbox","types" ]
+	});
+	// 7 bind to events triggered on the tree
+	$('#jstree').on("changed.jstree", function (e, data) {
+	  console.log(data.selected);
+	  var dati = JSON.stringify(data.selected);
+	  $('#categories').val(dati);
+	  console.log(dati);
+	});
+	// 8 interact with the tree - either way is OK
+	
+  });
+
+
+  $(window).load(function(){
+	setTimeout(function(){
+		$('.profile-select').on('change',function(e){
+			e.stopPropagation();
+			//console.log(event);
+		});
+
+
+
+		$('.profile-select').on('click',function(e){
+			 e.stopPropagation();
+		});
+		
+
+		if( typeof js_mapping_categories != 'undefined' && js_mapping_categories != null ){
+
+			for( var k in js_mapping_categories){
+				$('#'+k).find('select').val(js_mapping_categories[k]);
+			}
+		}
+
+
+	},2000);
+});
+
+</script>

@@ -1,0 +1,14 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Magazzino {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.nome)}}
+{{form.buildCol(dataform.etichetta)}}
+{{form.buildCol(dataform.email)}}
+{{form.buildCol(dataform.telefono)}}
+{{form.buildCol(dataform.luogo)}}
+
+
+{% endblock %} 

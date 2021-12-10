@@ -1,0 +1,16 @@
+<div class="cart-progress">
+	<div class="col100">
+		{% include 'partials/row_datauser.htm' %}
+	</div>
+	{% if virtual_cart == false %}
+	<div class="col100" id="row_address">
+		{% include 'partials/row_address.htm' %}
+	</div>
+	<div class="col100" id="row_shipment">
+		{% include 'partials/row_shipment.htm' %}
+	</div>
+	{% endif %}
+	<div class="col100" id="row_payment">
+			{% include 'partials/row_payment.htm' %}
+	</div>
+</div>

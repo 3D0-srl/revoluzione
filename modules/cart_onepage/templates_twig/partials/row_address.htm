@@ -1,0 +1,233 @@
+{% if step < 3 %}
+<div class="col100">
+	<div class="">
+		<span class="txt">{{num_progress_sped}}. {{tr('Indirizzo spedizione','cart_onepage')}}</span>
+	</div>
+</div>
+{% endif %}
+
+{% if step == 3 %}
+
+{% if (logged == false) or (action == 'cart_new_address') %}
+	<div class="pallaselezionata">
+		{% if (dataform.id.value > 0) or (indirizzi|length > 0) %}
+			<a href="index.php?ctrl=Cart&mod=cart_onepage&action=cart_address" class="btn-modifica">{{tr('Annulla','cart_onepage')}}</a>
+		{% endif %}
+		<span class="txt">{{num_progress_sped}}. {{tr('Indirizzo spedizione','cart_onepage')}}</span>
+	</div>
+	<form method="POST" class="float-label" action="" id="new_address_form">
+		<span id="regcon">
+			<span id="registration">
+				
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 error_form_cart errore" id="error_cart_address"></div>
+				{% if logged == true %}
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('label','cart_onepage')|capitalize}}*</label>	
+						<input type="text" name="formdata[label]" value="{{dataform.label.value}}" id="label">
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				{% endif %}
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('name','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[name]" value="{{dataform.name.value}}" id="name">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('surname','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[surname]" value="{{dataform.surname.value}}" id="surname">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('email','cart_onepage')|capitalize}}*</label>	
+						<input type="text" name="formdata[email]" value="{{dataform.email.value}}" id="email">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('phone','cart_onepage')|capitalize}}*</label>	
+						<input type="text" name="formdata[phone]" value="{{dataform.phone.value}}" id="phone">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('cellular','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[cellular]" value="{{dataform.cellular.value}}" id="cellular">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('address','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[address]" value="{{dataform.address.value}}" id="address">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('postalCode','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[postalCode]" value="{{dataform.postalCode.value}}" id="postalCode">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('city','cart_onepage')|capitalize}}*</label>
+						<input type="text" name="formdata[city]" value="{{dataform.city.value}}" id="city">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="controls">
+						<label>{{tr('country','cart_onepage')|capitalize}}*</label>	
+						<select type="select" onchange="" name="formdata[country]" id="country">
+							{% for k,v in dataform.country.options %}
+								<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="div_province">
+					<div class="controls">
+						<label>{{tr('province','cart_onepage')|capitalize}}*</label>	
+						<select type="select" name="formdata[province]" id="province">
+							{% for k,v in dataform.province.options %}
+								<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="controls" id="">
+						<label>{{tr('Informazioni aggiuntive','cart_onepage')}}</label>
+						<textarea type="textarea" name="formdata[note]">{{dataform.note.value}}</textarea>
+					</div>	
+				</div>		
+				
+				<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
+				<input type='hidden' name='formID'>
+				<input type='hidden' name='action'>
+			</span>
+		</span>
+		
+		<div class="space10"></div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<span id="address_actions">
+				{% if dataform.id.value > 0 %}
+					<a onclick="confirmDeleteAddress(); return false;" class="cancel_new_address">{{tr('Elimina questo indirizzo','cart_onepage')}}</a>
+				{% endif %}
+				<button type="button" class="btn-next save_address" onclick="{% if logged %}save_address(){% else %}step3(){% endif %};">{{tr('Conferma questo indirizzo','cart_onepage')}}</button>
+			</span>
+			<span id="confirm_delete_address" style="display:none">
+				<div>
+				<p>{{confirm_delete_address_message|raw}}</p>
+				</div>
+				<a onclick="cancelDeleteAddress(); return false;" class="cancel_new_address">{{tr('Annulla','cart_onepage')}}</a>
+				<button type="button" onclick="deleteAddress({{dataform.id.value}}); return false;" class="btn-next save_address">{{tr('Elimina','cart_onepage')}}</button>
+			</span>
+
+		</div>
+	</form>
+	<div class="space30"></div>
+{% else %}
+	<div class="pallaselezionata current">
+		<span class="txt">{{num_progress_sped}}. {{tr('Indirizzo spedizione','cart_onepage')}}</span>
+	</div>
+	<div class="txt">{{tr("Seleziona l'indirizzo di spedizione",'cart_onepage')}}</div>
+	<span id="other_address">
+		<div class="clearfix"></div>
+		<form id="address_form">
+			<input type='hidden' name="" value="">
+			{% for add in indirizzi %}
+			<div class="box_address" id="address_{{add.id}}" >
+				<div class="cont_address">
+					<div class="name_address">
+						<input type="radio"  id="address{{add.id}}" name="formdata[id_address]" {% if add.id == address_selected %}checked{% endif %} value="{{add.id}}">
+						<label for=""></label>
+						<span>{{add.label}}</span>
+					</div>
+					<div class="info_address">
+						<span>{{add.name}} {{add.surname}}</span><br>
+						<span>{{add.address}}</span><br>
+						<span>{{add.postalCode}} {{add.city}}</span><br>
+						{% if add.province %}
+						<span>{{add.getNameProvince()}} - {{add.getNameCountry()}}</span><br>
+						{% endif %}
+						{% if add.email %}
+						<span>{{add.email}}</span><br>
+						{% endif %}
+						<span>
+						{% if add.phone %}
+							{{add.phone}}
+							{% if add.cellular %}
+							/ {{add.cellular}}
+							{% endif %}
+						{% else %}
+							{% if add.cellular %}
+							{{add.cellular}}
+							{% endif %}
+						{% endif %}
+						</span>
+					</div>
+				</div>
+				<div class="box_btn">
+					<a href="index.php?ctrl=Cart&mod=cart_onepage&action=cart_new_address&id={{add.id}}">
+					<div class="btn_address">{{tr('Modifica','cart_onepage')}}</div>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+			<a href="index.php?ctrl=Cart&mod=cart_onepage&action=cart_new_address" class="cart_new_address"><img src="/themes/jewels/images/ico_cart_new_address.png">{{tr('Aggiungi nuovo indirizzo','cart_onepage')}}</a>
+			<div class="space50"></div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<button type="button" class="btn-next" onclick="step3()">{{tr('Spedisci a questo indirizzo','cart_onepage')}}</button>
+				</div>
+			</div>
+		</form>
+	</span>
+	<div class="space30"></div>
+
+{% endif %}
+
+{% endif %}
+
+{% if step > 3 %}
+<div class="pallaselezionata">
+	<a href="index.php?ctrl=Cart&mod=cart_onepage&action=cart_address" class="btn-modifica">{{tr('Modifica','cart_onepage')}}</a>
+	<span class="txt">
+		<div class="row">
+			<span class="col-xs-12 col-md-5">{{num_progress_sped}}. {{tr('','cart_onepage')}}Indirizzo spedizione</span>
+			<span class="col-xs-12 col-md-7 dati-inseriti">
+				
+				{{cart_datauser.shippingName}} {{cart_datauser.shippingSurname}}<br>
+				
+				<span>{{cart_datauser.shippingAddress}}</span><br>
+				<span>{{cart_datauser.shippingPostalCode}} {{cart_datauser.shippingCity}}</span><br>
+				{% if cart_datauser.shippingProvince %}
+				<span>{{cart_datauser.shippingProvince}} - {{cart_datauser.shippingCountry}}</span><br>
+				{% else %}
+				{{cart_datauser.shippingCountry}}<br>
+				{% endif %}
+				{% if cart_datauser.shippingEmail %}
+				<span>{{cart_datauser.shippingEmail}}</span><br>
+				{% endif %}
+				<span>
+				{% if cart_datauser.shippingPhone %}
+					{{cart_datauser.shippingPhone}}
+					{% if cart_datauser.shippingCellular %}
+					/ {{cart_datauser.shippingCellular}}
+					{% endif %}
+				{% else %}
+					{% if cart_datauser.shippingCellular %}
+					{{cart_datauser.shippingCellular}}
+					{% endif %}
+				{% endif %}
+			</span>
+		</div>
+	</span>
+</div>
+
+{% endif %}

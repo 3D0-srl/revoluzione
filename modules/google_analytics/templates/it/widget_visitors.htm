@@ -1,0 +1,53 @@
+<div class="col-md-3 col-sm-12" id="box_visitator">
+	<div class="text-center" style="padding: 50px;" id="widget_content_analytics_traffic_loader">
+		<img style="width:50px;" src="/modules/google_analytics/js/ajax-load.gif"/>
+	</div>
+
+	<div class="panel no-bd bd-3 panel-stat" id="widget_content_analytics_traffic" style="display:none">
+		<div class="panel-body bg-blue p-15">
+			<div class="row m-b-10">
+				<div class="col-xs-3">
+					<i class="glyph-icon flaticon-visitors"></i>
+				</div>
+				<div class="col-xs-9">
+					<div data-height="56" data-delay="3500" data-direction="vertical" data-mode="carousel" class="live-tile carousel ha" style="height: 56px;">
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all active" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, 0%) translateZ(0px);">
+							<small class="stat-title">Visite oggi</small>
+							<h1 class="m-0 w-300"><span id="total_visits_today"></span></h1>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, -100%) translateZ(0px);">
+							<small class="stat-title">Visite ieri</small>
+							<h1 class="m-0 w-300"><span id="total_visits_yesterday"></span></h1>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<small class="stat-title">Nuovi visitatori</small>
+					<div data-height="30" data-delay="3500" data-direction="vertical" data-mode="carousel" class="live-tile carousel ha" style="height: 30px;">
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all active" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, 0%) translateZ(0px);">
+							<h3 class="m-0 w-300"><span id="perc_new_visits_today"></span>%</h3>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, -100%) translateZ(0px);">
+							<h3 class="m-0 w-300"><span id="perc_new_visits_yesterday"></span>%</h3>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<small class="stat-title">Frequenza rimbalzo</small>
+					<div data-height="30" data-delay="3500" data-direction="vertical" data-mode="carousel" class="live-tile carousel ha" style="height: 30px;">
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all active" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, 0%) translateZ(0px);">
+							<h3 class="m-0 w-500"><span id="bounce_rate_today"></span>%</h3>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+						<div class="slide ha ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="transition-property: transform; transition-duration: 500ms; transition-timing-function: ease; transform: translate(0%, -100%) translateZ(0px);">
+							<h3 class="m-0 w-500"><span id="bounce_rate_yesterday"></span>%</h3>
+						<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="/modules/google_analytics/js/analytics2.js"></script>

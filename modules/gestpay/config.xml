@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Gestpay Banca Sella</name>
+		<permission>ecommerce</permission>
+		<tag>gestpay</tag> 
+		<kind>payment</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il sistema di pagamento di <b>GestPay</b> di Banca Sella attraverso le api]]></description>
+   </info>
+   <linkSetting>
+		index.php?ctrl=Conf&amp;mod=gestpay 	
+   </linkSetting>
+   <dependencies>
+		<!--<dependence>ecommerce</dependence>-->
+  </dependencies>
+</module>

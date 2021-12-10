@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+   {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+   <script src="js/setting.js"></script>
+   	<link rel="stylesheet" href="css/style.css">
+    <flexy:toJavascript flexy:prefix="js_"
+		ind_in="ind_in"
+		ind_out="ind_out"
+    >
+
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+	                     <h3><strong>GDPR</h3>
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<div class="well">
+					<form role='form' action='index.php' method='POST'>
+						<div class="row">
+							<div class="col-md-12">
+										<div class="form-group col-md-12" id="">
+											<label>Testo consenso privacy</label>
+											<div class="controls">
+													<input type="text" name="formdata[text_privacy]" class="form-control">
+											</div>
+										</div>
+										<div class="form-group col-md-12" id="">
+											<label>Link privacy form registrazione</label>
+											<div class="controls">
+													<input type="text" name="formdata[link_privacy]" class="form-control">
+											</div>
+										</div>
+							</div>
+						</div>
+
+
+
+										
+					
+					<input type='hidden' name='formID'>
+					<input type='hidden' name='action' value="setting_module_ok">
+				</div>
+				<div class="col-md-12 m-t-10 m-b-10 align-center">
+					<button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-save"></i> Salva</button>
+				</div>
+							
+				  </form>
+				
+
+
+				   
+
+					<!--<div class="row">
+						<div class="col-md-12 m-t-20 m-b-40 align-center">
+							<button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+						</div>
+				   </div>-->
+				
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+</body>
+
+</html>

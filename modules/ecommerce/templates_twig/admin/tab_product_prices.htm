@@ -1,0 +1,252 @@
+<script>
+var js_manager_pricelist = "{{dataform.manager_pricelist.value|escape('js')}}";
+var js_cont_price_list = "{{cont_price_list|escape('js')}}";
+var js_percentage_tax = "{{percentage_tax|escape('js')}}";
+var list_taxes = [];
+$(document).ready(function(){
+	if( typeof js_percentage_tax != 'undefined' && js_percentage_tax != null ){
+		if( jQuery.parseJSON(js_percentage_tax) != null ){
+			list_taxes = jQuery.parseJSON(js_percentage_tax);
+		}
+		
+	}
+	
+	$('#price_default').on('change',function(){
+		change_price_with_tax($(this).val(),'price_default_with_tax');
+	});
+	
+	$('#price_default_with_tax').on('change',function(){
+		change_price_without_tax($(this).val(),'price_default');
+	});
+
+	
+	$('#price_barred').on('change',function(){
+		change_price_with_tax($(this).val(),'price_barred_with_tax');
+	});
+
+	$('#price_barred_with_tax').on('change',function(){
+		change_price_without_tax($(this).val(),'price_barred');
+	});
+	
+
+	$('#id_tax').on('change',function(){
+		$('#price_default').trigger('change');
+		$('#price_barred').trigger('change');
+	});
+	
+	
+	if( !$('#price_default').val() ){
+		$('#price_default').val(0);
+	}
+	if( !$('#cost').val() ){
+		$('#cost').val(0);
+	}
+
+	if( !$('#price_barred').val() ){
+		$('#price_barred').val(0);
+	}
+
+	$('#price_default').val(parseFloat($('#price_default').val()).toFixed(4));
+	$('#cost').val(parseFloat($('#cost').val()).toFixed(4));
+	$('#price_barred').val(parseFloat($('#price_barred').val()).toFixed(4));
+	$('#price_default').trigger('change');
+
+	$('#price_barred').trigger('change');
+	
+});
+
+function change_price_without_tax(price,dest){
+	var tax = $('#id_tax').val();
+	var perc = 0;
+	if( tax ) {
+		if( list_taxes[tax] ){
+			perc = parseFloat(list_taxes[tax]);
+		}
+	}
+	
+	var price = parseFloat(price);
+	if( perc ){
+		perc = 1 + (perc / 100);
+		console.log(perc);
+		console.log(price);
+		price = price / parseFloat(perc);
+	}
+	
+
+	$('#'+dest).val(price.toFixed(4));
+}
+
+function change_price_with_tax(price,dest){
+	var tax = $('#id_tax').val();
+	var perc = 0;
+	if( tax ){ 
+		if( list_taxes[tax] ){
+			perc = parseFloat(list_taxes[tax]);
+		}
+	}
+	
+	var price = parseFloat(price);
+	if( perc ){
+		price = price + price*perc/100;
+	}
+
+	
+	$('#'+dest).val(price.toFixed(4));
+}
+
+
+</script>
+
+{% if is_new is null %}
+	{% import "macro/form.htm" as form %}
+	
+	
+	
+
+	{% if product_type == 1 %}
+		{{form.buildCol(dataform.min_order,'col-md-6')}}
+		{{form.buildCol(dataform.max_order,'col-md-6')}}
+		
+	{% endif %}
+	{{form.buildCol(dataform.id_tax,'col-md-12')}}
+	{% if has_parent %}
+		{{form.buildCol(dataform.parent_price,'col-md-12')}}
+	{% endif %}
+	<span id="parentPrice_no">
+		
+		<div class="clearfix">
+		{{form.buildCol(dataform.cost,'col-md-6')}}
+		</div>
+		{{form.buildCol(dataform.price_default,'col-md-6')}}
+		{{form.buildCol(dataform.price_default_with_tax,'col-md-6')}}
+		{{form.buildCol(dataform.price_barred,'col-md-6')}}
+		{{form.buildCol(dataform.price_barred_with_tax,'col-md-6')}}
+		{{form.buildCol(dataform.manager_pricelist,'col-md-12')}}
+		<div class="col-md-12 col-sm-12 col-xs-12 table-responsive" id="box_pricelist" style="display:none">
+			<span id="cont_box_pricelist" >
+				{% for k,listino in listini_prezzi %}
+				<div class="panel panel-default" id="pricelist_{{k}}">
+					<div class="panel-body row_pricelist ">
+						<div class="row">
+							<div id="del_list" onclick="del_pricelist({{k}}); return false;">X</div>
+							<div class="col-md-2">
+								<div class="form-group">
+									<label>Listino:</label>
+									
+									<div class="controls">		
+										<select type="select" class="form-control" name="formdata[pricelist][{{k}}][label]" flexy:ignore>
+											{% for k1,listprice in pricelist %}
+												
+												{% if listprice.label == listino.label %}
+													<option value="{{listprice.label}}" selected>{{listprice.get('name')}}</option>
+												{% else %}
+													<option value="{{listprice.label}}">{{listprice.get('name')}}</option>
+												{% endif %}
+											{% endfor %}
+										
+										</select> 	 	
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group form-inline">
+									<label>Tipo:</label>
+									<div class="controls">
+										{% if 'price' == listino.type %}
+										
+											<input type="radio" class="form-control type_pricelist" name="formdata[pricelist][{{k}}][type]" value="percentage"> <b>percentuale</b>
+											<input type="radio" class="form-control type_pricelist" name="formdata[pricelist][{{k}}][type]" value="price" checked> <b>prezzo</b>
+										{% else %}
+											<input type="radio" class="form-control type_pricelist" name="formdata[pricelist][{{k}}][type]" checked value="percentage"> <b>percentuale</b>
+											<input type="radio" class="form-control type_pricelist" name="formdata[pricelist][{{k}}][type]" value="price"> <b>prezzo</b>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group">
+									<label>Valore:</label>
+									<div class="controls">		
+										<input type="text" class="form-control solodouble" name="formdata[pricelist][{{k}}][value]" value="{{listino.value}}"> 	 	
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-3">
+								<div class="form-group">
+									<label>Valido per quantità maggiori o uguali di:</label>
+									<div class="controls">		
+										<input type="text" class="form-control solointeri" name="formdata[pricelist][{{k}}][quantity]" value="{{listino.quantity}}"> 	 	
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group form-inline">
+									<label>&nbsp;</label>
+									<div class="controls">
+										
+										<input type="checkbox" class="form-control" name="formdata[pricelist][{{k}}][advanced]" value="1" {% if listino.advanced == 1 %}checked{% endif %} onchange="advanced_pricelist($(this),{{k}}); return false;"> 
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row" id="advanced_option_pricelist" style="display: {% if listino.advanced == 1%}block{% else %}none{% endif %}">
+							<div class="col-md-3">
+								<div class="form-group">
+									<label>Applicabile alla categoria Utente:</label>
+									<div class="controls">		
+										<select type="select" class="form-control" id="pricelist_usercategory_{{k}}" name="formdata[pricelist][{{k}}][userCategory]">
+											<option value="0">Tutte</option>
+											{% for v in categorie %}
+												{% if v.id == listino.userCategory %}
+													<option value="{{v.getId()}}" selected>{{v.get('name')}}</option>
+												{% else %}
+													<option value="{{v.getId()}}">{{v.get('name')}}</option>
+												{% endif %}
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label>Data inizio validità:</label>
+									<div class="controls">		
+										<input type="text" class="form-control pickadate" id="pricelist_dateStart_{{k}}" name="formdata[pricelist][{{k}}][dateStart]" value="{{listino.dateStart}}"> 	 	
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label>Data fine validità:</label>
+									<div class="controls">		
+										<input type="text" class="form-control pickadate" id="pricelist_dateEnd_{{k}}" name="formdata[pricelist][{{k}}][dateEnd]" value="{{listino.dateEnd}}"> 	 	
+									</div>
+								</div>
+							</div>
+							<input type="hidden" name="formdata[pricelist][{{k}}][id]"  value="{{listino.id}}">
+
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</span>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12" >
+							<button style="float:right;" class="btn btn-sm btn-success" onclick="add_price_list(); return false;">
+								<i class="fa fa-plus"></i> Aggiungi Listino
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+</span>
+{% else %}
+	<div class="alert alert-warning" style="width:100%">Per poter inserire i dati dell'ecommerce occorre prima salvare il prodotto</div>
+{% endif %}

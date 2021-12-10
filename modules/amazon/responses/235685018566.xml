@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A195ABCOXNOCM6</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>235685018566</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>5767</MessagesProcessed>
+				<MessagesSuccessful>5748</MessagesSuccessful>
+				<MessagesWithError>19</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>1710</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8664, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1710_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1710</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8664, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1710_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1711</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8671, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1711_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1711</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8671, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1711_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8678, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1712_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8678, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>1712_314192-117</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2783</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 6830, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>2783_314192-009</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2783</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 6830, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>2783_314192-009</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3494</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 18044, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3494_AO0269-101</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3494</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 18044, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3494_AO0269-101</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3496</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 18058, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3496_AO0269-101</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3496</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 18058, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3496_AO0269-101</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3572</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 17379, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3572_365215-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3572</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 17379, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3572_365215-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3573</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 17386, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3573_365215-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3573</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 17386, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>3573_365215-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4576</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 23763, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>4576_173301-01-C1491</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4576</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 23763, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>4576_173301-01-C1491</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27641, Column 33: cvc-minInclusive-valid: Value &apos;-3&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5246_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27641, Column 33: cvc-type.3.1.3: The value &apos;-3&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5246_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5247</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27648, Column 33: cvc-minInclusive-valid: Value &apos;-2&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5247_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5247</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27648, Column 33: cvc-type.3.1.3: The value &apos;-2&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5247_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5252</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27683, Column 33: cvc-minInclusive-valid: Value &apos;-3&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5252_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5252</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 27683, Column 33: cvc-type.3.1.3: The value &apos;-3&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5252_BQ5448-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5447</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 24617, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5447_AO2924-007</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5447</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 24617, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5447_AO2924-007</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6203</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 33094, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6203_192257-23</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6203</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 33094, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6203_192257-23</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6574</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 35292, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6574_373081-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6574</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 35292, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6574_373081-01</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 36069, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6712_CD7782-600</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 36069, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6712_CD7782-600</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6993</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 37630, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6993_175083-01-C5363</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6993</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 37630, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>6993_175083-01-C5363</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7046</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 37966, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7046_CN8536-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7046</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 37966, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7046_CN8536-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7108</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 38148, Column 33: cvc-minInclusive-valid: Value &apos;-1&apos; is not facet-valid with respect to minInclusive &apos;0&apos; for type &apos;nonNegativeInteger&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7108_CZ5890-100</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7108</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 38148, Column 33: cvc-type.3.1.3: The value &apos;-1&apos; of element &apos;Quantity&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>7108_CZ5890-100</SKU>
+				</AdditionalInfo>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>

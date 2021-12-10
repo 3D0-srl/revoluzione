@@ -1,0 +1,9 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('form')|title}} {% endblock %} 
+{% block content %}
+
+
+{{ include(template_from_string(template_form)) }}
+
+{% endblock %}
+

@@ -1,0 +1,62 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Hooks {% endblock %} 
+{% block buttons_right %}{% endblock %}
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+                                <th><strong>Hook</strong></th>
+								<th></th>
+                               
+							</tr>
+						</thead>
+						<tbody>
+							{% for h,v in list %}
+							<tr >
+                                <td>
+                                    <b>{{h}}</b><br>
+                                    <p>{{v.description|raw}}</p>
+
+                                </td>
+								<td>
+                                    <table class="table">
+                                        <thead>
+                                            <th>Function</th>
+                                            <th>Module</th>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            {% for v1 in v.functions %}
+                                            <tr>
+                                                <td>{{v1.function}}</td>
+                                                
+                                                 <td>{{v1.module}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    
+                                    </table>
+                                </td>
+                                
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Filtri Ricerca</name>
+		<permission>superadmin</permission>
+		<tag>filtri_ricerca</tag>
+		<kind>catalog</kind>
+		<autoload>1</autoload>
+		<scope></scope> 
+		<description><![CDATA[Modulo che integra permette di aggiungere ai prodotti degli attributi da utilizzare per una ricerca per filtri avanzata.<br> E' utile soprattutto per negozi di elettronica.]]></description> 
+   </info>
+    <admin>
+	  <menu>
+		<items>
+			
+			<item>
+				<locale>
+					<name>
+						<it>Caratteristiche</it>
+						<en>Features</en>
+					</name>
+				</locale>
+				<parent>catalog</parent>
+				<tag>filtri_ricerca_proprieta</tag> 
+				<permission>catalog</permission> 
+				<url>index.php?ctrl=FeatureAdmin&amp;mod=filtri_ricerca&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+   <linkSetting>
+		index.php?ctrl=FeatureAdmin&amp;mod=filtri_ricerca 	
+   </linkSetting>
+   <dependencies>
+		<dependence>catalogo</dependence>
+    </dependencies>
+</module>

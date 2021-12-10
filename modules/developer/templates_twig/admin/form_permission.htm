@@ -1,0 +1,13 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('permission')|title}} {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.label,'col-md-12')}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.description,'col-md-12')}}
+{{form.buildCol(dataform.orderView,'col-md-6')}}
+{{form.buildCol(dataform.active,'col-md-6')}}
+{% endblock %}

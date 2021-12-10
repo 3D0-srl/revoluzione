@@ -1,0 +1,32 @@
+.swiper-container-horizontal > .swiper-scrollbar {
+	width: calc(100% - 95px) !important;
+	left: 0 !important;
+}
+.swiper-button-prev {
+	top: auto !important;
+	margin-top: 0 !important;
+	bottom: 0 !important;
+	width: 8px !important;
+	height: 16px !important;
+	left: auto !important;
+	right: 40px !important;
+}
+.swiper-button-next {
+	top: auto !important;
+	margin-top: 0 !important;
+	bottom: 0 !important;
+	width: 8px !important;
+	height: 16px !important;
+	right: 0 !important;
+}
+.swiper-button-prev {
+	background-image: url("modules/widget_slider_categories/img/ico_arrow_left_slider.png") !important;
+	background-size: 8px 16px !important;
+}
+.swiper-button-next {
+	background-image: url("modules/widget_slider_categories/img/ico_arrow_right_slider.png") !important;
+	background-size: 8px 16px !important;
+}
+.widget_swiper_categories .swiper-slide {
+	margin-bottom: 60px !important;
+}

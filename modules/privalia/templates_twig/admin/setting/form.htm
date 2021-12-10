@@ -1,0 +1,154 @@
+{% extends "privalia_layout_form.htm" %}
+{% block edit_page_title %} Privalia setting {% endblock %} 
+
+{% block content %}
+<div class="tabcordion">
+
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#privalia_general" data-toggle="tab">Accessi</a></li>
+		<li><a href="#privalia_channels" data-toggle="tab">Canali privalia</a></li>
+		<li><a href="#privalia_mappatura_ordini" data-toggle="tab">Ordini</a></li>
+		<li><a href="#privalia_mappatura_corrieri" data-toggle="tab">Corrieri</a></li>
+		
+	</ul>
+	<!----- TAB CONTENT ---->
+	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade active in" id="privalia_general">
+				<div class="row">
+					<div class="col-md-12">
+					{% import "macro/form.htm" as form %}
+					{{form.buildCol(dataform.sandbox,'col-md-6')}}
+					{{form.buildCol(dataform.token_sandbox,'col-md-12')}}
+					{{form.buildCol(dataform.token_live,'col-md-12')}}
+
+					
+					</div>
+				</div>
+		</div>
+		<div class="tab-pane fade in" id="privalia_channels">
+				<div class="row">
+					<div class="col-md-12">
+						<button onclick="download_channels();" type="button" class="btn btn-info pull-right m-b-10"><i class="fa fa-download"></i> Scarica i canali di privalia</button> 
+						{% if channels %}
+						<p>Seleziona i privalia channel che vuoi abilitare per la sincronizzazione</p>
+						<table class="table">
+							<thead>
+								<th>Channel</th>
+								<th>Marketplace</th>
+								<th></th>
+				
+							</thead>
+							<tbody>
+								{% for v in channels %}
+								<tr>
+									<td>{{v.name}}</td>
+									<td>{{v.marketplaceName}}</td>
+									<td>
+
+										<label class="label-switch">
+										  <input type="checkbox" name="formdata[channels][]" id="sandbox" value="{{v.id}}" {% if v.id in selected_channels %}checked="checked"{% endif %} class="" data-on-color="success" data-off-color="warning" data-on-text="SI" data-off-text="NO">
+										  <span class="slider"></span>
+										</label>
+										
+									
+									</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						{% endif %}
+					</div>
+				</div>
+		</div>
+
+
+		<div class="tab-pane fade in" id="privalia_mappatura_ordini">
+				<div class="row">
+					<div class="col-md-12">
+					
+					{{form.buildCol(dataform.imported_status,'col-md-12')}}
+
+					<h4>Mappatura stati ordine</h4>
+					{{form.buildCol(dataform.mapping_pending,'col-md-6')}}
+					{{form.buildCol(dataform.mapping_processing,'col-md-6')}}
+					{{form.buildCol(dataform.mapping_shipped,'col-md-6')}}
+					{{form.buildCol(dataform.mapping_cancelled,'col-md-6')}}
+					</div>
+				</div>
+		</div>
+
+		
+		<div class="tab-pane fade in" id="privalia_mappatura_corrieri">
+				<div class="row">
+					<div class="col-md-12">
+						<button onclick="download_carreiers();" type="button" class="btn btn-info pull-right m-b-10"><i class="fa fa-download"></i> Scarica i corrieri di privalia</button> 
+
+						
+						{% if couriers %}
+						<p>N.B. Gli ordini che presentano un corriere non mappato non verrano importati</p>
+						<table class="table">
+							<thead>
+								<th>Corriere Privalia</th>
+								<th>Corriere shop</th>
+				
+							</thead>
+							<tbody>
+								{% for v in couriers %}
+								<tr>
+									<td>{{v.name}}</td>
+									<td>
+										<select name="formdata[mapping_shipping][{{v.id}}]" class="couriers">
+											<option value="0">Nessuna</option>
+											{% for t in shipping_methods %}
+
+											<option value="{{t.id}}" {%if t.id == corrieri_selezionati[v.id] %}selected{% endif %}>{{t.get('name')}}</option>
+											{% endfor %}
+										</select>
+									
+									</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						{% endif %}
+						
+					</div>
+				</div>
+		</div>
+
+		
+
+
+
+		</div>
+	</div>
+
+<script>
+	
+	$('#sandbox').on('change',function(){
+		if( $(this).prop('checked') ){
+			$('#div_token_sandbox').show();
+			$('#div_token_live').hide();
+		}else{
+			$('#div_token_sandbox').hide();
+			$('#div_token_live').show();
+		}
+	})
+
+	$('#sandbox').trigger('change');
+	
+
+
+
+
+
+	 
+	 
+
+</script>
+		
+
+
+	
+	
+{% endblock %}

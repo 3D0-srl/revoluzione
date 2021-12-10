@@ -1,0 +1,624 @@
+[11:29:24]:: inizio lettura CSV
+[11:29:24]:: fine lettura CSV
+[11:29:24]:: inizio creazione categorie
+[11:29:25]:: fine creazione categorie
+[11:29:25]:: inizio creazione produttori
+[11:29:25]:: fine creazione produttori
+[11:29:25]:: inizio creazione attributi
+[11:29:25]:: fine creazione attributi
+[11:29:25]:: inizio creazione prodotti
+[11:32:17]:: inizio lettura CSV
+[11:32:18]:: fine lettura CSV
+[11:32:18]:: inizio creazione categorie
+[11:32:18]:: fine creazione categorie
+[11:32:18]:: inizio creazione produttori
+[11:32:18]:: fine creazione produttori
+[11:32:18]:: inizio creazione attributi
+[11:32:18]:: fine creazione attributi
+[11:32:18]:: inizio creazione prodotti
+[11:33:04]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 11:32:17                                          |
+|END                                               | 11:33:04                                          |
+|DURATION                                          | 0.78 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 11                                                |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[11:42:44]:: inizio lettura CSV
+[11:42:44]:: fine lettura CSV
+[11:52:18]:: inizio lettura CSV
+[11:52:18]:: fine lettura CSV
+[11:52:18]:: inizio creazione prodotti
+[11:55:54]:: inizio lettura CSV
+[11:55:54]:: fine lettura CSV
+[11:55:54]:: inizio creazione prodotti
+[12:40:37]:: inizio lettura CSV
+[12:40:37]:: fine lettura CSV
+[12:40:37]:: inizio creazione prodotti
+[12:40:49]:: inizio lettura CSV
+[12:40:49]:: fine lettura CSV
+[12:40:49]:: inizio creazione prodotti
+[12:41:15]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 12:40:49                                          |
+|END                                               | 12:41:15                                          |
+|DURATION                                          | 0.43 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:48:18]:: inizio lettura CSV
+[13:48:18]:: fine lettura CSV
+[13:48:18]:: inizio creazione categorie
+[13:48:19]:: fine creazione categorie
+[13:48:19]:: inizio creazione produttori
+[13:48:19]:: fine creazione produttori
+[13:48:19]:: inizio creazione attributi
+[13:48:19]:: fine creazione attributi
+[13:48:19]:: inizio creazione prodotti
+[13:50:30]:: fine creazione prodotti
+[13:50:30]:: inizio eliminazione prodotti
+[13:50:30]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 13:48:18                                          |
+|END                                               | 13:50:30                                          |
+|DURATION                                          | 2.2 minuti                                        |
+|MANUFACTURERS CREATED                             | 7                                                 |
+|CATEGORIES CREATED                                | 38                                                |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1135                                              |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[13:51:37]:: inizio lettura CSV
+[13:51:37]:: fine lettura CSV
+[13:51:37]:: inizio creazione prodotti
+[13:52:05]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 13:51:37                                          |
+|END                                               | 13:52:05                                          |
+|DURATION                                          | 0.47 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[14:25:52]:: inizio lettura CSV
+[14:25:52]:: fine lettura CSV
+[14:25:52]:: inizio creazione prodotti
+[14:26:20]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 14:25:52                                          |
+|END                                               | 14:26:20                                          |
+|DURATION                                          | 0.47 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[14:26:54]:: inizio lettura CSV
+[14:26:54]:: fine lettura CSV
+[14:26:54]:: inizio creazione prodotti
+[14:27:20]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 14:26:54                                          |
+|END                                               | 14:27:20                                          |
+|DURATION                                          | 0.43 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[14:28:51]:: inizio lettura CSV
+[14:28:51]:: fine lettura CSV
+[14:28:51]:: inizio creazione prodotti
+[14:29:20]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 14:28:51                                          |
+|END                                               | 14:29:20                                          |
+|DURATION                                          | 0.48 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[14:30:32]:: inizio lettura CSV
+[14:30:33]:: fine lettura CSV
+[14:30:33]:: inizio creazione prodotti
+[14:31:01]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 14:30:32                                          |
+|END                                               | 14:31:01                                          |
+|DURATION                                          | 0.48 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:42:32]:: inizio lettura CSV
+[16:42:32]:: fine lettura CSV
+[16:42:32]:: inizio creazione categorie
+[16:42:33]:: fine creazione categorie
+[16:42:33]:: inizio creazione produttori
+[16:42:33]:: fine creazione produttori
+[16:42:33]:: inizio creazione attributi
+[16:42:33]:: fine creazione attributi
+[16:42:33]:: inizio creazione prodotti
+[16:43:06]:: fine creazione prodotti
+[16:43:06]:: inizio eliminazione prodotti
+[16:43:06]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:42:32                                          |
+|END                                               | 16:43:06                                          |
+|DURATION                                          | 0.57 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:43:06]:: inizio lettura CSV
+[16:43:06]:: inizio lettura CSV
+[16:43:06]:: fine lettura CSV
+[16:43:06]:: inizio creazione categorie
+[16:43:07]:: fine lettura CSV
+[16:43:07]:: inizio creazione categorie
+[16:43:07]:: fine creazione categorie
+[16:43:07]:: inizio creazione produttori
+[16:43:07]:: fine creazione categorie
+[16:43:07]:: inizio creazione produttori
+[16:43:07]:: fine creazione produttori
+[16:43:07]:: inizio creazione attributi
+[16:43:07]:: fine creazione produttori
+[16:43:07]:: inizio creazione attributi
+[16:43:07]:: fine creazione attributi
+[16:43:07]:: fine creazione attributi
+[16:43:07]:: inizio creazione prodotti
+[16:43:07]:: inizio creazione prodotti
+[16:43:41]:: fine creazione prodotti
+[16:43:41]:: inizio eliminazione prodotti
+[16:43:41]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:43:06                                          |
+|END                                               | 16:43:41                                          |
+|DURATION                                          | 0.58 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:43:43]:: fine creazione prodotti
+[16:43:43]:: inizio eliminazione prodotti
+[16:43:43]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:43:06                                          |
+|END                                               | 16:43:43                                          |
+|DURATION                                          | 0.62 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:43:43]:: inizio lettura CSV
+[16:43:43]:: fine lettura CSV
+[16:43:43]:: inizio creazione categorie
+[16:43:43]:: fine creazione categorie
+[16:43:43]:: inizio creazione produttori
+[16:43:43]:: fine creazione produttori
+[16:43:43]:: inizio creazione attributi
+[16:43:43]:: fine creazione attributi
+[16:43:43]:: inizio creazione prodotti
+[16:44:17]:: fine creazione prodotti
+[16:44:17]:: inizio eliminazione prodotti
+[16:44:17]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:43:43                                          |
+|END                                               | 16:44:17                                          |
+|DURATION                                          | 0.57 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:44:18]:: inizio lettura CSV
+[16:44:18]:: fine lettura CSV
+[16:44:18]:: inizio creazione categorie
+[16:44:18]:: fine creazione categorie
+[16:44:18]:: inizio creazione produttori
+[16:44:18]:: fine creazione produttori
+[16:44:18]:: inizio creazione attributi
+[16:44:18]:: fine creazione attributi
+[16:44:18]:: inizio creazione prodotti
+[16:44:52]:: fine creazione prodotti
+[16:44:52]:: inizio eliminazione prodotti
+[16:44:52]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:44:18                                          |
+|END                                               | 16:44:52                                          |
+|DURATION                                          | 0.57 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:44:52]:: inizio lettura CSV
+[16:44:52]:: fine lettura CSV
+[16:44:52]:: inizio creazione categorie
+[16:44:52]:: fine creazione categorie
+[16:44:52]:: inizio creazione produttori
+[16:44:52]:: fine creazione produttori
+[16:44:52]:: inizio creazione attributi
+[16:44:52]:: fine creazione attributi
+[16:44:52]:: inizio creazione prodotti
+[16:45:27]:: fine creazione prodotti
+[16:45:27]:: inizio eliminazione prodotti
+[16:45:27]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:44:52                                          |
+|END                                               | 16:45:27                                          |
+|DURATION                                          | 0.58 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:55:14]:: inizio lettura CSV
+[16:55:14]:: fine lettura CSV
+[16:55:14]:: inizio creazione categorie
+[16:55:15]:: fine creazione categorie
+[16:55:15]:: inizio creazione produttori
+[16:55:15]:: fine creazione produttori
+[16:55:15]:: inizio creazione attributi
+[16:55:15]:: fine creazione attributi
+[16:55:15]:: inizio creazione prodotti
+[16:55:47]:: fine creazione prodotti
+[16:55:47]:: inizio eliminazione prodotti
+[16:55:47]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:55:14                                          |
+|END                                               | 16:55:47                                          |
+|DURATION                                          | 0.55 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 9                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:57:24]:: inizio lettura CSV
+[16:57:24]:: fine lettura CSV
+[16:57:24]:: inizio creazione categorie
+[16:57:24]:: fine creazione categorie
+[16:57:24]:: inizio creazione produttori
+[16:57:24]:: fine creazione produttori
+[16:57:24]:: inizio creazione attributi
+[16:57:24]:: fine creazione attributi
+[16:57:24]:: inizio creazione prodotti
+[16:57:24]:: fine creazione prodotti
+[16:57:24]:: inizio eliminazione prodotti
+[16:57:24]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:57:24                                          |
+|END                                               | 16:57:24                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 1122                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:57:36]:: inizio lettura CSV
+[16:57:36]:: fine lettura CSV
+[16:57:36]:: inizio creazione categorie
+[16:57:36]:: fine creazione categorie
+[16:57:36]:: inizio creazione produttori
+[16:57:36]:: fine creazione produttori
+[16:57:36]:: inizio creazione attributi
+[16:57:36]:: fine creazione attributi
+[16:57:36]:: inizio creazione prodotti
+[16:57:36]:: fine creazione prodotti
+[16:57:36]:: inizio eliminazione prodotti
+[16:57:36]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:57:36                                          |
+|END                                               | 16:57:36                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 1122                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:58:39]:: inizio lettura CSV
+[16:58:39]:: fine lettura CSV
+[16:58:39]:: inizio creazione categorie
+[16:58:39]:: fine creazione categorie
+[16:58:39]:: inizio creazione produttori
+[16:58:39]:: fine creazione produttori
+[16:58:39]:: inizio creazione attributi
+[16:58:39]:: fine creazione attributi
+[16:58:39]:: inizio creazione prodotti
+[16:58:39]:: fine creazione prodotti
+[16:58:39]:: inizio eliminazione prodotti
+[16:58:39]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 16:58:39                                          |
+|END                                               | 16:58:39                                          |
+|DURATION                                          | 0 minuti                                          |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 1122                                              |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:08:43]:: inizio lettura CSV
+[17:08:44]:: fine lettura CSV
+[17:08:44]:: inizio creazione prodotti
+[17:09:10]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:08:43                                          |
+|END                                               | 17:09:10                                          |
+|DURATION                                          | 0.45 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:15:15]:: inizio lettura CSV
+[17:15:15]:: fine lettura CSV
+[17:15:15]:: inizio creazione categorie
+[17:15:16]:: fine creazione categorie
+[17:15:16]:: inizio creazione produttori
+[17:15:16]:: fine creazione produttori
+[17:15:16]:: inizio creazione attributi
+[17:15:16]:: fine creazione attributi
+[17:15:43]:: inizio lettura CSV
+[17:15:44]:: fine lettura CSV
+[17:15:44]:: inizio creazione categorie
+[17:15:44]:: fine creazione categorie
+[17:15:44]:: inizio creazione produttori
+[17:15:44]:: fine creazione produttori
+[17:15:44]:: inizio creazione attributi
+[17:15:44]:: fine creazione attributi
+[17:20:54]:: inizio lettura CSV
+[17:20:54]:: fine lettura CSV
+[17:20:54]:: inizio creazione categorie
+[17:20:55]:: fine creazione categorie
+[17:20:55]:: inizio creazione produttori
+[17:20:55]:: fine creazione produttori
+[17:20:55]:: inizio creazione attributi
+[17:20:55]:: fine creazione attributi
+[17:21:09]:: inizio lettura CSV
+[17:21:09]:: fine lettura CSV
+[17:21:09]:: inizio creazione categorie
+[17:21:09]:: fine creazione categorie
+[17:21:09]:: inizio creazione produttori
+[17:21:09]:: fine creazione produttori
+[17:21:09]:: inizio creazione attributi
+[17:21:09]:: fine creazione attributi
+[17:21:09]:: inizio creazione prodotti
+[17:23:35]:: fine creazione prodotti
+[17:23:35]:: inizio eliminazione prodotti
+[17:23:35]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:21:09                                          |
+|END                                               | 17:23:35                                          |
+|DURATION                                          | 2.43 minuti                                       |
+|MANUFACTURERS CREATED                             | 1                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 1061                                              |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[17:36:44]:: inizio lettura CSV
+[17:36:44]:: fine lettura CSV
+[17:36:44]:: inizio creazione prodotti
+[17:37:11]:: fine creazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Update quantities and prices                      |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 17:36:44                                          |
+|END                                               | 17:37:11                                          |
+|DURATION                                          | 0.45 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+

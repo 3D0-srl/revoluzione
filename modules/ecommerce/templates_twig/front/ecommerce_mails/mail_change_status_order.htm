@@ -1,0 +1,31 @@
+{% extends 'layouts/mail.htm' %}
+{% block content %}
+{% if custom_message %}
+	{{custom_message|raw}}
+{% else %}
+
+	<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#231f20" size="+2">
+		<strong>Gentile, {{cart.name}} {{cart.surname}},</strong>
+	</font>
+	<br><br><br>
+	<font face="Gotham, Helvetica Neue, Helvetica, Arial, sans-serif" color="#424242">
+		Ti comunichiamo che il tuo ordine ha cambiato stato.<br>
+		Lo stato del tuo ordine è {getStatusCart(cart.status):h}.<br>
+		{% if cart.trackingCode %}Il codice di tracciamneto dell'ordine é : {{cart.trackingCode}}{% endif %}
+		{% if note %}
+		<br><br>
+		Note: {{note}}
+		{% endif %}
+		<br><br>
+		Puoi monitorare lo stato dei tuoi ordini 
+		{% if cart.user %}
+			<a href="{{abslolute_baseurl}}/index.php?ctrl=Orders&mod=ecommerce&action=view&id={{cart.id}}">qui &raquo;</a>
+		{% else %}
+			<a href="{{abslolute_baseurl}}/index.php?ctrl=Orders&mod=ecommerce&action=view&id{{cart.id}}=&pass={{cart.password_not_logged}}">qui &raquo;</a>
+		{% endif %}
+	</font>
+{% endif %}
+
+
+{% endblock %}
+

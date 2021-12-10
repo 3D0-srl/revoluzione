@@ -1,0 +1,656 @@
+msgid "lunghezzamin"
+msgstr "Il valore inserito per il campo %s è inferiore alla lunghezza minima consentita %s"
+
+msgid "lunghezzamax"
+msgstr "Il valore inserito per il campo %s supera la lunghezza massima consentita %s"
+
+msgid "validita"
+msgstr "Il valore inserito per il campo %s non è valido"
+
+msgid "captcha"
+msgstr "Campo captcha assente o non valido"
+
+msgid "mancante"
+msgstr "Il campo %s è obbligatorio"
+
+msgid "non_ammesso"
+msgstr "Valore per il campo %s non ammesso"
+
+
+msgid "sku_empty"
+msgstr "codice articolo mancante"
+
+msgid "sku_duplicate"
+msgstr "codice articolo già esistente"
+
+msgid "slug_duplicate"
+msgstr "slug già esistente"
+
+msgid "attributes_duplicate"
+msgstr "combinazione di attributi già esistente per questo articolo"
+
+
+msgid "label_duplicate"
+msgstr "etichetta già presente"
+
+msgid "label_empty"
+msgstr "etichetta obbligatoria"
+
+msgid "priority_duplicate"
+msgstr "priorità già presente"
+
+msgid "category_locked"
+msgstr "categoria utente bloccata"
+ 
+msgid "auth_base"
+msgstr "Utente base"
+
+msgid "auth_catalog"
+msgstr "Gestioni catalogo"
+
+msgid "auth_cms"
+msgstr "CMS"
+
+msgid "auth_cms_page"
+msgstr "CMS - gestione pagine"
+
+msgid "auth_cms_gallery"
+msgstr "CMS - gestione gallery"
+
+msgid "auth_cms_gallery"
+msgstr "CMS - gestione news"
+
+
+msgid "auth_newsletter"
+msgstr "Gestione newsletter"
+
+msgid "auth_config"
+msgstr "Configurazione sito"
+
+msgid "auth_user_management"
+msgstr "Gestione utenti"
+
+msgid "auth_admin"
+msgstr "Amministratore sito"
+
+msgid "auth_ecommerce"
+msgstr "Gestione ordini"
+
+msgid "auth_superadmin"
+msgstr "super admin"
+
+msgid "auth_post"
+msgstr "Blog"
+
+msgid "auth_post_admin"
+msgstr "Blog admin"
+
+msgid "url_duplicate"
+msgstr "url già presente in archivio"
+
+msgid "username_duplicate"
+msgstr "username già presente in archivio"
+
+msgid "email_duplicate"
+msgstr "email già presente in archivio"
+
+msgid "username_or_password_not_valid"
+msgstr "username o password non valide"
+
+msgid "email_empty"
+msgstr "email obbligatoria"
+
+msgid "password_empty"
+msgstr "password obbligatoria"
+
+msgid "user_not_active"
+msgstr "account non attivo"
+
+
+msgid "seleziona"
+msgstr "seleziona..."
+
+msgid "seleziona_spedizione"
+msgstr "seleziona spedizione..."
+
+msgid "no_product_section"
+msgstr "Nessun prodotto per la sezione selezionata"
+
+msgid "no_product_brand"
+msgstr "Nessun prodotto per il brand selezionato"
+
+
+msgid "no_product_tag"
+msgstr "Nessun prodotto per il tag selezionato"
+
+msgid "no_product_in_catalog"
+msgstr "Il prodotto non è presente nel catalogo"
+
+
+
+msgid "no_shipping_country"
+msgstr "Nessun metodo di spedizione per la nazione selezionata"
+
+
+msgid "description_order_paypal"
+msgstr "Pagamento di %s € relativo all'ordine %s su %s"
+
+
+
+msgid "status_cart_active"
+msgstr "attivo"
+
+msgid "status_cart_waiting"
+msgstr "in attesa di pagamento"
+
+msgid "status_cart_waiting_bonifico"
+msgstr "in attesa di Bonifico"
+
+msgid "status_cart_waiting_contrassegno"
+msgstr "in attesa di Contrassegno"
+
+msgid "status_cart_canceled"
+msgstr "annullato"
+
+msgid "status_cart_deleted"
+msgstr "cancellato"
+
+msgid "status_cart_confirmed"
+msgstr "pagamento ricevuto"
+
+msgid "status_cart_redirect_gateway"
+msgstr "reindirizzamento pagamento"
+
+msgid "status_cart_active_subscription"
+msgstr "abbonamento attivo"
+
+msgid "status_cart_cancelled_subscription"
+msgstr "abbonamento cancellato"
+
+
+msgid "status_cart_payment_paypal_error"
+msgstr "errore paypal"
+
+
+
+msgid "status_cart_sent"
+msgstr "spedito"
+
+msgid "status_cart_delivered"
+msgstr "consegnato"
+
+msgid "status_cart_processing"
+msgstr "in lavorazione"
+
+msgid "status_cart_payment_paypal_canceled"
+msgstr "pagamento paypal annullato"
+
+msgid "status_cart_payment_quipago_canceled"
+msgstr "pagamento cartasi annullato"
+
+
+msgid "subject_cambio_stato_carrello"
+msgstr "Cambio stato ordine su %s"
+
+msgid "subject_mail_shop"
+msgstr "[%s] Conferma ordine su %s"
+
+msgid "subject_registrazione_utente"
+msgstr "Registrazione al sito %s"
+
+msgid "subject_lostpass"
+msgstr "Recupero password sul sito %s"
+
+msgid "option_product"
+msgstr "opzione"
+
+
+msgid "product_is_over"
+msgstr "Il prodotto <b>%s</b> è esaurito"
+
+msgid "product_not_available"
+msgstr "Il prodotto <b>%s</b> non è più disponibile"
+
+msgid "quantity_product_not_available"
+msgstr "Il prodotto <b>%s</b> non è disponibile per la quantità richiesta<br>La quantità disponibile é <b>%s</b>"
+
+msgid "minOrder_product"
+msgstr "La quantità minima ordinabile per <b>%s</b> è <b>%s</b> pezzi"
+
+msgid "maxOrder_product"
+msgstr "La quantità massima ordinabile per <b>%s</b> è <b>%s</b> pezzi"
+
+msgid "error_min_order_product"
+msgstr "La quantità minima ordinabile per il prodotto <b>%s</b> è <b>%s</b>"
+
+msgid "error_max_order_product"
+msgstr "La quantità massima ordinabile per il prodotto <b>%s</b> è <b>%s</b>"
+
+
+msgid "error_not_logged_wishlist"
+msgstr "Per accedere alla wishlist devi effettuare il login."
+
+
+msgid "activation_nak"
+msgstr "Si è verificato qualche errore nel processo di attivazione"
+
+
+msgid "no_user"
+msgstr "Utente non presente in archivio"
+
+
+msgid "error_title_alert"
+msgstr "Attenzione"
+
+
+msgid "success_title_alert"
+msgstr "Operazione completata"
+
+msgid "confirm_title_alert"
+msgstr "Conferma operazione"
+
+msgid "confirm_cancel_alert"
+msgstr "Annulla"
+
+msgid "confirm_text_alert"
+msgstr "Sei sicuro di voler procedere con l'operazione?"
+
+msgid "confirm_ok_alert"
+msgstr "Procedi"
+
+
+
+msgid "add_to_cart_ok"
+msgstr "%s aggiunto al carrello.<br>Il tuo carrello contiene %s articoli per un totale di %s %s"
+
+msgid "add_to_cart_mobile_ok"
+msgstr "%s aggiunto al carrello"
+
+msgid "go_cart"
+msgstr "Vai al Carrello"
+
+
+msgid "hours_notification"
+msgstr "ore fa"
+
+msgid "minutes_notification"
+msgstr "minuti fa"
+
+msgid "days_notification"
+msgstr "giorni fa"
+
+
+msgid "new_order_notification"
+msgstr "Ordine di &euro; %s effettutato con %s da %s %s"
+
+msgid "new_user_notification"
+msgstr "L'utente %s %s si è registrato al sito"
+
+
+msgid "new_email_notification"
+msgstr "Nuova mail dal form %s inviata da %s"
+
+
+msgid "order_by"
+msgstr "ordina per"
+
+msgid "order_by_hight"
+msgstr "prezzo descrescente"
+
+msgid "order_by_low"
+msgstr "prezzo crescente"
+
+msgid "order_by_sku"
+msgstr "codice articolo"
+
+msgid "order_by_name"
+msgstr "nome articolo"
+
+
+
+msgid "order_by_hight"
+msgstr "prezzo descrescente"
+
+msgid "order_by_low"
+msgstr "prezzo crescente"
+
+msgid "order_by_sku"
+msgstr "codice articolo"
+
+msgid "order_by_name"
+msgstr "nome articolo"
+
+
+msgid "type_buyer_company"
+msgstr "Azienda"
+
+msgid "type_buyer_private"
+msgstr "Privato"
+
+
+msgid "not_logged_wishlist"
+msgstr "Per aggiungere un prodotto alla tua wishlist effetua il login."
+
+
+msgid "product_not_exists"
+msgstr "Prodotto non presente in archivio."
+
+
+msgid "product_in_wishlist"
+msgstr "Prodotto già presente nella tua wishlist."
+
+msgid "product_added_wishlist"
+msgstr "Prodotto aggiunto alla tua wishlist."
+
+msgid "product_not_in_wishlist"
+msgstr "Prodotto non presente nella tua wishlist."
+
+msgid "product_removed_wishlist"
+msgstr "Prodotto rimosso dalla tua wishlist."
+
+
+
+msgid "stripe_cardNumber_empty"
+msgstr "Numero della carta mancante"
+
+msgid "stripe_cardNumber_invalid"
+msgstr "Numero della carta non valido"
+
+
+msgid "stripe_month_invalid"
+msgstr "Mese non valido"
+
+msgid "stripe_year_invalid"
+msgstr "Anno non valido"
+
+
+msgid "stripe_invalid_format"
+msgstr "Numero della carta non valido"
+
+msgid "stripeCardNumber"
+msgstr "Numero carta"
+
+msgid "stripeBrand"
+msgstr "Tipologia carta"
+
+msgid "stripeCardExpiryMonth"
+msgstr "Mese scadenza"
+
+msgid "stripeCardExpiryYear"
+msgstr "Anno scadenza"
+
+msgid "stripeCardCVC"
+msgstr "CVC"
+
+
+
+
+msgid "form_buy_username"
+msgstr "username"
+
+msgid "form_buy_password"
+msgstr "password"
+
+msgid "form_buy_name"
+msgstr "nome"
+
+msgid "form_buy_surname"
+msgstr "cognome"
+
+msgid "form_buy_email"
+msgstr "email"
+
+msgid "form_buy_fiscalCode"
+msgstr "Codice fiscale"
+
+msgid "form_buy_vatNumber"
+msgstr "Partita IVA"
+
+msgid "form_buy_phone"
+msgstr "telefono"
+
+msgid "form_buy_cellular"
+msgstr "cellulare"
+
+msgid "form_buy_country"
+msgstr "nazione"
+
+msgid "form_buy_address"
+msgstr "indirizzo"
+
+msgid "form_buy_postalCode"
+msgstr "cap"
+
+msgid "form_buy_city"
+msgstr "citta"
+
+msgid "form_buy_province"
+msgstr "provincia"
+
+msgid "form_buy_typeBuyer"
+msgstr "tipo utente"
+
+msgid "form_buy_company"
+msgstr "azienda"
+
+msgid "form_buy_shipping"
+msgstr "spedizione"
+
+msgid "form_buy_shippingName"
+msgstr "nome destinatario"
+
+msgid "form_buy_shippingEmail"
+msgstr "email di spedizione"
+
+msgid "form_buy_shippingSurname"
+msgstr "cognome destinatario"
+
+msgid "form_buy_shippingPhone"
+msgstr "telefono destinatario"
+
+msgid  "form_buy_shippingCellular"
+msgstr "cellulare destinatario"
+
+msgid  "form_buy_shippingCountry"
+msgstr "nazione destinatario"
+
+msgid  "form_buy_shippingAddress"
+msgstr "indirizzo destinatario"
+
+msgid  "form_buy_shippingPostalCode"
+msgstr "cap"
+
+msgid  "form_buy_shippingCity"
+msgstr "citta destinatario"
+
+msgid  "form_buy_shippingProvince"
+msgstr "provincia destinatario"
+
+msgid  "form_buy_shippingMethod"
+msgstr "metodo di spedizione"
+
+msgid  "form_buy_shippingMethod2"
+msgstr "metodo di spedizione"
+
+msgid  "form_buy_registration"
+msgstr "registrazione"
+
+msgid  "form_buy_requestInvoice"
+msgstr "richiesta fattura"
+
+
+msgid "mail_contact_subject"
+msgstr "Richiesta contatto da %s"
+
+msgid "no_address_selected"
+msgstr "Selezionare un indirizzo di spedizione!"
+
+msgid "no_shipping_method_selected"
+msgstr "Selezionare un metodo di spedizione!"
+
+
+msgid "description_payment_recurrent_paypal"
+msgstr "Pagamento automatico ogni %s %s"
+
+msgid "description_payment_recurrent_paypal_month"
+msgstr "mese"
+
+msgid "description_payment_recurrent_paypal_year"
+msgstr "anno"
+
+msgid "description_payment_recurrent_paypal_months"
+msgstr "mesi"
+
+msgid "description_payment_recurrent_paypal_years"
+msgstr "anni"
+
+msgid "description_payment_recurrent_paypal_days"
+msgstr "giorni"
+
+msgid "description_payment_recurrent_paypal_day"
+msgstr "giorno"
+
+msgid "product_not_found"
+msgstr "Prodotto non trovato in archivio!"
+
+
+
+msgid "cart_details"
+msgstr "Carrello"
+
+msgid "cart_datauser"
+msgstr "Informazioni Personali"
+
+msgid "cart_addresses"
+msgstr "Indirizzi"
+
+msgid "cart_address"
+msgstr "Indirizzo"
+
+msgid "cart_shipping"
+msgstr "Spedizione"
+
+msgid "cart_payment"
+msgstr "Pagamento"
+
+msgid "cart_back_to_home"
+msgstr "Torna alla Home"
+
+msgid "cart_login"
+msgstr "Login"
+
+msgid "cart_contact"
+msgstr "Contatti"
+
+msgid "cart_your_cart"
+msgstr "Il tuo carrello"
+
+msgid "cart_emty_message"
+msgstr "Il carrello è vuoto. Aggiungi i prodotti che ti interessano e procedi con l'ordine."
+
+msgid "cart_product_title"
+msgstr "Articolo"
+
+msgid "cart_product_quantity"
+msgstr "Quantità"
+
+msgid "cart_product_price"
+msgstr "Prezzo"
+
+msgid "cart_product_total"
+msgstr "Totale"
+
+
+msgid "cart_edit_address"
+msgstr "Modifica"
+
+msgid "cart_delete_address"
+msgstr "Elimina"
+
+msgid "cart_add_address"
+msgstr "Aggiungi un nuovo indirizzo"
+
+msgid "cart_more_details"
+msgstr "Espandi"
+
+msgid "cart_view_details"
+msgstr "Vedi Riepilogo"
+
+msgid "cart_total"
+msgstr "Totale"
+
+msgid "cart_subtotal"
+msgstr "Subtotale"
+
+msgid "cart_payment_cost"
+msgstr "Costi pagamento"
+
+msgid "cart_shipping_cost"
+msgstr "Costi spedizione"
+
+msgid "cart_next"
+msgstr "Avanti"
+
+msgid "cart_prev"
+msgstr "Indietro"
+
+msgid "cart_shipping_methods"
+msgstr "Metodi di spedizione"
+
+msgid "cart_payment_methods"
+msgstr "Metodi di pagamento"
+
+msgid "cart_no_couriers"
+msgstr "Nessun metodo di spedizione per la nazione indicata"
+
+msgid "cart_vat_included"
+msgstr "Iva incl."
+
+msgid "cart_cancel"
+msgstr "Annulla"
+
+msgid "cart_save"
+msgstr "Salva"
+
+msgid "cart_add"
+msgstr "Aggiungi"
+
+msgid "cart_label_address"
+msgstr "Etichetta"
+
+msgid "cart_name"
+msgstr "Nome"
+
+msgid "cart_surname"
+msgstr "Cognome"
+
+msgid "cart_city"
+msgstr "Città"
+
+msgid "cart_province"
+msgstr "Provincia"
+
+msgid "cart_postal_code"
+msgstr "CAP"
+
+msgid "cart_email"
+msgstr "Email"
+
+msgid "cart_phone"
+msgstr "Telefono"
+
+msgid "cart_mobile_phone"
+msgstr "Cellulare"
+
+msgid "cart_country"
+msgstr "Nazione"
+
+
+
+
+
+
+
+
+
+

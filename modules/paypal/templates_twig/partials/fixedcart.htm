@@ -1,0 +1,100 @@
+<div class="fixedcart" id="carrello_fisso" step="{step_cart}">
+	<div class="space15"></div>
+	<div class="box-costi">
+		<div class="col50">{{tr('Subtotale','paypal')}}</div>
+
+		<div class="col50 text-right bb">
+			<input type="hidden" id="cart_total_products_value" value="{{cart_total_products}}">
+			{% if show_taxes %}
+				{{currencyLabel|raw}} <span id="cart_total_products_without_tax">{{formattanumero(cart_total_products_without_tax)}}</span>
+			{% else %}
+				{{currencyLabel|raw}} <span id="cart_total_products">{{formattanumero(cart_total_products)}}</span>
+			{% endif %}
+		</div>
+
+
+		{% if show_taxes %}
+			<div class="space10"></div>
+			<div class="col50">Tasse</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="cart_taxes">{{formattanumero(cart_total_tax)}}</span></td>
+			</div>
+	
+		{% endif %}
+	
+			
+		{% if class_nosped %}
+			<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+		{% else %}
+			<div class="space10"></div>
+			<div class="col50">{{tr('Costi spedizione','paypal')}}</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} <span id="priceShippingFormatted">{{formattanumero(cart_shipping_price)}}</span></td>
+				<input type="hidden" value="{{cart_shipping_price}}" id="priceShipping">
+			</div>
+		{% endif %}
+
+		
+
+		
+		<div class="space10"></div>
+		<div class="col50">{{tr('Costi pagamento','paypal')}}</div>
+		<div class="col50 text-right bb">
+			{{currencyLabel|raw}} <span id="pricePaymentFormatted">{{formattanumero(cart_payment_price)}}</span></td>
+			<input type="hidden" value="0" id="pricePayment" value="{{cart_payment_price}}">
+		</div>
+		
+
+		{% if cart_discount %}
+			<div class="space10"></div>
+			<div class="col50">{{tr('Sconto','paypal')}}</div>
+			<div class="col50 text-right bb">
+				{{currencyLabel|raw}} - {{formattanumero(cart_discount)}}</td>
+				<input type="hidden" value="{{cart_discount}}" id="cart_discount">
+			</div>
+			
+		{% endif %}
+		
+		<span id="menu_cart_left"></span>
+	</div>
+	<div class="dividerfixed"></div>
+	<span class="box-costi totale">
+		<div class="col50">{{tr('Totale','cart_onepage')}}</div>
+		<div class="col50 text-right bb">
+			{{currencyLabel|raw}} <span id="cart_total">{{formattanumero(cart_total)}}</span>
+		</div>
+	</span>
+	<div class="dividerfixed"></div>
+	<div class="div_riepilogo only_desk">
+			<div class="titcart relative">{{tr('Riepilogo ordine','paypal')}}</div>
+			<div class="clear"></div>
+			<div class="cont-prod-cart">
+				{% for riga in paypal_orders %}
+					<div class="dx-sprod">
+						<div class="col-prod-cart">
+							<img class="prod-cart" src="{{riga.img}}">
+							<div class="pallino_quantity">{{riga.quantity}}</div>
+						</div>
+						<div class="col-prod-cart">
+							<p>{{riga.productname|raw}}</p>
+						</div>
+						<div class="col-prod-cart">
+							<span class=""> {{currencyLabel|raw}} <label class="total_{{riga.getId()}}">{{riga.getTotalPriceFormatted()}}</label></span>
+						</div>
+					</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	{% if (edit_address == false) and (error is null) %}
+	<button type="button" class="btn-next" onclick="process('{{token}}','{{PayerID}}',{{id_order}});">{{tr("Conferma e concludi!",'paypal')}}</button>
+	{% endif %}
+	
+	
+</div>
+
+<div class="overlay">
+	<div class="cart_loader">
+		<p id="message_loader">{{loading_message|raw}}</p>
+	</div>
+</div>

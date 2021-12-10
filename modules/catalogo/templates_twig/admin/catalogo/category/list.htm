@@ -1,0 +1,209 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('categories')|title}} {% endblock %} 
+
+
+{% block css %}
+{{parent()}}
+<style>	
+	.edit_button{
+		position: absolute;
+		right: 2px;
+		top: 7px;
+	}
+	.dd-handle {
+		display: block;
+		height: 53px !important;
+		margin: 5px 0;
+		padding: 5px 10px;
+		color: #6f7b8a;
+		text-decoration: none;
+		font-weight: 600;
+		border: 1px solid #DFE1E6;
+		background: #DFE1E6;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
+	.dd-handle:hover {
+		background-color: #c3c7d0;
+	}
+</style>
+{% endblock %}
+
+{% block content %}	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="dd" id="nestable">
+				
+				
+				{% if items %}
+				<ol class="dd-list">
+					{% for v in items %}
+					<li class="dd-item" data-id="{{v.id}}">
+						
+						<div class="dd-handle"><i class="{{v.icon}}"></i> {{v.get('name')}} {{numProducts(v)|raw}} {% if v.visibility == false %}<span id="section_{{v.id}}_label_offline" class="label label-danger">OFFLINE</span>{% else %}<span id="section_{{v.id}}_label_offline" class="label label-danger" style="display:none">OFFLINE</span>{% endif %}
+						
+							<div class="btn-group media-group dd-nodrag edit_button">
+								  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i>  {{tr('edit')}}</a>
+								  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+										<span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu media-menu text-left" role="menu">
+									<li><a href="#" onclick="executeCopy('{{baseurl}}{{v.getUrl()}}')"><i class="fa fa-link"></i> copia link</a></li>
+									{% if v.visibility %}
+									<li id="section_{{v.id}}_online"><a href="#" onclick="change_visibility({{v.id}})"><i class="fa fa-eye"></i> online</a></li>
+									<li id="section_{{v.id}}_offline" style="display:none"><a href="#" onclick="change_visibility({{v.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+									{% else %}
+									<li id="section_{{v.id}}_online" style="display:none"><a href="#" onclick="change_visibility({{v.id}})"><i class="fa fa-eye"></i> online</a></li>
+									<li id="section_{{v.id}}_offline"><a href="#" onclick="change_visibility({{v.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+									{% endif %}
+									<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+									<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+								  </ul>
+							</div>
+			
+
+						</div>
+						
+						{% if v.children %}
+						<ol class="dd-list">
+							{% for v1 in v.children %}
+							<li  class="dd-item" data-id="{{v1.id}}">
+							
+							
+							<div class="dd-handle"><i class="{{v1.icon}}"></i> {{v1.get('name')}} {{numProducts(v1)|raw}} {% if v1.visibility == false %}<span id="section_{{v1.id}}_label_offline" class="label label-danger">OFFLINE</span>{% else %}<span id="section_{{v1.id}}_label_offline" class="label label-danger" style="display:none">OFFLINE</span>{% endif %}
+								<div class="btn-group media-group dd-nodrag edit_button">
+									  <a href="{{url_edit}}&id={{v1.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i>  {{tr('edit')}}</a>
+									  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+											<span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu media-menu text-left" role="menu">
+										<li><a href="#" onclick="executeCopy('{{baseurl}}{{v1.getUrl()}}')"><i class="fa fa-link"></i> copia link</a></li>
+										{% if v1.visibility %}
+										<li id="section_{{v1.id}}_online"><a href="#" onclick="change_visibility({{v1.id}})"><i class="fa fa-eye"></i> online</a></li>
+										<li id="section_{{v1.id}}_offline" style="display:none"><a href="#" onclick="change_visibility({{v1.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+										{% else %}
+										<li id="section_{{v1.id}}_online" style="display:none"><a href="#" onclick="change_visibility({{v1.id}})"><i class="fa fa-eye"></i> online</a></li>
+										<li id="section_{{v1.id}}_offline"><a href="#" onclick="change_visibility({{v1.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+										{% endif %}
+										<li><a href="{{url_duplicate}}&id={{v1.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+										<li><a href="{{url_confirm_delete}}&id={{v1.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+									  </ul>
+								</div>
+
+							</div>
+							{% if v1.children %}
+
+								<ol class="dd-list">
+									
+									{% for v2 in v1.children %}
+									<li  class="dd-item" data-id="{{v2.id}}">
+									
+									
+									<div class="dd-handle"><i class="{{v2.icon}}"></i> {{v2.get('name')}} {{numProducts(v2)|raw}} {% if v2.visibility == false %}<span id="section_{{v2.id}}_label_offline" class="label label-danger">OFFLINE</span>{% else %}<span id="section_{{v2.id}}_label_offline" class="label label-danger" style="display:none">OFFLINE</span>{% endif %}
+									<div class="btn-group media-group dd-nodrag edit_button">
+										  <a href="{{url_edit}}&id={{v2.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i>  {{tr('edit')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="#" onclick="executeCopy('{{baseurl}}{{v2.getUrl()}}')"><i class="fa fa-link"></i> copia link</a></li>
+											{% if v2.visibility %}
+											<li id="section_{{v2.id}}_online"><a href="#" onclick="change_visibility({{v2.id}})"><i class="fa fa-eye"></i> online</a></li>
+											<li id="section_{{v2.id}}_offline" style="display:none"><a href="#" onclick="change_visibility({{v2.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+											{% else %}
+											<li id="section_{{v2.id}}_online" style="display:none"><a href="#" onclick="change_visibility({{v2.id}})"><i class="fa fa-eye"></i> online</a></li>
+											<li id="section_{{v2.id}}_offline"><a href="#" onclick="change_visibility({{v2.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+											{% endif %}
+											<li><a href="{{url_duplicate}}&id={{v2.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+											<li><a href="{{url_confirm_delete}}&id={{v2.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+										  </ul>
+									</div>
+									</div>
+
+									{% if v2.children %}
+
+										<ol class="dd-list">
+											{% for v3 in v2.children %}
+											<li  class="dd-item" data-id="{{v3.id}}">
+											
+											
+											<div class="dd-handle"><i class="{{v3.icon}}"></i> {{v3.get('name')}} {{numProducts(v3)|raw}} {% if v3.visibility == false %}<span id="section_{{v3.id}}_label_offline" class="label label-danger">OFFLINE</span>{% else %}<span id="section_{{v3.id}}_label_offline" class="label label-danger" style="display:none">OFFLINE</span>{% endif %}
+											<div class="btn-group media-group dd-nodrag edit_button">
+												  <a href="{{url_edit}}&id={{v3.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i>  {{tr('edit')}}</a>
+												  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+														<span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu media-menu text-left" role="menu">
+													<li><a href="#" onclick="executeCopy('{{baseurl}}{{v3.getUrl()}}')"><i class="fa fa-link"></i> copia link</a></li>
+													{% if v3.visibility %}
+													<li id="section_{{v3.id}}_online"><a href="#" onclick="change_visibility({{v3.id}})"><i class="fa fa-eye"></i> online</a></li>
+													<li id="section_{{v3.id}}_offline" style="display:none;"><a href="#" onclick="change_visibility({{v3.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+													{% else %}
+													<li id="section_{{v3.id}}_online" style="display:none"><a href="#" onclick="change_visibility({{v3.id}})"><i class="fa fa-eye"></i> online</a></li>
+													<li id="section_{{v3.id}}_offline"><a href="#" onclick="change_visibility({{v3.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+													{% endif %}
+													<li><a href="{{url_duplicate}}&id={{v3.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+													<li><a href="{{url_confirm_delete}}&id={{v3.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+												  </ul>
+											</div>
+											</div>
+
+											{% if v3.children %}
+
+												<ol class="dd-list">
+													<li flexy:foreach="v3.children,v4" class="dd-item" data-id="{{v4.id}}">
+													
+													
+													<div class="dd-handle"><i class="{{v4.icon}}"></i> {{v4.get('name')}} {{numProducts(v4)|raw}} {% if v4.visibility == false %}<span id="section_{{v4.id}}_label_offline" class="label label-danger">OFFLINE</span>{% else %}<span id="section_{{v4.id}}_label_offline" class="label label-danger" style="display:none">OFFLINE</span>{% endif %}
+													<div class="btn-group media-group dd-nodrag edit_button">
+														  <a href="{{url_edit}}&id={{v4.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i>  {{tr('edit')}}</a>
+														  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+																<span class="caret"></span>
+														  </button>
+														  <ul class="dropdown-menu media-menu text-left" role="menu">
+															<li><a href="#" onclick="executeCopy('{{baseurl}}{{v4.getUrl()}}')"><i class="fa fa-link"></i> copia link</a></li>
+															{% if v4.visibility %}
+															<li id="section_{{v4.id}}_online"><a href="#" onclick="change_visibility({{v4.id}})"><i class="fa fa-eye"></i> online</a></li>
+															<li id="section_{{v4.id}}_offline" style="display:none;"><a href="#" onclick="change_visibility({{v4.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+															{% else %}
+															<li id="section_{{v4.id}}_online" style="display:none"><a href="#" onclick="change_visibility({{v4.id}})"><i class="fa fa-eye"></i> online</a></li>
+															<li id="section_{{v4.id}}_offline"><a href="#" onclick="change_visibility({{v4.id}})"><i class="fa fa-eye-slash"></i> offline</a></li>
+															{% endif %}
+															<li><a href="{{url_duplicate}}&id={{v4.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+															<li><a href="{{url_confirm_delete}}&id={{v4.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+														  </ul>
+													</div>
+													</div>
+													
+													</li>
+												</ol>
+											{% endif %}
+											
+											</li>
+											{% endfor %}
+										</ol>
+									{% endif %}
+									
+									</li>
+									{% endfor %}
+								</ol>
+							{% endif %}
+							
+							</li>
+							{% endfor %}
+						</ol>
+						{% endif %}
+					</li>
+					{% endfor %}
+					
+				</ol>
+				{% else %}
+				<p>{{tr('no_record')}}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

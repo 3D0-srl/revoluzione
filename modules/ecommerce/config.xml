@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<module>
+  <info> 
+	<author>Ciro Napolitano</author> 
+    <name>Ecommerce</name> 
+	<permission>superadmin</permission> 
+	<tag>ecommerce</tag> 
+	<scope></scope>
+	<version>3</version>
+	<autoload>1</autoload>
+	<kind>ecommerce</kind>
+	<description>Modulo che permette l'integrazione dell'ecommerce nel CMS</description> 
+  </info>
+  <admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Ecommerce</it>
+						<en>Ecomeerce</en>
+					</name>
+				</locale>
+				<tag>ecommerce</tag> 
+				<icon>glyph-icon flaticon-shopping80</icon> 
+				<permission>ecommerce</permission> 
+				<priority>100</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Ordini</it>
+						<en>Orders</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>manage_orders</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=OrderAdmin&amp;mod=ecommerce&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Lisitini</it>
+						<en>Price lists</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>manage_pricelist</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=PriceListAdmin&amp;mod=ecommerce&amp;action=list</url>
+				<priority>4</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Merce esaurita</it>
+						<en>Out of stock</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>item_runout</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=OutOfStock&amp;mod=ecommerce</url>
+				<priority>3</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Metodi di pagamento</it>
+						<en>Payment Methods</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>manage_payments</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=PaymentMethodAdmin&amp;mod=ecommerce&amp;action=list</url>
+				<priority>5</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Impostazioni Carrello</it>
+						<en>Cart Setting</en>
+					</name>
+				</locale>
+				<parent>ecommerce</parent>
+				<tag>cart_setting</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=CartSettingAdmin&amp;mod=ecommerce&amp;mod=cart</url>
+				<priority>5</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Spedizioni</it>
+						<en>Shipping</en>
+					</name>
+				</locale>
+				<tag>shipping</tag> 
+				<icon>fa fa-truck</icon> 
+				<permission>ecommerce</permission> 
+				<priority>100</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Aree di spedizione</it>
+						<en>Shipping Area</en>
+					</name>
+				</locale>
+				<parent>shipping</parent>
+				<tag>area_shippings</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=ShippingAreaAdmin&amp;mod=ecommerce&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Metodi di spedizione</it>
+						<en>Shipping Methods</en>
+					</name>
+				</locale>
+				<parent>shipping</parent>
+				<tag>manage_shippings</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=ShippingMethodAdmin&amp;mod=ecommerce&amp;action=list</url>
+				<priority>4</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Configurazione</it>
+						<en>Setting</en>
+					</name>
+				</locale>
+				<parent>shipping</parent>
+				<tag>conf_shipping</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?ctrl=ShippingSettingAdmin&amp;mod=ecommerce</url>
+				<priority>3</priority> 
+			</item>
+		  
+			<item> 
+				<locale> 
+					<name>	
+						<it>Ecommerce</it>
+						<en>Ecommerce</en>
+					</name>
+				</locale>
+				<parent>setting</parent>
+				<tag>conf_eshop</tag>
+				<permission>ecommerce</permission> 
+				<priority>101</priority> 
+				<url>index.php?ctrl=EcommerceTabsAdmin&amp;mod=ecommerce</url>
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <backend>
+	<menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>I miei ordini</it>
+						<en>My orders</en>
+					</name>
+				</locale>
+				<tag>ecommerce_orders</tag> 
+				<iconImg>modules/ecommerce/images/ico-i-miei-ordini-menu-backend.png</iconImg> 
+				<permission>base</permission> 
+				<url>orders</url>
+				<priority>100</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>I miei indirizzi</it>
+						<en>My addresses</en>
+					</name>
+				</locale>
+				<tag>ecommerce_addresses</tag> 
+				<iconImg>modules/ecommerce/images/ico-i-miei-indirizzi-menu-backend.png</iconImg> 
+				<permission>base</permission> 
+				<url>addresses</url>
+				<priority>100</priority>  
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>La mia Wishlist</it>
+						<en>My wishlist</en>
+					</name>
+				</locale>
+				<tag>ecommerce_wishlist</tag> 
+				<iconImg>modules/ecommerce/images/ico-la-mia-wishlist-menu-backend.png</iconImg> 
+				<permission>base</permission> 
+				<url>wishlist</url>
+				<priority>100</priority> 
+			</item>
+
+		</items>
+	</menu>
+	 <homeButtons>
+		  <button>	
+			<url>addresses</url>
+			<iconImg>modules/ecommerce/images/ico-i-miei-indirizzi-menu-backend.png</iconImg>
+			<orderView>10</orderView>
+			<locale>
+				<name>
+					<it>I miei indirizzi</it>
+					<en>My addresses</en>
+				</name>
+			</locale>
+		 </button>
+		 <button>	
+			<url>wishlist</url>
+			<iconImg>modules/ecommerce/images/ico-la-mia-wishlist-menu-backend.png</iconImg>
+			<orderView>11</orderView>
+			<locale>
+				<name>
+					<it>La mia wishlist</it>
+					<en>My wishlist</en>
+				</name>
+			</locale>
+		 </button>
+	  </homeButtons>
+  </backend>
+    <actions>
+	   <action>
+			<hook>action_register_twig_templates_dir</hook>
+			<function>actionRegisterTwigTemplatesDir</function>
+		</action>
+		<action>
+			<hook>action_register_media_front</hook>
+			<function>actionRegisterMediaFront</function>
+		</action>
+		<action>
+			<hook>action_after_login</hook>
+			<function>actionAfterLogin</function>
+		</action>
+		<action>
+			<hook>display_product_extra2</hook>
+			<function>displayProductExtra2</function>
+		</action>
+		<action>
+			<hook>after_load_product</hook>
+			<function>productAfterLoad</function>
+		</action>
+		<action>
+			<hook>display_backend_home</hook>
+			<function>displayBackendHome</function>
+		</action>
+		<action>
+			<hook>action_clean_data</hook>
+			<function>actionCleanData</function>
+		</action>
+		<action>
+			<hook>action_clean_delete_data</hook>
+			<function>actionCleanDeleteData</function>
+		</action>
+  </actions>
+  <dependencies>
+		<dependence>catalogo</dependence>
+  </dependencies>
+</module>

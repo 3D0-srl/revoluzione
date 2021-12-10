@@ -1,0 +1,65 @@
+{% if new_product %}
+	<div class="alert alert-warning" style="width:100%">Puoi aggiungere le features dopo il primo salvataggio del prodotto.</div>
+{% else %}
+
+	{% for v in features %}
+	<div class="col-md-6" id="div_section">
+		<div class="form-group col-md-6">
+			<label><b>{{v.get('name')|upper}}</b>:</label>
+			<div class="controls">
+					<select type="select" class="form-control feature_select" name="formdata[features][{{v.id}}][value]" id="feature_{{v.id}}" feature="{{v.id}}">
+						
+						<option value="">---</option>
+						{% for v1 in v.getValues() %}
+							{% if v1.id in selezionati %}
+								<option value="{{v1.id}}" selected="selected">{{v1.get('value')}}</option>
+							{% else %}
+								<option value="{{v1.id}}">{{v1.get('value')}}</option>
+							{% endif %}
+						{% endfor %}
+						
+					
+						<option value="-1">--AGGIUNGI--</option>
+						
+						
+					</select>	
+			</div>
+			
+		</div>
+		<div class="form-group col-md-6">
+			<label></label>
+			<div class="controls other_future" id="other_{{v.id}}" feature="{{v.id}}" style="display:none">
+					<input type="text" name="formdata[features][{{v.id}}][other]" class="form-control" placeholder="inserisci valore per {{v.get('name')}}" value="{{selezionati_custom[v.id]}}"/>
+			</div>
+			
+		</div>
+		
+	</div>
+	{% endfor %}
+{% endif %}
+{% if reload_js %}
+
+<script>
+$('.feature_select').on('change',function(){
+		
+	var feature = $(this).attr('feature');
+	if( parseInt($(this).val()) == -1 ){
+		$('#other_'+feature).attr('required','required').show();
+	}else{
+		$('#other_'+feature).hide();
+	}
+})
+
+
+$('.other_future').each(function(){
+	if( $(this).find('input').val().trim() ){
+		$(this).show();
+
+		$('#feature_'+$(this).attr('feature')).val('-1');
+	}
+
+
+});
+</script>
+
+{% endif %}

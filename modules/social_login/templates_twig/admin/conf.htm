@@ -1,0 +1,73 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Social Login {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<div class="row">
+	<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Facebook
+				</div>
+				<div class="panel-body">
+						
+						{{form.buildCol(dataform.enable_facebook,'col-md-12')}}
+
+						{{form.buildCol(dataform.facebook_id,'col-md-12')}}
+						{{form.buildCol(dataform.facebook_secret,'col-md-12')}}
+						
+						
+						
+						<div class="col-md-12">
+							<p>
+							<b>URI di reindirizzamento OAuth validi</b>: <i>{{absolutebaseurl}}/modules/social_login/hybridauth/hybridauth/?hauth_done=Facebook</i>
+							</p>
+						</div>
+
+						
+
+						
+					<input type='hidden' name='type' value="facebook">
+					
+					
+
+						
+						
+				</div>
+		 </div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Google
+				</div>
+				<div class="panel-body">
+
+						{{form.buildCol(dataform.enable_google,'col-md-12')}}
+
+						{{form.buildCol(dataform.google_id,'col-md-12')}}
+						{{form.buildCol(dataform.google_secret,'col-md-12')}}
+						
+						<div class="col-md-12">
+							<p>
+							<b>Origini JavaScript autorizzate</b>: <i>{baseurl}</i><br>
+							<b>URI di reindirizzamento autorizzato</b>: <i>{{baseurl}}/modules/social_login/hybridauth/hybridauth/?hauth.done=Google</i>
+							</p>
+						</div>
+						
+					
+					
+
+						
+						
+				</div>
+		 </div>
+	</div>
+</div>
+
+
+{% endblock %}

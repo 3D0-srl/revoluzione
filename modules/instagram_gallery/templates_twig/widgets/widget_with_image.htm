@@ -1,0 +1,109 @@
+<div class="instafeed">
+	<div class="instafeed_col">
+		{% for v in dati1 %}
+		{%if show_slider == false %}
+			<a href="{{v.link}}" target="_blank">
+		{% endif %}
+		<div class="instafeed_content">
+			<div class="instafeed_post" style="background-image:url('{{v.url_image}}');"  ordine="{{v.ordine}}">
+				<div class="instafeed_overlay">
+					<div class="instafeed_text">
+						<img src="/img/new/ico_instafeed.png">
+						<div class="date">{{v.created_time}}</div>
+						{% if show_data %}
+						<div class="insta-likes">{{v.num_likes}} likes</div>
+						<div class="insta-comments">{{v.num_comments}} comments</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{%if show_slider == false %}
+			</a>
+		{% endif %}
+		{% endfor %}
+	</div>
+	{% if image is not null %}
+	<div class="instafeed_img" style="background-image:url('{{image}}');">
+		<a href="/index.php?mod=instagram_gallery&action=show" class="instafeed_overlay">
+			<div class="instafeed_text">
+				<img src="/img/new/ico_instafeed.png">
+				<h2>{{text}}</h2>
+			</div>
+		</a>
+	</div>
+	{% else %}
+
+	<div class="instafeed_img">
+		<a href="/index.php?mod=instagram_gallery&action=show" class="instafeed_overlay">
+			<div class="instafeed_text">
+				<img src="/img/new/ico_instafeed.png">
+				<h2>{{text}}</h2>
+			</div>
+		</a>
+	</div>
+
+	{% endif %}
+	<div class="instafeed_col">
+		{% for v in dati2 %}
+		{%if show_slider == false %}
+			<a href="{{v.link}}" target="_blank">
+		{% endif %}
+		<div class="instafeed_content">
+			<div class="instafeed_post" style="background-image:url('{{v.url_image}}');"  ordine="{{v.ordine}}">
+				<div class="instafeed_overlay">
+					<div class="instafeed_text">
+						<img src="/img/new/ico_instafeed.png">
+						<div class="date">{{v.created_time}}</div>
+						{% if show_data %}
+						<div class="insta-likes">{{v.num_likes}} likes</div>
+						<div class="insta-comments">{{v.num_comments}} comments</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{%if show_slider == false %}
+			</a>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+{% if show_slider %}
+<div class="overlay-instagram">
+	<div class="overlay-close"></div>
+	<div class="slider_instagram" id="slider_instagram">
+		{% for k,v in list %}
+		<div class="slide_instagram"  style="display:none" id="popup_instagram_{{k}}">
+			{{v.getDivWithTags()|raw}}
+			<div class="details_instagram">
+				{% if v.products %}
+				<div class="products_instagram">	
+					{% for v2 in v.products %}
+					<div class="product_instagram">
+						<div class="img_product" prodotto="{{v2.id}}">
+							<img src="{{v2.image}}">
+						</div>
+						<div class="details_product">
+							{{currencyLabel|raw}} {{v2.price}} <br>
+							{{v2.name}}
+						</div>
+						<a href="{v2[url]}" target="_blank" class="add_product">
+							VAI ALLA SCHEDA
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="space20"></div>
+				{% endif %}
+				{{v.text|raw}}			
+			</div>
+		</div>
+		{% endfor %}
+		<div class="slider-arrow">
+			<a class="prev-arrow" href="#" onclick="instagram_prev_slide(); return false;"></a>
+			<a class="next-arrow" href="#" onclick="instagram_next_slide(); return false;"></a>
+		</div>
+	</div>
+</div>
+{% endif %}

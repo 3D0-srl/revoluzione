@@ -1,0 +1,19 @@
+<?php
+$GLOBALS['_translate']['catalogo']['frontend']['dbfc56ce91877688fa4bf2992c7021a3']="ordina per";//order_by
+$GLOBALS['_translate']['catalogo']['frontend']['43287f44185ac1250b3bc150b5833285']="codice articolo";//order_by_sku
+$GLOBALS['_translate']['catalogo']['frontend']['972926fa593dd5cb4c7e115eb239b385']="nome";//order_by_name
+$GLOBALS['_translate']['catalogo']['frontend']['f78f538eaec0a38e96d0db39bbed6e35']="prezzo crescente";//order_by_low
+$GLOBALS['_translate']['catalogo']['frontend']['27e893fb9e3fb04fa013cc7a27fa5f3d']="prezzo decrescente";//order_by_hight
+$GLOBALS['_translate']['catalogo']['frontend']['d5b7fa99f96a4dcc1ed0296f3a1f033f']="Categorie";//Categorie
+$GLOBALS['_translate']['catalogo']['frontend']['e58108662be315fda93063d56a84a930']="Disponibile";//Disponibile
+$GLOBALS['_translate']['catalogo']['frontend']['88897df8e004f958a601a610954db7b8']="Dettagli";//Dettagli
+$GLOBALS['_translate']['catalogo']['frontend']['7c017db0638f9b4470750d0de27953f2']="Spedizione";//Spedizione
+$GLOBALS['_translate']['catalogo']['frontend']['f7256aa41c497e62931b13cb0d26e277']="product_added_wishlist";//product_added_wishlist
+$GLOBALS['_translate']['catalogo']['frontend']['a69574a47a0d752ecd8a3be0e1cae1e1']="Nessun articolo presente";//Nessun articolo presente
+$GLOBALS['_translate']['catalogo']['frontend']['3d2f8535636518c99f4c1cd504c47e72']="Esaurito";//Esaurito
+$GLOBALS['_translate']['catalogo']['frontend']['0438788f56327e969f280fa635fc088f']="Brands";//Brands
+$GLOBALS['_translate']['catalogo']['backend']['c1bbf1217ad1c9e446e4f0adfd9c1ce6']="Attributes";//Attributes
+$GLOBALS['_translate']['catalogo']['backend']['3cf9e408faf5a7f4111c70d9d0aebf81']="Attribute Sets";//Attribute Sets
+$GLOBALS['_translate']['catalogo']['backend']['ca15c78d680903ca0127f085eb0f794a']="Manufacturers";//Manufacturers
+$GLOBALS['_translate']['catalogo']['backend']['556407905578962c635cfe3666a3949a']="Products of <b>%s</b>";//Products of <b>%s</b>
+$GLOBALS['_translate']['catalogo']['backend']['a647678883c752a7479de28162a17d59']="Add products to <b>%s</b>";//Add products to <b>%s</b>

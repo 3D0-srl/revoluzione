@@ -1,0 +1,24 @@
+<li id="{{item.id}}">
+
+{% if item.children|length > 0 %}
+<a class="{% if item.id in selected_items %}jstree-clicked{% endif %}">{{item.get('name')}}</a>
+	<ul>
+		{% for item2 in item.children %} 
+			{% include 'setting/item_category.htm' with {'item': item2,'selected_items':selected_items,'profiles':profiles} %}
+		{% endfor %}
+	</ul>
+{% else %}
+<a class="{% if item.id in selected_items %}jstree-clicked{% endif %}">{{item.get('name')}}
+	
+
+
+<select  class="profile-select no-picker" name="formdata[profile][{{item.id}}]">
+	<option value="0">Seleziona profilo...</option>
+	{% for l,p in profiles %}
+	<option value="{{l}}">{{p}}</option>
+	{% endfor %}
+<select>
+</a>
+
+{% endif %}
+</li>

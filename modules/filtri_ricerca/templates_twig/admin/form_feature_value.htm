@@ -1,0 +1,9 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Valore caratteristica {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.value,'col-md-12')}}
+{{form.build(dataform.id_product_feature)}}
+
+{% endblock %}

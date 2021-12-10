@@ -1,0 +1,104 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('page')|title}} {% endblock %} 
+
+{% block javascript %}
+{{parent()}}
+<script>
+	var js_layout = "{{dataform.layout.value|escape('js')}}";
+	$(document).ready(function(){
+		
+		$('.col2').click(function(){
+			var el = $(this);
+			$('.col2').removeClass('active');			
+			el.find('input').prop('checked',true);
+			el.addClass("active");
+			$(".wireframe1").attr("src","images/full.png");
+			$(".wireframe2").attr("src","images/top-content.png");
+			$(".wireframe3").attr("src","images/sidebar-dx.png");
+			$(".wireframe4").attr("src","images/sidebar-sx.png");
+			el.find(".wireframe1").attr("src","images/full-active.png?v=1");
+			el.find(".wireframe2").attr("src","images/top-content-active.png");
+			el.find(".wireframe3").attr("src","images/sidebar-dx-active.png");
+			el.find(".wireframe4").attr("src","images/sidebar-sx-active.png");
+		});
+
+		if( typeof js_layout != 'undefined' && js_layout != null && js_layout != '' ){
+			
+			$('#layout_'+js_layout).closest('.col2').trigger('click');
+
+			$('#layout_div').addClass('overlay_layout');
+		}
+	});
+</script>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+<div class="clearfix cont-pag-comp">
+	<div class="{% if dataform.advanced.value == 0 %}col6{% else %} col3{% endif %} col-imp">
+		<h2>Generale</h2>
+			{{form.build(dataform.widget)}}
+			{{form.build(dataform.id_old_adv_page)}}
+			{{form.build(dataform.advanced)}}
+			{{form.build(dataform.return_location)}}
+
+
+			{{form.build(dataform.locked)}}
+			{% if auth('superadmin') %}
+			{{form.buildCol(dataform.theme)}}
+			{% endif %}
+			{{form.buildCol(dataform.url)}}
+			
+
+			{% if dataform.widget.value == 0 %}
+			{{form.buildCol(dataform.title)}}
+			{% endif %}
+			
+			
+			
+			{% if dataform.advanced.value == 0 %}
+			{{form.buildCol(dataform.content)}}
+			{% endif %}
+
+			{{form.buildCol(dataform.visibility)}}
+	</div>
+	{% if dataform.widget.value == 0 %}
+	{% if dataform.advanced.value == 1 %}
+	<div class="col3 col-imp" id="layout_div">
+		<h2>Layout</h2>
+		<div class="clearfix">
+			<div class="col2">
+				<p>FullPage</p>
+				<img class="wireframe1" src="images/full.png" />
+				<input type="radio" id="layout_2" name="formdata[layout]" value="2">
+			</div>
+			<div class="col2">
+				<p>Top - Content</p>
+				<img class="wireframe2" src="images/top-content.png" />
+				<input type="radio" id="layout_1" name="formdata[layout]" value="1">
+			</div>
+			<div class="col2">
+				<p>Sidebar dx</p>
+				<img class="wireframe3" src="images/sidebar-dx.png" />
+				<input type="radio" id="layout_5" name="formdata[layout]" value="5">
+			</div>
+			<div class="col2">
+				<p>Sidebar sx</p>
+				<img class="wireframe4" src="images/sidebar-sx.png" />
+				<input type="radio" id="layout_4" name="formdata[layout]" value="4">
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% endif %}
+	<div class="col3 col-imp">
+		<h2>Seo</h2>
+		{{form.buildCol(dataform.metaTitle)}}
+		{{form.buildCol(dataform.metaDescription)}}
+	</div>
+</div>
+
+{% endblock %}
+

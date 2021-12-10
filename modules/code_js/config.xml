@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Code JS</name>
+		<permission>superadmin</permission>
+		<tag>code_js</tag>
+		<kind>cms</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Permette di inserire del codice js nella pagina]]></description> 
+   </info>
+   <widgets>
+		<widget> 
+			<name>codice JS</name>
+			<function>WidgetCodeJS</function>
+			<url_conf>index.php?ctrl=Conf&amp;mod=code_js</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+	</widgets>
+</module>

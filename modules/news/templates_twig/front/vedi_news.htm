@@ -1,0 +1,56 @@
+{% extends 'layouts/page.htm' %}
+{% block container %}
+{% set months = [
+	'Gennaio',
+	'Febbraio',
+	'Marzo',
+	'Aprile',
+	'Maggio',
+	'Giugno',
+	'Luglio',
+	'Agosto',
+	'Settembre',
+	'Ottobre',
+	'Novembre',
+	'Dicembre'
+] %}
+
+{% set month = row.get('dateLastUpdate') | date('n') %}
+<div class="top-news" id="">
+	<div class="flex flex-wrap">
+		<div class="col-60"
+			style="background:url('{{news.getUrlImage(0,'large')}}'); background-position:center center; background-repeat:no-repeat; background-size:cover; background-attachment:scroll;"
+			id=""></div>
+		<div class="col-40">
+			<div class="info-news flex flex-center">
+				<div class="data-news">
+					<div class="mese-news">{{ news.get('dateLastUpdate') | date('d') }}</div>
+					<div class="giorno-news">{{ months[month - 1] }}</div>
+				</div>
+				<div class="tit-cat-news">
+					<div class="cat-news">{{ category_name }}</div>
+					<div class="tit-news">{{ news.get('title') }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<a href="/news/all/list.htm" class="back">{{tr('Torna al blog','news')}}</a>
+</div>
+<div class="container vedi-news">
+	<!--<div class="data">{{ news.get('dateLastUpdate')|date('d.m.Y')}}</div>
+		<h1>{{ news.get('title') }}</h1>-->
+	{{ news.get('content') | raw}}
+
+	{% if image_count != 1 %}
+	<div id="slider" class="gallery-vedi-news">
+		{% for image in news.images %}
+			<div>
+				<div class="box-img-gallery" style="background:url('/img/{{ image }}/lg/n.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover; background-attachment:scroll;">
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

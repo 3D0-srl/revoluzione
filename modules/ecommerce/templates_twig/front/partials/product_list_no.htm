@@ -1,0 +1,46 @@
+<div class="s-prod atre product_card" id="riga_{{product_row.id}}">
+	<div class="cont_imgprodsez">
+		<a href="{{product_row.getUrl()}}">
+			<!--{% if product_row.images[1] %}
+			<img class="imgprod" src="{{product_row.getUrlImage(1,img_type_product_list)}}" id="img_prod_{{product_row.id}}">
+			{% else %}
+			<img class="imgprod" src="{{product_row.getUrlImage(0,img_type_product_list)}}" id="img_prod_{{product_row.id}}">
+			{% endif %}-->
+			
+			
+			<img class="imgprod imgtop" data-src="{{product_row.getUrlImage(0,'original')}}" id="img_prod_{{product_row.id}}" src="/themes/jewels/images/loading.gif">
+			<!--{% if product_row.getUrlImageLabelPrice() %}
+				<img class="labelprice-min" src="{{product_row.getUrlImageLabelPrice()}}" alt="labelprice">
+			{% endif %}-->
+			{% if product_row.hasSpecialPrice() %}
+				<span class="percentuale">-{{product_row.getDiscountPercentage()}}%</span>
+			{% endif %}
+		</a>
+
+		{% if auth('base') %}
+			{% if product_row.isInWhishlist() %}
+				<a href="javascript:add_to_wishlist({{product_row.id}});" id="add_wish_{{product_row.id}}" class="wish-full add_wish_{{product_row.id}}" style="display:none;"><img src="/themes/jewels/images/ico_cuore_vuoto.png"></a>
+				<a href="javascript:remove_from_wishlist({{product_row.id}});" id="remove_wish_{{product_row.id}}" class="wish-full remove_wish_{{product_row.id}}"><img src="/themes/jewels/images/ico_cuore_pieno.png" width="18"></a>
+			{% else %}
+				<a href="javascript:add_to_wishlist({{product_row.id}});" id="add_wish_{{product_row.id}}" class="wish-full add_wish_{{product_row.id}}"><img src="/themes/jewels/images/ico_cuore_vuoto.png"></a>
+				<a href="javascript:remove_from_wishlist({{product_row.id}});" id="remove_wish_{{product_row.id}}" class="wish-full remove_wish_{{product_row.id}}" style="display:none;"><img src="/themes/jewels/images/ico_cuore_pieno.png" width="18"></a>
+			{% endif %}
+
+		{% else %}
+			<a href="javascript:add_to_wishlist({{product_row.id}});" id="add_wish_{{product_row.id}}" class="wish-full"><img src="/themes/jewels/images/ico_cuore_vuoto.png"></a>
+		{% endif %}
+	</div>
+	
+	<div class="info">
+		<p>{{product_row.getManufacturerName()}}</p>
+		<p>{{product_row.get('name')}}</p>
+		<div class="price">
+			{% if product_row.hasSpecialPrice() %}
+				<span class="scontato">{{currencyLabel|raw}} {{product_row.getPriceFormatted()}}</span>
+				<span class="barrato">{{currencyLabel|raw}} {{product_row.getDefaultPriceValueFormatted()}}</span>
+			{% else %}
+				<span>{{currencyLabel|raw}} {{product_row.getPriceFormatted()}}</span>
+			{% endif %}
+		</div>
+	</div>
+</div>

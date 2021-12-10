@@ -1,0 +1,14 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Backend Button {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.url,'col-md-12')}}
+{{form.buildCol(dataform.orderView,'col-md-12')}}
+{{form.buildCol(dataform.active,'col-md-4')}}
+
+{{form.buildCol(dataform.icon_image,'col-md-6')}}
+
+{% endblock %}

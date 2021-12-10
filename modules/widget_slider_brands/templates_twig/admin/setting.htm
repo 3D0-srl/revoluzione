@@ -1,0 +1,95 @@
+{% extends "layouts/base_form_widget.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+<!--------
+
+
+
+	CONTENTUTO FORM IMPOSTAZIONI
+
+
+----------->
+<div class="col-md-12">
+	<div class="tabcordion">
+		<ul id="tab_data" class="nav nav-tabs">
+			<li class="active"><a href="#general" data-toggle="tab">GENERALE</a></li>
+			<li class=""><a href="#slider" data-toggle="tab">SLIDER DESKTOP</a></li>
+			<li class=""><a href="#slider_tablet" data-toggle="tab">SLIDER TABLET PORTRAIT</a></li>
+			<li class=""><a href="#slider_tablet_landscape" data-toggle="tab">SLIDER TABLET LANDSCAPE</a></li>
+			<li class=""><a href="#slider_mobile" data-toggle="tab">SLIDER MOBILE</a></li>
+		</ul>
+		<div id="tab_data_content" class="tab-content" style="border:1px solid #D3D3D3;">
+			<div class="tab-pane fade active in" id="general">
+				{{form.buildCol(dataform.title)}}
+				{{form.buildCol(dataform.tag)}}
+				{{form.buildCol(dataform.num_products)}}
+				
+
+			</div>
+			<div class="tab-pane fade in" id="slider">
+				{{form.buildCol(dataform.slideWidth)}}
+				{{form.buildCol(dataform.slideMargin)}}
+				{{form.buildCol(dataform.minSlides)}}
+				{{form.buildCol(dataform.maxSlides)}}
+				{{form.buildCol(dataform.moveSlides)}}
+
+				{{form.buildCol(dataform.controls)}}
+				{{form.buildCol(dataform.auto)}}
+				{{form.buildCol(dataform.autoControls)}}
+				{{form.buildCol(dataform.autoHover)}}
+				{{form.buildCol(dataform.pager)}}
+				{{form.buildCol(dataform.loop)}}
+
+			</div>
+			<div class="tab-pane fade in" id="slider_tablet">
+
+				{{form.buildCol(dataform.slideWidth_tablet)}}
+				{{form.buildCol(dataform.slideMargin_tablet)}}
+				{{form.buildCol(dataform.minSlides_tablet)}}
+				{{form.buildCol(dataform.maxSlides_tablet)}}
+				{{form.buildCol(dataform.moveSlides_tablet)}}
+
+				{{form.buildCol(dataform.controls_tablet)}}
+				{{form.buildCol(dataform.auto_tablet)}}
+				{{form.buildCol(dataform.autoControls_tablet)}}
+				{{form.buildCol(dataform.autoHover_tablet)}}
+				{{form.buildCol(dataform.pager_tablet)}}
+				{{form.buildCol(dataform.loop_tablet)}}
+				
+			</div>
+			<div class="tab-pane fade in" id="slider_tablet_landscape">
+				{{form.buildCol(dataform.slideWidth_tabletlandscape)}}
+				{{form.buildCol(dataform.slideMargin_tabletlandscape)}}
+				{{form.buildCol(dataform.minSlides_tabletlandscape)}}
+				{{form.buildCol(dataform.maxSlides_tabletlandscape)}}
+				{{form.buildCol(dataform.moveSlides_tabletlandscape)}}
+
+				{{form.buildCol(dataform.controls_tabletlandscape)}}
+				{{form.buildCol(dataform.auto_tabletlandscape)}}
+				{{form.buildCol(dataform.autoControls_tabletlandscape)}}
+				{{form.buildCol(dataform.autoHover_tabletlandscape)}}
+				{{form.buildCol(dataform.pager_tabletlandscape)}}
+				{{form.buildCol(dataform.loop_tabletlandscape)}}
+
+			</div>
+			<div class="tab-pane fade in" id="slider_mobile">
+				{{form.buildCol(dataform.slideWidth_mobile)}}
+				{{form.buildCol(dataform.slideMargin_mobile)}}
+				{{form.buildCol(dataform.minSlides_mobile)}}
+				{{form.buildCol(dataform.maxSlides_mobile)}}
+				{{form.buildCol(dataform.moveSlides_mobile)}}
+
+				{{form.buildCol(dataform.controls_mobile)}}
+				{{form.buildCol(dataform.auto_mobile)}}
+				{{form.buildCol(dataform.autoControls_mobile)}}
+				{{form.buildCol(dataform.autoHover_mobile)}}
+				{{form.buildCol(dataform.pager_mobile)}}
+				{{form.buildCol(dataform.loop_mobile)}}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

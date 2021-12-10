@@ -1,0 +1,34 @@
+<h3>Sincronizzazione Catalogo</h3>
+{if:new_upload}
+<div style="text-align:left;">
+<p>Questa procedura crea su amazon le offerte relative ai prodotti presenti nel catalogo. Verranno in particolare
+	<ol>
+		<li>
+			Importati i prodotti non sincronizzati *
+		</li>
+		<li>
+			Eliminate le offerte relative a prodotti non attivi o eliminati sull'ecommerce
+		</li>
+	</ol>
+</p>
+
+<p>
+* i prodotti devono rientrare tra le categorie selezionate in fase di configurazione dell'account e per questi deve essere presente il codice <b>EAN</b> o <b>UPC</b>
+</p>
+</div>
+<div class="pull-right">
+<button class="btn btn-sm btn-amazon" onclick="send_products({id_account});"><i class="fa fa-send"> </i> INVIA AD AMAZON</button>
+</div>
+{else:}
+<div style="text-align:left;">
+<p>E' presente gia' un processo di sincronizzazione. Vuoi riprenderlo?
+	
+</p>
+
+
+</div>
+<div class="pull-right">
+<button class="btn btn-sm btn-amazon" onclick="delete_upload({id_account});"><i class="fa fa-trash-o"> </i> ANNULLA</button>
+<button class="btn btn-sm btn-amazon" onclick="send_products({id_account});"><i class="fa fa-refresh"> </i> RIPRENDI</button>
+</div>
+{end:}

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>GLS Export</name>
+		<permission>ecommerce</permission>
+		<tag>gls</tag> 
+		<kind>ecommerce</kind>
+		<scope></scope>
+		<version>3</version>
+		<description><![CDATA[Modulo che permette di esportare i dati per il corriere <b>GLS</b>]]></description> 
+   </info>
+   <admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>GLS export</it>
+						<en>GLS export</en>
+						<es>GLS export</es>
+						<de>GLS export</de>
+						<fr>GLS export</fr>
+						<pt>GLS export</pt>
+					</name>
+				</locale>
+				<parentTag>ecommerce</parentTag>
+				<tag>gls_export</tag> 
+				<permission>ecommerce</permission> 
+				<url>index.php?mod=gls&amp;action=export</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+   <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+  <linkSetting>index.php?action=conf&amp;mod=gls</linkSetting>
+</module>

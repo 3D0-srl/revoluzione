@@ -1,0 +1,70 @@
+<form method="POST" class="float-label" id="new_address_form">
+	
+	<span flexy:if="authUser()">
+		<div class="controls">
+			<label for="formdata[label]">Etichetta</label>
+			<input type="text" name="formdata[label]" Placeholder="Etichetta indirizzo" >
+		</div>
+	</span>
+	<div class="clearfix"></div>
+	<div class="controls">
+		<label for="formdata[name]">Nome</label>
+		<input type="text" name="formdata[name]" Placeholder="Nome" >
+	</div>
+	<div class="controls odd">
+		<label for="formdata[surname]">Cognome</label>
+		<input type="text" name="formdata[surname]" Placeholder="Cognome" >
+	</div>
+	<div class="controls">
+		<label for="formdata[email]">Email</label>
+		<input type="text" name="formdata[email]" Placeholder="Email" >
+	</div>
+	
+	<div class="controls odd">
+		<label for="formdata[phone]">Telefono</label>
+		<input type="text" name="formdata[phone]" Placeholder="Telefono" >
+	</div>
+	<div class="controls">
+		<label for="formdata[cellular]">Cellulare</label>
+		<input type="text" name="formdata[cellular]" Placeholder="Cellulare" >
+	</div>
+	<div class="controls odd">
+		<label for="formdata[address]">Indirizzo</label>
+		<input type="text" name="formdata[address]" Placeholder="Indirizzo" >
+	</div>
+	<div class="controls">
+		<label for="formdata[postalCode]">CAP</label>
+		<input type="text" name="formdata[postalCode]" Placeholder="CAP" >					 
+	</div>
+	<div class="controls odd">
+		<label for="formdata[city]">Città</label>
+		<input type="text" name="formdata[city]" Placeholder="Città" >
+	</div>
+	<div class="controls">
+		<label>Provincia</label>
+		<select type="select" name="formdata[province]"></select>
+	</div>		
+	<div class="controls odd">
+		<label>Nazione</label>
+		<select type="select" name="formdata[country]"></select>
+	</div>
+	
+	<input type='hidden' name='formID'>
+	<input type='hidden' name='action'>
+	<input type='hidden' name='formdata[id]'>
+	<div class="clearfix"></div>
+	<button class="btn-cancel"  onclick="cancel_address(); return false;">
+		Annulla
+	</button>
+	{if:dati[id]}
+	<button class="btn-addform"  onclick="new_address_ok(); return false;">
+		Salva
+	</button>
+	{else:}
+	<button class="btn-addform"  onclick="new_address_ok(); return false;">
+		Aggiungi
+	</button>
+
+	{end:}
+	
+</form>

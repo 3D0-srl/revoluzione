@@ -1,0 +1,43 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<img src="modules/ecommerce/images/ico-ultimi-ordini-backend.png">{{tr('I miei ticket','customers_care')}}
+{% endblock %}
+
+
+{% block backend_content %}
+
+{% if list is null %}
+	<span >{{tr('Nessun ticket presente in archivio.','customers_care')}}</span>
+{% else %}
+	<div class="last-orders fullwidth">
+		<div class="table-responsive">
+			<table class="table table-orders m-b-0" >
+				<thead>
+					<tr>
+						
+						<th>{{tr('Oggetto','customers_care')}}</th>
+						<th>{{tr('Tipologia','customers_care')}}</th>
+						<th>{{tr('Data','customers_care')}}</th>
+						<th>{{tr('Stato','customers_care')}}</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for riga in list %}
+						<tr>
+							
+							<td>{{riga.subject}} pz</td>
+							<td></td>
+							<td>{{riga.timestamp}}</td>
+							<td class="status-order">{{riga.status|raw}}</td>
+							<td class="link-order"><a href="index.php?ctrl=Orders&mod=ecommerce&action=view&id={{riga.id}}"><img src="modules/ecommerce/images/ico-vedi-tutti-backend.png" width="8" height="16"></a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+{% endif %}
+
+
+{% endblock %}

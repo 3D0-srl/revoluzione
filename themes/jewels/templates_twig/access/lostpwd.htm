@@ -1,0 +1,25 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+
+
+
+    <div class="space50"></div>
+    <div class="container-small">
+		<h4>{{tr('Recupero password')}}</h4>
+		<span class="errore">{{messages|raw}}</span>
+		 <form class="form" action="/index.php" method="POST">
+			<label>{{tr('Inserisci la tua email')}}</label>
+			<input type="text" placeholder="" name="formdata[email]" value="{{dataform.email.value}}">
+			<div class="space20"></div>
+			<button type="submit"  class="btn-default">{{tr('Invia')}}</button>
+			
+			<input type="hidden" name="ctrl" value="Access">
+			<input type="hidden" name="action" value="lostpwd">
+		</form>
+	</div>
+
+
+
+
+{% endblock %}
+

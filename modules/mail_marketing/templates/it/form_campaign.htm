@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+		cont_valori_attributo="cont_valori_attributo"
+    >
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+						
+	                     <h3><strong>Campagna <small>{if:!dati[id]}Aggiungi{else:}Modifica{end:}</small></h3>
+	
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<form role='form' action='controller.php' name='mailman_list' id='mailman_list' method='POST'>
+
+				<div class="row">
+			
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+					<input type='hidden' name='formdata[id]'>
+
+					<div class="form-group col-md-12" id="div_lista">
+						<label>Nome campagna :</label>
+						<div class="controls">
+							<input type="text" class="form-control " name="formdata[name]">
+						</div>
+					</div>
+
+					<div class="form-group col-md-12" id="div_lista">
+						<label>Titolo della campagna:</label>
+						<div class="controls">
+							<input type="text" class="form-control " name="formdata[name_view]">
+						</div>
+					</div>
+
+					<div class="form-group col-md-6" id="div_lista">
+						<label>Lista di distribuzione:</label>
+						<div class="controls">
+							<select type="select" class="form-control " name="formdata[list]"></select>
+						</div>
+					</div>
+
+					<div class="form-group col-md-6" id="div_lista">
+						<label>Mail da inviare:</label>
+						<div class="controls">
+							<select type="select" class="form-control " name="formdata[mail_template]"></select>
+						</div>
+					</div>
+					<div class="form-group form-inline col-md-4" id="div_visibility">
+						<label>Imposta ora inizio :</label>
+						<div class="controls">
+							<input type="checkbox" name="formdata[cron]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+						</div>
+					</div>
+
+
+
+					<div class="form-group col-md-4" id="div_lista">
+						<label>Data:</label>
+						<div class="controls">
+							<input type="text" class="form-control " name="formdata[dateStart]">
+						</div>
+					</div>
+
+					<div class="form-group col-md-4" id="div_lista">
+						<label>Ora:</label>
+						<div class="controls">
+							<input type="text" class="form-control " name="formdata[hourStart]">
+						</div>
+					</div>
+
+
+					<input type='hidden' name='formID'>
+					<input type='hidden' name='action'>
+					</div>
+				</div>
+				</div>
+	      </div>
+		  <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+                    <button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+                </div>
+           </div>
+
+		  </form>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+
+</body>
+
+</html>

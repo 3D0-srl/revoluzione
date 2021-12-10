@@ -1,0 +1,80 @@
+{% for k,v in privalia_fields %}
+	{% if v.ignore is null %}
+	
+	<div class="well" style="margin-bottom: 6px;">
+		<div style="margin-bottom: 10px;" class="box-mapping">
+			<b>{{v.name}}{% if v.required %} <span style="color:red">(obbligatorio)</span>{% else %}{% if v.recommended %} <span style="color:orange">(consigliato)</span>{% endif %}{% endif %}</b> associa a 
+			{% if v.fixed is null %}
+			<select class="no-picker" name="formdata[{{k}}][mapping]" id="{{v.id}}" onchange="mappingValues($(this),'{{k}}','{{v.id}}'); return false;">
+				
+				<option value="">--SELECT--</option>
+				 <optgroup label="Campi prodotto">
+					{% for k1,v1 in product_fields %}
+					<option value="field_{{k1}}">{{v1}}</option>
+					{% endfor %}
+				 </optgroup>
+				 <optgroup label="Caratteristiche">
+					{% for f in filtri %}
+					<option value="feature_{{f.id}}">{{f.get('name')}}</option>
+					{% endfor %}
+				  </optgroup>
+				  <optgroup label="Attributi">
+					{% for f in attributi %}
+					<option value="attribute_{{f.id}}">{{f.get('name')}}</option>
+					{% endfor %}
+				  </optgroup>
+
+				  <optgroup label="Altro">
+					<option value="other">specifica valore</option>
+				  </optgroup>
+				
+			</select>
+
+			<input type="text" name="formdata[{{k}}][static]" value="" style="display:none" id="other_{{v.id}}">
+			<br>
+			<small>{{v.description}}</small>
+			{% if v.values %}
+			<br><span style="color:red">* questo campo può assumere solo dei valori prestabiliti</span>
+			
+
+			<div id="mapping" style="display:none">
+				<h5>Puoi specificare una mappatura tra i valori dell'ecommerce e quelli di <b>Privalia</b>.<br><b>N.B.</b> Se la mappatura non risulta presente verrà preso il valore dell'ecommerce.</h5>
+				<table>
+				<tbody class="associations">
+
+				</tbody>
+				</table>
+			</div>
+			<select class="no-picker" style="display:none" id="values">
+				<option value="">--SELECT--</option>
+				{% for k1,v1 in v.values %}
+					<option value="{{k1}}">{{v1}}</option>
+				{% endfor %}
+			</select>
+			{% endif %}
+			{% else %}
+
+			<select class="no-picker" name="formdata[{{k}}][fixed]" id="{{v.id}}">
+				
+				<option value="">--SELECT--</option>
+				{% for k1,v1 in v.values %}
+					<option value="{{k1}}">{{v1}}</option>
+				{% endfor %}
+				
+			</select>
+
+			{% endif %}
+		</div>
+	</div>
+	<div>
+		
+	</div>
+	{% else %}
+		<input  name="formdata[{{k}}][mapping]" type="hidden" id="{{v.id}}" value="">
+	{% endif %}
+
+
+
+	
+
+{% endfor %}

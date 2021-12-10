@@ -1,0 +1,37 @@
+.overlay-paypal {
+	position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   -webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.paypal-checkout-modal {
+	max-width: 350px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	cursor: pointer;
+	text-align: center;
+}
+
+.paypal-checkout-modal p {
+	margin: 20px 0;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #fff;
+}
+
+.paypal-checkout-modal img {
+	max-height: 36px;
+}

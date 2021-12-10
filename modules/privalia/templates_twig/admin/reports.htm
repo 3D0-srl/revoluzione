@@ -1,0 +1,35 @@
+{% extends "privalia_layout.htm" %}
+{% block page_title %} Reports {% endblock %} 
+
+
+{% block content %}
+<table class="table">
+	<thead>
+		<th>Operazione</th>
+		<th>Data</th>
+		<th>stato</th>
+		<th></th>
+	</thead>
+	<tbody>
+		{% for v in list %}
+		<tr>
+			<td>{{v.type}}</td>
+			<td>
+				
+				{{v.timestamp}}
+			
+			</td>
+			<td>
+				
+				{{v.status}}
+			
+			</td>
+			<td>
+			</td>
+		</tr>
+		{% endfor %}
+		
+	</tbody>
+	
+</table>
+{% endblock %}

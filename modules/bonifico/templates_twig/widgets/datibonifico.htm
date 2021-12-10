@@ -1,0 +1,29 @@
+<div  class="alert alert-success" style="border:1px solid black; padding:10px; border-style:dotted; margin-top:5px; border-radius:0px; width:100%;">
+<p>{{tr('I dati del bonifico sono i seguenti','bonifico')}}:</p>
+<ul>
+
+  {% if banca %}
+	 <li >{{banca}}</li>
+  {% endif %}
+  {% if c_c %}
+	 <li >C/C: {{c_c}}</li>
+  {% endif %}
+  {% if abi %}
+	 <li >ABI: {{abi}}</li>
+  {% endif %}
+  {% if cab %}
+	 <li >CAB: {{cab}}</li>
+  {% endif %}
+  {% if cin %}
+	 <li >CIN: {{cin}}</li>
+  {% endif %}
+  {% if iban %}
+	 <li >{{tr('CODICE IBAN','bonifico')}}: {{iban}}</li>
+  {% endif %}
+
+</ul>
+ 
+<p>
+{{tr("Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo",'bonifico')}}: <b>{{email}}</b>.
+</p>
+</div>

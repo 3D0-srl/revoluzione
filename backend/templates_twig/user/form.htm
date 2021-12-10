@@ -1,0 +1,127 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('user')|title}} {% endblock %} 
+{% block javascript %}
+{{parent()}}
+<script>
+	var action = "{{action|escape('js')}}";
+	$(document).ready(function(){
+		if(action == 'edit' ){
+			$('#reset_password').on('change',function(){
+				if( $(this).prop('checked') == true ){
+					$('#div_password').show();
+				}else{
+					$('#div_password').hide();
+					$('#password').val('');
+				}
+			});
+
+			if( $('#reset_password').prop('checked') == true ){
+				$('#div_password').show();
+			}else{
+				$('#div_password').hide();
+			}
+		}
+	});
+	
+</script>
+{% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#access" data-toggle="tab">{{tr('access')|title}}</a></li>
+		<li class=""><a href="#general" data-toggle="tab">{{tr('personal_data')|title}}</a></li>
+		<li class=""><a href="#invoice" data-toggle="tab">{{tr('fiscal_data')|title}}</a></li>
+		
+		
+		
+		{{do_action('tab_user_admin')}}
+		
+	</ul>
+	<div id="myTabContent" class="tab-content">
+			<!-- GENERAL -->
+			<div class="tab-pane active in" id="access">
+				<div class="row">
+				
+					<div class="col-md-12">
+						{{form.buildCol(dataform.category,'col-md-12')}}
+						{{form.buildCol(dataform.username,'col-md-6')}}
+						
+
+						{{form.buildCol(dataform.email,'col-md-6')}}
+						
+						{% if userdata.id != dataform.id.value %}
+						{{form.buildCol(dataform.active,'col-md-12')}}
+						{% endif %}
+						
+
+						{% if action == 'edit' %}
+						{{form.buildCol(dataform.reset_password,'col-md-12')}}
+						{% endif %}
+						
+						{{form.buildCol(dataform.password,'col-md-6')}}
+						
+					</div>
+				</div>
+			</div>
+
+			<!--- GENERAL -->
+			<div class="tab-pane  in" id="general">
+				<div class="row">
+				
+					<div class="col-md-12">
+
+						
+
+					
+						{{form.buildCol(dataform.name,'col-md-6')}}
+						{{form.buildCol(dataform.surname,'col-md-6')}}
+						
+						{{form.buildCol(dataform.phone,'col-md-6')}}
+						{{form.buildCol(dataform.cellular,'col-md-6')}}
+						{{form.buildCol(dataform.address,'col-md-6')}}
+						{{form.buildCol(dataform.postalCode,'col-md-6')}}
+						{{form.buildCol(dataform.city,'col-md-6')}}
+						{{form.buildCol(dataform.province,'col-md-6')}}
+						{{form.buildCol(dataform.country,'col-md-6')}}
+						
+
+					</div>
+				</div>
+			</div>
+
+			<!-- GENERAL -->
+			<div class="tab-pane  in" id="invoice">
+				<div class="row">
+				
+					<div class="col-md-12">
+
+						
+
+						{{form.buildCol(dataform.typeBuyer,'col-md-12')}}
+						{{form.buildCol(dataform.fiscalCode,'col-md-6')}}
+						{{form.buildCol(dataform.company,'col-md-6')}}
+						{{form.buildCol(dataform.vatNumber,'col-md-6')}}
+						{{form.buildCol(dataform.pec,'col-md-6')}}
+						{{form.buildCol(dataform.codice_univoco,'col-md-6')}}
+
+
+
+					
+
+						
+						
+
+
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+{% endblock %}
+
+
+
+

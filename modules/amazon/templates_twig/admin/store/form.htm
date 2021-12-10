@@ -1,0 +1,155 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Amazon Store {% endblock %} 
+{% block javascript %}
+{{parent()}}
+<script>
+	var js_cont_map_corrieri = "{{cont_map_corrieri|escape('js')}}";
+	var js_cont_map_corrieri_exit = "{{cont_map_corrieri_exit|escape('js')}}";
+	var js_mapping_categories = "{{mapping_categories|escape('js')}}";
+</script>
+{%endblock %}
+{% block css %}
+{{parent()}}
+<style>
+	.bandiera{
+	
+		display:inline-block;
+		padding: 20px;
+		margin-right: 10px;
+		border: 1px solid black;
+		cursor:pointer;
+	}
+	.bandiera img{
+		width: 80px;
+	}
+	.bandiera span{
+		display:block;
+		font-size: 16px;
+		text-align: center;
+		font-weight: 900;
+	}
+	
+
+
+	.bandiera.selected{
+		border: 1px solid orange !important;
+		background: orange;
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div class="tabcordion">
+
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#amazon_general" data-toggle="tab">Credenziali</a></li>
+		<li><a href="#amazon_marketplace" data-toggle="tab">Marketplaces</a></li>
+		<li><a href="#amazon_mappatura_categorie" data-toggle="tab">Categorie</a></li>
+		<li><a href="#amazon_mappatura_ordini" data-toggle="tab">Mappatura Ordini</a></li>
+		<li><a href="#amazon_mappatura_corrieri" data-toggle="tab">Mappatura Corrieri</a></li>
+	</ul>
+	<!----- TAB CONTENT ---->
+	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade active in" id="amazon_general">
+				<div class="row">
+					<div class="col-md-12">
+					{% import "macro/form.htm" as form %}
+					{{form.build(dataform.id)}}
+					{{form.buildCol(dataform.name)}}
+					{{form.buildCol(dataform.merchantId)}}
+					{{form.buildCol(dataform.token)}}
+					
+					</div>
+				</div>
+		</div>
+
+
+		<div class="tab-pane fade in" id="amazon_marketplace">
+				<div class="row">
+					<div class="col-md-12">
+						{% for group,values in marketplaces %}
+						<h4>{{group}}</h4>
+						<div class="row">
+							<div class="col-md-12">
+							{% for k,m in values %}
+							<div class="bandiera">
+								
+									<img src="{{m.image}}"> <span>{{m.name}}</span>
+									<input type="checkbox" class="form-control" style="display:none" {% if k in selected_markets %}checked{% endif %} name="formdata[marketplace][]" value="{{k}}">
+								
+
+							</div>
+							{% endfor %}
+							</div>
+						</div>
+						{% endfor %}
+						
+
+
+					</div>
+				</div>
+		</div>
+
+		<div class="tab-pane fade in" id="amazon_mappatura_categorie">
+				<div class="row">
+					<div class="col-md-12">
+						{% include "store/categories.htm" %}
+					</div>
+				</div>
+		</div>
+
+		<div class="tab-pane fade in" id="amazon_mappatura_ordini">
+				<div class="row">
+					<div class="col-md-12">
+					{% import "macro/form.htm" as form %}
+					{{form.buildCol(dataform.statusPaid,'col-md-6')}}
+					{{form.buildCol(dataform.statusSent,'col-md-6')}}
+					</div>
+				</div>
+		</div>
+
+		<div class="tab-pane fade in" id="amazon_mappatura_corrieri">
+			<div class="row">
+				<div class="col-md-12">
+					{% include "store/couriers.htm" %}
+				</div>
+			</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+<script>
+	
+	$('.bandiera').each(function(ind,l){
+		if( $(this).find('input').prop('checked') == true){
+			$(this).addClass('selected');
+		}
+	});
+	
+
+
+
+	$('.bandiera').on('click',function(){
+		if(!$(this).hasClass('selected')){
+			$(this).addClass('selected');
+			$(this).find('input').prop('checked',true);
+		}else{
+			$(this).find('input').prop('checked',false);
+			$(this).removeClass('selected');
+		}
+	});
+
+
+
+	 
+	 
+
+</script>
+		
+
+
+	
+	
+{% endblock %}

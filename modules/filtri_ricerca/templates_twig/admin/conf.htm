@@ -1,0 +1,14 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Configurazione Filtri ricerca {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+
+{{form.buildMultiselect(dataform.filtri,'col-md-12')}}
+{{form.buildMultiselect(dataform.escludi_tags,'col-md-12')}}
+{{form.buildMultiselect(dataform.escludi_attributes,'col-md-12')}}
+{{form.buildMultiselect(dataform.escludi_features,'col-md-12')}}
+{{form.buildCol(dataform.price_limit_max,'col-md-6')}}
+
+{% endblock %}

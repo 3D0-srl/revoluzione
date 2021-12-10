@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+	<script src="js/script.js?v=10"></script>
+	<style>
+		.img_market{
+			margin-left: 5px;
+			width:50px;
+			float:left;
+		}
+	</style>
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+        		<!--- TITLE ---->
+				<div class="m-b-20 clearfix">
+				{output(#top_amazon.htm#)}
+				<!--- TITLE ---->
+
+				  
+				  <div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-amazon">
+							<div class="panel-heading">
+								MAPPATURA PROFILO {profilo.get(#name#)}
+
+								<div class="pull-right">
+									<a href="index.php?action=mapping" class="btn btn-sm btn-amazon"><i class="fa fa-arrow-left"></i> Indietro</a>
+								</div>
+							</div>
+							<div class="panel-body">
+								<form id="mapping">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+
+										
+										
+											<div class="tabcordion">
+
+												<ul id="myTab" class="nav nav-tabs">
+													{foreach:mappatura,market,values}
+													{if:uguale(values[iter],#0#)}
+													<li class="active"><a href="#amazon_{market}" data-toggle="tab"><img src="images/{values[img]}"></a></li>
+													{else:}
+													<li class=""><a href="#amazon_{market}" data-toggle="tab"><img src="images/{values[img]}"></a></li>
+													{end:}
+													{end:}
+													<div id="myTabContent" class="tab-content">
+														{foreach:mappatura,market,values}
+														{if:uguale(values[iter],#0#)}
+															<div class="tab-pane active fade in" id="amazon_{market}">
+																<div class="col-md-12">
+																{foreach:values[composition],key,valori}
+																	<h4 style="color:#FF9900">{valori[nome]}</h4>
+																	<div class="row">
+																		{foreach:valori[values],k,v}
+																			<div class="col-md-2">
+																			{k} 
+																			</div>
+																			<div class="col-md-10">
+																			<input type="text" name="formdata[{market}][{key}][{k}]" value="{v}">
+																			</div>
+																		{end:}
+
+																	</div>
+																{end:}
+																</div>
+															</div>
+														{else:}
+															<div class="tab-pane fade in" id="amazon_{market}">
+																<div class="col-md-12">
+																{foreach:values[composition],key,valori}
+																	<h4 style="color:#FF9900">{valori[nome]}</h4>
+																	<div class="row">
+																		{foreach:valori[values],k,v}
+																			<div class="col-md-2">
+																			{k} 
+																			</div>
+																			<div class="col-md-10">
+																			<input type="text" name="formdata[{market}][{key}][{k}]" value="{v}">
+																			</div>
+																		{end:}
+
+																	</div>
+																{end:}
+																</div>
+															</div>
+
+
+														{end:}
+														{end:}
+													</div>
+												</ul>
+											</div>
+
+											
+									</div>
+								</div>
+
+								<div class="row">
+									 <div class="col-md-12 m-t-20 m-b-40 align-right">
+											<button type="button" onclick="salva_configurazione({profilo.id}); return false;"  class="btn btn-amazon m-t-10"><i class="fa fa-save"></i> Salva Configurazione</button>
+										</div>
+
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+                 </div>
+
+
+				  <!--<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-amazon">
+							<div class="panel-heading">
+								MAPPATURA
+							</div>
+							<div class="panel-body">
+
+							</div>
+						</div>
+					</div>
+				</div>-->
+
+
+				 
+		</div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+</body>
+
+</html>

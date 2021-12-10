@@ -1,0 +1,26 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Item Menu {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.parent,'col-md-6')}}
+{{form.buildCol(dataform.permission,'col-md-6')}}
+{{form.buildCol(dataform.url,'col-md-12')}}
+{{form.buildCol(dataform.name,'col-md-12')}}
+{{form.buildCol(dataform.tag,'col-md-4')}}
+{{form.buildCol(dataform.priority,'col-md-4')}}
+{{form.buildCol(dataform.active,'col-md-4')}}
+
+{{form.buildCol(dataform.icon,'col-md-6')}}
+{{form.buildCol(dataform.icon_image,'col-md-6')}}
+
+<div class="clearfix"></div>
+{{form.buildCol(dataform.showLabel,'col-md-6')}}
+
+<span id="fields_label">
+{{form.buildCol(dataform.staticTextLabel,'col-md-12')}}
+{{form.buildCol(dataform.labelText,'col-md-12')}}
+{{form.buildCol(dataform.labelFunction,'col-md-12')}}
+</span>
+{% endblock %}

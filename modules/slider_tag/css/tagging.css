@@ -1,0 +1,188 @@
+#logo
+{
+	width: 505px;
+	margin: 0 auto;
+	text-align: center;
+}
+#pgtitle
+{
+	margin: 0px 0px 20px;
+	font-size: 18pt;
+}
+#container
+{
+	display: block;
+	width: 850px;
+	height: 300px;
+	margin: 0 auto;
+}
+#imgtag
+{
+	position: relative;
+	min-width: 300px;
+	min-height: 300px;
+	float: none;
+	border: 3px solid #FFF;
+	cursor: crosshair;
+	text-align: center;
+	display: inline-block;
+}
+.tagview
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+/*display:none;*/
+	opacity: 1;
+	color: #FFFFFF;
+	text-align: center;
+}
+.square
+{
+	display: block;
+	height: 40px;
+}
+.person
+{
+	width:40px;
+	background: transparent;
+}
+#tagit
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+}
+#tagit .box
+{
+	border: 2px solid #D9534F;
+	width: 100px;
+	height: 100px;
+	float: left;
+	border-style:dashed;
+}
+#tagit .name
+{
+	float: left;
+	background-color: #C75757;
+	width: 320px;
+	height: auto !important;
+	padding: 5px;
+	font-size: 10pt;
+	border: 2px solid #C75757;
+}
+#tagit DIV.text
+{
+	margin-bottom: 5px;
+}
+#tagit INPUT[type=text]
+{
+	margin-bottom: 5px;
+}
+#tagit #tagname
+{
+	width: 100%;
+}
+#tagit #idproduct
+{
+	width: 110px;
+}
+
+.tagtitle
+{
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+	float: left;
+}
+
+#taglist{
+	 list-style:none;
+}
+
+#taglist li{
+	 margin-bottom: 10px;
+	 margin-right: 10px;
+	 display: inline-block;
+}
+
+#taglist a{
+	 text-decoration:none;
+	 color: #333;
+}
+
+#taglist span{
+	 color: #5dade2;
+}
+
+#taglist .remove{
+	color:#D9534F;
+	cursor:pointer;
+	
+	font-size:18px;
+}
+
+.color_tagedit{
+	display:block;
+}
+.icons_tag{
+	padding:5px;
+}
+
+.icons_tag > p{
+	color:#FFFFFF;
+	text-align:left;
+}
+
+.icon_tag{
+	display: inline-block;
+	cursor:pointer;
+	float: left;
+
+	width: 43px;
+	margin-right: 9px;
+}
+
+.icon_tag.selected img{
+	border: 2px solid #FFFFFF;
+	background: #C75757;
+}
+
+.inputtext{
+	width:100%;
+}
+
+.icon_div{
+
+    display: inline-block;
+    float: left;
+    width: 33px;
+}
+
+#btnsave{
+	float:left;
+}
+
+#btncancel{
+	float:left;
+}
+
+.btn-action{
+	width:320px;
+	padding:10px;
+	float:left;
+	border-top: 1px solid #FFFFFF;
+	background: #C75757;
+}
+.radio-selezione{
+	color:#FFFFFF;
+	float:left;
+	padding:0px !important;
+	
+}
+
+.nome_prodotto_slider_tag{
+	color:#000000;
+	text-align:center !important;
+}

@@ -1,0 +1,85 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('news')|title}} {% endblock %} 
+{% block css %}
+{{parent()}}
+<style>
+.tab-pane .panel {
+	margin-top: 10px;
+}
+
+.dropzone_container .panel {
+    margin-top: 0;
+}
+</style>
+{% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#general" data-toggle="tab">{{tr('general')|title}}</a></li>
+		<li class=""><a href="#media" data-toggle="tab">{{tr('media')|title}}</a></li>
+		<li class=""><a href="#seo" data-toggle="tab">{{tr('seo')|title}}</a></li>
+	</ul>
+		<div id="myTabContent" class="tab-content">
+			
+			<!-- GENERAL --->
+			<div class="tab-pane fade active in" id="general">
+				<div class="row">
+				
+					<div class="col-md-12">	
+						{{form.build(dataform.id)}}
+						{{form.buildCol(dataform.type_news,'col-md-12')}}
+						{{form.buildCol(dataform.title,'col-md-12')}}
+						{{form.buildCol(dataform.content,'col-md-12')}}
+						{{form.buildCol(dataform.visibility,'col-md-6')}}
+
+						{{form.buildCol(dataform.orderView,'col-md-6')}}
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade in" id="media">
+				<div class="row">
+					<div class="col-md-12">	
+						{{form.dropzone(dataform.images)}}
+					</div>
+				</div>
+			</div>
+
+			<!-- GENERAL --->
+			<div class="tab-pane fade in" id="seo">
+				<div class="row">
+				
+					<div class="col-md-12">	
+						
+					{{form.buildCol(dataform.slug,'col-md-12')}}
+					{{form.buildCol(dataform.urlType,'col-md-12')}}
+					
+					
+
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

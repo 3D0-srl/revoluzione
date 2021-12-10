@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
+
+<head>
+     <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+    {output(#javascript.htm#)}
+
+	
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../excanvas.min.js"></script><![endif]-->
+	
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.categories.js"></script>
+    <flexy:toJavascript flexy:prefix="js_"
+		iscritti_1="iscritti_1"
+		iscritti_2="iscritti_2"
+		year1="year1"
+		year2="year2"
+    >
+	<script type="text/javascript">
+
+	$(function() {
+		if( typeof js_iscritti_1 != null && js_iscritti_1 != null ){
+			var data1 = [];
+			for(var k in js_iscritti_1 ){
+			
+				data1.push([js_iscritti_1[k].label, parseFloat(js_iscritti_1[k].tot)]);
+			}
+		}
+
+		if( typeof js_iscritti_2 != null && js_iscritti_2 != null ){
+			var data2 = [];
+			for(var k in js_iscritti_2 ){
+			
+				data2.push([js_iscritti_2[k].label, parseFloat(js_iscritti_2[k].tot)]);
+			}
+		}
+
+		var datasets = {
+			js_year1: {
+				label: js_year1,
+				data: data1
+			},
+			js_year2: {
+				label: js_year2,
+				data: data2
+			}
+		}
+
+		
+		var i = 0;
+		$.each(datasets, function(key, val) {
+			val.color = i;
+			++i;
+		});
+
+		// insert checkboxes 
+		var choiceContainer = $("#choices");
+		$.each(datasets, function(key, val) {
+			choiceContainer.append("<br/><input type='checkbox' name='" + key +
+				"' checked='checked'  id='id" + key + "'></input>" +
+				"<label for='id" + key + "'>"
+				+ val.label + "</label>");
+		});
+
+		choiceContainer.find("input").click(plotAccordingToChoices);
+
+		function plotAccordingToChoices() {
+
+			var data = [];
+
+			choiceContainer.find("input:checked").each(function () {
+				var key = $(this).attr("name");
+				if (key && datasets[key]) {
+					data.push(datasets[key]);
+				}
+			});
+
+			if (data.length > 0) {
+				
+				$.plot("#placeholder", data, {
+					series: {
+						bars: {
+							show: true,
+							barWidth: 0.6,
+							align: "center"
+						}
+					},
+					xaxis: {
+						mode: "categories",
+						tickLength: 0
+					}
+				});
+			}
+		}
+
+		plotAccordingToChoices();
+	});
+
+	</script>
+</head>
+
+<body data-page="dashboard">
+      <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+        <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+            <div class="m-b-20 clearfix">
+                <div class="page-title pull-left">
+					
+                    <h3 class="pull-left">Statistiche della lista <strong>{list.list_name_view}</strong></h3>
+					
+
+                </div>
+                 <div class="pull-right">
+					<a  href="controller.php?action=lists" class="btn btn-success m-t-10"><i class="fa fa-arrow-left p-r-10"></i> indietro</a>
+                </div>
+            </div>
+			 <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+							<div id="placeholder" class="demo-placeholder" style="float:left; width:90%; height : 300px;"></div>
+							<p id="choices" style="float:right; width:10%;"></p>
+                            
+						</div>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END WRAPPER -->
+   
+  {output(#javascript_end.htm#)}
+  <script>
+		function conferma_elimina_email(email,list){
+			var t = confirm("Sicuro di volere eliminare dalla newsletter l'email "+email+"?");
+			if( t ){
+				document.location.href="controller.php?action=delete_email&email="+email+"&list="+list;
+			}
+		}
+  </script>
+</body>
+</html>

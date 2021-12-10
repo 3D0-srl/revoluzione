@@ -1,0 +1,29 @@
+<table>
+	<tr>
+		<td>Label</td>
+		<td>Name</td>
+		<td>Surname</td>
+		<td>Email</td>
+		<td>Phone</td>
+		<td>Cellular</td>
+		<td>Address</td>
+		<td>Post code</td>
+		<td>City</td>
+		<td>Province\State</td>
+		<td>Nation</td>
+	</tr>
+
+	<tr flexy:foreach="list,v">
+		<td>{v.label}</td>
+		<td>{v.name}</td>
+		<td>{v.surname}</td>
+		<td>{v.email}</td>
+		<td>{v.phone}</td>
+		<td>{v.cellular}</td>
+		<td>{v.address}</td>
+		<td>{v.postalCode}</td>
+		<td>{v.city}</td>
+		<td>{v.province}</td>
+		<td>{v.country}</td>
+	</tr>
+</table>

@@ -1,0 +1,139 @@
+{% extends "layouts/tab/base.htm" %}
+{% block content %}
+<style>
+	.items-status-order td >.label{
+		cursor:pointer !important;
+	}
+
+	tfoot {
+		display: table-header-group !important;
+	}
+
+	.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+		padding: 10px 4px;
+		line-height: 1.428571429;
+		font-size: 12px;
+	}
+
+	.btn {
+		height: auto;
+		line-height: 1.4;
+		padding: 2px 10px !important;
+		font-size: 13px;
+		border-radius: 4px;
+	}
+
+	.form-control {
+		border-radius: 4px;
+	}
+
+	.barra-fixed .btn {
+		padding: 0 24px !important;
+		height: 40px;
+		font-size:16px;
+		font-weight:700;
+		line-height:38px;
+		border-radius:8px;
+	}
+</style>                
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+	
+		{% if list is null %}
+				{{tr('no_record')}}
+		{% else %}
+		<table id="sezioni-table" class="table table-tools table-hover">
+			<thead>
+				<tr>
+					<th style="min-width:70px"><strong>ID</strong>
+					<th><strong>{{tr('name')}}</strong></th>
+					
+				   <th><strong>{{tr('description')}}</strong></th>
+				   <th><strong>{{tr('active')}}</strong></th>
+				   <th><strong>{{tr('paid')}}</strong></th>
+				   <th><strong>{{tr('sent')}}</strong></th>
+				   
+				   <th><strong>{{tr('send_email')}}</strong></th>
+				   <th><strong>{{tr('create_invoice')}}</strong></th>
+				   <th><strong>{{tr('send_invoice')}}</strong></th>
+
+					<th class="text-center">
+						<strong>{{tr('actions')}}</strong>
+					</th>
+				</tr>
+			</thead>
+			<tbody class="items-status-order">
+				{% for v in list %}
+				<tr>
+					<td>{{v.id}}</td>
+					<td><span class="label" style="background:{{v.color}}">{{v.get('name')|upper}}</span></td>
+					<td>{{v.get('description')}}</td>
+					<td>
+						
+							<span class="label label-{% if v.active %}success{% else %}danger{% endif %}" id="active_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'active'); return false;">{% if v.active %}{{tr('active')|upper}}{% else %}{{tr('inactive')|upper}}{% endif %}</span>
+						
+					</td>
+					 <td>
+						<span class="label label-{% if v.paid %}success{% else %}danger{% endif %}" id="paid_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'paid'); return false;">{% if v.paid %}{{tr('yes')|upper}}{% else %}{{tr('no')|upper}}{% endif %}</span>
+					</td>
+
+					 <td>
+						<span class="label label-{% if v.sent %}success{% else %}danger{% endif %}" id="sent_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'sent'); return false;">{% if v.sent %}{{tr('yes')|upper}}{% else %}{{tr('no')|upper}}{% endif %}</span>
+					</td>
+
+					
+
+					 <td>
+
+						<span class="label label-{% if v.send_mail %}success{% else %}danger{% endif %}" id="send_mail_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'send_mail'); return false;">{% if v.send_mail %}{{tr('yes')|upper}}{% else %}{{tr('no')|upper}}{% endif %}</span>
+
+						
+					</td>
+
+					 <td>
+
+						<span class="label label-{% if v.invoice %}success{% else %}danger{% endif %}" id="invoice_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'invoice'); return false;">{% if v.invoice %}{{tr('yes')|upper}}{% else %}{{tr('no')|upper}}{% endif %}</span>
+
+
+					</td>
+
+					 <td>
+						<span class="label label-{% if v.send_invoice %}success{% else %}danger{% endif %}" id="send_invoice_{{v.id}}" onclick="change_visibility($(this),{{v.id}},'send_invoice'); return false;">{% if v.send_invoice %}{{tr('yes')|upper}}{% else %}{{tr('no')|upper}}{% endif %}</span>
+						
+					</td>
+					
+					<td class="text-center" style="max-width: 180px !important;width: 180px;"> 
+						<!--<a href="/admin/admin.php?action=mod_user&id={v.id}" class="edit btn btn-sm btn-default"><i class="fa fa-pencil"></i> Modifica</a>
+						<a href="/admin/admin.php?action=dup_user&id={v.id}" class="edit btn btn-sm btn-default"><i class="fa fa-copy"></i> Duplica</a>
+						<a href="#" class="delete btn btn-sm btn-default" onclick="elimina_utente({v.id});return false;"><i class="fa fa-times-circle"></i> Elimina</a>-->
+						<div class="btn-group media-group">
+							  {% if v.locked == false %}
+								 <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+								  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+										<span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu media-menu text-left" role="menu">
+									<li><a href="{{script_url}}&action=mail&id={{v.id}}"><i class="fa fa-envelope-o"></i> {{tr('email')}}</a></li>
+									<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i> {{tr('duplicate')}}</a></li>
+									<li><a href="{{url_confirm_delete}}&id={{v.id}}" ><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+								  </ul>
+							  {% endif %}
+							  
+						</div>
+					</td>
+				</tr>
+				{% endfor %}
+				
+			</tbody>
+		</table>
+		{% endif %}
+	</div>
+	{% if links %}
+	 <div class="m-t-30 align-center">
+		{{links[all]|raw}}
+	</div>
+	{% endif %}
+</div>
+{% endblock %}
+
+

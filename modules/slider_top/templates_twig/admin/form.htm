@@ -1,0 +1,24 @@
+{% extends "layouts/base_form.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.text,'col-md-12')}}
+{{form.buildCol(dataform.url,'col-md-12')}}
+{{form.buildCol(dataform.order_view,'col-md-3')}}
+{{form.buildCol(dataform.online,'col-md-3')}}
+{{form.buildPalette(dataform.background_color,'col-md-3')}}
+{{form.buildPalette(dataform.color,'col-md-3')}}
+
+
+<div class="clearfix"></div>
+{{form.buildCol(dataform.time_range,'col-md-12')}}
+{{form.buildCol(dataform.date_start,'col-md-6')}}
+{{form.buildCol(dataform.date_end,'col-md-6')}}
+
+
+<div class="clearfix"></div>
+{{form.buildCol(dataform.enable_countdown,'col-md-4')}}
+{{form.buildCol(dataform.compact_countdown,'col-md-4')}}
+{{form.buildCol(dataform.countdown,'col-md-4')}}
+{% endblock %}

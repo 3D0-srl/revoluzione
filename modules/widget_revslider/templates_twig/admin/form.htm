@@ -1,0 +1,22 @@
+
+{% extends "layouts/base_form.htm" %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+<div class="row">
+            <div class="form-group col-md-12">
+                <form enctype='multipart/form-data' action="index.php" method="POST">
+                <label>Seleziona lo slider  :</label>
+                <div class="controls">
+                    <input type="file" name="file">
+                    <input type='hidden' name='formID'>
+                    <input type='hidden' name='action' value="add">
+                    <input type='hidden' name='ctrl' value="{{ctrl}}">
+                    <input type='hidden' name='mod' value="{{module}}">
+                    <input type='hidden' name='pageID' value="{{pageID}}">
+                    <input type='hidden' name='formdata[var]' value="1">
+                </div>
+            </div>
+    </div>
+{% endblock %}

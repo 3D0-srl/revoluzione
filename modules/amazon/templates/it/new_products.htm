@@ -1,0 +1,58 @@
+<h3>Creazione Prodotti su Amazon</h3>
+{if:one_account}
+	{foreach:markets,id_store,values}
+	<div class="row box_store" id="box_store_{id_store}" style="">
+		{foreach:values,market,img}
+			<div class="account_market_amazon" onclick="new_product_market($(this),{id_store},'{market}')">
+				<img src="images/{img}"/>
+			</div>
+		{end:}
+	</div>
+	{end:}
+{else:}
+	{if:stores}
+	{foreach:stores,store}
+	<div class="account_amazon" onclick="new_product_account($(this),{store.id}); return false;">{store.name}</div>
+	{end:}
+	<div class="clearfix m-t-20"></div>
+
+	{foreach:markets,id_store,values}
+	<div class="row box_store" id="box_store_{id_store}" style="display:none">
+		{foreach:values,market,img}
+			<div class="account_market_amazon" onclick="new_product_market($(this),{id_store},'{market}')">
+				<img src="images/{img}"/>
+			</div>
+		{end:}
+	</div>
+	{end:}
+
+	{end:}
+{end:}
+
+{if:products_info}
+	<div class="alert alert-success" style="width:100%; display:none" id="import_ok" >
+		Dati inviati ad Amazon. L'elaborazione dei dati può richiedere alcuni minuti.<br>
+		Puoi visualizzare gli esiti delle tue richieste nella sezione <b>Reports</b>.
+	</div>
+	<table class="table">
+	
+	<tbody>
+		<tr>
+			<td class="center"><img src="images/{products_info[img]}"/></td>
+			<td class="center"><b>{products_info[tot]}</b> prodotto/i pronto per la creazione</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<td colspan="2">
+			
+			<button class="btn btn-sm btn-amazon pull-right" onclick="import_new_product_market({products_info[id_store]},'{products_info[market]}')"><i class="fa fa-magic"></i> crea prodotti</button>
+		</td>
+	</tfoot>
+	</table>
+
+	
+
+	
+{end:}
+
+

@@ -1,0 +1,118 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<img src="themes/jewels/images/ico-gdpr-backend.png">{{tr('GDPR','gdpr')}}
+{% endblock %}
+
+
+{% block backend_content %}
+{{messages|raw}}
+
+<div class="row">
+	<div class="col-md-12">
+		<h6 class="pull-left m-t-10 m-b-10">I miei dati</h6>
+		<a href="index.php?mod=gdpr&action=export_data" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+		<div class="space20"></div>
+		<div class="well">
+			<b>Nome</b>: {{userdata.name}}<br>
+			<b>Cognome</b>: {{userdata.surname}}</br>
+			<b>Email</b>: {{userdata.email}}</br>
+			<b>C.F.</b>: {{userdata.fiscalCode}}</br>
+			<b>P.IVA</b>: {{userdata.vatNumber}}</br>
+			<b>Città</b>: {{userdata.city}}</br>
+			<b>Provincia</b>: {{userdata.province}}</br>
+			<b>Indirizzo</b>: {{userdata.address}}</br>
+			<b>Nazione</b>: {{userdata.country}}</br>
+			<b>Cod. Fiscale</b>: {{userdata.fisclaCode}}</br>
+			<b>P. IVA</b>: {{userdata.vatNumber}}</br>
+		</div>
+	</div>
+</div>
+
+{% if ecommerce %}
+<div class="row">
+	<div class="col-md-12">
+		<h6 class="pull-left m-t-10 m-b-10">I miei idirizzi</h6>
+		<a href="index.php?mod=gdpr&action=export_addresses" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+		<div class="space20"></div>
+		{% if list %}
+			{% for add in list %}
+				<div class="well">
+					<b>{{add.label}}</b><br>
+					{{add.name}} {{add.surname}} <br>  
+					{% if add.phone %}
+						{{add.phone}}
+						{% if add.cellular %}
+						/ {{add.cellular}}
+						{% endif %}
+					{% else %}
+						{% if add.cellular %}
+						{{add.cellular}}
+						{% endif %}
+					{% endif %}<br>
+					{% if add.email %}
+					<span >{{add.email}}</span><br>
+					{% endif %}
+					{{add.address}} {{add.postalCode}} {{add.city}} {% if add.province %}<span >{{add.getNameProvince()}} -{% endif %} {{add.getNameCountry()}}</span>
+				</div>
+			{% endfor %}
+
+		{% else %}
+
+			<p>Nessun indirizzo presente in archivio</p>
+
+		{% endif %}
+		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h6 class="pull-left m-t-10 m-b-10">I miei ordini</h6>
+		<a href="index.php?mod=gdpr&action=export_orders" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+		<div class="space20"></div>
+		<div class="well">						
+			<p class="m-b-0">Puoi visualizzare l'elenco dei tuoi ordini <a href="index.php?mod=ecommerce&ctrl=Orders">qui</a></p>						
+		</div>
+	</div>
+</div>
+{% endif %}
+
+<div class="row">
+	<div class="col-md-12">
+		<form class="flex" action="index.php" id="form_delete_account">
+			<div class="controls scegli">
+				<input type="checkbox" id="allow_delete_account" value="1" name="allow" required>
+				<label for="allow_delete_account"></label>
+				<span class="allow_delete_account">Dichiaro di voler procedere con la rimozione dei miei dati personali</span>
+			</div>
+			<button type="submit" class="btn btn-default pull-right"><i class="fa fa-trash-o"></i> Cancella il mio account</button>
+			<input type="hidden" name="action" value="destroy">
+			<input type="hidden" name="mod" value="gdpr">
+		</form>
+	</div>
+</div>
+      
+<div id="modal_confirm" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">CONFERMA RIMOZIONE</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Gentile cliente è sicuro di volere eliminare definitivamente il suo account?<br><span style="color:red"> Le ricordiamo che l'operazione non è reversibile.</span></p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" id="dismiss_modal" data-dismiss="modal">ANNULLA</button>
+			<button type="button" class="btn btn-default submitform" onclick="submitform()">PROCEDI</button>
+		  </div>
+		</div>
+
+	  </div>
+</div>
+
+
+{% endblock%}

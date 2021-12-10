@@ -1,0 +1,55 @@
+<div class="widget-box-news-slider-{{ box_id }} clearfix">
+	{% set months = [
+		'Gennaio',
+		'Febbraio',
+		'Marzo',
+		'Aprile',
+		'Maggio',
+		'Giugno',
+		'Luglio',
+		'Agosto',
+		'Settembre',
+		'Ottobre',
+		'Novembre',
+		'Dicembre'
+	] %}
+	{% if id_type != -1 %}
+	{% for row in news %}
+		<a href="/news/it/{{ row.get('slug') }}.htm" class="box-news">
+			<div class="widget-box-news-element" style="background:url('{{ row.getUrlImage(0) }}'); background-position:center center; background-repeat:no-repeat; background-size:cover; background-attachment:scroll;">
+				{% set month = row.get('dateLastUpdate') | date('n') %}
+				<div class="info-news flex flex-center">
+					<div class="data-news">
+						<div class="mese-news">{{ row.get('dateLastUpdate') | date('d') }}</div>
+						<div class="giorno-news">{{ months[month - 1] }}</div>
+					</div>
+					<div class="tit-cat-news">
+						<div class="cat-news">{{ category_name }}</div>
+						<div class="tit-news">{{ row.get('title') }}</div>
+					</div>
+				</div>
+				<div class="pulsante pulsante-pieno">{{tr('Scopri di più','widget_box_news')}}</div>
+			</div>
+		</a>
+	{% endfor %}
+	{% else %}
+		{% for row in news %}
+			<a href="/news/it/{{ row.get('slug') }}.htm" class="box-news">
+				<div class="widget-box-news-element" style="background:url('{{ row.getUrlImage(0) }}'); background-position:center center; background-repeat:no-repeat; background-size:cover; background-attachment:scroll;">
+					{% set month = row.get('dateLastUpdate') | date('n') %}
+					<div class="info-news flex flex-center">
+						<div class="data-news">
+							<div class="mese-news">{{ row.get('dateLastUpdate') | date('d') }}</div>
+							<div class="giorno-news">{{ months[month - 1] }}</div>
+						</div>
+						<div class="tit-cat-news">
+							<div class="cat-news">{{ categories[row.type_news] }}</div>
+							<div class="tit-news">{{ row.get('title') }}</div>
+						</div>
+					</div>
+					<div class="pulsante pulsante-pieno">{{tr('Scopri di più','widget_box_news')}}</div>
+				</div>
+			</a>
+		{% endfor %}
+	{% endif %}
+</div>

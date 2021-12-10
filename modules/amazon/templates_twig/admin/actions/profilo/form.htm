@@ -1,0 +1,31 @@
+<form id="new_profile_{{m.name}}" style="display:none">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group" id="">
+                <label>Nome:</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="theme" name="formdata[name]">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group" id="">
+                <label>Categoria:</label>
+                <div class="controls">
+                    <select type="text" class="form-control" id="theme" name="formdata[category]">
+                        <option value="">---------</option>
+                        {% for v in profile_categories %}
+                            <option value="{{v}}">{{v}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="formdata[id_store]" value="{{id_store}}">
+    <input type="hidden" name="formdata[marketplace]" value="{{m.name}}">
+    <button type="button" onclick="add_profilo('{{m.name}}');">annulla</button>
+    <button type="button" onclick="save_profile('{{m.name}}');">Aggiungi</button>
+</form>

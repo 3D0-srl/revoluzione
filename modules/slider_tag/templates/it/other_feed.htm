@@ -1,0 +1,10 @@
+<div class="instafeed_content instafeed_content_new" flexy:foreach="list,k,v" style="display:none">
+	<div class="instafeed_post instafeed_post_new" style="background-image:url('{v.url_image}');" ordine="{v.ordine}">
+		<div class="instafeed_overlay">
+			<div class="instafeed_text">
+				<img src="/img/new/ico_instafeed.png">
+				<div class="date">{strftime(#%d %B %Y#,v.created_time)}</div>
+			</div>
+		</div>
+	</div>
+</div>

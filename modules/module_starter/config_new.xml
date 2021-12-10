@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<module>
+   <!--Informazioni del modulo-->
+   <info> 
+		<id>{NUMERO_IDENTIFICATIVO_UNIVOCO_DEL_MODULO}</id>
+		<author>{NOME E COGNOME AUTORE MODULO}</author>
+		<name>{NOME DEL MODULO}</name>
+		<permission>superadmin</permission>
+		<version>3</version>
+		<tag>{NOME DELLA CARTELLA DEL MODULO (ALFANUMERICO)}</tag>
+		<kind>{TIPOLOGIA MODULO. VALORI AMMESSI: catalogo,ecommerce,cms}</kind>
+		<scope></scope> 
+		<description><![CDATA[{DESCRIZIONE DEL MODULO}]]></description> 
+		<compatibility>
+			<from>4.8.2</from>
+			<to>4.8.3</to>
+		</compatibility>
+		<autoload>1</autoload>
+  </info>
+  
+  <!--SEZIONE AMMINISTRATORE-->
+  <admin>
+	  <!--Creazione dei link nel menu laterale della sezione amminitratore-->
+	  <menu>
+		<items>
+			<!-- ITEM DI LIVELLO 1 (Voce padre) -->
+			<item>
+				<locale>
+					<name>
+						<it>Voce Padre</it>
+						<en>Voce Padre</en>
+						<es>Voce Padre</es>
+						<de>Voce Padre</de>
+						<fr>Voce Padre</fr>
+						<pt>Voce Padre</pt>
+					</name>
+				</locale>
+				<tag>tag_module_voce_padre</tag>  <!--tag identificativo della voce di menu-->
+				<permission>cms</permission>  <!--permessi-->
+				<icon>fa fa-heart</icon>  <!--icona voce menu (FONTAWESOME)-->
+				<iconImg>../modules/module_starter/img/cona.png</iconImg>  <!--immagine icona voce menu: percorso relativo alla directory del modulo-->
+				<priority>99</priority>  <!--ordine di visualizzazione-->
+				<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action</url> <!--url della voce (NON OBBLIGATORIA PER LA VOCE PADRE)-->
+			</item>
+			<!-- ITEM DI LIVELLO 2 (Voce figlia) -->
+			<item>
+				<locale>
+					<name>
+						<it>Voce figlia 1</it>
+						<en>Voce figlia 1</en>
+						<es>Voce figlia 1</es>
+						<de>Voce figlia 1</de>
+						<fr>Voce figlia 1</fr>
+						<pt>Voce figlia 1</pt>
+					</name>
+				</locale>
+				<parentTag>tag_module_voce_padre</parentTag> <!--tag identificativo della voce padre-->
+				<tag>tag_module_voce_padre</tag> 
+				<permission>cms</permission> 
+				<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action2</url>
+				<iconImg>../modules/module_starter/img/cona.png</iconImg>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <!--SEZIONE BACK OFFICE LATO CLIENT-->
+  <backend>
+	<!--Creazione dei link nel menu laterale della sezione frontend-->
+	<menu>
+		<items>
+			<!-- ITEM DI LIVELLO 1 (Voce padre) -->
+			<item>
+				<locale>
+					<name>
+						<it>Voce Padre</it>
+						<en>Voce Padre</en>
+						<es>Voce Padre</es>
+						<de>Voce Padre</de>
+						<fr>Voce Padre</fr>
+						<pt>Voce Padre</pt>
+					</name>
+				</locale>
+				<tag>tag_module_voce_padre</tag>  <!--tag identificativo della voce di menu-->
+				<permission>cms</permission>  <!--permessi-->
+				<icon>fa fa-heart</icon>  <!--icona voce menu (FONTAWESOME)-->
+				<iconImg>modules/module_starter/img/cona.png</iconImg>  <!--immagine icona voce menu: percorso relativo alla directory del modulo-->
+				<priority>99</priority>  <!--ordine di visualizzazione-->
+				<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action</url> <!--url della voce (NON OBBLIGATORIA PER LA VOCE PADRE)-->
+			</item>
+			<!-- ITEM DI LIVELLO 2 (Voce figlia) -->
+			<item>
+				<locale>
+					<name>
+						<it>Voce figlia 1</it>
+						<en>Voce figlia 1</en>
+						<es>Voce figlia 1</es>
+						<de>Voce figlia 1</de>
+						<fr>Voce figlia 1</fr>
+						<pt>Voce figlia 1</pt>
+					</name>
+				</locale>
+				<parentTag>tag_module_voce_padre</parentTag> <!--tag identificativo della voce padre-->
+				<tag>tag_module_voce_padre</tag> 
+				<permission>cms</permission> 
+				<iconImg>modules/module_starter/img/cona.png</iconImg>
+				<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action2</url>
+				<priority>3</priority> 
+			</item>
+
+		</items>
+	</menu>
+
+	 <homeButtons>
+		  <button>	
+			<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action2</url>
+			<iconImg>modules/module_starter/img/cona.png</iconImg>
+			<orderView>11</orderView>
+			<locale>
+				<name>
+					<it>My button</it>
+					<en>My button</en>
+					<es>My button</es>
+					<de>My button</de>
+					<fr>My button</fr>
+					<pt>My button</pt>
+				</name>
+			</locale>
+		 </button>
+		 <button>	
+			<url>index.php?ctrl=MyCtrl&amp;mod=my_module&amp;action=my_action2</url>
+			<iconImg>modules/module_starter/img/cona.png</iconImg>
+			<orderView>11</orderView>
+			<locale>
+				<name>
+					<it>My button</it>
+					<en>My button</en>
+					<es>My button</es>
+					<de>My button</de>
+					<fr>My button</fr>
+					<pt>My button</pt>
+				</name>
+			</locale>
+		 </button>
+	  </homeButtons>
+  </backend>
+   <!--Lista dei widget che il modulo deve installare per il pagecomposer-->
+  <widgets>
+	   <widget> 
+			<name>{NOME DEL WIDGET}</name>
+			<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+			<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+		 <widget> 
+			<name>{NOME DEL WIDGET 2}</name>
+			<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+			<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+		 <widget> 
+			<name>{NOME DEL WIDGET}</name>
+			<function>{NOME DELLA CLASSE DEL WIDGET (CAMELCASE)}</function>
+			<url_conf>/backend/index.php?ctrl=ConfWidget&amp;mod={nome_cartella_modulo}</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+  </widgets>
+
+   <!--Lista delle action da ancorare agli hook-->
+  <actions>
+	   <action>
+			<hook>{NOME DELL'ANCORA (HOOK)}</hook>
+			<hookDescription>{DESCRIZIONE HOOK}</hookDescription>
+			<hookType>{TIPO HOOK (action,display)}</hookType>
+			<function>{NOME DELLA FUNZIONE}</function>
+		</action>
+		<action> 
+			<hook>{NOME DELL'ANCORA (HOOK)}</hook>
+			<function>{NOME DELLA FUNZIONE}</function>
+		</action>
+  </actions>
+  <!--Lista dei permessi da creare-->
+  <permissions>
+	   <permission>
+			<tag>{TAG}</tag>
+			<locale>
+				<name>
+					<it>My permission</it>
+					<en>My permission</en>
+					<es>My permission</es>
+					<de>My permission</de>
+					<fr>My permission</fr>
+					<pt>My permission</pt>
+				</name>
+				<description>
+					<it>My permission</it>
+					<en>My permission</en>
+					<es>My permission</es>
+					<de>My permission</de>
+					<fr>My permission</fr>
+					<pt>My permission</pt>
+				</description>
+			</locale>
+		</permission>
+  </permissions>
+
+  	<!--- DIPENDENZE MODULO -->
+	<dependencies>
+		<dependence>modulo1</dependence>
+		<dependence>modulo2</dependence>
+		<dependence>modulo3</dependence>
+  </dependencies>
+</module>

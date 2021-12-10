@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     {metatags()}
+
+    <title>Area utente | {setting[info][nomesito]}</title>
+	   
+    {output(#css.htm#)}
+	<link rel="stylesheet" href="css/address.css">
+	{output(#javascript.htm#)}
+	<script src="js/script.js"></script>
+	
+    <style>
+		.allow_delete_account {
+			margin: 0 0 0 5px;
+		}
+		.error {
+			color: red;
+			font-weight: 700;
+		}
+	</style>
+
+</head>
+
+<body id="userarea">
+
+    <!-- Navigation -->
+     {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+           <!--<div class="col-md-3">
+				{output(#colonna_sinistra_utente.htm#)}
+			</div>!-->
+
+			<div class="space40"></div>
+			<div class="bread_crumbs_userarea">
+				<a href="/account/home.htm">Il mio account</a><i class="fa fa-angle-right"></i>
+				<a class="active" href="#">Gestisci account</a>
+				<div class="right">
+					<a href="javascript: window.history.go(-1)" class="indietro"><i class="fa fa-arrow-left"></i> Indietro</a>
+				</div>
+			</div>
+			<div class="space20"></div>
+
+            <div class="col-xs-12 col-md-12 col-lg-12">
+				<h1 class="tal">Gestione account</h1>
+				<div class="table-responsive">
+					<!--<span flexy:if="!list">Nessun indirizzo presente in archivio.</span>-->
+					
+
+					<div class="col-md-12 panel panel-default">
+						<div class="panel-heading">
+						
+						I miei dati
+						<a href="/modules/gdpr/index.php?action=export_data" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+						</div>
+						<div class="panel-body">
+							<div class="well">
+							<b>Nome</b>: {userdata.name}<br>
+							<b>Cognome</b>: {userdata.surname}</br>
+							<b>Email</b>: {userdata.email}</br>
+							<b>C.F.</b>: {userdata.fiscalCode}</br>
+							<b>P.IVA</b>: {userdata.vatNumber}</br>
+							<b>Città</b>: {userdata.city}</br>
+							<b>Provincia</b>: {userdata.province}</br>
+							<b>Indirizzo</b>: {userdata.address}</br>
+							<b>Nazione</b>: {userdata.country}</br>
+							<b>Cod. Fiscale</b>: {userdata.fisclaCode}</br>
+							<b>P. IVA</b>: {userdata.vatNumber}</br>
+							</div>
+						</div>
+					</div>	
+
+				</div>
+
+				<div class="table-responsive">
+					<div class="col-md-12 panel panel-default" flexy:if="list">
+						<div class="panel-heading">I miei idirizzi
+						<a href="/modules/gdpr/index.php?action=export_address" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+						</div>
+						<div class="panel-body">
+							<p flexy:if="!list">Nessun indirizzo presente in archivio</p>
+							<div class="well" flexy:foreach="list,add">
+							
+								
+									<b>{add.label}</b><br>
+									{add.name} {add.surname} <br>  
+									{if:add.phone}
+										{add.phone}
+										{if:add.cellular}
+										/ {add.cellular}
+										{end:}
+									{else:}
+										{if:add.cellular}
+										{add.cellular}
+										{end:}
+									{end:}<br>
+									<span flexy:if="add.email">{add.email}</span><br>
+									
+									{add.address} {add.postalCode} {add.city} <span flexy:if="add.province">{add.getNameProvince()} - {add.getNameCountry()}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="table-responsive">
+					<div class="col-md-12 panel panel-default" flexy:if="ecommerce">
+						<div class="panel-heading">I miei ordini
+						<a href="/modules/gdpr/index.php?action=export_orders" class="btn btn-default btn-sm pull-right"><i class="fa fa-download"></i> Esporta excel</a>
+						</div>
+						<div class="panel-body">						
+							<p>Puoi visualizzare l'elenco dei tuoi ordini <a href="/account/orders.htm">qui</a></p>						
+						</div>
+					</div>
+				</div>
+
+				<div class="table-responsive">
+					<div class="col-md-12">
+						<form class="flex">
+							<div>
+								<input type="checkbox" id="allow_delete_account" value="1" name="allow" required><span class="allow_delete_account">Dichiaro di voler procedere con la rimozione dei miei dati personali</span>
+							</div>
+							<button type="submit" class="btn btn-default pull-right"><i class="fa fa-trash-o"></i> Cancella il mio account</button>
+							<input type="hidden" name="action" value="destroy">
+						</form>
+					</div>
+				</div>
+				<div class="space40"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+	{output(#footer.htm#)}
+
+
+
+	<!-- Modal -->
+	<!--<div id="modal_confirm" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">CONFERMA RIMOZIONE</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Gentile cliente è sicuro di volere eliminare definitivamente il suo account?<br><span style="color:red"> Le ricordiamo che l'operazione non è reversibile.</span></p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" id="dismiss_modal" data-dismiss="modal">ANNULLA</button>
+			<button type="button" class="btn btn-default submitform" onclick="submitform()">PROCEDI</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>-->
+
+
+
+</body>
+
+</html>

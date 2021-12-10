@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Chat Facebook</name>
+		<permission>superadmin</permission>
+		<tag>chat_facebook</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<version>3</version>
+		<description><![CDATA[Integra nel cms la chat di facebook]]></description> 
+   </info>
+   <widgets>
+		<widget> 
+			<name>Facebook chat</name>
+			<function>WidgetFacebookChat</function>
+			<url_conf>/backend/index.php?ctrl=Conf&amp;mod=chat_facebook</url_conf>
+			<repeatable>1</repeatable>
+		</widget>
+	</widgets>
+</module>

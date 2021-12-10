@@ -1,0 +1,26 @@
+{% extends "layouts/page.htm" %}
+
+{% block content %}
+
+<!--{% for item in items %}
+<a href="/gallery/{{ item.parent_id }}.htm">
+    <div class="element-to-slide">
+        <h2>{{ item.name }}</h2>
+        <img src="{{ item.image }}" alt="">
+    </div>
+</a>
+{% endfor %}-->
+<div class="container" style="padding-top: 40px;">
+    {% for item in items %}
+    <a href="/gallery/{{ item.parent_id }}.htm" class="s-news">
+        <img src="{{ item.image }}" alt="{{ item.name }}">
+        <div class="data"></div>
+        <div class="tit">{{ item.name }}</div>
+        <p>{{ item.descriptionShort }}</p>
+        <span class="btn-default">Leggi di più</span>
+    </a>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% if titolo %}
+	<h4>{{titolo}}</h4>
+{% endif %}
+
+<div class="swiper-container widget_swiper_categories widget_swiper_{{id_box}} clearfix" id_box="{{id_box}}">
+	<div class="swiper-wrapper">
+		{% for v in list %}
+			<div class="swiper-slide">
+				<a href="{{v.getUrl()}}">
+					<img src="{{v.getUrlImage(0)}}">
+					<h6 class="m-t-10">{{v.get('name')}}</h6>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="swiper-button-prev swiper-button-prev_{{id_box}}"></div>
+	<div class="swiper-button-next swiper-button-next_{{id_box}}"></div>
+	<div class="swiper-scrollbar js-swiper-scrollbar js-swiper-scrollbar_{{id_box}}"></div>
+</div>

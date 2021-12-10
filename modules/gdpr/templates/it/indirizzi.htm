@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     {metatags()}
+
+    <title>Area utente | {setting[info][nomesito]}</title>
+	   
+    {output(#css.htm#)}
+	<link rel="stylesheet" href="css/address.css">
+	{output(#javascript.htm#)}
+	<script src="js/script.js"></script>
+    <style>
+
+	
+
+	</style>
+
+</head>
+
+<body id="userarea">
+
+    <!-- Navigation -->
+     {output(#top.htm#)}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+           <!--<div class="col-md-3">
+				{output(#colonna_sinistra_utente.htm#)}
+			</div>!-->
+
+			<div class="space40"></div>
+			<div class="bread_crumbs_userarea">
+				<a href="/account/home.htm">Il mio account</a><i class="fa fa-angle-right"></i>
+				<a class="active" href="#">I miei indirizzi</a>
+				<div class="right">
+					<a href="javascript: window.history.go(-1)" class="indietro"><i class="fa fa-arrow-left"></i> Indietro</a>
+				</div>
+			</div>
+			<div class="space20"></div>
+
+            <div class="col-xs-12 col-md-12 col-lg-12">
+				<h1 class="tal">I miei indirizzi</h1>
+				<div class="table-responsive">
+					<!--<span flexy:if="!list">Nessun indirizzo presente in archivio.</span>-->
+					
+
+					<span id="nuovo_indirizzo">
+					{form_address:h}
+				</span>
+
+				
+				<span id="other_address">
+					<div class="clearfix"></div>
+					<form id="address_form" flexy:if="authUser()">
+						<input type='hidden' name="formdata[recurrent_payment]" value="{recurrent_payment}">
+						<div class="box_address" flexy:foreach="list,add" id="address_{add.id}" flexy:ignore>
+							<div class="cont_address">
+								<!--{if:uguale(add.id,address_selected)}
+								<div class="name_address">
+									<input type="radio" id="address{add.id}" name="formdata[id_address]" checked value="{add.id}">
+									<label for="address{add.id}"></label>
+									<span>{add.label}</span>
+								</div>
+								{else:}
+								<div class="name_address">
+									<input type="radio" id="address{add.id}" name="formdata[id_address]" value="{add.id}">
+									<label for="address{add.id}"></label>
+									<span>{add.label}</span>
+								</div>
+
+								{end:}-->
+								<div class="info_address">
+									<span>{add.name} {add.surname}</span><br>
+									<span>{add.address}</span><br>
+									<span>{add.postalCode} {add.city}</span><br>
+									<span flexy:if="add.province">{add.getNameProvince()} - {add.getNameCountry()}</span><br>
+									<span flexy:if="add.email">{add.email}</span><br>
+									<span>
+									{if:add.phone}
+										{add.phone}
+										{if:add.cellular}
+										/ {add.cellular}
+										{end:}
+									{else:}
+										{if:add.cellular}
+										{add.cellular}
+										{end:}
+									{end:}
+									</span>
+								</div>
+							</div>
+							<div class="box_btn">
+								<div class="btn_address" onclick="new_address({add.id}); return false;">
+									<img src="/img/demo/ico_mod_cart.png">Modifica
+								</div>
+								<div class="btn_address" onclick="del_address({add.id}); return false;">
+									<img src="/img/demo/ico_del_cart.png">Elimina
+								</div>
+							</div>
+						</div>
+					</form>
+					<span flexy:if="authUser()">
+						<div class="space40"></div>
+						<div class="btn-addform" onclick="new_address(0);">
+							<img src="/img/demo/ico_add_form_cart.png">Aggiungi un nuovo indirizzo
+						</div>
+					</span>
+				</span>
+							
+				</div>
+				<div class="col-md-12" style="text-align:right;" flexy:if="links">
+					{links[all]:h}
+				</div>
+				<div class="space20"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+	{output(#footer.htm#)}
+
+
+
+</body>
+
+</html>

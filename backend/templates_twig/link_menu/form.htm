@@ -1,0 +1,155 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} {{tr('menu_link')|title}} {% endblock %} 
+
+
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.buildCol(dataform.parent,'col-md-12')}}
+
+{{form.buildCol(dataform.title,'col-md-12')}}
+{{form.buildCol(dataform.static_url,'col-md-12')}}
+
+
+
+
+<span id="dinamic_url_span">
+{{form.buildCol(dataform.url_type,'col-md-12')}}
+{{form.buildCol(dataform.id_url_page,'col-md-12')}}
+</span>
+<span id="static_url_span">
+{{form.buildCol(dataform.url,'col-md-12')}}
+</span>
+
+{{form.buildCol(dataform.orderView,'col-md-4')}}
+{{form.buildCol(dataform.visibility,'col-md-4')}}
+{{form.buildCol(dataform.target_blank,'col-md-4')}}
+
+{{form.buildUploadImage(dataform.image,'col-md-12')}}
+
+
+
+{% endblock %}
+
+
+
+
+
+{% block javascript %}
+{{parent()}}
+
+<script>
+
+var js_url_type = "{{dataform.url_type.value|escape('js')}}";
+var js_id_url_page = "{{dataform.id_url_page.value|escape('js')}}";
+
+$(document).ready(function(){
+	if( $("input[name*='formdata[url_type]']").length > 0 ){
+		$("input[name*='formdata[url_type]']").on('change',function(){
+			
+			if( $(this).val() == 'custom' && $(this).prop('checked') ){
+				$('#dinamic_url').hide();
+				$('#static_url').show();
+			}else{
+				if( $(this).prop('checked') ){
+					$.ajax({
+					  type: "GET",
+					  url: "index.php",
+					  data: { ctrl:'LinkMenuFrontendAdmin',ajax:1,action: "get_link_dinamic_menu", type:$(this).val() },
+					  dataType: "json",
+					  success: function(data){
+							if(data.result == 'ok'){
+								crea_select($('#id_url_page'),data.options);
+
+								/*if( $('#id_url_page').length > 0 ){
+				
+									$('#id_url_page').find('option').each(function(index,value){
+										var type = $(this).html().replace(/(.*)\[([a-z]+)\]/,'$2');
+										var html = $(this).html().replace(/\s\[([a-z]+)\]/,"");
+										$(this).attr('data-subtext',type)
+										$(this).html(html);
+										});
+									$('#id_url_page').selectpicker('refresh');
+								}
+												}else{
+								//notify(data.errore,'error');*/
+							}
+					  },
+					 
+					});
+
+				}
+				$('#dinamic_url').show();
+				$('#static_url').hide();
+			}
+		});
+		if( typeof js_url_type != 'undefined' && js_url_type != null ){
+			
+			
+				
+			
+			$.ajax({
+				type: "GET",
+				url: "index.php",
+				data: { ctrl:'LinkMenuFrontendAdmin',ajax:1,action: "get_link_dinamic_menu", type:js_url_type },
+				dataType: "json",
+				success: function(data){
+					if(data.result == 'ok'){
+						
+						if( typeof js_id_url_page != 'undefined' && js_id_url_page != null ){
+							crea_select($('#id_url_page'),data.options,js_id_url_page);
+						}else{
+							crea_select($('#id_url_page'),data.options,js_id_url_page);
+						}
+
+						
+					}
+				},
+				
+			});
+			
+		}
+	}
+
+
+	if( $('#static_url').prop('checked') == true ){
+		$('#dinamic_url_span').hide();
+		$('#static_url_span').show();
+	}else{
+		$('#dinamic_url_span').show();
+		$('#static_url_span').hide();
+	}
+
+	$('#static_url').on('change',function(){
+		if( $(this).prop('checked') == true ){
+			$('#dinamic_url_span').hide();
+			$('#static_url_span').show();
+		}else{
+			$('#dinamic_url_span').show();
+			$('#static_url_span').hide();
+		}
+	})
+
+
+	/*if( $('#id_url_page').length > 0 ){
+		
+		$('#id_url_page').find('option').each(function(index,value){
+			var type = $(this).html().replace(/(.*)\[([a-z]+)\]/,'$2');
+			var html = $(this).html().replace(/\s\[([a-z]+)\]/,"");
+			
+			
+			//$(this).attr('data-content','<span>'+html+"</span>");
+			$(this).attr('data-subtext',type)
+			$(this).html(html);
+			
+			//$(this).attr('style',"background: "+js_colori_stati[index]+"; color: #fff;");
+			//console.log($(this));
+		});
+		$('#id_url_page').selectpicker('refresh');
+	}*/
+});
+
+</script>
+
+{% endblock %}

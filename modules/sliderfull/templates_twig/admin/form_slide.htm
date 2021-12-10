@@ -1,0 +1,22 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Slide {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+{{form.build(dataform.id)}}
+{{form.build(dataform.id_slider)}}
+{{form.buildUploadImage(dataform.image,'col-md-6')}}
+{{form.buildUploadImage(dataform.image_mobile,'col-md-6')}}
+
+{{form.buildPalette(dataform.color_text,'col-md-12')}}
+{{form.buildCol(dataform.title,'col-md-12')}}
+{{form.buildCol(dataform.subtitle,'col-md-12')}}
+{{form.buildCol(dataform.link_slide,'col-md-12')}}
+{{form.buildCol(dataform.dateStart,'col-md-6')}}
+{{form.buildCol(dataform.dateEnd,'col-md-6')}}
+{{form.buildCol(dataform.orderView,'col-md-12')}}
+{{form.buildCol(dataform.locales,'col-md-12')}}
+
+
+{% endblock %}
+

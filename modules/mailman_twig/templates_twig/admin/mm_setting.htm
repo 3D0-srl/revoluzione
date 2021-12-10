@@ -1,0 +1,21 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %}
+Impostazioni Mailman
+{% endblock %}
+{% block content %}
+	{% import "macro/form.htm" as form %}
+
+	{{form.buildCol(dataform.id_category_news,'col-md-12')}}
+
+	<div class="row">
+		{{ form.buildCol(dataform.email, 'col-md-3') }}
+		{{ form.buildCol(dataform.confirm_subscribe, 'col-md-3') }}
+		{{ form.buildCol(dataform.confirm_unsubscribe, 'col-md-3') }}
+	</div>
+
+    <div class="row">
+		{{ form.buildCol(dataform.form_user, 'col-md-3') }}
+		{{ form.buildCol(dataform.form_user_subscribe_type, 'col-md-3') }}
+	</div>
+
+{% endblock %}

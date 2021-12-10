@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<module>
+   <info> 
+		<author>Ciro Napolitano</author>
+		<name>Customers Care</name>
+		<permission>superadmin</permission>
+		<version>3</version>
+		<tag>customers_care</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<description><![CDATA[Inserisce nell'ecommerce il servizio clienti mediante ticket]]></description> 
+  </info>
+  <admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Servizio Clienti</it>
+						<en>Customers Care</en>
+						<es>Customers Care</es>
+						<de>Customers Care</de>
+						<fr>Customers Care</fr>
+						<pt>Customers Care</pt>
+					</name>
+				</locale>
+				<tag>customers_care</tag>  
+				<permission>cms</permission>  
+				<priority>99</priority> 
+				<parentTag>ecommerce</parentTag>
+				<url>index.php?mod=customers_care</url> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <backend>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Servizio Clienti</it>
+						<en>Customers Care</en>
+						<es>Customers Care</es>
+						<de>Customers Care</de>
+						<fr>Customers Care</fr>
+						<pt>Customers Care</pt>
+					</name>
+				</locale>
+				<permission>cms</permission>  
+				<priority>99</priority> 
+				<url>index.php?mod=customers_care</url> 
+			</item>
+		</items>
+	</menu>
+	 <homeButtons>
+		  <button>	
+			<url>index.php?mod=customers_care</url>
+			<iconImg>modules/module_starter/img/cona.png</iconImg>
+			<orderView>11</orderView>
+			<locale>
+				<name>
+					<it>Servizio Clienti</it>
+					<en>Customers Care</en>
+					<es>Customers Care</es>
+					<de>Customers Care</de>
+					<fr>Customers Care</fr>
+					<pt>Customers Care</pt>
+				</name>
+			</locale>
+		 </button>
+		
+	  </homeButtons>
+  </backend>
+
+   <permissions>
+	   <permission>
+			<tag>customer_care</tag>
+			<locale>
+				<name>
+					<it>Servizio Clienti</it>
+					<en>Customers Care</en>
+					<es>Customers Care</es>
+					<de>Customers Care</de>
+					<fr>Customers Care</fr>
+					<pt>Customers Care</pt>
+				</name>
+				<description>
+					<it></it>
+					<en></en>
+					<es></es>
+					<de></de>
+					<fr></fr>
+					<pt></pt>
+				</description>
+			</locale>
+		</permission>
+  </permissions>
+  <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+</module>

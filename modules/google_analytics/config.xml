@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>51</id>
+		<author>Ciro Napolitano</author>
+		<name>Google analytics</name>
+		<permission>superadmin</permission>
+		<tag>google_analytics</tag>
+		<scope>admin</scope> 
+		<version>2</version>
+		<description>Modulo che mostra le informazioni di Google analytics</description> 
+   </info>
+
+	<menu> 
+		<scope>admin</scope>
+		<header>
+			<locale> 
+				<name>	
+					<it>Analytics</it> 
+					<en>Analytics</en>
+				</name>
+			</locale>
+			<tag>google_analytics</tag>
+			<icon>fa fa-signal</icon>
+			<priority>100</priority> 
+			<permission>admin</permission> 
+		</header>
+		<items> 
+			<locale> 
+				<name>	
+					<it>Dati geografici</it>
+					<en>Dati geografici</en>
+				</name>
+			</locale>
+			<tag>analytics_geo</tag>
+			<permission>admin</permission> 
+			<url>controller.php?action=locality</url>
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Piattaforme/Dispositivi</it>
+					<en>Piattaforme/Dispositivi</en>
+				</name>
+			</locale>
+			<tag>analytics_tecnology</tag>
+			<permission>admin</permission> 
+			<url>controller.php?action=tecnology</url>
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Origine Traffico</it>
+					<en>Origine Traffico</en>
+				</name>
+			</locale>
+			<tag>analytics_traffic</tag>
+			<permission>admin</permission> 
+			<url>controller.php?action=traffic</url>
+		</items>
+		<items>
+			<locale>
+				<name>
+					<it>Configurazione</it>
+					<en>Configurazione</en>
+				</name>
+			</locale>
+			<tag>analytics_conf</tag>
+			<permission>superadmin</permission> 
+			<url>controller.php?action=conf</url>
+		</items>
+	</menu>
+
+</module>

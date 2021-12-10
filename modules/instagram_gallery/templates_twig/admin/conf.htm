@@ -1,0 +1,55 @@
+{% extends "layouts/base_form.htm" %}
+{% block page_title %} Instagram Gallery {% endblock %} 
+
+{% block content %}
+
+<div class="row">
+		<div class="col-md-12">
+					
+					 <h4>STATO: 
+							{% if access_token is null %}
+								<span style="color:red;">Token non associato</span>
+							{% else %}
+								<span style="color:green;">Token ottenuto. Il token è <b>{{access_token}}</b></span>
+								<span style="color:green;">User id ottenuto. I'user id è <b>{{user_id}}</b></span>
+							{% endif %}
+							
+							
+						 </h4>
+				
+					<ol>
+						<li>Accedi a <a target="_blank" href="https://www.instagram.com/developer/">https://www.instagram.com/developer/</a></li>
+						<li>Registra la tua app</li>
+						<li>Imposta come  "Valid redirect URIs" il valore <b>{{url_redirect}}</b></li>
+						<li>Togli la spunta al flag: <b style="color:red">Disable implicit OAuth</b></li>
+						<li>Utilizza il Client ID generato per ottenere il token</li>
+					</ol>
+					<!--<h5>Inserisci il <b>Client ID</b> e la <b>Client Secret </b> e ottieni il token di Instragram da associare all'app.</h5>-->
+					<div class="form-group col-md-12" id="div_includedVAT">
+						<label>Inserisci Client ID :</label>
+						<div class="controls">
+							<input value="{{ client_id }}" type="text" class="form-control" name="formdata[client_id]" >	
+						</div>
+						<label>Inserisci Codice Segreto :</label>
+						<div class="controls">
+							<input value="{{ client_secret }}" type="text" class="form-control" name="formdata[client_secret]" >	
+						</div>
+					</div>
+					<!--<div class="form-group col-md-12" id="div_includedVAT">
+						<label>Client Secret :</label>
+						<div class="controls">
+							<input type="text" class="form-control" name="formdata[secret_id]" >	
+						</div>
+					</div>-->
+					 <input type="hidden" class="form-control" name="action" >	
+					 <div class="col-md-12 m-t-20 align-right">
+							<button type="submit"  class="btn btn-primary m-t-10"><i class="fa fa-download"></i> Ottieni il token</button>
+							<a href="{{script_url}}&action=reset_token"  class="btn btn-danger m-t-10"><i class="fa fa-erase"></i> Reset Token</a>
+					</div>
+							
+			
+		</div>
+  </div>
+
+{% endblock %} 
+{% block btn_form_save %}{% endblock %} 

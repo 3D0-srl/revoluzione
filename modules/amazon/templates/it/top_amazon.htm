@@ -1,0 +1,237 @@
+<style>
+	.button_action{
+		border: 1px solid #e3e0e0;
+		margin-right: 45px;
+		width: 30%;
+		background:#e3e0e0;
+		border-radius:0;
+		cursor:pointer;
+		font-size: 20px;
+		float:left;
+
+	}
+
+	.button_action .panel-body{
+		background:#131A22;
+		color:#FFFFFF;
+	}
+
+	.button_action i{
+		color:#FF9900;
+	}
+	
+	.quad{
+		display: inline-block;
+
+		width: 22%;
+
+		height: 80px;
+
+		background: #131A22;
+		
+
+		color: #FFFFFF;
+
+		font-size: 30px;
+
+		margin-left: 3px;
+
+		padding: 10px;
+
+		font-weight: 900;
+
+
+	}
+
+	.active_amazon{
+		background: #FF9900;
+	}
+
+	.box-container{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+	
+
+	.img-amazon{
+		width:200px;
+	}
+	
+
+	.white{
+		background: #FFFFFF;
+	}
+
+	.btn-amazon{
+		border-color:#131A22;
+		background:#131A22;
+		color:#FF9900
+	}
+
+	.btn-amazon:hover{
+		border-color:#FF9900;
+		background:#FF9900 ;
+		color:#131A22;
+	}
+	
+	.panel-amazon{
+		background: #131A22;
+	}
+	.panel-amazon .panel-heading{
+		font-weight:900;
+		color:#FF9900;
+	}
+
+	.progress-check-asin{
+		background:#FF9900 !important;
+		height: 30px;
+
+		margin-bottom: 0px;
+
+		overflow: hidden;
+
+		background-color: #ffffff;
+
+		border-radius: 0px;
+	}
+
+	.progress-container{
+		background: #131A22;
+		padding: 0;
+	}
+
+
+</style>
+
+
+<div class="page-title text-center">
+	<img src="images/amazon-logo.png?v=2" class="img-amazon">
+</div>
+ <!--<div class="pull-right">
+	<a href="index.php?action=setting" class="btn btn-warning m-t-10"><i class="glyph-icon flaticon-settings21"></i> Impostazioni</a>
+	<a href="index.php?action=list_feeds" class="btn btn-info m-t-10"><i class="fa fa-list p-r-10"></i> Reports</a>
+</div>-->
+</div>
+<!--- TITLE ---->
+<div class="row box-container">
+	{if:uguale(amazon_action,#azioni#)}
+	<div class="quad active_amazon">
+		<i class="fa fa-bolt"></i>
+		AZIONI
+		
+	</div>
+	<a href="index.php?action=mapping">
+	<div class="quad">
+		<i class="fa fa-puzzle-piece"></i>
+		MAPPING
+		
+	</div>
+	</a>
+	<a href="index.php?action=list_feeds">
+	<div class="quad">
+		<i class="fa fa-file-text-o"></i>
+		
+		REPORTS
+		
+	</div>
+	</a>
+	<a href="index.php?action=setting">
+	<div class="quad">
+		<i class="fa fa-cog"></i>
+		IMPOSTAZIONI
+		
+	</div>
+	</a>
+	{end:}
+
+	{if:uguale(amazon_action,#setting#)}
+	<a href="index.php">
+	<div class="quad">
+		<i class="fa fa-bolt"></i>
+		AZIONI
+		
+	</div>
+	</a>
+	<a href="index.php?action=mapping">
+	<div class="quad">
+		<i class="fa fa-puzzle-piece"></i>
+		MAPPING
+		
+	</div>
+	</a>
+	<a href="index.php?action=list_feeds">
+	<div class="quad">
+		<i class="fa fa-file-text-o"></i>
+		REPORTS
+		
+	</div>
+	</a>
+	<div class="quad active_amazon">
+		<i class="fa fa-cog"></i>
+		IMPOSTAZIONI
+		
+	</div>
+	{end:}
+
+	{if:uguale(amazon_action,#reports#)}
+	<a href="index.php">
+	<div class="quad">
+		<i class="fa fa-bolt"></i>
+		AZIONI
+		
+	</div>
+	</a>
+	<a href="index.php?action=mapping">
+	<div class="quad">
+		<i class="fa fa-puzzle-piece"></i>
+		MAPPING
+		
+	</div>
+	</a>
+	<div class="quad active_amazon">
+		<i class="fa fa-file-text-o"></i>
+		REPORTS
+		
+	</div>
+	<a href="index.php?action=setting">
+	<div class="quad">
+		<i class="fa fa-cog"></i>
+		IMPOSTAZIONI
+		
+	</div>
+	</a>
+	{end:}
+
+	{if:uguale(amazon_action,#mapping#)}
+	<a href="index.php">
+	<div class="quad">
+		<i class="fa fa-bolt"></i>
+		AZIONI
+		
+	</div>
+	</a>
+	
+	<div class="quad active_amazon">
+		<i class="fa fa-puzzle-piece"></i>
+		MAPPING
+		
+	</div>
+	<a href="index.php?action=list_feeds">
+	<div class="quad">
+		<i class="fa fa-file-text-o"></i>
+		
+		REPORTS
+		
+	</div>
+	</a>
+	<a href="index.php?action=setting">
+	<div class="quad">
+		<i class="fa fa-cog"></i>
+		IMPOSTAZIONI
+		
+	</div>
+	</a>
+	{end:}
+</div>

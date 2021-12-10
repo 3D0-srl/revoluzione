@@ -1,0 +1,57 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} {{tr('Themes')|title}} {% endblock %} 
+{% block buttons_right %}{% endblock %}
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+                                <th style="min-width:70px"><strong>{{tr('id')}}</strong></th>
+								<th><strong>{{tr('name')}}</strong></th>
+								<th>
+									<strong>{{tr('kind')}}</strong>
+                                </th>
+                                <th>
+									
+								</th>
+								<th class="text-center">
+									<strong>{{tr('actions')}}</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in list %}
+							<tr >
+                                <td>{{v.id}}</td>
+								<td>{{v.name | upper}}</td>
+                                <td>{{v.kind|upper}}</td>
+								<td>{% if v.current %}<span class="label label-success">{{tr('active')|upper}}</span>{% endif %}</td>
+                                
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+                                          {% if v.current is null %}
+										  <a href="#" onclick="active_theme('{{v.dir}}'); return false;" class="btn btn-default btn-sm"><i class="fa fa-cong"></i> attiva</a>
+										  {% endif %}
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+
+{% endblock %}

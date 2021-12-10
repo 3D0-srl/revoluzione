@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+   {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+		cont_valori_attributo="cont_valori_attributo"
+    >
+</head>
+
+<body data-page="dashboard">
+    <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <div class="m-b-20 clearfix">
+	                <div class="page-title pull-left">
+						
+	                     <h3><strong>Configurazione Instagram gallery</strong></h3>
+						
+	                </div>
+	                 
+	            </div>
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<form role='form' action='index.php' method='POST'>
+		<div class="row">
+				<div class="col-md-12">
+						<div class="panel ">
+							
+							<div class="panel-body">
+									
+									<div class="form-group col-md-12" id="div_title_it">
+										<input type="file" id="img">
+										<input type="hidden" id="image" name="formdata[image]"> 
+										<label>Immagine widget instagram :</label>
+										<div id="wrapper-upload">
+									
+										</div> <!--- CONTENITORE DEL BOX PER L'UPLOAD ---->
+									</div>
+
+									<script>
+											
+											$('#img').cironapo({
+												id_field_img:'image',
+												id_wrapper: 'wrapper-upload', 
+												box_small: false,
+												fixed_dimension: true,
+												max_height: 933,
+												max_width: 2560,
+												resize: "medium"
+											});
+
+										
+										
+											
+									</script>
+
+									<!--<h5>Inserisci il <b>Client ID</b> e la <b>Client Secret </b> e ottieni il token di Instragram da associare all'app.</h5>-->
+									<div class="form-group col-md-12" id="div_includedVAT">
+										<label>Specifica i tag di ricerca delle immagini di instagram.<br> Inserisci un tag per linea...</label>
+										<div class="controls">
+											<textarea type="textarea" class="form-control" name="formdata[tags]" ></textarea>	
+										</div>
+									</div>
+									<input type="hidden" class="form-control" name="action" >	
+									
+							</div>
+					 </div>
+				</div>
+	      </div>
+		  
+		  <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+                    <button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> Salva</button>
+                </div>
+           </div>
+
+		  </form>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+	
+	
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+{% extends "layouts/base.htm" %}
+{% block page_title %} Menu {% if type_backend %}backend{% else %}admin{% endif %} {% endblock %} 
+
+{% block content %}
+	<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				
+            
+
+                <div class="dd" id="nestable">
+                    <ol class="dd-list">
+                        {% for v in items %}
+                        <li class="dd-item" data-id="{{v.id}}">
+                            {% if v.active %}
+                            <div class="dd-handle green-item"><i class="{{v.icon}}"></i> {{v.get('name')}}  <span class="permesso">{{v.permission}}</span>
+                                <button onclick="edit_menu(event,{{v.id}});" type="button" class="btn btn-sm btn-warning edit_button dd-nodrag"><i class="fa fa-edit"></i></button>
+                                <button   type="button" class="btn btn-danger btn-sm dd-nodrag delete_button" onclick="document.location.href='{{url_confirm_delete}}&id={{v.id}}'"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                            {% else %}
+                            <div class="dd-handle"><i class="{{v.icon}}"></i> <span class="label label-danger">{{v.get('name')}}</span> <span class="permesso">{{v.permission}}</span>
+                            <button onclick="document.location.href='{{url_edit}}&id={{v.id}}';" type="button" class="btn btn-sm btn-warning edit_button dd-nodrag"><i class="fa fa-edit"></i></button>
+                            <button type="button"  class="btn btn-danger btn-sm dd-nodrag delete_button" onclick="document.location.href='{{url_confirm_delete}}&id={{v.id}}'"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                            {% endif %}
+                            {% if v.children %}
+                            <ol class="dd-list">
+                               {% for v1 in v.children %}
+                                <li class="dd-item" data-id="{{v1.id}}">
+                                
+                                {% if v1.active %}
+                                <div class="dd-handle green-item"><i class="{{v1.icon}}"></i> {{v1.get('name')}} <span class="permesso">{{v1.permission}}</span>
+                                <button onclick="edit_menu(event,{{v1.id}});" type="button" class="btn btn-sm btn-warning edit_button dd-nodrag"><i class="fa fa-edit"></i></button>
+                                <button  type="button" class="btn btn-danger btn-sm dd-nodrag delete_button" onclick="document.location.href='{{url_confirm_delete}}&id={{v1.id}}'"><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                {% else %}
+                                <div class="dd-handle"><i class="{{v1.icon}}"></i> <span class="label label-danger">{{v1.get('name')}}</span> <span class="permesso">{{v1.permission}}</span>
+                                <button onclick="edit_menu(event,{{v1.id}});" type="button" class="btn btn-sm btn-warning edit_button dd-nodrag"><i class="fa fa-edit"></i></button>
+                                <button type="button"  class="btn btn-danger btn-sm dd-nodrag delete_button" onclick="document.location.href='{{url_confirm_delete}}&id={{v1.id}}'"><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ol>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                        
+                    </ol>
+                </div>
+            
+            
+            </div>
+	</div>
+
+
+{% endblock %}
+
+
+{% block css %}
+{{parent()}}
+ <style>
+		
+		.edit_button{
+			position: absolute;
+			right: 45px;
+			top: 10px;
+		}
+		.delete_button{
+			position: absolute;
+			right: 5px;
+			top: 10px;
+		}
+		.red-item{
+			background-color : #c75757 !important;
+			color: #000000;
+		}
+		
+		
+
+		.dd-handle {
+			display: block;
+			height: 40px !important;
+			margin: 5px 0;
+			padding: 5px 10px;
+			color: #000000;
+			text-decoration: none;
+			font-weight: 600;
+			border: 1px solid #e5e9ec;
+			background: #dfe5e9;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+		
+		#sortable li{
+			padding: 10px;
+			margin-bottom:15px;
+		}
+
+		.ul_child li{
+			padding: 10px;
+			margin-bottom:0px !important;
+		}
+		
+		.edit_menu{
+			position:absolute;
+			right: 10px;
+			top: 0px;
+		}
+		.edit_menu2{
+			position:absolute;
+			right: 0px;
+			top: 0px;
+		}
+		.first{
+			border: 1px solid #555555;
+		}
+		 
+    	
+    	body.dragging{
+			cursor: move !important;
+		}
+		.permesso{
+			font-size:10px;
+			color: orange;
+		}
+
+		
+
+	 </style>
+{% endblock %}

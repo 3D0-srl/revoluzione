@@ -1,0 +1,125 @@
+#logo
+{
+	width: 505px;
+	margin: 0 auto;
+	text-align: center;
+}
+#pgtitle
+{
+	margin: 0px 0px 20px;
+	font-size: 18pt;
+}
+#container
+{
+	display: block;
+	width: 850px;
+	height: 300px;
+	margin: 0 auto;
+}
+#imgtag
+{
+	position: relative;
+	min-width: 300px;
+	min-height: 300px;
+	float: none;
+	border: 3px solid #FFF;
+	cursor: crosshair;
+	text-align: center;
+	display: inline-block;
+}
+.tagview
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+/*display:none;*/
+	opacity: 0;
+	color: #FFFFFF;
+	text-align: center;
+}
+.square
+{
+	display: block;
+	height: 40px;
+}
+.person
+{
+	background: #282828;
+}
+#tagit
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+}
+#tagit .box
+{
+	border: 1px solid #D9534F;
+	width: 100px;
+	height: 100px;
+	float: left;
+	border-style:dashed;
+}
+#tagit .name
+{
+	float: left;
+	background-color: #FFF;
+	width: 127px;
+	height: 210px;
+	padding: 5px;
+	font-size: 10pt;
+	border: 1px solid #D7C7C7;
+}
+#tagit DIV.text
+{
+	margin-bottom: 5px;
+}
+#tagit INPUT[type=text]
+{
+	margin-bottom: 5px;
+}
+#tagit #tagname
+{
+	width: 110px;
+}
+#tagit #idproduct
+{
+	width: 110px;
+}
+
+.tagtitle
+{
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+	float: left;
+}
+
+#taglist{
+	 list-style:none;
+}
+
+#taglist li{
+	 margin-bottom: 10px;
+}
+
+#taglist a{
+	 text-decoration:none;
+	 color: #333;
+}
+
+#taglist span{
+	 color: #5dade2;
+}
+
+#taglist .remove{
+	color:#D9534F;
+	cursor:pointer;
+	
+	font-size:18px;
+}
+
+.color_tagedit{
+	display:block;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Slider Categorie</name>
+		<permission>superadmin</permission>
+		<tag>widget_slider_categories</tag>
+		<kind>catalog</kind>
+		<scope></scope> 
+		<description><![CDATA[Slider delle categorie]]></description> 
+   </info>
+    <widget> 
+		<name>Slider Categorie</name>
+		<function>WidgetSliderCategoriesComponent</function>
+		<repeatable>1</repeatable>
+		<url_conf>index.php?ctrl=Conf&amp;mod=widget_slider_categories</url_conf>
+	</widget>
+</module>

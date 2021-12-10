@@ -1,0 +1,56 @@
+.panel-amazon{
+    border: 1px solid #FFFFFF !important;
+    padding: 20px !important;
+    height: 200px !important;
+    border-radius: 0 !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 51px !important;
+    position:relative !important;
+
+}
+
+.btn-amazon-container{
+    position: absolute;
+    right: 12px;
+    top: 20px;
+    width: 555px;
+   
+}
+.btn-amazon-container a{
+    text-decoration:none;
+    color: #000000;
+}
+.btn-amazon{
+    height: 110px;
+    width: 110px;
+    font-size: 12px;
+    padding:25px;
+    border: 1px solid black;
+    display:inline-block;
+    margin-right: 10px;
+    cursor:pointer;
+    text-align:center;
+}
+a.active > .btn-amazon, .btn-amazon:hover{
+     border: 1px solid orange;
+     background: orange;
+     color: #000000;
+}
+
+.btn-back{
+    width: 115px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    border: none;
+    background: transparent;
+    text-decoration:none;
+    color:#000000;
+}
+
+.btn-back:hover{
+     color:orange;
+     text-decoration:none;
+}

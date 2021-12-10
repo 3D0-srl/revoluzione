@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Google Tracking</name>
+		<permission>superadmin</permission>
+		<tag>google_tracking</tag>
+		<kind>ecommerce</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra le funzione di tracciamento di google]]></description> 
+	</info>
+</module>

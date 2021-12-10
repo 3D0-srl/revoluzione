@@ -1,0 +1,46 @@
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Paypal {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+
+
+{{form.buildCol(dataform.sandbox,'col-md-6')}}
+
+{{form.buildCol(dataform.status_confirmed,'col-md-6')}}
+<div class="row">
+	<div class="tabcordion col-md-12">
+		   <ul id="myTab" class="nav nav-tabs">
+				  <li class="active"><a href="#live" data-toggle="tab">Live</a></li>
+				  <li class=""><a href="#sandbox_box" data-toggle="tab">Sandbox</a></li>
+		   </ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active in" id="live">
+					<div class="row">
+					{{form.buildCol(dataform.production_client_id,'col-md-12')}}
+					{{form.buildCol(dataform.production_client_secret,'col-md-12')}}
+					</div>
+				</div>
+
+				<div class="tab-pane fade in" id="sandbox_box">
+					<div class="row">
+					{{form.buildCol(dataform.sandbox_client_id,'col-md-12')}}
+					{{form.buildCol(dataform.sandbox_client_secret,'col-md-12')}}
+					
+					</div>
+
+				</div>
+		</div>
+
+		
+	</div>
+
+	{{form.buildCol(dataform.courier,'col-md-12')}}
+	{{form.buildCol(dataform.mandadory_address_fields,'col-md-12')}}
+	{{form.buildCol(dataform.enable_registration,'col-md-12')}}
+</div>
+
+
+
+
+{% endblock %}

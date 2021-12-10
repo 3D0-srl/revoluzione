@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
+
+<head>
+     <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+    {output(#javascript.htm#)}
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+</head>
+
+<body data-page="dashboard">
+      <!-- BEGIN TOP MENU -->
+	{output(#menu_top.htm#)}
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+    	{output(#colonna_sinistra.htm#)}
+    	<!-- END MAIN SIDEBAR -->
+        <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+            <div class="m-b-20 clearfix">
+                <div class="page-title pull-left">
+					
+                    <h3 class="pull-left">Iscritti alla lista <strong>{list.list_name}</strong></h3>
+					
+
+                </div>
+                 <div class="pull-right">
+					<a  href="controller.php?action=mass&list={list.id}" class="btn btn-success m-t-10"><i class="fa fa-plus p-r-10"></i> Azione di massa</a>
+                </div>
+            </div>
+			 <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+								<form action="controller.php" method="POST">
+								<div class="form-group col-md-6" id="div_lista">
+									<label>Email :</label>
+									<div class="controls">
+										<input type="text" class="form-control " name="formdata[email]">
+									</div>
+								</div>
+								<div class="form-group form-inline col-md-6" id="div_notifyuser">
+									<label>Azione :</label>
+									<div class="controls">	
+											<input type="radio" class="form-control" name="formdata[action]" id="action_subscribe" value="subscribe" checked> AGGIUNGI
+											<input type="radio" class="form-control" name="formdata[action]" id="action_unsubscribe" value="unsubscribe"> ELIMINA	
+									</div>
+								</div>
+
+								<div class="col-md-12">
+									<input type="hidden"  name="action" value="admin_action">
+									<input type="hidden"  name="formdata[list]" value="{list.id}">
+									<button type="submit"  class="btn btn-success m-t-10"><i class="fa fa-check"></i> INVIA</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+									<p flexy:if="!iscritti">Nessun iscritto a questa lista</p>
+                                    <table id="sezioni-table" class="table table-tools table-hover" flexy:if="iscritti">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center" style="min-width:70px"><strong>Email</strong>
+                                                <th class="text-center"><strong>Data iscrizione</strong>
+                                                </th>
+												
+                                                <th class="text-center">
+													<strong>Azione</strong>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr flexy:foreach="iscritti,v">
+                                                <td class="text-center">{v[email]}</td>
+                                                <td class="text-center">{strftime(#%d/%m/%Y %H:%M#,v[dateInsert])}</td>
+												<td class="text-center"> 
+                                                    <a href="#" class="delete btn btn-sm btn-default" onclick="conferma_elimina_email('{v[email]}',{list.id});return false;"><i class="fa fa-trash-o"></i> Elimina</a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END WRAPPER -->
+   
+  {output(#javascript_end.htm#)}
+  <script>
+		function conferma_elimina_email(email,list){
+			var t = confirm("Sicuro di volere eliminare dalla newsletter l'email "+email+"?");
+			if( t ){
+				document.location.href="controller.php?action=delete_email&email="+email+"&list="+list;
+			}
+		}
+  </script>
+</body>
+</html>

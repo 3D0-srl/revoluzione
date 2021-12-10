@@ -1,0 +1,43 @@
+
+{if:list}
+
+<table class="table">
+	<thead>
+		<th><input type="checkbox" onchange="select_all_orders_amazon($(this).prop('checked'));"></th>
+		<th>MARKETPLACE</th>
+		<th>ID ORDINE</th>
+		<th>CLIENTE</th>
+		<th>DATA</th>
+		<th>TOTALE</th>
+		<th>STATO</th>
+		<th style="width:50px;"></th>
+	</thead>
+
+	<tbody>
+		{foreach:list,store,items}
+		{foreach:items,v}
+		<tr id="order_tr_{v[preview][order_id]}">
+			<td><input type="checkbox" class="amazon_order_check" value="{v[preview][order_id]}"></td>
+			<td><img src="{v[preview][market_flag]}"/></td>
+			<td>{v[preview][order_id]}</td>
+			<td>{v[preview][buyer]}</td>
+			<td>{strftime(#%d/%m/%Y %H:%M#,v[preview][date])}</td>
+			<td>{v[preview][total]}</td>
+			<td>{v[preview][status]:h}</td>
+			<td><button class="btn btn-sm" onclick="import_orders('{v[preview][order_id]}');"><i class="fa fa-download"></i></button></td>
+		</tr>
+		<tr style="display:none" id="error_tr_{v[preview][order_id]}">
+			<td colspan="8" id="errors"></td>
+		</tr>
+		{end:}
+		{end:}
+
+	</tbody>
+	<tfoot>
+		<td colspan="6"><button class="btn btn" onclick="import_orders()"><i class="fa fa-download"></i> Importa selezionati</button></td>
+		<td colspan="2"></td>
+	</tfoot>
+</table>
+{end:}
+
+<p flexy:if="!list">Nessun ordine trovato</p>

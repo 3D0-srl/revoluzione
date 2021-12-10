@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<module>
+	<info>
+		<author>Ciro Napolitano</author>
+		<name>Galleria Immagini</name>
+		<permission>superadmin</permission>
+		<tag>photogallery</tag>
+		<kind>cms</kind>
+		<autoload>1</autoload>
+		<scope></scope>
+		<description><![CDATA[Modulo che permette di gestire le gallerie di immagini]]></description>
+	</info>
+	<admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Gallery</it>
+						<en>Gallery</en>
+					</name>
+				</locale>
+				<parent>cms</parent>
+				<tag>photogallery_settings</tag> 
+				<permission>photogallery_manager</permission> 
+				<priority>100</priority> 
+				<url>index.php?ctrl=Gallery&amp;mod=photogallery&amp;action=list</url>
+			</item>
+		</items>
+	</menu>
+  </admin>
+  <widgets>
+	<widget>
+		<name>Widget Galleria Immagini</name>
+		<function>WidgetPhotogallery</function>
+		<url_conf>index.php?ctrl=Widget&amp;mod=photogallery</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+ </widgets>
+ <permissions>
+	   <permission>
+			<tag>photogallery_manager</tag>
+			<locale>
+				<name>
+					<it>Gestione Gallery</it>
+					<en>Gallery manager</en>
+					
+				</name>
+				<description>
+					<it>Permette la gestione della gallery</it>
+					<en>Gallery manager</en>
+				</description>
+			</locale>
+		</permission>
+  </permissions>
+
+</module>

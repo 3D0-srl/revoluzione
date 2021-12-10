@@ -1,0 +1,10 @@
+{% if titolo %}
+<div class="titl">{{titolo}}</div>
+{% endif %}
+<div class="widget-brands"  opzioni="{{opzioni}}" id_box="{{id_box}}">
+	{% for brand in list_brands %}
+		<a href="{{brand.getUrl()}}">
+			<img src="{{brand.getUrlImage('original','0')}}"/>
+		</a>
+	{% endfor %}
+</div>

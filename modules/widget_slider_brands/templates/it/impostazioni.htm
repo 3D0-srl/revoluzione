@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>
+    <!-- BEGIN META SECTION -->
+    {output(#metatags.htm#)}
+    <!-- END META SECTION -->
+  	{output(#css.htm#)}
+  	<!--{output(#css_form.htm#)}-->
+  	<script src="/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    {output(#javascript_form.htm#)}
+    {output(#javascript.htm#)}
+    <link rel="stylesheet" href="/modules/widget_slider_tag/css/style.css?v=13">
+    <script src="js/ebay.js"></script>
+    <flexy:toJavascript flexy:prefix="js_"
+    >
+</head>
+
+<body data-page="dashboard">
+	
+    <!-- BEGIN TOP MENU -->
+	
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+   
+        <!-- BEGIN MAIN SIDEBAR -->
+    	
+    	<!-- END MAIN SIDEBAR -->
+       
+    	 <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content" class="dashboard">
+                <!--<div class="clearfix">
+	                <div class="page-title pull-left">
+						
+	                     <h3><strong>Slider Product Tag</small></h3>
+	
+	                </div>
+					
+	                 
+	            </div>-->
+                 <div class="alert alert-danger" style="width:100%" flexy:if="errore">
+					 <strong>{errore}</strong>
+				</div>
+				<div class="alert alert-success" style="width:100%" flexy:if="ok_success">
+				  <strong>{ok_success}</strong>
+				</div>
+		  <form role='form' action='index.php' name='attributo' id='attributo' method='POST'>
+		  <div class="row">
+				<div class="col-md-12">
+					<!--<div class="panel">
+							
+							<div class="panel-body" >-->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="tabcordion">
+											<ul id="tab_data" class="nav nav-tabs">
+												<li class="active"><a href="#general" data-toggle="tab">GENERALE</a></li>
+												<li class=""><a href="#slider" data-toggle="tab">SLIDER DESKTOP</a></li>
+												<li class=""><a href="#slider_tablet" data-toggle="tab">SLIDER TABLET PORTRAIT</a></li>
+												<li class=""><a href="#slider_tablet_landscape" data-toggle="tab">SLIDER TABLET LANDSCAPE</a></li>
+												<li class=""><a href="#slider_mobile" data-toggle="tab">SLIDER MOBILE</a></li>
+											</ul>
+											<div id="tab_data_content" class="tab-content" style="border:1px solid #D3D3D3;">
+												<div class="tab-pane fade active in" id="general">
+												<!----INIZIO --->
+													<div class="form-group col100">
+															<div class="tabcordion">
+																<ul id="tab_product_data" class="nav nav-tabs">
+																	 <li class="active"><a href="#product_data_it" data-toggle="tab" flexy:if="in_array(#it#,locales)"><i class="flag flag-it"></i> ITALIANO</a></li>
+																	 <li class="" flexy:if="in_array(#en#,locales)"><a href="#product_data_en" data-toggle="tab"><i class="flag flag-gb"></i> INGLESE</a></li>
+																	 <li class="" flexy:if="in_array(#es#,locales)"><a href="#product_data_es" data-toggle="tab"><i class="flag flag-es"></i> SPAGNOLO</a></li>
+																	 <li class="" flexy:if="in_array(#fr#,locales)"><a href="#product_data_fr" data-toggle="tab"><i class="flag flag-fr"></i> FRANCESE</a></li>
+																	 <li class="" flexy:if="in_array(#de#,locales)"><a href="#product_data_de" data-toggle="tab"><i class="flag flag-de"></i> TEDESCO</a></li>
+																	 <li class="" flexy:if="in_array(#pt#,locales)"><a href="#product_data_pr" data-toggle="tab"><i class="flag flag-pt"></i> PORTOGHESE</a></li>
+																	 <li class="" flexy:if="in_array(#ru#,locales)"><a href="#product_data_ru" data-toggle="tab"><i class="flag flag-ru"></i> RUSSO</a></li>
+																	 <li class="" flexy:if="in_array(#zh#,locales)"><a href="#product_data_zh" data-toggle="tab"><i class="flag flag-zh-cn"></i> CINESE</a></li>
+																</ul>
+																<div id="tab_product_data_content" class="tab-content" style="border:1px solid #D3D3D3;" flexy:if="in_array(#it#,locales)">
+																	<div class="tab-pane fade active in" id="product_data_it">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][it]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																	<div class="tab-pane fade  in" id="product_data_en" flexy:if="in_array(#en#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][en]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																	<div class="tab-pane fade  in" id="product_data_es" flexy:if="in_array(#es#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][es]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																	<div class="tab-pane fade  in" id="product_data_fr" flexy:if="in_array(#fr#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][fr]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																	<div class="tab-pane fade  in" id="product_data_de" flexy:if="in_array(#de#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][de]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+
+																	<div class="tab-pane fade  in" id="product_data_pr" flexy:if="in_array(#pt#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][pt]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+
+																	<div class="tab-pane fade  in" id="product_data_ru" flexy:if="in_array(#ru#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][ru]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																	<div class="tab-pane fade  in" id="product_data_zh" flexy:if="in_array(#zh#,locales)">
+																		<div class="row">
+																			<div class="form-group col-md-12">
+																				<label>Titolo: <span class="asterisk">*</span> :</label>
+																				<div class="controls">
+																					<input type="text" class="form-control " name="formdata[title][zh]">
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																</div>
+														</div>
+
+													</div>
+													
+													<!--<div class="form-group col100">
+														<label>Numero di prodotti <span class="asterisk">*</span> :</label>
+														<div class="controls">
+															<input type="text" class="form-control " name="formdata[num_products]">
+														</div>
+													</div>-->
+													
+													
+												
+												</div>
+												<div class="tab-pane fade in" id="slider">
+													<div class="clearfix">
+														<div class="form-group col20">
+															<label>slideWidth <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideWidth]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>slideMargin <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideMargin]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>minSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[minSlides]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>maxSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[maxSlides]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>moveSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[moveSlides]">
+															</div>
+														</div>
+													</div>
+
+													<div class="clearfix">
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>controls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[controls]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>auto :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[auto]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoControls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoControls]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoHover :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoHover]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>pager :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[pager]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<div class="tab-pane fade in" id="slider_tablet">
+													<div class="cleearfix">
+														<div class="form-group col20">
+															<label>slideWidth <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideWidth_tablet]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>slideMargin <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideMargin_tablet]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>minSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[minSlides_tablet]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>maxSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[maxSlides_tablet]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>moveSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[moveSlides_tablet]">
+															</div>
+														</div>
+													</div>
+
+													<div class="clearfix">
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>controls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[controls_tablet]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>auto :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[auto_tablet]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoControls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoControls_tablet]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoHover :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoHover_tablet]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>pager :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[pager_tablet]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<div class="tab-pane fade in" id="slider_tablet_landscape">
+													<div class="cleearfix">
+														<div class="form-group col20">
+															<label>slideWidth <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideWidth_tabletlandscape]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>slideMargin <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideMargin_tabletlandscape]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>minSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[minSlides_tabletlandscape]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>maxSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[maxSlides_tabletlandscape]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>moveSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[moveSlides_tabletlandscape]">
+															</div>
+														</div>
+													</div>
+
+													<div class="clearfix">
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>controls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[controls_tabletlandscape]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>auto :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[auto_tabletlandscape]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoControls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoControls_tabletlandscape]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoHover :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoHover_tabletlandscape]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>pager :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[pager_tabletlandscape]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade in" id="slider_mobile">
+													<div class="clearfix">
+														<div class="form-group col20">
+															<label>slideWidth <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideWidth_mobile]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>slideMargin <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[slideMargin_mobile]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>minSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[minSlides_mobile]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>maxSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[maxSlides_mobile]">
+															</div>
+														</div>
+														<div class="form-group col20">
+															<label>moveSlides <span class="asterisk">*</span> :</label>
+															<div class="controls">
+																<input type="text" class="form-control" name="formdata[moveSlides_mobile]">
+															</div>
+														</div>
+													</div>
+													
+													<div class="clearfix">
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>controls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[controls_mobile]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>auto :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[auto_mobile]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoControls :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoControls_mobile]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>autoHover :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[autoHover_mobile]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+														<div class="form-group form-inline col20" id="div_visibility">
+															<label>pager :</label>
+															<div class="controls">
+																<input type="checkbox" name="formdata[pager_mobile]" value="1" class="switch" data-on-color="success" data-off-color="warning"  data-on-text="SI" data-off-text="NO">			
+															</div>
+														</div>
+													</div>
+
+												</div>
+										
+										<!--- FINE --->
+										</div>
+										</div>
+								</div>													
+							<!--</div>					
+					</div>-->
+				</div>		
+			</div>
+		     <div class="row">
+                <div class="col-md-12 m-t-20 m-b-40 align-center">
+					<input type="hidden" name="action">
+					<input type="hidden" name="formdata[id_box]">
+                    <button type="submit"  class="btn btn-success"><i class="fa fa-check"></i> Salva</button>
+                </div>
+           </div>
+		  </form>
+        <!-- END MAIN CONTENT -->  
+    <!-- END WRAPPER -->
+	{output(#javascript_end.htm#)}
+</body>
+</html>

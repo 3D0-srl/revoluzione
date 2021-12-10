@@ -1,0 +1,49 @@
+<div class="panel panel-amazon">
+    <div class="panel-body">
+            <a class="btn-back" href="{% block back_url %}{% if back_url %}{{back_url}}{% else %}index.php?mod=amazon&ctrl=Store&action=list{% endif %}{% endblock %}"><i class="fa fa-arrow-left"></i> Torna indietro</a>
+            <h1>{{store.get('name')}}</h1>
+            <h2 class="titolo">{% block amazon_page_title %}{{amazon_page_title}}{% endblock %}</h2>
+            {% if (action == 'edit' or show_btn_edit==true)  %} 
+                <span class="sottotit">{{tr('edit')}}</span>
+            {% elseif (action== 'add' or action == 'duplicate' or show_btn_add == true) %} 
+                <span class="sottotit">{{tr('add')}}</span> 
+            {% endif %}
+            <div class="btn-amazon-container">
+                <a href="index.php?mod=amazon&ctrl=Report&action=list&id_store={{store.id}}" class="{% if amazon_tab == 'reports' %}active{% endif %}">
+                    <div class="btn-amazon">
+                        <img src="../modules/amazon/images/reports.png">
+                        <span>reports</span>
+                    </div>
+                </a>
+                <a href="index.php?mod=amazon&ctrl=Feed&action=list&id_store={{store.id}}" class="{% if amazon_tab == 'feeds' %}active{% endif %}">
+                    <div class="btn-amazon">
+                        <img src="../modules/amazon/images/synchronize.png">
+                        <span>feeds</span>
+                    </div>
+                </a>
+                <a href="index.php?mod=amazon&ctrl=Order&action=list&id_store={{store.id}}" class="{% if amazon_tab == 'orders' %}active{% endif %}">
+                    <div class="btn-amazon">
+                        <img src="../modules/amazon/images/box.png">
+                        <span>orders</span>
+                    </div>
+                </a>
+                <a href="index.php?mod=amazon&ctrl=Action&id_store={{store.id}}" class="{% if amazon_tab == 'marketplaces' %}active{% endif %}">
+                    <div class="btn-amazon">
+                        <img src="../modules/amazon/images/market.png">
+                        <span>marketplaces</span>
+                    </div>
+                </a>
+                <!--<a href="index.php?mod=amazon&ctrl=Store&action=edit&id={{store.id}}" class="{% if amazon_tab == 'setting' %}active{% endif %}">
+                    <div class="btn-amazon">
+                        <img src="../modules/amazon/images/configuration.png">
+                        <span>setting</span>
+                    </div>
+                </a>-->
+                
+
+            </div>
+
+            
+
+    </div>
+</div>

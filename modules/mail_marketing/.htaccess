@@ -1,0 +1,5 @@
+php_flag  log_errors on
+php_value error_log  ../../../log/error.log
+php_value error_reporting 6135
+php_value output_buffering On
+php_value output_handler mb_output_handler

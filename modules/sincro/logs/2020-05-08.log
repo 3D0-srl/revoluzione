@@ -1,0 +1,583 @@
+[09:18:46]:: inizio lettura CSV
+[09:18:46]:: fine lettura CSV
+[09:18:46]:: inizio creazione magazzini
+[09:18:46]:: fine creazione magazzini
+[09:18:46]:: inizio creazione categorie
+[09:18:47]:: fine creazione categorie
+[09:18:47]:: inizio creazione produttori
+[09:18:47]:: fine creazione produttori
+[09:18:47]:: inizio creazione attributi
+[09:18:47]:: fine creazione attributi
+[09:19:28]:: inizio lettura CSV
+[09:20:05]:: inizio lettura CSV
+[09:20:42]:: inizio lettura CSV
+[09:30:44]:: inizio lettura CSV
+[09:30:45]:: fine lettura CSV
+[09:30:45]:: inizio creazione magazzini
+[09:30:45]:: fine creazione magazzini
+[09:30:45]:: inizio creazione categorie
+[09:30:45]:: fine creazione categorie
+[09:30:45]:: inizio creazione produttori
+[09:30:45]:: fine creazione produttori
+[09:30:45]:: inizio creazione attributi
+[09:30:45]:: fine creazione attributi
+[09:31:32]:: inizio lettura CSV
+[09:31:32]:: fine lettura CSV
+[09:31:32]:: inizio creazione magazzini
+[09:31:32]:: fine creazione magazzini
+[09:31:32]:: inizio creazione categorie
+[09:31:32]:: fine creazione categorie
+[09:31:32]:: inizio creazione produttori
+[09:31:32]:: fine creazione produttori
+[09:31:32]:: inizio creazione attributi
+[09:31:32]:: fine creazione attributi
+[09:32:22]:: inizio lettura CSV
+[09:32:22]:: fine lettura CSV
+[09:32:22]:: inizio creazione magazzini
+[09:32:22]:: fine creazione magazzini
+[09:32:22]:: inizio creazione categorie
+[09:32:22]:: fine creazione categorie
+[09:32:22]:: inizio creazione produttori
+[09:32:22]:: fine creazione produttori
+[09:32:22]:: inizio creazione attributi
+[09:32:22]:: fine creazione attributi
+[09:32:50]:: inizio lettura CSV
+[09:32:50]:: fine lettura CSV
+[09:32:50]:: inizio creazione magazzini
+[09:32:50]:: fine creazione magazzini
+[09:32:50]:: inizio creazione categorie
+[09:32:51]:: fine creazione categorie
+[09:32:51]:: inizio creazione produttori
+[09:32:51]:: fine creazione produttori
+[09:32:51]:: inizio creazione attributi
+[09:32:51]:: fine creazione attributi
+[09:32:51]:: inizio creazione prodotti
+[09:35:22]:: fine creazione prodotti
+[09:35:22]:: inizio eliminazione prodotti
+[09:35:22]:: inizio eliminazione prodotti
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Full Import                                       |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 09:32:50                                          |
+|END                                               | 09:35:22                                          |
+|DURATION                                          | 2.53 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 999                                               |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 0                                                 |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[14:50:56]:: inizio lettura CSV
+[14:50:56]:: fine lettura CSV
+[14:51:24]:: inizio lettura CSV
+[14:51:24]:: fine lettura CSV
+[14:52:14]:: inizio lettura CSV
+[14:52:14]:: fine lettura CSV
+[14:52:21]:: inizio lettura CSV
+[14:52:21]:: fine lettura CSV
+[14:54:39]:: inizio lettura CSV
+[14:54:39]:: fine lettura CSV
+[14:54:47]:: inizio lettura CSV
+[14:54:47]:: fine lettura CSV
+[14:55:15]:: inizio lettura CSV
+[14:55:16]:: fine lettura CSV
+[14:55:39]:: inizio lettura CSV
+[14:55:39]:: fine lettura CSV
+[14:55:52]:: inizio lettura CSV
+[14:55:52]:: fine lettura CSV
+[14:55:58]:: inizio lettura CSV
+[14:55:58]:: fine lettura CSV
+[14:56:13]:: inizio lettura CSV
+[14:56:13]:: fine lettura CSV
+[14:56:24]:: inizio lettura CSV
+[14:56:24]:: fine lettura CSV
+[15:35:35]:: inizio lettura CSV
+[15:35:35]:: fine lettura CSV
+[15:35:49]:: inizio lettura CSV
+[15:35:49]:: fine lettura CSV
+[15:35:49]:: inizio creazione immagini
+[15:35:53]:: Importate immagini di 1850-40-NERO
+[15:35:57]:: Importate immagini di 1850-38-NERO
+[15:36:04]:: Importate immagini di 1850-37-NERO
+[15:36:07]:: Importate immagini di 1850-36-NERO
+[15:36:13]:: Importate immagini di 1850-39-NERO
+[15:36:16]:: Importate immagini di 1850-41-NERO
+[15:36:21]:: Importate immagini di 1850-39-BORDEAUX
+[15:36:25]:: Importate immagini di 1850-38-BORDEAUX
+[15:36:31]:: Importate immagini di 1850-41-BORDEAUX
+[15:36:34]:: Importate immagini di 1850-37-BORDEAUX
+[15:36:40]:: Importate immagini di 1850-40-BORDEAUX
+[15:36:43]:: Importate immagini di 1850
+[15:37:03]:: Importate immagini di 1890-40-BORDEAUX
+[15:37:17]:: Importate immagini di 1890-37-BORDEAUX
+[15:37:31]:: Importate immagini di 1890-39-BORDEAUX
+[15:37:33]:: Importate immagini di 1890-40-NERO
+[15:37:38]:: Importate immagini di 1890-39-NERO
+[15:37:40]:: Importate immagini di 1890-41-NERO
+[15:37:43]:: Importate immagini di 1890
+[15:37:44]:: Importate immagini di 1891-39-DORATO
+[15:37:48]:: Importate immagini di 1891-38-DORATO
+[15:37:51]:: Importate immagini di 1891-38-NERO
+[15:37:56]:: Importate immagini di 1891
+[15:38:13]:: Importate immagini di 1972-40-BORDEAUX
+[15:38:15]:: Importate immagini di 1972-39-NERO
+[15:38:18]:: Importate immagini di 1972-36-NERO
+[15:38:23]:: Importate immagini di 1972-37-NERO
+[15:38:26]:: Importate immagini di 1972-41-NERO
+[15:38:28]:: Importate immagini di 1972-40-NERO
+[15:38:33]:: Importate immagini di 1972
+[15:38:36]:: Importate immagini di 2311-39-NERO
+[15:38:40]:: Importate immagini di 2311-37-NERO
+[15:38:46]:: Importate immagini di 2311-40-NERO
+[15:38:48]:: Importate immagini di 2311-39-BORDEAUX
+[15:38:51]:: Importate immagini di 2311-38-BORDEAUX
+[15:38:53]:: Importate immagini di 2311-40-BORRDEAUX
+[15:38:56]:: Importate immagini di 2311-41-BORDEAUX
+[15:39:02]:: Importate immagini di 2311-39-BLU
+[15:39:04]:: Importate immagini di 2311-40-BLU
+[15:39:07]:: Importate immagini di 2311-38-BLU
+[15:39:11]:: Importate immagini di 2311-37-BLU
+[15:39:14]:: Importate immagini di 2311-36-BLU
+[15:39:17]:: Importate immagini di 2311-41-BLU
+[15:39:21]:: Importate immagini di 2311-37-BORDEAUX
+[15:39:24]:: Importate immagini di 2311
+[15:39:28]:: Importate immagini di 7733--38-GRIGIO
+[15:39:33]:: Importate immagini di 7733-41-GRIGIO
+[15:39:37]:: Importate immagini di 7733-37-GRIGIO
+[15:39:44]:: Importate immagini di 7733-39-GRIGIO
+[15:39:48]:: Importate immagini di 7733-40-GRIGIO
+[15:39:51]:: Importate immagini di 7733
+[15:39:51]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 15:35:49                                          |
+|END                                               | 15:39:51                                          |
+|DURATION                                          | 4.03 minuti                                       |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 122                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[16:17:47]:: inizio lettura CSV
+[16:17:47]:: fine lettura CSV
+[16:17:47]:: inizio creazione immagini
+[16:18:38]:: Importate immagini di 92030-M-BLU
+[16:19:20]:: Importate immagini di 92030-L-BLU
+[16:19:55]:: Importate immagini di 92030-XL-BLU
+[16:20:38]:: Importate immagini di 92030-L-LILLA
+[16:21:05]:: Importate immagini di 92030-XL-LILLA
+[16:21:52]:: Importate immagini di 92030-M-GRIGIO
+[16:22:21]:: Importate immagini di 92030
+[16:22:41]:: Importate immagini di 92034-M-BLU
+[16:22:56]:: Importate immagini di 92034-L-BLU
+[16:23:10]:: Importate immagini di 92034-XL-BLU
+[16:23:29]:: Importate immagini di 92034-M-ROSA
+[16:23:43]:: Importate immagini di 92034-L-ROSA
+[16:23:56]:: Importate immagini di 92034-XL-ROSA
+[16:24:17]:: Importate immagini di 92034-M-GRIGIO
+[16:24:30]:: Importate immagini di 92034-L-GRIGIO
+[16:30:02]:: inizio lettura CSV
+[16:30:02]:: fine lettura CSV
+[16:30:02]:: inizio creazione immagini
+[16:30:14]:: Importate immagini di 92034-XL-GRIGIO
+[16:30:31]:: Importate immagini di 92034
+[16:30:58]:: Importate immagini di 990704S-S-SKIN
+[16:31:20]:: Importate immagini di 990704S-M-SKIN
+[16:31:42]:: Importate immagini di 990704S-L-SKIN
+[16:32:06]:: Importate immagini di 990704S
+[16:32:17]:: Importate immagini di APR5370-39-NERO
+[16:32:26]:: Importate immagini di APR5370-38-NERO
+[16:32:36]:: Importate immagini di APR5370
+[16:33:14]:: Importate immagini di BIA92013S-S-CORALLO
+[16:33:42]:: Importate immagini di BIA92013S-M-CORALLO
+[16:34:10]:: Importate immagini di BIA92013S-L-CORALLO
+[16:34:41]:: Importate immagini di BIA92013S-XL-CORALLO
+[16:35:09]:: Importate immagini di BIA92013S-S-NERO
+[16:35:32]:: Importate immagini di BIA92013S-M-NERO
+[16:35:55]:: Importate immagini di BIA92013S-L-NERO
+[16:36:19]:: Importate immagini di BIA92013S-XL-NERO
+[16:36:42]:: Importate immagini di BIA92013S
+[16:37:34]:: Importate immagini di BIA92012S-S-BLU MARINO
+[16:38:11]:: Importate immagini di BIA92012S-M-BLU MARINO
+[16:38:52]:: Importate immagini di BIA92012S-L-BLU MARINO
+[16:39:31]:: Importate immagini di BIA92012S-XL-BLU MARINO
+[16:40:20]:: Importate immagini di BIA92012S-S-NERO
+[16:45:01]:: inizio lettura CSV
+[16:45:01]:: fine lettura CSV
+[16:45:01]:: inizio creazione immagini
+[16:45:38]:: Importate immagini di BIA92012S-M-NERO
+[16:46:15]:: Importate immagini di BIA92012S-L-NERO
+[16:46:53]:: Importate immagini di BIA92012S-XL-NERO
+[16:47:45]:: Importate immagini di BIA92012S-S-BIANCO
+[16:48:26]:: Importate immagini di BIA92012S-M-BIANCO
+[16:49:07]:: Importate immagini di BIA92012S-L-BIANCO
+[16:49:47]:: Importate immagini di BIA92012S-XL-BIANCO
+[16:50:28]:: Importate immagini di BIA92012S
+[16:51:14]:: Importate immagini di BIA92010S-S-BIANCO
+[17:00:01]:: inizio lettura CSV
+[17:00:01]:: fine lettura CSV
+[17:00:01]:: inizio creazione immagini
+[17:00:46]:: Importate immagini di BIA92010S-M-BIANCO
+[17:01:29]:: Importate immagini di BIA92010S-L-BIANCO
+[17:02:13]:: Importate immagini di BIA92010S-XL-BIANCO
+[17:02:57]:: Importate immagini di BIA92010S
+[17:03:56]:: Importate immagini di 90700-M-NUDE
+[17:04:38]:: Importate immagini di 90700-L-NUDE
+[17:05:23]:: Importate immagini di 90700-XXL-NUDE
+[17:06:06]:: Importate immagini di 90700-M-BIANCO
+[17:06:33]:: Importate immagini di 90700-L-BIANCO
+[17:07:04]:: Importate immagini di 90700-XL-BIANCO
+[17:15:01]:: inizio lettura CSV
+[17:15:01]:: fine lettura CSV
+[17:15:01]:: inizio creazione immagini
+[17:15:30]:: Importate immagini di 90700-XXL-BIANCO
+[17:16:00]:: Importate immagini di 90700
+[17:16:25]:: Importate immagini di UPJ10011S-M-NAVY
+[17:16:44]:: Importate immagini di UPJ10011S-L-NAVY
+[17:17:05]:: Importate immagini di UPJ10011S-XL-NAVY
+[17:17:26]:: Importate immagini di UPJ10011S-XXL-NAVY
+[17:17:46]:: Importate immagini di UPJ10011S
+[17:18:33]:: Importate immagini di UPJ10009S-M-FEDERAL BLUE
+[17:19:11]:: Importate immagini di UPJ10009S-L-FEDERAL BLUE
+[17:19:49]:: Importate immagini di UPJ10009S-XL-FEDERAL BLUE
+[17:20:27]:: Importate immagini di UPJ10009S-XXL-FEDERAL BLUE
+[17:30:02]:: inizio lettura CSV
+[17:30:02]:: fine lettura CSV
+[17:30:02]:: inizio creazione immagini
+[17:30:44]:: Importate immagini di UPJ10009S
+[17:31:49]:: Importate immagini di UPJ96226S-S-GRIGIO
+[17:32:34]:: Importate immagini di UPJ96226S-M-GRIGIO
+[17:33:22]:: Importate immagini di UPJ96226S-L-GRIGIO
+[17:34:14]:: Importate immagini di UPJ96226S-XL-GRIGIO
+[17:35:35]:: Importate immagini di UPJ96226S-S-BLU
+[17:45:02]:: inizio lettura CSV
+[17:45:02]:: fine lettura CSV
+[17:45:02]:: inizio creazione immagini
+[17:45:56]:: Importate immagini di UPJ96226S-M-BLU
+[17:46:52]:: Importate immagini di UPJ96226S-L-BLU
+[17:47:48]:: Importate immagini di UPJ96226S-XL-BLU
+[17:48:47]:: Importate immagini di UPJ96226S
+[17:49:38]:: Importate immagini di CLU5750-35-NERO
+[17:50:14]:: Importate immagini di CLU5750-36-NERO
+[17:50:50]:: Importate immagini di CLU5750-37-NERO
+[17:51:25]:: Importate immagini di CLU5750-38-NERO
+[17:52:00]:: Importate immagini di CLU5750-39-NERO
+[18:00:02]:: inizio lettura CSV
+[18:00:02]:: fine lettura CSV
+[18:00:02]:: inizio creazione immagini
+[18:00:39]:: Importate immagini di CLU5750-40-NERO
+[18:01:15]:: Importate immagini di CLU5750-41-NERO
+[18:01:51]:: Importate immagini di CLU5750
+[18:01:58]:: Importate immagini di CLU5753-35-MARRONE
+[18:02:05]:: Importate immagini di CLU5753-36-MARRONE
+[18:02:12]:: Importate immagini di CLU5753-37-MARRONE
+[18:02:19]:: Importate immagini di CLU5753-38-MARRONE
+[18:02:24]:: Importate immagini di CLU5753-39-MARRONE
+[18:02:32]:: Importate immagini di CLU5753-40-MARRONE
+[18:02:38]:: Importate immagini di CLU5753-41-MARRONE
+[18:02:45]:: Importate immagini di CLU5753
+[18:02:47]:: Importate immagini di CLU5754-37-NERO
+[18:02:48]:: Importate immagini di CLU5754
+[18:02:54]:: Importate immagini di CLU5756-36-NERO
+[18:03:02]:: Importate immagini di CLU5756-37-NERO
+[18:03:08]:: Importate immagini di CLU5756-38-NERO
+[18:03:15]:: Importate immagini di CLU5756-39-NERO
+[18:03:22]:: Importate immagini di CLU5756-40-NERO
+[18:03:27]:: Importate immagini di CLU5756-41-NERO
+[18:03:33]:: Importate immagini di CLU5756
+[18:04:22]:: Importate immagini di CLU5761-36-MARRONE
+[18:04:58]:: Importate immagini di CLU5761-37-MARRONE
+[18:05:34]:: Importate immagini di CLU5761-38-MARRONE
+[18:06:11]:: Importate immagini di CLU5761-39-MARRONE
+[18:06:48]:: Importate immagini di CLU5761-40-MARRONE
+[18:07:24]:: Importate immagini di CLU5761
+[18:07:53]:: Importate immagini di CLU5762-35-MARRONE
+[18:08:12]:: Importate immagini di CLU5762-36-MARRONE
+[18:08:32]:: Importate immagini di CLU5762-37-MARRONE
+[18:08:53]:: Importate immagini di CLU5762-38-MARRONE
+[18:15:01]:: inizio lettura CSV
+[18:15:01]:: fine lettura CSV
+[18:15:01]:: inizio creazione immagini
+[18:15:21]:: Importate immagini di CLU5762-39-MARRONE
+[18:15:37]:: Importate immagini di CLU5762-40-MARRONE
+[18:15:57]:: Importate immagini di CLU5762-41-MARRONE
+[18:16:15]:: Importate immagini di CLU5762
+[18:16:55]:: Importate immagini di CLU5764-36-NERO
+[18:17:23]:: Importate immagini di CLU5764-37-NERO
+[18:17:52]:: Importate immagini di CLU5764-38-NERO
+[18:18:21]:: Importate immagini di CLU5764-39-NERO
+[18:18:50]:: Importate immagini di CLU5764-40-NERO
+[18:19:21]:: Importate immagini di CLU5764-41-NERO
+[18:19:48]:: Importate immagini di CLU5764
+[18:20:33]:: Importate immagini di CLU5794-38-BEIGE
+[18:21:03]:: Importate immagini di CLU5794-35-BEIGE
+[18:21:31]:: Importate immagini di CLU5794-40-BEIGE
+[18:22:03]:: Importate immagini di CLU5794
+[18:30:02]:: inizio lettura CSV
+[18:30:02]:: fine lettura CSV
+[18:30:02]:: inizio creazione immagini
+[18:30:06]:: Importate immagini di CLU5801-37-MARONE
+[18:30:11]:: Importate immagini di CLU5801-38-MARRONE
+[18:30:16]:: Importate immagini di CLU5801-36-MARRONE
+[18:30:20]:: Importate immagini di CLU5801-40-MARRONE
+[18:30:25]:: Importate immagini di CLU5801-39-MARRONE
+[18:30:29]:: Importate immagini di CLU5801
+[18:31:02]:: Importate immagini di CLU5803-36-NERO
+[18:31:23]:: Importate immagini di CLU5803-37-NERO
+[18:31:44]:: Importate immagini di CLU5803-39-NERO
+[18:32:06]:: Importate immagini di CLU5803-38-NERO
+[18:32:29]:: Importate immagini di CLU5803-40-NERO
+[18:32:52]:: Importate immagini di CLU5803-41-NERO
+[18:33:16]:: Importate immagini di CLU5803
+[18:34:18]:: Importate immagini di CLU5804-36-NERO
+[18:35:01]:: Importate immagini di CLU5804-37-NERO
+[18:35:43]:: Importate immagini di CLU5804-38-NERO
+[18:36:27]:: Importate immagini di CLU5804-39-NERO
+[18:37:11]:: Importate immagini di CLU5804-40-NERO
+[18:37:56]:: Importate immagini di CLU5804-41-NERO
+[18:38:42]:: Importate immagini di CLU5804
+[18:39:31]:: Importate immagini di CLU5811-36-NERO
+[18:40:02]:: Importate immagini di CLU5811-37-NERO
+[18:40:33]:: Importate immagini di CLU5811-38-NERO
+[18:41:07]:: Importate immagini di CLU5811-39-NERO
+[18:41:40]:: Importate immagini di CLU5811-41-NERO
+[18:45:01]:: inizio lettura CSV
+[18:45:01]:: fine lettura CSV
+[18:45:01]:: inizio creazione immagini
+[18:45:36]:: Importate immagini di CLU5811-40-NERO
+[18:46:05]:: Importate immagini di CLU5811
+[18:47:13]:: Importate immagini di CLU5813-36-NERO
+[18:47:57]:: Importate immagini di CLU5813-37-NERO
+[18:48:43]:: Importate immagini di CLU5813-38-NERO
+[18:49:30]:: Importate immagini di CLU5813-39-NERO
+[18:50:17]:: Importate immagini di CLU5813-40-NERO
+[18:51:05]:: Importate immagini di CLU5813-41-NERO
+[18:51:48]:: Importate immagini di CLU5813
+[18:51:54]:: Importate immagini di IDE3382-37-ARGENTO
+[19:00:01]:: inizio lettura CSV
+[19:00:02]:: fine lettura CSV
+[19:00:02]:: inizio creazione immagini
+[19:00:10]:: Importate immagini di IDE3382-39-BLU
+[19:00:20]:: Importate immagini di IDE3382-38-BLU
+[19:00:28]:: Importate immagini di IDE3382-38-MARRONE
+[19:00:33]:: Importate immagini di IDE3382-38-GRIGIO
+[19:00:39]:: Importate immagini di IDE3382
+[19:00:43]:: Importate immagini di IDE3382NUVE
+[19:00:46]:: Importate immagini di IDE3382NUVE
+[19:01:04]:: Importate immagini di MSV1431-40-NERO
+[19:01:18]:: Importate immagini di MSV1431-37-NERO
+[19:01:31]:: Importate immagini di MSV1431-36-NERO
+[19:01:45]:: Importate immagini di MSV1431
+[19:02:14]:: Importate immagini di MSV1490-41-NERO
+[19:02:35]:: Importate immagini di MSV1490-36-NERO
+[19:03:11]:: Importate immagini di MSV1490-37-BORDEAUX
+[19:03:33]:: Importate immagini di MSV1490-39-BORDEAUX
+[19:03:58]:: Importate immagini di MSV1490
+[19:04:38]:: Importate immagini di MSV1493-37-GRIGIO
+[19:05:05]:: Importate immagini di MSV1493-38-GRIGIO
+[19:05:33]:: Importate immagini di MSV1493-36-GRIGIO
+[19:06:02]:: Importate immagini di MSV1493-40-GRIGIO
+[19:06:29]:: Importate immagini di MSV1493-39-GRIGIO
+[19:06:57]:: Importate immagini di MSV1493
+[19:07:34]:: Importate immagini di MSV1966-37-BEIGE
+[19:07:56]:: Importate immagini di MSV1966
+[19:08:09]:: Importate immagini di MSV5269-40-NERO
+[19:08:19]:: Importate immagini di MSV5269-41-NERO
+[19:08:28]:: Importate immagini di MSV5269
+[19:08:42]:: Importate immagini di OBC1920-39-GRIGIO
+[19:08:50]:: Importate immagini di OBC1920-37-GRIGIO
+[19:09:00]:: Importate immagini di OBC1920-40-GRIGIO
+[19:15:02]:: inizio lettura CSV
+[19:15:02]:: fine lettura CSV
+[19:15:02]:: inizio creazione immagini
+[19:15:10]:: Importate immagini di OBC1920-36-GRIGIO
+[19:15:21]:: Importate immagini di OBC1920-38-GRIGIO
+[19:15:32]:: Importate immagini di OBC1920-41-GRIGIO
+[19:15:44]:: Importate immagini di OBC1920
+[19:16:20]:: Importate immagini di PRF1094-37-NERO
+[19:16:45]:: Importate immagini di PRF1094
+[19:17:20]:: Importate immagini di PRF5405-37-NERO
+[19:17:41]:: Importate immagini di PRF5405
+[19:18:17]:: Importate immagini di PRF5406-37-NERO
+[19:18:40]:: Importate immagini di PRF5406
+[19:18:48]:: Importate immagini di PRF7253-35-NERO
+[19:18:55]:: Importate immagini di PRF7253-38-BLU
+[19:19:01]:: Importate immagini di PRF7253
+[19:19:08]:: Importate immagini di PRF7254-35-NERO
+[19:19:16]:: Importate immagini di PRF7254-37-NERO
+[19:19:23]:: Importate immagini di PRF7254
+[19:19:27]:: Importate immagini di PRF7290-36-NERO
+[19:19:36]:: Importate immagini di PRF7290-37-NERO
+[19:19:42]:: Importate immagini di PRF7290-35-NERO
+[19:19:49]:: Importate immagini di PRF7290
+[19:19:56]:: Importate immagini di PRF7302-35-NERO
+[19:20:03]:: Importate immagini di PRF7302
+[19:20:26]:: Importate immagini di PRF8044-42-NERO
+[19:20:39]:: Importate immagini di PRF8044
+[19:20:40]:: Importate immagini di SGI6522-39-BLU
+[19:20:42]:: Importate immagini di SGI6522-38-BLU
+[19:20:44]:: Importate immagini di SGI6522-37-BLU
+[19:20:45]:: Importate immagini di SGI6522-41-CAMMELLO
+[19:20:46]:: Importate immagini di SGI6522-39-CAMMELLO
+[19:20:48]:: Importate immagini di SGI6522
+[19:21:16]:: Importate immagini di SGI6524-36-ARGENTO
+[19:21:34]:: Importate immagini di SGI6524-39-ARGENTO
+[19:21:54]:: Importate immagini di SGI6524-40-ARGENTO
+[19:22:15]:: Importate immagini di SGI6524
+[19:22:17]:: Importate immagini di SGI6525-41-BEIGE
+[19:22:19]:: Importate immagini di SGI6525-40-BEIGE
+[19:22:20]:: Importate immagini di SGI6525-40-MARRONE
+[19:22:20]:: Importate immagini di SGI6525-37-MARRONE
+[19:22:21]:: Importate immagini di SGI6525
+[19:22:46]:: Importate immagini di SGI670-39-NUDE
+[19:23:01]:: Importate immagini di SGI670-41-NUDE
+[19:23:20]:: Importate immagini di SGI670-40 NUDE
+[19:23:37]:: Importate immagini di SGI670
+[19:23:59]:: Importate immagini di SGI671-37-NERO
+[19:24:15]:: Importate immagini di SGI671-39-NERO
+[19:24:29]:: Importate immagini di SGI671-37-BIANCO
+[19:24:39]:: Importate immagini di SGI671-41-BIANCO
+[19:24:58]:: Importate immagini di SGI671-38-NERO
+[19:25:17]:: Importate immagini di SGI671
+[19:25:39]:: Importate immagini di SGI8530-39-ARGENTO
+[19:25:55]:: Importate immagini di SGI8530-36-ARGENTO
+[19:25:55]:: fine creazione immagini
+
+***********************************************REPORTS************************************************
+
+------------------------------------------------------------------------------------------------------
+|TYPE                                              | Import images                                     |
+|STATUS                                            | SUCCESS                                           |
+|START                                             | 19:15:02                                          |
+|END                                               | 19:25:55                                          |
+|DURATION                                          | 10.88 minuti                                      |
+|MANUFACTURERS CREATED                             | 0                                                 |
+|CATEGORIES CREATED                                | 0                                                 |
+|ATTRIBUTE VALUES CREATED                          | 0                                                 |
+|FEATURE VALUES CREATED                            | 0                                                 |
+|PRODUCTS CREATED                                  | 0                                                 |
+|PRODUCTS DELETED                                  | 0                                                 |
+|IMAGES CREATED                                    | 107                                               |
+------------------------------------------------------------------------------------------------------
+
+***********************************************REPORTS************************************************
+
+[19:30:02]:: inizio lettura CSV
+[19:30:02]:: fine lettura CSV
+[19:30:02]:: inizio creazione immagini
+[19:30:18]:: Importate immagini di SGI8530-37-ARGENTO
+[19:30:34]:: Importate immagini di SGI8530-40-ARGENTO
+[19:30:50]:: Importate immagini di SGI8530
+[19:30:53]:: Importate immagini di SGI8950-37-NUDE
+[19:30:54]:: Importate immagini di SGI8950-39-NUDE
+[19:30:55]:: Importate immagini di SGI8950-40-NUDE
+[19:30:56]:: Importate immagini di SGI8950
+[19:30:57]:: Importate immagini di SGI8951-40-NUDE
+[19:31:01]:: Importate immagini di SGI8951-41-NUDE
+[19:31:02]:: Importate immagini di SGI8951-39-NUDE
+[19:31:03]:: Importate immagini di SGI8951
+[19:31:29]:: Importate immagini di UBK71016B-M-NAVY-WHITE
+[19:31:49]:: Importate immagini di UBK71016B-L-NAVY-WHITE
+[19:32:09]:: Importate immagini di UBK71016B-XL-NAVY-WHITE
+[19:32:30]:: Importate immagini di UBK71016B-XXL-NAVY-WHITE
+[19:32:49]:: Importate immagini di UBK71016B
+[19:33:16]:: Importate immagini di UBK71022-M-NAVY-YELLOW
+[19:33:36]:: Importate immagini di UBK71022-L-NAVY-YELLOW
+[19:33:53]:: Importate immagini di UBK71022-XL-NAVY-YELLOW
+[19:34:13]:: Importate immagini di UBK71022-XXL-NAVY-YELLOW
+[19:34:34]:: Importate immagini di UBK71022
+[19:35:35]:: Importate immagini di UBIK71022-M-NERO
+[19:36:14]:: Importate immagini di UBIK71022-L-NERO
+[19:36:53]:: Importate immagini di UBIK71022-XL-NERO
+[19:37:32]:: Importate immagini di UBIK71022-XXL-NERO
+[19:38:11]:: Importate immagini di UBIK71022
+[19:38:39]:: Importate immagini di UBK71016-M- MILITARY
+[19:38:58]:: Importate immagini di UBK71016-L- MILITARY
+[19:39:20]:: Importate immagini di UBK71016-XL- MILITARY
+[19:39:41]:: Importate immagini di UBK71016-XXL- MILITARY
+[19:40:05]:: Importate immagini di UBK71016-M-HORIZON BLUE
+[19:40:23]:: Importate immagini di UBK71016-L-HORIZON BLUE
+[19:40:44]:: Importate immagini di UBK71016-XL-HORIZON BLUE
+[19:45:02]:: inizio lettura CSV
+[19:45:02]:: fine lettura CSV
+[19:45:02]:: inizio creazione immagini
+[19:45:24]:: Importate immagini di UBK71016-XXL-HORIZON BLUE
+[19:45:49]:: Importate immagini di UBK71016-M-NAVY-RED
+[19:46:07]:: Importate immagini di UBK71016-L-NAVY-RED
+[19:46:29]:: Importate immagini di UBK71016-XL-NAVY-RED
+[19:46:49]:: Importate immagini di UBK71016-XXL-NAVY-RED
+[19:47:08]:: Importate immagini di UBK71016
+[19:49:41]:: Importate immagini di UIB05026G3-M-THREE PACK
+[19:51:31]:: Importate immagini di UIB05026G3-L-THREE PACK
+[20:00:01]:: inizio lettura CSV
+[20:00:01]:: fine lettura CSV
+[20:00:01]:: inizio creazione immagini
+[20:01:53]:: Importate immagini di UIB05026G3-XL-THREE PACK
+[20:03:42]:: Importate immagini di UIB05026G3
+[20:05:41]:: Importate immagini di UIB05029G3-M-THREE PACK
+[20:07:08]:: Importate immagini di UIB05029G3-L-THREE PACK
+[20:15:01]:: inizio lettura CSV
+[20:15:01]:: fine lettura CSV
+[20:15:01]:: inizio creazione immagini
+[20:16:29]:: Importate immagini di UIB05029G3-XL-THREE PACK
+[20:18:00]:: Importate immagini di UIB05029G3
+[20:30:01]:: inizio lettura CSV
+[20:30:01]:: fine lettura CSV
+[20:30:01]:: inizio creazione immagini
+[20:45:01]:: inizio lettura CSV
+[20:45:01]:: fine lettura CSV
+[20:45:01]:: inizio creazione immagini
+[21:00:02]:: inizio lettura CSV
+[21:00:02]:: fine lettura CSV
+[21:00:02]:: inizio creazione immagini
+[21:15:02]:: inizio lettura CSV
+[21:15:02]:: fine lettura CSV
+[21:15:02]:: inizio creazione immagini
+[21:30:01]:: inizio lettura CSV
+[21:30:01]:: fine lettura CSV
+[21:30:01]:: inizio creazione immagini
+[21:45:02]:: inizio lettura CSV
+[21:45:02]:: fine lettura CSV
+[21:45:02]:: inizio creazione immagini
+[22:00:01]:: inizio lettura CSV
+[22:00:01]:: fine lettura CSV
+[22:00:01]:: inizio creazione immagini
+[22:15:01]:: inizio lettura CSV
+[22:15:02]:: fine lettura CSV
+[22:15:02]:: inizio creazione immagini
+[22:30:01]:: inizio lettura CSV
+[22:30:01]:: fine lettura CSV
+[22:30:01]:: inizio creazione immagini
+[22:45:01]:: inizio lettura CSV
+[22:45:01]:: fine lettura CSV
+[22:45:01]:: inizio creazione immagini
+[23:00:02]:: inizio lettura CSV
+[23:00:02]:: fine lettura CSV
+[23:00:02]:: inizio creazione immagini
+[23:15:02]:: inizio lettura CSV
+[23:15:02]:: fine lettura CSV
+[23:15:02]:: inizio creazione immagini
+[23:30:02]:: inizio lettura CSV
+[23:30:02]:: fine lettura CSV
+[23:30:02]:: inizio creazione immagini
+[23:45:01]:: inizio lettura CSV
+[23:45:02]:: fine lettura CSV
+[23:45:02]:: inizio creazione immagini

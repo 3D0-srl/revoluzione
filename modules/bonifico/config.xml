@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>Bonifico</name>
+		<permission>ecommerce</permission>
+		<tag>bonifico</tag> 
+		<kind>payment</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il sistema di pagamento <b>Bonifico</b>]]></description>
+   </info>
+  <linkSetting>index.php?ctrl=Setting&amp;mod=bonifico</linkSetting>
+  <dependencies>
+		<dependence>ecommerce</dependence>
+  </dependencies>
+</module>

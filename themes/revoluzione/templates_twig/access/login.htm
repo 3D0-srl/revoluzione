@@ -1,0 +1,31 @@
+{% extends 'layouts/page_login.htm' %}
+{% block content %}
+    <div class="container-small container-login">
+		<div class="bkg-area">
+			<a href="/index.php" class="logo-area">
+				<img src="themes/revoluzione/images/logo-revoluzione-homepage.png">
+			</a>
+		</div>
+		<div class="cont-log-reg">
+			<div class="logindata" id="logindata">
+				<p><a href="/index.php"><i class="fa fa-angle-left"></i> {{tr('Torna alla home')}}</a></p>
+				<h6>{{tr('Area riservata')}}</h6>
+				<form class="form" action="index.php" method="POST">
+					<span class="errore">{{messages|raw}}</span>
+					<div class="controls">
+						<label>{{tr('Username')}}</label>
+						<input type="text" name="formdata[username]">
+					</div>
+					<div class="controls">
+						<label>{{tr('Password')}}</label>
+						<input type="password" name="formdata[password]">
+					</div>
+					<button type="submit" class="btn-default">{{tr('Accedi')}}</button>
+					<input type="hidden" name="ctrl" value="Access">
+					<input type="hidden" name="action" value="login">
+				</form>
+				<p class="small">Hai dimenticato la password? <a href="/account/lostpwd.htm" class="lostpwd">Recupera password</a></p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

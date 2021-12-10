@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fattura {{code_invoice}}</title>
+    
+    <style>
+    .invoice-box {
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+    
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+    /*.invoice-box table tr td:nth-child(4) {
+        text-align: right;
+    }*/
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+    tr.total td{
+		 border: none !important;
+	}
+   
+    
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    
+    .rtl table {
+        text-align: right;
+    }
+    
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="{{logo}}" style="width:100%; max-width:300px;">
+                            </td>
+                            
+                            <td>
+                                Fattura: {{code_invoice}}<br>
+                                {{now}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="information">
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td>
+                                {{azienda.nome_azienda}}<br>
+								P. IVA: {{azienda.partita_iva}} <br>
+								Tel: {{azienda.telefono}} - Fax: {{azienda.fax}}<br>
+								{#{setting[info][nomesito]} - {azienda[mail_contatti]} <br>#}
+								{{azienda.indirizzo_azienda}}<br>
+								Cap.sociale: {{azienda.capitale_sociale}}	   <br>
+                            </td>
+                            
+                            <td>
+                               {% if cart.company %}
+									{{cart.company}}<br>
+								{% else %}
+									{{cart.surname}} {{cart.name}}<br>								
+								{% endif %}
+								{{cart.address}} {{cart.postaCode}} {{cart.city}} ({{cart.province}}) - {{cart.country}} <br>
+								{% if cart.vatNumber %}
+									{{cart.vatNumber|upper}}<br>
+								{% else %}
+									{{cart.fiscalCode|upper}}	 <br>
+								{% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <!--<tr class="heading">
+                <td colspan="2">
+                    Metodo di pagamento
+                </td>
+                
+                <td colspan="2">
+                    Check #
+                </td>
+            </tr>
+            
+            <tr class="details">
+                <td>
+                    Check
+                </td>
+                
+                <td>
+                    1000
+                </td>
+            </tr>-->
+            
+            <tr class="heading">
+                <td>
+                    Cod. Articolo
+                </td>
+
+				<td>
+                    Descrizione
+                </td>
+				<td>
+                    Quantità
+                </td>
+                
+                <td style="text-align: right;">
+                    Totale
+                </td>
+            </tr>
+            {% for v in cart.getOrders() %}
+			{% set product = v.getProduct() %}
+            <tr class="item">
+                <td>
+					
+                    {%if product %}<b>{{product.sku}}</b>{% endif %}
+                </td>
+
+				<td>
+					
+                    {%if product %}{{product.getName()|raw}}{% endif %}
+                </td>
+                
+                <td>
+                    {{v.quantity}}
+                </td>
+                <td style="text-align: right;">
+                    {{cart.currency}} {{v.getTotalPriceFormatted()}}
+                </td>
+            </tr>
+			{% endfor %}
+            
+           
+            
+            <tr class="total">
+               <td colspan="2"></td>
+                <td colspan="1">SubTotale:</td>
+                
+                <td colspan="1">
+
+                  {{cart.currency}} {{formattanumero(cart.total_without_tax)}}
+                </td>
+            </tr>
+			
+			<tr class="total">
+                <td colspan="2"></td>
+                <td colspan="1">Spediz.:</td>
+                <td colspan="1">
+                  {{cart.currency}} {{formattanumero(cart.shippingPriceWithoutTax)}}
+                </td>
+            </tr>
+			{% set iva = cart.total_tax + cart.shippingPriceTax %}
+			<tr class="total">
+                <td colspan="2"></td>
+                <td colspan="1">Iva:</td>
+                <td colspan="1">
+                  {{cart.currency}} {{formattanumero(iva)}}
+                </td>
+            </tr>
+		
+			{% if cart.discount %}
+			<tr class="total">
+                <td colspan="2"></td>
+                <td colspan="1">Sconto:</td>
+                <td colspan="1">
+                  - {{cart.currency}} {{formattanumero(cart.discount)}}
+                </td>
+            </tr>
+			{% endif %}
+			 <tr class="total">
+               <td colspan="2"></td>
+                <td colspan="1">Totale:</td>
+                
+                <td colspan="1">
+				   {% set total = cart.total + cart.paymentPrice + cart.shippingPrice -cart.discount %}
+                   {{cart.currency}} {{formattanumero(total)}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

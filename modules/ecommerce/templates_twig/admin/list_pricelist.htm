@@ -1,0 +1,104 @@
+{% extends "layouts/base.htm" %}
+{% import "macro/utils.htm" as utils %}
+{% block page_title %} {{tr('price_lists')|title}} {{utils.btnModalInfo('info')}} {% endblock %} 
+
+{% block content %}
+
+
+
+<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+				{% if list %}
+					<table id="sezioni-table" class="table table-tools table-hover">
+						<thead>
+							<tr>
+								<th style="min-width:70px"><strong>{{tr('id')}}</strong></th>
+								<th></th>
+								<th><strong>{{tr('label')}}</strong></th>
+								<th>
+									<strong>{{tr('name')}}</strong>
+								</th>
+								<th>
+									<strong>{{tr('description')}}</strong>
+								</th>
+								
+								<th class="text-center"></th>
+								<th class="text-center">{{tr('priority')}}</th>
+								<th class="text-center">
+									<strong>{{tr('actions')}}</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for v in list %}
+							<tr >
+								
+								<td>{{v.id}}</td>
+								<td>
+									{% if v.image %}
+									<img src="/img/{{v.image}}/or-nw/image.png"/>
+									{% endif %}
+								</td>
+								<td>{{v.label}}</td>
+								<td>{{v.get('name')}}</td>
+								<td>{{v.get('description')}}</td>
+								
+								<td>
+									{% if v.active %}
+										<span class="label label-success">{{tr('online')|upper}}</span>
+									{% else %}
+										<span class="label label-danger">{{tr('offline')|upper}}</span>
+									{% endif %}
+								</td>
+
+								<td>
+									{% if v.prec  %}
+									<button onclick="document.location.href='index.php?ctrl=PriceListAdmin&mod=ecommerce&action=list&switch=up&field1={{v.id}}&field2={{v.prec}}'"><i class="fa fa-arrow-up"></i></button>
+									{% endif %}
+									{% if v.succ  %}
+									<button onclick="document.location.href='index.php?ctrl=PriceListAdmin&mod=ecommerce&action=list&switch=down&field1={{v.id}}&field2={{v.succ}}'"><i class="fa fa-arrow-down"></i></button>
+									{% endif %}
+								</td>
+								
+								<td class="text-center"> 
+										<div class="btn-group media-group">
+										  <a href="{{url_edit}}&id={{v.id}}" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i> {{tr('edit')}}</a>
+										  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+												<span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu media-menu text-left" role="menu">
+											<li><a href="{{url_duplicate}}&id={{v.id}}"><i class="fa fa-copy"></i>{{tr('duplicate')}}</a></li>
+											<li><a href="{{url_confirm_delete}}&id={{v.id}}"><i class="fa fa-trash-o"></i> {{tr('delete')}}</a></li>
+										  </ul>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				{% else %}
+					{{tr('no_record')}}
+				{% endif %}
+			</div>
+			{% if links %}
+			 <div class="m-t-30 align-center" >
+				{{links.all|raw}}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+<!-- INFO --->
+{{utils.modalInfo("info",'Cosa sono i listini?',"I listini sono uno strumento molto utile qualora si vogliano gestire più prezzi per un determineto prodotto.<br>
+Per un prodotto infatti possiamo aggiungere più di una regola di prezzo (valore fisso o percentuale) applicabile a determinate condizioni quali
+<ol>
+	<li>quantità ordinata</li>
+	<li>categoria dell'utente </li>
+	<li>range temporale di validità</li>
+</ol>
+In questo scenario potrebbero crearsi, però,  delle situazioni in cui le condizioni per due o più regole di prezzo sono uguali e dunque sorge il problema su quale prezzo (o regola prezzo) dovrà essere applicata al prodotto in esame.<br>
+Questa situazione viene risolta attraverso il listino che assegna alla regola di prezzo una priorità, grazie alla quale, a parità di condizioni, verrà assegnato al prodotto il prezzo il cui listino ha priorità maggiore.<br>
+E' possibile inoltre specificare per un listino anche un nome in visualizzazione oltre ad un immagine (bollino), carattizzante l'offerta (es. black-friday, saldi, 50%) che verrà applicata sull'immagine del prodotto.")}}
+
+{% endblock %}

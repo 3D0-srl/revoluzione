@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>534</id>
+		<author>Ciro Napolitano</author>
+		<name>Widget Slider Brands</name>
+		<permission>superadmin</permission>
+		<tag>widget_slider_brands</tag>
+		<kind>catalog</kind>
+		<version>2</version>
+		<scope></scope> 
+		<description><![CDATA[Modulo che permette di visualizzare uno slider dei brand]]></description> 
+   </info>
+   <widget> 
+		<name>Slider Brand</name>
+		<function>WidgetSliderBrandsComponent</function>
+		<url_conf>/backend/index.php?ctrl=Conf&amp;mod=widget_slider_brands</url_conf>
+		<repeatable>1</repeatable>
+	</widget>
+</module>

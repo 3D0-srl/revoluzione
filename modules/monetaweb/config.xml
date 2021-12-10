@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<module>
+	<info> 
+		<id>223</id>
+		<author>Ciro Napolitano</author>
+		<name>Moneta Web</name>
+		<permission>superadmin</permission>
+		<version>2</version>
+		<tag>monetaweb</tag>
+		<kind>payment</kind>
+		<scope></scope> 
+		<description><![CDATA[Integra nell'ecommerce il gateway monetaweb di Banca San Paolo]]></description> 
+   </info>
+	<linkSetting>
+        <url>index.php?mod=monetaweb</url>
+  	</linkSetting>
+</module>

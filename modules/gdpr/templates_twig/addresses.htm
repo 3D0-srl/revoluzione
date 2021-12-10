@@ -1,0 +1,80 @@
+{% extends 'layouts/page.htm' %}
+{% block content %}
+
+
+
+  <div class="row">
+
+		<div class="space40"></div>
+		<div class="bread_crumbs_userarea">
+			<a href="/account/home.htm">Il mio account</a><i class="fa fa-angle-right"></i>
+			<a class="active" href="#">I miei ordini</a>
+			<div class="right">
+				<a href="javascript: window.history.go(-1)" class="indietro"><i class="fa fa-arrow-left"></i> Indietro</a>
+			</div>
+		</div>
+		<div class="space20"></div>
+
+		<div class="col-xs-12 col-md-12 col-lg-12">
+			<h1 class="tal">I miei ordini</h1>
+			<div class="table-responsive">
+				
+
+				<span id="other_address">
+					<div class="clearfix"></div>
+					<form id="address_form" flexy:if="authUser()">
+						<input type='hidden' name="formdata[recurrent_payment]" value="{recurrent_payment}">
+						<div class="box_address" flexy:foreach="list,add" id="address_{add.id}" flexy:ignore>
+							<div class="cont_address">
+							
+								<div class="info_address">
+									<span>{add.name} {add.surname}</span><br>
+									<span>{add.address}</span><br>
+									<span>{add.postalCode} {add.city}</span><br>
+									<span flexy:if="add.province">{add.getNameProvince()} - {add.getNameCountry()}</span><br>
+									<span flexy:if="add.email">{add.email}</span><br>
+									<span>
+									{if:add.phone}
+										{add.phone}
+										{if:add.cellular}
+										/ {add.cellular}
+										{end:}
+									{else:}
+										{if:add.cellular}
+										{add.cellular}
+										{end:}
+									{end:}
+									</span>
+								</div>
+							</div>
+							<div class="box_btn">
+								<div class="btn_address" onclick="new_address({add.id}); return false;">
+									<img src="/img/demo/ico_mod_cart.png">Modifica
+								</div>
+								<div class="btn_address" onclick="del_address({add.id}); return false;">
+									<img src="/img/demo/ico_del_cart.png">Elimina
+								</div>
+							</div>
+						</div>
+					</form>
+					<span flexy:if="authUser()">
+						<div class="space40"></div>
+						<div class="btn-addform" onclick="new_address(0);">
+							<img src="/img/demo/ico_add_form_cart.png">Aggiungi un nuovo indirizzo
+						</div>
+					</span>
+				</span>
+
+
+
+
+
+			</div>
+			
+		</div>
+
+
+	</div>
+
+
+{% endblock %}

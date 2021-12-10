@@ -1,0 +1,14 @@
+<script>
+	var js_baseurl = "{{baseurl|escape('js')}}";
+	var js_activelocale = "{{activelocale|escape('js')}}";
+	var javascript_activelocale = "{{activelocale|escape('js')}}";
+</script>
+
+<script src="../plugins/jquery-1.11.js"></script>
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
+<script src="js/responsive.js"></script>
+<script src="js/form_twig.js?v=1"></script>
+<script src="../plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+{% for v in javascript_head %}
+	<script src="{{v}}"></script>
+{% endfor %}

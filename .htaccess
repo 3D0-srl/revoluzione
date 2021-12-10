@@ -1,0 +1,209 @@
+#COMPRESSIONE
+<IfModule mod_deflate.c>
+    <filesMatch "\.(js|css|html|php)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</IfModule>
+
+#CACHE
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/webp "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType text/css "access plus 1 week"
+	ExpiresByType text/javascript "access plus 1 week"
+	ExpiresByType application/javascript "access plus 1 week"
+	ExpiresByType application/x-javascript "access plus 1 week"
+	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+	ExpiresByType application/font-woff "access plus 1 year"
+	ExpiresByType application/x-font-woff "access plus 1 year"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+	ExpiresByType font/opentype "access plus 1 year"
+	ExpiresByType font/ttf "access plus 1 year"
+	ExpiresByType font/otf "access plus 1 year"
+	ExpiresByType application/x-font-ttf "access plus 1 year"
+	ExpiresByType application/x-font-otf "access plus 1 year"
+</IfModule>
+
+Options -Indexes
+ErrorDocument 403 /index.php
+#ErrorDocument 404 /p/404.htm
+
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^sitemap.xml$ \/modules/sitemap/XML/sitemap.xml [L]
+
+
+
+RewriteRule page/(.*)/(.*).htm$ index.php?page=$2&lang=$1 [L]
+RewriteRule p/(.*)/(.*).htm$ index.php?page=$2&lang=$1 [L]
+
+#IMAGES
+RewriteRule img/(.*)/([a-z][a-z](-nw)?)/(.*)$ media.php?id=$1&type=$2&action=image [L]
+
+#ATTACHMENT
+RewriteRule attachment/([a-z]+)/([0-9]+).htm$  media.php?id=$2&action=attachment&type=$1 [L]
+
+#PAGE
+RewriteRule ([a-z][a-z])/modules/(.*)/p/(.*).htm$ \/modules/$2/controller.php?action=view_page&page=$3&lang=$1 [L]
+RewriteRule admin/modules/(.*)/p/(.*).htm$ \/admin/modules/$2/controller.php?action=view_page&page=$3&lang=$1 [L]
+#RewriteRule modules/(.*)/p/(.*).htm$ \/modules/$1/controller.php?action=view_page&page=$2 [L]
+RewriteRule ([a-z][a-z])/p/(.*).htm$ \/index.php?page=$2&lang=$1 [L]
+RewriteRule p/(.*).htm$ \/index.php?page=$1 [L]
+RewriteRule ([a-z][a-z])/page/(.*).htm$ \/index.php?page=$2&lang=$1 [L]
+RewriteRule page/(.*).htm$ \/index.php?page=$1 [L]
+
+RewriteRule ([a-z][a-z])/p/(.*).htm$ \/index.php?page=$2&lang=$1 [L]
+RewriteRule page/(.*).htm$ \/index.php?page=$1 [L]
+
+#CATALOGO
+
+RewriteRule catalog.htm$ index.php?ctrl=Catalogo&mod=catalogo [L]
+RewriteRule ([a-z][a-z])/catalog.htm$ index.php?ctrl=Catalogo&mod=catalogo&lang=$1 [L]
+RewriteRule ([a-z][a-z])/catalog/page([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&lang=$1&pageID=$2 [L]
+
+RewriteRule catalog/tag/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=tag&tag=$1 [L]
+RewriteRule ([a-z][a-z])/catalog/tag/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&lang=$1&action=tag&tag=$2 [L]
+
+
+#ESHOP
+RewriteRule ([a-z][a-z])/cart-review.htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart&lang=$1 [L]
+RewriteRule ([a-z][a-z])/cart.htm$ index.php?ctrl=Cart&mod=cart_onepage&lang=$1 [L]
+RewriteRule ([a-z][a-z])/cart-datauser.htm$ index.php?ctrl=Cart&mod=cart_onepage&lang=$1&action=cart_datauser [L]
+RewriteRule ([a-z][a-z])/cart-payment.htm(&(.*)=(.*)?) index.php?ctrl=Cart&mod=cart_onepage?lang=$1&action=cart_payment&$4=$5 [L]
+RewriteRule ([a-z][a-z])/cart-address.htm$ index.php?ctrl=Cart&mod=cart_onepage&lang=$1&action=cart_address [L]
+RewriteRule ([a-z][a-z])/cart-shipment.htm$ index.php?ctrl=Cart&mod=cart_onepage&lang=$1&action=cart_shipment [L]
+RewriteRule ([a-z][a-z])/cart-thanks/([0-9]+).htm$ index.php?ctrl=Cart&mod=cart_onepage&lang=$1&action=cart_thanks&id_cart=$2 [L]
+
+RewriteRule cart-review.htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart [L]
+RewriteRule cart.htm$ index.php?ctrl=Cart&mod=cart_onepage [L]
+RewriteRule cart-datauser.htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart_datauser [L]
+RewriteRule cart-payment.htm((&(.*)=(.*))?) index.php?ctrl=Cart&mod=cart_onepage&action=cart_payment&$3=$4 [L]
+RewriteRule cart-address.htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart_address [L]
+RewriteRule cart-shipment.htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart_shipment [L]
+RewriteRule cart-thanks/([0-9]+).htm$ index.php?ctrl=Cart&mod=cart_onepage&action=cart_thanks&id_cart=$1 [L]
+
+
+RewriteRule ([a-z][a-z])/cart-recurrent-payment.htm$ index.php?ctrl=Cart&mod=cart&lang=$1&recurrent_payment=1 [L]
+RewriteRule cart-recurrent-payment.htm$ index.php?ctrl=Cart&mod=cart&recurrent_payment=1 [L]
+RewriteRule ([a-z][a-z])/cart-recurrent-payment-datauser.htm$ index.php?ctrl=Cart&mod=cart&action=cart_datauser&lang=$1&recurrent_payment=1 [L]
+RewriteRule cart-recurrent-payment-datauser.htm$ index.php?ctrl=Cart&mod=cart&action=cart_datauser&recurrent_payment=1 [L]
+RewriteRule ([a-z][a-z])/cart-recurrent-payment-address.htm$ index.php?ctrl=Cart&mod=cart&action=cart_address&lang=$1&recurrent_payment=1 [L]
+RewriteRule cart-recurrent-payment-address.htm$ index.php?ctrl=Cart&mod=cart&action=cart_address&recurrent_payment=1 [L]
+RewriteRule ([a-z][a-z])/cart-recurrent-payment-shipment.htm$ index.php?ctrl=Cart&mod=cart&action=cart_shipment&lang=$1&recurrent_payment=1 [L]
+RewriteRule cart-recurrent-payment-shipment.htm$ index.php?ctrl=Cart&mod=cart&action=cart_shipment&recurrent_payment=1 [L]
+RewriteRule ([a-z][a-z])/cart-recurrent-payment-checkout.htm$ index.php?ctrl=Cart&mod=cart&action=cart_payment&lang=$1&recurrent_payment=1 [L]
+RewriteRule cart-recurrent-payment-checkout.htm$ index.php?ctrl=Cart&mod=cart&action=cart_payment&recurrent_payment=1 [L]
+
+# PRODOTTO
+RewriteRule catalog/product/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$1 [L]
+RewriteRule cat/prod/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$1 [L]
+RewriteRule catalog\-product\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$1 [L]
+RewriteRule cat\-prod\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$1 [L]
+
+RewriteRule ([a-z][a-z])/catalog/product/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$2&lang=$1 [L]
+RewriteRule ([a-z][a-z])/cat/prod/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$2&lang=$1 [L]
+RewriteRule ([a-z][a-z])\-catalog\-product\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$2&lang=$1 [L]
+RewriteRule ([a-z][a-z])\-cat\-prod\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=product&product=$2&lang=$1 [L]
+
+# CATEGORIE
+RewriteRule ([a-z][a-z])/catalog/section/([0-9]+)/(.*)/page([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$2&lang=$1&pageID=$4 [L]
+RewriteRule ([a-z][a-z])/cat/sec/([0-9]+)/(.*)/page([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$2&lang=$1&pageID=$4 [L]
+RewriteRule ([a-z][a-z])\-catalog\-section\-([0-9]+)\-(.*)/page([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$2&lang=$1&pageID=$4 [L]
+RewriteRule ([a-z][a-z])\-cat\-sec\-([0-9]+)\-(.*)/page([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$2&lang=$1&pageID=$4 [L]
+
+
+RewriteRule catalog/section/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$1 [L]
+RewriteRule cat/sec/([0-9]+)/(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$1 [L]
+RewriteRule catalog\-section\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$1 [L]
+RewriteRule cat\-sec\-([0-9]+)\-(.*).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=section&section=$1 [L]
+
+
+#ACCOUNT
+RewriteRule account/login.htm$ index.php?ctrl=Access&action=login [L]
+RewriteRule ([a-z][a-z])/account/login.htm$ index.php?ctrl=Access&lang=$1&action=login [L]
+RewriteRule account/logout.htm$ index.php?ctrl=Access&action=logout [L]
+RewriteRule ([a-z][a-z])/account/logout.htm$ index.php?ctrl=Access&lang=$1&action=logout [L]
+RewriteRule account/lostpwd.htm$ index.php?ctrl=Access&action=lostpwd [L]
+RewriteRule ([a-z][a-z])/account/lostpwd.htm$ index.php?ctrl=Access&lang=$1&action=lostpwd [L]
+RewriteRule account/signup.htm$ index.php?ctrl=Access&action=signup [L]
+RewriteRule ([a-z][a-z])/account/signup.htm$ index.php?ctrl=Access&lang=$1&action=signup [L]
+
+RewriteRule account/([a-zA-Z0-9_]+)/page([0-9]+).htm$ index.php?ctrl=Home&action=$1&pageID=$2 [L]
+RewriteRule account/([a-zA-Z0-9_]+).htm$ index.php?ctrl=Home&action=$1 [L]
+RewriteRule ([a-z][a-z])/account/([a-zA-Z0-9_]+)/page([0-9]+).htm$ index.php?ctrl=Home&action=$2&lang=$1&pageID=$3 [L]
+RewriteRule ([a-z][a-z])/account/([a-zA-Z0-9_]+).htm$ index.php?ctrl=Home&action=$2&lang=$1 [L]
+
+
+#NEWS
+
+RewriteRule news/all/(.*).htm$ index.php?ctrl=News&mod=news&action=list_news&slug=$1 [L]
+RewriteRule ([a-z][a-z])/news/all/(.*).htm$ index.php?ctrl=News&mod=news&action=list_news&slug=$2&lang=$1 [L]
+RewriteRule news/(.*)/(.*).htm$ index.php?ctrl=News&mod=news&action=info_news&slug=$2 [L]
+RewriteRule ([a-z][a-z])/news/(.*)/(.*).htm$ index.php?ctrl=News&mod=news&action=info_news&slug=$3&lang=$1 [L]
+
+#BRAND
+
+RewriteRule ([a-z]+)/brands.htm$ index.php?mod=catalogo&ctrl=Catalogo&action=brands&locale=$1 [L]
+RewriteRule brands.htm$ index.php?mod=catalogo&ctrl=Catalogo&action=brands[L]
+RewriteRule ([a-z]+)/brand/(.*)_([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=brand&id=$3&locale=$1 [L]
+RewriteRule brand/(.*)_([0-9]+).htm$ index.php?ctrl=Catalogo&mod=catalogo&action=brand&id=$2 [L]
+RewriteRule ([a-z]+)/brand/(.*)_([0-9]+)$ index.php?ctrl=Catalogo&mod=catalogo&action=brand&id=$3&locale=$1 [L]
+RewriteRule brand/(.*)_([0-9]+)$ index.php?ctrl=Catalogo&mod=catalogo&action=brand&id=$2 [L]
+
+
+#INSTAGRAM
+RewriteRule instagram-gallery$ \/index.php?mod=instagram_gallery [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors Off
+   php_value max_execution_time 9000
+   php_value max_input_time 3000
+   php_value max_input_vars 1000
+   php_value memory_limit 2048M
+   php_value post_max_size 16M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php72"
+   php_value upload_max_filesize 16M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 9000
+   php_value max_input_time 3000
+   php_value max_input_vars 1000
+   php_value memory_limit 2048M
+   php_value post_max_size 16M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php72"
+   php_value upload_max_filesize 16M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+
+
+
+
+

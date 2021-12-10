@@ -1,0 +1,38 @@
+{% extends "layouts/base_form_widget.htm" %}
+
+{% block javascript %}
+{{parent()}}
+<script>
+	
+	var js_color = "{{dataform.theme_color.value|escape('js')}}";
+	
+
+	$(document).ready(function(){
+		$("#theme_color").spectrum({
+			preferredFormat: "hex",
+			color: js_color
+		});
+	});
+	
+
+</script>
+{% endblock %}
+{% block content %}
+{% import "macro/form.htm" as form %}
+
+		
+		{{form.buildCol(dataform.page_id,'col-md-12')}}
+		{{form.buildCol(dataform.theme_color,'col-md-12')}}
+		{{form.buildCol(dataform.logged_in_greeting,'col-md-12')}}
+		{{form.buildCol(dataform.logged_out_greeting,'col-md-12')}}
+		{{form.buildCol(dataform.greeting_dialog_display,'col-md-12')}}
+		{{form.buildCol(dataform.greeting_dialog_delay,'col-md-12')}}
+		
+	
+	
+
+
+
+
+
+{% endblock %}

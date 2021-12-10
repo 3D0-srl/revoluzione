@@ -1,0 +1,9 @@
+{% for image in images %}
+<div class="image-slide-box" >
+	
+	<a class="fancybox" data-fancybox="gallery" href="{{image.url_original}}">
+		<img src="{{ image.url }}">
+	</a>
+</div>
+
+{% endfor %}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File in formato Easyfatt-XML creato con Danea Easyfatt - www.danea.it/software/easyfatt -->
+<!-- Per importare o creare un file in formato Easyfatt-Xml, consultare la documentazione tecnica: www.danea.it/software/easyfatt/xml -->
+<EasyfattProducts AppVersion="3" Creator="Danea Easyfatt Enterprise One  2020.46c" CreatorUrl="http://www.danea.it/software/easyfatt" Mode="full" ImageFolder="\\Mac\Home\Documents\Danea Easyfatt\test - Allegati\Prod" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.danea.it/public/prodotti.xsd">
+  <Products>
+    <Product>
+      <InternalID>42</InternalID>
+      <Code>test</Code>
+      <Description>test anello</Description>
+      <DescriptionHtml></DescriptionHtml>
+      <Category>Anelli</Category>
+      <Vat Perc="22" Class="Imponibile" Description="Imponibile 22%">22</Vat>
+      <NetPrice1>10</NetPrice1>
+      <GrossPrice1>12.2</GrossPrice1>
+      <SizeUm>cm</SizeUm>
+      <WeightUm>kg</WeightUm>
+      <ManageWarehouse>true</ManageWarehouse>
+      <AvailableQty>41</AvailableQty>
+      <CustomField1>taglia</CustomField1>
+      <CustomField2>Cerchio</CustomField2>
+      <CustomField4>Realizzato interamente in Argento 925‰</CustomField4>
+      <Notes></Notes>
+      <Variants>
+        <Variant>
+          <Size>8</Size>
+          <Color>-</Color>
+          <Barcode>test/8/-</Barcode>
+          <AvailableQty>3</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>10</Size>
+          <Color>-</Color>
+          <Barcode>test/10/-</Barcode>
+          <AvailableQty>4</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>12</Size>
+          <Color>-</Color>
+          <Barcode>test/12/-</Barcode>
+          <AvailableQty>5</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>14</Size>
+          <Color>-</Color>
+          <Barcode>test/14/-</Barcode>
+          <AvailableQty>6</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>16</Size>
+          <Color>-</Color>
+          <Barcode>test/16/-</Barcode>
+          <AvailableQty>7</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>18</Size>
+          <Color>-</Color>
+          <Barcode>test/18/-</Barcode>
+          <AvailableQty>8</AvailableQty>
+        </Variant>
+        <Variant>
+          <Size>20</Size>
+          <Color>-</Color>
+          <Barcode>test/20/-</Barcode>
+          <AvailableQty>8</AvailableQty>
+        </Variant>
+      </Variants>
+    </Product>
+  </Products>
+</EasyfattProducts>

@@ -1,0 +1,41 @@
+<div class="carousel slide desktop_sliderfull" data-ride="carousel" id="sliderfull_desktop_{{id_box}}">
+	
+	<div class="carousel-inner">
+		{% for k,v in slides %}
+			
+			<div class="item {% if k == 0 %}active{% endif %}">
+				
+				{% if v.get('link_slide') %}
+				<a href="{{v.get('link_slide')}}"> 
+                {% endif %}
+					<div class="boxtestoslide">	
+						{% if v.get('title') %}
+						<div class="txt">
+							{% if v.get('subtitle') %}
+								<p class="testoslide" style="color:{{v.color_text}}">{{v.get('subtitle')}}</p>
+							{% endif %}
+							<h2 class="titoloslide" style="color:{{v.color_text}}">{{v.get('title')}}</h2>
+							<div class="btn-box-img">Scopri di pi&ugrave;</div>
+						</div>
+						{% endif %}
+						<img class="slide-image" src="img/{{v.image}}/or-nw/slide{{k}}.png" alt=""/>
+					</div>
+				{% if v.get('link_slide') %}
+				</a>
+                {% endif %}
+				
+			</div>
+		
+
+		{% endfor %}
+	</div>		
+	{% if only_one == false %}
+		 <a class="arrow-left" href="#sliderfull_desktop_{{id_box}}" role="button" data-slide="prev">
+			<i class="fa fa-angle-left"></i>
+		 </a>
+		 <a class="arrow-right" href="#sliderfull_desktop_{{id_box}}" role="button" data-slide="next">
+			<i class="fa fa-angle-right"></i>
+		 </a>
+	{% endif %}
+</div>
+

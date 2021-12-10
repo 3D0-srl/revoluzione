@@ -1,0 +1,72 @@
+.popup-newsletter {
+	width: 100%;
+	max-width: 500px;
+	min-height: 250px;
+	border: 0;
+	background: #efefef;
+	text-align: center;
+	padding: 80px 15px 60px;
+	border-radius: 0;
+	border: 5px solid #ffff00;
+}
+
+.popup-newsletter > h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.popup-newsletter > h4 {
+    font-size: 16px;
+    letter-spacing: 0;
+    text-transform: inherit;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 24px 0;
+}
+
+.popup-newsletter > form {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+	width: 100%;
+	max-width: 399px;
+	padding-right: 99px;
+	clear: both;
+}
+
+.popup-newsletter > form > input {
+    position: relative;
+    float: left;
+    width: 100%;
+	max-width: 300px;
+    height: 35px;
+    background: #FFF;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.popup-newsletter .btn-newsletter {
+    width: 99px;
+    height: 35px;
+    line-height: 35px;
+    background: #000;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: left;
+    position: absolute;
+	right: 0;
+	top: 0;
+}
