@@ -1,0 +1,46 @@
+.fixedtop {
+  display: none;
+}
+.col-w-100.container {
+  max-width: 636px;
+}
+.box-testo h5 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #2C2D2E;
+  margin: 0 0 32px;
+}
+input:not([type="checkbox"]):not([type="checkbox"]), select {
+  border: 0;
+  background: #FAFAFA;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+.form-builder-row textarea {
+  background: #FAFAFA;
+  height: 150px;
+  border-radius: 5px;
+}
+.privacy {
+  font-size: 14px;
+  line-height: 28px;
+  color: #2C2D2E;
+}
+.privacy a {
+  font-size: 14px;
+  line-height: 28px;
+  color: #1B3F99;
+  text-decoration: underline;
+}
+.form .btn-default {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #1B3F99;
+  padding: 0 40px;
+}

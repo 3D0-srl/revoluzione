@@ -1,0 +1,6 @@
+.fixedtop {
+  display: none;
+}
+.col-w-100.container {
+  max-width: 1188px;
+}

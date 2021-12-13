@@ -1,15 +1,65 @@
-{% extends 'layouts/page.htm' %}
-{% block content %}
-{% include 'partials/colsx_backend.htm' %}
+<!DOCTYPE html>
+<html lang="it" {% block html_tag %}{% endblock %}>
 
-<div class="container-small">
-	<h4 class="titl-backend">
-		{% block backend_header %}
-			<!--TESTATA PAGINA -->
-		{% endblock %}
-	</h4>
-	{% block backend_content %}
-		<!--CONTENTUTO PAGINA -->
+<head>
+	<base href="{{baseurl}}">
+	<title>{% block metatags_title %}{{setting['info']['nomesito']}}{% endblock %}</title>
+	{% block metatags %}	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{% block metatags_description %}{% endblock %}">
+	<meta name="author" content="3d0 SRL">
 	{% endblock %}
-</div>
+
+	{% block css %}
+		{% include 'partials/css.htm' %}
+	{% endblock %}
+
+	{% block javascript %}
+		{% include 'partials/javascript.htm' %}
+	{% endblock %}
+
+	{{do_action('display_header')}}
+</head>
+<body class="backend">
+	{{do_action('display_before_body')}}
+	{% block page_init %}{% endblock %}
+	<div class="wrapper">
+		{% block container %}
+		<div class="container">
+			{{do_action('display_before_top')}}
+			<!--- TOP ---->
+			{% include 'partials/top2.htm' %}
+			<!--- END TOP ---->
+			{{do_action('display_after_top')}}
+			<!--- CONTENT ---->
+			{% block content %}
+				{% include 'partials/colsx_backend.htm' %}
+				<div class="container-small">
+					<h4 class="titl-backend">
+						{% block backend_header %}
+							<!--TESTATA PAGINA -->
+						{% endblock %}
+					</h4>
+					{% block backend_content %}
+						<!--CONTENTUTO PAGINA -->
+					{% endblock %}
+				</div>
+			{% endblock %}
+			<!--- END CONTENT ---->
+		</div>
+		{% endblock %}
+
+		<!--- FOOTER ---->
+		{% include 'partials/footer.htm' %}
+		<!--- END FOOTER ---->
+		<!-- ANCORA display_block_end_page -->
+		{{do_action('display_block_end_page')}}
+	</div>
+</body>
+
+{% block javascript_end %}
+	{% include 'partials/javascript_end.htm' %}
 {% endblock %}
+</html>

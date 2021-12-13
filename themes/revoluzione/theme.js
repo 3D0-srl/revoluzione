@@ -69,9 +69,9 @@ $(document).ready(function() {
 		$(".nologindata").show();
 	});
 
-	if($(".colsx-backend").is(":visible")) {
+	/*if($(".colsx-backend").is(":visible")) {
 		$("body").addClass("backend");
-	}
+	}*/
 
 	if( ($(".addcart").is(":visible")) || ($(".cart-wish").is(":visible")) ) {
 		$(".cont_btn").show();
@@ -112,10 +112,10 @@ $(window).scroll(function(){
 	scroll = $(window).scrollTop();
 	if (scroll >= 40) {
 		$(".top").addClass("bannerh");
-		$(".colsx-backend").addClass("upside");
+		//$(".colsx-backend").addClass("upside");
 	} else {
 		 $(".top").removeClass("bannerh");
-		 $(".colsx-backend").removeClass("upside");
+		 //$(".colsx-backend").removeClass("upside");
 	}
 	if(w > 1024){
 		var hfancyone = $(".fancyone").height();
@@ -144,7 +144,7 @@ $.fn.isInViewport = function() {
 $(window).on('resize scroll', function() {
 	var wscreen = $(window).width();
 	if(wscreen > 991){
-		var hcontainer = $('.container-small').height();
+		var hcontainer = $('body').height();
 		
 		if ($('.footer').isInViewport()) {
 			$('.colsx-backend').removeClass('sticky');
