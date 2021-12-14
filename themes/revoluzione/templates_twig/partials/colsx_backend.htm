@@ -1,26 +1,31 @@
 <div class="colsx-backend">
-	<ul class="menu-backend">
+	<ul class="top-menu-backend">
 		<li><img src="media/images/{{getConfig('cms_setting','logo')}}"></li>
+	</ul>
+	<ul class="menu-backend">
 		{% for item in menu_forntend_items %}
-		<li class="{% if current_frontend == item.tag %}active{% endif %}">
-			<a href="{{item.url}}">
-				<div class="cont-ico"><img src="{{item.icon_image}}"></div>
-				{{item.get('name')}}
-			</a>
-		</li>
+			<li class="{% if current_frontend == item.tag %}active{% endif %}">
+				<a href="{{item.url}}">
+					<div class="cont-ico {{item.tag}}" style="background-image: url('{{item.icon_image}}')"></div>
+					{{item.get('name')}}
+				</a>
+			</li>
 		{% endfor %}
 		{% if auth('admin') %}
 			<li>
 				<a href="backend/index.php?ctrl=Index">
-					<div class="cont-ico"><img src="themes/revoluzione/images/ico-area-admin-menu-backend.png"></div>
+					<div class="cont-ico" style="background-image: url('modules/ecommerce/images/ico-admin-backend.png')"></div>
 					{{tr('Area Admin')}}
 				</a>
 			</li>
 		{% endif %}
 	</ul>
-	<div class="foo-menu-backend">
-		<a href="/p/contatti.htm" class="btn-default">
-			<img src="themes/revoluzione/images/ico-contattaci-backend.png">Contattaci
-		</a>
-	</div>
+	<ul class="foo-menu-backend">
+		<li>
+			<a href="account/logout.htm">
+				<div class="cont-ico" style="background-image: url('modules/ecommerce/images/ico-logout-backend.png')"></div>
+				Logout
+			</a>
+		</li>
+	</ul>
 </div>

@@ -22,31 +22,23 @@
 
 	{{do_action('display_header')}}
 </head>
-<body class="backend">
+<body class="catalog">
 	{{do_action('display_before_body')}}
 	{% block page_init %}{% endblock %}
 	<div class="wrapper">
-		{{do_action('display_before_top')}}
-		<!--- TOP ---->
-		{% include 'partials/top2.htm' %}
-		<!--- END TOP ---->
-		{{do_action('display_after_top')}}
+        {{do_action('display_before_top')}}
+        <!--- TOP ---->
+        {% include 'partials/top2.htm' %}
+        <!--- END TOP ---->
+        {{do_action('display_after_top')}}
 		{% block container %}
 		<div class="container">
 			<!--- CONTENT ---->
-			{% block content %}
-				{% include 'partials/colsx_backend.htm' %}
-				<div class="container-small">
-					<h4 class="titl-backend">
-						{% block backend_header %}
-							<!--TESTATA PAGINA -->
-						{% endblock %}
-					</h4>
-					{% block backend_content %}
-						<!--CONTENTUTO PAGINA -->
-					{% endblock %}
-				</div>
-			{% endblock %}
+			<div class="container-small">
+                {% block content %}
+                    <!--CONTENTUTO PAGINA -->
+                {% endblock %}
+            </div>
 			<!--- END CONTENT ---->
 		</div>
 		{% endblock %}

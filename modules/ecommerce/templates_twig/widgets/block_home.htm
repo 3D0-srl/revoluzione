@@ -1,46 +1,33 @@
+<div class="clearfix"></div>
 <div class="last-orders">
-	<h6>
-		<img src="modules/ecommerce/images/ico-ultimi-ordini-backend.png">{{tr('Ultimi ordini','ecommerce')}}
-	</h6>
+	<h5>{{tr('Ultimi Acquisti','ecommerce')}}</h5>
 	{% if carrelli is not null %}
-	<a href="index.php?ctrl=Orders&mod=ecommerce" class="all-view">{{tr('Vedi tutti','ecommerce')}}</a>
+		<a href="index.php?ctrl=Orders&mod=ecommerce" class="all-view">{{tr('Vedi tutti','ecommerce')}}</a>
 	{% endif %}
-	<div class="space30"></div>
-	<div class="table-responsive">
-		{% if carrelli is null %}
-		<span >{{tr('Nessun ordine presente in archivio.','ecommerce')}}</span>
-		{% else %}
-		<table class="table table-orders" >
-				<thead>
-					<tr>
-						<th></th>
-						<th>{{tr('Numero Articoli','ecommerce')}}</th>
-						<th>{{tr('Totale','ecommerce')}}</th>
-						<th>{{tr('Data','ecommerce')}}</th>
-						<th>{{tr('Stato','ecommerce')}}</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for riga in carrelli %}
-						<tr>
-							<td width="48"><img src="{{riga.image}}" width="48" height="48" style="min-width: 48px;"></td>
-							<td>{{riga.getNumberProduct()}} pz</td>
-							<td> {{getHtmlCurrency(riga.currency)|raw}} {{riga.getTotalFinalFormatted()}}</td>
-							<td>{{riga.evacuationDate}}</td>
-							<td class="status-order">{{riga.status|raw}}</td>
-							<td class="link-order"><a href="index.php?ctrl=Orders&mod=ecommerce&action=view&id={{riga.id}}"><img src="modules/ecommerce/images/ico-vedi-tutti-backend.png" width="8" height="16"></a></td>
-						</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		{% endif %}
-	</div>
+	<div class="space40"></div>
+	{% if carrelli is null %}
+		<span>{{tr('Nessun ordine presente in archivio.','ecommerce')}}</span>
+	{% else %}
+		<div class="row">
+			{% for riga in carrelli %}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 s-prod">
+					<div class="cont_imgprodsez">
+						<a href="index.php?ctrl=Orders&mod=ecommerce&action=view&id={{riga.id}}">
+							<img src="{{riga.image}}">
+						</a>
+					</div>
+					<div class="info">
+						<p>{{riga.productname}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
 </div>
-<div class="need-help">
-	<img src="modules/ecommerce/images/ico-aiuto-backend.png">
-	<h5>{{tr('Hai bisogno di aiuto per gestire i tuoi ordini?','ecommerce')}}</h5>
-	<a href="p/contatti.htm" class="btn-default">
-		<img src="modules/ecommerce/images/ico-contattaci-backend.png">{{tr('Contattaci','ecommerce')}}
-	</a>
+<div class="last-orders">
+	<h5>{{tr('Nuovi Corsi','ecommerce')}}</h5>
+	<a href="catalog.htm" class="all-view">{{tr('Vedi tutti','ecommerce')}}</a>
+	<div class="space40"></div>
 </div>
+
+<a href="index.php?ctrl=Reviews&mod=ecommerce" class="lascia-recensione"><span>Soddisfatto dei risultati?</span><span>Lascia una recensione</span></a>

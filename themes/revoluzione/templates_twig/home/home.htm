@@ -1,10 +1,9 @@
 {% extends 'layouts/page_backend.htm' %}
 {% block backend_header %}
-	{{tr(['Bentornato, %s %s',userdata.name,userdata.surname])}}
+	<strong>{{tr('Bentornato')}}</strong> {{userdata.name}}!
 {% endblock %}
 {% block backend_content %}
-
-	<h5 class="clearfix">Ultimi Acquisti</h5>
+	
 	{{do_action('display_backend_home')}}
 
 {% endblock %}

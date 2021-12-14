@@ -1,7 +1,8 @@
 <?php
 use \Marion\Core\Marion;
-use Shop\{Cart,UserCategory,Price,Tax,PriceList};
+use Shop\{Cart,UserCategory,Price,Tax,PriceList,Order,CartStatus};
 use Catalogo\{Product,ProductTabAdminController};
+use Marion\Components\WidgetComponent;
 /*function ecommerce_register_twig_templates_dir(&$direcories=array()){
 	$direcories[] = _MARION_MODULE_DIR_."ecommerce/templates_twig";
 	return;
@@ -11,16 +12,16 @@ Marion::add_action('action_register_twig_templates_dir','ecommerce_register_twig
 
 */
 
-/*function ecommerce_preview_order_in_home(){
+function ecommerce_preview_order_in_home(){
 		
 
 		$widget = new WidgetComponent('ecommerce');
 		
-		$user = getUser();
+		$user = Marion::getUser();
 		$carrelli = Cart::prepareQuery()
 				->where('user',$user->id)
 				->where('status','active','<>')
-				->limit(5)
+				->limit(4)
 				->orderBy('evacuationDate','DESC')
 				->get();
 		$stati = CartStatus::prepareQuery()->get();
@@ -38,11 +39,12 @@ Marion::add_action('action_register_twig_templates_dir','ecommerce_register_twig
 				if( is_object($ord) ){
 					$prod = $ord->getProduct();
 					if( is_object($prod) ){
-						$v->image = $prod->getUrlImage(0,'thumbnail');
+						$v->image = $prod->getUrlImage(0,'original');
 					}
 				}
 				$v->evacuationDate = strftime('%d/%m/%Y %H:%M',strtotime($v->evacuationDate)); 
 				$v->status = $status[$v->status];
+				$v->productname = $prod->get('name');
 			}
 			
 			$widget->setVar('carrelli',$carrelli);
@@ -61,7 +63,7 @@ Marion::add_action('action_register_twig_templates_dir','ecommerce_register_twig
 
 
 Marion::add_action('display_backend_home','ecommerce_preview_order_in_home');
-*/
+
 
 class EcommerceTabAdmin extends ProductTabAdminController{
 	

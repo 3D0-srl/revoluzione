@@ -1,4 +1,4 @@
-{% extends 'layouts/page.htm' %}
+{% extends 'layouts/page_catalog.htm' %}
 {% block metatags_title %}{{meta_title}}{% endblock %}
 {% block metatags_description %}{{meta_description}}{% endblock %}
 {% block content %}
@@ -25,7 +25,6 @@
 			<span>{{tr('Nessun articolo presente','catalogo')}}</span>
 		{% else %}
 			{% for riga in prodotti %}
-				<!--{card_product_list(riga,type_img,class_row)}-->
 				{% include 'partials/product_list.htm' with {'product_row': riga,'img_type_product_list':type_img,'class_row_product':class_row} %}
 			{% endfor %}
 		{% endif %}
@@ -44,28 +43,6 @@
 	<div class="pull-right">
 		{{links['all']|raw}}
 	</div>
-	<!--<div class="cont_prod_corr" flexy:if="sezione.getRelatedProducts()">
-		<div class="cont_mod" flexy:if="auth(#cms_page#)">
-			<a href="{url_page_edit(#titolo_correlati#,#1#)}" class="mod"><img src="/themes/jewels/images/ico_mod.jpg"> {tr(#Modifica#)}</a>
-		</div>
-		<div class="header_corr">
-			{output_page_content(#titolo_correlati#)}
-		</div>
-		<div class="slider_corr">
-			<div class="bxslider">
-				<span flexy:foreach="sezione.getRelatedProducts(),v">
-					{card_product_list(v,#small#,#slide_corr#)}
-				</span>
-			</div>
-		</div>
-	</div>-->
 	<div class="space40"></div>
 </div>
-
-
-   
-
-
-
-
 {% endblock %}

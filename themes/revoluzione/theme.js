@@ -131,7 +131,7 @@ $(window).scroll(function(){
 	}
 });
 
-$.fn.isInViewport = function() {
+/*$.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
 
@@ -155,4 +155,4 @@ $(window).on('resize scroll', function() {
 			$('.colsx-backend').addClass('sticky');
 		}
 	}
-});
+});*/

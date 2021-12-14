@@ -1,7 +1,7 @@
 {% extends 'layouts/page_backend.htm' %}
 
 {% block backend_header %}
-	<img src="themes/jewels/images/ico-dati-personali-backend.png">{{tr('Dati personali')}}
+	<strong>{{tr('Il mio Account')}}</strong>
 {% endblock %}
 
 
@@ -9,7 +9,7 @@
 
 <form class="form" method="POST" action="/index.php">
 	<span class="errore">{{messages|raw}}</span>
-	<h6 class="m-t-0">{{tr('Informazioni Account')}}</h6>
+	<h5 class="m-t-0">{{tr('Informazioni Account')}}</h5>
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<div class="controls">
@@ -18,11 +18,13 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls controls-password">
+			<div class="controls">
 				<label for="formdata[password]">{{tr('Password')}}*</label>
-				<input type="password" name="formdata[password]" value="{{dataform.password.value}}">
-				<input id="reset_password" type="checkbox" name="formdata[reset_password]" value="1" {% if dataform.reset_password.value %}checked{% endif %}>
-				<label for="reset_password"></label>
+				<div class="controls-password">
+					<input type="password" name="formdata[password]" value="{{dataform.password.value}}">
+					<input id="reset_password" type="checkbox" name="formdata[reset_password]" value="1" {% if dataform.reset_password.value %}checked{% endif %}>
+					<label for="reset_password"></label>
+				</div>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -66,7 +68,7 @@
 			</div>
 		</div>
 	</div>
-	<h6>Indirizzo predefinito</h6>
+	<h5>Indirizzo predefinito</h5>
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<div class="controls">
@@ -109,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	<h6>Dati fatturazione</h6>
+	<h5>{{tr('Dati fatturazione')}}</h5>
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<div class="controls">
@@ -142,7 +144,7 @@
 	<input type='hidden' name='formID'>
 	<input type='hidden' name='ctrl' value="Home">
 	<input type='hidden' name='action' value="personal_data">
-	<button class="btn-default pull-left">{{tr('Salva')}}</button>
+	<button class="btn-default">{{tr('Salva')}}</button>
 	<div class="space60"></div>
 </form>
 
