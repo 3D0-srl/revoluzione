@@ -1,11 +1,13 @@
 <div class="foto">
 	<a class="fancybox fancyone" href="{{prodotto.getUrlImage(0,'large')}}" rel="media-gallery" data-fancybox="gallery">
-		{% if prodotto.getUrlImageLabelPrice() %}
-			<img class="labelprice" src="{{prodotto.getUrlImageLabelPrice()}}" alt="labelprice">
-		{% endif %}
-		{% if prodotto.hasSpecialPrice() %}
-			<span class="percentuale">-{{prodotto.getDiscountPercentage()}}%</span>
-		{% endif %}
+		<div class="cont-labelprice">
+			{% if prodotto.getUrlImageLabelPrice() %}
+				<img class="labelprice" src="{{prodotto.getUrlImageLabelPrice()}}" alt="labelprice">
+			{% endif %}
+			{% if prodotto.hasSpecialPrice() %}
+				<span class="percentuale">Special price</span>
+			{% endif %}
+		</div>
 		<img class="imgbig" src="{{prodotto.getUrlImage(0,'original')}}" alt="{{prodotto.get('name')}}">
 	</a>
 

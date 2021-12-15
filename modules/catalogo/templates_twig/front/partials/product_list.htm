@@ -9,15 +9,18 @@
 			
 			
 			<img class="imgprod imgtop" data-src="{{product_row.getUrlImage(0,'original')}}" id="img_prod_{{product_row.id}}" src="/themes/jewels/images/Gif-loader.gif">
-			{% if product_row.getUrlImageLabelPrice() %}
-				<img class="labelprice-min" src="{{product_row.getUrlImageLabelPrice()}}" alt="labelprice">
-			{% endif %}
-			{% if product_row.hasSpecialPrice() %}
-				<span class="percentuale">-{{product_row.getDiscountPercentage()}}%</span>
-			{% endif %}
+			<div class="cont-labelprice">	
+				{% if product_row.getUrlImageLabelPrice() %}
+					<img class="labelprice-min" src="{{product_row.getUrlImageLabelPrice()}}" alt="labelprice">
+				{% endif %}
+				{% if product_row.hasSpecialPrice() %}
+					<!--<span class="percentuale">-{{product_row.getDiscountPercentage()}}%</span>-->
+					<span class="percentuale">Special price</span>
+				{% endif %}
+			</div>
 		</a>
 		
-		<div class="cont_btn">
+		<div class="cont_btn" style="display:none">
 			<!--- aggiungi al carrello - quantità - wishlist ---->
 			{% if enable_quantity_add_cart == 1 %}
 				
@@ -55,8 +58,6 @@
 					<a href="javascript:remove_from_wishlist({{product_row.id}});" id="remove_wish_{{product_row.id}}" class="{{class_add_wish}} remove_wish_{{product_row.id}}" style="display:none;"><img src="themes/jewels/images/ico_cuore_pieno.png" width="18"></a>
 				{% endif %}
 
-			{% else %}
-				<!--<a href="javascript:add_to_wishlist({{product_row.id}});" id="add_wish_{{product_row.id}}" class="{{class_add_wish}}"><img src="/themes/jewels/images/ico_cuore_vuoto.png"></a>-->
 			{% endif %}
 		{% endif %}
 
@@ -67,8 +68,8 @@
 		<p>{{product_row.get('name')}}</p>
 		<div class="price">
 			{% if product_row.hasSpecialPrice() %}
-				<span class="scontato">{{currencyLabel|raw}} {{product_row.getPriceFormatted()}}</span>
 				<span class="barrato">{{currencyLabel|raw}} {{product_row.getDefaultPriceValueFormatted()}}</span>
+				<span class="scontato">{{currencyLabel|raw}} {{product_row.getPriceFormatted()}}</span>
 			{% else %}
 				<span>{{currencyLabel|raw}} {{product_row.getPriceFormatted()}}</span>
 			{% endif %}

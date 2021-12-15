@@ -35,6 +35,8 @@ $(document).ready(function() {
 
 	$(".titcolsx").on("click",function(){
 		$(this).toggleClass("active");
+		$(this).parents("li").toggleClass("active");
+		$(".sidebar-nav.filtri_ricerca").toggleClass("active");
 		$(this).closest(".filtri_ricerca").find(".metismenu, .cont_filtro").slideToggle();
 	});
 

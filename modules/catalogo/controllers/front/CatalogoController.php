@@ -57,7 +57,10 @@ class CatalogoController extends FrontendController{
 		//$this->registerJS('modules/catalogo/js/eshop.js','head');
 
 		if( $this->getAction() == 'product' ){
+			$this->registerCSS('modules/catalogo/css/swiper-bundle.css');
 			$this->registerCSS('modules/catalogo/css/product_card.css');
+			$this->registerJS('modules/catalogo/js/swiper-bundle.min.js','head');
+			$this->registerJS('modules/catalogo/js/product_card.js','head');
 			$this->registerJS('modules/catalogo/js/product-fancybox.js','head');
 		}else{
 			$this->registerJS('plugins/lazyload/dist/lazyload.min.js','end'); // LUCA
