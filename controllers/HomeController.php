@@ -61,6 +61,11 @@ class HomeController extends \Marion\Controllers\BackendController{
 
 				$this->personalData();
 				break;
+			case 'support':
+				$dataform = $this->getDataForm('support',$dati);
+				$this->setVar('dataform',$dataform);
+				$this->output('home/support.htm');
+				break;
 			default:
 				$buttons = HomeButton::prepareQuery()->where('active',1)->orderBy('orderView','ASC')->get();
 				$this->setVar('buttons',$buttons);

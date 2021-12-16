@@ -51,10 +51,11 @@ class OrdersController extends BackendController{
 				if( is_object($ord) ){
 					$prod = $ord->getProduct();
 					if( is_object($prod) ){
-						$v->image = $prod->getUrlImage(0,'thumbnail');
+						$v->image = $prod->getUrlImage(0,'original');
 					}
 				}
 				$v->status = $status[$v->status];
+				$v->productname = $prod->get('name');
 			}
 			//preparo il pager
 			
@@ -125,8 +126,9 @@ class OrdersController extends BackendController{
 			$prodotto = $ord->getProduct();
 			if(is_object($prodotto)){
 				$ordini[$k]->productname = $prodotto->get('name');
+				$ordini[$k]->description = $prodotto->get('description');
 				$ordini[$k]->link = $prodotto->getUrl();
-				$ordini[$k]->img = $prodotto->getUrlImage(0,'thumbnail');
+				$ordini[$k]->img = $prodotto->getUrlImage(0,'original');
 			}
 		}
 		$this->setVar('ordini',$ordini);

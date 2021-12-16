@@ -11,8 +11,13 @@ $(document).ready(function() {
 	});
 
 	$(".top .search").on("click",function(){
-		$(this).addClass("active");
-		$(".barraricerca").addClass("active");
+		$(this).toggleClass("active");
+		if($(this).hasClass("active")){
+			$(this).find("img").attr("src","themes/revoluzione/images/ico-close-search.png");
+		} else {
+			$(this).find("img").attr("src","themes/revoluzione/images/ico-search.png");
+		}
+		$(".barraricerca").toggleClass("active");
 	});
 
 	$(".top .close-search").on("click",function(e){
@@ -51,7 +56,7 @@ $(document).ready(function() {
 			padre.find("img").attr("src", "/themes/jewels/images/ico_arrow_down_accordion.png");
 		}
 	});
-	positionInfo();
+	//positionInfo();
 
 	$(".nav-menu").on("click",function(){
 		$(".top .nav-menu").toggleClass("open");
@@ -83,16 +88,12 @@ $(document).ready(function() {
 	}
 });
 
-$(window).resize(function(){
+/*$(window).resize(function(){
 	positionInfo();
 });
 
 function positionInfo(){
 	var w = $(window).width();
-	/*if(w > 767){
-		var hinfo = $(".prod .info").height();
-		$(".col-foto").css("min-height",hinfo);
-	}*/
 	if(w > 1024){
 		var hfancyone = $(".fancyone").height();
 		var hfoto = $(".prod .foto").height();
@@ -107,7 +108,7 @@ function positionInfo(){
 	else {
 		$(".prod .info").removeClass("fixed").css("right", "0").css("margin-top","0");
 	}
-}
+}*/
 
 $(window).scroll(function(){
 	var w = $(window).width();
@@ -119,7 +120,7 @@ $(window).scroll(function(){
 		 $(".top").removeClass("bannerh");
 		 //$(".colsx-backend").removeClass("upside");
 	}
-	if(w > 1024){
+	/*if(w > 1024){
 		var hfancyone = $(".fancyone").height();
 		var hfoto = $(".prod .foto").height();
 		if(hfancyone !== hfoto){
@@ -130,7 +131,7 @@ $(window).scroll(function(){
 				$(".prod .info").removeClass("nofixed").css("margin-top","0");
 			}
 		}
-	}
+	}*/
 });
 
 /*$.fn.isInViewport = function() {

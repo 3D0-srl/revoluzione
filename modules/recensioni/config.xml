@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Luca Giaquinto</author>
+		<name>Recensioni</name>
+		<permission>superadmin</permission>
+		<tag>recensioni</tag>
+		<kind>cms</kind>
+		<scope></scope> 
+		<autoload>1</autoload> 
+		<description><![CDATA[Modulo che integra un sistema di recensioni all'interno del tuo sito]]></description> 
+	</info>
+</module>

@@ -4,6 +4,12 @@
 {% endblock %}
 {% block backend_content %}
 	
-	{{do_action('display_backend_home')}}
+{{do_action('display_backend_home')}}
+
+<script>
+	$(document).ready(function(){
+		$('.menu-backend li:nth-child(1)').addClass('active');
+	});
+</script>
 
 {% endblock %}

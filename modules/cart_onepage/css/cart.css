@@ -880,7 +880,7 @@ span.input-group-addon {
 }
 
 .float-label select {
-    border-bottom: 1px solid #BDBDBD !important;
+    border-bottom: 1px solid #BDBDBD;
     width: 100%;
     height: 40px;
     border: 0;

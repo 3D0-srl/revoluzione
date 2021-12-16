@@ -3,14 +3,11 @@
 	<div class="cont-undercart">
 		{% for riga in ordini_under %}
 		<div class="s-prodc" >
-			<img src="{{riga.img}}"/>
+			<a href="{{riga.link}}" title="{{riga.productname_title}}" class="pull-left"><img src="{{riga.img}}"/></a>
 			<div class="info">
-				<p class="brand_name">{{riga.getManufacturerName()}}</p>
-				<p class="product_name">{{riga.productname|raw}}</p>
-				<p class="other_info">{{tr('Quantità')}} {{riga.getQuantity()}}</p>
+				<p class="product_name"><a href="{{riga.link}}" title="{{riga.productname_title}}">{{riga.productname|raw}}</a></p>
 				<span>{{currencyLabel|raw}} {{riga.getTotalPriceFormatted()}}</span>	
 			</div>
-			<a href="{{riga.link}}" title="{{riga.productname_title}}" class="link_product"></a>
 			<a href="#" onclick="deleteOrder('{{riga.id}}'); return false;" class="delete">Elimina articolo</a>
 		</div>
 		{% endfor %}

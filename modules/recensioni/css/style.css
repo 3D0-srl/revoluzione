@@ -1,0 +1,55 @@
+.fixedtop {
+    display: none;
+}
+.wrapper > .container {
+    padding: 0;
+}
+.top-page {
+    background-image: url('/media/images/top-img-page.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+}
+.top-page .col-w-100 {
+    width: 100%;
+}
+.col-w-100.container {
+    max-width: 1188px;
+}
+.pagecomposer-riga.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col-w-25 {
+    padding: 0 8px;
+    width: 25%;
+    float: left;
+}
+.col-w-75 {
+    padding: 0 8px;
+    width: 75%;
+    float: left;
+}
+.box-testo p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #2C2D2E;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+.box-testo.name strong {
+    font-size: 36px;
+    color: #1B3F99;
+    line-height: 42px;
+}
+.box-testo.review p {
+    line-height: 32px;
+}
+
+@media all and (max-width: 767px) {
+    .col-w-25, .col-w-75 {
+        width: 100%;
+    }
+}

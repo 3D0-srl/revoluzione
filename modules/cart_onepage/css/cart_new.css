@@ -75,7 +75,7 @@
 
 .float-label input[type="text"], .float-label input[type="text"]:not(.newsletterinput):not(#searchfld):not(#quantity), .float-label input[type="password"], .float-label input[type="email"], .float-label input[type="tel"], .float-label select {
 	margin-right: 0;
-	border: 2px solid #E6E6E6 !important;
+	border: 2px solid #E6E6E6;
 	padding: 0 10px;
 	margin-bottom: 14px;
 	border-radius: 8px;

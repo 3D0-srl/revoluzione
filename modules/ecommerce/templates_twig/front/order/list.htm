@@ -1,18 +1,32 @@
 {% extends 'layouts/page_backend.htm' %}
 
 {% block backend_header %}
-	<img src="modules/ecommerce/images/ico-ultimi-ordini-backend.png">{{tr('I miei ordini','ecommerce')}}
+	<strong>{{tr('I miei Corsi','ecommerce')}}</strong>
 {% endblock %}
 
 
 {% block backend_content %}
 
+<div class="last-orders">
+	{% if carrelli is null %}
+		<span>{{tr('Nessun ordine presente in archivio.','ecommerce')}}</span>
+	{% else %}
+		<div class="row">
+			{% for riga in carrelli %}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 s-prod">
+					<div class="cont_imgprodsez">
+						<a href="orders/{{riga.id}}">
+							<img class="imgprod" src="{{riga.image}}">
+						</a>
+					</div>
+					<div class="info">
+						<p>{{riga.productname}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 
-{% if carrelli is null %}
-	<span >{{tr('Nessun ordine presente in archivio.','ecommerce')}}</span>
-{% else %}
-	<div class="last-orders fullwidth">
-		<div class="table-responsive">
+		<!--<div class="table-responsive">
 			<table class="table table-orders m-b-0" >
 				<thead>
 					<tr>
@@ -37,34 +51,9 @@
 					{% endfor %}
 				</tbody>
 			</table>
-		</div>
-		
-		
-		
-		<!--<div class="table-responsive">
-			<table class="table table-striped">
-				<thead>
-					<th>Ordine</th>
-					<th>Numero Articoli</th>
-					<th>Totale</th>
-					<th>Data</th>
-					<th>Stato</th>
-				</thead>
-				<tbody>
-					{% for riga in carrelli %}
-					<tr>
-						<td><a href="index.php?ctrl=Orders&mod=ecommerce&action=view&id={{riga.id}}">{{riga.get('number')}}</a></td>
-						<td>{{riga.getNumberProduct()}} pz</td>
-						<td> {{getHtmlCurrency(riga.currency)|raw}} {{riga.getTotalFinalFormatted()}}</td>
-						<td>{{dataOraIta(riga.evacuationDate)}}</td>
-						<td>{{riga.status|raw}}</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
 		</div>-->
-	</div>
-{% endif %}
+	{% endif %}
+</div>
 
 {% if links %}
 	<div class="space30"></div>
@@ -72,5 +61,9 @@
 		{{links.all|raw}}
 	</div>
 {% endif %}
-
+<script>
+    $(document).ready(function(){
+        $('.menu-backend li:nth-child(3)').addClass('active');
+    });
+</script>
 {% endblock %}

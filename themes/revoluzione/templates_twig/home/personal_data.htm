@@ -2,151 +2,186 @@
 
 {% block backend_header %}
 	<strong>{{tr('Il mio Account')}}</strong>
+	<a href="index.php?mod=gdpr&action=export_data" class="btn btn-default btn-sm export-excel pull-right">Esporta excel</a>
 {% endblock %}
 
 
 {% block backend_content %}
-
-<form class="form" method="POST" action="/index.php">
-	<span class="errore">{{messages|raw}}</span>
-	<h5 class="m-t-0">{{tr('Informazioni Account')}}</h5>
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[username]">{{tr('Username')}}*</label>
-				<input type="text" required name="formdata[username]" value="{{dataform.username.value}}">
+<div class="container-fluid personal_data">
+	<form class="form" method="POST" action="/index.php">
+		<span class="errore">{{messages|raw}}</span>
+		<h5 class="m-t-0">{{tr('Informazioni Account')}}</h5>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[username]">{{tr('Username')}}*</label>
+					<input type="text" required name="formdata[username]" value="{{dataform.username.value}}">
+				</div>
 			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[password]">{{tr('Password')}}*</label>
-				<div class="controls-password">
-					<input type="password" name="formdata[password]" value="{{dataform.password.value}}">
-					<input id="reset_password" type="checkbox" name="formdata[reset_password]" value="1" {% if dataform.reset_password.value %}checked{% endif %}>
-					<label for="reset_password"></label>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[password]">{{tr('Password')}}*</label>
+					<div class="controls-password">
+						<input type="password" name="formdata[password]" value="{{dataform.password.value}}">
+						<input id="reset_password" type="checkbox" name="formdata[reset_password]" value="1" {% if dataform.reset_password.value %}checked{% endif %}>
+						<label for="reset_password"></label>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[shippingName]">{{tr('Nome')}}*</label>
+					<input type="text" name="formdata[name]" value="{{dataform.name.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[shippingSurname]">{{tr('Cognome')}}*</label>
+					<input type="text" name="formdata[surname]" value="{{dataform.surname.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[password]">{{tr('Tipo di utente')}}</label>
+					<select type="select" class="form-control" name="formdata[typeBuyer]">
+						{% for k,v in dataform.typeBuyer.options %}
+							<option value="{{k}}" {% if dataform.typeBuyer.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[password]">{{tr('Email')}}*</label>
+					<input type="text" name="formdata[email]" value="{{dataform.email.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[fiscalCode]">{{tr('Codice fiscale')}}</label>
+					<input type="text" name="formdata[fiscalCode]" value="{{dataform.fiscalCode.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[cellular]">{{tr('Cellulare')}}*</label>
+					<input type="text" name="formdata[cellular]" value="{{dataform.cellular.value}}">
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[shippingName]">{{tr('Nome')}}*</label>
-				<input type="text" name="formdata[name]" value="{{dataform.name.value}}">
+		<h5>Indirizzo predefinito</h5>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[address]">{{tr('Indirizzo')}}</label>
+					<input type="text" name="formdata[address]" value="{{dataform.address.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[postalCode]">{{tr('postalCode')}}</label>
+					<input type="text" name="formdata[postlaCode]" value="{{dataform.postalCode.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[city]">{{tr('Città')}}</label>
+					<input type="text" name="formdata[city]" value="{{dataform.city.value}}">
+				</div>
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label>{{tr('Nazione')}}</label>
+					<select type="select" id="country" onchange="change_country($(this).val(),1);return false;" name="formdata[country]">
+						{% for k,v in dataform.country.options %}
+							<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="div_province">
+				<div class="controls">
+					<label>{{tr('Provincia')}}</label>
+					<select type="select" id="province" name="formdata[province]">
+						{% for k,v in dataform.province.options %}
+							<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
+						{% endfor %}
+					</select>
+				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[shippingSurname]">{{tr('Cognome')}}*</label>
-				<input type="text" name="formdata[surname]" value="{{dataform.surname.value}}">
+		<h5>{{tr('Dati fatturazione')}}</h5>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[company]">{{tr('Ragione sociale')}}</label>
+					<input type="text" name="formdata[company]" value="{{dataform.company.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[vatNumber]">{{tr('Partita IVA')}}</label>
+					<input type="text" name="formdata[vatNumber]" value="{{dataform.vatNumber.value}}">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[company]">{{tr('Codice univoco')}}</label>
+					<input type="text" name="formdata[cod_univoco]" value="{{dataform.cod_univoco.value}}">							
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="controls">
+					<label for="formdata[city]">{{tr('PEC')}}</label>
+					<input type="text" name="formdata[pec]" value="{{dataform.pec.value}}">
+				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[password]">{{tr('Tipo di utente')}}</label>
-				<select type="select" class="form-control" name="formdata[typeBuyer]">
-					{% for k,v in dataform.typeBuyer.options %}
-						<option value="{{k}}" {% if dataform.typeBuyer.value==k %}selected="selected"{% endif %}>{{v}}</option>
-					{% endfor %}
-				</select>
-			</div>
+		<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
+		<div class="space30"></div>
+		<span id="fields_form_anchor"></span>
+		<input type='hidden' name='formID'>
+		<input type='hidden' name='ctrl' value="Home">
+		<input type='hidden' name='action' value="personal_data">
+		<button class="btn-default">{{tr('Salva')}}</button>
+	</form>
+	<div class="space40"></div>
+	<h5 class="m-t-0">Cancellazione account</h5>
+	<form class="form" action="index.php" id="form_delete_account">
+		<div class="controls cont-check">
+			<input type="checkbox" id="allow_delete_account" value="1" name="allow" required>
+			<label for="allow_delete_account"></label>
+			<span class="allow_delete_account">Dichiaro di voler procedere con la rimozione dei miei dati personali</span>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[password]">{{tr('Email')}}*</label>
-				<input type="text" name="formdata[email]" value="{{dataform.email.value}}">
-			</div>
+		<button type="submit" class="btn btn-default pull-left">Procedi</button>
+		<input type="hidden" name="action" value="destroy">
+		<input type="hidden" name="mod" value="gdpr">
+	</form>
+</div>
+<div class="space80"></div>
+
+<div id="modal_confirm" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+	<div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">CONFERMA RIMOZIONE</h4>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[fiscalCode]">{{tr('Codice fiscale')}}</label>
-				<input type="text" name="formdata[fiscalCode]" value="{{dataform.fiscalCode.value}}">
-			</div>
+		<div class="modal-body">
+		<p>Gentile cliente è sicuro di volere eliminare definitivamente il suo account?<br><span style="color:red"> Le ricordiamo che l'operazione non è reversibile.</span></p>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[cellular]">{{tr('Cellulare')}}*</label>
-				<input type="text" name="formdata[cellular]" value="{{dataform.cellular.value}}">
-			</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="dismiss_modal" data-dismiss="modal">ANNULLA</button>
+		<button type="button" class="btn btn-default submitform" onclick="submitform()">PROCEDI</button>
 		</div>
 	</div>
-	<h5>Indirizzo predefinito</h5>
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[address]">{{tr('Indirizzo')}}</label>
-				<input type="text" name="formdata[address]" value="{{dataform.address.value}}">
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[postalCode]">{{tr('postalCode')}}</label>
-				<input type="text" name="formdata[postlaCode]" value="{{dataform.postalCode.value}}">
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[city]">{{tr('Città')}}</label>
-				<input type="text" name="formdata[city]" value="{{dataform.city.value}}">
-			</div>
-		</div>
-		
-		
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label>{{tr('Nazione')}}</label>
-				<select type="select" id="country" onchange="change_country($(this).val(),1);return false;" name="formdata[country]">
-					{% for k,v in dataform.country.options %}
-						<option value="{{k}}" {% if dataform.country.value==k %}selected="selected"{% endif %}>{{v}}</option>
-					{% endfor %}
-				</select>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="div_province">
-			<div class="controls">
-				<label>{{tr('Provincia')}}</label>
-				<select type="select" id="province" name="formdata[province]">
-					{% for k,v in dataform.province.options %}
-						<option value="{{k}}" {% if dataform.province.value==k %}selected="selected"{% endif %}>{{v}}</option>
-					{% endfor %}
-				</select>
-			</div>
-		</div>
+
 	</div>
-	<h5>{{tr('Dati fatturazione')}}</h5>
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[company]">{{tr('Ragione sociale')}}</label>
-				<input type="text" name="formdata[company]" value="{{dataform.company.value}}">
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[vatNumber]">{{tr('Partita IVA')}}</label>
-				<input type="text" name="formdata[vatNumber]" value="{{dataform.vatNumber.value}}">
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[company]">{{tr('Codice univoco')}}</label>
-				<input type="text" name="formdata[cod_univoco]" value="{{dataform.cod_univoco.value}}">							
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="controls">
-				<label for="formdata[city]">{{tr('PEC')}}</label>
-				<input type="text" name="formdata[pec]" value="{{dataform.pec.value}}">
-			</div>
-		</div>
-	</div>
-	<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
-	<div class="space30"></div>
-	<span id="fields_form_anchor"></span>
-	<input type='hidden' name='formID'>
-	<input type='hidden' name='ctrl' value="Home">
-	<input type='hidden' name='action' value="personal_data">
-	<button class="btn-default">{{tr('Salva')}}</button>
-	<div class="space60"></div>
-</form>
+</div>
 
 <script>
 	$('#country').on('change',function(){
@@ -166,8 +201,9 @@
 		$('#div_province').hide();
 	}
 	
+	$(document).ready(function(){
+        $('.menu-backend li:nth-child(2)').addClass('active');
+    });
 </script>
 
 {% endblock %}
-
-  

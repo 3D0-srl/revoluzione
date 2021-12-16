@@ -3,7 +3,7 @@
 		<thead>
 			<th class="foto only_desk"></th>
 			<th class="prod-name"></th>
-			<th></th>
+			<th style="display:none"></th>
 			{% if show_taxes %}
 			<th align="center">{{tr('Prezzo i.e.','cart_onepage')}}</th>
 			<th align="center">{{tr('Iva','cart_onepage')}}</th>
@@ -23,7 +23,7 @@
 					<td class="prod-name" valign="middle" width="250">
 						<a href="{{riga.link}}">{{riga.productname|raw}}</a>
 					</td>
-					<td valign="middle" align="center" width="100">
+					<td valign="middle" align="center" width="100" style="display:none">
 						{% if step < 6 %}
 							<div class="input-group">
 							  <span class="input-group-addon" style="cursor:pointer;" onclick="minus_cart('{{riga.getId()}}'); return false;">-</span>

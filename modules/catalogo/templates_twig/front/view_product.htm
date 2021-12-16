@@ -62,7 +62,11 @@
 						<input class="form-control" id="quantity" name="formdata[quantity]" type="text" value="{{qnt}}">
 						<span class="input-group-addon" style="cursor:pointer;" onclick="plus(); return false;"><img src="themes/jewels/images/ico_plus.png" width="13" height="13"></span>
 					</div>
-					<a href="#" onclick='addToCart(); return false;' class="addcart"><span>{% if prodotto.recurrent_payment %}{{tr('Acquista','ecommerce')}}{% else %}{{tr('Aggiungi al carrello','ecommerce')}}{% endif %}</span></a>
+					{% if prodotto.recurrent_payment %}
+						<a href="#" onclick='addToCart(); return false;' class="btn-default"><span>{{tr('Abbonati ora','ecommerce')}}</span></a>
+					{% else %}
+						<a href="#" onclick='addToCart(); return false;' class="addcart"><span>{{tr('Aggiungi al carrello','ecommerce')}}</span></a>
+					{% endif %}
 					
 					<!-- BLOCCO CHE PERMETTE DI AGGIUNGERE DEI BUTTONS --->
 					{{do_action('display_block_product_buttons',prodotto)}}
