@@ -59,8 +59,18 @@ $(document).ready(function() {
 	//positionInfo();
 
 	$(".nav-menu").on("click",function(){
-		$(".top .nav-menu").toggleClass("open");
+		$(".nav-menu").toggleClass("open");
 		$(".top .menu").toggleClass("active");
+		$(".colsx-backend, .colsx").toggleClass("selected");
+		var controllo1 = $(".top").hasClass("bannerh");
+		var controllo2 = $(".top").hasClass("activissimo");
+		if(!controllo1){
+			$(".top").toggleClass("bannerh");
+		} else {
+			if(!controllo2){
+				$(".top").removeClass("bannerh");
+			}
+		}
 	});
 
 	$(".user").on("click",function(){
@@ -113,12 +123,16 @@ function positionInfo(){
 $(window).scroll(function(){
 	var w = $(window).width();
 	scroll = $(window).scrollTop();
+	var controllo = $(".top .menu").hasClass("active");
 	if (scroll >= 40) {
-		$(".top").addClass("bannerh");
+		$(".top").addClass("bannerh activissimo");
 		//$(".colsx-backend").addClass("upside");
 	} else {
-		 $(".top").removeClass("bannerh");
-		 //$(".colsx-backend").removeClass("upside");
+		if(!controllo){ 
+			$(".top").removeClass("bannerh");
+			//$(".colsx-backend").removeClass("upside");
+		}
+		$(".top").removeClass("activissimo");
 	}
 	/*if(w > 1024){
 		var hfancyone = $(".fancyone").height();
