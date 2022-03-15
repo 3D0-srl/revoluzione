@@ -229,3 +229,4 @@ $GLOBALS['_translate']['39f51e86d4bb3fadc77abfdd6f883755']="advanced_page";//adv
 $GLOBALS['_translate']['3cfd2a9b6144f236e6ba739157be74df']="Azioni di massa";//Azioni di massa
 $GLOBALS['_translate']['08f91a15cc620142671f4e3b5142a2e7']="Visualizza";//Visualizza
 $GLOBALS['_translate']['5006bf16749f97fd4e3180414a0b7654']="per pagina";//per pagina
+$GLOBALS['_translate']['27e924556aa6bd0562520b90d8b45909']="Successivo";//Successivo
