@@ -8,7 +8,8 @@ Eseguire i seguenti steps:
 **Avviare il progetto**
 1. Posizionarsi nella root del progetto
 2. Copiare il file **.env.example** in **.env**
-3. Lanciare il comando da terminale *sh marion.sh up -d**
+3. Copiare nella root del progetto il file *docker-compose.yml* presente nella cartella *docker*. Utilizzare la versione presente sotto la cartella **windows** se l'host su cui deve essere avviato il progetto ha un sistema operativo windows o linux altrimenti (mac) utilizzare il file presente sotto la cartella **macos** 
+4. Lanciare il comando da terminale *sh marion.sh up -d**
 
 **Allineare i contenuti del progetto alla versione online**
 1. Spostarsi nella root del progetto
