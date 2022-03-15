@@ -10,7 +10,7 @@ services:
     ports:
       - ${APACHE_PORT_EXPOSED}:80
     volumes:
-      - .:/app
+      - nfsmount:/app
     environment:
       FPM_PROCESS_MAX: 40
       FPM_PM_MAX_CHILDREN: 60
@@ -33,7 +33,7 @@ services:
       - ${DB_PORT}:3306
     restart: always
     volumes:
-      - marionmysql:/var/lib/mysql
+      - mariondb:/var/lib/mysql
     networks:
       - marion
   phpmyadmin:
@@ -51,5 +51,11 @@ services:
     networks:
       - marion
 volumes:
-  marionmysql:
+  mariondb:
     driver: local
+  nfsmount:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+      device: ":${PWD}"

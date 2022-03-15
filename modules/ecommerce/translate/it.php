@@ -71,3 +71,6 @@ $GLOBALS['_translate']['ecommerce']['frontend']['24b9a4442f602ff7b80c25128f459bc
 $GLOBALS['_translate']['ecommerce']['frontend']['f0cb91234f31dd485e06aaf0a7b70d93']="Data";//Data
 $GLOBALS['_translate']['ecommerce']['frontend']['8d46cd632959f2d377b1641ba3f5cb71']="Stato";//Stato
 $GLOBALS['_translate']['ecommerce']['frontend']['3ef0bf13d348bc6254dbddd0d0cac195']="Numero dell'ordine";//Numero dell'ordine
+$GLOBALS['_translate']['ecommerce']['frontend']['9681b7a97769fe4be64ad2d52cf8f97f']="Ultimi Acquisti";//Ultimi Acquisti
+$GLOBALS['_translate']['ecommerce']['frontend']['36695ff94a7088124de817ffd458dff3']="Vedi tutti";//Vedi tutti
+$GLOBALS['_translate']['ecommerce']['frontend']['1fa952038aac72f686e33446f80fd86a']="Nuovi Corsi";//Nuovi Corsi
