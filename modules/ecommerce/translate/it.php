@@ -74,3 +74,5 @@ $GLOBALS['_translate']['ecommerce']['frontend']['3ef0bf13d348bc6254dbddd0d0cac19
 $GLOBALS['_translate']['ecommerce']['frontend']['9681b7a97769fe4be64ad2d52cf8f97f']="Ultimi Acquisti";//Ultimi Acquisti
 $GLOBALS['_translate']['ecommerce']['frontend']['36695ff94a7088124de817ffd458dff3']="Vedi tutti";//Vedi tutti
 $GLOBALS['_translate']['ecommerce']['frontend']['1fa952038aac72f686e33446f80fd86a']="Nuovi Corsi";//Nuovi Corsi
+$GLOBALS['_translate']['ecommerce']['frontend']['172bef9d78816342b31a0ce33c090ffc']="I miei Corsi";//I miei Corsi
+$GLOBALS['_translate']['ecommerce']['frontend']['8cf756e048d33cc2ece3877bc5bf6a25']="Aggiungi al carrello";//Aggiungi al carrello

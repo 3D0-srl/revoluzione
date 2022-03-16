@@ -1,0 +1,152 @@
+
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Unità {% endblock %} 
+{% block url_list %}{{url_list}}&id_course={{id_course}}{% endblock %}
+{% block css %}
+{{parent()}}
+<style>
+    .seleziona-file{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .seleziona-file i{
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.build(dataform.id)}}
+{{form.build(dataform.course_id)}}
+{{form.build(dataform.video_id)}}
+{{form.buildCol(dataform.title,'col-md-12')}}
+{{form.buildCol(dataform.order_view,'col-md-12')}}
+
+<div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
+<br />
+<div class="col-md-12" id="box-files">
+    
+    <div id="pickfiles" class="well seleziona-file" {% if video %}style="display:none"{% endif %}><i class="fa fa-upload"></i> Seleziona video .mp4</div>
+    <div class="col-md-12 well"id="selected-file" style="display:{% if video %}block{% else %}none{% endif %}">
+        <div>
+            <span id="nome-file">{% if video %}{{video.name}}{% endif %}</span>
+            <div class="buttons">
+                
+                <button style="display:{% if video %}none{% else %}block{% endif %}" id="uploadFile" type="button" class="btn btn-info btn-sm pull-right"><i class="fa fa-upload"></i> Upload</button>
+                <button style="display:{% if video %}none{% else %}block{% endif %}"  id="undo" type="button" onclick="undoSelect()" class="btn btn-default btn-sm pull-right"><i class="fa fa-undo"></i> annulla</button>
+                <button id="remove-file" type="button" style="display:{% if video %}block{% else %}none{% endif %}" onclick="removeFile()" class="btn btn-danger btn-sm pull-right"><i class="fa fa-trash-o"></i> elimina</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+   <!-- <a id="pickfiles" href="javascript:;">[Select files]</a> 
+    <a id="uploadfiles" href="javascript:;">[Upload files]</a>-->
+
+
+<br />
+<!--<pre id="console"></pre>-->
+
+
+<script type="text/javascript">
+// Custom example logic
+let fileSelected;
+
+var uploader = new plupload.Uploader({
+	runtimes : 'html5,flash,silverlight,html4',
+	browse_button : 'pickfiles', // you can pass an id...
+	container: document.getElementById('box-files'), // ... or DOM Element itself
+	url : 'index.php?mod=elearning&action=upload&ctrl=Units',
+	flash_swf_url : '../js/Moxie.swf',
+	silverlight_xap_url : '../js/Moxie.xap',
+	chunk_size: "2mb",
+    multi_selection: false,
+	filters : {
+		max_file_size : '200mb',
+		mime_types: [
+			//{title : "Image files", extensions : "jpg,gif,png"},
+			{title : "Video mp4", extensions : "mp4"}
+		]
+	},
+
+	init: {
+		PostInit: function() {
+			document.getElementById('filelist').innerHTML = '';
+
+			document.getElementById('uploadFile').onclick = function() {
+                $('#selected-file button').hide();
+				uploader.start();
+				return false;
+			};
+		},
+
+		FilesAdded: function(up, files) {
+			plupload.each(files, function(file) {
+                fileSelected = file;
+                $('#selected-file').show();
+                $('#pickfiles').hide();
+				document.getElementById('nome-file').innerHTML = '<div id="' + file.id + '">' + file.name + ' [' + plupload.formatSize(file.size) + '] <b></b></div>';
+			});
+		},
+
+		UploadProgress: function(up, file) {
+            //console.log(up);
+			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+            if( file.percent == 100 ){
+                $('#remove-file').show();
+            }
+		},
+        
+        ChunkUploaded: function(up, files,result){
+            //console.log(result);
+        },
+        FileUploaded: function(up, files,result){
+            
+            if( result.response ){
+                const response = JSON.parse(result.response);
+                $('#video_id').val(response.id);
+            }
+        },
+        UploadComplete: function(up, files){
+            //console.log(up);
+        },
+		Error: function(up, err) {
+			document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+		}
+	}
+});
+
+uploader.init();
+
+
+function undoSelect(){
+    if( fileSelected ){
+        uploader.removeFile(fileSelected);
+    }
+    $('#selected-file').hide();
+    $('#pickfiles').show();
+   
+}
+
+function removeFile(){
+    if( fileSelected ){
+        uploader.removeFile(fileSelected);
+    }
+    
+    $('#selected-file').hide();
+    $('#pickfiles').show();
+    $('#selected-file button').show();
+    $('#remove-file').hide();
+    $('#video_id').val('');
+}
+
+function stop(){
+    uploader.stop();
+}
+
+</script>
+{% endblock %}

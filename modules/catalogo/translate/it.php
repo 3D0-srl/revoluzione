@@ -17,3 +17,5 @@ $GLOBALS['_translate']['catalogo']['backend']['3cf9e408faf5a7f4111c70d9d0aebf81'
 $GLOBALS['_translate']['catalogo']['backend']['ca15c78d680903ca0127f085eb0f794a']="Manufacturers";//Manufacturers
 $GLOBALS['_translate']['catalogo']['backend']['556407905578962c635cfe3666a3949a']="Products of <b>%s</b>";//Products of <b>%s</b>
 $GLOBALS['_translate']['catalogo']['backend']['a647678883c752a7479de28162a17d59']="Add products to <b>%s</b>";//Add products to <b>%s</b>
+$GLOBALS['_translate']['catalogo']['frontend']['5720c63e1b8628b978023cf0d31d8bdd']="Categorie";//Categorie
+$GLOBALS['_translate']['catalogo']['frontend']['1ca6f965ded515253a67bc93299c4a1b']="Nessun articolo presente";//Nessun articolo presente

@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<module>
+	<info> 
+		<author>Ciro Napolitano</author>
+		<name>E-learning</name>
+		<permission>superadmin</permission>
+		<tag>elearning</tag>
+		<kind>catalog</kind>
+		<scope></scope> 
+		<autoload>1</autoload> 
+		<description><![CDATA[Integra nel modulo l'elearning]]></description> 
+	</info>
+	<admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>E-learning</it>
+						<en>E-learning</en>
+					</name>
+				</locale>
+				<tag>elearning</tag> 
+				<icon>fa fa-book</icon> 
+				<permission>catalog</permission> 
+				<priority>100</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
+						<it>Corsi</it>
+						<en>Corsi</en>
+					</name>
+				</locale>
+				<parent>elearning</parent>
+				<tag>elearning_corsi</tag> 
+				<permission>catalog</permission> 
+				<url>index.php?ctrl=Course&amp;mod=elearning&amp;action=list</url>
+				<priority>3</priority> 
+			</item>
+		</items>
+	</menu>
+  </admin>
+</module>

@@ -1,0 +1,40 @@
+
+{% extends "layouts/base_form.htm" %}
+{% block edit_page_title %} Corso {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+<div class="tabcordion">
+	<ul id="myTab" class="nav nav-tabs">
+    <li class="active"><a href="#general" data-toggle="tab">Generale</a></li>
+    <li class=""><a href="#media" data-toggle="tab">Media</a></li>
+    
+    </ul>
+</div>
+<div id="myTabContent" class="tab-content">
+			
+			<!-- GENERAL --->
+			<div class="tab-pane active in" id="general">
+				<div class="row">		
+                    {{form.build(dataform.id)}}
+                    {{form.buildCol(dataform.sku,'col-md-12')}}
+                    {{form.buildCol(dataform.section,'col-md-12')}}
+                    {{form.buildCol(dataform.name,'col-md-12')}}
+                    {{form.buildCol(dataform.description,'col-md-12')}}
+                    {{form.buildCol(dataform.price,'col-md-4')}}
+                    {{form.buildCol(dataform.orderView,'col-md-4')}}
+                    {{form.buildCol(dataform.visibility,'col-md-4')}}
+                </div>
+            </div>
+            <!-- MEDIA --->
+			<div class="tab-pane in" id="media">
+				<div class="row">		
+                    {{form.buildUploadImage(dataform.image,'col-md-12')}}
+                    {{form.buildCol(dataform.youtube_video_url,'col-md-12')}}
+                </div>
+            </div>
+          
+</div>
+
+ 	
+
+{% endblock %}
