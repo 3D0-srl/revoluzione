@@ -27,7 +27,8 @@ function quipago_action_payment(&$cart=NULL){
 			$options_c['url_payment'] = $quipago['url_sandbox'];
 			$options_c['alias'] = $quipago['alias_sandbox'];
 			$options_c['mac'] = $quipago['mac_sandbox'];
-			$importo = 0.01;
+			$importo = number_format($amountFinal, 2, '.', '');
+
 		}else{
 			$options_c['url_payment'] = $quipago['url_live'];
 			$options_c['alias'] = $quipago['alias_live'];
@@ -45,8 +46,8 @@ function quipago_action_payment(&$cart=NULL){
 			$protocol = 'http://';
 		}
 		
-		$url_back = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago&ctrl=Back";
-		$url_cancel = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago&ctrl=Cancel";
+		$url_back = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago";
+		$url_cancel = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago";
 		
 		$payment['url'] = $url_back;
 		$payment['url_back'] = $url_cancel;

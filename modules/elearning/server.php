@@ -34,9 +34,10 @@ $streamingMiddleware = function (ServerRequestInterface $request) use ($filesyst
     $filePathtoken = __DIR__ . DIRECTORY_SEPARATOR . 'tokens' . DIRECTORY_SEPARATOR . basename($token);
   
     if (!file_exists($filePathtoken)) {
+        echo date('Y-m-d H:i:s') . ' token expired' . PHP_EOL;
         return new Response(404, ['Content-Type' => 'text/plain'], "Token expired");
     }
-    unlink($filePathtoken);
+    //unlink($filePathtoken);
 
     if (empty($file)) {
         return new Response(200, ['Content-Type' => 'text/plain'], 'Video streaming server');

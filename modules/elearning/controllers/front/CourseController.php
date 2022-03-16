@@ -58,6 +58,20 @@ class CourseController extends BackendController{
 
 
     public function support(){
+        $formdata = [];
+        if( $this->isSubmitted() ){
+            $formdata = $this->getFormdata();
+            $check = $this->checkDataForm('elearning_support',$formdata);
+            if( $check[0] == 'ok'){
+                $this->displayMessage(_translate("Messaggio inviato con successo!","elearning"));
+            }else{
+                $this->errors[] = $check[1];
+            }
+            //debugga($formdata);exit;
+        }
+        //debugga($check);exit;
+        $dataform = $this->getDataForm('elearning_support',$formdata);
+        $this->setVar('dataform',$dataform);
         $this->setMenu('elearning_support');
 		$this->output('support.htm');
 		

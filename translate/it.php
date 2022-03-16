@@ -158,3 +158,4 @@ $GLOBALS['_translate']['bbaa22ff4a550caca5e1574e00396cd8']="Messaggio";//Messagg
 $GLOBALS['_translate']['1e4f21da76d8f6919d144dc6bd842468']="Invia";//Invia
 $GLOBALS['_translate']['9e5b65e5d1a5618106f4a01d0a6371e3']="P.Iva";//P.Iva
 $GLOBALS['_translate']['40bf25ec0eb5dd24895b4087b2528558']="tutti i diritti riservati";//tutti i diritti riservati
+$GLOBALS['_translate']['0aae248c2a6314a134f7d7bd96257d99']="Messaggio inviato con successo!";//Messaggio inviato con successo!

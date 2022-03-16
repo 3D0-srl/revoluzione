@@ -241,3 +241,5 @@ $GLOBALS['_translate']['b4d11fa7b3a6b9aeb2bc0be9951987ac']="personal_data";//per
 $GLOBALS['_translate']['a3b212a8183645f200909c267a8371fc']="fiscal_data";//fiscal_data
 $GLOBALS['_translate']['29b34508c81883fc801178fb88286861']="payment_method";//payment_method
 $GLOBALS['_translate']['3a52023bd3e830cf803f5f0740421053']="form_field_deleted";//form_field_deleted
+$GLOBALS['_translate']['f5523a0f5c44db924639e2ebdd6c79ae']="order_states";//order_states
+$GLOBALS['_translate']['7afeff9ea940cf3eb37f93fdf9ffd674']="ecommerce_settings";//ecommerce_settings
