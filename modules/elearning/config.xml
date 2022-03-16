@@ -26,6 +26,19 @@
 					<url>courses</url>
 					<priority>100</priority> 
 				</item>
+				<item>
+					<locale>
+						<name>
+							<it>Supporto</it>
+							<en>Support</en>
+						</name>
+					</locale>
+					<tag>elearning_support</tag> 
+					<iconImg>modules/elearning/images/ico-supporto-backend.png</iconImg> 
+					<permission>base</permission> 
+					<url>support</url>
+					<priority>100</priority> 
+				</item>
 			</items>
 		</menu>
 	</backend>

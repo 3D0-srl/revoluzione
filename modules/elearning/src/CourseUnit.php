@@ -34,6 +34,12 @@ class CourseUnit extends Base{
             }
         }   
     }
+
+
+     function getVideo(){
+        $video = DB::table('course_video')->where('id',$this->video_id)->first();
+        return $video;
+     }
 }
 
 ?>

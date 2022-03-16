@@ -1,0 +1,55 @@
+{% extends 'layouts/page_backend.htm' %}
+
+
+{% block backend_header %}
+	<strong>{{product.getName()}}</strong><br>
+    <small>{{unit.get('title')}}</small>
+{% endblock %}
+
+{% block css %}
+{{parent()}}
+<link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+<style>
+    .back-course{
+        text-decoration:underline;
+        margin-top: 10px;
+    }
+    .back-course a{
+        color: #1B3F99;
+    }
+</style>
+{% endblock %}
+
+
+{% block backend_content %}
+
+  <div class="col-md-12">
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="http://localhost:8000/?video={{unit.getVideo().path}}&token={{token}}" type="video/mp4" />
+   
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+  <div  class="back-course">
+  <a href="/courses/{{product.id}}">Torna indietro</a>
+  </div>
+  
+</div>
+
+  <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+
+{% endblock %}

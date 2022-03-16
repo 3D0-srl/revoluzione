@@ -1,8 +1,10 @@
-
 {
     "autoload": {
         "psr-4": {"Elearning\\": "src/"}
+    },
+    "require": {
+        "react/event-loop": "^1.2",
+        "react/http": "^1.6",
+        "react/filesystem": "^0.1.2"
     }
 }
-
-				

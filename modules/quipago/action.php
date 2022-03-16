@@ -1,5 +1,5 @@
 <?php
-use \Marion\Core\Marion;
+use Marion\Core\Marion;
 
 function quipago_action_payment(&$cart=NULL){
 		
@@ -13,12 +13,16 @@ function quipago_action_payment(&$cart=NULL){
 		$amountFormatted = number_format($amountFinal, 2, ',', '');
 
 		//creo la descrizione dell'ordine
-		$description = sprintf($GLOBALS['gettext']->strings['description_order_paypal'],$amountFormatted,$cart->number,$GLOBALS['setting']['default']['GENERALE']['nomesito']);
+		
+		
+		$description = sprintf(_translate('description_order','quipago'),$amountFormatted,$cart->currency,$cart->number,$GLOBALS['setting']['default']['GENERALE']['nomesito']);
+		//$description = sprintf($GLOBALS['gettext']->strings['description_order_paypal'],$amountFormatted,$cart->number,$GLOBALS['setting']['default']['GENERALE']['nomesito']);
 		
 
 		
 
-		$quipago = getConfig('quipago_module');
+		$quipago = Marion::getConfig('quipago_module');
+		
 		if( $quipago['sandbox'] ){
 			$options_c['url_payment'] = $quipago['url_sandbox'];
 			$options_c['alias'] = $quipago['alias_sandbox'];
@@ -33,6 +37,7 @@ function quipago_action_payment(&$cart=NULL){
 			$importo = number_format($amountFinal, 2, '.', '');
 
 		}
+		
 
 		if( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
 			$protocol = 'https://';	
@@ -40,8 +45,8 @@ function quipago_action_payment(&$cart=NULL){
 			$protocol = 'http://';
 		}
 		
-		$url_back = _MARION_BASE_URL_."index.php?mod=quipago&ctrl=Back";
-		$url_cancel = _MARION_BASE_URL_."index.php?mod=quipago&ctrl=Cancel";
+		$url_back = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago&ctrl=Back";
+		$url_cancel = $protocol.$_SERVER['SERVER_NAME']._MARION_BASE_URL_."index.php?mod=quipago&ctrl=Cancel";
 		
 		$payment['url'] = $url_back;
 		$payment['url_back'] = $url_cancel;

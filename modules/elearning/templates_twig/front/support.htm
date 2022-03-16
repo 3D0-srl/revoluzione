@@ -1,0 +1,32 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<strong>{{tr('Supporto')}}</strong>
+{% endblock %}
+
+
+{% block backend_content %}
+<h6 class="m-0 clearfix">{{tr('Hai problemi o curiosità sul tuo account? Contattaci per un supporto immediato.','elearning')}}</h6>
+<div class="space40"></div>
+<div class="container-fluid">
+	<form class="form" method="POST" action="/index.php">
+		<span class="errore">{{messages|raw}}</span>
+        <div class="controls">
+            <label for="formdata[subject]">{{tr('Oggetto')}}</label>
+            <input type="text" required name="formdata[subject]" value="{{dataform.subject.value}}">
+        </div>
+        <div class="controls">
+            <label for="formdata[message]">{{tr('Messaggio')}}</label>
+            <textarea required name="formdata[message]" value="{{dataform.message.value}}"></textarea>
+        </div>
+		<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
+		<div class="space30"></div>
+		<span id="fields_form_anchor"></span>
+		<input type='hidden' name='formID'>
+		<input type='hidden' name='ctrl' value="Home">
+		<input type='hidden' name='action' value="support">
+		<button class="btn-default">{{tr('Invia')}}</button>
+	</form>
+</div>
+
+{% endblock %}

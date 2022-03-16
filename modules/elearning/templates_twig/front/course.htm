@@ -1,8 +1,8 @@
 {% extends 'layouts/page_backend.htm' %}
 
-{#{% block backend_header %}
-	<p class="titl-order">{{tr('Numero dell\'ordine','ecommerce')}}<br> <span>{{cart.number}}</span></p>
-{% endblock %}#}
+{% block backend_header %}
+	<strong>{{product.getName()}}</strong>
+{% endblock %}
 
 
 {% block backend_content %}
@@ -37,7 +37,7 @@
 						<!--<a href="#">Analisi e Gestione del Rischio</a>-->
 						<ul>
 							{% for u in units %}
-							<li><a href="#">{{u.get('title')}}</a></li>
+							<li><a href="courses/{{product.id}}/video/{{u.id}}">{{u.get('title')}}</a></li>
 							{% endfor %}
 							<!--<li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
 							<li><a href="#">Panoramica Approfondita File Excel</a></li>
@@ -53,9 +53,4 @@
 		</div>
 		<div class="space80"></div>
 	
-	<script>
-		$(document).ready(function(){
-			$('.menu-backend li:nth-child(3)').addClass('active');
-		});
-	</script>
 {% endblock %}
