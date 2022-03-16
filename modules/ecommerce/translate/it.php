@@ -76,3 +76,12 @@ $GLOBALS['_translate']['ecommerce']['frontend']['36695ff94a7088124de817ffd458dff
 $GLOBALS['_translate']['ecommerce']['frontend']['1fa952038aac72f686e33446f80fd86a']="Nuovi Corsi";//Nuovi Corsi
 $GLOBALS['_translate']['ecommerce']['frontend']['172bef9d78816342b31a0ce33c090ffc']="I miei Corsi";//I miei Corsi
 $GLOBALS['_translate']['ecommerce']['frontend']['8cf756e048d33cc2ece3877bc5bf6a25']="Aggiungi al carrello";//Aggiungi al carrello
+$GLOBALS['_translate']['ecommerce']['frontend']['fa750265770b2831fca1c9a38dc99073']="Accedi al gruppo Telegram";//Accedi al gruppo Telegram
+$GLOBALS['_translate']['ecommerce']['frontend']['58e9aca5f8da9afbb8f4f9095f2ecbc9']="Accedi al gruppo Facebook";//Accedi al gruppo Facebook
+$GLOBALS['_translate']['ecommerce']['frontend']['3bd284a42cea005251bbfb4345eb6a55']="Nessun ordine presente in archivio.";//Nessun ordine presente in archivio.
+$GLOBALS['_translate']['ecommerce']['frontend']['5983c6f83fb7498f8a2ebb8deef742fa']="error_product_not_exists";//error_product_not_exists
+$GLOBALS['_translate']['ecommerce']['frontend']['316b70fafc62c5d01afeddeda702e8b7']="error_product_min_order";//error_product_min_order
+$GLOBALS['_translate']['ecommerce']['frontend']['ea26265de81bd0a560a96abaf5901a01']="error_product_max_order";//error_product_max_order
+$GLOBALS['_translate']['ecommerce']['frontend']['9b249dfbf7dee98262e9096fd4d02e5a']="error_product_qnt_not_available";//error_product_qnt_not_available
+$GLOBALS['_translate']['ecommerce']['frontend']['2d06f5d6f18eb3f69668dcaacfadd4b0']="Aggiunto al carrello";//Aggiunto al carrello
+$GLOBALS['_translate']['ecommerce']['frontend']['5bc2d619802a11edf89e74919d597bc7']="Quantità";//Quantità

@@ -1,10 +1,13 @@
 <?php
 global $_routes;
-/*
-$_routes["elearning/myroute"] = [
-    "controller" => "controller_name",
-    "module" => "elearning",
-    "method" => "method_name"
+$_routes['/courses/([0-9]+)'] = [
+    'controller' => 'CourseController',
+    'module' => 'elearning',
+    'method' => 'view'
 ];
-*/
+$_routes['/courses'] = [
+    'controller' => 'CourseController',
+    'module' => 'elearning',
+    'method' => 'index'
+];
 ?>

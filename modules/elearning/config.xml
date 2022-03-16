@@ -10,6 +10,25 @@
 		<autoload>1</autoload> 
 		<description><![CDATA[Integra nel modulo l'elearning]]></description> 
 	</info>
+	<backend>
+		<menu>
+			<items>
+				<item>
+					<locale>
+						<name>
+							<it>I miei corsi</it>
+							<en>My courses</en>
+						</name>
+					</locale>
+					<tag>elearning_courses</tag> 
+					<iconImg>modules/elearning/images/ico-corsi-backend.png</iconImg> 
+					<permission>base</permission> 
+					<url>courses</url>
+					<priority>100</priority> 
+				</item>
+			</items>
+		</menu>
+	</backend>
 	<admin>
 	  <menu>
 		<items>

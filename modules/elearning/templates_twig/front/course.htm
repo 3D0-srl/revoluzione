@@ -1,0 +1,61 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{#{% block backend_header %}
+	<p class="titl-order">{{tr('Numero dell\'ordine','ecommerce')}}<br> <span>{{cart.number}}</span></p>
+{% endblock %}#}
+
+
+{% block backend_content %}
+	
+		<div class="prod">
+			<div class="col-foto">
+				<div class="foto">
+					<a class="fancybox fancyone" href="{{product.getUrlImage(0)}}" rel="media-gallery" data-fancybox="gallery">
+						<img class="imgbig" src="{{product.getUrlImage(0)}}" alt="{{product.getName()}}">
+					</a>
+				</div>
+			</div>
+			<div class="info">
+				<h4 class="tit-prod">{{product.getName()}}</h4>
+				<div class="desc-prod">{{product.get('description')|raw}}</div>
+				{% if details %}
+				<div class="cont-btn clearfix">
+					{%if details.telegram_group %}
+					<a href="{{details.telegram_group}}" target="_blank" class="btn-default telegram">{{tr('Accedi al gruppo Telegram','elearning')}}</a>
+					{% endif %}
+					{%if details.facebook_group %}
+					<a href="{{details.facebook_group}}" target="_blank" class="btn-default facebook">{{tr('Accedi al gruppo Facebook','elearning')}}</a>
+					{% endif %}
+					
+				</div>
+				{% endif %}
+			</div>
+			<div class="space40"></div>
+			<div id="unita">
+				<ul>
+					<li>
+						<!--<a href="#">Analisi e Gestione del Rischio</a>-->
+						<ul>
+							{% for u in units %}
+							<li><a href="#">{{u.get('title')}}</a></li>
+							{% endfor %}
+							<!--<li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
+							<li><a href="#">Panoramica Approfondita File Excel</a></li>
+							<li><a href="#">Il Mito delle Progressioni</a></li>
+							<li><a href="#">Come e Perchè differenziare</a></li>
+							<li><a href="#">Come saperne di più</a></li>
+							<li><a href="#">Approfondimento Risk of Ruin</a></li>
+							<li><a href="#">BONUS: Aiuta il Prossimo, tutto torna</a></li>-->
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="space80"></div>
+	
+	<script>
+		$(document).ready(function(){
+			$('.menu-backend li:nth-child(3)').addClass('active');
+		});
+	</script>
+{% endblock %}

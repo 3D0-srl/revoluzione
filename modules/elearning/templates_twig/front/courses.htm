@@ -1,0 +1,38 @@
+{% extends 'layouts/page_backend.htm' %}
+
+{% block backend_header %}
+	<strong>{{tr('I miei Corsi','ecommerce')}}</strong>
+{% endblock %}
+
+
+{% block backend_content %}
+
+<div class="last-orders">
+	{% if products is null %}
+		<span>{{tr('Nessun corso presente in archivio.','elearning')}}</span>
+	{% else %}
+		<div class="row">
+			{% for riga in products %}
+                <a href="courses/{{riga.id}}">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 s-prod">
+					<div class="cont_imgprodsez">
+						
+							<img class="imgprod" src="{{riga.getUrlImage(0)}}">
+					
+					</div>
+					<div class="info">
+						<p>{{riga.getName()}}</p>
+					</div>
+				</div>
+                </a>
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.menu-backend li:nth-child(3)').addClass('active');
+    });
+</script>
+{% endblock %}

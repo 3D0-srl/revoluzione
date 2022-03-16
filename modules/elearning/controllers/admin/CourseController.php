@@ -4,6 +4,7 @@ use Marion\Controllers\Elements\ListActionBulkButton;
 use Illuminate\Database\Capsule\Manager as DB;
 use Catalogo\{Product};
 use Shop\Price;
+use Elearning\CourseDetail;
 class CourseController extends AdminModuleController{	
 	public $auth="catalog"; //permesso per accedere al controller
 
@@ -222,7 +223,7 @@ class CourseController extends AdminModuleController{
 				$product->set(
 					$array
 				);
-				//debugga($array);exit;
+				
 				$product->save();
 				$price = Price::prepareQuery()
 					->where('product',$product->id)
@@ -232,7 +233,7 @@ class CourseController extends AdminModuleController{
 				if( !$price ){
 					$price = Price::create();
 				}
-				//debugga($price);exit;
+				
 				$price->set(
 					[
 						'label' => 'default',
@@ -243,6 +244,25 @@ class CourseController extends AdminModuleController{
 					]
 				);
 				$price->save();
+
+
+				//salvataggio dettagli 
+				
+				$details = CourseDetail::prepareQuery()
+					->where('course_id',$product->id)
+					->getOne();
+				if( !$details ){
+					$details = CourseDetail::create();
+				}
+				unset($array['id']);
+				$array['course_id'] = $product->id;
+				$details->set(
+					$array
+				);
+				//debugga($details);exit;
+				$details->save();
+				
+
 				if( $action == 'edit' ){
 					$this->redirectToList(['changed'=>true]);
 				}else{
@@ -263,6 +283,15 @@ class CourseController extends AdminModuleController{
 	
 					$prezzo = $product->getPriceValue();
 					$dati['price'] = $prezzo;
+
+					$details = CourseDetail::prepareQuery()
+					->where('course_id',$product->id)
+					->getOne();
+					if( is_object($details)){
+						$details_data = $details->prepareForm2();
+						unset($details_data['id']);
+						$dati = array_merge($dati,$details_data);
+				    }
 					
 				}
 			}

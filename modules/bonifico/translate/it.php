@@ -10,3 +10,6 @@ $GLOBALS['_translate']['bonifico']['frontend']['68a620be8912db042621e73a0bfd57a2
 $GLOBALS['_translate']['bonifico']['frontend']['e3e4555e64ea41faddcabf6e8476701c']="CODICE IBAN";//CODICE IBAN
 $GLOBALS['_translate']['bonifico']['frontend']['7420d1371acd61f4113a65411eacece7']="Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo";//Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo
 $GLOBALS['_translate']['bonifico']['frontend']['04a480eee1d39cd59bc6a92b918b78f9']="Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo";//Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo
+$GLOBALS['_translate']['bonifico']['frontend']['d598c28b1a6df1da21cf2d13ddd843bd']="I dati del bonifico sono i seguenti";//I dati del bonifico sono i seguenti
+$GLOBALS['_translate']['bonifico']['frontend']['8d981647c31ac91ffef7998520bc52c9']="CODICE IBAN";//CODICE IBAN
+$GLOBALS['_translate']['bonifico']['frontend']['a9da01816af2c1e95d2221539c312368']="Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo";//Si ricorda che è necessario inviare una mail con la copia del bonifico all'indirizzo

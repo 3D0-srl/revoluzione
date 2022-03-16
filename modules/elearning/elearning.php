@@ -14,6 +14,8 @@ class Elearning extends Marion\Core\Module{
 			DB::schema()->create("course_detail",function(Blueprint $table){
 				$table->id(); //crea un campo id (autoincremnet,unsigned,bigint(20))
 				$table->bigInteger("course_id")->unsigned(true)->index('course_id');
+				$table->string("telegram_group")->nullable(true);
+				$table->string("facebook_group")->nullable(true);
 			});
 			DB::schema()->create("course_detail_lang",function(Blueprint $table){
 				$table->bigInteger("course_detail_id")->unsigned(true);
