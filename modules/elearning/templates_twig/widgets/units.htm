@@ -1,0 +1,20 @@
+<ul class="{%if disabled %}disabled{% endif %}">
+            {% for u in units %}
+                <li>
+                    <a href="{%if disabled == false %}courses/{{product.id}}/video/{{u.id}}{% else %}#{% endif %}">{{u.get('title')}}</a>
+                </li>
+            {% endfor %}
+    <!--<li>
+        <a href="#">Analisi e Gestione del Rischio</a>
+        <ul>
+            <li><a href="#">La Finanza Emotiva</a></li>
+            <li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
+            <li><a href="#">Panoramica Approfondita File Excel</a></li>
+            <li><a href="#">Il Mito delle Progressioni</a></li>
+            <li><a href="#">Come e Perchè differenziare</a></li>
+            <li><a href="#">Come saperne di più</a></li>
+            <li><a href="#">Approfondimento Risk of Ruin</a></li>
+            <li><a href="#">BONUS: Aiuta il Prossimo, tutto torna</a></li>
+        </ul>
+    </li>-->
+</ul>

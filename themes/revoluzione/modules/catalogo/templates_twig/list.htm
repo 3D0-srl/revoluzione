@@ -1,7 +1,7 @@
-{% extends 'layouts/page_catalog.htm' %}
+{% extends 'layouts/page_backend.htm' %}
 {% block metatags_title %}{{meta_title}}{% endblock %}
 {% block metatags_description %}{{meta_description}}{% endblock %}
-{% block content %}
+{% block backend_content %}
 <h4 class="titl-backend"><strong>Catalogo</strong></h4>
 <div class="clear"></div>
 <div class="row precprod">
@@ -18,7 +18,7 @@
 		{% include 'partials/per_page.htm' %}
 	</div>
 </div>
-{% include 'partials/side_column.htm' %}
+{#{% include 'partials/side_column.htm' %}#}
 <div class="coldx  {%if filtri_attivi %}resize{% endif %}">
 	<div class="contprod">
 		{% if prodotti == false %}

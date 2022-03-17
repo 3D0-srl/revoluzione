@@ -2,6 +2,9 @@
 
 
 {% block backend_header %}
+<div class="breadcontinue">
+	<a href="/courses/{{product.id}}" class="back"><i class="fa fa-angle-left"></i>{{tr('Torna al corso','elearning')}}</a>
+</div>
 	<strong>{{product.getName()}}</strong><br>
     <small>{{unit.get('title')}}</small>
 {% endblock %}

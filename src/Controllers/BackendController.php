@@ -3,7 +3,7 @@ namespace Marion\Controllers;
 use Marion\Controllers\FrontendController;
 use Marion\Core\Base;
 use Marion\Entities\Cms\MenuItem;
-
+use Catalogo\Catalog;
 class BackendController extends FrontendController{
 	public $_auth = 'base';
 	public $_required_access = true;
@@ -11,6 +11,17 @@ class BackendController extends FrontendController{
 	function initTwingTemplate(){
 		parent::initTwingTemplate();
 		$this->getSideMenu();
+		$this->loadCategories();
+	}
+
+
+	function loadCategories(){
+	
+		$this->setVar('itemActive',_var('section')); 
+		$tree = Catalog::getSectionTree();
+		$this->setVar('menuside',$tree);
+		
+	
 	}
 
 

@@ -10,3 +10,10 @@ $GLOBALS['_translate']['elearning']['frontend']['66be69bf7650c83cd44c9701784c2d2
 $GLOBALS['_translate']['elearning']['frontend']['bbaa22ff4a550caca5e1574e00396cd8']="Messaggio";//Messaggio
 $GLOBALS['_translate']['elearning']['frontend']['1e4f21da76d8f6919d144dc6bd842468']="Invia";//Invia
 $GLOBALS['_translate']['elearning']['frontend']['e930ea5de19737bfe75b33ba522cf6c6']="Torna indietro";//Torna indietro
+$GLOBALS['_translate']['elearning']['frontend']['997a1b3c2d56e1120f7b1785382b3adb']="Torna ai miei corsi";//Torna ai miei corsi
+$GLOBALS['_translate']['elearning']['frontend']['8674f3b95ec5396ce3e6cbc38886d234']="Torna al corso";//Torna al corso
+$GLOBALS['_translate']['elearning']['frontend']['784792df4f93602ce592742af80662be']="Vai al cordo";//Vai al cordo
+$GLOBALS['_translate']['elearning']['frontend']['5e0aebc199767d59c5da3e9335776c9e']="Vai al corso";//Vai al corso
+$GLOBALS['_translate']['elearning']['frontend']['9681b7a97769fe4be64ad2d52cf8f97f']="Ultimi Acquisti";//Ultimi Acquisti
+$GLOBALS['_translate']['elearning']['frontend']['36695ff94a7088124de817ffd458dff3']="Vedi tutti";//Vedi tutti
+$GLOBALS['_translate']['elearning']['frontend']['1fa952038aac72f686e33446f80fd86a']="Nuovi Corsi";//Nuovi Corsi

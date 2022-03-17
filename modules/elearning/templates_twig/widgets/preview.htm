@@ -1,0 +1,12 @@
+{% if details.get('youtube_link') %}
+<iframe 
+    width="560" ù
+    height="315" 
+    src="https://www.youtube.com/embed/{{details.get('youtube_link')}}" 
+    title="{{prodotto.getName()}}" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+{% endif %}
+

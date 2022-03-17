@@ -165,6 +165,19 @@
 			<item>
 				<locale>
 					<name>
+						<it>Categorie</it>
+						<en>Categories</en>
+					</name>
+				</locale>
+				<tag>ecommerce_categories</tag> 
+				<iconImg>modules/ecommerce/images/ico-i-miei-ordini-menu-backend.png</iconImg> 
+				<permission>base</permission> 
+				<url>orders</url>
+				<priority>100</priority> 
+			</item>
+			<item>
+				<locale>
+					<name>
 						<it>I miei ordini</it>
 						<en>My orders</en>
 					</name>
@@ -175,7 +188,7 @@
 				<url>orders</url>
 				<priority>100</priority> 
 			</item>
-			<item>
+			<!--<item>
 				<locale>
 					<name>
 						<it>I miei indirizzi</it>
@@ -200,7 +213,7 @@
 				<permission>base</permission> 
 				<url>wishlist</url>
 				<priority>100</priority> 
-			</item>
+			</item>-->
 
 		</items>
 	</menu>

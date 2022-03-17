@@ -3,16 +3,17 @@ use Marion\Controllers\BackendController;
 use Illuminate\Database\Capsule\Manager as DB;
 use Marion\Core\Marion;
 use Elearning\{CourseUnit,CourseDetail};
+use Marion\Components\WidgetComponent;
 class CourseController extends BackendController{
 
-    private $status = ['confirmed'];
+    
 
     public function index(){
         $this->setMenu('elearning_courses');
         $user = Marion::getUser();
         $orders = DB::table('cart','c')
         ->join('cartRow as r','r.cart','=','c.id')
-        ->whereIn('c.status',$this->status)
+        ->whereIn('c.status',elearnig_status_cart())
         ->where('c.user',$user->id)->get(['product'])->toArray();
         foreach($orders as $o){
             $product = Product::withId($o->product);
@@ -34,8 +35,24 @@ class CourseController extends BackendController{
 					->where('course_id',$product->id)
 					->getOne();
         $this->setVar('details',$details);
-        $this->setVar('units',$units);
+       
         $this->setVar('product',$product);
+
+        ob_start();
+        $widget = new WidgetComponent('elearning');
+		$units = CourseUnit::prepareQuery()->where('course_id',$product->id)->orderBy('order_view','ASC')->get();
+
+		$widget->setVar('disabled',false);
+		$widget->setVar('product',$product);
+        
+        $widget->setVar('units',$units);
+		$widget->output('units.htm');
+        $html = ob_get_contents();
+        ob_end_clean();
+        $this->setVar('units',$html);
+
+
+
         $this->output('course.htm');
     }
 
@@ -91,12 +108,7 @@ class CourseController extends BackendController{
 	}
 
     private function checkAccessCourse($id){
-        $user = Marion::getUser();
-        $check = DB::table('cart','c')
-        ->join('cartRow as r','r.cart','=','c.id')
-        ->whereIn('c.status',$this->status)
-        ->where('product',$id)
-        ->where('c.user',$user->id)->exists();
+        $check = elearning_check_course($id);
         if( !$check ){
             header('Location: '._MARION_BASE_URL_."index.php");
             die();

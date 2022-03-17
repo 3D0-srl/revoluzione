@@ -23,7 +23,7 @@ define('_MARION_ENABLE_SSL_',0); //abilita l'https su sito
 
 
 /*** VARIABILI PHP ******/
-define('_MARION_DISPLAY_ERROR_',0); //mostrare gli errori php
+define('_MARION_DISPLAY_ERROR_',1); //mostrare gli errori php
 define('_MARION_MEMORY_LIMIT_','1024M'); //imposta il memory limit di php
 define('_MARION_MAX_EXECUTION_TIME_',0); //imposta il tempo massimo di esecuzione di uno script. Se 0 il tempo è da considerasi infinito
 define('_MARION_DEFAULT_TIMEZONE_','Europe/Rome'); //Sets the default timezone used by all date/time functions in a script

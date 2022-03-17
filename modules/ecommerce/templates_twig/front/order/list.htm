@@ -1,7 +1,7 @@
 {% extends 'layouts/page_backend.htm' %}
 
 {% block backend_header %}
-	<strong>{{tr('I miei Corsi','ecommerce')}}</strong>
+	<strong>{{tr('I miei ordini','ecommerce')}}</strong>
 {% endblock %}
 
 
@@ -12,26 +12,13 @@
 		<span>{{tr('Nessun ordine presente in archivio.','ecommerce')}}</span>
 	{% else %}
 		<div class="row">
-			{% for riga in carrelli %}
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 s-prod">
-					<div class="cont_imgprodsez">
-						<a href="orders/{{riga.id}}">
-							<img class="imgprod" src="{{riga.image}}">
-						</a>
-					</div>
-					<div class="info">
-						<p>{{riga.productname}}</p>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-
-		<!--<div class="table-responsive">
+			<div class="col-md-12">
+			<div class="table-responsive">
 			<table class="table table-orders m-b-0" >
 				<thead>
 					<tr>
 						<th></th>
-						<th>{{tr('Numero Articoli','ecommerce')}}</th>
+						<th>{{tr('Numero Corsi','ecommerce')}}</th>
 						<th>{{tr('Totale','ecommerce')}}</th>
 						<th>{{tr('Data','ecommerce')}}</th>
 						<th>{{tr('Stato','ecommerce')}}</th>
@@ -51,7 +38,12 @@
 					{% endfor %}
 				</tbody>
 			</table>
-		</div>-->
+		</div>
+
+			</div>
+	
+		
+</div>
 	{% endif %}
 </div>
 
@@ -61,9 +53,4 @@
 		{{links.all|raw}}
 	</div>
 {% endif %}
-<script>
-    $(document).ready(function(){
-        $('.menu-backend li:nth-child(3)').addClass('active');
-    });
-</script>
 {% endblock %}

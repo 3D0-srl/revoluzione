@@ -10,6 +10,7 @@
 		<autoload>1</autoload> 
 		<description><![CDATA[Integra nel modulo l'elearning]]></description> 
 	</info>
+	<linkSetting>index.php?ctrl=Setting&amp;mod=elearning</linkSetting>
 	<backend>
 		<menu>
 			<items>
@@ -73,4 +74,22 @@
 		</items>
 	</menu>
   </admin>
+  <actions>
+  		<action>
+			<hook>display_backend_home</hook>
+			<function>displayBackendHome</function>
+		</action>
+	   <action>
+			<hook>elearning_preview_course</hook>
+			<hookDescription>Mostra il video di anteprima del corso</hookDescription>
+			<hookType>display</hookType>
+			<function>previewCourse</function>
+		</action>
+		<action>
+			<hook>elearning_units_course</hook>
+			<hookDescription>Mostra l'elenco delle unità del corso</hookDescription>
+			<hookType>display</hookType>
+			<function>unitsCourse</function>
+		</action>
+  </actions>
 </module>

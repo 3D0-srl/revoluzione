@@ -243,3 +243,6 @@ $GLOBALS['_translate']['29b34508c81883fc801178fb88286861']="payment_method";//pa
 $GLOBALS['_translate']['3a52023bd3e830cf803f5f0740421053']="form_field_deleted";//form_field_deleted
 $GLOBALS['_translate']['f5523a0f5c44db924639e2ebdd6c79ae']="order_states";//order_states
 $GLOBALS['_translate']['7afeff9ea940cf3eb37f93fdf9ffd674']="ecommerce_settings";//ecommerce_settings
+$GLOBALS['_translate']['4d6be30e29f7612ea0b47488af5db99d']="menu_links";//menu_links
+$GLOBALS['_translate']['828279a3b8705798e8055c7362c14e5d']="menu_link";//menu_link
+$GLOBALS['_translate']['aac5756ab273ea17493ce056e84d3065']="standard_page";//standard_page

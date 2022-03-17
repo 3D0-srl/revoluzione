@@ -1,6 +1,9 @@
 {% extends 'layouts/page_backend.htm' %}
 
 {% block backend_header %}
+	<div class="breadcontinue">
+		<a href="/courses" class="back"><i class="fa fa-angle-left"></i>{{tr('Torna ai miei corsi','elearning')}}</a>
+	</div>
 	<strong>{{product.getName()}}</strong>
 {% endblock %}
 
@@ -32,23 +35,7 @@
 			</div>
 			<div class="space40"></div>
 			<div id="unita">
-				<ul>
-					<li>
-						<!--<a href="#">Analisi e Gestione del Rischio</a>-->
-						<ul>
-							{% for u in units %}
-							<li><a href="courses/{{product.id}}/video/{{u.id}}">{{u.get('title')}}</a></li>
-							{% endfor %}
-							<!--<li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
-							<li><a href="#">Panoramica Approfondita File Excel</a></li>
-							<li><a href="#">Il Mito delle Progressioni</a></li>
-							<li><a href="#">Come e Perchè differenziare</a></li>
-							<li><a href="#">Come saperne di più</a></li>
-							<li><a href="#">Approfondimento Risk of Ruin</a></li>
-							<li><a href="#">BONUS: Aiuta il Prossimo, tutto torna</a></li>-->
-						</ul>
-					</li>
-				</ul>
+				{{units|raw}}
 			</div>
 		</div>
 		<div class="space80"></div>

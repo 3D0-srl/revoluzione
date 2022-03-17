@@ -1,5 +1,5 @@
 <div class="clearfix"></div>
-<div class="last-orders">
+{#<div class="last-orders">
 	<h5>{{tr('Ultimi Acquisti','ecommerce')}}</h5>
 	{% if carrelli is not null %}
 		<a href="index.php?ctrl=Orders&mod=ecommerce" class="all-view">{{tr('Vedi tutti','ecommerce')}}</a>
@@ -24,10 +24,11 @@
 		</div>
 	{% endif %}
 </div>
+
 <div class="last-orders">
 	<h5>{{tr('Nuovi Corsi','ecommerce')}}</h5>
 	<a href="catalog.htm" class="all-view">{{tr('Vedi tutti','ecommerce')}}</a>
 	<div class="space40"></div>
 </div>
-
+#}
 <a href="index.php?mod=recensioni" class="lascia-recensione"><span>Soddisfatto dei risultati?</span><span>Lascia una recensione</span></a>

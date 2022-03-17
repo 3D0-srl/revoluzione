@@ -1,70 +1,37 @@
 {% extends 'layouts/page_backend.htm' %}
 
-{#{% block backend_header %}
-	<p class="titl-order">{{tr('Numero dell\'ordine','ecommerce')}}<br> <span>{{cart.number}}</span></p>
-{% endblock %}#}
+{% block backend_header %}
+<div class="breadcontinue">
+	<a href="javascript: window.history.go(-1)" class="back"><i class="fa fa-angle-left"></i>{{tr('Torna agli ordini','ecommerce')}}</a>
+</div>
+<strong>{{tr('Ordine','ecommerce')}} <small>{{cart.number}}</small></strong>
+
+{% endblock %}
 
 
 {% block backend_content %}
-	{% for riga in ordini %}
-		<div class="prod">
-			<div class="col-foto">
-				<div class="foto">
-					<a class="fancybox fancyone" href="{{riga.img}}" rel="media-gallery" data-fancybox="gallery">
-						<img class="imgbig" src="{{riga.img}}" alt="{{riga.productname}}">
-					</a>
-				</div>
-			</div>
-			<div class="info">
-				<h4 class="tit-prod">{{riga.productname}}</h4>
-				<div class="desc-prod">{{riga.get('description')|raw}}</div>
-				<div class="cont-btn clearfix">
-					<a href="#" target="_blank" class="btn-default telegram">{{tr('Accedi al gruppo Telegram','ecommerce')}}</a>
-					<a href="#" target="_blank" class="btn-default facebook">{{tr('Accedi al gruppo Facebook','ecommerce')}}</a>
-				</div>
-			</div>
-			<div class="space40"></div>
-			<div id="unita">
-				<ul>
-					<li>
-						<a href="#">Analisi e Gestione del Rischio</a>
-						<ul>
-							<li><a href="#">La Finanza Emotiva</a></li>
-							<li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
-							<li><a href="#">Panoramica Approfondita File Excel</a></li>
-							<li><a href="#">Il Mito delle Progressioni</a></li>
-							<li><a href="#">Come e Perchè differenziare</a></li>
-							<li><a href="#">Come saperne di più</a></li>
-							<li><a href="#">Approfondimento Risk of Ruin</a></li>
-							<li><a href="#">BONUS: Aiuta il Prossimo, tutto torna</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="space80"></div>
-	{% endfor %}
 
-	<!--<div class="clear"></div>
+
+	<div class="clear"></div>
 	<div class="row">
 		<div class="col-dati-order">
 			<p>Effettuato in data</p>
 			<p><strong>{{dataOraIta(cart.evacuationDate)}}</strong></p>
 		</div>
-		<div class="col-dati-order">
+		<!--<div class="col-dati-order">
 			<p>Modalità pagamento</p>
-			<p><strong>{{cart.getNamePaymentMethod()}}</strong></p>
-		</div>
+			<p><strong>{{cart.paymentMethod}}</strong></p>
+		</div>-->
 		{% if cart.virtual_cart is null %}
 			<div class="col-dati-order">
 				<p>Modalità spedizione</p>
 				<p><strong>{{cart.getNameShippingMethod()}}</strong></p>
 			</div>
 		{% endif %}
-		<div class="col-dati-order">
+		<!--<div class="col-dati-order">
 			<p>Data stato ordine</p>
 			<p><strong>28/03/2020</strong></p>
-		</div>
+		</div>-->
 		<div class="col-dati-order">
 			<p>Stato dell'ordine</p>
 			<p><strong>{{cart.status|raw}}</strong></p>
@@ -182,7 +149,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="space120"></div>-->
+	<div class="space120"></div>
 	<script>
 		$(document).ready(function(){
 			$('.menu-backend li:nth-child(3)').addClass('active');
