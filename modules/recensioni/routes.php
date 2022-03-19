@@ -1,10 +1,10 @@
 <?php
 global $_routes;
-/*
-$_routes["rete_vendita/myroute"] = [
-    "controller" => "controller_name",
-    "module" => "rete_vendita",
-    "method" => "method_name"
+
+$_routes["/recensione"] = [
+    "controller" => "FeedController",
+    "module" => "recensioni",
+    "method" => "index"
 ];
-*/
+
 ?>

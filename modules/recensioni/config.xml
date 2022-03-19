@@ -10,4 +10,23 @@
 		<autoload>1</autoload> 
 		<description><![CDATA[Modulo che integra un sistema di recensioni all'interno del tuo sito]]></description> 
 	</info>
+	<backend>
+		<menu>
+			<items>
+				<item>
+					<locale>
+						<name>
+							<it>Recensione</it>
+							<en>Recensione</en>
+						</name>
+					</locale>
+					<tag>recensioni</tag> 
+					<iconImg>modules/recensioni/images/ico-recensione-backend.png</iconImg> 
+					<permission>base</permission> 
+					<url>recensione</url>
+					<priority>100</priority> 
+				</item>
+			</items>
+		</menu>
+	</backend>
 </module>

@@ -17,9 +17,9 @@ $_routes['/courses'] = [
 ];
 
 $_routes['/support'] = [
-    'controller' => 'CourseController',
+    'controller' => 'SupportController',
     'module' => 'elearning',
-    'method' => 'support'
+    'method' => 'index'
 ];
 
 ?>

@@ -1,0 +1,28 @@
+{% extends 'layouts/page_backend.htm' %}
+{% block backend_header %}
+	<strong>{{tr('Lascia una recensione')}}</strong>
+{% endblock %}
+
+
+{% block backend_content %}
+<h6 class="m-0 clearfix">{{tr('Hai problemi o curiosità sul tuo account? Contattaci per un supporto immediato.','elearning')}}</h6>
+<div class="space40"></div>
+<div class="container-fluid">
+	<form class="form" method="POST" action="/support">
+		<span class="errore">{{messages|raw}}</span>
+        <div class="controls">
+            <label for="formdata[subject]">{{tr('Oggetto','elearning')}}</label>
+            <input type="text" required name="formdata[subject]" value="{{dataform.subject.value}}">
+        </div>
+        <div class="controls">
+            <label for="formdata[message]">{{tr('Messaggio','elearning')}}</label>
+            <textarea required name="formdata[message]">{{dataform.message.value}}</textarea>
+        </div>
+		<input type='hidden' name='formdata[id]' value="{{dataform.id.value}}">
+		<div class="space30"></div>
+		<span id="fields_form_anchor"></span>
+		<button class="btn-default">{{tr('Invia','elearning')}}</button>
+	</form>
+</div>
+
+{% endblock %}
