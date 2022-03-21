@@ -376,6 +376,7 @@ public function prepare(string $query):DatabaseQuery{
 
 	/* funzione che controlla se nella stringa ci sia un'injection */
 	public function injectionPrevent($string) {
+		
 		if(get_magic_quotes_gpc()) {
 			$string = stripslashes($string);
 			return $this->conn->real_escape_string ($string);
@@ -506,6 +507,18 @@ class DatabaseQuery{
 		return $this;
 	}
 
+
+	function refValues($arr){
+		if (strnatcmp(phpversion(),'5.3') >= 0) //Reference is required for PHP 5.3+
+		{
+			$refs = array();
+			foreach($arr as $key => $value)
+				$refs[$key] = &$arr[$key];
+			return $refs;
+		}
+		return $arr;
+	}
+
 	function execute(){
 		
 		$params = array(
@@ -520,8 +533,8 @@ class DatabaseQuery{
 			}
 		}
 
-		
-		call_user_func_array(array($this->stmt,'bind_param'),$params);
+		call_user_func_array(array($this->stmt,'bind_param'),$this->refValues($params));
+		//exit;
 
 		$this->stmt->execute();
 		

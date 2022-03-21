@@ -85,3 +85,17 @@ $GLOBALS['_translate']['ecommerce']['frontend']['ea26265de81bd0a560a96abaf5901a0
 $GLOBALS['_translate']['ecommerce']['frontend']['9b249dfbf7dee98262e9096fd4d02e5a']="error_product_qnt_not_available";//error_product_qnt_not_available
 $GLOBALS['_translate']['ecommerce']['frontend']['2d06f5d6f18eb3f69668dcaacfadd4b0']="Aggiunto al carrello";//Aggiunto al carrello
 $GLOBALS['_translate']['ecommerce']['frontend']['5bc2d619802a11edf89e74919d597bc7']="Quantità";//Quantità
+$GLOBALS['_translate']['ecommerce']['frontend']['9d9a90541b178adbdcb69fb18a35c92c']="Ordine";//Ordine
+$GLOBALS['_translate']['ecommerce']['frontend']['2f44554dcfea47d48f4749b53fb3aae5']="confirm_delete_addres";//confirm_delete_addres
+$GLOBALS['_translate']['ecommerce']['frontend']['2f8763e74d3b7360c787af579bfcfd7e']="I miei indirizzi";//I miei indirizzi
+$GLOBALS['_translate']['ecommerce']['frontend']['d727e73ea0c31e9e3b37f171b5a941b4']="Modifica";//Modifica
+$GLOBALS['_translate']['ecommerce']['frontend']['a503cfccc6121a7bc79671cfb9bea597']="Elimina";//Elimina
+$GLOBALS['_translate']['ecommerce']['frontend']['c4cc5738c7b22c5a6f51f6212eda7706']="Annulla";//Annulla
+$GLOBALS['_translate']['ecommerce']['frontend']['3dfe53d0388c417316fb3713cf0b8562']="Aggiungi nuovo indirizzo";//Aggiungi nuovo indirizzo
+$GLOBALS['_translate']['ecommerce']['frontend']['e77aecc62204fc14f740c143239c88e6']="la mia wishlist";//la mia wishlist
+$GLOBALS['_translate']['ecommerce']['frontend']['bc6a6103168c2d7391e164c7ef589f6b']="La mia wishlist";//La mia wishlist
+$GLOBALS['_translate']['ecommerce']['frontend']['cdbf1244b40dab755b0b6814e70f0a14']="Condividi con";//Condividi con
+$GLOBALS['_translate']['ecommerce']['frontend']['1e4f21da76d8f6919d144dc6bd842468']="Invia";//Invia
+$GLOBALS['_translate']['ecommerce']['frontend']['4fda92f6492bdff2cb0dc63207293d3f']="Nessun prodotto presente in wishlist";//Nessun prodotto presente in wishlist
+$GLOBALS['_translate']['ecommerce']['frontend']['aa126e6f73c2d0831114a48734244ba4']="Numero Corsi";//Numero Corsi
+$GLOBALS['_translate']['ecommerce']['frontend']['75c3303305d9adc938cd5cd3436590ca']="Torna agli ordini";//Torna agli ordini

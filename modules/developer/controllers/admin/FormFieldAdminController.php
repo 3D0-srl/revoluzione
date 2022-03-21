@@ -566,25 +566,28 @@ class FormFieldAdminController extends AdminModuleController{
 			$array = $form->checkData($dati);
 			$action = $this->getAction();
 			$resize_aviable = $dati['resize_image'];
-			foreach($dati['dimension_image'] as $k => $v){
-				$chiave = preg_replace('/_[xy]/','',$k);
-				$_dimension = preg_replace('/(.*)_/','',$k);
-				
-				if( in_array($chiave,$resize_aviable) ){
-					if( $v ){
-						if( !is_numeric($v) || (float)$v < 0 ){
+			if( isset($dati['dimension_image']) && okArray($dati['dimension_image']) ){
+				foreach($dati['dimension_image'] as $k => $v){
+					$chiave = preg_replace('/_[xy]/','',$k);
+					$_dimension = preg_replace('/(.*)_/','',$k);
+					
+					if( in_array($chiave,$resize_aviable) ){
+						if( $v ){
+							if( !is_numeric($v) || (float)$v < 0 ){
+								$array[0] = 'nak';
+								$array[1] = "La dimensione {$_dimension} del resize {$chiave} non è corretta";
+								break;
+							}
+						}else{
 							$array[0] = 'nak';
-							$array[1] = "La dimensione {$_dimension} del resize {$chiave} non è corretta";
+							$array[1] = "La dimensione {$_dimension} del resize {$chiave} non è specificata";
 							break;
 						}
-					}else{
-						$array[0] = 'nak';
-						$array[1] = "La dimensione {$_dimension} del resize {$chiave} non è specificata";
-						break;
 					}
+	
 				}
-
 			}
+			
 
 			
 			
@@ -920,21 +923,24 @@ class FormFieldAdminController extends AdminModuleController{
 		//$list = $database->select('id,name,sku,visibility,section,type,images','product as p left outer join productLocale as l on l.product=p.id',$condizione);
 		
 		$list = $database->select("codice as id,campo as name,etichetta,obbligatorio,ordine,form,type",'form_campo',"{$condizione}");
-		foreach($list as $k => $v){
-			if( $k > 0 ){
-				$list[$k]['prec'] = $list[$k-1]['id'];
-				if( $v['ordine'] == $list[$k-1]['id'] ){
-					$database->update('form_campo',"codice={$v['id']}",array('ordine'=>$v['ordine']+1));
-					$list[$k]['ordine'] = $v['ordine']+1;
+		if( okArray($list) ){
+			foreach($list as $k => $v){
+				if( $k > 0 ){
+					$list[$k]['prec'] = $list[$k-1]['id'];
+					if( $v['ordine'] == $list[$k-1]['id'] ){
+						$database->update('form_campo',"codice={$v['id']}",array('ordine'=>$v['ordine']+1));
+						$list[$k]['ordine'] = $v['ordine']+1;
+					}
 				}
+	
+				if( $k < count($list)-1 ){
+					$list[$k]['succ'] = $list[$k+1]['id'];
+				}
+	
+				
 			}
-
-			if( $k < count($list)-1 ){
-				$list[$k]['succ'] = $list[$k+1]['id'];
-			}
-
-			
 		}
+		
 		
 		
 		$total_items = $tot[0]['tot'];
@@ -1276,9 +1282,11 @@ class FormFieldAdminController extends AdminModuleController{
 			}
 			//debugga($_form_valore);exit;
 			$database->delete('form_valore',"campo={$codice}");
-			foreach($_form_valore as $dati){
-				$database->insert('form_valore',$dati);
-				
+			if( okArray($_form_valore)){
+				foreach($_form_valore as $dati){
+					$database->insert('form_valore',$dati);
+					
+				}
 			}
 
 		}

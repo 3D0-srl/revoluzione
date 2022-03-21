@@ -67,6 +67,7 @@ class HomeController extends \Marion\Controllers\BackendController{
 				$this->output('home/support.htm');
 				break;
 			default:
+			     $this->setMenu('home');
 				$buttons = HomeButton::prepareQuery()->where('active',1)->orderBy('orderView','ASC')->get();
 				$this->setVar('buttons',$buttons);
 				$this->output('home/home.htm');

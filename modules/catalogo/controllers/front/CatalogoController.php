@@ -1,8 +1,8 @@
 <?php
 use Marion\Core\marion;
-use Marion\Controllers\FrontendController;
+use Marion\Controllers\BackendController;
 use Catalogo\{Catalog,Product,Section,Manufacturer,TagProduct};
-class CatalogoController extends FrontendController{
+class CatalogoController extends BackendController{
 	
 	
 		
@@ -82,7 +82,7 @@ class CatalogoController extends FrontendController{
 			})
 		);
 
-		$this->loadCategories();
+		//$this->loadCategories();
 		$this->buildTypeView();
 		$this->buildSelectOrder();
 		$this->buildSelectPerPage();
@@ -416,6 +416,10 @@ class CatalogoController extends FrontendController{
 					$this->setVar('qnt',$qnt);
 					$this->setVar('prodotto',$prodotto);
 					
+
+					if( function_exists('elearning_check_course') ){
+						$this->setVar('courseAvailable',elearning_check_course($prodotto->id));
+					}
 
 					if($prodotto->isConfigurable()){
 	 

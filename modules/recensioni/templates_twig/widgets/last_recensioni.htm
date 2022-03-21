@@ -1,0 +1,15 @@
+{% for r in recensioni %}
+<div style="width:100%" class="clearfix">
+    <div class="col-w-25">
+        <div class="box-testo name">
+            <p><strong>{{r.nickname}}</strong></p>
+            <p>{{r.data_inserimento|date("d/m/Y")}}</p>
+        </div>
+    </div>
+    <div class="col-w-75">
+        <div class="box-testo review">
+            <p>{{r.message|raw}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}

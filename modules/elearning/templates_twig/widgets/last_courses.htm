@@ -1,0 +1,32 @@
+<div class="clearfix"></div>
+<div class="last-orders">
+	<h5>{{tr('Ultimi Acquisti','elearning')}}</h5>
+	{% if courses is not null %}
+		<a href="/courses" class="all-view">{{tr('Vedi tutti','elearning')}}</a>
+	{% endif %}
+	<div class="space40"></div>
+	{% if courses is null %}
+		<span>{{tr('Nessun corso presente in archivio.','elearning')}}</span>
+	{% else %}
+		<div class="row">
+			{% for riga in courses %}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 s-prod">
+					<div class="cont_imgprodsez">
+						<a href="/courses/{{riga.id}}">
+							<img class="imgprod" src="{{riga.getUrlImage(0)}}">
+						</a>
+					</div>
+					<div class="info">
+						<p>{{riga.getName()}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+
+<div class="last-orders">
+	<h5>{{tr('Nuovi Corsi','elearning')}}</h5>
+	<a href="catalog.htm" class="all-view">{{tr('Vedi tutti','elearning')}}</a>
+	<div class="space40"></div>
+</div>

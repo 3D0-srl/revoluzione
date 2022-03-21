@@ -1,0 +1,10 @@
+{% extends "layouts/mail.htm" %}
+{% block content %}
+
+    <ul>
+        <li>{{tr('Email','elearning')}}: {{email}}</li>
+        <li>{{tr('oggetto','elearning')}}: {{subject}}</li>
+        <li>{{tr('Messaggio','elearning')}}: {{message}}</li>
+    </ul>
+    
+{% endblock %}

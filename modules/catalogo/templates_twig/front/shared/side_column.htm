@@ -1,0 +1,67 @@
+<div class="colsx {%if filtri_attivi %}active visible{% endif %}">
+	<div class="bar-menu">
+		<div class="nav-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<ul class="top-menu-backend">
+		<li><a href="/index.php"><img src="media/images/{{getConfig('cms_setting','logo')}}"></a></li>
+	</ul>
+	<ul class="menu-backend">
+		<li>
+			<a href="account/home.htm">
+				<div class="cont-ico home" style="background-image: url('modules/ecommerce/images/ico-home-backend.png')"></div>
+				{{tr('Home')}}
+			</a>
+		</li>
+		<li>
+			<a href="account/personal_data.htm">
+				<div class="cont-ico personal_data" style="background-image: url('modules/ecommerce/images/ico-account-backend.png')"></div>
+				{{tr('Il mio Account')}}
+			</a>
+		</li>
+		<li>
+			<a href="orders">
+				<div class="cont-ico ecommerce_orders" style="background-image: url('modules/ecommerce/images/ico-corsi-backend.png')"></div>
+				{{tr('I miei Corsi')}}
+			</a>
+		</li>
+		<li>
+			<span id="advanced_search_box_active"></span>
+			{% include 'partials/categories.htm' %}
+			{{do_action('display_catalog_list_sidebar')}}
+		</li>
+		<li>
+			<a href="index.php?mod=recensioni">
+				<div class="cont-ico review" style="background-image: url('modules/ecommerce/images/ico-recensione-backend.png')"></div>
+				{{tr('Scrivi una recensione')}}
+			</a>
+		</li>
+		<li>
+			<a href="account/support.htm">
+				<div class="cont-ico support" style="background-image: url('modules/ecommerce/images/ico-supporto-backend.png')"></div>
+				{{tr('Supporto')}}
+			</a>
+		</li>
+		{% if auth('admin') %}
+			<li>
+				<a href="backend/index.php?ctrl=Index">
+					<div class="cont-ico" style="background-image: url('modules/ecommerce/images/ico-admin-backend.png')"></div>
+					{{tr('Area Admin')}}
+				</a>
+			</li>
+		{% endif %}
+	</ul>
+	<ul class="foo-menu-backend">
+		<li>
+			<a href="account/logout.htm">
+				<div class="cont-ico" style="background-image: url('modules/ecommerce/images/ico-logout-backend.png')"></div>
+				Logout
+			</a>
+		</li>
+	</ul>
+</div>
+

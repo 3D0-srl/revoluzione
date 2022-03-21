@@ -1,0 +1,8 @@
+
+{% extends "layouts/setting_module_form.htm" %}
+{% block edit_page_title %} Configurazione E-learning {% endblock %} 
+{% block content %}
+{% import "macro/form.htm" as form %}
+{{form.buildCol(dataform.cart_status,'col-md-12')}}	
+
+{% endblock %}

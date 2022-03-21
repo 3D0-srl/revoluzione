@@ -9,6 +9,7 @@ services:
       LOG_STDOUT: ./logs
     ports:
       - ${APACHE_PORT_EXPOSED}:80
+      - 8000:8000
     volumes:
       - nfsmount:/app
     environment:

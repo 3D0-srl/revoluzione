@@ -11,6 +11,6 @@
    </info>
   <linkSetting>index.php?ctrl=Setting&amp;mod=quipago</linkSetting>
     <dependencies>
-		<!--<dependence>ecommerce</dependence>-->
+		<dependence>ecommerce</dependence>
   </dependencies>
 </module>

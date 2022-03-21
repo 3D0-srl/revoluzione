@@ -1,4 +1,4 @@
-{% extends 'layouts/page_catalog.htm' %}
+{% extends 'layouts/page_backend.htm' %}
 {% block metatags_title %}{% if prodotto.get('metaTitle') %}prodotto.get('metaTitle'){% else %}{{prodotto.get('name')}}{% endif %}{% endblock %}
 {% block metatags_description %}{{prodotto.get('metaDescription')}}{% endblock %}
 {% block metatags %}
@@ -15,8 +15,8 @@
 	{{do_action('ganalitycs_display_script_view_product',prodotto)}}
 	<!-- GOOGLE TAG MANAGER --->
 {% endblock %}
-{% block content %}
-{% include 'partials/side_column.htm' %}
+{% block backend_content %}
+{#{% include 'partials/side_column.htm' %}#}
 <div class="breadcontinue">
 	<a href="javascript: window.history.go(-1)" class="back"><i class="fa fa-angle-left"></i>{{tr('Torna al Catalogo')}}</a>
 </div>
@@ -62,10 +62,14 @@
 						<input class="form-control" id="quantity" name="formdata[quantity]" type="text" value="{{qnt}}">
 						<span class="input-group-addon" style="cursor:pointer;" onclick="plus(); return false;"><img src="themes/jewels/images/ico_plus.png" width="13" height="13"></span>
 					</div>
-					{% if prodotto.recurrent_payment %}
-						<a href="#" onclick='addToCart(); return false;' class="btn-default"><span>{{tr('Abbonati ora','ecommerce')}}</span></a>
+					{%if courseAvailable %}
+							<a href="/course/{{prodotto.id}}" class="addcart"><span>{{tr('Vai al corso','elearning')}}</span></a>
 					{% else %}
-						<a href="#" onclick='addToCart(); return false;' class="addcart"><span>{{tr('Aggiungi al carrello','ecommerce')}}</span></a>
+						{% if prodotto.recurrent_payment %}
+							<a href="#" onclick='addToCart(); return false;' class="btn-default"><span>{{tr('Abbonati ora','ecommerce')}}</span></a>
+						{% else %}
+							<a href="#" onclick='addToCart(); return false;' class="addcart"><span>{{tr('Aggiungi al carrello','ecommerce')}}</span></a>
+						{% endif %}
 					{% endif %}
 					
 					<!-- BLOCCO CHE PERMETTE DI AGGIUNGERE DEI BUTTONS --->
@@ -93,23 +97,13 @@
 	</ul>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane fade in active" id="descrizione">{{prodotto.get('description')|raw}}</div>
-		<div role="tabpanel" class="tab-pane fade" id="anteprima">bbb</div>
+		<div role="tabpanel" class="tab-pane fade" id="anteprima">
+			{{do_action('elearning_preview_course',prodotto)}}
+
+		</div>
 		<div role="tabpanel" class="tab-pane fade" id="unita">
-			<ul class="disabled">
-				<li>
-					<a href="#">Analisi e Gestione del Rischio</a>
-					<ul>
-						<li><a href="#">La Finanza Emotiva</a></li>
-						<li><a href="#">Come fare una Corretta Analisi del Rischio</a></li>
-						<li><a href="#">Panoramica Approfondita File Excel</a></li>
-						<li><a href="#">Il Mito delle Progressioni</a></li>
-						<li><a href="#">Come e Perchè differenziare</a></li>
-						<li><a href="#">Come saperne di più</a></li>
-						<li><a href="#">Approfondimento Risk of Ruin</a></li>
-						<li><a href="#">BONUS: Aiuta il Prossimo, tutto torna</a></li>
-					</ul>
-				</li>
-			</ul>
+		    {{do_action('elearning_units_course',prodotto)}}
+			
 		</div>
 	</div>
 </div>

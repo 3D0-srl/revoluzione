@@ -1,0 +1,62 @@
+{% extends 'layouts/page_backend.htm' %}
+
+
+{% block backend_header %}
+<div class="breadcontinue">
+	<a href="/courses/{{product.id}}" class="back"><i class="fa fa-angle-left"></i>{{tr('Torna al corso','elearning')}}</a>
+</div>
+	<strong>{{product.getName()}}</strong><br>
+    <small>{{unit.get('title')}}</small>
+{% endblock %}
+
+{% block css %}
+{{parent()}}
+<link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+<style>
+    .back-course{
+        text-decoration:underline;
+        margin-top: 10px;
+    }
+    .back-course a{
+        color: #1B3F99;
+    }
+</style>
+{% endblock %}
+
+
+{% block backend_content %}
+
+  <div class="col-md-12">
+  <video
+   
+    class="video-js"
+   
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+
+    id="my_video_1"  controls preload="auto" width="640" height="268"
+  >
+    <!--<source src="http://localhost:8000/?video={{unit.getVideo().path}}&token={{token}}" type="video/mp4" />-->
+    <source src="/modules/elearning/uploads/{{unit.getVideo().path}}" type="video/mp4" />
+    <!--<p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>-->
+  </video>
+  <div  class="back-course">
+  <a href="/courses/{{product.id}}">{{tr('Torna indietro','elearning')}}</a>
+  </div>
+  
+</div>
+
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+  <script>
+  var player = videojs('my_video_1');
+  
+  //player.play();
+  </script>
+{% endblock %}

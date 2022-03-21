@@ -117,3 +117,14 @@ $GLOBALS['_translate']['cart_onepage']['frontend']['8d907a731f5e660f83b6c40f0261
 $GLOBALS['_translate']['cart_onepage']['frontend']['28db09897ef62ec73466c34cd6c5d667']="Stampa ordine";//Stampa ordine
 $GLOBALS['_translate']['cart_onepage']['frontend']['b4b4f1b3e8dd489eae31cb038e227014']="Riepilogo del tuo carrello";//Riepilogo del tuo carrello
 $GLOBALS['_translate']['cart_onepage']['frontend']['458eae607f2c5f407174b4b5ae7016fb']="empty_cart_message";//empty_cart_message
+$GLOBALS['_translate']['cart_onepage']['frontend']['47e0af1b253088a8ab26290d5c65506e']="paymentMethod";//paymentMethod
+$GLOBALS['_translate']['cart_onepage']['frontend']['638cb6c73ac1b932875ef92bd433e721']="mandatory_field";//mandatory_field
+$GLOBALS['_translate']['cart_onepage']['frontend']['18879c6e40eccdde311ce9ed5dad4639']="Tipo Utente";//Tipo Utente
+$GLOBALS['_translate']['cart_onepage']['frontend']['aa7df31dc56b9fc456185ad34b5569b0']="fiscalCode";//fiscalCode
+$GLOBALS['_translate']['cart_onepage']['frontend']['89a69eb27b14e020a9cf557a02f7ca00']="postalCode";//postalCode
+$GLOBALS['_translate']['cart_onepage']['frontend']['972d0c2374d2ba79f1c323aae38e9f43']="Desideri la fattura?";//Desideri la fattura?
+$GLOBALS['_translate']['cart_onepage']['frontend']['bd5d0fd17abe56c433f847f7080670ec']="vatNumber";//vatNumber
+$GLOBALS['_translate']['cart_onepage']['frontend']['f7c1ea942d5424835fbba42ab7541009']="Aggiorna i miei dati per i prossimo acquisti";//Aggiorna i miei dati per i prossimo acquisti
+$GLOBALS['_translate']['cart_onepage']['frontend']['a31f12180d232a98968174080101cb41']="Conferma i tuoi dati";//Conferma i tuoi dati
+$GLOBALS['_translate']['cart_onepage']['frontend']['6d050fd67f91e3270ea948a9ca24f9c2']="Procedi con l'ordine";//Procedi con l'ordine
+$GLOBALS['_translate']['cart_onepage']['frontend']['7286dc938ffb51ca7b6b0232a6c03698']="Prezzo";//Prezzo

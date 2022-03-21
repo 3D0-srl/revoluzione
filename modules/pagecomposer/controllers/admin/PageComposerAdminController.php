@@ -616,7 +616,7 @@ class PageComposerAdminController extends ModuleController{
 			$this->setVar($k,$v);
 		}
 
-		
+		//debugga($tree);exit;
 		if( _var('fromAjax') ){
 			ob_start();
 			$this->output('tree_ajax.htm');

@@ -51,35 +51,37 @@ class SearchView{
 		
 		$this->getWhereBase();
 		
-
-		foreach($filtri_ok as $_filtro){
+		if( okArray($filtri_ok) ){
+			foreach($filtri_ok as $_filtro){
 			
 			
-			switch($_filtro){
-				case 'tags':
-
-					if( !$this->_tag ){
-						$this->getFilterTags($escludi_tags);
-					}
-
-					break;
-				case 'manufacturers':
-					if( $this->_action != 'brand' ){
-						$this->getFilterManufacturers();
-					}
-
-					break;
-				case 'attributes':
-					$this->getFilterAttributes($escludi_attributes);
-					break;
-
-				case 'features':
-					$this->getFilterFeatures($escludi_features);
-					break;
-				
-
+				switch($_filtro){
+					case 'tags':
+	
+						if( !$this->_tag ){
+							$this->getFilterTags($escludi_tags);
+						}
+	
+						break;
+					case 'manufacturers':
+						if( $this->_action != 'brand' ){
+							$this->getFilterManufacturers();
+						}
+	
+						break;
+					case 'attributes':
+						$this->getFilterAttributes($escludi_attributes);
+						break;
+	
+					case 'features':
+						$this->getFilterFeatures($escludi_features);
+						break;
+					
+	
+				}
 			}
 		}
+		
 		
 
 		//$this->getFilterFeatures();

@@ -223,8 +223,12 @@ class CourseController extends AdminModuleController{
 				$product->set(
 					$array
 				);
+
+
+				
 				
 				$product->save();
+				$product->updateInventory(99999999);
 				$price = Price::prepareQuery()
 					->where('product',$product->id)
 					->where('label','default')

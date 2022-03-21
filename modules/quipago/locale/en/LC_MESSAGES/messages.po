@@ -1,2 +1,0 @@
-msgid "nome_prodotto"
-msgstr "Name of product"

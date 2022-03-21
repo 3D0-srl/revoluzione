@@ -614,9 +614,16 @@ class Module{
 
 
 	function addHookActions(){
-		$id_module = $this->config_xml->info->id;
+		$id_module = (int)$this->config_xml->info->id;
 		if( $this->config_xml->actions ){
 			foreach($this->config_xml->actions->action as $item){
+				//debugga($item);
+				Marion::create_hook(
+						$item->hook,
+						$item->hookDescription?$item->hookDescription:$item->hook,
+						$item->hookType?$item->hookType:'display',
+						$id_module
+				);
 				Marion::register_action($item->hook,$item->function,$id_module);
 			}
 		}
