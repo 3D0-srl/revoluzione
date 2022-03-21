@@ -10,6 +10,26 @@
 		<autoload>1</autoload> 
 		<description><![CDATA[Modulo che integra un sistema di recensioni all'interno del tuo sito]]></description> 
 	</info>
+	<admin>
+	  <menu>
+		<items>
+			<item>
+				<locale>
+					<name>
+						<it>Recensioni</it>
+						<en>Recensioni</en>
+					</name>
+				</locale>
+				<tag>recensioni_admin</tag> 
+				<icon>fa fa-pencil</icon> 
+				<permission>catalog</permission> 
+				<priority>100</priority> 
+				<url>index.php?ctrl=Feedback&amp;mod=recensioni&amp;action=list</url>
+			</item>
+			
+		</items>
+	</menu>
+  </admin>
 	<backend>
 		<menu>
 			<items>
@@ -29,4 +49,11 @@
 			</items>
 		</menu>
 	</backend>
+	 <widgets>
+		<widget> 
+			<name>Ultime Recensioni</name>
+			<function>WidgetRecensioni</function>
+			<repeatable>1</repeatable>
+		</widget>
+	</widgets>
 </module>

@@ -69,21 +69,21 @@
 }
 .riga-cerchi .col-w-33:nth-child(1) .box-cerchio {
   background: #1B3F99;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -ms-animation-delay: 2s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
 }
 .riga-cerchi .col-w-33:nth-child(2) .box-cerchio {
   background: #FEAB6B;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -ms-animation-delay: 3s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
 }
 .riga-cerchi .col-w-33:nth-child(3) .box-cerchio {
   background: rgba(255, 255, 255, 0.5);
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -ms-animation-delay: 4s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -ms-animation-delay: 2.5s;
 }
 .riga-cerchi.aos-animate .box-cerchio {
   -webkit-animation-name: slide-down;
@@ -442,6 +442,7 @@
   .riga-metodo .box-metodo .cont-box-img .box-testo-img {
     display: inline-block;
     vertical-align: top;
+    margin-top: 16px;
   }
   .riga-metodo .box-metodo .cont-box-img img {
     min-width: auto;
@@ -449,6 +450,9 @@
   .btn-gradient .btn-box-img {
     font-size: 26px;
     line-height: 32px;
+  }
+  .slider-recensioni {
+    padding-bottom: 32px;
   }
   .slider-recensioni .swiper {
     padding-top: 342px;

@@ -246,3 +246,4 @@ $GLOBALS['_translate']['7afeff9ea940cf3eb37f93fdf9ffd674']="ecommerce_settings";
 $GLOBALS['_translate']['4d6be30e29f7612ea0b47488af5db99d']="menu_links";//menu_links
 $GLOBALS['_translate']['828279a3b8705798e8055c7362c14e5d']="menu_link";//menu_link
 $GLOBALS['_translate']['aac5756ab273ea17493ce056e84d3065']="standard_page";//standard_page
+$GLOBALS['_translate']['dec112698ede912ff178e6405e750b70']="form_deleted";//form_deleted

@@ -20,3 +20,5 @@ $GLOBALS['_translate']['elearning']['frontend']['2b0f1236c7ef609335a3b101112f536
 $GLOBALS['_translate']['elearning']['frontend']['51efaa0371ccc25df888a9d053f68dd8']="Email";//Email
 $GLOBALS['_translate']['elearning']['frontend']['ab756a46172e78ea26c270ea3ec64349']="Richiesta di supporto su %s";//Richiesta di supporto su %s
 $GLOBALS['_translate']['elearning']['frontend']['d805fa199677eb00241767e767bbc236']="Richiesta di supporto da %s";//Richiesta di supporto da %s
+$GLOBALS['_translate']['elearning']['frontend']['913f55a80ef01dc7060b5c539ad5c784']="Scrivi una recensione";//Scrivi una recensione
+$GLOBALS['_translate']['elearning']['frontend']['0d539cb285d7e5c185dc409f673df8e9']="Dicono di noi";//Dicono di noi

@@ -165,3 +165,4 @@ $GLOBALS['_translate']['486da7948d43cae5a8041a53612bb5ae']="Nickname";//Nickname
 $GLOBALS['_translate']['b31e60db74f6979ecf89af4c41beb9f7']="Torna alla home";//Torna alla home
 $GLOBALS['_translate']['15681c35d8e11e55e4e321e5dac886dc']="Iscriviti";//Iscriviti
 $GLOBALS['_translate']['f44fffdec36e9d0e254d3a779b17669c']="Telefono";//Telefono
+$GLOBALS['_translate']['3d19d482c966fddebc31d1888e927b61']="Hai già inserito una recensione";//Hai già inserito una recensione
